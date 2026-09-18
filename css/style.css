@@ -2573,3 +2573,131 @@ img {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Recursos Gratuitos / Lead Magnets
+   ========================================================================== */
+.recursos-section {
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0d1117 100%);
+  padding: 100px 0;
+  position: relative;
+}
+
+.recursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.recurso-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition-smooth);
+  overflow: hidden;
+}
+
+.recurso-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-green), #00b4d8);
+  opacity: 0.8;
+}
+
+.recurso-card.recurso-pumpkin::before {
+  background: linear-gradient(90deg, #f59e0b, #ea580c);
+}
+
+.recurso-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.recurso-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.tag-linkedin {
+  background: rgba(0, 229, 153, 0.12);
+  color: var(--accent-green);
+  border: 1px solid rgba(0, 229, 153, 0.25);
+}
+
+.tag-pumpkin {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.recurso-title {
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+  color: #fff;
+  font-family: var(--font-heading);
+}
+
+.recurso-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.recurso-highlights {
+  list-style: none;
+  margin-bottom: 30px;
+  margin-top: auto;
+}
+
+.recurso-highlights li {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.recurso-highlights li i {
+  color: var(--accent-green);
+  font-size: 0.85rem;
+}
+
+.btn-pumpkin {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(234, 88, 12, 0.35);
+}
+
+.btn-pumpkin:hover {
+  background: linear-gradient(135deg, #fbbf24, #f97316);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.55);
+}
+
+@media (max-width: 480px) {
+  .recursos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
