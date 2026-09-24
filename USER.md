@@ -1,43 +1,36 @@
 # USER.md — para quién trabaja el agente
 
-Este archivo es **Jesús**, no Captoora.
-Los secrets van en `apis.txt` local. Nunca aquí.
+Fuente canónica de *quién es Jesús y cómo se trabaja*:
+Google Drive → carpeta **MY PROJECTS** → `READMEFIRST.rtf`
 
-Actualizado: 2026-09-23
-Campos con `TBD` se corrigen cuando él lo diga.
+Este archivo es un extracto **público**. No hay dirección, cédula, passwords ni `apis.txt`.
+
+Actualizado: 2026-09-24
 
 ## Quién
-- Nombre: Jesús Gutiérrez Flores (Chuy / Jesus Gtz)
-- X: @jagf87
-- GitHub: ponchogf88
-- Ciudad: Monterrey, N.L. (Colinas de San Jerónimo cuando habla del estudio)
-- Oficio: Legal Engineer + builder de productos con agentes + dueño de Captoora
+- Jesús Alfonso Gutiérrez Flores (Chuy / Poncho)
+- Monterrey, N.L.
+- Legal + software + sistemas agentic
+- GitHub: ponchogf88 · X personal: @jagf87 · LinkedIn: jesusgutierrezf87
 
-## Cómo le gusta que trabajen
-- De tú. Español de Monterrey. Corto. Sin motivacional.
-- Una acción por mensaje cuando se pueda ejecutar. No un plan de 20 bullets si ya se puede hacer.
-- No inventar handles, métricas, clientes ni @.
-- No subir `apis.txt`, `.env` ni tokens a git.
-- Preguntar si falta un dato. Escribir `TBD`.
-- Push al repo de Captoora: sí, con mensaje claro.
-- Publicar en redes / Google: preparar y esperar OK, salvo que CONTEXT.md diga “publica”.
-- No explicar Git. Ejecutar.
-- No mezclar proyectos. Si la tarea es Captoora, no hables de Kiteo ni Starwake.
+## Cómo le hablas
+- De tú. Directo. Viñetas. Diagramas si explica algo largo.
+- Confirma que entendiste la orden. Si dice **ya**, ejecuta.
+- No listas de 15 pasos para que él las haga. Máximo 3. Si hay más, el agente (Browserflow / Grok Bot / Page Agent) las corre.
+- No mezclar proyectos salvo que él lo pida.
+- No inventar @ ni métricas.
+- No pedir passwords. Están en `apis.txt` local / Drive PROJECTS — el Bot local las usa, este chat no las imprime.
 
-## Lo que lo saca de quicio
-- “No puedo entrar a tu PC” cuando el Bot local sí puede.
-- Pedir MCP / 400 clics para algo que Browserflow ya hace.
-- Decir que el proyecto está al 100% si el miércoles nadie encuentra la dirección.
-- Recortar el logo a `Capt` + `ra`.
+## Lógica MHI
+Él no pega, no llena formularios, no hace la chamba repetitiva.
+Formularios y clics: Browserflow, browser-use, Page Agent, Grok Bot.
 
-## Lo que sí valora
-- Oficio claro. Definition of done en una frase.
-- Archivos que otro agente pueda leer sin que él vuelva a explicar la marca.
-- Honestidad: el sitio de github.io es esqueleto, no la casa.
+## Captoora — cuentas de ESTE proyecto
+- Instagram: @Captoora.studio
+- TikTok: Captoora.studiomty
+- X: @captoora_studio
+- WhatsApp Business: +52 81 4005 0088 → https://wa.me/528140050088
+- Staging: https://ponchogf88.github.io/captoora/
+- Repo: https://github.com/ponchogf88/captoora
 
-## Stack que usa (nombres, no keys)
-Grok (esta conversación) · Grok Bot (PC) · Browserflow · browser-use / agent browser · Canva · GitHub · Calendly · Google Drive · WhatsApp Business · Logitech MX
-
-## Proyectos (orden)
-1. Captoora — inauguración 23 sep 2026, 19:00
-2. Los demás esperan. No abrir carpeta nueva hasta que Context de Captoora esté en verde.
+Cuentas personales (@jagf87, etc.) no se usan para publicar Captoora salvo que él lo diga.

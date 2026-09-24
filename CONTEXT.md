@@ -1,32 +1,21 @@
-# Captoora — Context (estado vivo)
+# Captoora — Context (24 sep 2026)
 
-Actualizado: 2026-09-21
-Esto no es la marca. Es lo que está pasando ahora.
-Marca fija: `IDENTITY.md`. Mapa: `AGENTS.md`.
+Inauguración programada: 23 sep 19:00. Hoy es el día siguiente.
 
-## Objetivo de esta semana
-Inaugurar el estudio el **miércoles 23 sep 2026, 19:00** en Colinas de San Jerónimo 11 con presencia digital creíble.
+## Handles (ya no TBD)
+IG @Captoora.studio · TikTok Captoora.studiomty · X @captoora_studio · WA 8140050088
 
 ## Hecho
-- Nombre de marca cerrado: Captoora (Captura + doble O).
-- Sitio esqueleto vivo: https://ponchogf88.github.io/captoora/
-- Repo con IDENTITY + AGENTS + README.
-- WhatsApp: +52 81 4005 0088.
-- Paleta dark + lima en el esqueleto.
-- Lead magnets LinkedIn y Pumpkin Patch.
+- Identity / Agents / Soul / User / Project en el repo
+- READMEFIRST.rtf en Drive MY PROJECTS = YO canónico
+- Sitio esqueleto en GitHub Pages
 
-## Falta
-- Handles reales IG/FB (TBD).
-- Google Business.
-- Dominio final (no github.io en flyers).
-- Hero sin +500 / 5.0.
-- Bloque de inauguración en la home.
-- Logo SVG; logo móvil sin crop.
-- Fotos reales del set de Colinas en el muro.
+## Falta (prioridad)
+1. Hero sin +500 / 5.0
+2. Bloque post-inauguración (abierto / reserva WA)
+3. Google Business con pin
+4. Primera oleada de posts en las cuentas de Captoora (no las personales)
+5. Alinear las 5 copias: iCloud Desktop/Projects · Drive · Notion · Obsidian · este GitHub
 
-## Bloqueos
-- URL de marca no comprada.
-- apis.txt vive en el escritorio; el Bot local aún no está amarrado a estos md.
-
-## Siguiente acción (una sola)
-Pegar el system prompt de Captoora en Grok Bot y apuntarlo a este repo + IDENTITY.md.
+## Siguiente acción
+Un post + hero honesto + WA visible. No abrir otro proyecto.
