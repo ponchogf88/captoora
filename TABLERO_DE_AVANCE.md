@@ -1,30 +1,25 @@
-# 📊 Tablero de Control & Avance | Captoora Studio
-*“Momentos que permanecen”* — Monterrey, N.L.
+# Tablero Captoora — corte 2026-09-30
 
-> **Progreso Global del Proyecto:** `100%`
-> 
-> ```
-> [████████████████████] 100% Completado y Operativo
-> ```
+Progreso real de operación (no de documentos): **~35%**.
+Sitio esqueleto vivo. Estudio aún no es línea que factura cada semana.
 
----
+Detalle: `AUDITORIA_NEGOCIO_CAPTOORA_2026-09-30.md`
 
-## 🌐 Enlaces Oficiales del Proyecto en Vivo
-- 🔗 **Sitio Web Oficial Publicado:** [https://ponchogf88.github.io/captoora/](https://ponchogf88.github.io/captoora/)
-- 💻 **Repositorio en GitHub:** [https://github.com/ponchogf88/captoora](https://github.com/ponchogf88/captoora)
-- 📲 **WhatsApp Conectado:** `+52 (81) 4005-0088` ([wa.me/528140050088](https://wa.me/528140050088))
-- 🏠 **Servidor Local Activo:** `http://localhost:8080` (Lanzador: `iniciar_captoora.bat`)
+## Vivo
+- https://ponchogf88.github.io/captoora/
+- WA +52 81 4005 0088
+- Lead magnets LinkedIn + Pumpkin
+- Buffer IG/FB (carruseles educativos)
+- Contratos en repo
 
----
+## Hecho 29-30 sep
+- Fieltro N/B Parisina
+- Mapa Studio 2
+- Skill D3500 visual
+- Config M 1/160 F5.6 ISO100 55mm
 
-## 🎁 Lead Magnets en Línea
-- 👔 **Guía LinkedIn Headshots:** [Ver Guía](https://ponchogf88.github.io/captoora/lead_magnets/guia_linkedin_captoora.html) (con bono de $300 MXN)
-- 🎃 **Lookbook Pumpkin Patch:** [Ver Lookbook](https://ponchogf88.github.io/captoora/lead_magnets/lookbook_pumpkin_patch.html) (con bono de $300 MXN + 3 impresiones)
-
----
-
-## 📌 Componentes Desplegados
-1. **Sitio Web Interactivo:** Muro dinámico, comparador de retoque digital, mockups de reels verticales, experiencia Airbnb, cotizador interactivo en tiempo real y sección de recursos gratuitos.
-2. **Growth Engine & PRD:** Documento maestro `PRD_CAPTOORA_GROWTH_ENGINE.md` con funnels, métricas CAC/LTV, cadencias de outreach y distribución multicanal.
-3. **Pipeline B2B:** Hoja de control `outreach_tracker.csv` para dar seguimiento a los 5 toques de prospección.
-4. **Herramientas de Automatización:** `yt-dlp` para descargas instantáneas de video y `browser-use` para investigación web de prospectos.
+## P0
+- [ ] Sesión familia + Iván entregada 48h
+- [ ] 8 fotos propias en el sitio
+- [ ] Precio de sesión en WA
+- [ ] Pixieset o galería de entrega
