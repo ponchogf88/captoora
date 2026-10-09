@@ -15,9 +15,9 @@ No inventes handles. No publiques en @jagf87. Si digo “ya”, ejecuta.
 Tarea de esta sesión: [UNA FRASE]
 ```
 
-Grok en esta app ya tiene GitHub y Drive conectados: puede leer el repo solo.
+El acceso a GitHub y Drive depende del agente y de sus conexiones activas. En particular, la conexión GitHub de Grok Bot debe verificarse por separado; no asumir acceso automático.
 ChatGPT / Claude: o pegas el mismo bloque, o les das acceso al repo, o les pegas USER + CONTEXT.
-Grok Bot en la Mac: apunta a `/Users/imac/Desktop/Projects/CAPTOORA.STUDIO` + este repo.
+Ruta local registrada para Grok Bot: `/Users/imac/Desktop/Projects/CAPTOORA.STUDIO` (no verificada desde este chat). Confirmar montaje y acceso antes de ejecutar.
 
 ## Si vas a ABRIR un proyecto nuevo
 
@@ -30,3 +30,8 @@ Grok Bot en la Mac: apunta a `/Users/imac/Desktop/Projects/CAPTOORA.STUDIO` + es
 - No empieces el chat con el CV.
 - No le pidas que adivine el @.
 - No abras Kiteo en un chat de Captoora.
+
+## Prueba de lectura (sin consumo de Grok Bot)
+1. Leer `USER.md` y `AGENTS.md` desde la rama de trabajo.
+2. Identificar CAPTOORA como proyecto activo, Instagram documentado `@Captoora.studio` y WhatsApp del estudio; distinguir identificador de sesión autenticada.
+3. Informar cualquier conector no disponible sin pedir contraseñas ni activar facturación adicional.
