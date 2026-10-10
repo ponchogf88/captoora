@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 300" role="img" aria-label="Captoora">
+  <text x="0" y="215" font-family="Inter Tight, Inter, Helvetica Neue, Arial, sans-serif" font-size="168" font-weight="500" fill="#F4F4EF" letter-spacing="-6">Capt</text>
+  <!-- O 1: lente -->
+  <g transform="translate(404,154)">
+    <circle r="60" fill="none" stroke="#F4F4EF" stroke-width="10"/>
+    <circle r="38" fill="none" stroke="#C8FF3D" stroke-width="7"/>
+    <circle r="13" fill="#C8FF3D"/>
+    <circle cx="-15" cy="-15" r="6" fill="#fff" opacity="0.5"/>
+  </g>
+  <!-- O 2: flash -->
+  <g transform="translate(540,154)">
+    <circle r="60" fill="none" stroke="#F4F4EF" stroke-width="10"/>
+    <path d="M0,-30 C4,-8 8,-4 30,0 C8,4 4,8 0,30 C-4,8 -8,4 -30,0 C-8,-4 -4,-8 0,-30Z" fill="#C8FF3D"/>
+  </g>
+  <text x="614" y="215" font-family="Inter Tight, Inter, Helvetica Neue, Arial, sans-serif" font-size="168" font-weight="500" fill="#F4F4EF" letter-spacing="-4">ra</text>
+</svg>
