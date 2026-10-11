@@ -47,6 +47,7 @@
         <a href="#evento">Agenda</a>
         <a href="#paquetes">Paquetes</a>
         <a href="#escenarios">Escenarios</a>
+        <a href="#portafolio">Portafolio</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="btn btn--lime btn--sm nav__cta" data-wa="Hola Captoora, quiero apartar una sesión." href="https://wa.me/528140050088" target="_blank" rel="noopener">WhatsApp</a>
@@ -121,6 +122,25 @@
       </div>
     </section>
 
+    <!-- 3c. PORTAFOLIO (datos en js/config.js → portfolio) -->
+    <section class="section pf" id="portafolio">
+      <div class="wrap">
+        <div class="head">
+          <p class="kicker kicker--lime">Portafolio</p>
+          <h2 class="h2">Fotos que sí tomé yo.</h2>
+          <p class="muted">Retratos, eventos y marcas. Nada de banco de imágenes ni IA: todo salió de mi cámara. Lo voy llenando con cada sesión.</p>
+        </div>
+        <div class="pf__filters" id="pf-filters" role="group" aria-label="Filtrar portafolio"></div>
+        <div class="pf__grid" id="portfolio"></div>
+      </div>
+      <dialog class="lb" id="lightbox" aria-label="Foto ampliada">
+        <button class="lb__btn lb__close" type="button" aria-label="Cerrar">&times;</button>
+        <button class="lb__btn lb__prev" type="button" aria-label="Anterior">&#8249;</button>
+        <figure class="lb__fig"><img alt=""><figcaption></figcaption></figure>
+        <button class="lb__btn lb__next" type="button" aria-label="Siguiente">&#8250;</button>
+      </dialog>
+    </section>
+
     <!-- 4. EL SET (fotos sacadas de video propio, no stock) -->
     <section class="section set" id="set">
       <div class="wrap set__grid">
@@ -157,7 +177,7 @@
     <div class="wrap footer__in">
       <span class="logo logo--foot" role="img" aria-label="Captoora"></span>
       <p>Colinas de San Jerónimo, Monterrey, N.L.</p>
-      <nav aria-label="Pie"><a href="#evento">Agenda</a><a href="#paquetes">Paquetes</a><a href="#escenarios">Escenarios</a><a href="#set">El set</a><a href="#contacto">Contacto</a></nav>
+      <nav aria-label="Pie"><a href="#evento">Agenda</a><a href="#paquetes">Paquetes</a><a href="#escenarios">Escenarios</a><a href="#portafolio">Portafolio</a><a href="#set">El set</a><a href="#contacto">Contacto</a></nav>
       <p class="footer__c">© 2026 Captoora</p>
     </div>
   </footer>

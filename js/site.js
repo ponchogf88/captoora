@@ -108,6 +108,65 @@
     document.querySelectorAll('a[href="#escenarios"]').forEach(function (a) { a.remove(); });
   }
 
+  // Portafolio (grid + filtros + lightbox)
+  var pg = document.getElementById("portfolio");
+  var items = C.portfolio || [];
+  if (pg && items.length) {
+    var cats = C.portfolioCats || [];
+    var catLabel = function (k) { for (var i = 0; i < cats.length; i++) if (cats[i].key === k) return cats[i].label; return ""; };
+    pg.innerHTML = items.map(function (x, i) {
+      return '<figure class="pf__item" data-cat="' + esc(x.cat) + '" style="aspect-ratio:' + (x.w || 4) + "/" + (x.h || 5) + '">' +
+        '<button type="button" class="pf__open" data-i="' + i + '" aria-label="Ver foto: ' + esc(x.alt) + '">' +
+        '<img data-pf="' + i + '" alt="' + esc(x.alt) + '"></button>' +
+        '<span class="pf__tag">' + esc(catLabel(x.cat)) + "</span></figure>";
+    }).join("");
+    var fl = document.getElementById("pf-filters");
+    var used = cats.filter(function (c) { return items.some(function (x) { return x.cat === c.key; }); });
+    if (fl && used.length > 1) {
+      fl.innerHTML = '<button type="button" class="is-on" data-f="">Todo</button>' + used.map(function (c) {
+        return '<button type="button" data-f="' + esc(c.key) + '">' + esc(c.label) + "</button>"; }).join("");
+      fl.addEventListener("click", function (e) {
+        var b = e.target.closest("button"); if (!b) return;
+        fl.querySelectorAll("button").forEach(function (x) { x.classList.toggle("is-on", x === b); });
+        pg.querySelectorAll(".pf__item").forEach(function (f) { f.hidden = !!b.dataset.f && f.dataset.cat !== b.dataset.f; });
+      });
+    } else if (fl) fl.remove();
+    var srcs = [];
+    var load = function (i) {
+      if (srcs[i]) return srcs[i];
+      srcs[i] = asImg(items[i].image);
+      srcs[i].then(function (d) { var im = pg.querySelector('img[data-pf="' + i + '"]'); if (im) { im.src = d; im.classList.add("is-ready"); } }).catch(function () {});
+      return srcs[i];
+    };
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (es) { es.forEach(function (e) {
+        if (e.isIntersecting) { load(+e.target.querySelector("img").dataset.pf); io.unobserve(e.target); } }); }, { rootMargin: "600px 0px" });
+      pg.querySelectorAll(".pf__item").forEach(function (f) { io.observe(f); });
+    } else items.forEach(function (_, i) { load(i); });
+    var lb = document.getElementById("lightbox");
+    if (lb && typeof lb.showModal === "function") {
+      var cur = 0, lbImg = lb.querySelector("img"), lbCap = lb.querySelector("figcaption");
+      var visible = function () { return [].slice.call(pg.querySelectorAll(".pf__item:not([hidden]) .pf__open")).map(function (b) { return +b.dataset.i; }); };
+      var show = function (i) {
+        cur = i; lbImg.removeAttribute("src"); lbImg.alt = items[i].alt; lbCap.textContent = catLabel(items[i].cat);
+        load(i).then(function (d) { if (cur === i) lbImg.src = d; }).catch(function () {});
+      };
+      var step = function (d) { var v = visible(); var p = v.indexOf(cur); show(v[(p + d + v.length) % v.length]); };
+      pg.addEventListener("click", function (e) { var b = e.target.closest(".pf__open"); if (!b) return; show(+b.dataset.i); lb.showModal(); });
+      lb.querySelector(".lb__close").addEventListener("click", function () { lb.close(); });
+      lb.querySelector(".lb__prev").addEventListener("click", function () { step(-1); });
+      lb.querySelector(".lb__next").addEventListener("click", function () { step(1); });
+      lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+      lb.addEventListener("keydown", function (e) { if (e.key === "ArrowLeft") step(-1); if (e.key === "ArrowRight") step(1); });
+      var tx = null;
+      lb.addEventListener("touchstart", function (e) { tx = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener("touchend", function (e) { if (tx === null) return; var dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1); tx = null; });
+    }
+  } else if (pg) {
+    var pfs = document.getElementById("portafolio"); if (pfs) pfs.remove();
+    document.querySelectorAll('a[href="#portafolio"]').forEach(function (a) { a.remove(); });
+  }
+
   // Nav al hacer scroll
   var nav = document.getElementById("nav");
   var onScroll = function () { nav.classList.toggle("nav--solid", window.scrollY > 40); };
