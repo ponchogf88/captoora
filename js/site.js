@@ -53,6 +53,7 @@
   var getText = function (url) { return fetch(url).then(function (r) { if (!r.ok) throw 0; return r.text(); }); };
   var imgs = null;
   var asImg = function (key) {
+    if (/\.b64$/.test(key)) return getText(key).then(function (t) { return "data:image/jpeg;base64," + t.trim(); });
     imgs = imgs || fetch("assets/media/images.json").then(function (r) { if (!r.ok) throw 0; return r.json(); });
     return imgs.then(function (m) { if (!m[key]) throw 0; return "data:image/jpeg;base64," + m[key]; });
   };
@@ -83,6 +84,29 @@
   document.querySelectorAll("img[data-img]").forEach(function (img) {
     asImg(img.dataset.img).then(function (d) { img.src = d; img.classList.add("is-ready"); }).catch(function () {});
   });
+
+  // Escenarios
+  var sc = document.getElementById("scenarios");
+  var list = (C.scenarios || []).filter(function (x) { return x.show; });
+  if (sc && list.length) {
+    sc.classList.add("esc__grid--" + list.length);
+    sc.innerHTML = list.map(function (x, i) {
+      return '<article class="esc__card">' +
+        '<figure class="esc__img"><img data-esc="' + i + '" alt="' + esc(x.alt || x.name) + '"></figure>' +
+        '<div class="esc__body"><h3 class="esc__name">' + esc(x.name) + "</h3>" +
+        (x.desc ? '<p class="esc__desc">' + esc(x.desc) + "</p>" : "") +
+        (x.items && x.items.length ? '<ul class="esc__tags">' + x.items.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul>" : "") +
+        (x.note ? '<p class="esc__note">' + esc(x.note) + "</p>" : "") +
+        '<a class="btn btn--lime" target="_blank" rel="noopener" href="' + wa(x.waMessage) + '">' + esc(x.cta || "Agendar por WhatsApp") + "</a></div></article>";
+    }).join("");
+    list.forEach(function (x, i) {
+      var img = sc.querySelector('img[data-esc="' + i + '"]');
+      if (img && x.image) asImg(x.image).then(function (d) { img.src = d; img.classList.add("is-ready"); }).catch(function () {});
+    });
+  } else if (sc) {
+    var secEl = document.getElementById("escenarios"); if (secEl) secEl.remove();
+    document.querySelectorAll('a[href="#escenarios"]').forEach(function (a) { a.remove(); });
+  }
 
   // Nav al hacer scroll
   var nav = document.getElementById("nav");
