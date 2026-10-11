@@ -52,6 +52,21 @@ window.CAPTOORA = {
       items: ["Todo lo de la Hora IA", "Prioridad de render", "2 bebidas"] }
   ],
 
+  // ---- ESCENARIOS (sets del estudio) ----------------------------
+  // Hasta 3. show:false = oculto. Para agregar uno: pon show:true, texto e imagen
+  // (image = ruta a un .jpg.b64 en assets/media).
+  scenarios: [
+    { show: true, name: "Escenario 1", image: "assets/media/escenario-1.jpg.b64",
+      alt: "Escenario 1 de Captoora: ciclorama blanco, TV, vitrina, softbox y tripié",
+      desc: "Uno de los espacios de Captoora. Aquí tienes con qué jugar: ciclorama blanco o negro, luz de todo tipo y varios rincones para cambiar de fondo sin salir del set.",
+      items: ["TV", "Espejos", "Armario", "Softbox", "Tripiés", "Iluminación de todo tipo", "Ciclorama blanco o negro", "Algunos sets, elementos y herramientas para tu sesión"],
+      note: "Incluido en la Renta de estudio.",
+      cta: "Agendar el Escenario 1",
+      waMessage: "Hola, quiero agendar el Escenario 1." },
+    { show: false, name: "Escenario 2", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 2." },
+    { show: false, name: "Escenario 3", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 3." }
+  ],
+
   // ---- REDES -------------------------------------------------
   social: [
     { label: "Instagram", handle: "@Captoora.studio", url: "https://instagram.com/captoora.studio" },
