@@ -70,7 +70,7 @@ mark.todo{background:transparent;color:var(--lime);border:1px dashed var(--lime)
 /* Paquetes */
 .head{margin-bottom:56px}
 .pk{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-.pk__card{grid-column:span 2;position:relative;display:flex;flex-direction:column;padding:30px;border:1px solid var(--line);border-radius:var(--r);background:var(--ink);min-width:0}
+.pk__card{grid-column:span 3;position:relative;display:flex;flex-direction:column;padding:30px;border:1px solid var(--line);border-radius:var(--r);background:rgba(11,11,11,.82);min-width:0}
 .pk__card:nth-child(1),.pk__card:nth-child(2){grid-column:span 3}
 .pk__card--hot{border-color:var(--lime);background:linear-gradient(180deg,rgba(200,255,61,.08),var(--ink) 60%)}
 .pk__badge{align-self:flex-start;margin-bottom:16px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime-ink);background:var(--lime);padding:5px 10px;border-radius:999px}
@@ -136,3 +136,15 @@ mark.todo{background:transparent;color:var(--lime);border:1px dashed var(--lime)
 .hero__video.is-ready{opacity:.55}
 .gallery img{opacity:0;transition:opacity .6s,filter .4s,transform .6s}
 .gallery img.is-ready{opacity:1}
+
+/* Paquetes v2 */
+.pk__card--alt{border-color:rgba(200,255,61,.45);background:linear-gradient(180deg,rgba(200,255,61,.04),rgba(11,11,11,.85) 55%)}
+.pk__card--alt .pk__badge{background:transparent;color:var(--lime);border:1px solid var(--lime)}
+.pk__promo{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--lime);margin:-8px 0 10px}
+.pk__old{color:var(--muted);font:500 22px/1 var(--display);text-decoration-thickness:2px;text-decoration-color:rgba(244,244,239,.55)}
+.pk__desc{color:#c9c9c2;font-size:15px;margin:-6px 0 18px;max-width:46ch}
+.pk__price--ask span{font-size:clamp(24px,2.6vw,30px)!important;letter-spacing:-.02em!important}
+.btn--outline-lime{border-color:var(--lime);color:var(--lime)}
+.btn--outline-lime:hover{background:rgba(200,255,61,.08)}
+.pk__card:last-child:nth-child(odd){grid-column:1/-1}
+@media (max-width:960px){.pk__card--hot{order:-2}}

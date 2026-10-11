@@ -20,3 +20,8 @@
   opacity: 0.35;
   background: radial-gradient(circle, rgba(196, 165, 116, 0.08) 0%, transparent 70%);
 }
+/* Cielo para toda la página */
+.sky{position:fixed;inset:0;z-index:0;pointer-events:none}
+body>header,body>main,body>footer,.wa-float{position:relative;z-index:1}
+.nav{position:fixed}
+.wa-float{position:fixed}
