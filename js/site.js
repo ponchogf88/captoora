@@ -22,14 +22,23 @@
   var dep = document.getElementById("deposit"); if (dep && C.deposit) dep.textContent = C.deposit;
   var pk = document.getElementById("packages");
   if (pk && C.packages) {
+    var money = function (n) { return "$" + Number(n).toLocaleString("es-MX"); };
     pk.innerHTML = C.packages.map(function (p) {
-      var msg = "Hola Captoora, quiero " + p.name + " ($" + p.price.toLocaleString("es-MX") + ").";
-      return '<article class="pk__card' + (p.featured ? " pk__card--hot" : "") + '">' +
+      var msg = p.waMessage || ("Hola Captoora, quiero " + p.name + (p.price ? " (" + money(p.price) + ")" : "") + ".");
+      var cls = "pk__card" + (p.featured ? " pk__card--hot" : "") + (p.secondary ? " pk__card--alt" : "");
+      var price = p.price != null
+        ? '<p class="pk__price">' + (p.regularPrice ? '<s class="pk__old">' + money(p.regularPrice) + "</s>" : "") +
+          "<span>" + money(p.price) + "</span><small>MXN · " + esc(p.unit) + "</small></p>"
+        : '<p class="pk__price pk__price--ask"><span>' + esc(p.priceLabel || "Precio por WhatsApp") + "</span></p>";
+      return '<article class="' + cls + '">' +
         (p.badge ? '<span class="pk__badge">' + esc(p.badge) + "</span>" : "") +
         '<h3 class="pk__name">' + esc(p.name) + "</h3>" +
-        '<p class="pk__price"><span>$' + p.price.toLocaleString("es-MX") + '</span><small>MXN · ' + esc(p.unit) + "</small></p>" +
+        (p.promoLabel ? '<p class="pk__promo">' + esc(p.promoLabel) + "</p>" : "") +
+        price +
+        (p.desc ? '<p class="pk__desc">' + esc(p.desc) + "</p>" : "") +
         "<ul>" + p.items.map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ul>" +
-        '<a class="btn ' + (p.featured ? "btn--lime" : "btn--ghost") + ' btn--block" target="_blank" rel="noopener" href="' + wa(msg) + '">Apartar por WhatsApp</a>' +
+        '<a class="btn ' + (p.featured ? "btn--lime" : p.secondary ? "btn--outline-lime" : "btn--ghost") + ' btn--block" target="_blank" rel="noopener" href="' + wa(msg) + '">' +
+        (p.cta || "Apartar por WhatsApp") + "</a>" +
         "</article>";
     }).join("");
   }
