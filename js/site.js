@@ -34,6 +34,8 @@
         (p.badge ? '<span class="pk__badge">' + esc(p.badge) + "</span>" : "") +
         '<h3 class="pk__name">' + esc(p.name) + "</h3>" +
         (p.promoLabel ? '<p class="pk__promo">' + esc(p.promoLabel) + "</p>" : "") +
+        (p.validUntil ? '<p class="pk__valid">' + esc(p.validUntil) + "</p>" : "") +
+        (p.neighborPromo ? '<p class="pk__promo">' + esc(p.neighborPromo) + "</p>" : "") +
         price +
         (p.desc ? '<p class="pk__desc">' + esc(p.desc) + "</p>" : "") +
         "<ul>" + p.items.map(function (i) { return "<li>" + esc(i) + "</li>"; }).join("") + "</ul>" +
@@ -91,6 +93,9 @@
   if (sc && list.length) {
     sc.classList.add("esc__grid--" + list.length);
     sc.innerHTML = list.map(function (x, i) {
+      if (x.comingSoon) return '<article class="esc__card esc__card--soon"><div class="esc__soon">Próximamente</div>' +
+        '<div class="esc__body"><h3 class="esc__name">' + esc(x.name) + '</h3><p class="esc__desc">Estamos preparando las fotos de este escenario. Pregunta por WhatsApp.</p>' +
+        '<a class="btn btn--ghost" target="_blank" rel="noopener" href="' + wa(x.waMessage) + '">Preguntar</a></div></article>';
       return '<article class="esc__card">' +
         '<figure class="esc__img"><img data-esc="' + i + '" alt="' + esc(x.alt || x.name) + '"></figure>' +
         '<div class="esc__body"><h3 class="esc__name">' + esc(x.name) + "</h3>" +
@@ -122,6 +127,10 @@
     }).join("");
     var fl = document.getElementById("pf-filters");
     var used = cats.filter(function (c) { return items.some(function (x) { return x.cat === c.key; }); });
+    var soon = cats.filter(function (c) { return c.soon && !items.some(function (x) { return x.cat === c.key; }); });
+    if (soon.length) pg.insertAdjacentHTML("beforeend", soon.map(function (c) {
+      return '<figure class="pf__item pf__item--soon" data-cat="' + esc(c.key) + '" style="aspect-ratio:4/5"><span>' + esc(c.label) + '<small>Próximamente</small></span></figure>';
+    }).join(""));
     if (fl && used.length > 1) {
       fl.innerHTML = '<button type="button" class="is-on" data-f="">Todo</button>' + used.map(function (c) {
         return '<button type="button" data-f="' + esc(c.key) + '">' + esc(c.label) + "</button>"; }).join("");
@@ -141,7 +150,7 @@
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (es) { es.forEach(function (e) {
         if (e.isIntersecting) { load(+e.target.querySelector("img").dataset.pf); io.unobserve(e.target); } }); }, { rootMargin: "600px 0px" });
-      pg.querySelectorAll(".pf__item").forEach(function (f) { io.observe(f); });
+      pg.querySelectorAll(".pf__item:not(.pf__item--soon)").forEach(function (f) { io.observe(f); });
     } else items.forEach(function (_, i) { load(i); });
     var lb = document.getElementById("lightbox");
     if (lb && typeof lb.showModal === "function") {
@@ -166,6 +175,20 @@
     var pfs = document.getElementById("portafolio"); if (pfs) pfs.remove();
     document.querySelectorAll('a[href="#portafolio"]').forEach(function (a) { a.remove(); });
   }
+
+  // Mapa, horario, parque, FAQ, reseñas
+  var addr = (C.event || {}).address;
+  document.querySelectorAll("[data-addr]").forEach(function (el) { if (addr) el.textContent = addr; });
+  document.querySelectorAll("[data-maplink]").forEach(function (a) { if (ev.mapsUrl) a.href = ev.mapsUrl; });
+  var mf = document.getElementById("map-frame"); if (mf && ev.mapEmbed) mf.src = ev.mapEmbed;
+  document.querySelectorAll("[data-hours]").forEach(function (el) { if (C.hours) el.textContent = C.hours; });
+  if (C.park) { var pt = document.getElementById("park-title"), px = document.getElementById("park-text");
+    if (pt) pt.textContent = C.park.title; if (px) px.textContent = C.park.text; }
+  var fq = document.getElementById("faq-list");
+  if (fq && C.faq) fq.innerHTML = C.faq.map(function (f) { return "<details><summary>" + esc(f.q) + "</summary><p>" + esc(f.a) + "</p></details>"; }).join("");
+  var rv = document.getElementById("review-cta");
+  if (rv) { var g = C.reviews && C.reviews.googleUrl;
+    if (g) { rv.href = g; } else { rv.href = wa("Hola Captoora, quiero dejar mi reseña."); rv.textContent = "Déjanos tu reseña (pronto en Google)"; } }
 
   // Nav al hacer scroll
   var nav = document.getElementById("nav");

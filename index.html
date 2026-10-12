@@ -29,7 +29,7 @@
     "logo": "https://ponchogf88.github.io/captoora/assets/banner.png",
     "image": "https://ponchogf88.github.io/captoora/assets/banner.png",
     "telephone": "+528140050088",
-    "address": {"@type": "PostalAddress", "streetAddress": "Colinas de San Jerónimo 11", "addressLocality": "Monterrey", "addressRegion": "Nuevo León", "addressCountry": "MX"},
+    "address": {"@type": "PostalAddress", "streetAddress": "Av. Paseo de los Álamos 165, Colinas de San Jerónimo", "postalCode": "64630", "addressLocality": "Monterrey", "addressRegion": "Nuevo León", "addressCountry": "MX"},
     "sameAs": ["https://instagram.com/captoora.studio", "https://www.tiktok.com/@captoora.studiomty", "https://x.com/captoora_studio"]
   }
   </script>
@@ -46,8 +46,10 @@
       <nav class="nav__links" id="nav-links" aria-label="Principal">
         <a href="#evento">Agenda</a>
         <a href="#paquetes">Paquetes</a>
+        <a href="#parque">Parque</a>
         <a href="#escenarios">Escenarios</a>
         <a href="#portafolio">Portafolio</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <a class="btn btn--lime btn--sm nav__cta" data-wa="Hola Captoora, quiero apartar una sesión." href="https://wa.me/528140050088" target="_blank" rel="noopener">WhatsApp</a>
@@ -92,9 +94,20 @@
         <dl class="event__facts">
           <div><dt>Cuándo</dt><dd data-ev="when">Tú eliges el día.</dd></div>
           <div><dt>Cómo apartas</dt><dd data-ev="how">30% de anticipo.</dd></div>
-          <div><dt>Dónde</dt><dd><span data-ev="address">Colinas de San Jerónimo 11, Monterrey</span><a id="ev-map" class="link" href="#" target="_blank" rel="noopener">Abrir en Maps →</a></dd></div>
+          <div><dt>Dónde</dt><dd><span data-ev="address">Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</span><a id="ev-map" class="link" href="#" target="_blank" rel="noopener">Abrir en Maps →</a></dd></div>
+          <div><dt>Horario</dt><dd data-hours>Con cita, escríbenos para horarios.</dd></div>
           <div><dt>WhatsApp</dt><dd><a class="link" data-wa="Hola Captoora" href="https://wa.me/528140050088" target="_blank" rel="noopener">81 4005 0088</a></dd></div>
         </dl>
+      </div>
+    </section>
+
+    <!-- 2b. PARQUE (texto en js/config.js → park) -->
+    <section class="section park" id="parque">
+      <div class="wrap park__in">
+        <p class="kicker kicker--lime">Para papás</p>
+        <h2 class="h2" id="park-title">Parque justo afuera: exterior con luz natural + estudio.</h2>
+        <p class="muted" id="park-text"></p>
+        <a class="btn btn--lime" data-wa="Hola Captoora, quiero info de la sesión infantil en el parque y el estudio." href="https://wa.me/528140050088" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
       </div>
     </section>
 
@@ -128,7 +141,7 @@
         <div class="head">
           <p class="kicker kicker--lime">Portafolio</p>
           <h2 class="h2">Fotografías que inspiran.</h2>
-          <p class="muted">Retratos, eventos y marcas. Nada de banco de imágenes ni IA: todo salió de mi cámara. Lo voy llenando con cada sesión.</p>
+          <p class="muted">Retratos, eventos, marcas y fondo blanco. Nada de banco de imágenes ni IA: todo salió de mi cámara. Lo voy llenando con cada sesión.</p>
         </div>
         <div class="pf__filters" id="pf-filters" role="group" aria-label="Filtrar portafolio"></div>
         <div class="pf__grid" id="portfolio"></div>
@@ -161,6 +174,19 @@
       </div>
     </section>
 
+    <!-- 4b. PREGUNTAS FRECUENTES (js/config.js → faq) -->
+    <section class="section faq" id="faq">
+      <div class="wrap faq__in">
+        <p class="kicker kicker--lime">Preguntas frecuentes</p>
+        <h2 class="h2">Lo que más nos preguntan.</h2>
+        <div class="faq__list" id="faq-list"></div>
+        <div class="review">
+          <p class="muted">¿Ya viniste? Tu reseña ayuda a otras familias a encontrarnos.</p>
+          <a class="btn btn--outline-lime" id="review-cta" href="#" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
+        </div>
+      </div>
+    </section>
+
     <!-- 5. CONTACTO -->
     <section class="section contact" id="contacto">
       <div class="wrap contact__in">
@@ -168,6 +194,11 @@
         <h2 class="h2 h2--xl">Escríbeme y lo armamos.</h2>
         <p class="muted">Dime qué quieres (sesión fotográfica o renta del estudio), qué día y cuántas personas. Te contesto por WhatsApp.</p>
         <a class="btn btn--lime btn--lg" data-wa="Hola Captoora. Quiero: (sesión fotográfica / renta del estudio). Día: . Personas: ." href="https://wa.me/528140050088" target="_blank" rel="noopener">WhatsApp 81 4005 0088</a>
+        <p class="contact__addr"><span data-addr>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</span><br><span class="muted" data-hours>Con cita, escríbenos para horarios.</span></p>
+        <div class="map">
+          <iframe id="map-frame" title="Mapa satelital de Captoora" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630&t=k&z=18&output=embed"></iframe>
+          <a class="map__link" data-maplink href="https://www.google.com/maps/search/?api=1&query=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630" target="_blank" rel="noopener" aria-label="Abrir Captoora en Google Maps"><span>Abrir en Google Maps →</span></a>
+        </div>
         <ul class="social" id="social"></ul>
       </div>
     </section>
@@ -176,7 +207,7 @@
   <footer class="footer">
     <div class="wrap footer__in">
       <span class="logo logo--foot" role="img" aria-label="Captoora"></span>
-      <p>Colinas de San Jerónimo, Monterrey, N.L.</p>
+      <p data-addr>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</p>
       <nav aria-label="Pie"><a href="#evento">Agenda</a><a href="#paquetes">Paquetes</a><a href="#escenarios">Escenarios</a><a href="#portafolio">Portafolio</a><a href="#set">El set</a><a href="#contacto">Contacto</a></nav>
       <p class="footer__c">© 2026 Captoora</p>
     </div>

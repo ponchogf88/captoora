@@ -15,10 +15,21 @@ window.CAPTOORA = {
     whatToDo: "Escríbeme por WhatsApp: qué quieres (sesión fotográfica o renta del estudio), qué día y cuántas personas. Te confirmo y te mando la ubicación.",
     when: "Tú eliges el día. Lo cuadramos por WhatsApp.",
     how: "30% de anticipo por transferencia. El resto, al terminar.",
-    address: "Colinas de San Jerónimo 11, Monterrey",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Colinas+de+San+Jer%C3%B3nimo+11+Monterrey",
+    address: "Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630",
+    // Mapa embebido (satélite, sin API key). t=k satélite, z=zoom.
+    mapEmbed: "https://maps.google.com/maps?q=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630&t=k&z=18&output=embed",
     ctaText: "Agenda por WhatsApp",
     waMessage: "Hola Captoora, quiero agendar una sesión. Me interesa: (sesión fotográfica / renta del estudio). Día: . Personas: ."
+  },
+
+  // ---- HORARIO (cámbialo cuando haya horario fijo) ----------------
+  hours: "Con cita, escríbenos para horarios.",
+
+  // ---- PARQUE (punto de venta para papás) ------------------------
+  park: {
+    title: "Parque justo afuera: exterior con luz natural + estudio.",
+    text: "Al salir del estudio hay un parque. En una misma visita tus peques juegan afuera con luz natural y luego pasamos al set con luz profesional. Dos looks, cero traslados."
   },
 
   // ---- PAQUETES (offers.md, 23 sep 2026) -----------------------
@@ -31,17 +42,25 @@ window.CAPTOORA = {
       badge: "El que recomiendo",
       items: ["Sesión en set", "8 a 12 clips listos para Reels/TikTok"] },
     { name: "Clase de cámara", price: 350, regularPrice: 500, unit: "por hora",
-      promoLabel: "Promoción de octubre", secondary: true, badge: "Promo octubre",
+      promoLabel: "Promoción de octubre", validUntil: "Válido hasta el 31 de octubre", secondary: true, badge: "Promo octubre",
       desc: "¿Tienes cámara profesional y no sabes usarla? Vente al estudio y te enseño. Una hora de clase práctica con tu propia cámara: modo manual, luz y enfoque, disparando en el set.",
       items: ["Con tu propia cámara", "Práctica en el set, no teoría", "Sales sabiendo usar el modo manual"],
       cta: "Agendar mi clase",
       waMessage: "Hola, quiero agendar una clase de cámara." },
     { name: "Renta de estudio", price: 350, regularPrice: 500, unit: "por hora",
-      promoLabel: "Promoción de octubre", secondary: true, badge: "Promo octubre",
+      promoLabel: "Promoción de octubre", validUntil: "Válido hasta el 31 de octubre", secondary: true, badge: "Promo octubre",
       desc: "Renta un espacio amplio con tres escenarios diferentes para tu sesión. Atención personalizada en Colinas de San Jerónimo, Monterrey, con opción a exterior.",
       items: ["Tres escenarios diferentes", "Softbox, cicloramas, fondos y luces profesionales", "Baño, espejos y pantallas", "Internet y climatización", "Sonido envolvente", "Atención personalizada y opción a exterior", "Apartas por WhatsApp"],
       cta: "Rentar una hora",
       waMessage: "Hola, quiero rentar el estudio por una hora." },
+    // Sesión infantil / familiar: precio y promo vecinos SIN confirmar.
+    // Cuando estén: pon price: 1000 (número) y llena neighborPromo; borra priceLabel.
+    { name: "Sesión infantil / familiar", price: null, priceLabel: "Precio y promo vecinos: pregunta por WhatsApp",
+      neighborPromo: "", badge: "Set de otoño", secondary: true,
+      desc: "Set de temporada para peques y familia: Pumpkin Patch, Halloween y Día de Muertos. Parque justo afuera para fotos con luz natural + estudio.",
+      items: ["Set de otoño: Pumpkin Patch, Halloween, Día de Muertos", "Exterior en el parque + interior en el estudio", "Te dirijo: los peques juegan, yo capturo", "Promo para vecinos y familias de kínders cercanos"],
+      cta: "Preguntar por la sesión infantil",
+      waMessage: "Hola Captoora, quiero info de la sesión infantil / familiar de otoño (precio y promo vecinos)." },
     { name: "Sesión básica", price: 1000, unit: "1 hora",
       items: ["1 set con luces", "Te dirijo la pose", "15 fotos editadas"] },
     { name: "Video por encargo", price: 1200, unit: "por video",
@@ -49,7 +68,7 @@ window.CAPTOORA = {
   ],
 
   // ---- ESCENARIOS (sets del estudio) ----------------------------
-  // Hasta 3. show:false = oculto. Para agregar uno: pon show:true, texto e imagen
+  // Hasta 3. show:false = oculto. comingSoon:true = tarjeta "Próximamente" (quítalo al poner image). Para agregar uno: pon show:true, texto e imagen
   // (image = ruta a un .jpg.b64 en assets/media).
   scenarios: [
     { show: true, name: "Escenario 1", image: "assets/media/escenario-1.jpg.b64",
@@ -59,8 +78,8 @@ window.CAPTOORA = {
       note: "Incluido en la Renta de estudio.",
       cta: "Agendar el Escenario 1",
       waMessage: "Hola, quiero agendar el Escenario 1." },
-    { show: false, name: "Escenario 2", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 2." },
-    { show: false, name: "Escenario 3", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 3." }
+    { show: true, comingSoon: true, name: "Escenario 2", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 2." },
+    { show: true, comingSoon: true, name: "Escenario 3", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 3." }
   ],
 
   // ---- PORTAFOLIO --------------------------------------------------
@@ -70,7 +89,12 @@ window.CAPTOORA = {
   portfolioCats: [
     { key: "retrato", label: "Retrato" },
     { key: "eventos", label: "Eventos" },
-    { key: "marca",   label: "Producto y marca" }
+    { key: "marca",   label: "Producto y marca" },
+    { key: "fondoblanco", label: "Fondo blanco" },
+    // Sin fotos todavía: salen como "Próximamente" hasta que agregues fotos con ese cat.
+    { key: "ninos",   label: "Niños / Familia", soon: true },
+    { key: "parque",  label: "Parque", soon: true },
+    { key: "fachada", label: "Fachada", soon: true }
   ],
   portfolio: [
     { cat: "retrato", image: "assets/media/pf-1946.jpg.b64", w: 800,  h: 1200, alt: "Retrato de hombre en exterior, luz de tarde" },
@@ -81,8 +105,24 @@ window.CAPTOORA = {
     { cat: "marca",   image: "assets/media/pf-1062.jpg.b64", w: 800,  h: 1200, alt: "Activación de marca Farmasi con entrenamiento al aire libre" },
     { cat: "retrato", image: "assets/media/pf-1957.jpg.b64", w: 902,  h: 1200, alt: "Retrato de hombre con camisa negra" },
     { cat: "eventos", image: "assets/media/pf-0867.jpg.b64", w: 1200, h: 800,  alt: "Vista general del evento con banner Nutriplus" },
-    { cat: "marca",   image: "assets/media/pf-0041.jpg.b64", w: 1200, h: 800,  alt: "Momento de baño de hielo durante la activación de marca" }
+    { cat: "marca",   image: "assets/media/pf-0041.jpg.b64", w: 1200, h: 800,  alt: "Momento de baño de hielo durante la activación de marca" },
+    { cat: "fondoblanco", image: "assets/media/pf-w0818.jpg.b64", w: 800, h: 1200, alt: "Grupo de modelos Farmasi en fondo blanco" },
+    { cat: "fondoblanco", image: "assets/media/pf-w0828.jpg.b64", w: 1200, h: 800, alt: "Cuatro modelos Farmasi de pie en fondo blanco" },
+    { cat: "fondoblanco", image: "assets/media/pf-w0842.jpg.b64", w: 1200, h: 800, alt: "Modelos Farmasi con productos Nutriplus en fondo blanco" }
   ],
+
+  // ---- PREGUNTAS FRECUENTES ---------------------------------------
+  faq: [
+    { q: "¿Hay estacionamiento?", a: "Pregúntanos por WhatsApp y te decimos dónde dejar el carro." },
+    { q: "¿Cuántas personas caben?", a: "Depende del escenario y del tipo de sesión. Pregúntanos y lo vemos para tu grupo." },
+    { q: "¿Puedo llevar a mi mascota?", a: "Pregúntanos antes de tu sesión." },
+    { q: "¿Cómo aparto?", a: "Con 30% de anticipo por transferencia. El resto, al terminar." },
+    { q: "¿Se pueden hacer fotos en exterior?", a: "Sí. Hay un parque justo afuera del estudio: fotos con luz natural y luego al set." }
+  ],
+
+  // ---- RESEÑAS (nada de reseñas inventadas) ------------------------
+  // Pega aquí el link de reseñas de Google Business cuando exista.
+  reviews: { googleUrl: "" },
 
   // ---- REDES -------------------------------------------------
   social: [
