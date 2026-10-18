@@ -1,4 +1,6 @@
 # 📖 BITÁCORA MAESTRA HISTÓRICA: FUNDACIÓN DE ESTUDIO CAPTOORA
+
+> **Nota documental, 18 oct 2026:** esta crónica conserva el relato recibido. La [bitácora conciliada](BITACORA_CAPTOORA_2026-10-18.md) distingue hechos comprobados, avances reportados y pendientes. No se aportó aquí comprobante de registro IMPI; «marca registrada» no queda acreditado. La escritura respaldada por IDENTITY.md es **Captoora**, doble O; «Captwoora» no es un cambio autorizado. La imagen del lente es un recurso visual, no prueba de adquisición de un objetivo físico. Las entregas y la sincronización total requieren comprobación separada. Las aspiraciones del encabezado se conservan como visión del fundador, sin acreditarlas como premios, récords o entrevistas obtenidos.
 > *La crónica viva, cronológica y sin filtros de cómo nació y se construyó el estudio fotográfico y productora digital más innovadora. Documentado para la posteridad, para la biografía oficial y para cuando nos entrevisten Elon Musk, Mark Zuckerberg y Oprah Winfrey sobre cómo logramos un Récord Guinness en tiempo récord.*
 
 ---

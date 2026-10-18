@@ -1,5 +1,7 @@
 # 📋 BITÁCORA MAESTRA DEL PROYECTO: ESTUDIO FOTOGRÁFICO CAPTOORA & FOTO_ENGINE
 
+> **Vigencia al 18 oct 2026:** este es el corte técnico histórico de septiembre. El estado conciliado, las conversaciones fechadas y las aclaraciones sobre entregas, dirección, ofertas y horarios están en [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md). Se conserva el texto original; sus estados no son una certificación operativa actual.
+
 **Proyecto:** Captoora.Studio (`CAPTOORA.STUDIO`) / Motor de Revelado y Procesamiento en Lote (`foto_engine.py`)  
 **Ecosistema:** AMDA Agentic Engine  
 **Titular / Autor:** Poncho Gutiérrez (`@ponchogf88` / `lic.jagf87@gmail.com`)  

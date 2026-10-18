@@ -1,3 +1,15 @@
+# Captoora — Contexto conciliado (18 oct 2026)
+
+Leer primero [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md): cronología, oferta publicada, sesiones, versiones, pendientes P01–P28 y límites de evidencia. [Fuentes y 48 turnos de ocho chats](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). La bitácora técnica de septiembre y la crónica del fundador son antecedentes conservados.
+
+Estado: web y dirección comprobadas en este corte; 12 fotos configuradas con archivos locales. Los logs del 17/18 registran 28 individuales y 23 grupales seleccionadas; falta cotejar los finales y su recepción. Drive registra cuatro publicaciones previas y calendarios guardados como Ideas. No confundir documentación con automatización funcionando.
+
+Prioridades: cerrar edición/aceptación/entregas por versión; conciliar precios y permisos; Google Business/pin; archivo y respaldo; calendario con aprobación y comprobantes; decidir plataforma de entrega y dominio con cotización vigente. Los cuatro roles pedidos son edición, marketing, ventas y archivo. No están acreditados cuatro agentes autónomos operativos.
+
+Canal comercial: WhatsApp 81 4005 0088; dirección Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630. Ofertas IA/Bar pausadas; infantil y alcance de FARMASI/Combo por confirmar. La fuente extensa de Drive permanece enlazada en la bitácora; esta actualización no certifica espejo automático entre servicios.
+
+## Contexto previo conservado
+
 # Captoora — Context (18 oct 2026)
 
 Bitácora actualizada y fuente de verdad operativa: **BITACORA_CAPTOORA_2026-10-18.md** (en la raíz del repo).
