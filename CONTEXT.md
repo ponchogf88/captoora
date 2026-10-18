@@ -1,21 +1,25 @@
-# Captoora — Context (24 sep 2026)
+# Captoora — Context (18 oct 2026)
 
-Inauguración programada: 23 sep 19:00. Hoy es el día siguiente.
+Bitácora actualizada y fuente de verdad operativa: **BITACORA_CAPTOORA_2026-10-18.md** (en la raíz del repo).
 
-## Handles (ya no TBD)
-IG @Captoora.studio · TikTok Captoora.studiomty · X @captoora_studio · WA 8140050088
+Fuente única larga sigue en Drive:  
+CAPTOORA — Bitácora y pendientes (fuente única)  
+https://docs.google.com/document/d/1b_7S2n4-RQHfCh7duAURftttl-Ivd2GySPY3O_DbOS0/edit
 
-## Hecho
-- Identity / Agents / Soul / User / Project en el repo
-- READMEFIRST.rtf en Drive MY PROJECTS = YO canónico
-- Sitio esqueleto en GitHub Pages
+## Handles
+IG @Captoora.studio · TikTok @captoora.studiomty · X @captoora_studio · WA 81 4005 0088
 
-## Falta (prioridad)
-1. Hero sin +500 / 5.0
-2. Bloque post-inauguración (abierto / reserva WA)
-3. Google Business con pin
-4. Primera oleada de posts en las cuentas de Captoora (no las personales)
-5. Alinear las 5 copias: iCloud Desktop/Projects · Drive · Notion · Obsidian · este GitHub
+## Hecho reciente
+- Sitio vivo en GitHub Pages (dirección corregida, mapa, portafolio inicial)
+- Sample de entregable Motion Farmasi creado en Drive
+- Bitácora consolidada en el repo (18 oct)
+
+## Prioridad ahora
+1. Editar y entregar sesiones Farmasi + Glowttery Amapola
+2. Decidir plataforma de entrega a clientes (Drive / Pixieset / sitio)
+3. Google Business + pin
+4. Programar posts en Buffer (ideas 16-29 oct listas)
+5. Dominio (captoora.studio en Cloudflare)
 
 ## Siguiente acción
-Un post + hero honesto + WA visible. No abrir otro proyecto.
+Revisar el sample Motion Farmasi y definir cómo se entregan las fotos a los clientes. Ver BITACORA_CAPTOORA_2026-10-18.md.
