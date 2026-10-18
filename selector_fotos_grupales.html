@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA — Selector de Fotos Grupales (CPT_0815 a CPT_0849)</title>
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: #13151f;
+      --accent: #ff4757;
+      --gold: #f39c12;
+      --cyan: #00d2d3;
+      --text: #f1f2f6;
+      --text-muted: #8395a7;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 24px 32px 80px;
+    }
+    header {
+      max-width: 1400px;
+      margin: 0 auto 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    h1 span.badge {
+      background: var(--accent);
+      color: white;
+      font-size: 13px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .instructions {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 700px;
+      line-height: 1.5;
+    }
+    .selected-bar {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      background: rgba(19, 21, 31, 0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 210, 211, 0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      padding: 16px 24px;
+      border-radius: 16px;
+      max-width: 1400px;
+      margin: 0 auto 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .counter {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cyan);
+    }
+    .selected-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      background: rgba(0, 210, 211, 0.15);
+      border: 1px solid var(--cyan);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .btn-copy {
+      background: var(--cyan);
+      color: #000;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s, background 0.15s;
+    }
+    .btn-copy:hover {
+      background: #48dbfb;
+      transform: scale(1.03);
+    }
+    .section-title {
+      max-width: 1400px;
+      margin: 0 auto 16px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .contact-sheet-box {
+      max-width: 1400px;
+      margin: 0 auto 40px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 16px;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+    .contact-sheet-box img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: zoom-in;
+    }
+    .grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 2px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .card:hover {
+      border-color: rgba(255,255,255,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+    }
+    .card.selected {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0, 210, 211, 0.4);
+    }
+    .img-wrap {
+      width: 100%;
+      height: 380px;
+      background: #000;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .card:hover .img-wrap img {
+      transform: scale(1.04);
+    }
+    .badge-filename {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .card-footer {
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.3);
+    }
+    .select-btn {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.15s;
+    }
+    .card.selected .select-btn {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: #000;
+    }
+    .open-full {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.15s;
+    }
+    .open-full:hover {
+      color: #fff;
+    }
+    /* Modal Zoom */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+    .modal.active { display: flex; }
+    .modal img {
+      max-width: 94vw;
+      max-height: 94vh;
+      border-radius: 8px;
+      box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>CAPTOORA STUDIO <span class="badge">Sesión Grupal Farmasi</span></h1>
+      <p class="instructions">Haz clic en <strong>"Seleccionar"</strong> en tus 7 fotos favoritas (o haz clic sobre la foto para verla en pantalla completa). Al terminar, puedes copiar la lista de tus 7 seleccionadas con un clic.</p>
+    </div>
+  </header>
+
+  <div class="selected-bar">
+    <div>
+      <div class="counter" id="counter">Seleccionadas: 0 / 7</div>
+      <div class="selected-tags" id="selectedTags" style="margin-top: 6px;"></div>
+    </div>
+    <button class="btn-copy" id="copyBtn" onclick="copySelection()">Copiar Selección para el Chat</button>
+  </div>
+
+  <div class="section-title">Vista General: Hoja de Contactos #6</div>
+  <div class="contact-sheet-box">
+    <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi%20unidad/PROJECTS/RESPALDOS_PROYECTOS/AI%20CAPTOORA/PORTAFOLIO/GROUPS/FARMASI%20SESSION%2010%2010%202026/HOJAS_DE_CONTACTO_SELECCION/hoja_contactos_6.jpg" alt="Hoja de Contactos 6" onclick="openModal(this.src)">
+    <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Clic para ampliar la hoja de contactos completa</p>
+  </div>
+
+  <div class="section-title">Todas las Tomas Candidatas (CPT_0815 a CPT_0849)</div>
+  <div class="grid" id="photoGrid"></div>
+
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Zoom">
+  </div>
+
+  <script>
+    const basePath = "file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi%20unidad/PROJECTS/RESPALDOS_PROYECTOS/AI%20CAPTOORA/PORTAFOLIO/GROUPS/FARMASI%20SESSION%2010%2010%202026/";
+    const photos = [];
+    for (let i = 815; i <= 849; i++) {
+      const numStr = String(i).padStart(4, '0');
+      photos.push(`CPT_${numStr}`);
+    }
+
+    const selected = new Set();
+    const grid = document.getElementById('photoGrid');
+    const counter = document.getElementById('counter');
+    const tagsContainer = document.getElementById('selectedTags');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+
+    photos.forEach(name => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.id = `card-${name}`;
+      const imgUrl = `${basePath}${name}.JPG`;
+
+      card.innerHTML = `
+        <div class="img-wrap" onclick="openModal('${imgUrl}')">
+          <span class="badge-filename">${name}</span>
+          <img src="${imgUrl}" alt="${name}" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <button class="select-btn" onclick="toggleSelect('${name}')">Seleccionar</button>
+          <a class="open-full" href="${imgUrl}" target="_blank">Abrir original ↗</a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    function toggleSelect(name) {
+      const card = document.getElementById(`card-${name}`);
+      const btn = card.querySelector('.select-btn');
+      if (selected.has(name)) {
+        selected.delete(name);
+        card.classList.remove('selected');
+        btn.innerText = 'Seleccionar';
+      } else {
+        selected.add(name);
+        card.classList.add('selected');
+        btn.innerText = '✓ Seleccionada';
+      }
+      updateUI();
+    }
+
+    function updateUI() {
+      counter.innerText = `Seleccionadas: ${selected.size} / 7`;
+      tagsContainer.innerHTML = '';
+      selected.forEach(item => {
+        const span = document.createElement('span');
+        span.className = 'pill';
+        span.innerText = item;
+        tagsContainer.appendChild(span);
+      });
+    }
+
+    function copySelection() {
+      if (selected.size === 0) {
+        alert("Primero selecciona algunas fotos.");
+        return;
+      }
+      const list = Array.from(selected).join(', ');
+      navigator.clipboard.writeText(list).then(() => {
+        const btn = document.getElementById('copyBtn');
+        const old = btn.innerText;
+        btn.innerText = "¡Copiado al Portapapeles! ✓";
+        setTimeout(() => btn.innerText = old, 2000);
+      });
+    }
+
+    function openModal(src) {
+      modalImg.src = src;
+      modal.classList.add('active');
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>
