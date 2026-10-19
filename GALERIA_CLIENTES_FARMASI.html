@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAPTOORA STUDIO — Galería Privada Farmasi</title>
+  <title>CAPTOORA STUDIO — Galería Privada Farmasi (Colección Completa)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,12 +26,11 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-    /* Luxury Header */
     header {
       padding: 60px 24px 30px;
       text-align: center;
       position: relative;
-      background: radial-gradient(circle at 50% -20%, rgba(223, 177, 91, 0.12) 0%, transparent 60%);
+      background: radial-gradient(circle at 50% -20%, rgba(223, 177, 91, 0.15) 0%, transparent 60%);
       border-bottom: 1px solid var(--card-border);
     }
     .badge {
@@ -61,14 +60,14 @@
     .subtitle {
       color: var(--text-muted);
       font-size: 15px;
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto 28px;
       line-height: 1.6;
     }
     .stats-bar {
       display: flex;
       justify-content: center;
-      gap: 24px;
+      gap: 20px;
       flex-wrap: wrap;
       margin-top: 10px;
     }
@@ -82,12 +81,11 @@
     }
     .stat-chip strong { color: var(--gold); font-weight: 700; margin-right: 4px; }
 
-    /* Filter Tabs */
     .nav-container {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(9, 10, 15, 0.88);
+      background: rgba(9, 10, 15, 0.9);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--card-border);
       padding: 16px 20px;
@@ -119,9 +117,8 @@
       box-shadow: 0 4px 20px var(--gold-glow);
     }
 
-    /* Gallery Grid */
     .gallery-container {
-      max-width: 1500px;
+      max-width: 1550px;
       margin: 40px auto;
       padding: 0 24px;
     }
@@ -147,7 +144,7 @@
     .img-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 135%;
+      padding-top: 150%; /* 2:3 vertical aspect */
       background: #11131a;
       overflow: hidden;
     }
@@ -167,7 +164,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(15, 17, 25, 0.8);
+      background: rgba(15, 17, 25, 0.85);
       border-top: 1px solid var(--card-border);
     }
     .card-info h3 {
@@ -179,6 +176,7 @@
     .card-info p {
       font-size: 12px;
       color: var(--text-muted);
+      line-height: 1.4;
     }
     .card-actions {
       display: flex;
@@ -210,11 +208,10 @@
       color: #fff;
     }
 
-    /* Lightbox Modal */
     .lightbox {
       position: fixed;
       inset: 0;
-      background: rgba(6, 7, 10, 0.95);
+      background: rgba(6, 7, 10, 0.96);
       backdrop-filter: blur(24px);
       z-index: 1000;
       display: none;
@@ -269,7 +266,6 @@
     }
     .close-btn:hover { color: #fff; }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 50px 20px;
@@ -286,568 +282,1690 @@
   <header>
     <div class="badge">ESTUDIO CAPTOORA · ENTREGA PRIVADA VIP</div>
     <h1>Sesión Comercial Farmasi</h1>
-    <p class="subtitle">Colección oficial de alta resolución · Lic. Tere, Lulú, Brenda, Karla y Tanya.<br>Retoque profesional con ciclorama puro, iluminación de estudio y fidelidad de sensor.</p>
+    <p class="subtitle">Colección completa de alta resolución · Lic. Tere, Lulú, Brenda, Karla y Tania.<br>Retoque publicitario con ciclorama puro, iluminación de estudio, textura natural y cero recorte.</p>
     
     <div class="stats-bar">
-      <div class="stat-chip"><strong>34</strong> Fotos Maestras Entregadas</div>
+      <div class="stat-chip"><strong>104</strong> Fotografías Maestras Aprobadas</div>
       <div class="stat-chip"><strong>100%</strong> Full-Frame / Zero Crop</div>
-      <div class="stat-chip"><strong>Nikon D3500</strong> 24 Megapíxeles</div>
+      <div class="stat-chip"><strong>2:3</strong> Vertical Portrait / High-Res</div>
       <div class="stat-chip"><strong>Octubre 2026</strong> Monterrey, N.L.</div>
     </div>
   </header>
 
   <nav class="nav-container">
-    <button class="tab-btn active" onclick="filterCategory('all', this)">✨ Todas (34)</button>
-    <button class="tab-btn" onclick="filterCategory('grupales', this)">👑 Grupales (6)</button>
-    <button class="tab-btn" onclick="filterCategory('lulu', this)">💖 Lulú (7)</button>
-    <button class="tab-btn" onclick="filterCategory('brenda', this)">🌸 Brenda (7)</button>
-    <button class="tab-btn" onclick="filterCategory('karla', this)">🔥 Karla (7)</button>
-    <button class="tab-btn" onclick="filterCategory('tanya', this)">💄 Tanya (7)</button>
+
+    <button class="tab-btn active" onclick="filterCategory('all', this)">✨ Todas (104)</button>
+    <button class="tab-btn" onclick="filterCategory('grupales', this)">👑 Grupales (20)</button>
+    <button class="tab-btn" onclick="filterCategory('lulu', this)">💖 Lulú (18)</button>
+    <button class="tab-btn" onclick="filterCategory('brenda', this)">🌸 Brenda (15)</button>
+    <button class="tab-btn" onclick="filterCategory('karla', this)">🔥 Karla (30)</button>
+    <button class="tab-btn" onclick="filterCategory('tania', this)">💄 Tania (21)</button>
+
   </nav>
 
   <main class="gallery-container">
     <div class="grid" id="galleryGrid">
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0554', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0820_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0820', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0554" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0820_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0820" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0554 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0820 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0554')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0554_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0820')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0820_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0820_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0558_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0558', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0821_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0821', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0558_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0558" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0821_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0821" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0558 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0821 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0558')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0558_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0558_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0821')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0821_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0821_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0561_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0561', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0822_GROUP_PRO_RETOUCHED.jpg', 'CPT_0822', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0561_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0561" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0822_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0822" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0561 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0822 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0561')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0561_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0561_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0822')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0822_GROUP_PRO_RETOUCHED.jpg" download="CPT_0822_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0565', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0823_GROUP_PRO_RETOUCHED.jpg', 'CPT_0823', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0565" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0823_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0823" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0565 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0823 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0565')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0565_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0823')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0823_GROUP_PRO_RETOUCHED.jpg" download="CPT_0823_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0574', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0824_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0824', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0574" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0824_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0824" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0574 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0824 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0574')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0574_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0824')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0824_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0824_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0583_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0583', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0826_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0826', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0583_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0583" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0826_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0826" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0583 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0826 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0583')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0583_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0583_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0826')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0826_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0826_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0587', 'Brenda')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0828_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0828', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0587" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0828_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0828" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0587 · Brenda</h3>
-            <p>Línea Beauty & Skincare Farmasi, acabado radiante de piel.</p>
+            <h3>CPT_0828 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0587')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0587_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0828')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0828_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0828_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0613_KARLA_PRO_RETOUCHED.jpg', 'CPT_0613', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0830_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0830', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0613_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0613" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0830_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0830" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0613 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0830 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0613')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0613_KARLA_PRO_RETOUCHED.jpg" download="CPT_0613_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0830')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0830_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0830_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0629_KARLA_PRO_RETOUCHED.jpg', 'CPT_0629', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0831_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0831', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0629_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0629" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0831_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0831" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0629 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0831 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0629')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0629_KARLA_PRO_RETOUCHED.jpg" download="CPT_0629_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0831')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0831_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0831_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0633_KARLA_PRO_RETOUCHED.jpg', 'CPT_0633', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0833_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0833', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0633_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0633" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0833_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0833" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0633 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0833 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0633')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0633_KARLA_PRO_RETOUCHED.jpg" download="CPT_0633_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0833')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0833_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0833_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0635_KARLA_PRO_RETOUCHED.jpg', 'CPT_0635', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0834_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0834', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0635_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0635" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0834_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0834" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0635 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0834 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0635')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0635_KARLA_PRO_RETOUCHED.jpg" download="CPT_0635_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0834')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0834_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0834_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0643_KARLA_PRO_RETOUCHED.jpg', 'CPT_0643', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0836_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0836', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0643_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0643" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0836_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0836" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0643 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0836 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0643')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0643_KARLA_PRO_RETOUCHED.jpg" download="CPT_0643_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0836')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0836_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0836_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0645_KARLA_PRO_RETOUCHED.jpg', 'CPT_0645', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0837_GROUP_PRO_RETOUCHED.jpg', 'CPT_0837', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0645_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0645" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0837_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0837" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0645 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0837 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0645')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0645_KARLA_PRO_RETOUCHED.jpg" download="CPT_0645_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0837')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0837_GROUP_PRO_RETOUCHED.jpg" download="CPT_0837_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0648_KARLA_PRO_RETOUCHED.jpg', 'CPT_0648', 'Karla')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0838_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0838', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0648_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0648" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0838_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0838" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0648 · Karla</h3>
-            <p>Línea deportiva & Nutriplus Farmasi, definición y fuerza.</p>
+            <h3>CPT_0838 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0648')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0648_KARLA_PRO_RETOUCHED.jpg" download="CPT_0648_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0838')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0838_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0838_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0685_TANYA_PRO_RETOUCHED.jpg', 'CPT_0685', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0840_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0840', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0685_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0685" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0840_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0840" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0685 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0840 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0685')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0685_TANYA_PRO_RETOUCHED.jpg" download="CPT_0685_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0840')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0840_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0840_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0687_TANYA_PRO_RETOUCHED.jpg', 'CPT_0687', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0842_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0842', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0687_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0687" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0842_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0842" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0687 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0842 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0687')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0687_TANYA_PRO_RETOUCHED.jpg" download="CPT_0687_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0842')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0842_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0842_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0689_TANYA_PRO_RETOUCHED.jpg', 'CPT_0689', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0843_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0843', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0689_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0689" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0843_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0843" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0689 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0843 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0689')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0689_TANYA_PRO_RETOUCHED.jpg" download="CPT_0689_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0843')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0843_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0843_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0698_TANYA_PRO_RETOUCHED.jpg', 'CPT_0698', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0844_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0844', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0698_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0698" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0844_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0844" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0698 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0844 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0698')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0698_TANYA_PRO_RETOUCHED.jpg" download="CPT_0698_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0844')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0844_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0844_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0700_TANYA_PRO_RETOUCHED.jpg', 'CPT_0700', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0845_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0845', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0700_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0700" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0845_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0845" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0700 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0845 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0700')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0700_TANYA_PRO_RETOUCHED.jpg" download="CPT_0700_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0845')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0845_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0845_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0702_TANYA_PRO_RETOUCHED.jpg', 'CPT_0702', 'Tanya')">
+      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0846_GRUPAL_IMAGE2_GENERATED.png', 'CPT_0846', 'Grupales Oficiales')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0702_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0702" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0846_GRUPAL_IMAGE2_GENERATED.png" alt="CPT_0846" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0702 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0846 · Grupales Oficiales</h3>
+            <p>Toma grupal oficial · Ciclorama blanco puro, iluminación simétrica y contacto al piso.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0702')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0702_TANYA_PRO_RETOUCHED.jpg" download="CPT_0702_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0846')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/GRUPALES/CPT_0846_GRUPAL_IMAGE2_GENERATED.png" download="CPT_0846_GRUPAL_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="tanya" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0721_TANYA_PRO_RETOUCHED.jpg', 'CPT_0721', 'Tanya')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0723_LULU_IMAGE2_GENERATED.png', 'CPT_0723', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0721_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0721" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0723_LULU_IMAGE2_GENERATED.png" alt="CPT_0723" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0721 · Tanya</h3>
-            <p>Colección cosméticos Farmasi, estética de revista y maquillaje.</p>
+            <h3>CPT_0723 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0721')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0721_TANYA_PRO_RETOUCHED.jpg" download="CPT_0721_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0723')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0723_LULU_IMAGE2_GENERATED.png" download="CPT_0723_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0724_LULU_PRO_RETOUCHED.jpg', 'CPT_0724', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0732_LULU_IMAGE2_GENERATED.png', 'CPT_0732', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0724_LULU_PRO_RETOUCHED.jpg" alt="CPT_0724" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0732_LULU_IMAGE2_GENERATED.png" alt="CPT_0732" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0724 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <h3>CPT_0732 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0724')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0724_LULU_PRO_RETOUCHED.jpg" download="CPT_0724_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0732')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0732_LULU_IMAGE2_GENERATED.png" download="CPT_0732_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0728_LULU_PRO_RETOUCHED.jpg', 'CPT_0728', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0733_LULU_IMAGE2_GENERATED.png', 'CPT_0733', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0728_LULU_PRO_RETOUCHED.jpg" alt="CPT_0728" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0733_LULU_IMAGE2_GENERATED.png" alt="CPT_0733" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0728 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <h3>CPT_0733 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0728')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0728_LULU_PRO_RETOUCHED.jpg" download="CPT_0728_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0733')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0733_LULU_IMAGE2_GENERATED.png" download="CPT_0733_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0735_LULU_PRO_RETOUCHED.jpg', 'CPT_0735', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0735_LULU_PRO_RETOUCHED.jpg', 'CPT_0735', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0735_LULU_PRO_RETOUCHED.jpg" alt="CPT_0735" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0735_LULU_PRO_RETOUCHED.jpg" alt="CPT_0735" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
             <h3>CPT_0735 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
             <button class="action-btn" onclick="toggleLike(this, 'CPT_0735')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0735_LULU_PRO_RETOUCHED.jpg" download="CPT_0735_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0735_LULU_PRO_RETOUCHED.jpg" download="CPT_0735_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0741_LULU_PRO_RETOUCHED.jpg', 'CPT_0741', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0737_LULU_IMAGE2_GENERATED.png', 'CPT_0737', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0741_LULU_PRO_RETOUCHED.jpg" alt="CPT_0741" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0737_LULU_IMAGE2_GENERATED.png" alt="CPT_0737" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0737 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0737')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0737_LULU_IMAGE2_GENERATED.png" download="CPT_0737_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0738_LULU_IMAGE2_GENERATED.png', 'CPT_0738', 'Lulú')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0738_LULU_IMAGE2_GENERATED.png" alt="CPT_0738" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0738 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0738')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0738_LULU_IMAGE2_GENERATED.png" download="CPT_0738_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0740_LULU_IMAGE2_GENERATED.png', 'CPT_0740', 'Lulú')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0740_LULU_IMAGE2_GENERATED.png" alt="CPT_0740" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0740 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0740')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0740_LULU_IMAGE2_GENERATED.png" download="CPT_0740_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0741_LULU_PRO_RETOUCHED.jpg', 'CPT_0741', 'Lulú')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0741_LULU_PRO_RETOUCHED.jpg" alt="CPT_0741" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
             <h3>CPT_0741 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
             <button class="action-btn" onclick="toggleLike(this, 'CPT_0741')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0741_LULU_PRO_RETOUCHED.jpg" download="CPT_0741_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0741_LULU_PRO_RETOUCHED.jpg" download="CPT_0741_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0745_LULU_PRO_RETOUCHED.jpg', 'CPT_0745', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0746_LULU_IMAGE2_GENERATED.png', 'CPT_0746', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0745_LULU_PRO_RETOUCHED.jpg" alt="CPT_0745" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0746_LULU_IMAGE2_GENERATED.png" alt="CPT_0746" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0745 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <h3>CPT_0746 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0745')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0745_LULU_PRO_RETOUCHED.jpg" download="CPT_0745_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0746')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0746_LULU_IMAGE2_GENERATED.png" download="CPT_0746_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0750_LULU_PRO_RETOUCHED.jpg', 'CPT_0750', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0749_LULU_IMAGE2_GENERATED.png', 'CPT_0749', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0750_LULU_PRO_RETOUCHED.jpg" alt="CPT_0750" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0749_LULU_IMAGE2_GENERATED.png" alt="CPT_0749" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0750 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <h3>CPT_0749 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0750')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0750_LULU_PRO_RETOUCHED.jpg" download="CPT_0750_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0749')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0749_LULU_IMAGE2_GENERATED.png" download="CPT_0749_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0766_LULU_PRO_RETOUCHED.jpg', 'CPT_0766', 'Lulú')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0751_LULU_IMAGE2_GENERATED.png', 'CPT_0751', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0766_LULU_PRO_RETOUCHED.jpg" alt="CPT_0766" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0751_LULU_IMAGE2_GENERATED.png" alt="CPT_0751" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0766 · Lulú</h3>
-            <p>Retrato comercial de estudio, alta luminosidad y elegancia.</p>
+            <h3>CPT_0751 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0766')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0766_LULU_PRO_RETOUCHED.jpg" download="CPT_0766_LULU_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0751')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0751_LULU_IMAGE2_GENERATED.png" download="CPT_0751_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0815_GROUP_PRO_RETOUCHED.jpg', 'CPT_0815', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0752_LULU_IMAGE2_GENERATED.png', 'CPT_0752', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0815_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0815" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0752_LULU_IMAGE2_GENERATED.png" alt="CPT_0752" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0815 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0752 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0815')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0815_GROUP_PRO_RETOUCHED.jpg" download="CPT_0815_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0752')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0752_LULU_IMAGE2_GENERATED.png" download="CPT_0752_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0818_GROUP_PRO_RETOUCHED.jpg', 'CPT_0818', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0753_LULU_IMAGE2_GENERATED.png', 'CPT_0753', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0818_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0818" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0753_LULU_IMAGE2_GENERATED.png" alt="CPT_0753" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0818 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0753 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0818')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0818_GROUP_PRO_RETOUCHED.jpg" download="CPT_0818_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0753')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0753_LULU_IMAGE2_GENERATED.png" download="CPT_0753_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0819_GROUP_PRO_RETOUCHED.jpg', 'CPT_0819', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0760_LULU_IMAGE2_GENERATED.png', 'CPT_0760', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0819_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0819" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0760_LULU_IMAGE2_GENERATED.png" alt="CPT_0760" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0819 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0760 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0819')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0819_GROUP_PRO_RETOUCHED.jpg" download="CPT_0819_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0760')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0760_LULU_IMAGE2_GENERATED.png" download="CPT_0760_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0822_GROUP_PRO_RETOUCHED.jpg', 'CPT_0822', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0761_LULU_IMAGE2_GENERATED.png', 'CPT_0761', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0822_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0822" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0761_LULU_IMAGE2_GENERATED.png" alt="CPT_0761" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0822 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0761 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0822')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0822_GROUP_PRO_RETOUCHED.jpg" download="CPT_0822_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0761')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0761_LULU_IMAGE2_GENERATED.png" download="CPT_0761_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0823_GROUP_PRO_RETOUCHED.jpg', 'CPT_0823', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0763_LULU_IMAGE2_GENERATED.png', 'CPT_0763', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0823_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0823" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0763_LULU_IMAGE2_GENERATED.png" alt="CPT_0763" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0823 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0763 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0823')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0823_GROUP_PRO_RETOUCHED.jpg" download="CPT_0823_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0763')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0763_LULU_IMAGE2_GENERATED.png" download="CPT_0763_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
 
-      <div class="photo-card" data-cat="grupales" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0837_GROUP_PRO_RETOUCHED.jpg', 'CPT_0837', 'Grupales')">
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0765_LULU_IMAGE2_GENERATED.png', 'CPT_0765', 'Lulú')">
         <div class="img-wrapper">
-          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0837_GROUP_PRO_RETOUCHED.jpg" alt="CPT_0837" loading="lazy">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0765_LULU_IMAGE2_GENERATED.png" alt="CPT_0765" loading="lazy">
         </div>
         <div class="card-footer">
           <div class="card-info">
-            <h3>CPT_0837 · Grupales</h3>
-            <p>Cirugía digital, ciclorama continuo y alineación de poses.</p>
+            <h3>CPT_0765 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
           </div>
           <div class="card-actions" onclick="event.stopPropagation()">
-            <button class="action-btn" onclick="toggleLike(this, 'CPT_0837')" title="Marcar Favorita">♥</button>
-            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/CPT_0837_GROUP_PRO_RETOUCHED.jpg" download="CPT_0837_GROUP_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0765')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0765_LULU_IMAGE2_GENERATED.png" download="CPT_0765_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="lulu" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0773_LULU_IMAGE2_GENERATED.png', 'CPT_0773', 'Lulú')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0773_LULU_IMAGE2_GENERATED.png" alt="CPT_0773" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0773 · Lulú</h3>
+            <p>Retrato comercial · Estilo chic, luminosidad y alta fidelidad de piel.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0773')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/LULU/CPT_0773_LULU_IMAGE2_GENERATED.png" download="CPT_0773_LULU_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0661_BRENDA_IMAGE2_GENERATED.png', 'CPT_0661', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0661_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0661" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0661 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0661')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0661_BRENDA_IMAGE2_GENERATED.png" download="CPT_0661_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0662_BRENDA_IMAGE2_GENERATED.png', 'CPT_0662', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0662_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0662" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0662 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0662')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0662_BRENDA_IMAGE2_GENERATED.png" download="CPT_0662_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0667_BRENDA_IMAGE2_GENERATED.png', 'CPT_0667', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0667_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0667" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0667 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0667')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0667_BRENDA_IMAGE2_GENERATED.png" download="CPT_0667_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0678_BRENDA_IMAGE2_GENERATED.png', 'CPT_0678', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0678_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0678" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0678 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0678')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0678_BRENDA_IMAGE2_GENERATED.png" download="CPT_0678_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0682_BRENDA_IMAGE2_GENERATED.png', 'CPT_0682', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0682_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0682" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0682 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0682')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0682_BRENDA_IMAGE2_GENERATED.png" download="CPT_0682_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0685_TANYA_PRO_RETOUCHED.jpg', 'CPT_0685', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0685_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0685" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0685 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0685')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0685_TANYA_PRO_RETOUCHED.jpg" download="CPT_0685_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0688_BRENDA_IMAGE2_GENERATED.png', 'CPT_0688', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0688_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0688" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0688 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0688')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0688_BRENDA_IMAGE2_GENERATED.png" download="CPT_0688_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0689_TANYA_PRO_RETOUCHED.jpg', 'CPT_0689', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0689_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0689" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0689 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0689')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0689_TANYA_PRO_RETOUCHED.jpg" download="CPT_0689_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0698_TANYA_PRO_RETOUCHED.jpg', 'CPT_0698', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0698_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0698" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0698 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0698')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0698_TANYA_PRO_RETOUCHED.jpg" download="CPT_0698_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0706_BRENDA_IMAGE2_GENERATED.png', 'CPT_0706', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0706_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0706" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0706 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0706')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0706_BRENDA_IMAGE2_GENERATED.png" download="CPT_0706_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0708_BRENDA_IMAGE2_GENERATED.png', 'CPT_0708', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0708_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0708" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0708 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0708')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0708_BRENDA_IMAGE2_GENERATED.png" download="CPT_0708_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0718_BRENDA_IMAGE2_GENERATED.png', 'CPT_0718', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0718_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0718" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0718 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0718')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0718_BRENDA_IMAGE2_GENERATED.png" download="CPT_0718_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0721_TANYA_PRO_RETOUCHED.jpg', 'CPT_0721', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0721_TANYA_PRO_RETOUCHED.jpg" alt="CPT_0721" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0721 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0721')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0721_TANYA_PRO_RETOUCHED.jpg" download="CPT_0721_TANYA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0722_BRENDA_IMAGE2_GENERATED.png', 'CPT_0722', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0722_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0722" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0722 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0722')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0722_BRENDA_IMAGE2_GENERATED.png" download="CPT_0722_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="brenda" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0729_BRENDA_IMAGE2_GENERATED.png', 'CPT_0729', 'Brenda')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0729_BRENDA_IMAGE2_GENERATED.png" alt="CPT_0729" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0729 · Brenda</h3>
+            <p>Línea Beauty & Skincare · Acabado radiante de piel y elegancia ejecutiva.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0729')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/BRENDA/CPT_0729_BRENDA_IMAGE2_GENERATED.png" download="CPT_0729_BRENDA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0544_KARLA_IMAGE2_GENERATED.png', 'CPT_0544', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0544_KARLA_IMAGE2_GENERATED.png" alt="CPT_0544" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0544 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0544')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0544_KARLA_IMAGE2_GENERATED.png" download="CPT_0544_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0545_KARLA_IMAGE2_GENERATED.png', 'CPT_0545', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0545_KARLA_IMAGE2_GENERATED.png" alt="CPT_0545" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0545 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0545')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0545_KARLA_IMAGE2_GENERATED.png" download="CPT_0545_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0546_KARLA_IMAGE2_GENERATED.png', 'CPT_0546', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0546_KARLA_IMAGE2_GENERATED.png" alt="CPT_0546" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0546 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0546')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0546_KARLA_IMAGE2_GENERATED.png" download="CPT_0546_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0547_KARLA_IMAGE2_GENERATED.png', 'CPT_0547', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0547_KARLA_IMAGE2_GENERATED.png" alt="CPT_0547" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0547 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0547')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0547_KARLA_IMAGE2_GENERATED.png" download="CPT_0547_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0549_KARLA_IMAGE2_GENERATED.png', 'CPT_0549', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0549_KARLA_IMAGE2_GENERATED.png" alt="CPT_0549" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0549 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0549')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0549_KARLA_IMAGE2_GENERATED.png" download="CPT_0549_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0550_KARLA_IMAGE2_GENERATED.png', 'CPT_0550', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0550_KARLA_IMAGE2_GENERATED.png" alt="CPT_0550" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0550 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0550')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0550_KARLA_IMAGE2_GENERATED.png" download="CPT_0550_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0551_KARLA_IMAGE2_GENERATED.png', 'CPT_0551', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0551_KARLA_IMAGE2_GENERATED.png" alt="CPT_0551" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0551 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0551')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0551_KARLA_IMAGE2_GENERATED.png" download="CPT_0551_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0554', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0554" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0554 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0554')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0554_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0554_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0555_KARLA_IMAGE2_GENERATED.png', 'CPT_0555', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0555_KARLA_IMAGE2_GENERATED.png" alt="CPT_0555" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0555 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0555')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0555_KARLA_IMAGE2_GENERATED.png" download="CPT_0555_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0556_AI_PREVIEW_IMAGE2.png', 'CPT_0556', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0556_AI_PREVIEW_IMAGE2.png" alt="CPT_0556" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0556 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0556')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0556_AI_PREVIEW_IMAGE2.png" download="CPT_0556_AI_PREVIEW_IMAGE2.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0562_KARLA_IMAGE2_GENERATED.png', 'CPT_0562', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0562_KARLA_IMAGE2_GENERATED.png" alt="CPT_0562" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0562 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0562')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0562_KARLA_IMAGE2_GENERATED.png" download="CPT_0562_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0565', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0565" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0565 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0565')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0565_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0565_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0574', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0574" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0574 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0574')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0574_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0574_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0576_KARLA_IMAGE2_GENERATED.png', 'CPT_0576', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0576_KARLA_IMAGE2_GENERATED.png" alt="CPT_0576" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0576 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0576')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0576_KARLA_IMAGE2_GENERATED.png" download="CPT_0576_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0579_KARLA_IMAGE2_GENERATED.png', 'CPT_0579', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0579_KARLA_IMAGE2_GENERATED.png" alt="CPT_0579" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0579 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0579')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0579_KARLA_IMAGE2_GENERATED.png" download="CPT_0579_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0580_KARLA_IMAGE2_GENERATED.png', 'CPT_0580', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0580_KARLA_IMAGE2_GENERATED.png" alt="CPT_0580" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0580 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0580')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0580_KARLA_IMAGE2_GENERATED.png" download="CPT_0580_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg', 'CPT_0587', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg" alt="CPT_0587" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0587 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0587')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0587_BRENDA_PRO_RETOUCHED.jpg" download="CPT_0587_BRENDA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0590_KARLA_IMAGE2_GENERATED.png', 'CPT_0590', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0590_KARLA_IMAGE2_GENERATED.png" alt="CPT_0590" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0590 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0590')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0590_KARLA_IMAGE2_GENERATED.png" download="CPT_0590_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0591_KARLA_IMAGE2_GENERATED.png', 'CPT_0591', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0591_KARLA_IMAGE2_GENERATED.png" alt="CPT_0591" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0591 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0591')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0591_KARLA_IMAGE2_GENERATED.png" download="CPT_0591_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0592_KARLA_IMAGE2_GENERATED.png', 'CPT_0592', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0592_KARLA_IMAGE2_GENERATED.png" alt="CPT_0592" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0592 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0592')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0592_KARLA_IMAGE2_GENERATED.png" download="CPT_0592_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0593_KARLA_IMAGE2_GENERATED.png', 'CPT_0593', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0593_KARLA_IMAGE2_GENERATED.png" alt="CPT_0593" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0593 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0593')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0593_KARLA_IMAGE2_GENERATED.png" download="CPT_0593_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0782_KARLA_IMAGE2_GENERATED.png', 'CPT_0782', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0782_KARLA_IMAGE2_GENERATED.png" alt="CPT_0782" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0782 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0782')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0782_KARLA_IMAGE2_GENERATED.png" download="CPT_0782_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0792_KARLA_IMAGE2_GENERATED.png', 'CPT_0792', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0792_KARLA_IMAGE2_GENERATED.png" alt="CPT_0792" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0792 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0792')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0792_KARLA_IMAGE2_GENERATED.png" download="CPT_0792_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0796_KARLA_IMAGE2_GENERATED.png', 'CPT_0796', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0796_KARLA_IMAGE2_GENERATED.png" alt="CPT_0796" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0796 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0796')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0796_KARLA_IMAGE2_GENERATED.png" download="CPT_0796_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0797_KARLA_IMAGE2_GENERATED.png', 'CPT_0797', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0797_KARLA_IMAGE2_GENERATED.png" alt="CPT_0797" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0797 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0797')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0797_KARLA_IMAGE2_GENERATED.png" download="CPT_0797_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0801_KARLA_IMAGE2_GENERATED.png', 'CPT_0801', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0801_KARLA_IMAGE2_GENERATED.png" alt="CPT_0801" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0801 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0801')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0801_KARLA_IMAGE2_GENERATED.png" download="CPT_0801_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0803_KARLA_IMAGE2_GENERATED.png', 'CPT_0803', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0803_KARLA_IMAGE2_GENERATED.png" alt="CPT_0803" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0803 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0803')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0803_KARLA_IMAGE2_GENERATED.png" download="CPT_0803_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0806_KARLA_IMAGE2_GENERATED.png', 'CPT_0806', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0806_KARLA_IMAGE2_GENERATED.png" alt="CPT_0806" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0806 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0806')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0806_KARLA_IMAGE2_GENERATED.png" download="CPT_0806_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0808_KARLA_IMAGE2_GENERATED.png', 'CPT_0808', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0808_KARLA_IMAGE2_GENERATED.png" alt="CPT_0808" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0808 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0808')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0808_KARLA_IMAGE2_GENERATED.png" download="CPT_0808_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="karla" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0810_KARLA_IMAGE2_GENERATED.png', 'CPT_0810', 'Karla')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0810_KARLA_IMAGE2_GENERATED.png" alt="CPT_0810" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0810 · Karla</h3>
+            <p>Línea Fitness & Nutriplus · Definición muscular, potencia atlética y suplementación.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0810')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/KARLA/CPT_0810_KARLA_IMAGE2_GENERATED.png" download="CPT_0810_KARLA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0596_TANIA_IMAGE2_GENERATED.png', 'CPT_0596', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0596_TANIA_IMAGE2_GENERATED.png" alt="CPT_0596" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0596 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0596')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0596_TANIA_IMAGE2_GENERATED.png" download="CPT_0596_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0600_TANIA_IMAGE2_GENERATED.png', 'CPT_0600', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0600_TANIA_IMAGE2_GENERATED.png" alt="CPT_0600" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0600 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0600')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0600_TANIA_IMAGE2_GENERATED.png" download="CPT_0600_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0603_TANIA_IMAGE2_GENERATED.png', 'CPT_0603', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0603_TANIA_IMAGE2_GENERATED.png" alt="CPT_0603" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0603 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0603')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0603_TANIA_IMAGE2_GENERATED.png" download="CPT_0603_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0604_TANIA_IMAGE2_GENERATED.png', 'CPT_0604', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0604_TANIA_IMAGE2_GENERATED.png" alt="CPT_0604" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0604 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0604')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0604_TANIA_IMAGE2_GENERATED.png" download="CPT_0604_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0605_TANIA_IMAGE2_GENERATED.png', 'CPT_0605', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0605_TANIA_IMAGE2_GENERATED.png" alt="CPT_0605" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0605 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0605')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0605_TANIA_IMAGE2_GENERATED.png" download="CPT_0605_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0606_TANIA_IMAGE2_GENERATED.png', 'CPT_0606', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0606_TANIA_IMAGE2_GENERATED.png" alt="CPT_0606" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0606 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0606')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0606_TANIA_IMAGE2_GENERATED.png" download="CPT_0606_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0608_TANIA_IMAGE2_GENERATED.png', 'CPT_0608', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0608_TANIA_IMAGE2_GENERATED.png" alt="CPT_0608" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0608 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0608')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0608_TANIA_IMAGE2_GENERATED.png" download="CPT_0608_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0611_TANIA_IMAGE2_GENERATED.png', 'CPT_0611', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0611_TANIA_IMAGE2_GENERATED.png" alt="CPT_0611" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0611 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0611')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0611_TANIA_IMAGE2_GENERATED.png" download="CPT_0611_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0613_KARLA_PRO_RETOUCHED.jpg', 'CPT_0613', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0613_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0613" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0613 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0613')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0613_KARLA_PRO_RETOUCHED.jpg" download="CPT_0613_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0614_TANIA_IMAGE2_GENERATED.png', 'CPT_0614', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0614_TANIA_IMAGE2_GENERATED.png" alt="CPT_0614" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0614 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0614')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0614_TANIA_IMAGE2_GENERATED.png" download="CPT_0614_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0615_TANIA_IMAGE2_GENERATED.png', 'CPT_0615', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0615_TANIA_IMAGE2_GENERATED.png" alt="CPT_0615" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0615 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0615')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0615_TANIA_IMAGE2_GENERATED.png" download="CPT_0615_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0620_TANIA_IMAGE2_GENERATED.png', 'CPT_0620', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0620_TANIA_IMAGE2_GENERATED.png" alt="CPT_0620" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0620 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0620')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0620_TANIA_IMAGE2_GENERATED.png" download="CPT_0620_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0621_TANIA_IMAGE2_GENERATED.png', 'CPT_0621', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0621_TANIA_IMAGE2_GENERATED.png" alt="CPT_0621" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0621 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0621')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0621_TANIA_IMAGE2_GENERATED.png" download="CPT_0621_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0633_KARLA_PRO_RETOUCHED.jpg', 'CPT_0633', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0633_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0633" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0633 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0633')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0633_KARLA_PRO_RETOUCHED.jpg" download="CPT_0633_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0638_TANIA_IMAGE2_GENERATED.png', 'CPT_0638', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0638_TANIA_IMAGE2_GENERATED.png" alt="CPT_0638" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0638 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0638')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0638_TANIA_IMAGE2_GENERATED.png" download="CPT_0638_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0640_TANIA_IMAGE2_GENERATED.png', 'CPT_0640', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0640_TANIA_IMAGE2_GENERATED.png" alt="CPT_0640" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0640 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0640')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0640_TANIA_IMAGE2_GENERATED.png" download="CPT_0640_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0641_TANIA_IMAGE2_GENERATED.png', 'CPT_0641', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0641_TANIA_IMAGE2_GENERATED.png" alt="CPT_0641" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0641 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0641')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0641_TANIA_IMAGE2_GENERATED.png" download="CPT_0641_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0645_KARLA_PRO_RETOUCHED.jpg', 'CPT_0645', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0645_KARLA_PRO_RETOUCHED.jpg" alt="CPT_0645" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0645 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0645')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0645_KARLA_PRO_RETOUCHED.jpg" download="CPT_0645_KARLA_PRO_RETOUCHED.jpg" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0647_TANIA_IMAGE2_GENERATED.png', 'CPT_0647', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0647_TANIA_IMAGE2_GENERATED.png" alt="CPT_0647" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0647 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0647')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0647_TANIA_IMAGE2_GENERATED.png" download="CPT_0647_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0655_TANIA_IMAGE2_GENERATED.png', 'CPT_0655', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0655_TANIA_IMAGE2_GENERATED.png" alt="CPT_0655" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0655 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0655')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0655_TANIA_IMAGE2_GENERATED.png" download="CPT_0655_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="photo-card" data-cat="tania" onclick="openLightbox('file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0659_TANIA_IMAGE2_GENERATED.png', 'CPT_0659', 'Tania')">
+        <div class="img-wrapper">
+          <img src="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0659_TANIA_IMAGE2_GENERATED.png" alt="CPT_0659" loading="lazy">
+        </div>
+        <div class="card-footer">
+          <div class="card-info">
+            <h3>CPT_0659 · Tania</h3>
+            <p>Colección Cosméticos Farmasi · Labiales, paletas y maquillaje de alta definición.</p>
+          </div>
+          <div class="card-actions" onclick="event.stopPropagation()">
+            <button class="action-btn" onclick="toggleLike(this, 'CPT_0659')" title="Marcar Favorita">♥</button>
+            <a href="file:///Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/CAPTOORA/SESION_FARMASI_STUDIO_10_OCT_2026_APROBADAS/TANIA/CPT_0659_TANIA_IMAGE2_GENERATED.png" download="CPT_0659_TANIA_IMAGE2_GENERATED.png" class="action-btn" title="Descargar Alta Resolución">↓</a>
           </div>
         </div>
       </div>
@@ -861,7 +1979,7 @@
       <img id="lightboxImg" src="" alt="Vista previa">
       <div class="lightbox-controls">
         <div id="lightboxTitle" style="font-weight: 600; font-size: 16px;"></div>
-        <a id="lightboxDownload" href="" download="" class="lightbox-btn">⬇ Descargar Original Alta Resolución</a>
+        <a id="lightboxDownload" href="" download="" class="lightbox-btn">⬇ Descargar Alta Resolución</a>
       </div>
     </div>
   </div>
