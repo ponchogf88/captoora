@@ -8,11 +8,27 @@
 REPO_DIR="/Users/user/captoora"
 GDRIVE_LOGS="/Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/BITACORA_Y_MEMORIA_CENTRAL/logs"
 LOG_FILE="${REPO_DIR}/logs/auto_sync.log"
+LOCK_DIR="/tmp/captoora_autosync.lock"
+
+# Evitar colisión de procesos concurrentes
+if ! mkdir "${LOCK_DIR}" 2>/dev/null; then
+    # Si el lockfile tiene más de 5 minutos, limpiarlo
+    if [ $(($(date +%s) - $(stat -f %m "${LOCK_DIR}" 2>/dev/null || echo 0))) -gt 300 ]; then
+        rm -rf "${LOCK_DIR}"
+        mkdir "${LOCK_DIR}" 2>/dev/null || exit 0
+    else
+        exit 0
+    fi
+fi
+trap 'rm -rf "${LOCK_DIR}"' EXIT
 
 mkdir -p "${REPO_DIR}/logs"
 echo "=== [$(date '+%Y-%m-%d %H:%M:%S')] Iniciando Auto-Sync Captoora ===" >> "${LOG_FILE}"
 
 cd "${REPO_DIR}" || exit 1
+
+# Limpiar index.lock huérfano si existiera
+rm -f "${REPO_DIR}/.git/index.lock" 2>/dev/null
 
 # Pull previo con rebase para evitar rechazos
 git pull --rebase origin main >> "${LOG_FILE}" 2>&1
