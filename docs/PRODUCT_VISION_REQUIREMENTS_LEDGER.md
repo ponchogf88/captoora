@@ -23,7 +23,7 @@
 
 - **Solicitado:** PV-01 a PV-05 y PV-08 a PV-12; capturados en la visión de producto.
 - **Implementado:** documentación de planeación en el repositorio Captoora, Notion y la carpeta de continuidad de Obsidian.
-- **Verificado:** GitHub push confirmado; Notion actualización aceptada. Falta comprobar lectura final de Notion y coincidencia de los archivos espejo de Obsidian.
+- **Verificado:** los dos commits están en `origin/main`; Notion muestra la sección y los enlaces añadidos; los dos archivos de Obsidian coinciden byte por byte con la fuente canónica.
 - **Diferido con razón:** PV-06 y PV-07 son ideas a largo plazo que requieren investigación y alcance propio.
 - **Bloqueado:** ninguno por ahora.
 
