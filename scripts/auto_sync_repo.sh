@@ -1,8 +1,8 @@
 #!/bin/bash
 # ==============================================================================
-# CAPTOORA AUTO-SYNC DAEMON (12:00 PM & 12:00 AM)
+# CAPTOORA AUTO-SYNC DAEMON (EVERY 6 HOURS: 00:00, 06:00, 12:00, 18:00)
 # Sincroniza automáticamente el repositorio GitHub ponchogf88/captoora y el espejo
-# en Google Drive dos veces al día (mediodía y medianoche).
+# en Google Drive cada 6 horas (4 veces al día).
 # ==============================================================================
 
 REPO_DIR="/Users/user/captoora"
