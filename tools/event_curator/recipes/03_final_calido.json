@@ -1,0 +1,13 @@
+{
+  "name": "Final Cálido (Atardecer / Fiesta)",
+  "settings": {
+    "id": "final_calido",
+    "temp": 14,
+    "tint": 2,
+    "exposure": 0.18,
+    "highlights": -18,
+    "shadows": 20,
+    "denoise": 10,
+    "sharpness": 22
+  }
+}

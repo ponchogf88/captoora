@@ -1,0 +1,13 @@
+{
+  "name": "Transición Equilibrada (Comercial / Natural)",
+  "settings": {
+    "id": "transicion_equilibrada",
+    "temp": 2,
+    "tint": 1,
+    "exposure": 0.1,
+    "highlights": -10,
+    "shadows": 15,
+    "denoise": 5,
+    "sharpness": 20
+  }
+}

@@ -1,0 +1,6 @@
+test_samples/
+test_output/
+cache_test/
+.cache_thumbs/
+__pycache__/
+*.pyc
