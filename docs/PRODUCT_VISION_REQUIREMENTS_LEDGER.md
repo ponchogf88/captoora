@@ -22,10 +22,16 @@
 ## Control de estado
 
 - **Solicitado:** PV-01 a PV-05 y PV-08 a PV-12; capturados en la visión de producto.
-- **Implementado:** solo documentación de planeación cuando los archivos y espejos se creen.
-- **Verificado:** pendiente hasta revisar los archivos locales, el commit remoto, Notion y Obsidian.
+- **Implementado:** documentación de planeación en el repositorio Captoora, Notion y la carpeta de continuidad de Obsidian.
+- **Verificado:** GitHub push confirmado; Notion actualización aceptada. Falta comprobar lectura final de Notion y coincidencia de los archivos espejo de Obsidian.
 - **Diferido con razón:** PV-06 y PV-07 son ideas a largo plazo que requieren investigación y alcance propio.
 - **Bloqueado:** ninguno por ahora.
+
+## Registro de sincronización
+
+- **GitHub:** `ponchogf88/captoora`, rama `main`; commit inicial `2f64da1` con la visión y esta matriz.
+- **Notion:** página `ESTUDIO FOTOGRAFICO`, dentro de `Proyectos 2026 / PROYECTOS`.
+- **Obsidian:** `Projects/Obsidian-Vault/CAPTOORA.STUDIO/` dentro del vault local ubicado en el Escritorio.
 
 ## Regla de continuidad
 
