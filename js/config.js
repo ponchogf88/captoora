@@ -38,6 +38,12 @@ window.CAPTOORA = {
   // Para promos: price = precio de promo, regularPrice = precio tachado, promoLabel = texto.
   // Cuando acabe la promo, borra regularPrice y promoLabel y pon el precio normal en price.
   packages: [
+    { name: "Clónate con inteligencia artificial", price: null, priceLabel: "Cotización personalizada",
+      badge: "Sesiones piloto", secondary: true,
+      desc: "Tu presencia frente a cámara, preparada en estudio. Te guiamos para grabar el material de tu clon digital con iluminación profesional, encuadre cuidado y voz clara.",
+      items: ["Preparación de imagen y guía frente a cámara", "Set e iluminación profesional para video", "Grabación de tomas de referencia y revisión técnica", "Asistencia para configurar y probar tu avatar con tu autorización", "Plataforma, videos y costos de uso definidos en tu cotización"],
+      cta: "Quiero mi clon digital",
+      waMessage: "Hola Captoora, quiero información de la sesión para crear mi clon digital con inteligencia artificial." },
     { name: "Combo Studio + Clips", price: 1600, unit: "2 horas", featured: true,
       badge: "El que recomiendo",
       items: ["Sesión en set", "8 a 12 clips listos para Reels/TikTok"] },
@@ -113,6 +119,8 @@ window.CAPTOORA = {
 
   // ---- PREGUNTAS FRECUENTES ---------------------------------------
   faq: [
+    { q: "¿Cómo funciona la sesión para crear mi clon digital?", a: "Preparamos tu imagen, luces y encuadre; te dirigimos durante la grabación y revisamos el material para configurar y probar tu avatar en la plataforma acordada. Trabajamos con tu autorización y cotizamos el alcance antes de comenzar." },
+    { q: "¿El clon digital incluye videos ilimitados o una suscripción?", a: "La cantidad de videos, la plataforma, sus licencias y los costos de generación se especifican en cada cotización. La semejanza, voz y gestos se revisan en una prueba; los resultados dependen del material y de la plataforma." },
     { q: "¿Hay estacionamiento?", a: "Pregúntanos por WhatsApp y te decimos dónde dejar el carro." },
     { q: "¿Cuántas personas caben?", a: "Depende del escenario y del tipo de sesión. Pregúntanos y lo vemos para tu grupo." },
     { q: "¿Puedo llevar a mi mascota?", a: "Pregúntanos antes de tu sesión." },
