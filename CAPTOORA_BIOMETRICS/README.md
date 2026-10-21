@@ -61,3 +61,10 @@ Transformar el modelo tradicional de fotografía de estudio (transaccional, espo
   - `02:30 PM`: Check de comida y nutrición.
   - `11:00 PM`: Cierre de bitácora nocturna (alimentos, deposiciones, sexo, dolor físico, estrés).
   - `Viernes 06:00 PM`: "Viernes de Verdad" (Recap semanal de adherencia y métricas).
+
+
+---
+
+## Línea incorporada · Clon digital audiovisual (20 octubre 2026)
+
+**Clónate con inteligencia artificial** forma parte de CAPTOORA Biometrics por instrucción del fundador. Sesiones piloto con set, iluminación, dirección y grabación profesional para preparar y probar un avatar audiovisual. Precio y alcance por cotizar; piloto integral pendiente. Consulte [ficha del servicio y condiciones pendientes](CLON_DIGITAL.md). Esta línea no promete resultados clínicos, medición 3D ni semejanza perfecta. Las proyecciones y precios del blueprint anterior no son tarifas de este servicio.
