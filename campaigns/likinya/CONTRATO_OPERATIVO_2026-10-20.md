@@ -86,3 +86,14 @@ No están todas las cuentas abiertas ni operativas. Este inventario lo declara p
 ## Reporte que debe recibir el usuario
 
 Piezas terminadas y enlace; insumos separados; cuota antes/después y unidad; fallos/costos comprobados; bloqueos y siguiente acción. Un documento o recordatorio por sí solo no cuenta como contenido terminado.
+
+
+## Aceptación expresa del usuario
+
+Fecha de registro: 20 de octubre de 2026, America/Mexico_City. Fuente: mensaje del usuario en esta conversación posterior a la entrega del documento.
+
+El usuario manifestó: «Acepto el contrato» y «My acceptance. My signature. My voice signature, of course.» Se registra su aceptación del acuerdo operativo y su autorización para continuar el encargo dentro de los alcances y decisiones documentados.
+
+La evidencia disponible para el agente es el mensaje recibido en la conversación. No se archivó ni verificó aquí un archivo de audio original, identidad biométrica, certificado o mecanismo de firma. Este registro no certifica una firma ni convierte al agente de IA en trabajador contratado. No sustituye el consentimiento específico que solicite HeyGen para el clon, ni define el presupuesto pendiente de cargos adicionales, ni autoriza publicaciones o divulgaciones no solicitadas.
+
+Idiomas declarados por el usuario: español e inglés. Para preparar su clon se propone grabación inicial en español; una toma adicional en inglés puede prepararse si se desea, sin pedirle idiomas que no habla. Creación o mejora de su clon sigue pendiente del material y consentimiento requeridos por la plataforma.
