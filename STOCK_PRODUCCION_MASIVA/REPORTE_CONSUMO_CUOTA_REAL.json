@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-20T18:30:18.046203",
+  "estado": "ACTIVO - CERO DESPERDICIO",
+  "resumen_ejecutivo": "Tokens transformados en activos comerciales reales en disco duro local.",
+  "archivos_creados": 16,
+  "palabras_generadas": 4015,
+  "tokens_consumidos_estimados": 5339,
+  "tiempo_ejecucion_segundos": 0.0,
+  "desglose_por_modulo": {
+    "01_SCRIPTS_LA_PEQUENA": {
+      "total_guiones": 12,
+      "formato": "Markdown con escaleta técnica, plano, audio y CTA",
+      "ubicacion": "/Users/user/captoora/STOCK_PRODUCCION_MASIVA/01_SCRIPTS_LA_PEQUENA"
+    },
+    "02_PROMPTS_VISUALES_8K": {
+      "total_prompts": 8,
+      "formatos": "JSON y Markdown listos para Midjourney / Flux / Imagen",
+      "ubicacion": "/Users/user/captoora/STOCK_PRODUCCION_MASIVA/02_PROMPTS_VISUALES_8K"
+    },
+    "03_HOOKS_OPUSCLIP_REELS": {
+      "total_hooks": 8,
+      "formato": "CSV para OpusClip, TikTok y Reels",
+      "ubicacion": "/Users/user/captoora/STOCK_PRODUCCION_MASIVA/03_HOOKS_OPUSCLIP_REELS"
+    },
+    "04_CALENDARIO_BUFFER_READY": {
+      "total_publicaciones": 24,
+      "formato": "CSV listo para importar a Buffer cada 4 horas",
+      "ubicacion": "/Users/user/captoora/STOCK_PRODUCCION_MASIVA/04_CALENDARIO_BUFFER_READY"
+    }
+  }
+}
