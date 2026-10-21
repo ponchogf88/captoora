@@ -5,7 +5,7 @@ Google Drive → carpeta **MY PROJECTS** → `READMEFIRST.rtf`
 
 Este archivo es un extracto **público**. No hay dirección, cédula, passwords ni `apis.txt`.
 
-Actualizado: 2026-09-24
+Actualizado: 2026-10-08 (reconciliación documental; no implica verificación de cuentas)
 
 ## Quién
 - Jesús Alfonso Gutiérrez Flores (Chuy / Poncho)
@@ -34,3 +34,8 @@ Formularios y clics: Browserflow, browser-use, Page Agent, Grok Bot.
 - Repo: https://github.com/ponchogf88/captoora
 
 Cuentas personales (@jagf87, etc.) no se usan para publicar Captoora salvo que él lo diga.
+
+## Estado y precedencia
+- `READMEFIRST.rtf` en Drive / MY PROJECTS es referencia privada; no copiar su contenido completo a este repositorio público.
+- Los identificadores de redes indicados arriba provienen del inventario del propietario; verificar titularidad y acceso antes de publicar.
+- Ante contradicción con `AGENTS.md`, este archivo rige los identificadores documentados del proyecto, pero no acredita una conexión OAuth activa.

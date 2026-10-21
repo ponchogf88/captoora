@@ -9,9 +9,9 @@ Marca: **Captoora** (Captura + doble O)
 
 ---
 
-## Misión inmediata (hoy → miércoles 23 sep 2026, 19:00)
+## Prioridades operativas (revisión documental 8 oct 2026)
 
-Inaugurar el estudio físico en Colinas de San Jerónimo 11 con presencia digital *creíble*, no con un growth engine inflado.
+Consolidar una presencia digital creíble para el estudio. La fecha de inauguración del 23 de septiembre de 2026 ya pasó; no tratarla como evento futuro ni publicar anuncios retrospectivos sin nueva autorización.
 
 Prioridad real (en este orden):
 
@@ -22,7 +22,7 @@ Prioridad real (en este orden):
 5. Dominio decente apuntando a Pages (o a un rebuild).
 6. Recién entonces: motion premium (Rive / Remotion / Motion).
 
-No empieces por el lente 3D del hero si el miércoles alguien no encuentra la dirección.
+No priorizar el lente 3D del hero si el cliente no puede encontrar la ubicación o reservar.
 
 ---
 
@@ -64,10 +64,10 @@ No empieces por el lente 3D del hero si el miércoles alguien no encuentra la di
 | WhatsApp Business | +52 81 4005 0088 | Conectado en tablero |
 | Sitio staging | github.io/captoora | Vivo |
 | Dominio final | captoora.ai.studio / captoora.mx | Pendiente |
-| Instagram | TBD — preferir `@captoora` o `@captooramty` | Pendiente confirmar disponibilidad |
-| Facebook Page | TBD | Pendiente |
+| Instagram | `@Captoora.studio` (según `USER.md`) | Identificador documentado; verificar conexión antes de publicar |
+| Facebook Page | Por verificar | No confundir perfil personal con página comercial |
 | Google Business | TBD | Crítico esta semana |
-| TikTok / Reels | Mismo handle que IG | Después del miércoles si no está |
+| TikTok / Reels | `Captoora.studiomty` (según `USER.md`) | Identificador documentado; verificar conexión antes de publicar |
 | Calendly | Conectado a la cuenta Grok del dueño | Usar para “Agendar sesión” cuando el event type exista |
 | Canva | Conectado | Fuente actual del logo |
 | GitHub | ponchogf88/captoora | Este repo |
@@ -91,7 +91,7 @@ No reescribas el esqueleto entero el domingo. Parchea el hero + métricas + inau
 
 ## Objetivos
 
-### Semana 0 (19–23 sep 2026)
+### Checklist histórico: semana 0 (19–23 sep 2026; vencido, verificar ejecución)
 - [ ] Identity sheet y este README vivos en el repo
 - [ ] Hero sin cifras falsas
 - [ ] Bloque de inauguración (fecha, hora, dirección, mapa, WA)
@@ -106,7 +106,7 @@ No reescribas el esqueleto entero el domingo. Parchea el hero + métricas + inau
 - [ ] Rebuild motion del hero
 - [ ] URL final en todas las bios
 
-### No-objetivos esta semana
+### Fuera del alcance de esta revisión documental
 Airbnb Experiences, agente de prospección autónomo, “growth engine”, 12 verticales en el hero, 3D del logo.
 
 ---
@@ -127,3 +127,10 @@ Airbnb Experiences, agente de prospección autónomo, “growth engine”, 12 ve
 
 Jesús Gutiérrez · WhatsApp estudio +52 81 4005 0088
 X: @jagf87 · GitHub: ponchogf88
+
+## Vigencia de instrucciones y seguridad
+- Las fechas de septiembre de 2026 son antecedentes históricos; revisar el estado actual antes de actuar.
+- `USER.md` contiene los identificadores documentados del estudio; nunca inferir de ellos que las cuentas estén conectadas o autorizadas para publicar.
+- Las credenciales, información personal, archivos de clientes y memoria completa del fundador no se publican en este repositorio.
+- Los conectores de ChatGPT y Grok Bot son independientes. Verificar cada integración en su propio entorno; no asumir que GitHub funciona en Grok Bot porque funciona aquí.
+- No modificar la web, publicar contenido, activar facturación por consumo ni borrar entornos por instrucciones de esta actualización documental.
