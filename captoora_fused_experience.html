@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA STUDIO — The Cinematic Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050608;
+      --card-bg: rgba(14, 19, 30, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --cyan: #06b6d4;
+      --lime: #a3e635;
+      --orange: #f97316;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --spring-ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --cinematic-ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* =========================================================
+       1. FLASH & SHUTTER INTRO EXPERIENCE
+       ========================================================= */
+    #flash-screen {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.06s ease-out;
+    }
+    #flash-screen.trigger-flash {
+      opacity: 1;
+      transition: none;
+    }
+
+    #intro-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at center, #101522 0%, #030406 100%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.8s var(--cinematic-ease), transform 0.8s var(--cinematic-ease);
+    }
+    #intro-overlay.dismissed {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(1.12);
+    }
+
+    .viewfinder {
+      position: relative;
+      width: 380px;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hud-corner {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-color: rgba(255, 255, 255, 0.3);
+      border-style: solid;
+      pointer-events: none;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .top-left { top: 0; left: 0; border-width: 2px 0 0 2px; }
+    .top-right { top: 0; right: 0; border-width: 2px 2px 0 0; }
+    .bottom-left { bottom: 0; left: 0; border-width: 0 0 2px 2px; }
+    .bottom-right { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
+
+    .viewfinder:hover .hud-corner {
+      border-color: var(--lime);
+      transform: scale(1.05);
+    }
+
+    .signature-lens-container {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #151c2c 0%, #080b12 70%);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.95), 0 0 35px rgba(6, 182, 212, 0.2), inset 0 0 40px rgba(0,0,0,0.8);
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      transition: transform 0.5s var(--spring-ease), box-shadow 0.4s ease;
+    }
+    .viewfinder:hover .signature-lens-container {
+      transform: scale(1.05);
+      box-shadow: 0 0 70px rgba(163, 230, 53, 0.3), 0 0 40px rgba(6, 182, 212, 0.35);
+      border-color: var(--lime);
+    }
+
+    .signature-logo-img {
+      width: 170px;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) drop-shadow(0 0 25px rgba(6, 182, 212, 0.4));
+      animation: logo-float 4s infinite ease-in-out;
+    }
+    @keyframes logo-float {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-4px) scale(1.02); }
+    }
+
+    .lens-glow-orbit {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(6, 182, 212, 0.35);
+      animation: rotate-orbit 20s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes rotate-orbit {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .shutter-cue {
+      margin-top: 36px;
+      text-align: center;
+    }
+    .cue-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 100px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #e2e8f0;
+      transition: all 0.3s ease;
+    }
+    .cue-pill::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ef4444;
+      animation: pulse-red 1s infinite alternate;
+    }
+    @keyframes pulse-red {
+      from { opacity: 0.4; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.3); }
+    }
+    .viewfinder:hover ~ .shutter-cue .cue-pill {
+      background: rgba(163, 230, 53, 0.15);
+      border-color: var(--lime);
+      color: var(--lime);
+    }
+
+    /* =========================================================
+       2. MAIN FUSED PORTAL EXPERIENCE
+       ========================================================= */
+    #main-content {
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.8s var(--cinematic-ease), transform 0.8s var(--cinematic-ease);
+      width: 100%;
+    }
+    #main-content.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .header-logo img {
+      height: 42px;
+      width: auto;
+    }
+    .header-logo span {
+      font-family: 'Space Grotesk', monospace;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 2px;
+      color: #f8fafc;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .btn-wa {
+      background: var(--lime);
+      color: #050505;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s var(--spring-ease), background 0.2s;
+    }
+    .btn-wa:hover {
+      transform: scale(1.05);
+      background: #bef264;
+    }
+
+    /* HERO SHOWCASE (120 BPM MOTION) */
+    .hero-section {
+      width: 100%;
+      max-width: 1400px;
+      margin: 20px auto 40px;
+      padding: 0 32px;
+      text-align: center;
+    }
+    .hero-kicker {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: clamp(32px, 5vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 18px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    /* 3. INFINITE BRANDS RIBBON */
+    .brands-ribbon-wrapper {
+      width: 100%;
+      overflow: hidden;
+      padding: 24px 0;
+      position: relative;
+      mask-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 15%, black 85%, transparent 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.015);
+      margin-bottom: 60px;
+    }
+    .brands-track {
+      display: flex;
+      gap: 50px;
+      width: max-content;
+      animation: ribbon-scroll 25s linear infinite;
+    }
+    @keyframes ribbon-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .brand-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      color: #64748b;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: color 0.3s;
+    }
+    .brand-pill:hover {
+      color: var(--lime);
+    }
+    .brand-pill::before {
+      content: '✦';
+      color: var(--cyan);
+      font-size: 10px;
+    }
+
+    /* 4. CATEGORIES FILTER (SPRING TABS) */
+    .cat-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      padding: 0 20px;
+    }
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'Space Grotesk', monospace;
+      font-size: 12px;
+      letter-spacing: 1px;
+      padding: 8px 18px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.25s var(--spring-ease);
+    }
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+    .tab-btn.active {
+      background: rgba(6, 182, 212, 0.15);
+      border-color: var(--cyan);
+      color: var(--cyan);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    }
+
+    /* 5. PORTFOLIO SHOWCASE GRID (PROMPT MOTION SPRING OVERLAY) */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1400px;
+      margin: 0 auto 80px;
+      padding: 0 32px;
+    }
+    .pf-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      aspect-ratio: 4 / 5;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transition: transform 0.4s var(--spring-ease), box-shadow 0.4s ease, border-color 0.3s;
+    }
+    .pf-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 30px rgba(6, 182, 212, 0.2);
+      border-color: rgba(6, 182, 212, 0.4);
+    }
+    .pf-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--cinematic-ease);
+    }
+    .pf-card:hover img {
+      transform: scale(1.08);
+    }
+    .pf-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(3, 4, 6, 0.9) 0%, rgba(3, 4, 6, 0) 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+    .pf-card-tag {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      color: var(--lime);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+    .pf-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.3;
+    }
+
+    /* 6. TESTIMONIALS (GLASS NEON MOTION) */
+    .testimonials-section {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto 80px;
+      padding: 0 32px;
+    }
+    .sec-head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .sec-kicker {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--lime);
+      text-transform: uppercase;
+    }
+    .sec-title {
+      font-size: 32px;
+      font-weight: 800;
+      margin-top: 6px;
+    }
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .test-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .test-card:hover {
+      border-color: rgba(163, 230, 53, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(163, 230, 53, 0.1);
+    }
+    .test-quote {
+      font-size: 14px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .test-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--lime));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 13px;
+      color: #030406;
+    }
+    .test-meta h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .test-meta p {
+      font-size: 11px;
+      color: var(--muted);
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 32px;
+      text-align: center;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLASH SCREEN -->
+  <div id="flash-screen"></div>
+
+  <!-- 1. SHUTTER OVERLAY EXPERIENCE -->
+  <div id="intro-overlay" onclick="triggerShutter()">
+    <div class="viewfinder">
+      <div class="hud-corner top-left"></div>
+      <div class="hud-corner top-right"></div>
+      <div class="hud-corner bottom-left"></div>
+      <div class="hud-corner bottom-right"></div>
+
+      <div class="signature-lens-container">
+        <div class="lens-glow-orbit"></div>
+        <img src="assets/captoora_signature_logo.png" alt="Captoora Signature Logo" class="signature-logo-img">
+      </div>
+    </div>
+
+    <div class="shutter-cue">
+      <div class="cue-pill">DISPARAR OBTURADOR // CLIC AQUÍ O ESPACIO</div>
+    </div>
+  </div>
+
+  <!-- 2. MAIN FUSED EXPERIENCE -->
+  <div id="main-content">
+    <header>
+      <div class="header-logo">
+        <img src="assets/captoora_signature_logo.png" alt="Captoora Signature Logo">
+        <span>CAPTOORA STUDIO</span>
+      </div>
+      <div class="nav-actions">
+        <a href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" class="tab-btn" style="border-color: var(--lime); color: var(--lime); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">🧬 Biometrics 3D Explainer</a>
+        <button class="tab-btn" onclick="reTriggerFlash()" style="border-color: var(--cyan); color: var(--cyan);">📸 Disparar Flash</button>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20una%20sesi%C3%B3n" target="_blank" class="btn-wa">
+          Apartar Sesión
+        </a>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-kicker">Estudio Fotográfico & Biometría Visual // Monterrey, N.L.</div>
+      <h1 class="hero-title">Momentos que permanecen.<br>Con luz de autor.</h1>
+      <p class="hero-desc">
+        Sin fotos en serie ni filtros de plástico. Esculpimos cada retrato con dirección personalizada, óptica prime de 24MP y respeto absoluto por tu presencia.
+      </p>
+    </section>
+
+    <!-- 3. MARCAS ASOCIADAS (INFINITE RIBBON 120 BPM) -->
+    <div class="brands-ribbon-wrapper">
+      <div class="brands-track">
+        <div class="brand-pill">FARMASI BEAUTY</div>
+        <div class="brand-pill">NUTRIPLUS WELLNESS</div>
+        <div class="brand-pill">DR. C. TUNA CLINICAL</div>
+        <div class="brand-pill">ACROYOGA MONTERREY</div>
+        <div class="brand-pill">SAN JERÓNIMO STUDIO</div>
+        <div class="brand-pill">BIOTRACK RECOVERY</div>
+        <div class="brand-pill">NIKON MASTER PRIME</div>
+        <!-- Duplicate for seamless infinite loop -->
+        <div class="brand-pill">FARMASI BEAUTY</div>
+        <div class="brand-pill">NUTRIPLUS WELLNESS</div>
+        <div class="brand-pill">DR. C. TUNA CLINICAL</div>
+        <div class="brand-pill">ACROYOGA MONTERREY</div>
+        <div class="brand-pill">SAN JERÓNIMO STUDIO</div>
+        <div class="brand-pill">BIOTRACK RECOVERY</div>
+        <div class="brand-pill">NIKON MASTER PRIME</div>
+      </div>
+    </div>
+
+    <!-- 4. CATEGORÍAS (SPRING FILTER TABS) -->
+    <div class="cat-tabs" id="cat-tabs">
+      <button class="tab-btn active" data-filter="all">TODAS LAS OBRAS (36)</button>
+      <button class="tab-btn" data-filter="viajes">VIAJES / DOCUMENTAL</button>
+      <button class="tab-btn" data-filter="editorial">EDITORIAL / MODA</button>
+      <button class="tab-btn" data-filter="ninos">NIÑOS / FAMILIA</button>
+      <button class="tab-btn" data-filter="parque">PARQUE / EXTERIOR</button>
+      <button class="tab-btn" data-filter="fondoblanco">FONDO BLANCO / ESTUDIO</button>
+    </div>
+
+    <!-- 5. PORTFOLIO GRID -->
+    <div class="portfolio-grid" id="pf-grid">
+      <!-- 1. Cuba -->
+      <div class="pf-card" data-cat="viajes">
+        <img src="" data-b64="assets/media/pf-cuba-01.jpg.b64" alt="Cuba">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Viajes / Documental</div>
+          <div class="pf-card-title">La Habana Colonial // Autos Clásicos (Cuba 8K)</div>
+        </div>
+      </div>
+
+      <!-- 2. Villarreal -->
+      <div class="pf-card" data-cat="editorial">
+        <img src="" data-b64="assets/media/pf-villarreal-01.jpg.b64" alt="Villarreal">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Editorial / Moda</div>
+          <div class="pf-card-title">Retrato Óptica Prime 24MP // Sesión Villarreal</div>
+        </div>
+      </div>
+
+      <!-- 3. Peloni 9 años -->
+      <div class="pf-card" data-cat="ninos">
+        <img src="" data-b64="assets/media/pf-peloni-01.jpg.b64" alt="Peloni">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Niños / Familia</div>
+          <div class="pf-card-title">Retrato de Cumpleaños 9 Años // Peloni</div>
+        </div>
+      </div>
+
+      <!-- 4. Barbie Lulú -->
+      <div class="pf-card" data-cat="fondoblanco">
+        <img src="" data-b64="assets/media/pf-barbie-01.jpg.b64" alt="Barbie">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Fondo Blanco / Estudio</div>
+          <div class="pf-card-title">Sesión Temática Barbie // Escenografía Rosa</div>
+        </div>
+      </div>
+
+      <!-- 5. Chipinque -->
+      <div class="pf-card" data-cat="parque">
+        <img src="" data-b64="assets/media/pf-chipinque-01.jpg.b64" alt="Chipinque">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Parque / Exterior</div>
+          <div class="pf-card-title">Senderos de la Sierra Madre // Chipinque</div>
+        </div>
+      </div>
+
+      <!-- 6. Texas -->
+      <div class="pf-card" data-cat="viajes">
+        <img src="" data-b64="assets/media/pf-texas-01.jpg.b64" alt="Texas">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Viajes / Documental</div>
+          <div class="pf-card-title">Carretera Abierta // Roadtrip Texas 2025</div>
+        </div>
+      </div>
+
+      <!-- 7. GIO -->
+      <div class="pf-card" data-cat="editorial">
+        <img src="" data-b64="assets/media/pf-gio-01.jpg.b64" alt="GIO">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Editorial / Moda</div>
+          <div class="pf-card-title">Retrato Moda & Lifestyle // Sesión GIO</div>
+        </div>
+      </div>
+
+      <!-- 8. Rufino Tamayo -->
+      <div class="pf-card" data-cat="parque">
+        <img src="" data-b64="assets/media/pf-tamayo-01.jpg.b64" alt="Tamayo">
+        <div class="pf-card-overlay">
+          <div class="pf-card-tag">Parque / Exterior</div>
+          <div class="pf-card-title">Hora Dorada // Parque Rufino Tamayo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. TESTIMONIOS (GLASS NEON) -->
+    <section class="testimonials-section">
+      <div class="sec-head">
+        <div class="sec-kicker">Experiencias Reales</div>
+        <h2 class="sec-title">Lo que dicen quienes pasaron por el set</h2>
+      </div>
+      <div class="test-grid">
+        <div class="test-card">
+          <p class="test-quote">
+            "Jamás me había sentido tan cómoda frente a la cámara. Poncho tiene una paciencia increíble para dirigir cada pose y la luz de estudio hace que tu piel se vea radiante sin filtros de plástico."
+          </p>
+          <div class="test-author">
+            <div class="test-avatar">T</div>
+            <div class="test-meta">
+              <h4>Tanya V.</h4>
+              <p>Líder Farmasi // Sesión Beauty & Marca</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <p class="test-quote">
+            "Las fotos de mis hijos en Rufino Tamayo y la sesión familiar en Chipinque quedaron de portada de revista. Cero recortes raros, respetó los cuerpos completos y la luz natural es mágica."
+          </p>
+          <div class="test-author">
+            <div class="test-avatar">L</div>
+            <div class="test-meta">
+              <h4>Lourdes G.</h4>
+              <p>Sesión Familiar & Temática Barbie</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <p class="test-quote">
+            "El monitoreo y la precisión de Captoora Biometrics es otro nivel. Tener el seguimiento de recomposición física y simetría en fotos reales te da una claridad que ninguna báscula puede dar."
+          </p>
+          <div class="test-author">
+            <div class="test-avatar">B</div>
+            <div class="test-meta">
+              <h4>Brenda M.</h4>
+              <p>Atleta Fitness & Creadora de Contenido</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CAPTOORA BIOMETRICS -->
+    <section style="max-width: 1200px; margin: 40px auto 80px; padding: 0 24px;">
+      <div style="background: radial-gradient(circle at 70% 30%, rgba(6, 182, 212, 0.2) 0%, rgba(10, 16, 26, 0.95) 70%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 20px; padding: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 50px rgba(6, 182, 212, 0.15);">
+        <div style="max-width: 600px;">
+          <div style="font-family: 'Space Grotesk', monospace; color: var(--lime); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">Novedad de Vanguardia // 120 BPM Motion</div>
+          <h2 style="font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; background: linear-gradient(90deg, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Captoora Biometrics: Tu Clon Digital 3D</h2>
+          <p style="color: var(--muted); font-size: 14px; line-height: 1.6;">Descubre el prototipo motion de monitoreo corporal, simetría muscular y seguimiento de recomposición física en 3D. Sin muñecos de palitos: fotografía clínica de autor y nube de puntos volumétrica.</p>
+        </div>
+        <div>
+          <a href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" class="tab-btn" style="background: linear-gradient(135deg, var(--cyan), #0284c7); color: #fff; border: none; padding: 14px 28px; font-size: 13px; font-weight: 700; border-radius: 999px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 10px 25px rgba(6, 182, 212, 0.4);">
+            <span>Ver Motion Explainer 3D</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      CAPTOORA STUDIO // Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. // © 2026
+    </footer>
+  </div>
+
+  <script>
+    // SYNTHESIZED MECHANICAL SHUTTER SOUND (Web Audio API)
+    function playMechanicalShutterSound() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Primary mechanical click
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(140, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.08);
+
+        gain.gain.setValueAtTime(0.8, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.08);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.09);
+
+        // High frequency blade snap
+        const noiseBuffer = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.06, audioCtx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < noiseBuffer.length; i++) {
+          output[i] = Math.random() * 2 - 1;
+        }
+        const whiteNoise = audioCtx.createBufferSource();
+        whiteNoise.buffer = noiseBuffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.value = 1800;
+
+        const noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+        noiseGain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.06);
+
+        whiteNoise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination);
+        whiteNoise.start();
+      } catch (e) {
+        console.log("AudioContext not permitted or supported:", e);
+      }
+    }
+
+    // TRIGGER SHUTTER & REVEAL
+    function triggerShutter() {
+      playMechanicalShutterSound();
+      const flash = document.getElementById('flash-screen');
+      const overlay = document.getElementById('intro-overlay');
+      const main = document.getElementById('main-content');
+
+      // FLASH BURST
+      flash.classList.add('trigger-flash');
+
+      setTimeout(() => {
+        overlay.classList.add('dismissed');
+        main.classList.add('visible');
+        loadAllB64Images();
+      }, 80);
+
+      setTimeout(() => {
+        flash.classList.remove('trigger-flash');
+      }, 350);
+    }
+
+    function reTriggerFlash() {
+      playMechanicalShutterSound();
+      const flash = document.getElementById('flash-screen');
+      flash.classList.add('trigger-flash');
+      setTimeout(() => {
+        flash.classList.remove('trigger-flash');
+      }, 150);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        const overlay = document.getElementById('intro-overlay');
+        if (!overlay.classList.contains('dismissed')) {
+          triggerShutter();
+        } else {
+          reTriggerFlash();
+        }
+      }
+    });
+
+    // LOAD BASE64 IMAGES
+    function loadAllB64Images() {
+      document.querySelectorAll('img[data-b64]').forEach(img => {
+        const b64Path = img.dataset.b64;
+        fetch(b64Path)
+          .then(r => r.text())
+          .then(t => {
+            img.src = "data:image/jpeg;base64," + t.trim();
+          })
+          .catch(e => console.error("Error loading b64:", b64Path, e));
+      });
+    }
+
+    // CATEGORY FILTERING (SPRING INTERACTION)
+    document.querySelectorAll('.tab-btn[data-filter]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.tab-btn[data-filter]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        document.querySelectorAll('.pf-card').forEach(card => {
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.style.display = 'block';
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

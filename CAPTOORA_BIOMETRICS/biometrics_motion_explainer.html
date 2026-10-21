@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA BIOMETRICS — Motion Explainer Prototype (Opus 5.5 / 120 BPM)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    :root {
+      --bg: #030508;
+      --card-bg: rgba(10, 16, 26, 0.78);
+      --card-border: rgba(56, 189, 248, 0.35);
+      --accent-cyan: #06b6d4;
+      --accent-sky: #38bdf8;
+      --accent-lime: #a3e635;
+      --accent-amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      perspective: 1400px;
+    }
+
+    /* BACKGROUND ATMOSPHERIC GRADIENTS */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 50% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(163, 230, 53, 0.06) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* MASTER CINEMA STAGE (9:16 or 16:9 Adaptable Box) */
+    .cinema-viewport {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      max-width: 1280px;
+      max-height: 780px;
+      background: radial-gradient(circle at 50% 45%, #0b121e 0%, #030508 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.95), 0 0 120px rgba(6, 182, 212, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+    }
+
+    /* 3D CAMERA ENVIRONMENT */
+    .camera-rig {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.05s linear;
+      will-change: transform;
+    }
+
+    /* 3D VOLUMETRIC CANVAS FOR HUMAN BIOMETRIC TWIN */
+    #clone-canvas {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* HUD OVERLAY CANVAS (SCANNING LINES, TARGETS, BEAT PARTICLES) */
+    #hud-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* 3D PHOTOGRAPHIC CARDS CONTAINER */
+    .cards-container {
+      position: absolute;
+      inset: 0;
+      transform-style: preserve-3d;
+      pointer-events: none;
+      z-index: 8;
+    }
+
+    /* HIGH-END BIOMETRIC SLICE CARDS */
+    .photo-card {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 150px;
+      height: 220px;
+      margin-left: -75px;
+      margin-top: -110px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(6, 182, 212, 0.2);
+      transform-style: preserve-3d;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      will-change: transform, opacity;
+      transition: border-color 0.3s ease;
+    }
+
+    .photo-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .photo-card .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 2;
+    }
+
+    .photo-card .card-tag {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      color: var(--accent-lime);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .photo-card .card-tag::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--accent-lime);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--accent-lime);
+      animation: pulse 1s infinite alternate;
+    }
+
+    .photo-card .card-id {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 8px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* REAL HIGH-RES PHOTOGRAPHIC IMAGE SLICE */
+    .photo-card .photo-frame {
+      position: relative;
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #000;
+    }
+
+    .photo-card .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: contrast(1.08) brightness(1.02);
+      transition: transform 0.5s ease;
+    }
+
+    /* SCANNER RETICLE ON PHOTO */
+    .photo-card .photo-frame .reticle {
+      position: absolute;
+      inset: 0;
+      background: 
+        linear-gradient(90deg, rgba(6, 182, 212, 0.15) 1px, transparent 1px) 0 0 / 16px 16px,
+        linear-gradient(rgba(6, 182, 212, 0.15) 1px, transparent 1px) 0 0 / 16px 16px;
+      pointer-events: none;
+    }
+
+    .photo-card .photo-frame .laser-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8, 0 0 20px #06b6d4;
+      animation: scanLaser 2s infinite ease-in-out;
+    }
+
+    .photo-card .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9px;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+    }
+
+    .photo-card .card-footer .val {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    /* TOP CINEMATIC HUD BAR */
+    .cinema-topbar {
+      position: absolute;
+      top: 24px;
+      left: 28px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 20;
+      pointer-events: auto;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-img {
+      height: 34px;
+      width: auto;
+      filter: drop-shadow(0 0 12px rgba(163, 230, 53, 0.5));
+    }
+
+    .brand-title {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-sub {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9px;
+      color: var(--accent-lime);
+      letter-spacing: 1.5px;
+    }
+
+    .beat-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+    }
+
+    .beat-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-lime);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-lime);
+      transition: transform 0.08s ease;
+    }
+
+    /* TELEMETRY HUD PANELS (SLIDE IN DYNAMICALLY ON BEATS) */
+    .telemetry-panel {
+      position: absolute;
+      z-index: 18;
+      background: rgba(10, 16, 26, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 14px;
+      padding: 16px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(6, 182, 212, 0.15);
+      width: 250px;
+      transform-style: preserve-3d;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+      will-change: transform, opacity;
+    }
+
+    .telemetry-left {
+      left: 32px;
+      top: 90px;
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+
+    .telemetry-right {
+      right: 32px;
+      top: 90px;
+      transform: translateX(400px);
+      opacity: 0;
+    }
+
+    .telemetry-title {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent-sky);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 6px;
+    }
+
+    .stat-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .stat-val {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stat-val.positive {
+      color: var(--accent-lime);
+    }
+    .stat-val.cyan {
+      color: var(--accent-sky);
+    }
+
+    .stat-bar {
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+
+    .stat-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #06b6d4, #a3e635);
+      border-radius: 999px;
+      transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* EVOLUTION COMPARISON SLIDER (SEMANA 01 VS SEMANA 12) */
+    .evolution-badge {
+      position: absolute;
+      bottom: 95px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(163, 230, 53, 0.4);
+      border-radius: 999px;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 22;
+      backdrop-filter: blur(16px);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(163, 230, 53, 0.2);
+    }
+
+    .evolution-pill {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--accent-lime);
+      letter-spacing: 1px;
+    }
+
+    .evolution-delta {
+      font-size: 11px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* BOTTOM TIMELINE & TRANSPORT BAR */
+    .cinema-controls {
+      position: absolute;
+      bottom: 20px;
+      left: 28px;
+      right: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: rgba(10, 16, 26, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 10px 18px;
+      backdrop-filter: blur(20px);
+      z-index: 25;
+    }
+
+    .btn-play {
+      background: linear-gradient(135deg, #06b6d4, #0284c7);
+      border: none;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+      transition: transform 0.15s ease, background 0.2s ease;
+      flex-shrink: 0;
+    }
+    .btn-play:hover {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    }
+
+    .timeline-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .timeline-progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 0%;
+      background: linear-gradient(90deg, #06b6d4, #a3e635);
+      border-radius: 999px;
+      box-shadow: 0 0 12px rgba(163, 230, 53, 0.5);
+    }
+
+    .timeline-head {
+      position: absolute;
+      top: 50%;
+      width: 14px;
+      height: 14px;
+      background: #fff;
+      border: 2px solid #a3e635;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px #a3e635;
+    }
+
+    .time-label {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      min-width: 65px;
+      text-align: right;
+    }
+
+    .btn-action {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+    .btn-action:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* FINAL SIGNATURE LOGO END CARD (PAYOFF THROUGH-LINE) */
+    .endcard-signature {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 30;
+      background: radial-gradient(circle at center, rgba(3, 5, 8, 0.95) 0%, rgba(3, 5, 8, 0.98) 100%);
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.9);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .endcard-signature.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1);
+    }
+
+    .signature-logo-glow {
+      max-width: 280px;
+      width: 70%;
+      height: auto;
+      filter: drop-shadow(0 0 35px rgba(163, 230, 53, 0.6)) drop-shadow(0 0 70px rgba(6, 182, 212, 0.3));
+      animation: floatLogo 3s ease-in-out infinite alternate;
+    }
+
+    .signature-tagline {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: var(--accent-lime);
+      text-transform: uppercase;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .signature-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      text-align: center;
+      max-width: 440px;
+    }
+
+    .signature-cta-btn {
+      margin-top: 28px;
+      background: linear-gradient(135deg, #a3e635, #65a30d);
+      color: #000;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(163, 230, 53, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .signature-cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(163, 230, 53, 0.6);
+    }
+
+    @keyframes pulse {
+      from { opacity: 0.6; }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+
+    @keyframes scanLaser {
+      0% { top: 0%; opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    @keyframes floatLogo {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+
+  <div class="cinema-viewport" id="viewport">
+    
+    <!-- TOP BRANDING & BEAT HUD -->
+    <div class="cinema-topbar">
+      <div class="brand-cluster">
+        <img src="assets/captoora_signature_logo.png" alt="Captoora" class="brand-logo-img">
+        <div>
+          <div class="brand-title">CAPTOORA BIOMETRICS</div>
+          <div class="brand-sub">CLON DIGITAL &amp; MONITOREO 3D DE PRECISIÓN</div>
+        </div>
+      </div>
+
+      <div class="beat-indicator">
+        <div class="beat-dot" id="beat-dot"></div>
+        <span id="bpm-readout">120 BPM // FRAME: 000</span>
+      </div>
+    </div>
+
+    <!-- 3D CAMERA WORLD -->
+    <div class="camera-rig" id="camera-rig">
+      
+      <!-- 3D VOLUMETRIC CANVAS FOR BIOMETRIC TWIN (NO STICKMEN) -->
+      <canvas id="clone-canvas"></canvas>
+
+      <!-- 6 MULTI-ANGLE BODY SCAN CARDS -->
+      <div class="cards-container" id="cards-container">
+        
+        <!-- CARD 01: TORSO FRONTAL -->
+        <div class="photo-card" id="card-0">
+          <div class="card-header">
+            <div class="card-tag">Scan 01</div>
+            <div class="card-id">#TR-F01</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_01_torso.jpg" alt="Torso Frontal">
+            <div class="reticle"></div>
+            <div class="laser-bar"></div>
+          </div>
+          <div class="card-footer">
+            <span>Torso Frontal</span>
+            <span class="val">99.4% Sim.</span>
+          </div>
+        </div>
+
+        <!-- CARD 02: PERFIL SAGITAL -->
+        <div class="photo-card" id="card-1">
+          <div class="card-header">
+            <div class="card-tag">Scan 02</div>
+            <div class="card-id">#SG-P02</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_02_sagital.jpg" alt="Perfil Sagital">
+            <div class="reticle"></div>
+            <div class="laser-bar" style="animation-delay: 0.3s;"></div>
+          </div>
+          <div class="card-footer">
+            <span>Eje Sagital</span>
+            <span class="val">Postura 1A</span>
+          </div>
+        </div>
+
+        <!-- CARD 03: ESPALDA & DORSAL -->
+        <div class="photo-card" id="card-2">
+          <div class="card-header">
+            <div class="card-tag">Scan 03</div>
+            <div class="card-id">#DR-B03</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_03_dorsal.jpg" alt="Espalda & Dorsal">
+            <div class="reticle"></div>
+            <div class="laser-bar" style="animation-delay: 0.6s;"></div>
+          </div>
+          <div class="card-footer">
+            <span>Dorsal / Escápula</span>
+            <span class="val">+2.1 cm</span>
+          </div>
+        </div>
+
+        <!-- CARD 04: CINTURA & CORE -->
+        <div class="photo-card" id="card-3">
+          <div class="card-header">
+            <div class="card-tag">Scan 04</div>
+            <div class="card-id">#CR-W04</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_04_core.jpg" alt="Cintura & Core">
+            <div class="reticle"></div>
+            <div class="laser-bar" style="animation-delay: 0.9s;"></div>
+          </div>
+          <div class="card-footer">
+            <span>Cintura / Oblicuos</span>
+            <span class="val">0.74 WHR</span>
+          </div>
+        </div>
+
+        <!-- CARD 05: TREN INFERIOR -->
+        <div class="photo-card" id="card-4">
+          <div class="card-header">
+            <div class="card-tag">Scan 05</div>
+            <div class="card-id">#LG-L05</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_05_legs.jpg" alt="Tren Inferior">
+            <div class="reticle"></div>
+            <div class="laser-bar" style="animation-delay: 1.2s;"></div>
+          </div>
+          <div class="card-footer">
+            <span>Cuádriceps / Base</span>
+            <span class="val">50/50 Bal.</span>
+          </div>
+        </div>
+
+        <!-- CARD 06: DELTOIDES & HOMBROS -->
+        <div class="photo-card" id="card-5">
+          <div class="card-header">
+            <div class="card-tag">Scan 06</div>
+            <div class="card-id">#SH-D06</div>
+          </div>
+          <div class="photo-frame">
+            <img src="assets/slice_06_deltoids.jpg" alt="Deltoides & Hombros">
+            <div class="reticle"></div>
+            <div class="laser-bar" style="animation-delay: 1.5s;"></div>
+          </div>
+          <div class="card-footer">
+            <span>Biacromial</span>
+            <span class="val">44.8 cm</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- HUD OVERLAY CANVAS (SCAN LINES, TELEMETRY BRACKETS) -->
+    <canvas id="hud-canvas"></canvas>
+
+    <!-- LEFT TELEMETRY PANEL -->
+    <div class="telemetry-panel telemetry-left" id="panel-left">
+      <div class="telemetry-title">
+        <span>Biometría Corporal</span>
+        <span style="color:var(--accent-lime)">ACTIVO</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Simetría Muscular</span>
+        <span class="stat-val cyan" id="stat-sym">98.6%</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 98%;"></div></div>
+
+      <div class="stat-row" style="margin-top:12px;">
+        <span class="stat-label">Alineación Sagital</span>
+        <span class="stat-val positive">0.8° Desvío (Óptimo)</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 94%;"></div></div>
+
+      <div class="stat-row" style="margin-top:12px;">
+        <span class="stat-label">Densidad Miofascial</span>
+        <span class="stat-val">Clase A+</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 91%;"></div></div>
+    </div>
+
+    <!-- RIGHT TELEMETRY PANEL -->
+    <div class="telemetry-panel telemetry-right" id="panel-right">
+      <div class="telemetry-title">
+        <span>Progresión &amp; Salud</span>
+        <span style="color:var(--accent-sky)">SEM 01 - 12</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Masa Magra Activa</span>
+        <span class="stat-val positive">+2.4 kg</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 82%;"></div></div>
+
+      <div class="stat-row" style="margin-top:12px;">
+        <span class="stat-label">Grasa Subcutánea</span>
+        <span class="stat-val positive">-3.8%</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 76%; background:linear-gradient(90deg, #f59e0b, #a3e635);"></div></div>
+
+      <div class="stat-row" style="margin-top:12px;">
+        <span class="stat-label">Índice Cintura/Cadera</span>
+        <span class="stat-val cyan">0.74 (Atlético)</span>
+      </div>
+      <div class="stat-bar"><div class="stat-fill" style="width: 89%;"></div></div>
+    </div>
+
+    <!-- EVOLUTION PILL BADGE -->
+    <div class="evolution-badge" id="evo-badge">
+      <div class="evolution-pill">REGISTRO DE AVANCES</div>
+      <div class="evolution-delta">
+        <span>Semana 01</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <span style="color:var(--accent-lime); font-weight:700;">Semana 12 (Clon Validado)</span>
+      </div>
+    </div>
+
+    <!-- SIGNATURE END CARD PAYOFF -->
+    <div class="endcard-signature" id="endcard">
+      <img src="assets/captoora_signature_logo.png" alt="Captoora Master Signature Logo" class="signature-logo-glow">
+      <div class="signature-tagline">Captoora Biometrics</div>
+      <div class="signature-sub">Fotografía clínica y deportiva de precisión fusionada con tu Clon Digital 3D para seguimiento estético, salud y rendimiento.</div>
+      <a href="https://wa.me/528120277259?text=Hola%20Captoora!%20Quiero%20conocer%20m%C3%A1s%20sobre%20el%20sistema%20de%20Biometrics%20y%20Clon%20Digital." target="_blank" class="signature-cta-btn">Agendar Escaneo Biométrico</a>
+    </div>
+
+    <!-- TRANSPORT TIMELINE BAR -->
+    <div class="cinema-controls">
+      <button class="btn-play" id="btn-play" title="Play / Pause">
+        <svg id="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </button>
+
+      <div class="timeline-track" id="timeline-track">
+        <div class="timeline-progress" id="timeline-progress"></div>
+        <div class="timeline-head" id="timeline-head"></div>
+      </div>
+
+      <div class="time-label" id="time-label">00:00 / 00:15</div>
+
+      <a href="../captoora_fused_experience.html" class="btn-action">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>Experiencia Web</span>
+      </a>
+
+      <button class="btn-action" id="btn-fullscreen">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    /* =======================================================================
+       CAPTOORA BIOMETRICS — MOTION EXPLAINER ENGINE (OPUS 5.5 / 120 BPM)
+       ======================================================================= */
+    const TOTAL_DURATION = 15.0; // 15 seconds
+    const BPM = 120; // 120 beats per minute -> 1 beat = 0.5s
+    const BEAT_DURATION = 60 / BPM; // 0.5s
+
+    let isPlaying = true;
+    let currentTime = 0;
+    let lastTimestamp = performance.now();
+
+    // DOM ELEMENTS
+    const viewport = document.getElementById('viewport');
+    const cameraRig = document.getElementById('camera-rig');
+    const cloneCanvas = document.getElementById('clone-canvas');
+    const hudCanvas = document.getElementById('hud-canvas');
+    const beatDot = document.getElementById('beat-dot');
+    const bpmReadout = document.getElementById('bpm-readout');
+    const panelLeft = document.getElementById('panel-left');
+    const panelRight = document.getElementById('panel-right');
+    const evoBadge = document.getElementById('evo-badge');
+    const endcard = document.getElementById('endcard');
+    const btnPlay = document.getElementById('btn-play');
+    const playIcon = document.getElementById('play-icon');
+    const timelineTrack = document.getElementById('timeline-track');
+    const timelineProgress = document.getElementById('timeline-progress');
+    const timelineHead = document.getElementById('timeline-head');
+    const timeLabel = document.getElementById('time-label');
+    const btnFullscreen = document.getElementById('btn-fullscreen');
+
+    const cards = [
+      document.getElementById('card-0'),
+      document.getElementById('card-1'),
+      document.getElementById('card-2'),
+      document.getElementById('card-3'),
+      document.getElementById('card-4'),
+      document.getElementById('card-5')
+    ];
+
+    // SETUP CANVASES
+    const ctxClone = cloneCanvas.getContext('2d');
+    const ctxHud = hudCanvas.getContext('2d');
+
+    function resizeCanvases() {
+      const rect = viewport.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cloneCanvas.width = rect.width * dpr;
+      cloneCanvas.height = rect.height * dpr;
+      hudCanvas.width = rect.width * dpr;
+      hudCanvas.height = rect.height * dpr;
+      ctxClone.scale(dpr, dpr);
+      ctxHud.scale(dpr, dpr);
+    }
+    window.addEventListener('resize', resizeCanvases);
+    resizeCanvases();
+
+    /* =======================================================================
+       MATHEMATICAL 3D ANATOMICAL MODEL (VOLUMETRIC POINT-CLOUD MESH)
+       Authentic Human Silhouette & Muscle Slices — ZERO STICKMEN
+       ======================================================================= */
+    const NUM_CROSS_SECTIONS = 64; // horizontal anatomical slice rings
+    const POINTS_PER_RING = 28;
+    const bodyPoints = [];
+
+    // Parametric human anatomical silhouette definition (height: -180 to +180)
+    function generateBiometricModel() {
+      for (let s = 0; s < NUM_CROSS_SECTIONS; s++) {
+        const t = s / (NUM_CROSS_SECTIONS - 1);
+        const y = 180 - t * 360; // top to bottom: +180 (head) to -180 (feet)
+
+        let rx = 10, rz = 8; // default radii
+        let cx = 0, cz = 0;
+
+        if (y > 140) {
+          // Head / Cranium
+          const ht = (y - 140) / 40;
+          rx = 18 * Math.sin(ht * Math.PI);
+          rz = 20 * Math.sin(ht * Math.PI);
+          cz = 4 * ht;
+        } else if (y > 120) {
+          // Neck & Cervical Spine
+          rx = 11;
+          rz = 12;
+          cz = 2;
+        } else if (y > 75) {
+          // Shoulders / Deltoids & Upper Chest (Biacromial)
+          const st = (y - 75) / 45;
+          rx = 48 - 18 * st;
+          rz = 24 - 4 * st;
+          cz = 2;
+        } else if (y > 35) {
+          // Thoracic Cage / Latissimus Dorsi / Pectorals
+          const tt = (y - 35) / 40;
+          rx = 34 + 6 * Math.sin(tt * Math.PI);
+          rz = 22 + 4 * Math.sin(tt * Math.PI);
+        } else if (y > 0) {
+          // Waist & Core / Abdominal Wall
+          const wt = y / 35;
+          rx = 26 + 4 * Math.sin(wt * Math.PI);
+          rz = 18 + 2 * Math.sin(wt * Math.PI);
+        } else if (y > -35) {
+          // Pelvis / Hips & Gluteals
+          const pt = (y + 35) / 35;
+          rx = 36 - 6 * pt;
+          rz = 26 - 4 * pt;
+        } else if (y > -110) {
+          // Thighs / Quadriceps & Hamstrings (split into dual leg rings)
+          const lt = (y + 110) / 75;
+          rx = 16 + 6 * lt;
+          rz = 16 + 6 * lt;
+          cx = 16 - 2 * lt; // right leg offset
+        } else if (y > -130) {
+          // Knees / Patella
+          rx = 13;
+          rz = 13;
+          cx = 14;
+        } else if (y > -170) {
+          // Calves / Gastrocnemius & Soleus
+          const ct = (y + 170) / 40;
+          rx = 12 + 4 * Math.sin(ct * Math.PI);
+          rz = 12 + 4 * Math.sin(ct * Math.PI);
+          cx = 13;
+        } else {
+          // Ankles & Feet
+          rx = 9;
+          rz = 16;
+          cx = 12;
+          cz = 6;
+        }
+
+        // Generate left and right symmetric ring points
+        const isLeg = y <= -35;
+        const legs = isLeg ? [-1, 1] : [0];
+
+        legs.forEach(legSign => {
+          for (let p = 0; p < POINTS_PER_RING; p++) {
+            const angle = (p / POINTS_PER_RING) * Math.PI * 2;
+            const px = (legSign === 0 ? 0 : legSign * cx) + Math.cos(angle) * (isLeg ? rx * 0.8 : rx);
+            const pz = cz + Math.sin(angle) * (isLeg ? rz * 0.8 : rz);
+            
+            // Jitter for biometric organic sensor definition
+            bodyPoints.push({
+              x: px,
+              y: y,
+              z: pz,
+              ring: s,
+              leg: legSign,
+              intensity: Math.random() * 0.4 + 0.6
+            });
+          }
+        });
+      }
+    }
+    generateBiometricModel();
+
+    /* =======================================================================
+       EASING & SPRING PHYSICS (Damped Harmonic Oscillator)
+       ======================================================================= */
+    function springOvershoot(t) {
+      // Spring with subtle natural overshoot (damping ~ 0.72)
+      return -0.5 * Math.pow(Math.E, -6 * t) * (-2 * Math.pow(Math.E, 6 * t) + Math.sin(12 * t) + 2 * Math.cos(12 * t));
+    }
+
+    function clamp(val, min, max) {
+      return Math.max(min, Math.min(max, val));
+    }
+
+    /* =======================================================================
+       MAIN MOTION DESIGN TIMELINE (120 BPM BEAT STRUCTURE)
+       ======================================================================= */
+    /*
+      Scene 1 (0.0s - 4.5s) // 9 Beats:
+      - 3D Camera pushes into biometric world.
+      - 6 Multi-angle photographic body scan cards fly in with spring overshoot into a 3D orbit around the central scan point.
+      - Slices analyze: Torso, Sagittal, Dorsal, Core, Lower Body, Shoulders.
+
+      Scene 2 (4.5s - 8.5s) // 8 Beats:
+      - Cards dock toward perimeter.
+      - 3D Volumetric digital clone materializes via laser scan sweep plane.
+      - Thousands of biometric point cloud nodes illuminate with cyan/emerald aura.
+      - Interactive cross-section rings track volume and muscle symmetry.
+
+      Scene 3 (8.5s - 12.0s) // 7 Beats:
+      - Telemetry HUD panels snap in on beat (Simetría, Alineación, Masa Magra +2.4kg, Grasa -3.8%).
+      - Evolution badge "Semana 01 vs Semana 12" glides up.
+      - Ghost silhouette comparison activates.
+
+      Scene 4 (12.0s - 15.0s) // 6 Beats:
+      - Through-line optical beam converges.
+      - Hologram resolves into Captoora Master Signature Logo with luxury glow & CTA.
+    */
+
+    function updateMotion(t) {
+      const beat = Math.floor(t / BEAT_DURATION);
+      const beatProgress = (t % BEAT_DURATION) / BEAT_DURATION;
+
+      // 120 BPM Visual Beat Pulse
+      const beatScale = 1 + 0.4 * Math.max(0, 1 - beatProgress * 3.5);
+      beatDot.style.transform = `scale(${beatScale})`;
+      bpmReadout.textContent = `120 BPM // BEAT: ${String(beat).padStart(2, '0')} // T: ${t.toFixed(2)}s`;
+
+      // Continuous 3D Camera Push (Scale 1.0 -> 1.05 per scene)
+      const camZoom = 1.0 + (t / TOTAL_DURATION) * 0.08;
+      const camTilt = Math.sin(t * 0.8) * 3;
+      const camPan = Math.cos(t * 0.6) * 4;
+      cameraRig.style.transform = `scale(${camZoom}) rotateX(${camTilt}deg) rotateY(${camPan}deg)`;
+
+      // SCENE 1: CARDS ORBIT & SPRING ENTRY (0.0s - 4.5s)
+      const cardAngles = [0, 60, 120, 180, 240, 300];
+      const cardRadii = 290;
+
+      cards.forEach((card, idx) => {
+        // Staggered entry every 0.35s (on beat subdivision)
+        const entryStart = idx * 0.45;
+        const entryDur = 1.0;
+        const p = clamp((t - entryStart) / entryDur, 0, 1);
+        const springVal = springOvershoot(p);
+
+        if (t < 4.5) {
+          // Swirling into 3D orbit
+          const baseAngle = cardAngles[idx] + (t * 22);
+          const rad = (baseAngle * Math.PI) / 180;
+          const x = Math.cos(rad) * cardRadii * springVal;
+          const z = Math.sin(rad) * cardRadii * springVal - 50;
+          const y = (idx % 2 === 0 ? -40 : 40) * Math.sin(t * 1.5 + idx);
+          const rotY = -baseAngle + 90;
+
+          card.style.opacity = p;
+          card.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotateY(${rotY}deg) scale(${0.75 + springVal * 0.25})`;
+          card.style.borderColor = 'rgba(56, 189, 248, 0.4)';
+        } else if (t < 12.0) {
+          // Docking to outer perimeter as biometric telemetry references
+          const dockPos = [
+            { x: -440, y: -160, z: -100, ry: 20 },
+            { x: -440, y: 120, z: -100, ry: 20 },
+            { x: -280, y: 220, z: -150, ry: 10 },
+            { x: 440, y: -160, z: -100, ry: -20 },
+            { x: 440, y: 120, z: -100, ry: -20 },
+            { x: 280, y: 220, z: -150, ry: -10 }
+          ][idx];
+
+          const dockProgress = clamp((t - 4.5) / 1.2, 0, 1);
+          const ds = springOvershoot(dockProgress);
+
+          card.style.opacity = 0.85;
+          card.style.transform = `translate3d(${dockPos.x * ds}px, ${dockPos.y * ds}px, ${dockPos.z}px) rotateY(${dockPos.ry}deg) scale(0.72)`;
+          card.style.borderColor = 'rgba(163, 230, 53, 0.5)';
+        } else {
+          // Fading out into signature payoff
+          const fadeOut = clamp((t - 12.0) / 0.8, 0, 1);
+          card.style.opacity = 1 - fadeOut;
+          card.style.transform += ` scale(${1 - fadeOut * 0.2})`;
+        }
+      });
+
+      // SCENE 2 & 3: TELEMETRY HUD PANELS
+      if (t >= 7.0 && t < 12.0) {
+        panelLeft.style.opacity = '1';
+        panelLeft.style.transform = 'translateX(0px)';
+        panelRight.style.opacity = '1';
+        panelRight.style.transform = 'translateX(0px)';
+        evoBadge.style.opacity = '1';
+        evoBadge.style.transform = 'translateX(-50%) translateY(0px)';
+      } else {
+        panelLeft.style.opacity = '0';
+        panelLeft.style.transform = 'translateX(-400px)';
+        panelRight.style.opacity = '0';
+        panelRight.style.transform = 'translateX(400px)';
+        evoBadge.style.opacity = '0';
+        evoBadge.style.transform = 'translateX(-50%) translateY(100px)';
+      }
+
+      // SCENE 4: END CARD PAYOFF (12.0s - 15.0s)
+      if (t >= 12.0) {
+        endcard.classList.add('active');
+      } else {
+        endcard.classList.remove('active');
+      }
+
+      // RENDER 3D VOLUMETRIC CANVAS & HUD
+      renderCloneCanvas(t);
+      renderHudCanvas(t);
+    }
+
+    /* =======================================================================
+       RENDER 3D VOLUMETRIC BIOMETRIC CLONE (CANVAS)
+       ======================================================================= */
+    function renderCloneCanvas(t) {
+      const w = viewport.clientWidth;
+      const h = viewport.clientHeight;
+      ctxClone.clearRect(0, 0, w, h);
+
+      // Clone visibility ramps up from 3.5s onwards
+      const cloneAlpha = clamp((t - 3.5) / 1.5, 0, 1);
+      if (cloneAlpha <= 0) return;
+
+      const cx = w / 2;
+      const cy = h / 2 - 20;
+      const fov = 700;
+      const camDist = 580;
+
+      // Slow majestic 3D rotation of the clone
+      const rotY = (t * 0.45);
+      const cosY = Math.cos(rotY);
+      const sinY = Math.sin(rotY);
+
+      // Laser scan sweep plane position (-180 to +180)
+      const laserCycle = (t * 1.2) % 3; // repeats every 2.5s
+      const laserY = 180 - (laserCycle / 3) * 360;
+
+      // Draw points with 3D projection
+      bodyPoints.forEach(pt => {
+        // Rotate around Y axis
+        const xRot = pt.x * cosY + pt.z * sinY;
+        const zRot = -pt.x * sinY + pt.z * cosY;
+        const yRot = pt.y;
+
+        const depth = camDist + zRot;
+        if (depth <= 10) return;
+
+        const projX = cx + (xRot * fov) / depth;
+        const projY = cy - (yRot * fov) / depth;
+        const size = Math.max(0.8, (2.4 * fov) / depth);
+
+        // Distance from vertical laser sweep plane
+        const distFromLaser = Math.abs(pt.y - laserY);
+        let color = 'rgba(56, 189, 248, ';
+        let alpha = (pt.intensity * 0.45 * cloneAlpha);
+
+        if (distFromLaser < 16) {
+          // Highlight scanned points in neon lime
+          color = 'rgba(163, 230, 53, ';
+          alpha = Math.min(1.0, alpha * 3.5);
+        }
+
+        ctxClone.beginPath();
+        ctxClone.arc(projX, projY, size, 0, Math.PI * 2);
+        ctxClone.fillStyle = color + alpha + ')';
+        ctxClone.fill();
+
+        // Cross-section ring connectors every 6 rings for anatomical contour definition
+        if (pt.ring % 6 === 0 && Math.random() < 0.25) {
+          ctxClone.shadowColor = '#06b6d4';
+          ctxClone.shadowBlur = 6;
+        } else {
+          ctxClone.shadowBlur = 0;
+        }
+      });
+
+      // DRAW HORIZONTAL SCANNING RINGS (Anatomical Landmarks)
+      const landmarks = [
+        { y: 100, label: 'Biacromial: 44.8 cm', val: 'Simetría 99.4%' },
+        { y: 45, label: 'Tórax Expansión: +3.2 cm', val: 'Masa Magra' },
+        { y: 15, label: 'Cintura: 72.4 cm', val: 'WHR 0.74' },
+        { y: -30, label: 'Cadera & Glúteos', val: 'Eje Neutro' },
+        { y: -90, label: 'Muslo Proximal', val: 'Balance 50/50' }
+      ];
+
+      landmarks.forEach((lm, i) => {
+        const ringAlpha = clamp((t - 5.0 - i * 0.4) / 0.8, 0, 0.7) * cloneAlpha;
+        if (ringAlpha <= 0) return;
+
+        const projY = cy - (lm.y * fov) / camDist;
+        const ringWidth = (140 * fov) / camDist;
+
+        ctxClone.beginPath();
+        ctxClone.ellipse(cx, projY, ringWidth * 0.5, 14, 0, 0, Math.PI * 2);
+        ctxClone.strokeStyle = `rgba(6, 182, 212, ${ringAlpha * 0.6})`;
+        ctxClone.lineWidth = 1.2;
+        ctxClone.stroke();
+
+        // Laser scan plane line
+        if (Math.abs(laserY - lm.y) < 18) {
+          ctxClone.strokeStyle = `rgba(163, 230, 53, ${ringAlpha * 1.5})`;
+          ctxClone.lineWidth = 2;
+          ctxClone.stroke();
+        }
+      });
+    }
+
+    /* =======================================================================
+       RENDER HUD OVERLAYS (BRACKETS, TARGETS, LASER BEAMS)
+       ======================================================================= */
+    function renderHudCanvas(t) {
+      const w = viewport.clientWidth;
+      const h = viewport.clientHeight;
+      ctxHud.clearRect(0, 0, w, h);
+
+      const cx = w / 2;
+      const cy = h / 2 - 20;
+
+      // Central Biometric Scanner Crosshairs
+      ctxHud.strokeStyle = 'rgba(56, 189, 248, 0.25)';
+      ctxHud.lineWidth = 1;
+
+      // Corner brackets on viewport
+      const pad = 40;
+      const bLen = 20;
+      // Top-left
+      ctxHud.beginPath();
+      ctxHud.moveTo(pad, pad + bLen); ctxHud.lineTo(pad, pad); ctxHud.lineTo(pad + bLen, pad);
+      // Top-right
+      ctxHud.moveTo(w - pad - bLen, pad); ctxHud.lineTo(w - pad, pad); ctxHud.lineTo(w - pad, pad + bLen);
+      // Bottom-left
+      ctxHud.moveTo(pad, h - pad - bLen); ctxHud.lineTo(pad, h - pad); ctxHud.lineTo(pad + bLen, h - pad);
+      // Bottom-right
+      ctxHud.moveTo(w - pad - bLen, h - pad); ctxHud.lineTo(w - pad, h - pad); ctxHud.lineTo(w - pad, h - pad - bLen);
+      ctxHud.stroke();
+
+      // Optical Target Rings in center
+      if (t > 4.0 && t < 12.0) {
+        ctxHud.beginPath();
+        ctxHud.arc(cx, cy, 180, 0, Math.PI * 2);
+        ctxHud.strokeStyle = 'rgba(6, 182, 212, 0.15)';
+        ctxHud.setLineDash([4, 8]);
+        ctxHud.stroke();
+        ctxHud.setLineDash([]);
+      }
+    }
+
+    /* =======================================================================
+       ANIMATION LOOP & TRANSPORT CONTROLS
+       ======================================================================= */
+    function animate(now) {
+      const delta = (now - lastTimestamp) / 1000;
+      lastTimestamp = now;
+
+      if (isPlaying) {
+        currentTime += delta;
+        if (currentTime >= TOTAL_DURATION) {
+          currentTime = 0; // Loop playback
+        }
+      }
+
+      // Update UI Progress
+      const progressPercent = (currentTime / TOTAL_DURATION) * 100;
+      timelineProgress.style.width = `${progressPercent}%`;
+      timelineHead.style.left = `${progressPercent}%`;
+
+      const curMin = Math.floor(currentTime / 60);
+      const curSec = Math.floor(currentTime % 60);
+      timeLabel.textContent = `${String(curMin).padStart(2, '0')}:${String(curSec).padStart(2, '0')} / 00:15`;
+
+      updateMotion(currentTime);
+
+      requestAnimationFrame(animate);
+    }
+
+    // Play / Pause Toggle
+    btnPlay.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      playIcon.innerHTML = isPlaying 
+        ? '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>'
+        : '<polygon points="5 3 19 12 5 21 5 3"></polygon>';
+    });
+
+    // Timeline Scrubbing
+    timelineTrack.addEventListener('click', (e) => {
+      const rect = timelineTrack.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const ratio = clamp(clickX / rect.width, 0, 1);
+      currentTime = ratio * TOTAL_DURATION;
+      updateMotion(currentTime);
+    });
+
+    // Fullscreen Toggle
+    btnFullscreen.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        viewport.requestFullscreen().catch(err => alert(err.message));
+      } else {
+        document.exitFullscreen();
+      }
+    });
+
+    // START
+    requestAnimationFrame(animate);
+  </script>
+</body>
+</html>
