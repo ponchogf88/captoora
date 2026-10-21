@@ -39,8 +39,8 @@ window.CAPTOORA = {
   // Cuando acabe la promo, borra regularPrice y promoLabel y pon el precio normal en price.
   packages: [
     { name: "Clónate con inteligencia artificial", price: null, priceLabel: "Cotización personalizada",
-      badge: "Sesiones piloto", secondary: true,
-      desc: "Tu presencia frente a cámara, preparada en estudio. Te guiamos para grabar el material de tu clon digital con iluminación profesional, encuadre cuidado y voz clara.",
+      badge: "CAPTOORA Biometrics", secondary: true,
+      desc: "Sesiones piloto de clon digital. Tu presencia frente a cámara, preparada en estudio. Te guiamos para grabar el material de tu clon digital con iluminación profesional, encuadre cuidado y voz clara.",
       items: ["Preparación de imagen y guía frente a cámara", "Set e iluminación profesional para video", "Grabación de tomas de referencia y revisión técnica", "Asistencia para configurar y probar tu avatar con tu autorización", "Plataforma, videos y costos de uso definidos en tu cotización"],
       cta: "Quiero mi clon digital",
       waMessage: "Hola Captoora, quiero información de la sesión para crear mi clon digital con inteligencia artificial." },
