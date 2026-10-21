@@ -5,6 +5,9 @@
 # en Google Drive cada 6 horas (4 veces al día).
 # ==============================================================================
 
+export PATH="/Users/user/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export HOME="/Users/user"
+
 REPO_DIR="/Users/user/captoora"
 GDRIVE_LOGS="/Users/user/Library/CloudStorage/GoogleDrive-lic.jagf87@gmail.com/Mi unidad/PROJECTS/RESPALDOS_PROYECTOS/AI CAPTOORA/BITACORA_Y_MEMORIA_CENTRAL/logs"
 LOG_FILE="${REPO_DIR}/logs/auto_sync.log"
