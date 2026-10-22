@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA STUDIO · BLUEPRINT MAESTRO EVENTO 31 OCTUBRE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=Cinzel:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+
+    @page {
+      size: 11in 8.5in; /* US Letter Landscape */
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      background-color: #06070a;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .sheet {
+      width: 11in;
+      height: 8.5in;
+      position: relative;
+      background: #07080c;
+      overflow: hidden;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 38px 46px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* TOP HEADER ON INNER PAGES */
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .doc-header-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: #fff;
+    }
+    .doc-header-logo span { color: #f59e0b; }
+
+    .doc-header-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: #94a3b8;
+      letter-spacing: 0.08em;
+    }
+
+    .doc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #64748b;
+    }
+
+    /* TYPOGRAPHY */
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .amber { color: #f59e0b; }
+    .muted { color: #94a3b8; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* =========================================
+       PAGE 1: COVER
+    ========================================= */
+    .cover-sheet {
+      background: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.08) 0%, rgba(7, 8, 12, 1) 65%);
+      justify-content: space-between;
+    }
+
+    .cover-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .brand-big {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+    .brand-big span { color: #f59e0b; }
+
+    .badge-vip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .cover-center {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .cover-title {
+      font-size: 3.2rem;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      font-weight: 900;
+    }
+
+    .cover-desc {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 24px;
+    }
+
+    .cover-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+
+    .meta-item-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .meta-item-val {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .cover-photo-frame {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      height: 380px;
+      background: #000;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .cover-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cover-photo-pill {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(0,0,0,0.75);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #fff;
+    }
+
+    /* =========================================
+       PAGE 2: ARQUITECTURA DEL ESTUDIO (2 NIVELES)
+    ========================================= */
+    .layout-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      flex-grow: 1;
+    }
+
+    .card-level {
+      background: #0a0c12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .level-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .level-title {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .level-desc {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .level-img-box {
+      border-radius: 10px;
+      overflow: hidden;
+      height: 220px;
+      background: #000;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 12px;
+    }
+
+    .level-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-list li span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #f59e0b;
+      display: inline-block;
+    }
+
+    /* =========================================
+       PAGE 3: SET 1 - FITNESS & CICLORAMA BLANCO
+    ========================================= */
+    .set-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      flex-grow: 1;
+      align-items: center;
+    }
+
+    .set-gallery-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 180px;
+      gap: 12px;
+    }
+
+    .set-gallery-3 .main-photo {
+      grid-row: span 2;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .set-gallery-3 .sub-photo {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .set-gallery-3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .set-spec-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .spec-card {
+      background: #0a0c12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+
+    .spec-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      color: #f59e0b;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spec-card p {
+      font-size: 0.8rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       PAGE 4: SET 2 - LA GRAN MESA & BEAUTY CEO
+    ========================================= */
+    .ceo-pose-box {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(10, 12, 18, 1) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 14px;
+      padding: 18px 24px;
+      margin-bottom: 16px;
+    }
+
+    .ceo-pose-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .ceo-grid-poses {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .pose-item {
+      background: #050609;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .pose-item-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #f59e0b;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .pose-item-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .pose-item-desc {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    /* =========================================
+       PAGE 5: HOSPITALITY & BARRA DE MIMOSAS
+    ========================================= */
+    .hospitality-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .hosp-col {
+      background: #0a0c12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hosp-icon-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hosp-body-text {
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .hosp-highlight {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 2px solid #f59e0b;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: #fef3c7;
+      margin-top: 14px;
+    }
+
+    /* =========================================
+       PAGE 6: LOGÍSTICA & ROTACIÓN 4 ESCUADRONES
+    ========================================= */
+    .timeline-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.8rem;
+    }
+
+    .timeline-table th {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .timeline-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      color: #cbd5e1;
+    }
+
+    .timeline-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .tag-squad {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .sq-alpha { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid #3b82f6; }
+    .sq-beta { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+    .sq-gamma { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .sq-delta { background: rgba(236, 72, 153, 0.2); color: #f472b6; border: 1px solid #ec4899; }
+
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PAGE 1: PORTADA EJECUTIVA
+  ============================================================ -->
+  <section class="sheet cover-sheet">
+    <div class="cover-top">
+      <div class="brand-big">CAPTOORA <span>STUDIO</span></div>
+      <div class="badge-vip">PRODUCCIÓN EJECUTIVA // 31 OCTUBRE 2026</div>
+    </div>
+
+    <div class="cover-center">
+      <div>
+        <h1 class="cover-title">
+          Master Blueprint:<br>
+          <span class="amber">Farmasi VIP Experience</span>
+        </h1>
+        <p class="cover-desc">
+          Plan maestro de producción, hospitalidad y dirección fotográfica de 2 escenarios (Fitness Ciclorama &amp; Dark Luxury Beauty CEO con Gran Mesa) para la inauguración de Captoora Studio en Colinas de San Jerónimo, Monterrey.
+        </p>
+
+        <div class="cover-meta-grid">
+          <div>
+            <div class="meta-item-label">LOCACIÓN</div>
+            <div class="meta-item-val">San Jerónimo MTY</div>
+          </div>
+          <div>
+            <div class="meta-item-label">CONVOCATORIA</div>
+            <div class="meta-item-val">25 Influencers</div>
+          </div>
+          <div>
+            <div class="meta-item-label">DIRECCIÓN</div>
+            <div class="meta-item-val">Alfonso Gutiérrez</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-photo-frame">
+        <img src="assets/media_jpg/IG_CPT_0700_4x5.jpg" alt="Editorial Lookbook Captoora">
+        <div class="cover-photo-pill">PORTAFOLIO DE AUTOR · CAPTOORA STUDIO</div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div>DOCUMENTO CONFIDENCIAL DE PRODUCCIÓN · CAPTOORA ENGINE</div>
+      <div>PÁGINA 01 DE 06</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 2: ARQUITECTURA DEL ESTUDIO (2 NIVELES)
+  ============================================================ -->
+  <section class="sheet">
+    <div class="doc-header">
+      <div class="doc-header-logo">CAPTOORA <span>STUDIO</span> // ARQUITECTURA FÍSICA</div>
+      <div class="doc-header-tag">PLANTA BAJA (CHILL) &amp; PLANTA ALTA (SETS)</div>
+    </div>
+
+    <div class="layout-2col">
+      <!-- PLANTA BAJA -->
+      <div class="card-level">
+        <div>
+          <span class="level-badge">NIVEL 1 // PLANTA BAJA</span>
+          <h3 class="level-title">Chill Out, Mimosas Bar &amp; Selfies</h3>
+          <p class="level-desc">
+            Espacio social y de hospitalidad VIP. Mientras esperan su turno de shooting, las influencers conviven, se toman fotos en los rincones aesthetic y retocan su maquillaje sin estorbar el flujo de la cámara.
+          </p>
+
+          <div class="level-img-box">
+            <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Lounge Area">
+          </div>
+
+          <ul class="feature-list">
+            <li><span class="dot"></span> <strong>Barra de Mimosas:</strong> Prosecco helado, jugo de naranja y popotes oro rosa.</li>
+            <li><span class="dot"></span> <strong>Mirror Selfie Spot:</strong> Espejo vertical con iluminación cálida 2700K.</li>
+            <li><span class="dot"></span> <strong>Música &amp; Aroma:</strong> Playlist Lo-Fi Chillhouse y difusor ultrasónico.</li>
+            <li><span class="dot"></span> <strong>Hostess &amp; Concierge:</strong> Recibimiento VIP y control de lista por tu hermana.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PLANTA ALTA -->
+      <div class="card-level">
+        <div>
+          <span class="level-badge">NIVEL 2 // PLANTA ALTA</span>
+          <h3 class="level-title">Zona de Sets de Alta Producción</h3>
+          <p class="level-desc">
+            Área de disparo profesional con iluminación Godox y ciclorama. Aquí ocurre la magia fotográfica sin público interrumpiendo. Despacho fluido y profesional de 2 tipos de sesiones simultáneas.
+          </p>
+
+          <div class="level-img-box">
+            <img src="assets/media_jpg/escenario-1.jpg" alt="Estudio Planta Alta Captoora">
+          </div>
+
+          <ul class="feature-list">
+            <li><span class="dot"></span> <strong>Set Blanco:</strong> Ciclorama continuo con luz envolvente (Deportiva/Nutriplus).</li>
+            <li><span class="dot"></span> <strong>Set Negro &amp; Gran Mesa:</strong> Sesión editorial soberbia de Beauty CEO con productos.</li>
+            <li><span class="dot"></span> <strong>Nikon D3500 + Godox:</strong> Sincronización inalámbrica, 24MP ultra nítidos.</li>
+            <li><span class="dot"></span> <strong>Ritmo Cronometrado:</strong> 8 minutos exactos por modelo con cambio ágil.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div>CAPTOORA ARCHITECTURE BLUEPRINT · SAN JERÓNIMO MTY</div>
+      <div>PÁGINA 02 DE 06</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 3: SET 1 - FITNESS & CICLORAMA BLANCO (NUTRIPLUS)
+  ============================================================ -->
+  <section class="sheet">
+    <div class="doc-header">
+      <div class="doc-header-logo">SET 01 // <span class="amber">CICLORAMA BLANCO SPORT</span></div>
+      <div class="doc-header-tag">ALTA ENERGÍA · ATHLETIC DEFINITION · NUTRIPLUS</div>
+    </div>
+
+    <div class="set-grid">
+      <!-- FOTOS -->
+      <div class="set-gallery-3">
+        <div class="main-photo">
+          <img src="assets/media_jpg/IG_CPT_0630_4x5.jpg" alt="Fitness Karla Captoora">
+        </div>
+        <div class="sub-photo">
+          <img src="assets/media_jpg/IG_CPT_0800_4x5.jpg" alt="Fitness Sportswear">
+        </div>
+        <div class="sub-photo">
+          <img src="assets/media_jpg/pf-0867.jpg" alt="Athletic Energy">
+        </div>
+      </div>
+
+      <!-- SPECS -->
+      <div class="set-spec-box">
+        <div>
+          <h2 style="font-size:1.8rem; margin-bottom:12px;">Sesión Deportiva &amp; Wellness</h2>
+          <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.6; margin-bottom:18px;">
+            Inspirada en la exitosa sesión de Karla. Fondo blanco puro, luz esculpida que resalta tono muscular y actitud saludable. Ideal para la línea Nutriplus de Farmasi (Creatina, Colágeno Shot, Aloe Glow).
+          </p>
+
+          <div class="spec-card">
+            <h4>⚡ PROPS &amp; EQUIPO EN ESCENA</h4>
+            <p>Mancuernas estéticas de neopreno negro/rosa, tapete de yoga, shaker y botellas de suplementos Nutriplus colocados a los pies o en mano.</p>
+          </div>
+
+          <div class="spec-card">
+            <h4>💡 ESQUEMA DE ILUMINACIÓN GODOX</h4>
+            <p>Softbox Octabox principal a 45° con luz envolvente + Godox TT600 rebotado al ciclorama para blanco puro sin sombras sucias. ISO 100, f/5.6, 1/160s.</p>
+          </div>
+
+          <div class="spec-card">
+            <h4>🧘 DIRECCIÓN DE POSES (8 MINUTOS)</h4>
+            <p>1. Sentada descansando codo en rodilla con mancuerna. 2. Parada sujetando la creatina sonriendo al lente. 3. Pose de estiramiento atlético con calzado completo (Zero Crop).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div>CAPTOORA STUDIO SET SPECIFICATION · FITNESS WELLNESS</div>
+      <div>PÁGINA 03 DE 06</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 4: SET 2 - LA GRAN MESA & POSES SOBERBIAS BEAUTY CEO
+  ============================================================ -->
+  <section class="sheet">
+    <div class="doc-header">
+      <div class="doc-header-logo">SET 02 // <span class="amber">DARK LUXURY &amp; GRAN MESA</span></div>
+      <div class="doc-header-tag">EDITORIAL SOBERBIO · BEAUTY CEO · FARMASI PRODUCT DISPLAY</div>
+    </div>
+
+    <div style="flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;">
+      
+      <div class="ceo-pose-box">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <h2 class="ceo-pose-title">La Gran Mesa Expandible: Display de Poder Ejecutivo</h2>
+            <p style="font-size:0.82rem; color:#cbd5e1;">
+              La mesa grande de autor se convierte en el mostrador de alta cosmética. Fondo oscuro / claroscuro elegante. Las influencers se paran frente a ella y proyectan estatus de "Directora Diamante".
+            </p>
+          </div>
+          <div style="font-family:'Cinzel',serif; font-size:1.1rem; color:#f59e0b; text-align:right;">
+            THE POWER CEO<br><span style="font-size:0.75rem; font-family:'JetBrains Mono',monospace; color:#94a3b8;">LOOK &amp; ATTITUDE</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOTOS COMPARATIVAS Y CONCEPTUALES -->
+      <div style="display:grid; grid-template-columns: 240px 1fr; gap:20px; align-items:center;">
+        <div style="height:210px; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.1);">
+          <img src="assets/media_jpg/IG_CPT_0700_4x5.jpg" style="width:100%; height:100%; object-fit:cover;" alt="Tanya Editorial">
+        </div>
+
+        <div>
+          <div class="ceo-grid-poses">
+            <div class="pose-item">
+              <div class="pose-item-num">POSE 01 // SOBERBIA ESTRATÉGICA</div>
+              <div class="pose-item-name">Codo en Mesa &amp; Dedo en Frente</div>
+              <div class="pose-item-desc">
+                Parada recta, apoyando un codo sobre la mesa. El dedo índice toca sutilmente la sien/frente. Mirada penetrante y segura al lente. Productos Farmasi en primer plano desenfocado.
+              </div>
+            </div>
+
+            <div class="pose-item">
+              <div class="pose-item-num">POSE 02 // ELEGANCIA DIRECTIVA</div>
+              <div class="pose-item-name">Mano en el Mentón de Poder</div>
+              <div class="pose-item-desc">
+                La mano sostiene suavemente el mentón con dedos estilizados (cuidando anillo/joyas). Ligera inclinación de hombros. Postura de empresaria que toma decisiones de alto nivel.
+              </div>
+            </div>
+
+            <div class="pose-item">
+              <div class="pose-item-num">POSE 03 // HERO PRODUCT HEROINE</div>
+              <div class="pose-item-name">Presentación de Autoridad</div>
+              <div class="pose-item-desc">
+                Una mano acaricia la botella de suero Dr. C. Tuna o labial colocado sobre la mesa de madera mientras la otra descansa con elegancia. Iluminación cenital que hace brillar el producto.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#0a0c12; border:1px solid rgba(255,255,255,0.06); border-radius:10px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center; font-size:0.78rem;">
+        <div><strong>Vestuario sugerido para este set:</strong> Blazer negro, trajes sastre, vestidos lisos oscuros y labios destacados con labial Farmasi.</div>
+        <div class="amber font-mono">CONTRASTE CLAROSCURO // VOGUE BUSINESS</div>
+      </div>
+
+    </div>
+
+    <div class="doc-footer">
+      <div>CAPTOORA MASTER SET SPECIFICATION · EXECUTIVE BEAUTY</div>
+      <div>PÁGINA 04 DE 06</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 5: HOSPITALITY VIP & BARRA DE MIMOSAS
+  ============================================================ -->
+  <section class="sheet">
+    <div class="doc-header">
+      <div class="doc-header-logo">HOSPITALITY // <span class="amber">BARRA DE MIMOSAS &amp; CONCIERGE VIP</span></div>
+      <div class="doc-header-tag">EXPERIENCIA SENSORIAL · CERO MANCHAS · INSTAGRAM STORIES READY</div>
+    </div>
+
+    <div class="hospitality-grid">
+      
+      <!-- COL 1 -->
+      <div class="hosp-col">
+        <div>
+          <h3 class="hosp-icon-title">🥂 Coctelería de Mimosas</h3>
+          <p class="hosp-body-text">
+            Montaje en mesa de mármol o mantel oscuro en planta baja. Hielera de acrílico con 8 botellas de Prosecco/Cava Brut helado. Jarra nórdica de cristal con jugo de naranja natural recién exprimido y doblemente colado.
+          </p>
+        </div>
+        <div class="hosp-highlight">
+          <strong>El detalle anti-labial:</strong> Popotes delgados en color oro rosa. Permiten beber su mimosa sin despintar el labial Farmasi antes de su turno de fotos.
+        </div>
+      </div>
+
+      <!-- COL 2 -->
+      <div class="hosp-col">
+        <div>
+          <h3 class="hosp-icon-title">🍓 Garnishes &amp; Bocadillos</h3>
+          <p class="hosp-body-text">
+            Bowls de cristal con fresas desinfectadas cortadas en forma de corazón y frambuesas para flotar en la copa flauta. Snacks finger-food secos que no dejan migajas ni grasa en los dedos: macarons, uvas sin semilla y mini brochetas caprese.
+          </p>
+        </div>
+        <div class="hosp-highlight">
+          <strong>Regla de oro:</strong> Prohibida cualquier salsa o botana que manche dedos o ropa blanca. Todo debe ser limpio y de un solo bocado.
+        </div>
+      </div>
+
+      <!-- COL 3 -->
+      <div class="hosp-col">
+        <div>
+          <h3 class="hosp-icon-title">👑 El Rol de tu Hermana</h3>
+          <p class="hosp-body-text">
+            Actúa como la <strong>Studio Host &amp; Concierge VIP</strong>. Su presencia femenina brinda confianza inmediata, atiende a las chicas con calidez, les sirve las mimosas y coordina la subida a los sets.
+          </p>
+        </div>
+        <div class="hosp-highlight">
+          <strong>Beneficio estratégico:</strong> Tú te mantienes en tu rol de Director Creativo sin sudar ni descuidar la cámara. El pastel y los contactos se quedan 100% en casa.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="doc-footer">
+      <div>CAPTOORA HOSPITALITY PROTOCOL · SAN JERÓNIMO VIP</div>
+      <div>PÁGINA 05 DE 06</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PAGE 6: LOGÍSTICA & ROTACIÓN ANTI-CAOS
+  ============================================================ -->
+  <section class="sheet">
+    <div class="doc-header">
+      <div class="doc-header-logo">OPERACIONES // <span class="amber">SISTEMA DE 4 ESCUADRONES</span></div>
+      <div class="doc-header-tag">25 INFLUENCERS · ROTACIÓN DE 45 MIN · CERO CUELLOS DE BOTELLA</div>
+    </div>
+
+    <div style="flex-grow:1; display:flex; flex-direction:column; justify-content:space-between;">
+      
+      <div>
+        <p style="font-size:0.84rem; color:#cbd5e1; line-height:1.5;">
+          Las 25 influencers se dividen en 4 escuadrones al llegar: <span class="tag-squad sq-alpha">Alpha (6)</span>, <span class="tag-squad sq-beta">Beta (6)</span>, <span class="tag-squad sq-gamma">Gamma (6)</span> y <span class="tag-squad sq-delta">Delta (7)</span>. Ninguna espera parada sin hacer nada. Mientras un grupo está en sesión de disparo, los demás disfrutan mimosas o graban reels en la planta baja.
+        </p>
+
+        <table class="timeline-table">
+          <thead>
+            <tr>
+              <th>HORA</th>
+              <th>ESTACIÓN 1: MIMOSAS LOUNGE (PB)</th>
+              <th>ESTACIÓN 2: BEAUTY TOUCH-UP (PB)</th>
+              <th>ESTACIÓN 3: SET SPORT BLANCO (PA)</th>
+              <th>ESTACIÓN 4: SET DARK CEO MESA (PA)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>10:15 - 11:00</strong></td>
+              <td><span class="tag-squad sq-alpha">Escuadrón Alpha</span></td>
+              <td><span class="tag-squad sq-beta">Escuadrón Beta</span></td>
+              <td><span class="tag-squad sq-gamma">Escuadrón Gamma (3 chicas)</span></td>
+              <td><span class="tag-squad sq-gamma">Escuadrón Gamma (3 chicas)</span></td>
+            </tr>
+            <tr>
+              <td><strong>11:00 - 11:45</strong></td>
+              <td><span class="tag-squad sq-delta">Escuadrón Delta</span></td>
+              <td><span class="tag-squad sq-alpha">Escuadrón Alpha</span></td>
+              <td><span class="tag-squad sq-beta">Escuadrón Beta (3 chicas)</span></td>
+              <td><span class="tag-squad sq-beta">Escuadrón Beta (3 chicas)</span></td>
+            </tr>
+            <tr>
+              <td><strong>11:45 - 12:30</strong></td>
+              <td><span class="tag-squad sq-gamma">Escuadrón Gamma</span></td>
+              <td><span class="tag-squad sq-delta">Escuadrón Delta</span></td>
+              <td><span class="tag-squad sq-alpha">Escuadrón Alpha (3 chicas)</span></td>
+              <td><span class="tag-squad sq-alpha">Escuadrón Alpha (3 chicas)</span></td>
+            </tr>
+            <tr>
+              <td><strong>12:30 - 13:15</strong></td>
+              <td><span class="tag-squad sq-beta">Escuadrón Beta</span></td>
+              <td><span class="tag-squad sq-gamma">Escuadrón Gamma</span></td>
+              <td><span class="tag-squad sq-delta">Escuadrón Delta (4 chicas)</span></td>
+              <td><span class="tag-squad sq-delta">Escuadrón Delta (3 chicas)</span></td>
+            </tr>
+            <tr>
+              <td><strong>13:15 - 13:30</strong></td>
+              <td colspan="4" style="text-align:center; font-weight:700; color:#f59e0b; background:rgba(245,158,11,0.06);">
+                🥂 FOTO GRUPAL DE CLAUSURA EN CICLORAMA + BRINDIS CON MIMOSAS + LANZAMIENTO VIRAL STORIES @CAPTOORA
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:#0a0c12; border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:12px 18px; display:flex; justify-content:space-between; align-items:center;">
+        <div style="font-size:0.75rem; color:#94a3b8;">
+          <strong>Cadencia de Disparo:</strong> 7 minutos por chica en set + 1 minuto de transición. La siguiente modelo ya espera en la marca.
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#10b981;">
+          CERO CUELLOS DE BOTELLA // EJECUCIÓN MILITAR VIP
+        </div>
+      </div>
+
+    </div>
+
+    <div class="doc-footer">
+      <div>CAPTOORA PRODUCTION BLUEPRINT · 31 OCTUBRE 2026</div>
+      <div>PÁGINA 06 DE 06 · MASTER EDITION</div>
+    </div>
+  </section>
+
+</body>
+</html>
