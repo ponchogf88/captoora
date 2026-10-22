@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA STUDIO · Arsenal de Diseño Web (8 Herramientas en Vivo)</title>
+  <meta name="description" content="Demostración interactiva en vivo de las 8 herramientas de diseño e ingeniería web de @neropursue (Unicorn Studio, Spline, Theatre.js, 21st.dev, Reelfolio, Inspora, Paper Design, Best Free Fonts) aplicadas a Captoora Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <!-- GSAP & Three.js para soporte extendido -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    :root {
+      --bg: #040507;
+      --card-bg: #0a0c12;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.35);
+      --cyan: #06b6d4;
+      --magenta: #ec4899;
+      --green: #22c55e;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.5;
+      padding-bottom: 90px;
+    }
+
+    /* TOP BAR */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(4, 5, 7, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      height: 26px;
+      width: auto;
+    }
+
+    .nav-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      padding: 4px 10px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      padding: 7px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: var(--amber);
+    }
+
+    .nav-btn.primary {
+      background: var(--amber);
+      color: #000;
+      font-weight: 700;
+      border-color: var(--amber);
+    }
+
+    /* HERO */
+    .hero-header {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 60px 24px 30px;
+      text-align: center;
+    }
+
+    .source-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .source-tag b {
+      color: #fff;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #fff 40%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 740px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+    .showcase-grid {
+      max-width: 1240px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    /* TARJETA DE CADA HERRAMIENTA */
+    .tool-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+      transition: border-color 0.3s ease;
+    }
+
+    .tool-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+
+    .tool-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 18px;
+    }
+
+    .tool-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .tool-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    .tool-info h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .tool-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    .tool-url:hover {
+      text-decoration: underline;
+    }
+
+    .tool-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: #cbd5e1;
+    }
+
+    .tool-captoora-purpose {
+      background: rgba(245, 158, 11, 0.06);
+      border-left: 3px solid var(--amber);
+      padding: 10px 16px;
+      margin-bottom: 22px;
+      font-size: 0.88rem;
+      color: #e2e8f0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .tool-captoora-purpose b {
+      color: var(--amber);
+    }
+
+    /* ESCENARIO COMÚN */
+    .tool-stage {
+      position: relative;
+      background: #020305;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .tool-controls-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .ctl-btn {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ctl-btn:hover {
+      background: var(--amber);
+      color: #000;
+    }
+
+    /* ==========================================================================
+       01. REELFOLIO.IO DEMO (SHOWREEL AUTOMATIZADO VERTICAL 9:16)
+       ========================================================================== */
+    .reel-phone-mockup {
+      width: 270px;
+      height: 480px;
+      border-radius: 36px;
+      border: 4px solid #2d3345;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.1);
+    }
+
+    .reel-phone-notch {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90px;
+      height: 18px;
+      background: #1a1e29;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    .reel-slides-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .reel-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out, transform 4s linear;
+      transform: scale(1);
+    }
+
+    .reel-slide.active {
+      opacity: 1;
+      transform: scale(1.08); /* Ken Burns slow zoom */
+    }
+
+    .reel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .reel-overlay-content {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, transparent 40%, rgba(0,0,0,0.85) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 34px 18px 20px;
+      z-index: 5;
+    }
+
+    .reel-brand-header {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .reel-live-badge {
+      background: #dc2626;
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 800;
+    }
+
+    .reel-caption-box {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #fff;
+    }
+
+    .reel-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .reel-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--amber);
+    }
+
+    .reel-progress-bar {
+      height: 3px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 2px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .reel-progress-fill {
+      height: 100%;
+      background: var(--amber);
+      width: 0%;
+      transition: width 3.5s linear;
+    }
+
+    /* ==========================================================================
+       02. INSPORA.DESIGN DEMO (CURATED DESIGN BOARD)
+       ========================================================================== */
+    .inspora-board {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .inspora-card {
+      background: #090b10;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.2s ease;
+    }
+
+    .inspora-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+    }
+
+    .inspora-thumb {
+      height: 150px;
+      position: relative;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .inspora-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .inspora-card:hover .inspora-thumb img {
+      transform: scale(1.06);
+    }
+
+    .inspora-body {
+      padding: 14px;
+    }
+
+    .inspora-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+
+    .inspora-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* ==========================================================================
+       03. 21ST.DEV DEMO (MAGNETIC SHIMMER CARD)
+       ========================================================================== */
+    .twentyfirst-stage {
+      perspective: 1000px;
+    }
+
+    .twentyfirst-card {
+      position: relative;
+      width: 380px;
+      background: rgba(14, 18, 27, 0.7);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 24px;
+      transform-style: preserve-3d;
+      transition: transform 0.15s ease-out, box-shadow 0.2s ease;
+      cursor: pointer;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .twentyfirst-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 20px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.6), transparent 50%, rgba(6, 182, 212, 0.6));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .twentyfirst-img-frame {
+      width: 100%;
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      background: #000;
+      position: relative;
+    }
+
+    .twentyfirst-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .twentyfirst-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--amber);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .twentyfirst-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .twentyfirst-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 12px;
+    }
+
+    /* ==========================================================================
+       04. BESTFREEFONTS.COM DEMO (SPECIMEN PLAYGROUND)
+       ========================================================================== */
+    .fonts-stage {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .font-specimen-row {
+      background: #090b10;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 18px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .font-label-bar {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .font-preview-text {
+      color: #fff;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      outline: none;
+      word-break: break-word;
+    }
+
+    /* ==========================================================================
+       05. SPLINE.DESIGN DEMO (LENTE 3D INTERACTIVO CON THREE.JS CANVAS)
+       ========================================================================== */
+    #splineCanvasContainer {
+      width: 100%;
+      height: 440px;
+      position: relative;
+      cursor: grab;
+    }
+
+    #splineCanvasContainer:active {
+      cursor: grabbing;
+    }
+
+    .spline-hud-hint {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--amber);
+      pointer-events: none;
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+
+    /* ==========================================================================
+       06. UNICORN.STUDIO DEMO (SHADER WEBGL DE CRISTAL LÍQUIDO)
+       ========================================================================== */
+    #unicornShaderCanvas {
+      width: 100%;
+      height: 440px;
+      display: block;
+      cursor: crosshair;
+    }
+
+    /* ==========================================================================
+       07. PAPER.DESIGN DEMO (SPATIAL BOARD & STORYBOARD DE SCROLL)
+       ========================================================================== */
+    .paper-canvas {
+      position: relative;
+      width: 100%;
+      height: 440px;
+      background: radial-gradient(#151a26 1px, transparent 1px);
+      background-size: 20px 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 20px;
+    }
+
+    .paper-node {
+      background: #0e121a;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+      width: 180px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+      position: relative;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .paper-node:hover {
+      transform: translateY(-4px) scale(1.03);
+      border-color: var(--amber);
+    }
+
+    .paper-node-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--amber);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .paper-node-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .paper-node-thumb {
+      height: 70px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .paper-node-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .paper-connector-arrow {
+      color: var(--amber);
+      font-size: 1.4rem;
+      font-weight: bold;
+      opacity: 0.6;
+    }
+
+    /* ==========================================================================
+       08. THEATRE.JS DEMO (TIMELINE SEQUENCER)
+       ========================================================================== */
+    .theatre-viewport {
+      width: 100%;
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #10141e 0%, #030406 80%);
+      overflow: hidden;
+    }
+
+    .theatre-actor-flash {
+      position: absolute;
+      inset: 0;
+      background: #fff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .theatre-actor-lens {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      border: 8px solid #1e2433;
+      box-shadow: 0 0 35px rgba(245,158,11,0.5);
+      position: relative;
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.05s linear;
+    }
+
+    .theatre-actor-lens img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .theatre-timeline-ui {
+      background: #080a0f;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 20px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .timeline-track-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.74rem;
+      gap: 16px;
+    }
+
+    .timeline-track-name {
+      width: 160px;
+      color: var(--muted);
+    }
+
+    .timeline-track-bar {
+      flex: 1;
+      height: 18px;
+      background: #11141c;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .timeline-keyframe {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background: var(--amber);
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--amber-glow);
+    }
+
+    .timeline-playhead {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ef4444;
+      box-shadow: 0 0 6px #ef4444;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .inspora-board { grid-template-columns: 1fr; }
+      .paper-canvas { flex-direction: column; height: auto; }
+      .paper-connector-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header class="top-nav">
+    <div class="brand-wrap">
+      <img src="assets/captoora_signature_logo.png" alt="Captoora Studio" class="brand-logo">
+      <span class="nav-label">Arsenal de Diseño · 8 Ejemplos en Vivo</span>
+    </div>
+    <div class="nav-links">
+      <a href="top_10_visual_showcase.html" class="nav-btn">Lab Top 10 Motions</a>
+      <a href="index.html" class="nav-btn primary">Página Principal &rarr;</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-header">
+    <div class="source-tag">
+      <span>●</span> Basado en la selección oficial de <b>@neropursue (IMG_2265.PNG)</b>
+    </div>
+    <h1 class="hero-title">
+      8 Herramientas de Vanguardia<br>
+      <span>Puestas a Trabajar en Captoora</span>
+    </h1>
+    <p class="hero-subtitle">
+      Aquí tienes un ejemplo funcional e interactivo de cada una de las 8 plataformas. Cada módulo está conectado a fotografías reales de las series aprobadas (GlowTours Amapola y Chipinque) para demostrar cómo elevan la experiencia de Captoora.
+    </p>
+  </section>
+
+  <!-- MÓDULOS -->
+  <main class="showcase-grid">
+
+    <!-- 01. REELFOLIO.IO -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">01</div>
+          <div class="tool-info">
+            <h3>Reelfolio — Showreel Cinemático Vertical</h3>
+            <a href="https://reelfolio.io/" target="_blank" class="tool-url">reelfolio.io ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Convierte Fotos en Showreels Dinámicos</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Automatiza la creación de reels verticales con transiciones cinematográficas y zoom tipo Ken Burns para mostrarle a Evelyn, a las 25 chicas Farmasi y a TikTok el portafolio en formato video 9:16 sin abrir Premiere.
+      </div>
+
+      <div class="tool-stage">
+        <div class="reel-phone-mockup">
+          <div class="reel-phone-notch"></div>
+          <div class="reel-slides-wrapper" id="reelSlidesWrapper">
+            <!-- Slide 1 -->
+            <div class="reel-slide active" data-title="GlowTours Oficial" data-sub="Amapola Eventos // #CPT_0853">
+              <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="0853">
+            </div>
+            <!-- Slide 2 -->
+            <div class="reel-slide" data-title="Retrato Editorial" data-sub="Luz de Autor // #CPT_0855">
+              <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="0855">
+            </div>
+            <!-- Slide 3 -->
+            <div class="reel-slide" data-title="Dinámica de Set" data-sub="Full-Frame 24MP // #CPT_0863">
+              <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="0863">
+            </div>
+            <!-- Slide 4 -->
+            <div class="reel-slide" data-title="Sendero Chipinque" data-sub="Luz Natural // #CHIP_01">
+              <img src="assets/media_jpg/pf-chipinque-01.jpg" alt="CHIP_01">
+            </div>
+          </div>
+
+          <div class="reel-overlay-content">
+            <div class="reel-brand-header">
+              <span>CAPTOORA REEL</span>
+              <span class="reel-live-badge">SHOWREEL</span>
+            </div>
+            <div class="reel-caption-box">
+              <div class="reel-title" id="reelTitle">GlowTours Oficial</div>
+              <div class="reel-sub" id="reelSub">Amapola Eventos // #CPT_0853</div>
+              <div class="reel-progress-bar">
+                <div class="reel-progress-fill" id="reelProgressBar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Transición sincronizada automática cada 3.5 segundos con zoom Ken Burns continuo.</span>
+        <button class="ctl-btn" onclick="nextReelSlideManually()">Siguiente Toma &rarr;</button>
+      </div>
+    </article>
+
+    <!-- 02. INSPORA.DESIGN -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">02</div>
+          <div class="tool-info">
+            <h3>Inspora — Curaduría de Diseños Inspiradores</h3>
+            <a href="https://inspora.design/" target="_blank" class="tool-url">inspora.design ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Colección Curada de UI de Vanguardia</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Permite explorar tableros con los estilos visuales más cotizados del mundo (Editorial Suizo, Dark Minimalist, Neomorfismo Óptico) para elegir las composiciones de nuestras galerías.
+      </div>
+
+      <div class="tool-stage">
+        <div class="inspora-board">
+          <div class="inspora-card">
+            <div class="inspora-thumb">
+              <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Editorial Dark">
+            </div>
+            <div class="inspora-body">
+              <span class="inspora-tag">AWWWARDS SOTD</span>
+              <div class="inspora-name">Dark Minimalist Luxury</div>
+              <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">Negro obsidiana con tipografía monoespaciada e iluminación cenital.</div>
+            </div>
+          </div>
+          <div class="inspora-card">
+            <div class="inspora-thumb">
+              <img src="assets/media_jpg/pf-chipinque-02.jpg" alt="Swiss Grid">
+            </div>
+            <div class="inspora-body">
+              <span class="inspora-tag">FWA WINNER</span>
+              <div class="inspora-name">Swiss Optical Grid</div>
+              <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">Líneas guía técnicas de visor de cámara con encuadres 3:2 puros.</div>
+            </div>
+          </div>
+          <div class="inspora-card">
+            <div class="inspora-thumb">
+              <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Film Noir">
+            </div>
+            <div class="inspora-body">
+              <span class="inspora-tag">STUDIO OF THE MONTH</span>
+              <div class="inspora-name">Analog Contact Sheet</div>
+              <div style="font-size:0.75rem; color:var(--muted); margin-top:4px;">Tiras de negativos de película de 35mm con perforaciones reales.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Haz hover sobre cada tarjeta para activar el micro-zoom curatorial.</span>
+      </div>
+    </article>
+
+    <!-- 03. 21ST.DEV -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">03</div>
+          <div class="tool-info">
+            <h3>21st.dev — Componentes React con Físicas de Resorte</h3>
+            <a href="https://21st.dev/" target="_blank" class="tool-url">21st.dev ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Componentes UI de Vanguardia (Tailwind + Framer)</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Provee tarjetas magnéticas con brillo reflectivo en el borde (*shimmer card*) e inclinación 3D en tiempo real para presentar los paquetes de estudio de forma irresistible.
+      </div>
+
+      <div class="tool-stage twentyfirst-stage" id="cardContainer" onmousemove="handleCardTilt(event)" onmouseleave="resetCardTilt()">
+        <div class="twentyfirst-card" id="tiltCard">
+          <div class="twentyfirst-img-frame">
+            <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Paquete GlowTours">
+          </div>
+          <div class="twentyfirst-kicker">PAQUETE PREMIUM // 24MP</div>
+          <div class="twentyfirst-title">Producción Comercial &amp; Autor</div>
+          <p style="font-size:0.8rem; color:#94a3b8; line-height:1.4; margin-bottom:14px;">
+            Ciclorama blanco continuo, 3 fuentes de iluminación Profoto y entrega full-frame con cero recorte.
+          </p>
+          <div class="twentyfirst-meta">
+            <span>2 HORAS DE ESTUDIO</span>
+            <span style="color:var(--amber); font-weight:700;">$2,400 MXN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Mueve el cursor sobre la tarjeta para experimentar el giroscopio y el reflejo de borde.</span>
+      </div>
+    </article>
+
+    <!-- 04. BESTFREEFONTS.COM -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">04</div>
+          <div class="tool-info">
+            <h3>Best Free Fonts — Tipografía de Alto Calibre</h3>
+            <a href="https://bestfreefonts.com/" target="_blank" class="tool-url">bestfreefonts.com ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Catálogo Curado de Tipografías Gratuitas</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Selección de tipografías exclusivas para telemetría de cámara, bordes de película y titulares editoriales de alta costura.
+      </div>
+
+      <div class="tool-stage fonts-stage">
+        <!-- Fuente 1: Syne -->
+        <div class="font-specimen-row">
+          <div class="font-label-bar">
+            <span>SYNE EXTRA BOLD (MODERNA / BRUTALISTA)</span>
+            <span>USO: LOGOS Y TITULARES HERO</span>
+          </div>
+          <div class="font-preview-text editable-specimen" contenteditable="true" style="font-family:'Syne',sans-serif; font-weight:800;">
+            CAPTOORA STUDIO MONTERREY
+          </div>
+        </div>
+
+        <!-- Fuente 2: Space Grotesk -->
+        <div class="font-specimen-row">
+          <div class="font-label-bar">
+            <span>SPACE GROTESK (DISPLAY SUÍZO)</span>
+            <span>USO: SECCIONES Y ENCABEZADOS DE PAQUETE</span>
+          </div>
+          <div class="font-preview-text editable-specimen" contenteditable="true" style="font-family:'Space Grotesk',sans-serif; font-weight:700;">
+            Retrato Editorial con Luz de Autor
+          </div>
+        </div>
+
+        <!-- Fuente 3: JetBrains Mono -->
+        <div class="font-specimen-row">
+          <div class="font-label-bar">
+            <span>JETBRAINS MONO (TELEMETRÍA TÉCNICA)</span>
+            <span>USO: EXIF, DIALES Y METADATOS DE CÁMARA</span>
+          </div>
+          <div class="font-preview-text editable-specimen" contenteditable="true" style="font-family:'JetBrains Mono',monospace; font-size:1.2rem; color:var(--amber);">
+            [REC ●] 24.2 MP RAW · 1/8000s · F/1.4 · ISO 100 · 50MM PRO
+          </div>
+        </div>
+
+        <!-- Fuente 4: Cinzel -->
+        <div class="font-specimen-row">
+          <div class="font-label-bar">
+            <span>CINZEL (SERIF CLÁSICO EDITORIAL)</span>
+            <span>USO: SELLO DE ALTA GAMA Y FIRMA FOTOGRÁFICA</span>
+          </div>
+          <div class="font-preview-text editable-specimen" contenteditable="true" style="font-family:'Cinzel',serif; font-weight:700; color:#e2e8f0;">
+            HAUTE COUTURE PHOTOGRAPHY · MCMXXVI
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Haz click en cualquiera de los textos arriba para escribir en vivo lo que quieras.</span>
+      </div>
+    </article>
+
+    <!-- 05. SPLINE.DESIGN -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">05</div>
+          <div class="tool-info">
+            <h3>Spline — 3D Interactivo Nativo para Web</h3>
+            <a href="https://spline.design/" target="_blank" class="tool-url">spline.design ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Modelado, Animación y Shaders 3D en Tiempo Real</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Modela el barrilete del lente prime con sus anillos dentados de aluminio aeronáutico y permite que gire libremente con el mouse del usuario.
+      </div>
+
+      <div class="tool-stage" style="padding:0; background:#010204;">
+        <div id="splineCanvasContainer">
+          <div class="spline-hud-hint">🖱️ Arrastra con el mouse para rotar el Lente Prime en 3D</div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Renderizado 3D en tiempo real (WebGL/Three.js) con materiales metálicos y reflejos especulares.</span>
+        <button class="ctl-btn" onclick="resetLens3DView()">Centrar Vista 3D</button>
+      </div>
+    </article>
+
+    <!-- 06. UNICORN.STUDIO -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">06</div>
+          <div class="tool-info">
+            <h3>Unicorn Studio — Efectos WebGL de Cristal Líquido</h3>
+            <a href="https://www.unicorn.studio/" target="_blank" class="tool-url">unicorn.studio ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Shaders WebGL Interactivos y Distorsión Óptica</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Genera la refracción líquida y la aberración cromática en el cristal del lente hero, haciendo que la fotografía de fondo se distorsione orgánicamente al pasar el mouse.
+      </div>
+
+      <div class="tool-stage" style="padding:0;">
+        <canvas id="unicornShaderCanvas"></canvas>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Pasa el mouse sobre el cristal para generar ondas de refracción óptica y dispersión espectral RGB.</span>
+        <button class="ctl-btn" onclick="pulseShaderDistortion()">Generar Pulso de Refracción</button>
+      </div>
+    </article>
+
+    <!-- 07. PAPER.DESIGN -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">07</div>
+          <div class="tool-info">
+            <h3>Paper Design — Canvas Espacial y Storyboard</h3>
+            <a href="https://paper.design/" target="_blank" class="tool-url">paper.design ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Herramienta de Construcción y Wireframing Visual</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Mapea visualmente el flujo narrativo del sitio (Flash de Entrada &rarr; Lente 3D &rarr; Zoom Scroll &rarr; Hoja de Contactos &rarr; Agenda WhatsApp).
+      </div>
+
+      <div class="tool-stage">
+        <div class="paper-canvas">
+          <!-- Nodo 1 -->
+          <div class="paper-node">
+            <div class="paper-node-step">01. INGRESO</div>
+            <div class="paper-node-title">Flash Estroboscópico</div>
+            <div class="paper-node-thumb" style="background:#fff; display:flex; align-items:center; justify-content:center; color:#000; font-family:'JetBrains Mono',monospace; font-size:0.7rem; font-weight:800;">
+              FLASH POP 5600K
+            </div>
+          </div>
+
+          <div class="paper-connector-arrow">&rarr;</div>
+
+          <!-- Nodo 2 -->
+          <div class="paper-node">
+            <div class="paper-node-step">02. HERO</div>
+            <div class="paper-node-title">Lente Prime 50mm</div>
+            <div class="paper-node-thumb">
+              <img src="assets/captoora_signature_logo.png" alt="Hero Lens">
+            </div>
+          </div>
+
+          <div class="paper-connector-arrow">&rarr;</div>
+
+          <!-- Nodo 3 -->
+          <div class="paper-node">
+            <div class="paper-node-step">03. SCROLL DOWN</div>
+            <div class="paper-node-title">Absorción al Sensor</div>
+            <div class="paper-node-thumb">
+              <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Scroll Absorption">
+            </div>
+          </div>
+
+          <div class="paper-connector-arrow">&rarr;</div>
+
+          <!-- Nodo 4 -->
+          <div class="paper-node">
+            <div class="paper-node-step">04. CONTACT SHEET</div>
+            <div class="paper-node-title">Paquetes de Autor</div>
+            <div class="paper-node-thumb">
+              <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Packages">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <span>Mapa de flujo espacial interactivo listo para escalado.</span>
+      </div>
+    </article>
+
+    <!-- 08. THEATRE.JS -->
+    <article class="tool-card">
+      <div class="tool-head">
+        <div class="tool-brand">
+          <div class="tool-num">08</div>
+          <div class="tool-info">
+            <h3>Theatre.js — Línea de Tiempo y Animación Cinemática</h3>
+            <a href="https://www.theatrejs.com/" target="_blank" class="tool-url">theatrejs.com ↗</a>
+          </div>
+        </div>
+        <div class="tool-badge">Propósito: Animación con Timeline Visual para DOM & Three.js</div>
+      </div>
+      <div class="tool-captoora-purpose">
+        <b>Aplicación en Captoora:</b> Coreografía el segundo exacto en que detona el flash, el diafragma abre sus cuchillas y el lente realiza el zoom de absorción.
+      </div>
+
+      <div class="tool-stage" style="flex-direction:column; padding:0;">
+        <div class="theatre-viewport">
+          <div class="theatre-actor-flash" id="theatreFlash"></div>
+          <div class="theatre-actor-lens" id="theatreLens">
+            <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Actor">
+          </div>
+        </div>
+
+        <div class="theatre-timeline-ui" style="width:100%;">
+          <!-- Track 1: Flash -->
+          <div class="timeline-track-row">
+            <span class="timeline-track-name">FLASH ESTROBOSCÓPICO</span>
+            <div class="timeline-track-bar">
+              <div class="timeline-keyframe" style="left: 10%;"></div>
+              <div class="timeline-keyframe" style="left: 22%;"></div>
+            </div>
+          </div>
+          <!-- Track 2: Apertura Iris -->
+          <div class="timeline-track-row">
+            <span class="timeline-track-name">DIAFRAGMA IRIS</span>
+            <div class="timeline-track-bar">
+              <div class="timeline-keyframe" style="left: 25%;"></div>
+              <div class="timeline-keyframe" style="left: 55%;"></div>
+            </div>
+          </div>
+          <!-- Track 3: Zoom In Lente -->
+          <div class="timeline-track-row">
+            <span class="timeline-track-name">ZOOM IN ABSORTIVO</span>
+            <div class="timeline-track-bar">
+              <div class="timeline-keyframe" style="left: 50%;"></div>
+              <div class="timeline-keyframe" style="left: 95%;"></div>
+              <div class="timeline-playhead" id="theatrePlayhead" style="left: 0%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-controls-bar">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <button class="ctl-btn" id="btnPlayTheatre" onclick="playTheatreSequence()">▶ Reproducir Secuencia (Theatre.js)</button>
+          <span id="theatreTimerText" style="color:var(--amber);">0.00s / 3.00s</span>
+        </div>
+        <span>Animación coreografiada por fotogramas clave en línea de tiempo.</span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- SCRIPTS FUNCIONALES DE CADA HERRAMIENTA -->
+  <script>
+    /* ==========================================================================
+       01. REELFOLIO SCRIPT
+       ========================================================================== */
+    const reelSlides = document.querySelectorAll('.reel-slide');
+    const reelTitle = document.getElementById('reelTitle');
+    const reelSub = document.getElementById('reelSub');
+    const reelProgress = document.getElementById('reelProgressBar');
+    let reelIndex = 0;
+    let reelInterval = null;
+
+    function activateReelSlide(idx) {
+      reelSlides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+      const activeSlide = reelSlides[idx];
+      reelTitle.innerText = activeSlide.getAttribute('data-title');
+      reelSub.innerText = activeSlide.getAttribute('data-sub');
+
+      reelProgress.style.transition = 'none';
+      reelProgress.style.width = '0%';
+      setTimeout(() => {
+        reelProgress.style.transition = 'width 3.4s linear';
+        reelProgress.style.width = '100%';
+      }, 50);
+    }
+
+    function nextReelSlideManually() {
+      reelIndex = (reelIndex + 1) % reelSlides.length;
+      activateReelSlide(reelIndex);
+    }
+
+    function startReelLoop() {
+      activateReelSlide(0);
+      reelInterval = setInterval(() => {
+        reelIndex = (reelIndex + 1) % reelSlides.length;
+        activateReelSlide(reelIndex);
+      }, 3500);
+    }
+
+    /* ==========================================================================
+       03. 21ST.DEV MAGNETIC CARD TILT
+       ========================================================================== */
+    const tiltCard = document.getElementById('tiltCard');
+    const cardStage = document.getElementById('cardContainer');
+
+    function handleCardTilt(e) {
+      const rect = cardStage.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      const rotX = -(y / rect.height) * 26;
+      const rotY = (x / rect.width) * 26;
+
+      tiltCard.style.transform = `rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) scale(1.03)`;
+      tiltCard.style.boxShadow = `${-rotY * 2}px ${rotX * 2 + 25}px 50px rgba(0,0,0,0.7)`;
+    }
+
+    function resetCardTilt() {
+      tiltCard.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+      tiltCard.style.boxShadow = `0 20px 40px rgba(0,0,0,0.6)`;
+    }
+
+    /* ==========================================================================
+       05. SPLINE.DESIGN 3D LENS CON THREE.JS
+       ========================================================================== */
+    let scene, camera, renderer, lensGroup;
+    let isMouseDown = false, prevMouseX = 0, prevMouseY = 0;
+
+    function initSplineLens() {
+      const container = document.getElementById('splineCanvasContainer');
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+      camera.position.z = 7;
+
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      lensGroup = new THREE.Group();
+
+      // Barrilete exterior de aluminio
+      const barrelGeo = new THREE.CylinderGeometry(1.9, 1.9, 2.8, 48);
+      const barrelMat = new THREE.MeshStandardMaterial({
+        color: 0x181c26,
+        metalness: 0.85,
+        roughness: 0.25
+      });
+      const barrel = new THREE.Mesh(barrelGeo, barrelMat);
+      barrel.rotation.x = Math.PI / 2;
+      lensGroup.add(barrel);
+
+      // Anillo moleteado ámbar
+      const ringGeo = new THREE.TorusGeometry(1.92, 0.08, 16, 64);
+      const ringMat = new THREE.MeshStandardMaterial({
+        color: 0xf59e0b,
+        metalness: 0.9,
+        roughness: 0.2
+      });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      lensGroup.add(ring);
+
+      // Cristal frontal convexo con reflejo esmeralda/cyan
+      const glassGeo = new THREE.SphereGeometry(1.82, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.45);
+      const glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0x06b6d4,
+        metalness: 0.1,
+        roughness: 0.05,
+        transmission: 0.9,
+        ior: 1.52,
+        transparent: true,
+        opacity: 0.7
+      });
+      const frontGlass = new THREE.Mesh(glassGeo, glassMat);
+      frontGlass.position.z = 1.2;
+      lensGroup.add(frontGlass);
+
+      // Apertura interior dorada
+      const irisGeo = new THREE.RingGeometry(0.4, 1.4, 32);
+      const irisMat = new THREE.MeshBasicMaterial({ color: 0x080b12, side: THREE.DoubleSide });
+      const iris = new THREE.Mesh(irisGeo, irisMat);
+      iris.position.z = 0.4;
+      lensGroup.add(iris);
+
+      scene.add(lensGroup);
+
+      // Iluminación de estudio
+      const ambLight = new THREE.AmbientLight(0xffffff, 0.7);
+      scene.add(ambLight);
+
+      const keyLight = new THREE.DirectionalLight(0xffeedd, 2.2);
+      keyLight.position.set(5, 5, 4);
+      scene.add(keyLight);
+
+      const rimLight = new THREE.DirectionalLight(0xf59e0b, 3.0);
+      rimLight.position.set(-5, -4, -2);
+      scene.add(rimLight);
+
+      // Mouse drag controls
+      container.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      });
+
+      window.addEventListener('mouseup', () => { isMouseDown = false; });
+
+      container.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) {
+          // Rotación sutil automática al seguir mouse
+          const rect = container.getBoundingClientRect();
+          const normX = (e.clientX - rect.left) / rect.width - 0.5;
+          const normY = (e.clientY - rect.top) / rect.height - 0.5;
+          lensGroup.rotation.y = normX * 0.8;
+          lensGroup.rotation.x = normY * 0.8;
+          return;
+        }
+        const deltaX = e.clientX - prevMouseX;
+        const deltaY = e.clientY - prevMouseY;
+        lensGroup.rotation.y += deltaX * 0.01;
+        lensGroup.rotation.x += deltaY * 0.01;
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (!isMouseDown) {
+          lensGroup.rotation.z += 0.002;
+        }
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    function resetLens3DView() {
+      if (lensGroup) {
+        lensGroup.rotation.set(0, 0, 0);
+      }
+    }
+
+    /* ==========================================================================
+       06. UNICORN.STUDIO SHADER WEBGL EN CANVAS
+       ========================================================================== */
+    function initUnicornShader() {
+      const canvas = document.getElementById('unicornShaderCanvas');
+      const gl = canvas.getContext('webgl');
+      if (!gl) return;
+
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = 440;
+
+      const vs = `
+        attribute vec2 position;
+        varying vec2 vUv;
+        void main() {
+          vUv = position * 0.5 + 0.5;
+          vUv.y = 1.0 - vUv.y;
+          gl_Position = vec4(position, 0.0, 1.0);
+        }
+      `;
+
+      const fs = `
+        precision mediump float;
+        uniform vec2 u_resolution;
+        uniform vec2 u_mouse;
+        uniform float u_time;
+        uniform sampler2D u_texture;
+        varying vec2 vUv;
+
+        void main() {
+          vec2 st = gl_FragCoord.xy / u_resolution;
+          vec2 m = u_mouse / u_resolution;
+          m.y = 1.0 - m.y;
+
+          float dist = distance(st, m);
+          float ripple = sin(dist * 35.0 - u_time * 4.0) * 0.03 * smoothstep(0.4, 0.0, dist);
+
+          vec2 distortedUv = vUv + normalize(st - m) * ripple;
+
+          // Dispersión cromática RGB
+          float r = texture2D(u_texture, distortedUv + vec2(ripple * 0.7, 0.0)).r;
+          float g = texture2D(u_texture, distortedUv).g;
+          float b = texture2D(u_texture, distortedUv - vec2(ripple * 0.7, 0.0)).b;
+
+          // Destello especular ámbar en los bordes
+          float gleam = pow(1.0 - dist, 5.0) * 0.35;
+          vec3 col = vec3(r, g, b) + vec3(0.96, 0.62, 0.07) * gleam;
+
+          gl_FragColor = vec4(col, 1.0);
+        }
+      `;
+
+      function createShader(gl, type, src) {
+        const s = gl.createShader(type);
+        gl.shaderSource(s, src);
+        gl.compileShader(s);
+        return s;
+      }
+
+      const prog = gl.createProgram();
+      gl.attachShader(prog, createShader(gl, gl.VERTEX_SHADER, vs));
+      gl.attachShader(prog, createShader(gl, gl.FRAGMENT_SHADER, fs));
+      gl.linkProgram(prog);
+      gl.useProgram(prog);
+
+      const buf = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+        -1, -1, 1, -1, -1, 1,
+        -1, 1, 1, -1, 1, 1
+      ]), gl.STATIC_DRAW);
+
+      const posLoc = gl.getAttribLocation(prog, "position");
+      gl.enableVertexAttribArray(posLoc);
+      gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+      const uRes = gl.getUniformLocation(prog, "u_resolution");
+      const uMouse = gl.getUniformLocation(prog, "u_mouse");
+      const uTime = gl.getUniformLocation(prog, "u_time");
+
+      let mouseX = canvas.width * 0.5;
+      let mouseY = canvas.height * 0.5;
+
+      canvas.addEventListener('mousemove', (e) => {
+        const r = canvas.getBoundingClientRect();
+        mouseX = e.clientX - r.left;
+        mouseY = e.clientY - r.top;
+      });
+
+      // Textura base GlowTours
+      const tex = gl.createTexture();
+      const img = new Image();
+      img.src = "assets/media_jpg/pf-glow-cpt_0855.jpg";
+      img.onload = () => {
+        gl.bindTexture(gl.TEXTURE_2D, tex);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      };
+
+      let start = performance.now();
+      function render() {
+        const now = (performance.now() - start) * 0.001;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+        gl.uniform2f(uRes, canvas.width, canvas.height);
+        gl.uniform2f(uMouse, mouseX, mouseY);
+        gl.uniform1f(uTime, now);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+        requestAnimationFrame(render);
+      }
+      render();
+    }
+
+    function pulseShaderDistortion() {
+      // Simular pase rápido de mouse
+      const canvas = document.getElementById('unicornShaderCanvas');
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+      let angle = 0;
+      const interval = setInterval(() => {
+        angle += 0.25;
+        const evt = new MouseEvent('mousemove', {
+          clientX: canvas.getBoundingClientRect().left + cx + Math.cos(angle) * 120,
+          clientY: canvas.getBoundingClientRect().top + cy + Math.sin(angle) * 80
+        });
+        canvas.dispatchEvent(evt);
+        if (angle > Math.PI * 4) clearInterval(interval);
+      }, 20);
+    }
+
+    /* ==========================================================================
+       08. THEATRE.JS TIMELINE SEQUENCER
+       ========================================================================== */
+    let theatrePlaying = false;
+    let theatreTime = 0;
+    const theatreDuration = 3.0; // 3 segundos
+
+    function playTheatreSequence() {
+      if (theatrePlaying) return;
+      theatrePlaying = true;
+      theatreTime = 0;
+
+      const flash = document.getElementById('theatreFlash');
+      const lens = document.getElementById('theatreLens');
+      const playhead = document.getElementById('theatrePlayhead');
+      const timerText = document.getElementById('theatreTimerText');
+      const btn = document.getElementById('btnPlayTheatre');
+      btn.innerText = '⏳ Ejecutando Timeline...';
+
+      const interval = setInterval(() => {
+        theatreTime += 0.03;
+        const progress = Math.min(theatreTime / theatreDuration, 1);
+        playhead.style.left = (progress * 100) + '%';
+        timerText.innerText = `${theatreTime.toFixed(2)}s / 3.00s`;
+
+        // 1. Flash Track: 0.3s a 0.7s
+        if (theatreTime >= 0.3 && theatreTime <= 0.6) {
+          flash.style.opacity = '1';
+        } else if (theatreTime > 0.6 && theatreTime <= 0.9) {
+          flash.style.opacity = (1 - (theatreTime - 0.6) / 0.3).toString();
+        } else {
+          flash.style.opacity = '0';
+        }
+
+        // 2. Zoom In Lente: 1.0s a 2.8s
+        if (theatreTime >= 1.0) {
+          const zProg = (theatreTime - 1.0) / 1.8;
+          const scale = 1 + zProg * 1.8;
+          lens.style.transform = `scale(${scale})`;
+        } else {
+          lens.style.transform = `scale(1)`;
+        }
+
+        if (theatreTime >= theatreDuration) {
+          clearInterval(interval);
+          theatrePlaying = false;
+          btn.innerText = '▶ Reproducir Secuencia (Theatre.js)';
+          setTimeout(() => {
+            lens.style.transform = 'scale(1)';
+            playhead.style.left = '0%';
+            timerText.innerText = '0.00s / 3.00s';
+          }, 800);
+        }
+      }, 30);
+    }
+
+    /* ==========================================================================
+       INICIALIZACIÓN GENERAL
+       ========================================================================== */
+    window.addEventListener('DOMContentLoaded', () => {
+      startReelLoop();
+      initSplineLens();
+      initUnicornShader();
+    });
+  </script>
+</body>
+</html>

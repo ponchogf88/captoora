@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA · TESLA CYBER EDITION // Precision Optical Engineering</title>
+  <meta name="description" content="Página de captura estilo Tesla & Cybertruck para Captoora Studio. Diseño monolítico de titanio, aceleración óptica Plaid y fotografía full-frame en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --titanium: #18191c;
+      --card-bg: #090a0c;
+      --border: rgba(255, 255, 255, 0.12);
+      --red-plaid: #e82127;
+      --tesla-white: #ffffff;
+      --text: #f4f4f6;
+      --muted: #71717a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* TESLA MINIMAL HEADER */
+    .tesla-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-mark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .brand-mark span {
+      color: var(--red-plaid);
+    }
+
+    .nav-dock {
+      display: flex;
+      gap: 12px;
+    }
+
+    .dock-link {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .dock-link:hover, .dock-link.active {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* MONOLITHIC CYBER HERO */
+    .cyber-hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 50px 24px;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 36px;
+      align-items: center;
+      min-height: calc(100vh - 75px);
+    }
+
+    /* CYBERTRUCK ANGULAR FRAME FOR ZERO-CROP PHOTO */
+    .cyber-photo-chassis {
+      position: relative;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+      min-height: 520px;
+    }
+
+    .cyber-photo-chassis img {
+      width: 100%;
+      height: 100%;
+      max-height: 540px;
+      object-fit: contain;
+      transition: opacity 0.3s ease, transform 0.4s ease;
+    }
+
+    .cyber-lightbar-accent {
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #fff, transparent);
+      box-shadow: 0 0 20px #fff;
+    }
+
+    /* CONTROL PANEL CYBERTRUCK STYLE */
+    .cyber-spec-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .cyber-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      color: var(--red-plaid);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .cyber-headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.4rem, 4vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .cyber-desc {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* SPECS GRID */
+    .cyber-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-val {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .spec-lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* DRIVE MODE CONFIGURE SLIDER */
+    .drive-mode-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mode-pills-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .mode-pill {
+      background: var(--titanium);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .mode-pill.active, .mode-pill:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+
+    /* TESLA ACTION BUTTON */
+    .btn-tesla-reserve {
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 18px 28px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-tesla-reserve:hover {
+      background: var(--red-plaid);
+      color: #fff;
+      box-shadow: 0 0 40px rgba(232, 33, 39, 0.6);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .cyber-hero { grid-template-columns: 1fr; }
+      .cyber-specs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TESLA NAV -->
+  <header class="tesla-nav">
+    <div class="brand-mark">
+      CAPTOORA <span>PLAID</span>
+    </div>
+
+    <nav class="nav-dock">
+      <a href="captoora_spacex.html" class="dock-link">SPACEX</a>
+      <a href="captoora_tesla.html" class="dock-link active">TESLA</a>
+      <a href="captoora_grok.html" class="dock-link">GROK</a>
+      <a href="index.html" class="dock-link">STUDIO</a>
+    </nav>
+  </header>
+
+  <!-- CYBER HERO -->
+  <main class="cyber-hero">
+
+    <!-- FOTOGRAFÍA EN CHASIS CYBERTRUCK (ZERO CROP) -->
+    <div class="cyber-photo-chassis">
+      <div class="cyber-lightbar-accent"></div>
+      <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Captoora Tesla Edition" id="teslaPhoto">
+    </div>
+
+    <!-- PANEL DE INGENIERÍA ÓPTICA -->
+    <section class="cyber-spec-panel">
+      <div>
+        <div class="cyber-kicker">INGENIERÍA ÓPTICA SIN FRICCIÓN</div>
+        <h1 class="cyber-headline">Aceleración Plaid.<br>Precisión de Autor.</h1>
+        <p class="cyber-desc">
+          Construido con la filosofía de cero compromisos: cristal óptico de máxima apertura, iluminación estroboscópica instantánea y encuadre full-frame sin recortes.
+        </p>
+      </div>
+
+      <!-- SPECS -->
+      <div class="cyber-specs-grid">
+        <div class="spec-item">
+          <span class="spec-val">1/8000s</span>
+          <span class="spec-lbl">VELOCIDAD OBTURADOR</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-val">24.2 MP</span>
+          <span class="spec-lbl">RESOLUCIÓN SENSOR</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-val">0.0 ms</span>
+          <span class="spec-lbl">LATENCIA DISPARO</span>
+        </div>
+      </div>
+
+      <!-- CONFIGURACIÓN DE SET (MODO DE MANEJO) -->
+      <div class="drive-mode-wrap">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--muted); text-transform:uppercase;">
+          SELECCIONA MODO DE CONFIGURACIÓN DE ESTUDIO:
+        </span>
+        <div class="mode-pills-row">
+          <button class="mode-pill active" onclick="setTeslaMode(0, this)">CICLORAMA (0863)</button>
+          <button class="mode-pill" onclick="setTeslaMode(1, this)">PLAID AUTOR (0878)</button>
+          <button class="mode-pill" onclick="setTeslaMode(2, this)">CHIPINQUE (CHIP_02)</button>
+        </div>
+      </div>
+
+      <!-- CTA RESERVA -->
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20configurar%20mi%20sesion%20en%20estudio%20Tesla%20Plaid%20Edition" target="_blank" class="btn-tesla-reserve">
+        <span>⚡</span> CONFIGURAR SESIÓN DE ESTUDIO
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+    const teslaPhotos = [
+      'assets/media_jpg/pf-glow-cpt_0863.jpg',
+      'assets/media_jpg/pf-glow-cpt_0878.jpg',
+      'assets/media_jpg/pf-chipinque-02.jpg'
+    ];
+
+    function setTeslaMode(idx, btn) {
+      document.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('teslaPhoto');
+      img.style.opacity = '0';
+      img.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        img.src = teslaPhotos[idx];
+        img.style.opacity = '1';
+        img.style.transform = 'scale(1)';
+      }, 140);
+    }
+  </script>
+</body>
+</html>

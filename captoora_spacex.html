@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA · SPACEX MISSION EDITION // Starship Telemetry & Biometrics</title>
+  <meta name="description" content="Página de captura estilo SpaceX Starship para Captoora Studio. Telemetría de vuelo, escaneo biométrico y fotografía de autor full-frame en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Space+Grotesk:wght@500;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030407;
+      --card-bg: rgba(9, 12, 18, 0.85);
+      --border: rgba(255, 255, 255, 0.12);
+      --spacex-blue: #005288;
+      --spacex-cyan: #00d2ff;
+      --amber: #f59e0b;
+      --red-alert: #ef4444;
+      --green-go: #10b981;
+      --text: #f8fafc;
+      --muted: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* TOP AVIONICS NAV */
+    .avionics-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 4, 7, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+    }
+
+    .mission-id {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mission-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green-go);
+      box-shadow: 0 0 10px var(--green-go);
+      animation: blinkGo 1.2s infinite ease-in-out;
+    }
+
+    @keyframes blinkGo {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .mission-clock {
+      color: var(--spacex-cyan);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-switcher-dock {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dock-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: #94a3b8;
+      padding: 5px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.7rem;
+      transition: all 0.2s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      background: var(--spacex-cyan);
+      color: #000;
+      border-color: var(--spacex-cyan);
+      font-weight: 700;
+    }
+
+    /* HERO TELEMETRY STAGE */
+    .telemetry-hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+      min-height: calc(100vh - 65px);
+    }
+
+    /* AVIONICS SIDE PANELS */
+    .avionics-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .panel-corner {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-color: var(--spacex-cyan);
+      border-style: solid;
+      pointer-events: none;
+    }
+    .c-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .c-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+    .c-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+    .c-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    .panel-title {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .telemetry-data-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      font-size: 0.8rem;
+    }
+
+    .telemetry-label {
+      color: var(--muted);
+    }
+
+    .telemetry-val {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .telemetry-val.cyan { color: var(--spacex-cyan); }
+    .telemetry-val.amber { color: var(--amber); }
+    .telemetry-val.green { color: var(--green-go); }
+
+    .telemetry-gauge {
+      margin-top: 20px;
+    }
+
+    .gauge-bar-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .gauge-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--spacex-blue), var(--spacex-cyan));
+      width: 98.4%;
+      border-radius: 3px;
+    }
+
+    /* CENTER STAGE: TARGETING SCANNER FULL-FRAME */
+    .targeting-scanner-stage {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 50px rgba(0, 210, 255, 0.1);
+    }
+
+    .flight-camera-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: contrast(1.08) brightness(1.02);
+      transition: transform 0.4s ease;
+    }
+
+    /* BIOMETRIC HUD OVERLAY */
+    .biometric-hud-box {
+      position: absolute;
+      inset: 20px;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .scanner-line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--spacex-cyan), transparent);
+      box-shadow: 0 0 15px var(--spacex-cyan);
+      animation: scanSweep 3.2s infinite ease-in-out;
+    }
+
+    @keyframes scanSweep {
+      0% { top: 5%; opacity: 0; }
+      15% { opacity: 1; }
+      85% { opacity: 1; }
+      100% { top: 95%; opacity: 0; }
+    }
+
+    .reticle-center {
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130px;
+      height: 130px;
+      border: 1px dashed rgba(0, 210, 255, 0.7);
+      border-radius: 50%;
+      animation: rotateReticle 16s infinite linear;
+    }
+
+    @keyframes rotateReticle {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .reticle-lock-box {
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--green-go);
+      box-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
+    }
+
+    .reticle-tag {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      background: var(--green-go);
+      color: #000;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 2px;
+    }
+
+    /* MISSION LAUNCH CTA */
+    .launch-cta-wrap {
+      margin-top: 24px;
+    }
+
+    .btn-launch-mission {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--spacex-cyan);
+      color: #000;
+      border: none;
+      padding: 16px 20px;
+      border-radius: 6px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(0, 210, 255, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .btn-launch-mission:hover {
+      background: #38bdf8;
+      box-shadow: 0 0 40px rgba(0, 210, 255, 0.7);
+      transform: translateY(-2px);
+    }
+
+    /* STAGE SELECTOR BUTTONS */
+    .stage-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .btn-stage {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      padding: 10px 14px;
+      border-radius: 4px;
+      text-align: left;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn-stage.active, .btn-stage:hover {
+      background: rgba(0, 210, 255, 0.15);
+      border-color: var(--spacex-cyan);
+      color: #fff;
+    }
+
+    @media (max-width: 1024px) {
+      .telemetry-hero { grid-template-columns: 1fr; }
+      .targeting-scanner-stage { min-height: 480px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP AVIONICS BAR -->
+  <header class="avionics-nav">
+    <div class="mission-id">
+      <span class="mission-dot"></span>
+      <span style="font-weight:800; color:#fff;">CAPTOORA AVIONICS</span>
+      <span style="color:var(--border);">//</span>
+      <span>MISSION: GLOWTOURS-24MP</span>
+    </div>
+    
+    <div class="mission-clock" id="missionClock">T-00:00:00 MET</div>
+
+    <nav class="nav-switcher-dock">
+      <a href="captoora_spacex.html" class="dock-pill active">🚀 SPACEX</a>
+      <a href="captoora_tesla.html" class="dock-pill">⚡ TESLA</a>
+      <a href="captoora_grok.html" class="dock-pill">🧠 GROK</a>
+      <a href="index.html" class="dock-pill">STUDIO PRINCIPAL</a>
+    </nav>
+  </header>
+
+  <!-- MAIN TELEMETRY HERO -->
+  <main class="telemetry-hero">
+
+    <!-- PANEL IZQUIERDO: AVIONICS & OPTICAL PAYLOAD -->
+    <aside class="avionics-panel">
+      <div class="panel-corner c-tl"></div>
+      <div class="panel-corner c-tr"></div>
+      <div class="panel-corner c-bl"></div>
+      <div class="panel-corner c-br"></div>
+
+      <div>
+        <div class="panel-title">
+          <span>PAYLOAD TELEMETRY</span>
+          <span>OPTICS-01</span>
+        </div>
+
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">SENSOR PAYLOAD:</span>
+          <span class="telemetry-val cyan">24.2 MP FULL-FRAME</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">SHUTTER VELOCITY:</span>
+          <span class="telemetry-val">1/8000 SEC</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">APERTURE DIAPHRAGM:</span>
+          <span class="telemetry-val amber">f/1.4 PRIME LENS</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">ISO SENSITIVITY:</span>
+          <span class="telemetry-val">ISO 100 (BASE NOISE 0%)</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">LOCATION COORDINATES:</span>
+          <span class="telemetry-val">25.6866° N, 100.3161° W</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">MISSION SITE:</span>
+          <span class="telemetry-val green">SAN JERÓNIMO STUDIO</span>
+        </div>
+
+        <div class="telemetry-gauge">
+          <div style="display:flex; justify-content:space-between; font-size:0.72rem;">
+            <span class="telemetry-label">OPTICAL TRANSMISSION (T-STOP)</span>
+            <span class="telemetry-val cyan">98.4%</span>
+          </div>
+          <div class="gauge-bar-track">
+            <div class="gauge-bar-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;">
+        <div class="panel-title">
+          <span>STAGE FLIGHT PROFILE</span>
+          <span>SELECT MODE</span>
+        </div>
+        <div class="stage-selector">
+          <button class="btn-stage active" onclick="switchFlightStage(0, this)">
+            <span>STAGE 1: CICLORAMA COMERCIAL</span>
+            <span style="color:var(--spacex-cyan);">0853</span>
+          </button>
+          <button class="btn-stage" onclick="switchFlightStage(1, this)">
+            <span>STAGE 2: LUZ DE AUTOR BOOST</span>
+            <span style="color:var(--amber);">0855</span>
+          </button>
+          <button class="btn-stage" onclick="switchFlightStage(2, this)">
+            <span>STAGE 3: CHIPINQUE ORBIT</span>
+            <span style="color:var(--green-go);">CHIP_01</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTRO: VISOR DE APUNTAMIENTO BIOMÉTRICO (ZERO CROP) -->
+    <section class="targeting-scanner-stage">
+      <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Flight Mission Target" class="flight-camera-photo" id="flightTargetPhoto">
+
+      <!-- HUD BIOMÉTRICO -->
+      <div class="biometric-hud-box">
+        <div class="scanner-line"></div>
+        <div class="reticle-center"></div>
+        <div class="reticle-lock-box">
+          <div class="reticle-tag">BIOMETRICS LOCK: 99.8%</div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--spacex-cyan);">
+          <span>[CAMERA 01: FE 85mm GM]</span>
+          <span>[AI BIOMETRIC RESOLUTION: 6000x4000]</span>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--muted);">
+          <span>ZERO CROP // 100% FULL-FRAME</span>
+          <span style="color:var(--green-go);">AUTONOMOUS TARGET TRACKING ACTIVE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL DERECHO: MISSION CONTROL & AGENDA DIRECTA -->
+    <aside class="avionics-panel">
+      <div class="panel-corner c-tl"></div>
+      <div class="panel-corner c-tr"></div>
+      <div class="panel-corner c-bl"></div>
+      <div class="panel-corner c-br"></div>
+
+      <div>
+        <div class="panel-title">
+          <span>MISSION DIRECTIVES</span>
+          <span>AUTONOMOUS</span>
+        </div>
+
+        <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.6; margin-bottom:16px;">
+          Sesión de estudio de alto rendimiento aeroespacial. Tres escenarios integrados: ciclorama blanco puro, iluminación de autor con destello estroboscópico y parque natural contiguo.
+        </p>
+
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">CLIENT MISSION:</span>
+          <span class="telemetry-val">FARMASI &amp; GLOWTOURS</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">DATE WINDOW:</span>
+          <span class="telemetry-val cyan">OCT 31, 2026</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">INFLUENCER SQUAD:</span>
+          <span class="telemetry-val amber">25 CREADORAS VIP</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">DIRECTOR:</span>
+          <span class="telemetry-val">CAPTOORA STUDIO</span>
+        </div>
+        <div class="telemetry-data-row">
+          <span class="telemetry-label">PAYLOAD DISPATCH:</span>
+          <span class="telemetry-val green">WHATSAPP DIRECT</span>
+        </div>
+      </div>
+
+      <div class="launch-cta-wrap">
+        <div style="font-size:0.7rem; color:var(--muted); text-align:center; margin-bottom:10px;">
+          CONEXIÓN INSTANTÁNEA // CERO INTERMEDIARIOS
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20confirmar%20mision%20de%20sesion%20en%20estudio%20SpaceX%20Edition" target="_blank" class="btn-launch-mission">
+          <span>🚀</span> INICIAR MISIÓN CAPTOORA
+        </a>
+      </div>
+    </aside>
+
+  </main>
+
+  <script>
+    // Mission Clock Telemetry
+    let startTime = Date.now();
+    function updateClock() {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000);
+      const hrs = String(Math.floor(elapsed / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((elapsed % 3600) / 60)).padStart(2, '0');
+      const secs = String(elapsed % 60).padStart(2, '0');
+      document.getElementById('missionClock').innerText = `T+00:${mins}:${secs} MET`;
+    }
+    setInterval(updateClock, 1000);
+
+    // Flight Stage Switcher
+    const stages = [
+      'assets/media_jpg/pf-glow-cpt_0853.jpg',
+      'assets/media_jpg/pf-glow-cpt_0855.jpg',
+      'assets/media_jpg/pf-chipinque-01.jpg'
+    ];
+
+    function switchFlightStage(idx, btn) {
+      document.querySelectorAll('.btn-stage').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const photo = document.getElementById('flightTargetPhoto');
+      photo.style.opacity = '0';
+      photo.style.transform = 'scale(0.97)';
+      setTimeout(() => {
+        photo.src = stages[idx];
+        photo.style.opacity = '1';
+        photo.style.transform = 'scale(1)';
+      }, 150);
+    }
+  </script>
+</body>
+</html>

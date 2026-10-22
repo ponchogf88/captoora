@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA · SUPER GROK INTELLIGENCE EDITION // Zero-Fluff Autonomous Studio</title>
+  <meta name="description" content="Página de captura estilo Grok / xAI para Captoora Studio. Inteligencia cruda, telemetría óptica de autor y fotografía de estudio sin filtros en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --card-bg: #090a0f;
+      --border: rgba(255, 255, 255, 0.12);
+      --grok-white: #ffffff;
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.4);
+      --green: #22c55e;
+      --text: #f4f4f5;
+      --muted: #71717a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      overflow-x: hidden;
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* GROK MINIMAL HEADER */
+    .grok-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+    }
+
+    .grok-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+
+    .grok-tag {
+      background: #fff;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 800;
+    }
+
+    .nav-dock {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dock-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.72rem;
+      transition: all 0.2s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      background: #fff;
+      color: #000;
+      font-weight: 700;
+    }
+
+    /* HERO LAYOUT */
+    .grok-layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+      min-height: calc(100vh - 65px);
+    }
+
+    /* LEFT: REASONING & OPTICS STAGE */
+    .grok-display-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .grok-screen-box {
+      background: #020305;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 480px;
+      overflow: hidden;
+    }
+
+    .grok-screen-box img {
+      width: 100%;
+      height: 100%;
+      max-height: 460px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+
+    .grok-live-overlay {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 4px;
+      font-size: 0.72rem;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+    }
+
+    /* RIGHT: REASONING ENGINE & ACTION */
+    .grok-reasoning-col {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .grok-kicker {
+      font-size: 0.74rem;
+      color: var(--amber);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .grok-kicker::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--amber);
+      box-shadow: 0 0 10px var(--amber);
+    }
+
+    .grok-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .grok-terminal-log {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      font-size: 0.74rem;
+      line-height: 1.6;
+      color: #a1a1aa;
+      margin-bottom: 24px;
+    }
+
+    .log-line {
+      margin-bottom: 6px;
+    }
+
+    .log-line b {
+      color: #fff;
+    }
+
+    .log-line.success {
+      color: var(--green);
+    }
+
+    .log-line.amber {
+      color: var(--amber);
+    }
+
+    /* DIRECT PRICING ZERO BS */
+    .grok-pricing-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .pricing-box {
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px;
+    }
+
+    .pricing-title {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pricing-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    /* CTA BUTTON */
+    .btn-grok-action {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 16px 20px;
+      border-radius: 4px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-grok-action:hover {
+      background: var(--amber);
+      color: #000;
+      box-shadow: 0 0 35px var(--amber-glow);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .grok-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GROK HEADER -->
+  <header class="grok-header">
+    <div class="grok-brand">
+      CAPTOORA <span class="grok-tag">GROK</span>
+    </div>
+
+    <div style="color:var(--muted); font-size:0.7rem;">
+      STATUS: NOMINAL · ZERO-FLUFF PIPELINE
+    </div>
+
+    <nav class="nav-dock">
+      <a href="captoora_spacex.html" class="dock-pill">SPACEX</a>
+      <a href="captoora_tesla.html" class="dock-pill">TESLA</a>
+      <a href="captoora_grok.html" class="dock-pill active">GROK</a>
+      <a href="index.html" class="dock-pill">STUDIO</a>
+    </nav>
+  </header>
+
+  <!-- GROK CONTENT -->
+  <main class="grok-layout">
+
+    <!-- COLUMNA VISUAL ZERO CROP -->
+    <div class="grok-display-col">
+      <div class="grok-screen-box">
+        <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Captoora Grok Real Photography" id="grokPhoto">
+        
+        <div class="grok-live-overlay">
+          <span>● AUDIT: ZERO CROP COMPLIANT</span>
+          <span>SERIES: GLOWTOURS AMAPOLA (#0855)</span>
+          <span style="color:#fff;">24.2 MP UNCOMPRESSED</span>
+        </div>
+      </div>
+
+      <!-- SELECTOR INSTANTÁNEO -->
+      <div style="display:flex; gap:8px;">
+        <button class="dock-pill active" onclick="switchGrokPhoto(0, this)" style="flex:1; text-align:center;">
+          01. RETRATO AUTOR (0855)
+        </button>
+        <button class="dock-pill" onclick="switchGrokPhoto(1, this)" style="flex:1; text-align:center;">
+          02. GLOWTOURS FULL (0853)
+        </button>
+        <button class="dock-pill" onclick="switchGrokPhoto(2, this)" style="flex:1; text-align:center;">
+          03. CHIPINQUE BOSQUE (FAM)
+        </button>
+      </div>
+    </div>
+
+    <!-- COLUMNA REASONING & CHECKOUT -->
+    <section class="grok-reasoning-col">
+      <div>
+        <div class="grok-kicker">MOTOR DE EJECUCIÓN AUTÓNOMO</div>
+        <h1 class="grok-h1">Sin adornos.<br>Pura luz y nitidez.</h1>
+
+        <div class="grok-terminal-log">
+          <div class="log-line"><b>[SYSTEM_PROMPT]:</b> Captoora Photographic Studio Protocol.</div>
+          <div class="log-line"><b>[RULE_7_AUDIT]:</b> Zero crop verified. Heads, shoes &amp; hands 100% visible.</div>
+          <div class="log-line success"><b>[LIGHTING_SETUP]:</b> 3-point strobes @ 5600K balanced.</div>
+          <div class="log-line amber"><b>[SQUAD_DISPATCH]:</b> 25 creadoras Farmasi reservadas para Oct 31.</div>
+          <div class="log-line"><b>[EXECUTION]:</b> Autonomous end-to-end confirmation.</div>
+        </div>
+
+        <!-- PRECIOS CLAROS -->
+        <div class="grok-pricing-row">
+          <div class="pricing-box">
+            <div class="pricing-title">SESIÓN COMERCIAL</div>
+            <div class="pricing-num">$2,400 <span style="font-size:0.75rem; color:var(--muted);">MXN</span></div>
+            <div style="font-size:0.68rem; color:var(--muted); margin-top:4px;">2 Horas · Ciclorama · 20 Fotos editadas</div>
+          </div>
+          <div class="pricing-box">
+            <div class="pricing-title">RENTA DE ESTUDIO</div>
+            <div class="pricing-num">$450 <span style="font-size:0.75rem; color:var(--muted);">/ HORA</span></div>
+            <div style="font-size:0.68rem; color:var(--muted); margin-top:4px;">Iluminación incluida · Mínimo 2 horas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTÓN DIRECTO -->
+      <div>
+        <div style="font-size:0.68rem; color:var(--muted); margin-bottom:8px; text-align:center;">
+          ACCESO DIRECTO A DIRECCIÓN // SIN FORMULARIOS LARGOS
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20confirmar%20mi%20sesion%20Grok%20Edition" target="_blank" class="btn-grok-action">
+          <span>⚡</span> AGENDAR VÍA WHATSAPP DIRECTO
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const grokPhotos = [
+      'assets/media_jpg/pf-glow-cpt_0855.jpg',
+      'assets/media_jpg/pf-glow-cpt_0853.jpg',
+      'assets/media_jpg/pf-chipinque-fam.jpg'
+    ];
+
+    function switchGrokPhoto(idx, btn) {
+      document.querySelectorAll('.dock-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('grokPhoto');
+      img.style.opacity = '0';
+      img.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        img.src = grokPhotos[idx];
+        img.style.opacity = '1';
+        img.style.transform = 'scale(1)';
+      }, 140);
+    }
+  </script>
+</body>
+</html>
