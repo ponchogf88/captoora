@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA STUDIO · Laboratorio Óptico & Motion Top 10</title>
+  <meta name="description" content="Showroom interactivo de las 10 mejores mecánicas y motions para estudios de fotografía de vanguardia mundial (Awwwards / FWA). Demostración en vivo sobre fotografía real de Captoora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050608;
+      --card-bg: #0b0d13;
+      --card-border: rgba(255, 255, 255, 0.08);
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.35);
+      --cyan: #06b6d4;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --red-safe: #dc2626;
+      --film-orange: #ff7700;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      overflow-x: hidden;
+      line-height: 1.5;
+      padding-bottom: 80px;
+    }
+
+    /* HEADER & NAV */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 6, 8, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 16px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      height: 28px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-tagline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      padding-left: 14px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-audio-toggle, .btn-link-site {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-audio-toggle:hover, .btn-link-site:hover {
+      background: rgba(245, 158, 11, 0.15);
+      border-color: var(--amber);
+      color: #fff;
+    }
+
+    .btn-link-site.primary {
+      background: var(--amber);
+      color: #000;
+      font-weight: 700;
+      border-color: var(--amber);
+    }
+
+    .btn-link-site.primary:hover {
+      background: #fbbf24;
+      box-shadow: 0 0 16px var(--amber-glow);
+    }
+
+    /* HERO INTRO */
+    .hero-banner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 60px 24px 30px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #fff 40%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      max-width: 780px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* GRID DE MÓDULOS */
+    .modules-container {
+      max-width: 1280px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .module-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      transition: border-color 0.3s ease;
+    }
+
+    .module-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+
+    .module-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding-bottom: 18px;
+    }
+
+    .module-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .module-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--amber);
+      background: rgba(245, 158, 11, 0.1);
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .module-title-wrap h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .module-benchmark {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 2px;
+    }
+
+    .module-benchmark b {
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .module-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6px 12px;
+      border-radius: 999px;
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* STAGE INTERACTIVO COMÚN */
+    .stage-wrapper {
+      position: relative;
+      background: #030406;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      min-height: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .stage-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+    }
+
+    .control-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--muted);
+    }
+
+    .control-item label {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    input[type=range] {
+      accent-color: var(--amber);
+      cursor: pointer;
+    }
+
+    .action-pill-btn {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .action-pill-btn:hover {
+      background: var(--amber);
+      color: #000;
+    }
+
+    .action-pill-btn.active {
+      background: var(--amber);
+      color: #000;
+    }
+
+    /* MÓDULO 1: DIAFRAGMA 11 CUCHILLAS */
+    .iris-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle, #0e121b 0%, #030406 80%);
+    }
+
+    .iris-bg-photo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      transition: filter 0.2s ease;
+    }
+
+    .iris-svg-mask {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      pointer-events: none;
+      filter: drop-shadow(0 0 30px rgba(0,0,0,0.9));
+    }
+
+    .iris-outer-rim {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      border: 10px solid #1c202d;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.1), inset 0 0 20px #000;
+      pointer-events: none;
+    }
+
+    /* MÓDULO 2: HEARST SPOTLIGHT GALLERY */
+    .spotlight-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #020304;
+      cursor: none;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spotlight-photo {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      transition: filter 0.1s ease;
+      filter: brightness(0.08) contrast(1.1);
+    }
+
+    .spotlight-cursor-cone {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(255, 235, 190, 0.95) 0%, rgba(245, 158, 11, 0.4) 40%, rgba(0,0,0,0) 70%);
+      mix-blend-mode: screen;
+      box-shadow: 0 0 80px rgba(245, 158, 11, 0.6);
+      transition: width 0.15s ease, height 0.15s ease;
+    }
+
+    .spotlight-cursor-dot {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #fff;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px #fff;
+    }
+
+    /* MÓDULO 3: VISOR HUD RÉFLEX & DIAL */
+    .hud-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hud-photo-view {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .hud-overlay {
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px;
+    }
+
+    .hud-grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 33.333% 33.333%;
+    }
+
+    .hud-af-bracket {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      border: 2px solid #22c55e;
+      border-radius: 4px;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+      animation: afPulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes afPulse {
+      0%, 100% { border-color: #22c55e; opacity: 1; }
+      50% { border-color: #15803d; opacity: 0.6; }
+    }
+
+    .hud-top-data, .hud-bottom-data {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #22c55e;
+      text-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+    }
+
+    .camera-dial {
+      display: inline-flex;
+      background: #181b24;
+      border: 2px solid #333a4c;
+      border-radius: 999px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .dial-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .dial-btn.active {
+      background: #22c55e;
+      color: #000;
+      font-weight: 700;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+    }
+
+    /* MÓDULO 4: BENTO GRID & SPRING MODAL */
+    .bento-stage {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding: 16px;
+    }
+
+    .bento-item {
+      position: relative;
+      background: #080a0f;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      height: 210px;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.2s ease;
+    }
+
+    .bento-item:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: var(--amber);
+    }
+
+    .bento-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #050608;
+    }
+
+    .bento-caption {
+      position: absolute;
+      bottom: 0;
+      inset-inline: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      padding: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* LIGHTBOX MODAL EXPANDIDO */
+    .spring-lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(3, 4, 6, 0.94);
+      backdrop-filter: blur(20px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .spring-lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .spring-lightbox-img {
+      max-width: 90vw;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transform: scale(0.85);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    }
+
+    .spring-lightbox.active .spring-lightbox-img {
+      transform: scale(1);
+    }
+
+    .spring-lightbox-close {
+      margin-top: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 8px 20px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    /* MÓDULO 5: CHROMATIC ABERRATION & BARREL */
+    .chromatic-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .chromatic-layer-wrap {
+      position: relative;
+      width: 85%;
+      height: 85%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .chromatic-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .chromatic-r {
+      mix-blend-mode: screen;
+      filter: drop-shadow(-4px 0 0 rgba(255,0,0,0.7));
+      transform: scale(1.01);
+    }
+
+    .chromatic-b {
+      mix-blend-mode: screen;
+      filter: drop-shadow(4px 0 0 rgba(0,180,255,0.7));
+      transform: scale(0.99);
+    }
+
+    /* MÓDULO 6: CUARTO OSCURO / CHEMICAL SAFELIGHT */
+    .safelight-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #1a0202;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.4s ease;
+      overflow: hidden;
+    }
+
+    .safelight-photo {
+      max-width: 88%;
+      max-height: 88%;
+      object-fit: contain;
+      filter: grayscale(1) sepia(1) hue-rotate(-50deg) saturate(3) brightness(0.65);
+      transition: filter 0.3s ease;
+      box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+    }
+
+    .safelight-water-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle, transparent 60%, rgba(220, 38, 38, 0.4) 100%);
+      pointer-events: none;
+    }
+
+    /* MÓDULO 7: LUPA MACRO 100% CROP */
+    .loupe-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: crosshair;
+      background: #06070a;
+      overflow: hidden;
+    }
+
+    .loupe-base-img {
+      max-width: 88%;
+      max-height: 88%;
+      object-fit: contain;
+    }
+
+    .loupe-glass {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid var(--amber);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.9);
+      pointer-events: none;
+      display: none;
+      transform: translate(-50%, -50%);
+      background-repeat: no-repeat;
+      overflow: hidden;
+      z-index: 100;
+    }
+
+    .loupe-glass::after {
+      content: "100% 24MP";
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.8);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--amber);
+    }
+
+    .loupe-glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(245, 158, 11, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(245, 158, 11, 0.25) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    /* MÓDULO 8: 35MM FILM EDGE & NEGATIVE INVERSION */
+    .film-strip-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #14161f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .film-frame-body {
+      background: #000;
+      border-top: 26px solid #1a1c24;
+      border-bottom: 26px solid #1a1c24;
+      position: relative;
+      max-width: 85%;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+
+    .film-sprockets-top, .film-sprockets-bottom {
+      position: absolute;
+      inset-inline: 0;
+      height: 16px;
+      display: flex;
+      justify-content: space-around;
+      pointer-events: none;
+    }
+
+    .film-sprockets-top { top: -21px; }
+    .film-sprockets-bottom { bottom: -21px; }
+
+    .sprocket-hole {
+      width: 14px;
+      height: 10px;
+      background: #000;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .film-edge-text {
+      position: absolute;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: var(--film-orange);
+      font-weight: 700;
+    }
+
+    .film-edge-top { top: -23px; left: 30px; }
+    .film-edge-bottom { bottom: -23px; right: 30px; }
+
+    .film-inner-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: filter 0.35s ease;
+    }
+
+    .film-inner-photo.negative-mode {
+      filter: invert(1) hue-rotate(180deg) sepia(0.4) saturate(2);
+      background: #ffaa66;
+    }
+
+    /* MÓDULO 9: LIGHTING SWITCHER 3 PUNTOS */
+    .lighting-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #040507;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .light-base-photo {
+      max-width: 88%;
+      max-height: 88%;
+      object-fit: contain;
+      transition: filter 0.3s ease;
+      filter: brightness(0.2) contrast(1.2);
+    }
+
+    .lighting-rig-ui {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(11, 13, 19, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .light-toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #fff;
+    }
+
+    /* MÓDULO 10: EXPLODED LENS VIEW 3D */
+    .exploded-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      perspective: 1000px;
+      background: radial-gradient(circle, #0e121a 0%, #030406 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .lens-3d-stack {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      transform-style: preserve-3d;
+      transform: rotateY(-20deg) rotateX(10deg);
+      transition: transform 0.2s ease;
+    }
+
+    .lens-element {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: #fff;
+      font-weight: 700;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    }
+
+    .el-front-glass {
+      border: 4px solid #38bdf8;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(14, 165, 233, 0.05) 70%, transparent 100%);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+    }
+
+    .el-iris-ring {
+      border: 6px dashed var(--amber);
+      background: rgba(245, 158, 11, 0.1);
+      box-shadow: 0 0 20px var(--amber-glow);
+    }
+
+    .el-doublet-group {
+      border: 5px solid #a855f7;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+    }
+
+    .el-sensor-plane {
+      border: 3px solid #22c55e;
+      background: rgba(34, 197, 94, 0.15);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+    }
+
+    .el-sensor-plane img {
+      width: 65%;
+      height: 65%;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    /* FOOTER CALLOUT */
+    .lab-footer {
+      max-width: 1280px;
+      margin: 60px auto 0;
+      padding: 40px 24px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.05) 0%, rgba(0,0,0,0.6) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 20px;
+    }
+
+    .lab-footer h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .lab-footer p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
+    }
+
+    .footer-ctas {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .bento-stage {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .module-card {
+        padding: 20px;
+      }
+      .top-nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN SUPERIOR -->
+  <header class="top-nav">
+    <div class="brand-group">
+      <img src="assets/captoora_signature_logo.png" alt="Captoora Studio" class="brand-logo">
+      <span class="brand-tagline">Optical & Motion Lab · Top 10 Benchmarks</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-audio-toggle" id="audioToggleBtn" onclick="toggleAudioEngine()">
+        <span>🔊</span> AUDIO SINTÉTICO: <b id="audioStatusText">ON</b>
+      </button>
+      <a href="index.html" class="btn-link-site primary">
+        PÁGINA PRINCIPAL &rarr;
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <div class="hero-badge">
+      <span>●</span> 100% VISUAL · ZERO CROP · FOTOGRAFÍA REAL CAPTOORA
+    </div>
+    <h1 class="hero-title">
+      Top 10 Mecánicas de Vanguardia<br>
+      <span>Puestas a Prueba en Vivo</span>
+    </h1>
+    <p class="hero-desc">
+      Cero teoría, cero diapositivas de texto plano. Cada uno de los 10 efectos más reconocidos en Awwwards y FWA cobra vida aquí con fotografías de la serie aprobada (GlowTours Amapola y Chipinque) y física de resorte real.
+    </p>
+  </section>
+
+  <!-- LISTA MAESTRA DE LOS 10 MÓDULOS -->
+  <main class="modules-container">
+
+    <!-- 01. EL DIAFRAGMA MECÁNICO -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">01</div>
+          <div class="module-title-wrap">
+            <h3>Diafragma de 11 Cuchillas de Titanio</h3>
+            <div class="module-benchmark">Inspirado en: <b>35mm Studio (Francia · Awwwards SOTD)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Iris Mecánico Rotativo + Desenfocador DoF</div>
+      </div>
+
+      <div class="stage-wrapper iris-stage" id="irisStage">
+        <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="GlowTours Amapola 0853" class="iris-bg-photo" id="irisPhoto">
+        
+        <!-- Outer lens metal rim -->
+        <div class="iris-outer-rim"></div>
+
+        <!-- SVG 11 blades iris diaphragm -->
+        <svg class="iris-svg-mask" viewBox="0 0 300 300">
+          <defs>
+            <mask id="irisMask">
+              <rect width="300" height="300" fill="white" />
+              <circle id="irisApertureHole" cx="150" cy="150" r="70" fill="black" />
+            </mask>
+          </defs>
+          <rect width="300" height="300" fill="#080a0f" mask="url(#irisMask)" />
+          <circle cx="150" cy="150" r="142" stroke="rgba(245,158,11,0.5)" stroke-width="2" fill="none" />
+          <circle cx="150" cy="150" r="130" stroke="rgba(255,255,255,0.15)" stroke-dasharray="4,8" stroke-width="1.5" fill="none" />
+        </svg>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label for="apertureSlider">Apertura del Lente:</label>
+          <input type="range" id="apertureSlider" min="20" max="130" value="70" oninput="updateIrisAperture(this.value)">
+          <span id="apertureFStopText" style="color:var(--amber); font-weight:700;">f/2.8</span>
+        </div>
+        <button class="action-pill-btn" onclick="snapShutterClick()">💥 Disparar Obturador Instantáneo</button>
+      </div>
+    </article>
+
+    <!-- 02. HEARST SPOTLIGHT GALLERY -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">02</div>
+          <div class="module-title-wrap">
+            <h3>Spotlight Cenital en Sala de Obsidiana</h3>
+            <div class="module-benchmark">Inspirado en: <b>Hearst Exhibit (EE.UU. · Awwwards SOTD)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Proyector Cenital Interactivo que Sigue el Cursor</div>
+      </div>
+
+      <div class="stage-wrapper spotlight-stage" id="spotlightStage" onmousemove="moveSpotlight(event)">
+        <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="GlowTours Amapola 0855" class="spotlight-photo" id="spotlightPhoto">
+        <div class="spotlight-cursor-cone" id="spotlightCone"></div>
+        <div class="spotlight-cursor-dot" id="spotlightDot"></div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label for="beamSlider">Haz de Luz Cenital:</label>
+          <input type="range" id="beamSlider" min="160" max="420" value="260" oninput="updateSpotlightBeam(this.value)">
+        </div>
+        <div class="control-item">
+          <span>Pasa el cursor sobre la foto para revelar los micro-detalles y la textura de la piel.</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 03. CHABLE VIEWFINDER HUD & DIAL -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">03</div>
+          <div class="module-title-wrap">
+            <h3>Visor HUD Réflex con Dial Físico Moleteado</h3>
+            <div class="module-benchmark">Inspirado en: <b>Chable Portfolio (Reino Unido · Awwwards HM)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Interfaz Visor de Cámara Réflex + Conmutador Físico</div>
+      </div>
+
+      <div class="stage-wrapper hud-stage" id="hudStage">
+        <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Visor Retrato GlowTours" class="hud-photo-view" id="hudPhoto">
+        
+        <div class="hud-overlay">
+          <div class="hud-grid-lines"></div>
+          <div class="hud-af-bracket"></div>
+
+          <div class="hud-top-data">
+            <span>[● AF-C TRACKING]</span>
+            <span id="hudSceneTag">SCENE: CICLORAMA BLANCO</span>
+            <span>RAW 24MP 14-BIT</span>
+          </div>
+
+          <div class="hud-bottom-data">
+            <span>1/8000s</span>
+            <span>F/1.4</span>
+            <span>ISO 100</span>
+            <span>EV +0.0 ▮▮▯▮▮</span>
+            <span>[🔋 98%]</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label>Dial Mecánico de Modos:</label>
+          <div class="camera-dial">
+            <button class="dial-btn active" onclick="switchHudMode(0, this)">CICLORAMA (0863)</button>
+            <button class="dial-btn" onclick="switchHudMode(1, this)">AUTOR (0878)</button>
+            <button class="dial-btn" onclick="switchHudMode(2, this)">CHIPINQUE (CHIP_01)</button>
+          </div>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#22c55e;">● ENFOQUE AL OJO BLOQUEADO</span>
+      </div>
+    </article>
+
+    <!-- 04. STUDIO FREIGHT BENTO GRID & SPRING PHYSICS -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">04</div>
+          <div class="module-title-wrap">
+            <h3>Bento Grid con Expansión Elástica (Spring Physics)</h3>
+            <div class="module-benchmark">Inspirado en: <b>Studio Freight (Los Ángeles · Studio of the Month)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Inercia de Resorte sin Saltos de Página</div>
+      </div>
+
+      <div class="bento-stage">
+        <div class="bento-item" onclick="openSpringModal('assets/media_jpg/pf-glow-cpt_0863.jpg', 'GlowTours Amapola · CPT_0863')">
+          <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="CPT_0863">
+          <div class="bento-caption"><span>CPT_0863</span><span>EXPANDIR &nearr;</span></div>
+        </div>
+        <div class="bento-item" onclick="openSpringModal('assets/media_jpg/pf-glow-cpt_0878.jpg', 'GlowTours Amapola · CPT_0878')">
+          <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="CPT_0878">
+          <div class="bento-caption"><span>CPT_0878</span><span>EXPANDIR &nearr;</span></div>
+        </div>
+        <div class="bento-item" onclick="openSpringModal('assets/media_jpg/pf-chipinque-02.jpg', 'Chipinque Bosque Retrato · CHIP_02')">
+          <img src="assets/media_jpg/pf-chipinque-02.jpg" alt="CHIP_02">
+          <div class="bento-caption"><span>CHIP_02</span><span>EXPANDIR &nearr;</span></div>
+        </div>
+        <div class="bento-item" onclick="openSpringModal('assets/media_jpg/pf-chipinque-fam.jpg', 'Chipinque Sesión Familia · CHIP_FAM')">
+          <img src="assets/media_jpg/pf-chipinque-fam.jpg" alt="CHIP_FAM">
+          <div class="bento-caption"><span>CHIP_FAM</span><span>EXPANDIR &nearr;</span></div>
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:var(--muted);">
+          Haz click en cualquier tarjeta para ver la apertura instantánea en resorte de alta fidelidad.
+        </span>
+      </div>
+    </article>
+
+    <!-- 05. ABERRACIÓN CROMÁTICA & CRISTAL ÓPTICO -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">05</div>
+          <div class="module-title-wrap">
+            <h3>Aberración Cromática y Curvatura de Cristal Prime</h3>
+            <div class="module-benchmark">Inspirado en: <b>Active Theory Experiments (California · SOTY)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Dispersión Espectral RGB + Distorsión de Barril</div>
+      </div>
+
+      <div class="stage-wrapper chromatic-stage" id="chromaticStage">
+        <div class="chromatic-layer-wrap" id="chromaticWrap">
+          <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Base" class="chromatic-img">
+          <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Red Channel" class="chromatic-img chromatic-r" id="chromaticRed">
+          <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Blue Channel" class="chromatic-img chromatic-b" id="chromaticBlue">
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label for="dispersionSlider">Dispersión Espectral RGB:</label>
+          <input type="range" id="dispersionSlider" min="0" max="25" value="6" oninput="updateChromaticDispersion(this.value)">
+          <span id="dispersionText" style="color:#38bdf8;">6px</span>
+        </div>
+        <button class="action-pill-btn" onclick="toggleBarrelCurvature()">Alternar Curvatura de Barril</button>
+      </div>
+    </article>
+
+    <!-- 06. REVELADO QUÍMICO EN CUARTO OSCURO -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">06</div>
+          <div class="module-title-wrap">
+            <h3>Revelado Químico en Cuarto Oscuro (Safelight 590nm)</h3>
+            <div class="module-benchmark">Inspirado en: <b>Bastien Allard (París · Moda & Retrato)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Transición Gradual de Haluros de Plata a Color Real</div>
+      </div>
+
+      <div class="stage-wrapper safelight-stage" id="safelightStage">
+        <img src="assets/media_jpg/pf-chipinque-01.jpg" alt="Chipinque Sendero" class="safelight-photo" id="safelightPhoto">
+        <div class="safelight-water-overlay"></div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label for="devSlider">Tiempo en Cubeta de Revelador:</label>
+          <input type="range" id="devSlider" min="0" max="100" value="15" oninput="updateChemicalDevelopment(this.value)">
+          <span id="devSecondsText" style="color:var(--red-safe); font-weight:700;">15 seg (Plata latente)</span>
+        </div>
+        <button class="action-pill-btn" onclick="autoDevelopAnimation()">🧪 Revelado Automático 35mm</button>
+      </div>
+    </article>
+
+    <!-- 07. LUPA 100% CROP DE INSPECCIÓN PERICIAL -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">07</div>
+          <div class="module-title-wrap">
+            <h3>Lupa Óptica de Inspección Pericial 100% Macro</h3>
+            <div class="module-benchmark">Inspirado en: <b>Revelatio Studio (Europa · Developer Award)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Cursor Magnético de Aumento 2.5x sobre Textura Real</div>
+      </div>
+
+      <div class="stage-wrapper loupe-stage" id="loupeStage" 
+           onmousemove="moveLoupe(event)" 
+           onmouseenter="showLoupe()" 
+           onmouseleave="hideLoupe()">
+        <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="GlowTours Amapola" class="loupe-base-img" id="loupeBaseImg">
+        <div class="loupe-glass" id="loupeGlass"></div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <span>Pasa el cursor sobre los ojos, la piel y el bordado de las mangas para auditar la nitidez de 24MP Zero Crop.</span>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--amber);">
+          MAGNIFICACIÓN 2.5X · SENSOR FULL FRAME
+        </span>
+      </div>
+    </article>
+
+    <!-- 08. HOJA DE CONTACTOS & TOGGLE NEGATIVO -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">08</div>
+          <div class="module-title-wrap">
+            <h3>Hoja de Contactos Analógica y Conmutador de Negativo</h3>
+            <div class="module-benchmark">Inspirado en: <b>Guillaume Tomasi (Montreal · Bellas Artes)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Emulsión Analógica con Máscara Naranja Invertible</div>
+      </div>
+
+      <div class="stage-wrapper film-strip-stage">
+        <div class="film-frame-body">
+          <div class="film-sprockets-top">
+            <div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div>
+            <div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div>
+          </div>
+          <span class="film-edge-text film-edge-top">KODAK PORTRA 400 · CAPTOORA LABS · FRAME 24A</span>
+
+          <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Film Frame" class="film-inner-photo" id="filmInnerPhoto">
+
+          <span class="film-edge-text film-edge-bottom">SAFETY FILM · 24x36mm · MONTERREY N.L.</span>
+          <div class="film-sprockets-bottom">
+            <div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div>
+            <div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div><div class="sprocket-hole"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label>Modo de Película:</label>
+          <button class="action-pill-btn active" id="btnFilmPositive" onclick="setFilmMode(false)">POSITIVO COLOR</button>
+          <button class="action-pill-btn" id="btnFilmNegative" onclick="setFilmMode(true)">NEGATIVO COLOR CON MÁSCARA</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 09. SWITCHER DE ILUMINACIÓN 3 PUNTOS -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">09</div>
+          <div class="module-title-wrap">
+            <h3>Consola de Iluminación de Set de 3 Puntos</h3>
+            <div class="module-benchmark">Inspirado en: <b>Liron Eldar Studio (Tel Aviv · Commercial Lighting)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Interruptores de Estudio en Tiempo Real</div>
+      </div>
+
+      <div class="stage-wrapper lighting-stage" id="lightingStage">
+        <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Lighting Set" class="light-base-photo" id="lightBasePhoto">
+        
+        <div class="lighting-rig-ui">
+          <div class="light-toggle-row">
+            <span>KEY LIGHT (Octabox 120cm):</span>
+            <input type="checkbox" id="chkKeyLight" checked onchange="updateStudioLighting()">
+          </div>
+          <div class="light-toggle-row">
+            <span>FILL LIGHT (Rebote Suave):</span>
+            <input type="checkbox" id="chkFillLight" checked onchange="updateStudioLighting()">
+          </div>
+          <div class="light-toggle-row">
+            <span>RIM LIGHT (Luz de Recorte Ámbar):</span>
+            <input type="checkbox" id="chkRimLight" checked onchange="updateStudioLighting()">
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.78rem; color:var(--muted);">
+          Prueba apagar la luz principal para ver cómo el set pasa instantáneamente de comercial a retrato dramático de autor.
+        </span>
+      </div>
+    </article>
+
+    <!-- 10. DESPIECE ÓPTICO 3D DE ELEMENTOS DEL LENTE -->
+    <article class="module-card">
+      <div class="module-header">
+        <div class="module-meta">
+          <div class="module-num">10</div>
+          <div class="module-title-wrap">
+            <h3>Despiece Óptico 3D de Elementos del Lente</h3>
+            <div class="module-benchmark">Inspirado en: <b>Leica M11 Microsite (Alemania · Luxury Optical UI)</b></div>
+          </div>
+        </div>
+        <div class="module-badge">Mecánica: Explosión de Capas de Cristal en el Eje Z</div>
+      </div>
+
+      <div class="stage-wrapper exploded-stage" id="explodedStage" onmousemove="tilt3DLens(event)">
+        <div class="lens-3d-stack" id="lensStack">
+          <div class="lens-element el-sensor-plane" id="elSensor">
+            <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Sensor Image">
+          </div>
+          <div class="lens-element el-doublet-group" id="elDoublet">DOUBLET ACROMÁTICO</div>
+          <div class="lens-element el-iris-ring" id="elIris">IRIS DIAFRAGMA</div>
+          <div class="lens-element el-front-glass" id="elFront">CRISTAL ASFERICO 85mm</div>
+        </div>
+      </div>
+
+      <div class="stage-controls">
+        <div class="control-item">
+          <label for="explodeSlider">Profundidad de Despiece Óptico:</label>
+          <input type="range" id="explodeSlider" min="0" max="100" value="45" oninput="updateExplodedDepth(this.value)">
+          <span id="explodeDepthText" style="color:var(--amber); font-weight:700;">45% separación Z</span>
+        </div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--muted);">
+          Mueve el cursor para girar la perspectiva 3D del barrilete.
+        </span>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- LIGHTBOX MODAL SPRING PHYSICS -->
+  <div class="spring-lightbox" id="springLightbox" onclick="closeSpringModal()">
+    <img src="" alt="Zoom" class="spring-lightbox-img" id="springLightboxImg">
+    <div style="margin-top:14px; font-family:'JetBrains Mono',monospace; font-size:0.85rem; color:#fff;" id="springLightboxCaption"></div>
+    <button class="spring-lightbox-close">Cerrar Inspección (&times;)</button>
+  </div>
+
+  <!-- CALL TO ACTION FOOTER -->
+  <footer class="lab-footer">
+    <h2>¿Cuál de estos motions integrará la experiencia oficial de Captoora?</h2>
+    <p>
+      Todos los módulos están construidos con física de resorte autónoma, renderizado ultra ligero y cero dependencias pesadas. Listos para ser inyectados en la experiencia principal.
+    </p>
+    <div class="footer-ctas">
+      <a href="index.html" class="btn-link-site primary" style="padding: 12px 28px; font-size: 0.9rem;">
+        Ir a la Página Principal con Lente & Flash &rarr;
+      </a>
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20sesion" target="_blank" class="btn-link-site" style="padding: 12px 28px; font-size: 0.9rem;">
+        Contactar Estudio Captoora por WhatsApp
+      </a>
+    </div>
+  </footer>
+
+  <!-- SCRIPT CON MECÁNICAS INTERACTIVAS Y AUDIO SINTÉTICO -->
+  <script>
+    /* ==========================================================================
+       SINTETIZADOR DE AUDIO WEB AUDIO API (CERO DEPENDENCIAS EXTERNAS)
+       ========================================================================== */
+    let audioCtx = null;
+    let audioEnabled = true;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    function toggleAudioEngine() {
+      audioEnabled = !audioEnabled;
+      const txt = document.getElementById('audioStatusText');
+      txt.innerText = audioEnabled ? 'ON' : 'OFF';
+      txt.style.color = audioEnabled ? '#22c55e' : '#ef4444';
+      if (audioEnabled) playClickSound(600, 0.05);
+    }
+
+    function playClickSound(freq = 800, dur = 0.03) {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(120, ctx.currentTime + dur);
+        gain.gain.setValueAtTime(0.18, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + dur);
+      } catch (e) {}
+    }
+
+    function playMechanicalShutterSound() {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        // Cortinilla mecánica delantera
+        playClickSound(1200, 0.04);
+        // Rebote espejo réflex
+        setTimeout(() => playClickSound(420, 0.06), 40);
+        // Cortinilla trasera
+        setTimeout(() => playClickSound(950, 0.03), 90);
+      } catch (e) {}
+    }
+
+    function playTone(freq, dur) {
+      if (!audioEnabled) return;
+      try {
+        const ctx = getAudioContext();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime);
+        gain.gain.setValueAtTime(0.08, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + dur);
+      } catch (e) {}
+    }
+
+    /* ==========================================================================
+       01. DIAFRAGMA 11 CUCHILLAS
+       ========================================================================== */
+    function updateIrisAperture(val) {
+      const circle = document.getElementById('irisApertureHole');
+      const photo = document.getElementById('irisPhoto');
+      const fText = document.getElementById('apertureFStopText');
+      circle.setAttribute('r', val);
+
+      // Calcular número f aproximado
+      const fNum = (140 / val).toFixed(1);
+      fText.innerText = 'f/' + fNum;
+
+      // Desenfoque DoF en la foto según la apertura
+      const blurAmount = Math.max(0, (100 - val) * 0.06);
+      photo.style.filter = `blur(${blurAmount}px)`;
+
+      playClickSound(300 + val * 4, 0.02);
+    }
+
+    function snapShutterClick() {
+      playMechanicalShutterSound();
+      const stage = document.getElementById('irisStage');
+      const flash = document.createElement('div');
+      flash.style.position = 'absolute';
+      flash.style.inset = '0';
+      flash.style.background = '#ffffff';
+      flash.style.zIndex = '50';
+      flash.style.opacity = '1';
+      flash.style.transition = 'opacity 0.25s ease-out';
+      stage.appendChild(flash);
+      setTimeout(() => {
+        flash.style.opacity = '0';
+        setTimeout(() => flash.remove(), 260);
+      }, 30);
+    }
+
+    /* ==========================================================================
+       02. HEARST SPOTLIGHT GALLERY
+       ========================================================================== */
+    function moveSpotlight(e) {
+      const stage = document.getElementById('spotlightStage');
+      const rect = stage.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const cone = document.getElementById('spotlightCone');
+      const dot = document.getElementById('spotlightDot');
+      cone.style.left = x + 'px';
+      cone.style.top = y + 'px';
+      dot.style.left = x + 'px';
+      dot.style.top = y + 'px';
+
+      // Iluminar la foto según la distancia del cursor al centro
+      const photo = document.getElementById('spotlightPhoto');
+      photo.style.filter = `brightness(0.3) contrast(1.15)`;
+    }
+
+    function updateSpotlightBeam(val) {
+      const cone = document.getElementById('spotlightCone');
+      cone.style.width = val + 'px';
+      cone.style.height = val + 'px';
+      playTone(450, 0.03);
+    }
+
+    /* ==========================================================================
+       03. CHABLE HUD & DIAL
+       ========================================================================== */
+    const hudScenes = [
+      { src: 'assets/media_jpg/pf-glow-cpt_0863.jpg', tag: 'SCENE: CICLORAMA BLANCO' },
+      { src: 'assets/media_jpg/pf-glow-cpt_0878.jpg', tag: 'SCENE: RETRATO DE AUTOR' },
+      { src: 'assets/media_jpg/pf-chipinque-01.jpg', tag: 'SCENE: PARQUE CHIPINQUE' }
+    ];
+
+    function switchHudMode(idx, btn) {
+      document.querySelectorAll('.dial-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const photo = document.getElementById('hudPhoto');
+      const tag = document.getElementById('hudSceneTag');
+
+      photo.style.opacity = '0';
+      photo.style.transform = 'scale(0.97)';
+      playClickSound(900, 0.05);
+
+      setTimeout(() => {
+        photo.src = hudScenes[idx].src;
+        tag.innerText = hudScenes[idx].tag;
+        photo.style.opacity = '1';
+        photo.style.transform = 'scale(1)';
+        playTone(1200, 0.08); // AF beep
+      }, 150);
+    }
+
+    /* ==========================================================================
+       04. STUDIO FREIGHT SPRING LIGHTBOX
+       ========================================================================== */
+    function openSpringModal(src, caption) {
+      const modal = document.getElementById('springLightbox');
+      const img = document.getElementById('springLightboxImg');
+      const cap = document.getElementById('springLightboxCaption');
+      img.src = src;
+      cap.innerText = caption;
+      modal.classList.add('active');
+      playMechanicalShutterSound();
+    }
+
+    function closeSpringModal() {
+      const modal = document.getElementById('springLightbox');
+      modal.classList.remove('active');
+      playClickSound(400, 0.03);
+    }
+
+    /* ==========================================================================
+       05. ABERRACIÓN CROMÁTICA & BARREL
+       ========================================================================== */
+    let barrelActive = false;
+
+    function updateChromaticDispersion(val) {
+      const red = document.getElementById('chromaticRed');
+      const blue = document.getElementById('chromaticBlue');
+      const txt = document.getElementById('dispersionText');
+      txt.innerText = val + 'px';
+      red.style.filter = `drop-shadow(-${val}px 0 0 rgba(255,0,0,0.7))`;
+      blue.style.filter = `drop-shadow(${val}px 0 0 rgba(0,180,255,0.7))`;
+      playClickSound(200 + val * 10, 0.015);
+    }
+
+    function toggleBarrelCurvature() {
+      barrelActive = !barrelActive;
+      const wrap = document.getElementById('chromaticWrap');
+      wrap.style.borderRadius = barrelActive ? '40px' : '0px';
+      wrap.style.transform = barrelActive ? 'scale(1.08) perspective(600px) rotateX(4deg)' : 'scale(1)';
+      playClickSound(600, 0.04);
+    }
+
+    /* ==========================================================================
+       06. CUARTO OSCURO / CHEMICAL SAFELIGHT
+       ========================================================================== */
+    function updateChemicalDevelopment(val) {
+      const photo = document.getElementById('safelightPhoto');
+      const txt = document.getElementById('devSecondsText');
+      const stage = document.getElementById('safelightStage');
+
+      const pct = val / 100;
+      const gray = 1 - pct;
+      const sep = 1 - pct * 0.8;
+      const sat = 1 + pct * 0.4;
+      const bright = 0.5 + pct * 0.5;
+
+      photo.style.filter = `grayscale(${gray}) sepia(${sep}) hue-rotate(${-(1 - pct) * 50}deg) saturate(${sat}) brightness(${bright})`;
+
+      if (val < 30) {
+        txt.innerText = `${val} seg (Plata latente débil)`;
+        txt.style.color = '#dc2626';
+        stage.style.background = '#1a0202';
+      } else if (val < 75) {
+        txt.innerText = `${val} seg (Medios tonos emergiendo)`;
+        txt.style.color = '#f59e0b';
+        stage.style.background = '#180a0a';
+      } else {
+        txt.innerText = `${val} seg (Fijado químico estabilizado)`;
+        txt.style.color = '#22c55e';
+        stage.style.background = '#0e121a';
+      }
+      playClickSound(180 + val * 3, 0.01);
+    }
+
+    function autoDevelopAnimation() {
+      let t = 0;
+      const slider = document.getElementById('devSlider');
+      const interval = setInterval(() => {
+        t += 2;
+        slider.value = t;
+        updateChemicalDevelopment(t);
+        if (t >= 100) {
+          clearInterval(interval);
+          playMechanicalShutterSound();
+        }
+      }, 35);
+    }
+
+    /* ==========================================================================
+       07. LUPA 100% CROP
+       ========================================================================== */
+    function showLoupe() {
+      const loupe = document.getElementById('loupeGlass');
+      const base = document.getElementById('loupeBaseImg');
+      loupe.style.display = 'block';
+      loupe.style.backgroundImage = `url('${base.src}')`;
+      playTone(900, 0.04);
+    }
+
+    function hideLoupe() {
+      const loupe = document.getElementById('loupeGlass');
+      loupe.style.display = 'none';
+    }
+
+    function moveLoupe(e) {
+      const stage = document.getElementById('loupeStage');
+      const base = document.getElementById('loupeBaseImg');
+      const loupe = document.getElementById('loupeGlass');
+
+      const rect = stage.getBoundingClientRect();
+      const baseRect = base.getBoundingClientRect();
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      loupe.style.left = x + 'px';
+      loupe.style.top = y + 'px';
+
+      // Posición relativa a la foto base
+      const relX = (e.clientX - baseRect.left) / baseRect.width;
+      const relY = (e.clientY - baseRect.top) / baseRect.height;
+
+      const zoomFactor = 2.5;
+      loupe.style.backgroundSize = `${baseRect.width * zoomFactor}px ${baseRect.height * zoomFactor}px`;
+      loupe.style.backgroundPosition = `${-relX * baseRect.width * zoomFactor + 90}px ${-relY * baseRect.height * zoomFactor + 90}px`;
+    }
+
+    /* ==========================================================================
+       08. 35MM FILM NEGATIVE / POSITIVE
+       ========================================================================== */
+    function setFilmMode(isNegative) {
+      const photo = document.getElementById('filmInnerPhoto');
+      const btnPos = document.getElementById('btnFilmPositive');
+      const btnNeg = document.getElementById('btnFilmNegative');
+
+      if (isNegative) {
+        photo.classList.add('negative-mode');
+        btnNeg.classList.add('active');
+        btnPos.classList.remove('active');
+      } else {
+        photo.classList.remove('negative-mode');
+        btnPos.classList.add('active');
+        btnNeg.classList.remove('active');
+      }
+      playClickSound(750, 0.03);
+    }
+
+    /* ==========================================================================
+       09. LIGHTING RIG SWITCHER
+       ========================================================================== */
+    function updateStudioLighting() {
+      const k = document.getElementById('chkKeyLight').checked;
+      const f = document.getElementById('chkFillLight').checked;
+      const r = document.getElementById('chkRimLight').checked;
+      const photo = document.getElementById('lightBasePhoto');
+
+      let bright = 0.2;
+      let contrast = 1.1;
+
+      if (k) bright += 0.55;
+      if (f) bright += 0.25;
+      if (r) {
+        bright += 0.15;
+        contrast += 0.25;
+      }
+
+      photo.style.filter = `brightness(${bright}) contrast(${contrast})`;
+      playClickSound(500, 0.03);
+    }
+
+    /* ==========================================================================
+       10. EXPLODED LENS 3D STACK
+       ========================================================================== */
+    function updateExplodedDepth(val) {
+      const factor = val / 100;
+      const txt = document.getElementById('explodeDepthText');
+      txt.innerText = `${val}% separación Z`;
+
+      const elFront = document.getElementById('elFront');
+      const elIris = document.getElementById('elIris');
+      const elDoublet = document.getElementById('elDoublet');
+      const elSensor = document.getElementById('elSensor');
+
+      elFront.style.transform = `translateZ(${factor * 220}px)`;
+      elIris.style.transform = `translateZ(${factor * 90}px)`;
+      elDoublet.style.transform = `translateZ(${-factor * 60}px)`;
+      elSensor.style.transform = `translateZ(${-factor * 180}px)`;
+
+      playClickSound(300 + val * 2, 0.015);
+    }
+
+    function tilt3DLens(e) {
+      const stage = document.getElementById('explodedStage');
+      const stack = document.getElementById('lensStack');
+      const rect = stage.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      const rotY = -20 + x * 40;
+      const rotX = 10 - y * 40;
+      stack.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
+    }
+
+    // Inicializar valores al cargar
+    window.addEventListener('DOMContentLoaded', () => {
+      updateExplodedDepth(45);
+      updateStudioLighting();
+    });
+  </script>
+</body>
+</html>
