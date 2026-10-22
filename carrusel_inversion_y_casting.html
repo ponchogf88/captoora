@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CAPTOORA · 100% LEY VISUAL · Cero Texto Estorbando</title>
+  <title>CAPTOORA · 100% LEY VISUAL · La Foto es la Estrella</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #050608;
-      --card-bg: #0c0e14;
+      --bg: #030406;
+      --card-bg: #090b10;
       --border: rgba(255, 255, 255, 0.08);
       --amber: #f59e0b;
-      --cyan: #06b6d4;
+      --green: #10b981;
       --text: #f8fafc;
       --muted: #94a3b8;
     }
@@ -29,17 +29,17 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      padding-bottom: 80px;
+      padding-bottom: 90px;
     }
 
     .top-bar {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 6, 8, 0.95);
+      background: rgba(3, 4, 6, 0.96);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
-      padding: 14px 28px;
+      padding: 12px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -48,7 +48,7 @@
     .brand {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 800;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       font-size: 1.05rem;
     }
     .brand span { color: var(--amber); }
@@ -56,79 +56,80 @@
     .tag-rule {
       font-family: 'JetBrains Mono', monospace;
       font-size: 0.72rem;
-      color: #10b981;
+      color: var(--green);
       border: 1px solid rgba(16, 185, 129, 0.3);
       background: rgba(16, 185, 129, 0.08);
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 999px;
+      font-weight: 700;
     }
 
     .container {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 30px 20px;
+      padding: 24px 20px;
     }
 
-    .notice-bar {
-      background: rgba(245, 158, 11, 0.08);
-      border-left: 3px solid var(--amber);
-      padding: 14px 18px;
-      border-radius: 6px;
-      margin-bottom: 36px;
-      font-size: 0.9rem;
-      color: #e2e8f0;
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(0,0,0,0) 100%);
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 32px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
     }
+
+    .hero-banner strong { color: var(--amber); font-weight: 800; }
 
     .section-title {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.6rem;
+      font-size: 1.55rem;
       font-weight: 800;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .section-sub {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.88rem;
       margin-bottom: 24px;
     }
 
-    /* CARRUSEL VISUAL PURO: CERO TEXTO TAPANDO LA FOTO */
-    .carousel-showcase {
+    /* CARRUSEL DE INVERSIÓN: FOTO 100% LIMPIA, CERO ESTORBO */
+    .carousel-grid {
       display: grid;
       grid-template-columns: 1fr 380px;
-      gap: 28px;
+      gap: 24px;
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px;
-      margin-bottom: 60px;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 50px;
     }
 
     @media (max-width: 900px) {
-      .carousel-showcase {
-        grid-template-columns: 1fr;
-      }
+      .carousel-grid { grid-template-columns: 1fr; }
     }
 
     .viewport-box {
       position: relative;
       background: #000;
-      border-radius: 14px;
+      border-radius: 12px;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      aspect-ratio: 4/5;
-      max-height: 600px;
+      min-height: 540px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     }
 
     .viewport-box img {
       width: 100%;
       height: 100%;
+      max-height: 560px;
       object-fit: contain;
       display: none;
     }
@@ -137,21 +138,21 @@
       display: block;
     }
 
-    .micro-hud {
+    .hud-badge {
       position: absolute;
       top: 14px;
       right: 14px;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
+      font-size: 0.7rem;
+      color: #fff;
       background: rgba(0, 0, 0, 0.7);
       padding: 4px 10px;
       border-radius: 4px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.1em;
     }
 
-    .hud-lens {
+    .hud-studio {
       position: absolute;
       bottom: 14px;
       left: 14px;
@@ -163,375 +164,399 @@
       border-radius: 4px;
     }
 
-    .caption-column {
+    .caption-side {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .slide-thumbs {
+    .thumbs-row {
       display: flex;
       gap: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       overflow-x: auto;
-      padding-bottom: 6px;
+      padding-bottom: 4px;
     }
 
-    .thumb {
-      width: 52px;
-      height: 52px;
-      border-radius: 8px;
+    .thumb-item {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
       overflow: hidden;
       border: 2px solid transparent;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.45;
       transition: all 0.2s ease;
       flex-shrink: 0;
     }
 
-    .thumb.active {
+    .thumb-item.active {
       border-color: var(--amber);
       opacity: 1;
+      transform: scale(1.05);
     }
 
-    .thumb img {
+    .thumb-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
-    .caption-card {
-      background: #040507;
+    .caption-box {
+      background: #020305;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
-      padding: 18px;
-      font-size: 0.88rem;
-      line-height: 1.6;
-      color: #cbd5e1;
+      padding: 16px;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #e2e8f0;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    .caption-text-body {
-      white-space: pre-line;
-      margin-bottom: 14px;
-      max-height: 380px;
+    .caption-scroll {
+      max-height: 360px;
       overflow-y: auto;
+      white-space: pre-line;
       padding-right: 6px;
+      margin-bottom: 14px;
     }
 
-    .copy-btn {
+    .btn-action-copy {
       background: var(--amber);
       color: #000;
       font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.85rem;
       border: none;
       padding: 12px;
       border-radius: 8px;
       cursor: pointer;
+      width: 100%;
       text-align: center;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.2s;
     }
-    .copy-btn:hover { opacity: 0.9; }
+    .btn-action-copy:hover { opacity: 0.9; }
 
-    /* CASTING MODELOS: ENFOQUE VISUAL / MINIMALISTA / AL GRANO */
-    .casting-section-grid {
+    /* CONVOCATORIAS FACEBOOK: MODELO VE LA FOTO DE ESTUDIO + 4 LÍNEAS AL GRANO */
+    .fb-casting-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
     }
 
-    .casting-post-card {
+    .fb-post-mockup {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 16px;
       overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
       display: flex;
       flex-direction: column;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.6);
+      justify-content: space-between;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .casting-post-card:hover {
+    .fb-post-mockup:hover {
       transform: translateY(-4px);
-      border-color: rgba(245, 158, 11, 0.4);
+      border-color: rgba(245, 158, 11, 0.5);
     }
 
-    .casting-gallery {
+    .fb-post-header {
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .fb-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1877f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .fb-meta h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .fb-meta span {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    .fb-text-content {
+      padding: 14px 16px;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #f1f5f9;
+      white-space: pre-line;
+    }
+
+    /* Galería tipo Facebook multiphoto */
+    .fb-media-gallery {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      grid-template-rows: 140px 140px;
-      gap: 4px;
+      grid-template-rows: 150px 150px;
+      gap: 2px;
       background: #000;
-      padding: 4px;
     }
 
-    .casting-gallery .photo-main {
+    .fb-media-gallery .main-pic {
       grid-row: span 2;
-      position: relative;
     }
 
-    .casting-gallery img {
+    .fb-media-gallery img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
 
-    .casting-body {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      justify-content: space-between;
+    .fb-footer-btn {
+      padding: 14px 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .casting-badge-type {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.72rem;
-      color: var(--amber);
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .casting-title-h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-    }
-
-    .casting-text-clean {
-      background: #040508;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 10px;
-      padding: 14px;
-      font-size: 0.85rem;
-      line-height: 1.55;
-      color: #e2e8f0;
-      white-space: pre-line;
-      margin-bottom: 16px;
-    }
-
-    .action-btn-fb {
+    .btn-fb-blue {
       background: #1877f2;
       color: #fff;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.82rem;
-      font-weight: 700;
+      border: none;
+      width: 100%;
       padding: 11px;
       border-radius: 8px;
-      text-align: center;
-      border: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      transition: background 0.2s ease;
+      gap: 6px;
+      transition: background 0.2s;
     }
-    .action-btn-fb:hover { background: #166fe5; }
+    .btn-fb-blue:hover { background: #166fe5; }
   </style>
 </head>
 <body>
 
   <header class="top-bar">
-    <div class="brand">CAPTOORA <span>VISUAL ENGINE</span></div>
-    <div class="tag-rule">LEY VISUAL: 100% FOTOGRAFÍA · 0% TEXTO TAPANDO</div>
+    <div class="brand">CAPTOORA <span>STUDIO MTY</span></div>
+    <div class="tag-rule">LEY VISUAL: MODELO NO LEE · FOTÓGRAFO NO LEE · 100% IMAGEN</div>
   </header>
 
-  <main class="container">
+  <div class="container">
 
-    <div class="notice-bar">
+    <div class="hero-banner">
       <div>
-        <strong>Regla visual aplicada:</strong> El fotógrafo y la modelo NO leen muros de texto encima de las fotos. La foto entra por los ojos limpia y al 100% full-frame. El texto va directo y conciso en el pie de publicación (Caption).
+        <strong>CERO MUROS DE TEXTO:</strong> Las modelos en Facebook e Instagram no leen biblias. Ven la foto de estudio (ciclorama impecable, luz pulida) y 3 líneas clave de convocatoria.
       </div>
-      <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--amber); white-space:nowrap;">
-        ZERO CROP // PURE GLASS
+      <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--amber);">
+        SAN JERÓNIMO MTY // 100% FULL-FRAME
       </div>
     </div>
 
-    <!-- SECCIÓN 1: CARRUSEL RESCATADO DE LUPITA -->
+    <!-- 01. CARRUSEL: LA FOTOGRAFÍA ES UNA INVERSIÓN -->
     <section>
       <h2 class="section-title">01. Carrusel: La Fotografía No Es un Gasto, Es una Inversión</h2>
-      <p class="section-sub">Las imágenes van 100% limpias. El contenido profundo (diamantes, plusvalía, prueba en juicio) vive en el Caption.</p>
+      <p class="section-sub">Fotos 100% limpias (sin textos encima). Todo el argumento de fondo va en el pie de foto (Caption):</p>
 
-      <div class="carousel-showcase">
-        <!-- Visualizador de fotos limpias -->
+      <div class="carousel-grid">
+        <!-- Visualizador Full-Frame Limpio -->
         <div class="viewport-box">
-          <img id="cimg-0" src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Foto 1" class="active">
-          <img id="cimg-1" src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Foto 2">
+          <img id="cimg-0" src="assets/media_jpg/IG_CPT_0700_4x5.jpg" alt="Foto 1" class="active">
+          <img id="cimg-1" src="assets/media_jpg/IG_CPT_0580_4x5.jpg" alt="Foto 2">
           <img id="cimg-2" src="assets/media_jpg/pf-chipinque-fam.jpg" alt="Foto 3">
-          <img id="cimg-3" src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Foto 4">
-          <img id="cimg-4" src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Foto 5">
-          <img id="cimg-5" src="assets/media_jpg/pf-chipinque-02.jpg" alt="Foto 6">
+          <img id="cimg-3" src="assets/media_jpg/pf-cuba-01.jpg" alt="Foto 4">
+          <img id="cimg-4" src="assets/media_jpg/IG_CPT_0630_4x5.jpg" alt="Foto 5">
+          <img id="cimg-5" src="assets/media_jpg/IG_CPT_0750_4x5.jpg" alt="Foto 6">
 
-          <div class="micro-hud" id="hudNumber">FOTO 1 / 6</div>
-          <div class="hud-lens">NIKON D3500 · 35MM · SAN JERÓNIMO</div>
+          <div class="hud-badge" id="hudCount">SLIDE 1 / 6</div>
+          <div class="hud-studio">CAPTOORA STUDIO · ILUMINACIÓN DE AUTOR · SAN JERÓNIMO</div>
         </div>
 
-        <!-- Columna de Caption y Selector -->
-        <div class="caption-column">
+        <!-- Columna de Caption -->
+        <div class="caption-side">
           <div>
-            <div style="font-size:0.75rem; font-family:'JetBrains Mono',monospace; color:var(--muted); margin-bottom:8px;">SELECCIONA SLIDE:</div>
-            <div class="slide-thumbs">
-              <div class="thumb active" onclick="setSlide(0)"><img src="assets/media_jpg/pf-glow-cpt_0855.jpg"></div>
-              <div class="thumb" onclick="setSlide(1)"><img src="assets/media_jpg/pf-glow-cpt_0853.jpg"></div>
-              <div class="thumb" onclick="setSlide(2)"><img src="assets/media_jpg/pf-chipinque-fam.jpg"></div>
-              <div class="thumb" onclick="setSlide(3)"><img src="assets/media_jpg/pf-glow-cpt_0878.jpg"></div>
-              <div class="thumb" onclick="setSlide(4)"><img src="assets/media_jpg/pf-glow-cpt_0863.jpg"></div>
-              <div class="thumb" onclick="setSlide(5)"><img src="assets/media_jpg/pf-chipinque-02.jpg"></div>
+            <div style="font-size:0.72rem; font-family:'JetBrains Mono',monospace; color:var(--muted); margin-bottom:8px;">SELECCIONA SLIDE:</div>
+            <div class="thumbs-row">
+              <div class="thumb-item active" onclick="showSlide(0)"><img src="assets/media_jpg/IG_CPT_0700_4x5.jpg"></div>
+              <div class="thumb-item" onclick="showSlide(1)"><img src="assets/media_jpg/IG_CPT_0580_4x5.jpg"></div>
+              <div class="thumb-item" onclick="showSlide(2)"><img src="assets/media_jpg/pf-chipinque-fam.jpg"></div>
+              <div class="thumb-item" onclick="showSlide(3)"><img src="assets/media_jpg/pf-cuba-01.jpg"></div>
+              <div class="thumb-item" onclick="showSlide(4)"><img src="assets/media_jpg/IG_CPT_0630_4x5.jpg"></div>
+              <div class="thumb-item" onclick="showSlide(5)"><img src="assets/media_jpg/IG_CPT_0750_4x5.jpg"></div>
             </div>
           </div>
 
-          <div class="caption-card">
+          <div class="caption-box">
             <div>
-              <div style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:1rem; margin-bottom:10px; color:#fff;">
-                📝 Caption Completo para Instagram / Facebook:
+              <div style="font-family:'Space Grotesk',sans-serif; font-weight:800; font-size:0.95rem; margin-bottom:8px; color:var(--amber);">
+                📋 Caption Oficial (Instagram &amp; Facebook):
               </div>
-              <div class="caption-text-body" id="carouselCaption">¿Por qué la fotografía nunca es un gasto, sino una inversión? 👇💎
+              <div class="caption-scroll" id="txtCarousel">¿Por qué la fotografía nunca es un gasto, sino una inversión? 👇💎
 
-1️⃣ Es eterna como un diamante: La ropa pasa de moda, los gadgets se vuelven obsoletos, pero una fotografía de autor no caduca. Se queda para siempre.
+1️⃣ Es eterna como un diamante: La ropa se gasta y los teléfonos se cambian, pero una fotografía de autor nunca caduca. Se queda para siempre.
 
-2️⃣ Aumenta su valor con el paso del tiempo: Hoy tienes una foto linda. En 10 o 20 años, esa misma foto con tu gente o en tu mejor momento se vuelve invaluable. No hay activo en el mercado que genere tanta plusvalía emocional.
+2️⃣ Gana valor con los años: Hoy tienes una foto linda. En 10, 20 o 30 años con tu familia o en tu mejor momento, esa misma foto se vuelve invaluable. No hay activo con mayor plusvalía emocional.
 
-3️⃣ Es certeza y poder probatorio: Una fotografía no solo guarda un recuerdo; documenta la verdad indiscutible. Ante la ley o ante la historia, una imagen prueba quién estuvo ahí y qué pasó sin lugar a dudas.
+3️⃣ Certeza y poder probatorio: Una fotografía no miente; documenta la verdad indiscutible. Ante la ley o ante la historia, una imagen prueba quién estuvo ahí y qué sucedió.
 
-4️⃣ Es la máquina del tiempo de tu vida: Captura la energía que tienes hoy para que nunca se diluya.
+4️⃣ Cierra o tira contratos: En marcas personales y negocios, una buena iluminación y retrato transmiten autoridad antes de que digas una sola palabra.
 
 Desliza para ver la serie completa ➡️
 
-¿Tú ves la fotografía como un recuerdo o como un activo para toda la vida? Te leo en los comentarios.
+¿Ves la fotografía como un gasto pasajero o como una joya para toda la vida? Te leo en los comentarios.
 
-👉 Sígueme en @captoora para ver cómo dominamos la luz en cada disparo.
+👉 Sígueme en @captoora
 #Captoora #FotografiaProfesional #RetratoDeAutor #Monterrey #SanJeronimo #InversionParaSiempre</div>
             </div>
-            <button class="copy-btn" onclick="copyText('carouselCaption')">Copiar Caption del Carrusel</button>
+            <button class="btn-action-copy" onclick="copySnippet('txtCarousel')">Copiar Caption</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN 2: 4 CONVOCATORIAS DE CASTING (CERO MUROS DE TEXTO, MODELOS VEN FOTOS) -->
+    <!-- 02. CONVOCATORIAS DE CASTING FACEBOOK (CERO TEXTOS LARGOS, FOTO PRO PRIMERO) -->
     <section>
-      <h2 class="section-title">02. Convocatoria de Modelos para Facebook</h2>
-      <p class="section-sub">Modelo no lee testamentos: ve la calidad de la luz y el estudio, y lee 4 líneas clave. Elige cuál disparar:</p>
+      <h2 class="section-title">02. Cuatro Formatos de Convocatoria para Facebook</h2>
+      <p class="section-sub">Publicación lista con fotos reales de estudio de Captoora y copy corto de 3 líneas (el que convierte en grupos de Monterrey):</p>
 
-      <div class="casting-section-grid">
+      <div class="fb-casting-grid">
 
-        <!-- Opción 1: Directa TFP / Book -->
-        <div class="casting-post-card">
-          <div class="casting-gallery">
-            <div class="photo-main"><img src="assets/media_jpg/pf-glow-cpt_0855.jpg"></div>
-            <div><img src="assets/media_jpg/pf-glow-cpt_0853.jpg"></div>
-            <div><img src="assets/media_jpg/pf-glow-cpt_0863.jpg"></div>
+        <!-- Opción A: Directa TFP / Book -->
+        <div class="fb-post-mockup">
+          <div class="fb-post-header">
+            <div class="fb-avatar">AG</div>
+            <div class="fb-meta">
+              <h4>Alfonso Gutiérrez · Captoora Studio</h4>
+              <span>Monterrey · Grupos de Fotografía y Modelaje</span>
+            </div>
           </div>
-          <div class="casting-body">
-            <div>
-              <div class="casting-badge-type">OPCIÓN 1 // MÁS EFECTIVA (ALTA CONVERSIÓN)</div>
-              <h3 class="casting-title-h3">Convocatoria Directa Book / TFP</h3>
-              <div class="casting-text-clean" id="castText1">📸 SE BUSCA MODELO // COLABORACIÓN TFP
+          <div class="fb-text-content" id="fbCopyA">📸 Se solicita modelo para colaboración (TFP)
 📍 Estudio en Colinas de San Jerónimo, Monterrey.
-✨ Para sesión editorial en ciclorama con iluminación profesional.
-🎁 Se entrega selección de fotos en alta resolución totalmente editadas para tu book/portafolio.
+✨ Sesión editorial en ciclorama con iluminación profesional.
+🎁 Se entrega material en alta resolución totalmente editado para tu book.
 
-Interesadas dejen comentario o envíen DM con su perfil para coordinar fecha y compartirles el moodboard.</div>
-            </div>
-            <button class="action-btn-fb" onclick="copyText('castText1')">Copiar Texto Opción 1</button>
+👉 Interesadas mandar DM con su book o dejar comentario para coordinar fecha.</div>
+          <div class="fb-media-gallery">
+            <div class="main-pic"><img src="assets/media_jpg/IG_CPT_0700_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0580_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0750_4x5.jpg"></div>
+          </div>
+          <div class="fb-footer-btn">
+            <button class="btn-fb-blue" onclick="copySnippet('fbCopyA')">Copiar Publicación Opción A</button>
           </div>
         </div>
 
-        <!-- Opción 2: Beauty & Skincare -->
-        <div class="casting-post-card">
-          <div class="casting-gallery">
-            <div class="photo-main"><img src="assets/media_jpg/pf-glow-cpt_0878.jpg"></div>
-            <div><img src="assets/media_jpg/pf-glow-cpt_0855.jpg"></div>
-            <div><img src="assets/media_jpg/pf-barbie-01.jpg"></div>
+        <!-- Opción B: Beauty & Skincare -->
+        <div class="fb-post-mockup">
+          <div class="fb-post-header">
+            <div class="fb-avatar">AG</div>
+            <div class="fb-meta">
+              <h4>Alfonso Gutiérrez · Captoora Studio</h4>
+              <span>Monterrey · Modelos / Edecanes MTY</span>
+            </div>
           </div>
-          <div class="casting-body">
-            <div>
-              <div class="casting-badge-type">OPCIÓN 2 // BEAUTY & MAKEUP</div>
-              <h3 class="casting-title-h3">Casting Beauty & Rostro</h3>
-              <div class="casting-text-clean" id="castText2">💄 CASTING MODELOS / CREADORAS // BEAUTY
-📍 Colinas de San Jerónimo, MTY.
-Buscamos modelos y creadoras para sesión comercial de beauty, piel y maquillaje en estudio.
+          <div class="fb-text-content" id="fbCopyB">💄 Casting Creadoras &amp; Modelos // Beauty &amp; Makeup
+📍 Estudio en San Jerónimo, MTY.
+Buscamos rostros para sesión comercial de beauty, piel y maquillaje.
 ✔️ Iluminación suave de alta definición.
-✔️ Material profesional para tus redes y portafolio.
+✔️ Fotos listas para tu portafolio y redes.
 
-¿Te interesa? Mándame un mensaje directo o comenta aquí abajo para enviarte las referencias.</div>
-            </div>
-            <button class="action-btn-fb" onclick="copyText('castText2')">Copiar Texto Opción 2</button>
+Mándame mensaje directo para enviarte las referencias visuales.</div>
+          <div class="fb-media-gallery">
+            <div class="main-pic"><img src="assets/media_jpg/IG_CPT_0750_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0700_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0580_4x5.jpg"></div>
+          </div>
+          <div class="fb-footer-btn">
+            <button class="btn-fb-blue" onclick="copySnippet('fbCopyB')">Copiar Publicación Opción B</button>
           </div>
         </div>
 
-        <!-- Opción 3: Fitness & Actitud -->
-        <div class="casting-post-card">
-          <div class="casting-gallery">
-            <div class="photo-main"><img src="assets/media_jpg/pf-0867.jpg"></div>
-            <div><img src="assets/media_jpg/pf-1042.jpg"></div>
-            <div><img src="assets/media_jpg/pf-1062.jpg"></div>
+        <!-- Opción C: Fitness & Actitud -->
+        <div class="fb-post-mockup">
+          <div class="fb-post-header">
+            <div class="fb-avatar">AG</div>
+            <div class="fb-meta">
+              <h4>Alfonso Gutiérrez · Captoora Studio</h4>
+              <span>Monterrey · Fitness / Colaboraciones</span>
+            </div>
           </div>
-          <div class="casting-body">
-            <div>
-              <div class="casting-badge-type">OPCIÓN 3 // FITNESS & LIFESTYLE</div>
-              <h3 class="casting-title-h3">Sesión Fitness / Sportswear</h3>
-              <div class="casting-text-clean" id="castText3">⚡ MODELOS FITNESS & ATHLETIC // MONTERREY
+          <div class="fb-text-content" id="fbCopyC">⚡ Convocatoria Fitness &amp; Sportswear // TFP
 📍 Estudio en San Jerónimo.
-Sesión en ciclorama blanco con iluminación esculpida deportiva y de alta energía.
-Entrega de fotos pulidas para tu marca personal / fitness profile.
+Sesión en ciclorama blanco con iluminación esculpida deportiva.
+Fotos profesionales para tu marca personal o perfil fitness.
 
-Si te apasiona el entrenamiento y quieres fotos de impacto, deja tu comentario o envía DM.</div>
-            </div>
-            <button class="action-btn-fb" onclick="copyText('castText3')">Copiar Texto Opción 3</button>
+Si entrenas y buscas contenido de impacto para tu feed, manda DM o comenta aquí.</div>
+          <div class="fb-media-gallery">
+            <div class="main-pic"><img src="assets/media_jpg/IG_CPT_0630_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0700_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0800_4x5.jpg"></div>
+          </div>
+          <div class="fb-footer-btn">
+            <button class="btn-fb-blue" onclick="copySnippet('fbCopyC')">Copiar Publicación Opción C</button>
           </div>
         </div>
 
-        <!-- Opción 4: Creativa "Dominar la luz" -->
-        <div class="casting-post-card">
-          <div class="casting-gallery">
-            <div class="photo-main"><img src="assets/media_jpg/pf-0041.jpg"></div>
-            <div><img src="assets/media_jpg/pf-cuba-01.jpg"></div>
-            <div><img src="assets/media_jpg/pf-glow-cpt_0855.jpg"></div>
-          </div>
-          <div class="casting-body">
-            <div>
-              <div class="casting-badge-type">OPCIÓN 4 // EDITORIAL & CLAROSCURO</div>
-              <h3 class="casting-title-h3">Editorial "Dominar la Luz"</h3>
-              <div class="casting-text-clean" id="castText4">🎬 FOTOGRAFÍA EDITORIAL // CASTING MTY
-"Para dominar la luz, primero tienes que aprender a controlar la oscuridad."
-Buscamos perfiles con actitud para sesión conceptual en estudio (San Jerónimo).
-Fotos con vibra cinematográfica listas para tu feed.
-
-Deja un comentario o manda mensaje directo para enviarte el moodboard completo.</div>
+        <!-- Opción D: Editorial "Para dominar la luz" -->
+        <div class="fb-post-mockup">
+          <div class="fb-post-header">
+            <div class="fb-avatar">AG</div>
+            <div class="fb-meta">
+              <h4>Alfonso Gutiérrez · Captoora Studio</h4>
+              <span>Monterrey · Arte y Fotografía</span>
             </div>
-            <button class="action-btn-fb" onclick="copyText('castText4')">Copiar Texto Opción 4</button>
+          </div>
+          <div class="fb-text-content" id="fbCopyD">🎬 Sesión Editorial de Autor // San Jerónimo
+"Para dominar la luz, primero tienes que aprender a controlar la oscuridad."
+Buscamos perfiles para retrato conceptual en estudio.
+Entrega de selección en alta resolución para tu book.
+
+Comenta abajo o mándame DM para compartirte el moodboard.</div>
+          <div class="fb-media-gallery">
+            <div class="main-pic"><img src="assets/media_jpg/IG_CPT_0580_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0700_4x5.jpg"></div>
+            <div><img src="assets/media_jpg/IG_CPT_0630_4x5.jpg"></div>
+          </div>
+          <div class="fb-footer-btn">
+            <button class="btn-fb-blue" onclick="copySnippet('fbCopyD')">Copiar Publicación Opción D</button>
           </div>
         </div>
 
       </div>
     </section>
 
-  </main>
+  </div>
 
   <script>
-    function setSlide(index) {
-      // Ocultar todas
+    function showSlide(idx) {
       for(let i=0; i<6; i++) {
         document.getElementById('cimg-' + i).classList.remove('active');
-        document.querySelectorAll('.thumb')[i].classList.remove('active');
+        document.querySelectorAll('.thumb-item')[i].classList.remove('active');
       }
-      document.getElementById('cimg-' + index).classList.add('active');
-      document.querySelectorAll('.thumb')[index].classList.add('active');
-      document.getElementById('hudNumber').innerText = 'FOTO ' + (index + 1) + ' / 6';
+      document.getElementById('cimg-' + idx).classList.add('active');
+      document.querySelectorAll('.thumb-item')[idx].classList.add('active');
+      document.getElementById('hudCount').innerText = 'SLIDE ' + (idx + 1) + ' / 6';
     }
 
-    function copyText(elemId) {
-      const text = document.getElementById(elemId).innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert('¡Copiado al portapapeles!');
+    function copySnippet(id) {
+      const val = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(val).then(() => {
+        alert('Copiado al portapapeles');
       });
     }
   </script>
