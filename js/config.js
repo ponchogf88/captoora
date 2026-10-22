@@ -89,57 +89,19 @@ window.CAPTOORA = {
   ],
 
   // ---- PORTAFOLIO --------------------------------------------------
-  // Fotos propias (nada de banco ni IA). Para agregar una: sube el .jpg.b64 a
-  // assets/media/ y añade un objeto aquí. cat = una de las claves de portfolioCats.
-  // w/h = tamaño real de la foto (para que el grid no brinque al cargar).
+  // Únicamente fotografía real aprobada: GlowTours y Chipinque.
   portfolioCats: [
-    { key: "retrato", label: "Retrato" },
-    { key: "eventos", label: "Eventos" },
-    { key: "marca",   label: "Producto y marca" },
-    { key: "fondoblanco", label: "Fondo blanco / Estudio" },
-    { key: "ninos",   label: "Niños / Familia" },
-    { key: "parque",  label: "Parque / Exterior" },
-    { key: "viajes",  label: "Viajes / Documental" },
-    { key: "editorial", label: "Editorial / Moda" },
-    { key: "fachada", label: "Fachada", soon: true }
+    { key: "glowtours", label: "GlowTours" },
+    { key: "chipinque", label: "Chipinque" }
   ],
   portfolio: [
-    { cat: "viajes",  image: "assets/media/pf-cuba-01.jpg.b64", w: 900,  h: 1200, alt: "Street photography y arquitectura colonial en La Habana, Cuba" },
-    { cat: "editorial", image: "assets/media/pf-villarreal-01.jpg.b64", w: 1200, h: 800, alt: "Retrato editorial con óptica réflex profesional 24MP" },
-    { cat: "retrato", image: "assets/media/pf-1946.jpg.b64", w: 800,  h: 1200, alt: "Retrato de hombre en exterior, luz de tarde" },
-    { cat: "viajes",  image: "assets/media/pf-texas-01.jpg.b64", w: 900,  h: 1200, alt: "Paisaje y carretera abierta en viaje por Texas" },
-    { cat: "eventos", image: "assets/media/pf-0032.jpg.b64", w: 1200, h: 800,  alt: "Foto grupal de un evento de bienestar al aire libre" },
-    { cat: "editorial", image: "assets/media/pf-gio-01.jpg.b64", w: 675, h: 1200, alt: "Retrato editorial de moda y estilo de vida" },
-    { cat: "marca",   image: "assets/media/pf-1027.jpg.b64", w: 1200, h: 800,  alt: "Exhibición de productos Nutriplus y Dr. C. Tuna en evento Farmasi" },
-    { cat: "ninos",   image: "assets/media/pf-peloni-01.jpg.b64", w: 360, h: 540, alt: "Retrato de niña en sesión de cumpleaños con sonrisa natural" },
-    { cat: "parque",  image: "assets/media/pf-chipinque-01.jpg.b64", w: 1200, h: 900, alt: "Paseo familiar por el sendero arbolado en Parque Ecológico Chipinque" },
-    { cat: "fondoblanco", image: "assets/media/pf-barbie-01.jpg.b64", w: 360, h: 540, alt: "Sesión temática Barbie Lulú en caja de muñeca y vestuario rosa" },
-    { cat: "editorial", image: "assets/media/pf-poncho25-01.jpg.b64", w: 540, h: 360, alt: "Retrato personal de marca y lifestyle en exterior" },
-    { cat: "retrato", image: "assets/media/pf-0912.jpg.b64", w: 800,  h: 1200, alt: "Atleta haciendo parada de manos junto a la alberca" },
-    { cat: "viajes",  image: "assets/media/pf-texas-02.jpg.b64", w: 1200, h: 900, alt: "Lifestyle y luz natural de exterior en Texas" },
-    { cat: "parque",  image: "assets/media/pf-tamayo-01.jpg.b64", w: 540, h: 360, alt: "Sesión familiar de tarde en las áreas verdes del Parque Rufino Tamayo" },
-    { cat: "editorial", image: "assets/media/pf-villarreal-02.jpg.b64", w: 1200, h: 800, alt: "Sesión de estudio y control de iluminación profesional" },
-    { cat: "ninos",   image: "assets/media/pf-peloni-02.jpg.b64", w: 360, h: 540, alt: "Sesión infantil en estudio, pose elegante de vestido de fiesta" },
-    { cat: "eventos", image: "assets/media/pf-mama65-01.jpg.b64", w: 540, h: 360, alt: "Celebración de cumpleaños familiar de Mamá 65" },
-    { cat: "fondoblanco", image: "assets/media/pf-barbie-02.jpg.b64", w: 360, h: 540, alt: "Retrato editorial temático Barbie con escenografía rosa de vitrina" },
-    { cat: "eventos", image: "assets/media/pf-1042.jpg.b64", w: 1200, h: 800,  alt: "Coaches dirigiendo al grupo frente al banner del evento" },
-    { cat: "ninos",   image: "assets/media/pf-chipinque-fam.jpg.b64", w: 1200, h: 900, alt: "Retrato grupal de familia completa en exteriores bajo los pinos de Chipinque" },
-    { cat: "parque",  image: "assets/media/pf-chipinque-02.jpg.b64", w: 1200, h: 900, alt: "Retrato exterior con luz natural y vegetación en Chipinque" },
-    { cat: "marca",   image: "assets/media/pf-1062.jpg.b64", w: 800,  h: 1200, alt: "Activación de marca Farmasi con entrenamiento al aire libre" },
-    { cat: "ninos",   image: "assets/media/pf-abuela-01.jpg.b64", w: 385, h: 257, alt: "Celebración emotiva de cumpleaños familiar de la abuelita" },
-    { cat: "editorial", image: "assets/media/pf-poncho25-02.jpg.b64", w: 360, h: 540, alt: "Sesión personal con luz natural de atardecer" },
-    { cat: "parque",  image: "assets/media/pf-tamayo-02.jpg.b64", w: 540, h: 360, alt: "Retrato familiar al aire libre con fondo natural en Parque Rufino Tamayo" },
-    { cat: "fondoblanco", image: "assets/media/pf-barbie-03.jpg.b64", w: 360, h: 540, alt: "Pose de moda en ciclorama temática Barbie para sesión de cumpleaños" },
-    { cat: "fondoblanco", image: "assets/media/pf-princis-01.jpg.b64", w: 360, h: 540, alt: "Retrato en ciclorama para sesión de cumpleaños Princis 33" },
-    { cat: "retrato", image: "assets/media/pf-1957.jpg.b64", w: 902,  h: 1200, alt: "Retrato de hombre con camisa negra" },
-    { cat: "ninos",   image: "assets/media/pf-peloni-03.jpg.b64", w: 504, h: 360, alt: "Toma espontánea de cumpleaños infantil con detalles festivos" },
-    { cat: "eventos", image: "assets/media/pf-mama65-02.jpg.b64", w: 540, h: 360, alt: "Convivencia y momentos emotivos de aniversario familiar" },
-    { cat: "parque",  image: "assets/media/pf-tamayo-03.jpg.b64", w: 359, h: 430, alt: "Momento espontáneo familiar caminando por los senderos del parque" },
-    { cat: "eventos", image: "assets/media/pf-0867.jpg.b64", w: 1200, h: 800,  alt: "Vista general del evento con banner Nutriplus" },
-    { cat: "marca",   image: "assets/media/pf-0041.jpg.b64", w: 1200, h: 800,  alt: "Momento de baño de hielo durante la activación de marca" },
-    { cat: "fondoblanco", image: "assets/media/pf-w0818.jpg.b64", w: 800, h: 1200, alt: "Grupo de modelos Farmasi en fondo blanco" },
-    { cat: "fondoblanco", image: "assets/media/pf-w0828.jpg.b64", w: 1200, h: 800, alt: "Cuatro modelos Farmasi de pie en fondo blanco" },
-    { cat: "fondoblanco", image: "assets/media/pf-w0842.jpg.b64", w: 1200, h: 800, alt: "Modelos Farmasi con productos Nutriplus en fondo blanco" }
+    { cat: "glowtours", image: "assets/media/pf-glow-cpt_0853.jpg.b64", w: 1200, h: 800, alt: "Fotografía oficial de evento GlowTours en Amapola Eventos" },
+    { cat: "glowtours", image: "assets/media/pf-glow-cpt_0855.jpg.b64", w: 800,  h: 1200, alt: "Retrato de participante en evento GlowTours con luz de autor" },
+    { cat: "glowtours", image: "assets/media/pf-glow-cpt_0863.jpg.b64", w: 1200, h: 800, alt: "Dinámica y activación en set GlowTours" },
+    { cat: "glowtours", image: "assets/media/pf-glow-cpt_0878.jpg.b64", w: 1200, h: 800, alt: "Momento estelar y energía en GlowTours" },
+    { cat: "chipinque",  image: "assets/media/pf-chipinque-01.jpg.b64", w: 1200, h: 900, alt: "Paseo familiar por el sendero arbolado en Parque Ecológico Chipinque" },
+    { cat: "chipinque",  image: "assets/media/pf-chipinque-02.jpg.b64", w: 1200, h: 900, alt: "Retrato exterior con luz natural y vegetación en Chipinque" },
+    { cat: "chipinque",  image: "assets/media/pf-chipinque-fam.jpg.b64", w: 1200, h: 900, alt: "Retrato grupal de familia completa en exteriores bajo los pinos de Chipinque" }
   ],
 
   // ---- PREGUNTAS FRECUENTES ---------------------------------------

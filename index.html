@@ -3,225 +3,927 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Captoora · Estudio de foto en Monterrey</title>
-  <meta name="description" content="Estudio de foto en Colinas de San Jerónimo, Monterrey. Fotografía profesional y renta de estudio con tres escenarios en Monterrey.">
-  <meta name="theme-color" content="#050505">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Captoora · Estudio de foto en Monterrey">
-  <meta property="og:description" content="Fotografía profesional y renta de estudio con tres escenarios en Monterrey.">
-  <meta property="og:image" content="https://ponchogf88.github.io/captoora/assets/banner.png">
-  <meta property="og:url" content="https://ponchogf88.github.io/captoora/">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://ponchogf88.github.io/captoora/assets/banner.png">
-  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <title>CAPTOORA STUDIO · Estudio Fotográfico en Monterrey</title>
+  <meta name="description" content="Estudio fotográfico en Colinas de San Jerónimo, Monterrey. Tres escenarios: ciclorama blanco, iluminación de autor y parque natural contiguo.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/captoora.css">
-  <link rel="stylesheet" href="css/stars.css">
-  <link rel="stylesheet" href="css/logo.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "PhotographyBusiness",
-    "name": "Captoora",
-    "url": "https://ponchogf88.github.io/captoora/",
-    "logo": "https://ponchogf88.github.io/captoora/assets/banner.png",
-    "image": "https://ponchogf88.github.io/captoora/assets/banner.png",
-    "telephone": "+528140050088",
-    "address": {"@type": "PostalAddress", "streetAddress": "Av. Paseo de los Álamos 165, Colinas de San Jerónimo", "postalCode": "64630", "addressLocality": "Monterrey", "addressRegion": "Nuevo León", "addressCountry": "MX"},
-    "sameAs": ["https://instagram.com/captoora.studio", "https://www.tiktok.com/@captoora.studiomty", "https://x.com/captoora_studio"]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+    }
+    :root {
+      --bg: #040507;
+      --card-bg: #0c0d12;
+      --border: rgba(255, 255, 255, 0.1);
+      --amber: #f59e0b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ==========================================================================
+       1. FLASH BURST LAYER (AUTOMÁTICO AL ENTRAR + CLICK RE-TRIGGER)
+       ========================================================================== */
+    #flash-screen {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 100000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.08s ease-out;
+    }
+
+    /* ==========================================================================
+       2. HERO LENS STAGE (SCROLL DOWN PARA HACER ZOOM Y ENTRAR A LA CÁMARA)
+       ========================================================================== */
+    .lens-hero-stage {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #11141e 0%, #040507 80%);
+      overflow: hidden;
+      perspective: 1200px;
+    }
+
+    /* TELEMETRÍA DEL VISOR DE CÁMARA (HUD) */
+    .viewfinder-hud {
+      position: absolute;
+      inset: 24px;
+      pointer-events: none;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hud-top, .hud-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+    }
+    .hud-brackets {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px;
+      height: 380px;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: rotateRing 30s linear infinite;
+    }
+    @keyframes rotateRing {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* EL LENTE Y LOGO SIGNATURE CENTRAL */
+    .master-lens-wrapper {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+      will-change: transform, opacity;
+      cursor: pointer;
+      transition: transform 0.1s ease-out;
+    }
+
+    .lens-outer-barrel {
+      position: absolute;
+      inset: -16px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(6, 182, 212, 0.08) 50%, transparent 70%);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+
+    .signature-glass-core {
+      width: 240px;
+      height: 240px;
+      object-fit: contain;
+      border-radius: 50%;
+      filter: drop-shadow(0 0 25px rgba(245, 158, 11, 0.4));
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .focus-reticle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .focus-reticle::after {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #ef4444;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ef4444;
+      animation: pulseRed 1s infinite alternate;
+    }
+    @keyframes pulseRed {
+      from { transform: scale(0.8); opacity: 0.6; }
+      to { transform: scale(1.3); opacity: 1; }
+    }
+
+    .lens-kicker {
+      margin-top: 36px;
+      text-align: center;
+      z-index: 15;
+    }
+    .lens-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+    .lens-hint {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      color: var(--amber);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .scroll-arrow {
+      animation: bounceArrow 1.5s infinite ease-in-out;
+    }
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
+    }
+
+    /* ==========================================================================
+       3. EL INTERIOR DE LA CÁMARA (EL ROLLO INFINITO ANALÓGICO)
+       ========================================================================== */
+    .camera-interior {
+      position: relative;
+      background: #06070a;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 80px 24px 120px;
+      overflow: hidden;
+    }
+
+    /* PERFORACIONES DE ROLLO DE PELÍCULA 35MM (ARRIBA Y ABAJO) */
+    .film-strip-ribbon {
+      display: flex;
+      gap: 24px;
+      padding: 12px 0;
+      border-top: 2px dashed rgba(255, 255, 255, 0.12);
+      border-bottom: 2px dashed rgba(255, 255, 255, 0.12);
+      overflow: hidden;
+      margin-bottom: 60px;
+      background: #020203;
+    }
+    .film-sprocket-text {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 3px;
+      white-space: nowrap;
+      animation: slideRibbon 25s linear infinite;
+    }
+    @keyframes slideRibbon {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* CONTENEDOR CENTRAL DE PÁGINA */
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sec-head {
+      margin-bottom: 40px;
+    }
+    .sec-kicker {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--amber);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .sec-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+    .sec-desc {
+      color: var(--muted);
+      font-size: 15px;
+      margin-top: 10px;
+      max-width: 650px;
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       4. TARJETAS FOTOGRÁFICAS (PORTAFOLIO EXCLUSIVO: GLOWTOURS Y CHIPINQUE)
+       ========================================================================== */
+    .photo-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      margin-bottom: 90px;
+    }
+
+    .photo-print-card {
+      background: #0a0c10;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 14px 14px 18px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-print-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      border-color: rgba(245, 158, 11, 0.5);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(245, 158, 11, 0.15);
+    }
+
+    .photo-inner-frame {
+      width: 100%;
+      height: 380px;
+      background: #000;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-inner-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .photo-print-card:hover .photo-inner-frame img {
+      transform: scale(1.04);
+    }
+
+    .photo-meta-bar {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 10px;
+    }
+    .photo-stamp {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--amber);
+      text-transform: uppercase;
+    }
+    .photo-num {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 10px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .photo-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 6px;
+    }
+
+    /* ==========================================================================
+       5. PAQUETES DE ESTUDIO (TARJETAS CONTACT SHEET)
+       ========================================================================== */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+
+    .package-card {
+      background: #0d0f17;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .package-card.featured {
+      border-color: var(--amber);
+      background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.12) 0%, #0d0f17 70%);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.15);
+    }
+    .pkg-badge {
+      position: absolute;
+      top: -11px;
+      right: 20px;
+      background: var(--amber);
+      color: #000;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 12px;
+      border-radius: 999px;
+    }
+    .pkg-name {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .pkg-price {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .pkg-price span {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 400;
+    }
+    .pkg-items {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .pkg-items li {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pkg-items li::before {
+      content: '✓';
+      color: var(--amber);
+      font-weight: 700;
+    }
+    .pkg-btn {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .package-card.featured .pkg-btn {
+      background: var(--amber);
+      color: #000;
+      border: none;
+    }
+    .pkg-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* ==========================================================================
+       6. TESTIMONIOS (HOJAS DE REVELADO FOTOGRÁFICO)
+       ========================================================================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+    .test-card {
+      background: #090b10;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .test-quote {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #cbd5e1;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .test-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: var(--amber);
+      font-size: 14px;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .test-meta h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .test-meta p {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ==========================================================================
+       7. UBICACIÓN & CONTACTO (SAN JERÓNIMO STUDIO)
+       ========================================================================== */
+    .studio-location-box {
+      background: radial-gradient(circle at center, #101420 0%, #06070a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+    .loc-info h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .loc-info p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+    .loc-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-maps {
+      background: #fff;
+      color: #000;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+    }
+    .btn-wa-action {
+      background: var(--amber);
+      color: #000;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 30px 24px;
+      text-align: center;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 1.5px;
+    }
+  </style>
 </head>
 <body>
-  <canvas class="sky stars-canvas" id="sky" data-fixed="1" data-count="70" aria-hidden="true"></canvas>
 
+  <!-- 1. CAPA DE FLASH FOTOGRÁFICO (DESTELLO AL ENTRAR + CLICK) -->
+  <div id="flash-screen"></div>
 
-  <header class="nav" id="nav">
-    <div class="wrap nav__in">
-      <a href="#inicio" class="nav__brand" aria-label="Captoora, inicio">
-        <span class="logo logo--nav" role="img" aria-label="Captoora"></span>
-      </a>
-      <nav class="nav__links" id="nav-links" aria-label="Principal">
-        <a href="#evento">Agenda</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#parque">Parque</a>
-        <a href="#escenarios">Escenarios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="captoora_fused_experience.html" style="color:var(--c-lime); font-weight:600;">Experiencia 3D</a>
-        <a href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" style="color:#38bdf8; font-weight:600;">Biometrics 3D</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      <a class="btn btn--lime btn--sm nav__cta" data-wa="Hola Captoora, quiero apartar una sesión." href="https://wa.me/528140050088" target="_blank" rel="noopener">WhatsApp</a>
+  <!-- 2. STAGE DEL LENTE PRINCIPAL (ZOOM IN AL SCROLLEAR) -->
+  <section class="lens-hero-stage" id="lens-stage">
+    
+    <!-- TELEMETRÍA DEL VISOR -->
+    <div class="viewfinder-hud">
+      <div class="hud-top">
+        <span>CAPTOORA · 50MM PRO T1.4</span>
+        <span>REC ● 24.2 MP RAW</span>
+        <span>MONTERREY, N.L.</span>
+      </div>
+
+      <div class="hud-brackets"></div>
+
+      <div class="hud-bottom">
+        <span>ISO 100</span>
+        <span>1/250s · f/1.4</span>
+        <span>WB: 5600K TUNGSTEN</span>
+        <span>OPTICAL SHUTTER</span>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <!-- 1. HERO -->
-    <section class="hero" id="inicio">
-      <video class="hero__video" id="hero-video" autoplay muted loop playsinline
-             data-b64-wide="assets/media/hero-night-wide.mp4.b64"
-             data-b64-tall="assets/media/hero-night.mp4.b64"
-             data-poster-wide="hero-night-wide-poster"
-             data-poster-tall="hero-night-poster"></video>
-      <div class="hero__shade"></div>
-      <canvas class="hero-stars stars-canvas" id="hero-stars" data-count="42" aria-hidden="true"></canvas>
+    <!-- EL LENTE CON EL LOGO SIGNATURE CENTRAL -->
+    <div class="master-lens-wrapper" id="master-lens" onclick="triggerFlashAndShutter()">
+      <div class="lens-outer-barrel"></div>
+      <img src="assets/captoora_signature_logo.png" alt="Captoora Master Signature Lens" class="signature-glass-core" id="lens-glass">
+      <div class="focus-reticle"></div>
+    </div>
 
-      <div class="wrap hero__in">
-        <p class="kicker"><span class="dot"></span>Estudio de foto · Colinas de San Jerónimo, Monterrey</p>
-        <h1 class="hero__title">
-          <span class="logo logo--hero" aria-hidden="true"></span><span class="sr-only">Captoora</span>
-        </h1>
-        <p class="hero__lead">Momentos que permanecen.</p>
-        <p class="hero__sub">Fotografía profesional y renta de estudio con tres escenarios en Monterrey. Iluminación y dirección personalizada para tu sesión.</p>
-        <div class="hero__ctas">
-          <a class="btn btn--lime" data-wa="Hola Captoora, quiero apartar una sesión." href="https://wa.me/528140050088" target="_blank" rel="noopener">Aparta por WhatsApp</a>
-          <a class="btn btn--ghost" href="captoora_fused_experience.html">Experiencia Cinematográfica</a>
-          <a class="btn btn--ghost" href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" style="border-color:#38bdf8; color:#38bdf8;">🧬 Biometrics 3D</a>
+    <div class="lens-kicker">
+      <div class="lens-title">CAPTOORA STUDIO</div>
+      <div class="lens-hint">
+        <span>Haz Scroll Down para entrar a la cámara</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 3. INTERIOR DE LA CÁMARA (EL ROLLO INFINITO ANALÓGICO) -->
+  <div class="camera-interior" id="camera-interior">
+
+    <!-- PERFORACIONES DE ROLLO DE PELÍCULA CONTINUO -->
+    <div class="film-strip-ribbon">
+      <div class="film-sprocket-text">
+        🎞️ CAPTOORA 400 PRO // FRAME 01 // AMAPOLA EVENTOS // GLOWTOURS // FRAME 02 // CHIPINQUE // LUZ DE AUTOR // MONTERREY 2026 // 35MM REVELADO CONTINUO // ZERO CROP // 100% FULL-FRAME // FRAME 03 // SAN JERÓNIMO STUDIO 🎞️
+      </div>
+    </div>
+
+    <div class="wrap">
+      
+      <!-- SECCIÓN 1: PORTAFOLIO EXCLUSIVO (GLOWTOURS & CHIPINQUE) -->
+      <div class="sec-head">
+        <div class="sec-kicker">Portafolio Revelado // Fotografías Reales</div>
+        <h2 class="sec-title">GlowTours &amp; Sierra de Chipinque</h2>
+        <p class="sec-desc">Fotografía real en película de 24MP. Luz de autor en set, dinámica en vivo en Amapola Eventos y exteriores con luz natural bajo los pinos de Chipinque. Cero edición de inteligencia artificial antigua.</p>
+      </div>
+
+      <div class="photo-cards-grid">
+        <!-- 1. GlowTours CPT_0853 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-glow-cpt_0853.jpg.b64" alt="GlowTours Amapola">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">GLOWTOURS // SET 01</span>
+            <span class="photo-num">#CPT_0853</span>
+          </div>
+          <div class="photo-title">GlowTours Oficial · Amapola Eventos</div>
+        </div>
+
+        <!-- 2. GlowTours CPT_0855 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-glow-cpt_0855.jpg.b64" alt="GlowTours Retrato">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">GLOWTOURS // SET 02</span>
+            <span class="photo-num">#CPT_0855</span>
+          </div>
+          <div class="photo-title">Retrato Editorial con Luz de Autor</div>
+        </div>
+
+        <!-- 3. GlowTours CPT_0863 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-glow-cpt_0863.jpg.b64" alt="GlowTours Dinámica">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">GLOWTOURS // SET 03</span>
+            <span class="photo-num">#CPT_0863</span>
+          </div>
+          <div class="photo-title">Dinámica y Activación de Set</div>
+        </div>
+
+        <!-- 4. GlowTours CPT_0878 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-glow-cpt_0878.jpg.b64" alt="GlowTours Estelar">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">GLOWTOURS // SET 04</span>
+            <span class="photo-num">#CPT_0878</span>
+          </div>
+          <div class="photo-title">Momento Estelar en Escenario</div>
+        </div>
+
+        <!-- 5. Chipinque 01 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-chipinque-01.jpg.b64" alt="Chipinque Sendero">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">CHIPINQUE // NATURALEZA</span>
+            <span class="photo-num">#CHIP_01</span>
+          </div>
+          <div class="photo-title">Senderos de la Sierra Madre</div>
+        </div>
+
+        <!-- 6. Chipinque 02 -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-chipinque-02.jpg.b64" alt="Chipinque Retrato">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">CHIPINQUE // LUZ NATURAL</span>
+            <span class="photo-num">#CHIP_02</span>
+          </div>
+          <div class="photo-title">Retrato Exterior entre la Niebla</div>
+        </div>
+
+        <!-- 7. Chipinque Familia -->
+        <div class="photo-print-card">
+          <div class="photo-inner-frame">
+            <img src="" data-b64="assets/media/pf-chipinque-fam.jpg.b64" alt="Chipinque Familia">
+          </div>
+          <div class="photo-meta-bar">
+            <span class="photo-stamp">CHIPINQUE // FAMILIA</span>
+            <span class="photo-num">#CHIP_FAM</span>
+          </div>
+          <div class="photo-title">Paseo Familiar bajo los Pinos</div>
         </div>
       </div>
-      <a href="#evento" class="hero__scroll" aria-label="Bajar">↓</a>
-    </section>
 
-    <!-- 2. EVENTO (datos en js/config.js) -->
-    <section class="section event" id="evento">
-      <div class="wrap event__grid">
-        <div>
-          <p class="kicker kicker--lime" data-ev="kicker">El estudio está abierto</p>
-          <h2 class="h2 h2--xl" data-ev="title">Agenda tu sesión.</h2>
-          <p class="muted" data-ev="whatToDo">Escríbeme por WhatsApp y lo cuadramos.</p>
-          <a class="btn btn--lime btn--lg" id="ev-cta" href="https://wa.me/528140050088" target="_blank" rel="noopener">Agenda por WhatsApp</a>
-        </div>
-        <dl class="event__facts">
-          <div><dt>Cuándo</dt><dd data-ev="when">Tú eliges el día.</dd></div>
-          <div><dt>Cómo apartas</dt><dd data-ev="how">30% de anticipo.</dd></div>
-          <div><dt>Dónde</dt><dd><span data-ev="address">Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</span><a id="ev-map" class="link" href="#" target="_blank" rel="noopener">Abrir en Maps →</a></dd></div>
-          <div><dt>Horario</dt><dd data-hours>Con cita, escríbenos para horarios.</dd></div>
-          <div><dt>WhatsApp</dt><dd><a class="link" data-wa="Hola Captoora" href="https://wa.me/528140050088" target="_blank" rel="noopener">81 4005 0088</a></dd></div>
-        </dl>
+      <!-- SECCIÓN 2: PAQUETES DE PRODUCCIÓN (TARJETAS CONTACT SHEET) -->
+      <div class="sec-head">
+        <div class="sec-kicker">Formatos de Trabajo</div>
+        <h2 class="sec-title">Producción y Renta de Estudio</h2>
+        <p class="sec-desc">Precios claros, sin letras chiquitas. Apartas con 30% de anticipo por transferencia.</p>
       </div>
-    </section>
 
-    <!-- 2b. PARQUE (texto en js/config.js → park) -->
-    <section class="section park" id="parque">
-      <div class="wrap park__in">
-        <p class="kicker kicker--lime">Para papás</p>
-        <h2 class="h2" id="park-title">Parque justo afuera: exterior con luz natural + estudio.</h2>
-        <p class="muted" id="park-text"></p>
-        <a class="btn btn--lime" data-wa="Hola Captoora, quiero info de la sesión infantil en el parque y el estudio." href="https://wa.me/528140050088" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
-      </div>
-    </section>
-
-    <!-- 3. PAQUETES (precios en js/config.js) -->
-    <section class="section" id="paquetes">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker kicker--lime">Paquetes</p>
-          <h2 class="h2">Pagas tiempo y entrega.<br>Nada de letras chiquitas.</h2>
-          <p class="muted" id="deposit">Apartas con 30% de anticipo.</p>
+      <div class="packages-grid">
+        <div class="package-card featured">
+          <div class="pkg-badge">Más Recomendado</div>
+          <div>
+            <div class="pkg-name">Combo Studio + Clips</div>
+            <div class="pkg-price">$1,600 <span>/ 2 horas</span></div>
+            <ul class="pkg-items">
+              <li>Sesión guiada en set profesional</li>
+              <li>8 a 12 clips en video listos para Reels/TikTok</li>
+              <li>Dirección personalizada de pose</li>
+              <li>Entrega digital en alta resolución</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20el%20Combo%20Studio%20+%20Clips" target="_blank" class="pkg-btn">Apartar por WhatsApp</a>
         </div>
-        <div class="pk" id="packages"><!-- se llena desde config.js --></div>
-      </div>
-    </section>
 
-    <!-- 3b. ESCENARIOS (datos en js/config.js → scenarios) -->
-    <section class="section esc" id="escenarios">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker kicker--lime">Escenarios</p>
-          <h2 class="h2">Escoge dónde te tomas la foto.</h2>
-          <p class="muted">Tres escenarios diferentes para tu producción. Consulta por WhatsApp las opciones y disponibilidad.</p>
+        <div class="package-card">
+          <div>
+            <div class="pkg-name">Renta de Estudio</div>
+            <div class="pkg-price">$350 <span>/ hora (Promo Octubre)</span></div>
+            <ul class="pkg-items">
+              <li>Tres escenarios diferentes</li>
+              <li>Ciclorama blanco sinfín y set oscuro</li>
+              <li>Softbox, luces continuas y tripiés</li>
+              <li>Sonido envolvente, espejos y clima</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20rentar%20el%20estudio" target="_blank" class="pkg-btn">Rentar Estudio</a>
         </div>
-        <div class="esc__grid" id="scenarios"><!-- se llena desde config.js --></div>
-      </div>
-    </section>
 
-    <!-- 3c. PORTAFOLIO (datos en js/config.js → portfolio) -->
-    <section class="section pf" id="portafolio">
-      <div class="wrap">
-        <div class="head">
-          <p class="kicker kicker--lime">Portafolio</p>
-          <h2 class="h2">Fotografías que inspiran.</h2>
-          <p class="muted">Retratos, eventos, marcas y fondo blanco. Nada de banco de imágenes ni IA: todo salió de mi cámara. Lo voy llenando con cada sesión.</p>
+        <div class="package-card">
+          <div>
+            <div class="pkg-name">Sesión Básica</div>
+            <div class="pkg-price">$1,000 <span>/ 1 hora</span></div>
+            <ul class="pkg-items">
+              <li>1 set con iluminación profesional</li>
+              <li>Te dirijo la pose paso a paso</li>
+              <li>15 fotos master editadas</li>
+              <li>Parque exterior contiguo incluido</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20información%20de%20la%20Sesión%20Básica" target="_blank" class="pkg-btn">Apartar Sesión</a>
         </div>
-        <div class="pf__filters" id="pf-filters" role="group" aria-label="Filtrar portafolio"></div>
-        <div class="pf__grid" id="portfolio"></div>
-      </div>
-      <dialog class="lb" id="lightbox" aria-label="Foto ampliada">
-        <button class="lb__btn lb__close" type="button" aria-label="Cerrar">&times;</button>
-        <button class="lb__btn lb__prev" type="button" aria-label="Anterior">&#8249;</button>
-        <figure class="lb__fig"><img alt=""><figcaption></figcaption></figure>
-        <button class="lb__btn lb__next" type="button" aria-label="Siguiente">&#8250;</button>
-      </dialog>
-    </section>
 
-    <!-- 4. EL SET (fotos sacadas de video propio, no stock) -->
-    <section class="section set" id="set">
-      <div class="wrap set__grid">
-        <div class="set__video">
-          <video autoplay muted loop playsinline data-b64="assets/media/studio-vertical.mp4.b64" data-poster="studio-vertical-poster"></video>
+        <div class="package-card">
+          <div>
+            <div class="pkg-name">Captoora Biometrics</div>
+            <div class="pkg-price">Cotización <span>/ Clon Digital 3D</span></div>
+            <ul class="pkg-items">
+              <li>Fotografía médica y deportiva en estudio</li>
+              <li>Seguimiento de recomposición y simetría</li>
+              <li>Clon digital volumétrico 3D sin stickmen</li>
+              <li>Monitoreo semana a semana</li>
+            </ul>
+          </div>
+          <a href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" class="pkg-btn" style="border-color:var(--amber); color:var(--amber);">Ver Motion 3D Explainer →</a>
         </div>
-        <div class="set__copy">
-          <p class="kicker kicker--lime">El set</p>
-          <h2 class="h2">Mismo set. Misma luz.<br>Tú eres lo que cambia.</h2>
-          <p class="muted">Fondo mate, luz lateral, cámara en tripié. Aquí no hay fotos de banco de imágenes: esto es el estudio tal cual.</p>
-          <div class="gallery">
-            <figure><img data-img="set-camara" alt="Cámara en tripié lista en el estudio" loading="lazy"></figure>
-            <figure><img data-img="set-espejo" alt="Rincón del estudio con espejo" loading="lazy"></figure>
-            <figure><img data-img="set-ventana" alt="Estación de edición junto a la ventana" loading="lazy"></figure>
-            <figure><img data-img="noche-luna" alt="Noche en Colinas de San Jerónimo" loading="lazy"></figure>
+      </div>
+
+      <!-- SECCIÓN 3: TESTIMONIOS REALES -->
+      <div class="sec-head">
+        <div class="sec-kicker">Testimonios de Set</div>
+        <h2 class="sec-title">Experiencias en Primera Persona</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="test-card">
+          <p class="test-quote">"Jamás me había sentido tan cómoda frente a la cámara. Poncho tiene una paciencia increíble para dirigir cada pose y la luz de estudio hace que tu piel se vea radiante sin filtros de plástico."</p>
+          <div class="test-author">
+            <div class="test-avatar">T</div>
+            <div class="test-meta">
+              <h4>Tanya V.</h4>
+              <p>Líder Farmasi · Sesión Beauty &amp; Marca</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <p class="test-quote">"El cuidado del encuadre y el respeto por la proporción real del cuerpo te da una seguridad tremenda. Las fotos para mi marca de suplementos quedaron de nivel revista."</p>
+          <div class="test-author">
+            <div class="test-avatar">K</div>
+            <div class="test-meta">
+              <h4>Karla P.</h4>
+              <p>Atleta Fitness &amp; Creadora de Contenido</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <p class="test-quote">"El estudio en San Jerónimo está súper cómodo y el parque de afuera te permite hacer fotos con luz natural y luego entrar al set con ciclorama sin trasladarte."</p>
+          <div class="test-author">
+            <div class="test-avatar">B</div>
+            <div class="test-meta">
+              <h4>Brenda M.</h4>
+              <p>Influencer &amp; Creadora de Contenido</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- 4b. PREGUNTAS FRECUENTES (js/config.js → faq) -->
-    <section class="section faq" id="faq">
-      <div class="wrap faq__in">
-        <p class="kicker kicker--lime">Preguntas frecuentes</p>
-        <h2 class="h2">Lo que más nos preguntan.</h2>
-        <div class="faq__list" id="faq-list"></div>
-        <div class="review">
-          <p class="muted">¿Ya viniste? Tu reseña ayuda a otras familias a encontrarnos.</p>
-          <a class="btn btn--outline-lime" id="review-cta" href="#" target="_blank" rel="noopener">Déjanos tu reseña en Google</a>
+      <!-- SECCIÓN 4: UBICACIÓN DEL ESTUDIO EN SAN JERÓNIMO -->
+      <div class="studio-location-box">
+        <div class="loc-info">
+          <div class="sec-kicker">Estudio Físico en Monterrey</div>
+          <h3>Colinas de San Jerónimo</h3>
+          <p>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. (CP 64630). Tres escenarios, ciclorama blanco, iluminación de autor y parque privado contiguo.</p>
+        </div>
+        <div class="loc-btns">
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630" target="_blank" class="btn-maps">
+            <span>Abrir en Google Maps / Uber</span>
+            <span>📍</span>
+          </a>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20una%20sesión" target="_blank" class="btn-wa-action">
+            <span>WhatsApp Directo (81 4005 0088)</span>
+            <span>💬</span>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- 5. CONTACTO -->
-    <section class="section contact" id="contacto">
-      <div class="wrap contact__in">
-        <p class="kicker kicker--lime">Contacto</p>
-        <h2 class="h2 h2--xl">Escríbeme y lo armamos.</h2>
-        <p class="muted">Dime qué quieres (sesión fotográfica o renta del estudio), qué día y cuántas personas. Te contesto por WhatsApp.</p>
-        <a class="btn btn--lime btn--lg" data-wa="Hola Captoora. Quiero: (sesión fotográfica / renta del estudio). Día: . Personas: ." href="https://wa.me/528140050088" target="_blank" rel="noopener">WhatsApp 81 4005 0088</a>
-        <p class="contact__addr"><span data-addr>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</span><br><span class="muted" data-hours>Con cita, escríbenos para horarios.</span></p>
-        <div class="map">
-          <iframe id="map-frame" title="Mapa satelital de Captoora" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630&t=k&z=18&output=embed"></iframe>
-          <a class="map__link" data-maplink href="https://www.google.com/maps/search/?api=1&query=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630" target="_blank" rel="noopener" aria-label="Abrir Captoora en Google Maps"><span>Abrir en Google Maps →</span></a>
-        </div>
-        <ul class="social" id="social"></ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="wrap footer__in">
-      <span class="logo logo--foot" role="img" aria-label="Captoora"></span>
-      <p data-addr>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630</p>
-      <nav aria-label="Pie"><a href="#evento">Agenda</a><a href="#paquetes">Paquetes</a><a href="#escenarios">Escenarios</a><a href="#portafolio">Portafolio</a><a href="#set">El set</a><a href="#contacto">Contacto</a></nav>
-      <p class="footer__c">© 2026 Captoora</p>
     </div>
-  </footer>
 
-  <a class="wa-float" data-wa="Hola Captoora" href="https://wa.me/528140050088" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
-  </a>
+    <footer>
+      CAPTOORA STUDIO // Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. // © 2026
+    </footer>
 
-  <script src="js/config.js"></script>
-  <script src="js/site.js"></script>
-  <script src="js/stars.js"></script>
+  </div>
+
+  <script>
+    /* ==========================================================================
+       OPTICAL AUDIO SYNTHESIZER (SONIDO DE OBTURADOR MECÁNICO REAL)
+       ========================================================================== */
+    function playMechanicalShutter() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // 1. Click mecánico del obturador
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(160, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.08);
+
+        gain.gain.setValueAtTime(0.7, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.08);
+
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.09);
+
+        // 2. Chasquido de cuchillas metálicas
+        const buffer = audioCtx.createBuffer(1, audioCtx.sampleRate * 0.05, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < buffer.length; i++) data[i] = Math.random() * 2 - 1;
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'highpass';
+        filter.frequency.value = 2200;
+        const noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.4, audioCtx.currentTime + 0.02);
+        noiseGain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.07);
+
+        noise.connect(filter);
+        filter.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination);
+        noise.start(audioCtx.currentTime + 0.02);
+      } catch (e) {
+        console.warn("Audio Context:", e);
+      }
+    }
+
+    /* ==========================================================================
+       DESTELLO DE FLASH FOTOGRÁFICO
+       ========================================================================== */
+    function triggerFlashAndShutter() {
+      playMechanicalShutter();
+      const flash = document.getElementById('flash-screen');
+      flash.style.opacity = '1';
+      setTimeout(() => {
+        flash.style.opacity = '0';
+      }, 90);
+    }
+
+    // DISPARAR AUTOMÁTICAMENTE AL CARGAR LA PÁGINA (TE TOMARON UNA CAPTURA)
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        triggerFlashAndShutter();
+      }, 250);
+    });
+
+    /* ==========================================================================
+       SCROLL-DRIVEN LENS ZOOM (EL LENTE TE ABSORBE AL INTERIOR DE LA CÁMARA)
+       ========================================================================== */
+    const lensStage = document.getElementById('lens-stage');
+    const masterLens = document.getElementById('master-lens');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const stageH = lensStage.offsetHeight;
+      const progress = Math.min(scrollY / stageH, 1);
+
+      // El lente crece de scale(1.0) a scale(10.0) y se desvanece entrando a la cámara
+      const scale = 1 + progress * 8.5;
+      const opacity = Math.max(0, 1 - progress * 1.4);
+      
+      masterLens.style.transform = `scale(${scale})`;
+      masterLens.style.opacity = opacity;
+    });
+
+    /* ==========================================================================
+       CARGA DIFERIDA DE IMÁGENES BASE64 (OPTIMIZACIÓN DE MEMORIA)
+       ========================================================================== */
+    document.querySelectorAll('img[data-b64]').forEach(img => {
+      const b64Path = img.getAttribute('data-b64');
+      if (b64Path) {
+        fetch(b64Path)
+          .then(res => res.text())
+          .then(b64 => {
+            img.src = 'data:image/jpeg;base64,' + b64.trim();
+          })
+          .catch(err => console.warn('Error loading ' + b64Path, err));
+      }
+    });
+  </script>
 </body>
 </html>
