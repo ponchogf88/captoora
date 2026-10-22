@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA · PROTOCOLO MAESTRO DEL EVENTO & DINÁMICA DE TESTIMONIOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #040508;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .header-box {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+    }
+    .brand-title span { color: #f59e0b; }
+
+    .tag-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    /* FASES DEL EVENTO */
+    .timeline-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .phase-card {
+      background: #0a0c12;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 26px 30px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    }
+
+    .phase-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 4px;
+      background: #f59e0b;
+    }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .phase-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #f59e0b;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .phase-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .phase-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .detail-box {
+      background: #040507;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+    }
+
+    .detail-box h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* PING PONG TESTIMONIAL */
+    .ping-pong-card {
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, #0a0c12 100%);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 18px;
+      padding: 26px 30px;
+      margin-top: 20px;
+    }
+
+    .script-q {
+      background: rgba(0,0,0,0.6);
+      border-left: 3px solid #10b981;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 0.88rem;
+    }
+
+    .script-q strong { color: #34d399; font-family:'JetBrains Mono', monospace; font-size: 0.75rem; display:block; margin-bottom:2px; }
+
+    /* CALENDARIO DE DISTRIBUCIÓN */
+    .calendar-matrix {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .cal-box {
+      background: #040507;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: center;
+    }
+
+    .cal-month {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: #f59e0b;
+      margin-bottom: 4px;
+    }
+
+    .cal-val {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="header-box">
+      <div>
+        <div class="brand-title">CAPTOORA <span>STUDIO</span></div>
+        <p style="color:#94a3b8; font-size:0.95rem; margin-top:4px;">Protocolo Maestro de Operación &amp; Estrategia de 25 Testimonios Virales</p>
+      </div>
+      <div class="tag-badge">EVENTO 31 OCTUBRE // FARMASI VIP</div>
+    </header>
+
+    <div class="timeline-wrap">
+
+      <!-- FASE 1 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 01 // PREVIO A QUE LLEGUEN</span>
+          <span class="phase-time">08:30 — 09:45 HRS</span>
+        </div>
+        <h3 class="phase-title">Montaje Invisible &amp; Staging "Ghost House"</h3>
+
+        <div class="grid-2">
+          <div class="detail-box">
+            <h4>🎵 Atmósfera &amp; Sentidos</h4>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:6px;">
+              <li>• <strong>Música Continua:</strong> Playlist Lo-Fi Chillhouse sonando a 35 dB (volumen de conversación).</li>
+              <li>• <strong>Aroma Signature:</strong> Difusor ultrasónico con té blanco y bergamota en la entrada.</li>
+              <li>• <strong>Protocolo Ghost House:</strong> Recámaras con llave ("Staff Only"), cocina 100% limpia sin trastes.</li>
+            </ul>
+          </div>
+          <div class="detail-box">
+            <h4>💡 Calibración de Sets &amp; Mimosas</h4>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:6px;">
+              <li>• <strong>Barra de Mimosas:</strong> 8 botellas de Prosecco helado, jarras de jugo colado sin pulpa y popotes oro rosa.</li>
+              <li>• <strong>Set Blanco Ciclorama:</strong> Baterías al 100%, flashes Godox a 1/160s, ISO 100, f/5.6.</li>
+              <li>• <strong>Set Negro &amp; Gran Mesa:</strong> Mesa limpia con productos Dr. C. Tuna alineados y luz cenital lista.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FASE 2 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 02 // LLEGADA &amp; RECEPCIÓN VIP</span>
+          <span class="phase-time">10:00 — 10:15 HRS</span>
+        </div>
+        <h3 class="phase-title">El Recibimiento &amp; Blindaje Legal Exprés</h3>
+
+        <div class="grid-2">
+          <div class="detail-box">
+            <h4>👑 Tu Hermana como Hostess VIP</h4>
+            <p>
+              Ella las recibe en la puerta con una sonrisa, las saluda y les sirve su primera copa de mimosa fresca con fresa flotando. Les indica dónde dejar sus bolsos y chaquetas.
+            </p>
+          </div>
+          <div class="detail-box">
+            <h4>📝 Firma Exprés del Contrato (En 30 Segundos)</h4>
+            <p>
+              En una tablilla con pluma dorada o tablet: firman el <em>Acuerdo de Colaboración y Liberación de Imagen / Testimonio</em>. Ya saben que a cambio de su sesión gratuita van a etiquetar a <strong>@captoora</strong> y dar su testimonio al final.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FASE 3 -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 03 // EL RODAJE EN CARRUSEL</span>
+          <span class="phase-time">10:15 — 13:15 HRS</span>
+        </div>
+        <h3 class="phase-title">Rotación de 4 Escuadrones (Cero Cuellos de Botella)</h3>
+
+        <div class="grid-2">
+          <div class="detail-box">
+            <h4>🔄 45 Minutos por Rotación</h4>
+            <p>
+              Mientras 6 chicas están arriba contigo en los sets disparando sus 7 minutos de gloria, las otras 19 están abajo conviviendo, retocándose el maquillaje en el espejo y grabándose historias con sus copas.
+            </p>
+          </div>
+          <div class="detail-box">
+            <h4>⏱️ Cadencia de 7 Minutos</h4>
+            <p>
+              Tú no inventas nada: ejecutas las 8 poses oficiales en el ciclorama blanco y las 3 poses soberbias de Beauty CEO con la Gran Mesa. Suena el timer suave, choque de puños y entra la siguiente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FASE 4: EL PING PONG DE TESTIMONIOS -->
+      <div class="ping-pong-card">
+        <div class="phase-header">
+          <span class="phase-num" style="color:#10b981;">FASE 04 // EL CLÍMAX: PING-PONG DE TESTIMONIOS</span>
+          <span class="phase-time">13:15 — 13:45 HRS</span>
+        </div>
+        <h3 class="phase-title">El Momento Exacto de la Verdad (Adrenalina al 100%)</h3>
+        <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:18px;">
+          <strong>Cuándo se graba:</strong> ¡AL FINAL! Cuando ya terminaron sus fotos, se vieron en la pantalla de la TV del estudio y están eufóricas con su mimosa en mano. En ese momento sacas el celular en tripié con micrófono inalámbrico de solapa (DJI Mic / Lavalier) y haces la dinámica ping-pong de 45 segundos:
+        </p>
+
+        <div class="script-q">
+          <strong>PREGUNTA 01 // PRESENTACIÓN &amp; RANGO</strong>
+          "¿Tu nombre y cuál es tu rango o equipo en Farmasi?"
+        </div>
+
+        <div class="script-q">
+          <strong>PREGUNTA 02 // IMPACTO DE LA EXPERIENCIA</strong>
+          "Del 1 al 10, ¿cómo se siente tener un estudio profesional con ciclorama e iluminación de revista para ti sola?"
+        </div>
+
+        <div class="script-q">
+          <strong>PREGUNTA 03 // LA DIRECCIÓN DE PONCHO</strong>
+          "¿Qué fue lo que más te sorprendió de la dirección de poses con Alfonso Gutiérrez?"
+        </div>
+
+        <div class="script-q">
+          <strong>PREGUNTA 04 // RECOMENDACIÓN FINAL</strong>
+          "En 3 palabras: ¿por qué toda creadora o líder de negocio en Monterrey tiene que venir a Captoora Studio?"
+        </div>
+      </div>
+
+      <!-- FASE 5: DISTRIBUCIÓN A 12 SEMANAS -->
+      <div class="phase-card">
+        <div class="phase-header">
+          <span class="phase-num">FASE 05 // ESTRATEGIA DE DISTRIBUCIÓN</span>
+          <span class="phase-time">NOVIEMBRE 2026 — ENERO 2027</span>
+        </div>
+        <h3 class="phase-title">Cómo Administrar Sabiamente los 25 Testimonios</h3>
+        <p style="color:#cbd5e1; font-size:0.9rem; margin-bottom:14px;">
+          <strong>Regla de oro:</strong> Jamás quemar los 25 videos la primera semana. Se convierten en un pilar fijo de contenido llamado <em>"Creator Spotlight / Voces Captoora"</em>.
+        </p>
+
+        <div class="calendar-matrix">
+          <div class="cal-box">
+            <div class="cal-month">CADENCIA OFICIAL</div>
+            <div class="cal-val">2 por Semana</div>
+            <div style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">Martes y Jueves</div>
+          </div>
+          <div class="cal-box">
+            <div class="cal-month">DURACIÓN TOTAL</div>
+            <div class="cal-val">12 Semanas</div>
+            <div style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">3 Meses de Contenido</div>
+          </div>
+          <div class="cal-box">
+            <div class="cal-month">FORMATO MULTIPLATAFORMA</div>
+            <div class="cal-val">Reels &amp; TikTok</div>
+            <div style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">Video Vertical 9:16</div>
+          </div>
+          <div class="cal-box">
+            <div class="cal-month">WEB CAPTOORA</div>
+            <div class="cal-val">Sección VIP</div>
+            <div style="font-size:0.75rem; color:#94a3b8; margin-top:4px;">Testimonios en Vivo</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
