@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA SIGNATURE · Haute Couture & Fine Art Photography</title>
+  <meta name="description" content="Captoora Signature. Fotografía de autor, alta costura y lujo silencioso en Monterrey. Iluminación de museo y retratos editoriales atemporales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030304;
+      --card-bg: #09090c;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --border: rgba(212, 175, 55, 0.18);
+      --text: #f5f5f7;
+      --muted: #a1a1aa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* GLOBAL ECOSYSTEM DOCK */
+    .ecosystem-dock {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 3, 4, 0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .signature-brand {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.28em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .signature-brand span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .dock-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dock-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      color: #000;
+      background: var(--gold);
+      border-color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* HERO SIGNATURE */
+    .signature-hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 80px 24px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .signature-meta-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .gold-kicker {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .signature-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+      font-weight: 400;
+      line-height: 1.08;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+
+    .signature-title em {
+      font-family: 'Cinzel', serif;
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .signature-prose {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      font-weight: 300;
+      max-width: 520px;
+    }
+
+    .signature-specs-row {
+      display: flex;
+      gap: 32px;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 18px 0;
+      margin-top: 10px;
+    }
+
+    .spec-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .spec-value {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+
+    /* ZERO CROP MUSEUM FRAME */
+    .museum-frame-stage {
+      position: relative;
+      background: radial-gradient(circle at center, #111116 0%, #030304 80%);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 40px 90px rgba(0, 0, 0, 0.9);
+      min-height: 600px;
+    }
+
+    .museum-frame-stage::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.12);
+      pointer-events: none;
+    }
+
+    .museum-photo {
+      width: 100%;
+      height: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      filter: contrast(1.06) brightness(1.02);
+      transition: opacity 0.4s ease;
+    }
+
+    /* ACTIONS & CURATOR SELECTION */
+    .curator-switcher {
+      display: flex;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .btn-curator {
+      background: transparent;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--gold);
+      font-family: 'Cinzel', serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-curator.active, .btn-curator:hover {
+      background: var(--gold);
+      color: #000;
+      font-weight: 700;
+    }
+
+    .btn-reserve-signature {
+      background: var(--gold);
+      color: #000;
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      border: 1px solid var(--gold);
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+      transition: all 0.25s ease;
+      width: fit-content;
+      margin-top: 14px;
+    }
+
+    .btn-reserve-signature:hover {
+      background: var(--gold-light);
+      box-shadow: 0 0 50px rgba(212, 175, 55, 0.6);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .signature-hero { grid-template-columns: 1fr; padding-top: 40px; }
+      .museum-frame-stage { min-height: 440px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL ECOSYSTEM DOCK -->
+  <header class="ecosystem-dock">
+    <div class="signature-brand">
+      CAPTOORA <span>SIGNATURE</span>
+    </div>
+
+    <nav class="dock-links">
+      <a href="index.html" class="dock-pill">✦ HUB GENERAL</a>
+      <a href="captoora_signature.html" class="dock-pill active">01. SIGNATURE</a>
+      <a href="captoora_biometrics.html" class="dock-pill">02. BIOMETRICS</a>
+      <a href="captoora_corp.html" class="dock-pill">03. CORP</a>
+      <a href="captoora_studio.html" class="dock-pill">04. STUDIO 3D</a>
+      <a href="captoora_pop.html" class="dock-pill">05. POP!</a>
+    </nav>
+  </header>
+
+  <!-- SIGNATURE MAIN HERO -->
+  <main class="signature-hero">
+
+    <!-- METADATA & LUXURY STORY -->
+    <section class="signature-meta-col">
+      <div class="gold-kicker">HAUTE COUTURE · LUZ DE AUTOR</div>
+      
+      <h1 class="signature-title">
+        La Esencia del<br>
+        <em>Lujo Silencioso.</em>
+      </h1>
+
+      <p class="signature-prose">
+        Retratos concebidos como obras de museo. Eliminamos el ruido digital y las poses efímeras para esculpir la luz sobre el rostro humano con ópticas de cristal puro y calibración tonal atemporal.
+      </p>
+
+      <div class="signature-specs-row">
+        <div class="spec-group">
+          <span class="spec-label">Resolución</span>
+          <span class="spec-value">24.2 MP RAW</span>
+        </div>
+        <div class="spec-group">
+          <span class="spec-label">Composición</span>
+          <span class="spec-value">Zero Crop 100%</span>
+        </div>
+        <div class="spec-group">
+          <span class="spec-label">Temperatura</span>
+          <span class="spec-value">5600K Tungsteno</span>
+        </div>
+      </div>
+
+      <!-- SELECTOR DE RETRATO -->
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--gold); margin-bottom:8px; letter-spacing:0.1em;">
+          SELECCIÓN EDITORIAL DE AUTOR:
+        </div>
+        <div class="curator-switcher">
+          <button class="btn-curator active" onclick="setSignaturePhoto(0, this)">OBRA I: AMAPOLA 0855</button>
+          <button class="btn-curator" onclick="setSignaturePhoto(1, this)">OBRA II: DINÁMICA 0878</button>
+          <button class="btn-curator" onclick="setSignaturePhoto(2, this)">OBRA III: CHIPINQUE 02</button>
+        </div>
+      </div>
+
+      <!-- CTA VIP -->
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20solicito%20reserva%20para%20Captoora%20Signature%20Haute%20Couture" target="_blank" class="btn-reserve-signature">
+        CONCERTAR CITA PRIVADA
+      </a>
+    </section>
+
+    <!-- CUADRO DE MUSEO FULL-FRAME -->
+    <div class="museum-frame-stage">
+      <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Captoora Signature Piece" class="museum-photo" id="sigPhoto">
+    </div>
+
+  </main>
+
+  <script>
+    const sigPhotos = [
+      'assets/media_jpg/pf-glow-cpt_0855.jpg',
+      'assets/media_jpg/pf-glow-cpt_0878.jpg',
+      'assets/media_jpg/pf-chipinque-02.jpg'
+    ];
+
+    function setSignaturePhoto(idx, btn) {
+      document.querySelectorAll('.btn-curator').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('sigPhoto');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = sigPhotos[idx];
+        img.style.opacity = '1';
+      }, 160);
+    }
+  </script>
+</body>
+</html>

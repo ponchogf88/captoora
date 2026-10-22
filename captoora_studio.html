@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA STUDIO · 3D Ultrapremium Optical Space</title>
+  <meta name="description" content="Captoora Studio. Estudio de fotografía 3D interactivo en Monterrey. Tres escenarios: ciclorama blanco puro, iluminación de autor y parque natural.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <style>
+    :root {
+      --bg: #030407;
+      --card: #090b11;
+      --amber: #f59e0b;
+      --amber-glow: rgba(245, 158, 11, 0.4);
+      --cyan: #38bdf8;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* GLOBAL ECOSYSTEM DOCK */
+    .ecosystem-dock {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 4, 7, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .studio-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .studio-brand span {
+      color: var(--amber);
+    }
+
+    .dock-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dock-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      color: #000;
+      background: var(--amber);
+      border-color: var(--amber);
+      font-weight: 700;
+    }
+
+    /* STUDIO HERO */
+    .studio-hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 50px 24px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 40px;
+      align-items: center;
+      min-height: calc(100vh - 75px);
+    }
+
+    /* 3D LENS VIEWPORT CONTAINER */
+    .lens-3d-stage {
+      position: relative;
+      background: radial-gradient(circle at center, #0e121c 0%, #030407 80%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      height: 580px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.8);
+      cursor: grab;
+    }
+
+    .lens-3d-stage:active {
+      cursor: grabbing;
+    }
+
+    #lensCanvasWrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+
+    .lens-ui-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      background: rgba(3, 4, 7, 0.8);
+      backdrop-filter: blur(8px);
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* RIGHT: STUDIO DETAILS & BOOKING */
+    .studio-details-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .studio-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--amber);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .studio-headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.3rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .studio-headline span {
+      background: linear-gradient(135deg, #fff 40%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .studio-desc {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* SCENARIO CARDS MINI */
+    .scenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 10px 0;
+    }
+
+    .sc-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.75rem;
+    }
+
+    .sc-title {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .sc-meta {
+      color: var(--muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+    }
+
+    .btn-book-studio {
+      background: var(--amber);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 0 30px var(--amber-glow);
+      transition: all 0.2s ease;
+    }
+
+    .btn-book-studio:hover {
+      background: #fbbf24;
+      box-shadow: 0 0 45px rgba(245, 158, 11, 0.7);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .studio-hero { grid-template-columns: 1fr; }
+      .lens-3d-stage { height: 420px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL ECOSYSTEM DOCK -->
+  <header class="ecosystem-dock">
+    <div class="studio-brand">
+      CAPTOORA <span>STUDIO 3D</span>
+    </div>
+
+    <nav class="dock-links">
+      <a href="index.html" class="dock-pill">✦ HUB GENERAL</a>
+      <a href="captoora_signature.html" class="dock-pill">01. SIGNATURE</a>
+      <a href="captoora_biometrics.html" class="dock-pill">02. BIOMETRICS</a>
+      <a href="captoora_corp.html" class="dock-pill">03. CORP</a>
+      <a href="captoora_studio.html" class="dock-pill active">04. STUDIO 3D</a>
+      <a href="captoora_pop.html" class="dock-pill">05. POP!</a>
+    </nav>
+  </header>
+
+  <!-- STUDIO MAIN HERO -->
+  <main class="studio-hero">
+
+    <!-- 3D LENS INTERACTIVE STAGE -->
+    <div class="lens-3d-stage">
+      <div id="lensCanvasWrapper"></div>
+      <div class="lens-ui-overlay">
+        <span>🖱️ ARRASTRA PARA ROTAR EL LENTE 3D</span>
+        <span style="color:var(--amber);">SONY FE 50mm T1.4 PRIME</span>
+      </div>
+    </div>
+
+    <!-- STUDIO DETAILS & BOOKING -->
+    <section class="studio-details-panel">
+      <div>
+        <div class="studio-kicker">INGENIERÍA ÓPTICA ULTRA-PREMIUM</div>
+        <h1 class="studio-headline">
+          Tres Escenarios.<br>
+          <span>Un Mismo Espacio.</span>
+        </h1>
+        <p class="studio-desc">
+          Ubicado en Colinas de San Jerónimo, Monterrey. Diseñado para creadores que exigen la máxima pureza lumínica: ciclorama blanco impecable, cabina de luz de autor oscura y parque natural arbolado a unos pasos.
+        </p>
+      </div>
+
+      <!-- TRES ESCENARIOS -->
+      <div class="scenarios-grid">
+        <div class="sc-box">
+          <div class="sc-title">01. Ciclorama</div>
+          <div class="sc-meta">Blanco puro continuo sin esquinas</div>
+        </div>
+        <div class="sc-box">
+          <div class="sc-title">02. Luz de Autor</div>
+          <div class="sc-meta">Flashes Profoto con reflectores de corte</div>
+        </div>
+        <div class="sc-box">
+          <div class="sc-title">03. Parque Exterior</div>
+          <div class="sc-meta">Luz natural entre arboladas contiguas</div>
+        </div>
+      </div>
+
+      <!-- ACTION -->
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20reservar%20fechas%20en%20Captoora%20Studio" target="_blank" class="btn-book-studio">
+        <span>📸</span> APARTAR FECHA EN ESTUDIO
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+    // THREE.JS REAL-TIME 3D LENS
+    let scene, camera, renderer, lensGroup;
+    let isMouseDown = false, prevMouseX = 0, prevMouseY = 0;
+
+    function initStudioLens() {
+      const wrapper = document.getElementById('lensCanvasWrapper');
+      const w = wrapper.clientWidth;
+      const h = wrapper.clientHeight;
+
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+      camera.position.z = 6.5;
+
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+      renderer.setSize(w, h);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      wrapper.appendChild(renderer.domElement);
+
+      lensGroup = new THREE.Group();
+
+      // Barrilete
+      const barrelGeo = new THREE.CylinderGeometry(1.7, 1.7, 2.6, 48);
+      const barrelMat = new THREE.MeshStandardMaterial({
+        color: 0x11141c,
+        metalness: 0.85,
+        roughness: 0.2
+      });
+      const barrel = new THREE.Mesh(barrelGeo, barrelMat);
+      barrel.rotation.x = Math.PI / 2;
+      lensGroup.add(barrel);
+
+      // Anillo de enfoque dorado
+      const ringGeo = new THREE.TorusGeometry(1.72, 0.08, 16, 64);
+      const ringMat = new THREE.MeshStandardMaterial({
+        color: 0xf59e0b,
+        metalness: 0.9,
+        roughness: 0.15
+      });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      ring.position.z = 0.5;
+      lensGroup.add(ring);
+
+      // Cristal frontal convexo con reflejo multicapa
+      const glassGeo = new THREE.SphereGeometry(1.65, 32, 16, 0, Math.PI * 2, 0, Math.PI * 0.45);
+      const glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0x38bdf8,
+        metalness: 0.1,
+        roughness: 0.05,
+        transmission: 0.9,
+        ior: 1.55,
+        transparent: true,
+        opacity: 0.75
+      });
+      const frontGlass = new THREE.Mesh(glassGeo, glassMat);
+      frontGlass.position.z = 1.1;
+      lensGroup.add(frontGlass);
+
+      scene.add(lensGroup);
+
+      // Luces de set
+      const amb = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(amb);
+
+      const light1 = new THREE.DirectionalLight(0xffeedd, 2.5);
+      light1.position.set(4, 5, 4);
+      scene.add(light1);
+
+      const light2 = new THREE.DirectionalLight(0xf59e0b, 2.0);
+      light2.position.set(-4, -4, -2);
+      scene.add(light2);
+
+      // Drag
+      wrapper.addEventListener('mousedown', (e) => {
+        isMouseDown = true;
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      });
+      window.addEventListener('mouseup', () => { isMouseDown = false; });
+
+      wrapper.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) {
+          const r = wrapper.getBoundingClientRect();
+          const normX = (e.clientX - r.left) / r.width - 0.5;
+          const normY = (e.clientY - r.top) / r.height - 0.5;
+          lensGroup.rotation.y = normX * 0.7;
+          lensGroup.rotation.x = normY * 0.7;
+          return;
+        }
+        const deltaX = e.clientX - prevMouseX;
+        const deltaY = e.clientY - prevMouseY;
+        lensGroup.rotation.y += deltaX * 0.01;
+        lensGroup.rotation.x += deltaY * 0.01;
+        prevMouseX = e.clientX;
+        prevMouseY = e.clientY;
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (!isMouseDown) lensGroup.rotation.z += 0.0015;
+        renderer.render(scene, camera);
+      }
+      animate();
+    }
+
+    window.addEventListener('DOMContentLoaded', initStudioLens);
+  </script>
+</body>
+</html>

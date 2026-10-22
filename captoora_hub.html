@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA ECOSYSTEM · Command Hub // 5 Marcas, 1 Infraestructura</title>
+  <meta name="description" content="El Ecosistema Completo de Captoora: Signature, Biometrics Lab, Corp, Studio 3D y Pop. Fotografía de autor, ciencia óptica y producción en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@800;900&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030406;
+      --card-bg: #090b10;
+      --border: rgba(255, 255, 255, 0.1);
+      --amber: #f59e0b;
+      --cyan: #00f0ff;
+      --gold: #d4af37;
+      --pink: #ff007f;
+      --green: #10b981;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    /* NAV */
+    .hub-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 4, 6, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hub-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: #fff;
+    }
+
+    .hub-badge {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+    .hub-hero {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 70px 24px 40px;
+      text-align: center;
+    }
+
+    .hub-hero-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hub-hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hub-hero-title span {
+      background: linear-gradient(135deg, #fff 30%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hub-hero-sub {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* BRANDS MULTIVERSE GRID */
+    .multiverse-grid {
+      max-width: 1280px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .brand-portal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    .brand-portal-card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* CARD 1: SIGNATURE */
+    .card-signature:hover {
+      border-color: var(--gold);
+      box-shadow: 0 25px 60px rgba(212, 175, 55, 0.25);
+    }
+
+    /* CARD 2: BIOMETRICS */
+    .card-biometrics:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 25px 60px rgba(0, 240, 255, 0.25);
+    }
+
+    /* CARD 3: CORP */
+    .card-corp:hover {
+      border-color: #fff;
+      box-shadow: 0 25px 60px rgba(255, 255, 255, 0.2);
+    }
+
+    /* CARD 4: STUDIO */
+    .card-studio:hover {
+      border-color: var(--amber);
+      box-shadow: 0 25px 60px rgba(245, 158, 11, 0.25);
+    }
+
+    /* CARD 5: POP */
+    .card-pop:hover {
+      border-color: var(--pink);
+      box-shadow: 0 25px 60px rgba(255, 0, 127, 0.35);
+    }
+
+    .portal-thumb {
+      height: 220px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #020305;
+      position: relative;
+    }
+
+    .portal-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .brand-portal-card:hover .portal-thumb img {
+      transform: scale(1.06);
+    }
+
+    .portal-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .portal-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .portal-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .portal-cta {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="hub-nav">
+    <div class="hub-logo">
+      CAPTOORA // COMMAND HUB
+    </div>
+    <div class="hub-badge">
+      5 VERTICALES ACTIVAS · 2026
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hub-hero">
+    <div class="hub-hero-tag">AEROSPACE &amp; OPTICAL ECOSYSTEM</div>
+    <h1 class="hub-hero-title">
+      Un Mismo Estudio.<br>
+      <span>Cinco Identidades de Autor.</span>
+    </h1>
+    <p class="hub-hero-sub">
+      Cada marca resuelve una dimensión única de la experiencia visual: desde el lujo silencioso editorial hasta el laboratorio cibernético de biometría y la energía viral de creadoras.
+    </p>
+  </section>
+
+  <!-- 5 BRAND PORTALS -->
+  <main class="multiverse-grid">
+
+    <!-- 01. CAPTOORA SIGNATURE -->
+    <a href="captoora_signature.html" class="brand-portal-card card-signature">
+      <div class="portal-thumb">
+        <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Signature">
+      </div>
+      <div>
+        <div class="portal-num" style="color:var(--gold);">MARCA 01 // HAUTE COUTURE</div>
+        <div class="portal-name" style="font-family:'Cinzel',serif;">Captoora Signature</div>
+        <p class="portal-desc">
+          Super elegante. Retratos de museo, luz de autor, lujo silencioso y calibración tonal atemporal. Cero poses efímeras.
+        </p>
+      </div>
+      <div class="portal-cta" style="color:var(--gold);">
+        <span>EXPLORAR SIGNATURE</span>
+        <span>&rarr;</span>
+      </div>
+    </a>
+
+    <!-- 02. CAPTOORA BIOMETRICS -->
+    <a href="captoora_biometrics.html" class="brand-portal-card card-biometrics">
+      <div class="portal-thumb">
+        <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Biometrics">
+      </div>
+      <div>
+        <div class="portal-num" style="color:var(--cyan);">MARCA 02 // UMBRELLA CORP LAB</div>
+        <div class="portal-name">Captoora Biometrics</div>
+        <p class="portal-desc">
+          Super futurista. Escaneo facial volumétrico 3D, simetría anatómica, láser subdérmico y telemetría de laboratorio.
+        </p>
+      </div>
+      <div class="portal-cta" style="color:var(--cyan);">
+        <span>INGRESAR AL LABORATORIO</span>
+        <span>&rarr;</span>
+      </div>
+    </a>
+
+    <!-- 03. CAPTOORA CORP -->
+    <a href="captoora_corp.html" class="brand-portal-card card-corp">
+      <div class="portal-thumb">
+        <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Corp">
+      </div>
+      <div>
+        <div class="portal-num" style="color:#fff;">MARCA 03 // SPACEX · TESLA · GROK</div>
+        <div class="portal-name">Captoora Corp</div>
+        <p class="portal-desc">
+          Super elegante y aeroespacial. Producción de escala ejecutiva y marcas colectivas (Farmasi Squad). SLA &lt; 24h.
+        </p>
+      </div>
+      <div class="portal-cta" style="color:#fff;">
+        <span>ACCESO ENTERPRISE</span>
+        <span>&rarr;</span>
+      </div>
+    </a>
+
+    <!-- 04. CAPTOORA STUDIO 3D -->
+    <a href="captoora_studio.html" class="brand-portal-card card-studio">
+      <div class="portal-thumb">
+        <img src="assets/captoora_signature_logo.png" alt="Studio 3D">
+      </div>
+      <div>
+        <div class="portal-num" style="color:var(--amber);">MARCA 04 // 3D ULTRA-PREMIUM</div>
+        <div class="portal-name">Captoora Studio</div>
+        <p class="portal-desc">
+          Super moderna. Lente prime 3D interactivo en tiempo real con Tres Escenarios: Ciclorama, Luz de Autor y Parque.
+        </p>
+      </div>
+      <div class="portal-cta" style="color:var(--amber);">
+        <span>ENTRAR AL ESTUDIO 3D</span>
+        <span>&rarr;</span>
+      </div>
+    </a>
+
+    <!-- 05. CAPTOORA POP! -->
+    <a href="captoora_pop.html" class="brand-portal-card card-pop">
+      <div class="portal-thumb">
+        <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Pop">
+      </div>
+      <div>
+        <div class="portal-num" style="color:var(--pink);">MARCA 05 // VIRAL CREATOR ENERGY</div>
+        <div class="portal-name" style="font-family:'Syne',sans-serif;">Captoora Pop! ⚡</div>
+        <p class="portal-desc">
+          Muy divertida, dinámica y colorida. El set más viral de Monterrey: stickers, colores eléctricos y ritmo TikTok.
+        </p>
+      </div>
+      <div class="portal-cta" style="color:var(--pink);">
+        <span>DETONAR ENERGÍA POP</span>
+        <span>&rarr;</span>
+      </div>
+    </a>
+
+  </main>
+
+</body>
+</html>

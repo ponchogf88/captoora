@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA BIOMETRICS · Umbrella Cybernetics Lab // Level 5 Clearance</title>
+  <meta name="description" content="Captoora Biometrics Lab. Reconocimiento óptico de alta precisión, mapeo volumétrico 3D y análisis facial subdérmico.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030508;
+      --card-bg: rgba(6, 12, 19, 0.88);
+      --bio-cyan: #00f0ff;
+      --bio-green: #00ff66;
+      --hazard-red: #ff003c;
+      --border: rgba(0, 240, 255, 0.2);
+      --text: #e2f1f8;
+      --muted: #527588;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
+      overflow-x: hidden;
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+    }
+
+    /* GLOBAL ECOSYSTEM DOCK */
+    .ecosystem-dock {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 5, 8, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.74rem;
+    }
+
+    .bio-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+    }
+
+    .bio-hazard-icon {
+      color: var(--hazard-red);
+      animation: pulseAlert 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulseAlert {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.92); }
+    }
+
+    .dock-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dock-pill {
+      font-size: 0.68rem;
+      padding: 5px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      color: #000;
+      background: var(--bio-cyan);
+      border-color: var(--bio-cyan);
+      font-weight: 800;
+      box-shadow: 0 0 14px rgba(0, 240, 255, 0.5);
+    }
+
+    /* MAIN LAB LAYOUT */
+    .lab-layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+      min-height: calc(100vh - 65px);
+    }
+
+    /* SPECIMEN SCANNING POD */
+    .specimen-pod {
+      background: #020407;
+      border: 1px solid var(--border);
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+      min-height: 520px;
+    }
+
+    .specimen-img {
+      width: 100%;
+      height: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      filter: contrast(1.1) saturate(1.05);
+      transition: opacity 0.3s ease;
+    }
+
+    /* LASER SCANNER & NODES */
+    .laser-scanner-beam {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--bio-cyan), #fff, var(--bio-cyan), transparent);
+      box-shadow: 0 0 20px var(--bio-cyan), 0 0 40px var(--bio-cyan);
+      animation: bioSweep 3s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes bioSweep {
+      0% { top: 2%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { top: 98%; opacity: 0; }
+    }
+
+    .bio-facial-mesh {
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 160px;
+      height: 190px;
+      border: 1px dashed rgba(0, 240, 255, 0.6);
+      border-radius: 50% 50% 45% 45%;
+      pointer-events: none;
+      box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.2);
+    }
+
+    .mesh-node {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: var(--bio-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--bio-green);
+    }
+    .node-eye-l { top: 35%; left: 30%; }
+    .node-eye-r { top: 35%; right: 30%; }
+    .node-nose { top: 55%; left: 50%; transform: translateX(-50%); }
+    .node-mouth { top: 75%; left: 50%; transform: translateX(-50%); }
+
+    /* TELEMETRY CONSOLE */
+    .telemetry-console {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .clearance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 0, 60, 0.12);
+      border: 1px solid var(--hazard-red);
+      color: var(--hazard-red);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+      letter-spacing: 0.12em;
+    }
+
+    .lab-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 3.2vw, 2.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .lab-title span {
+      color: var(--bio-cyan);
+    }
+
+    .telemetry-table {
+      background: #020407;
+      border: 1px solid rgba(0, 240, 255, 0.15);
+      border-radius: 4px;
+      padding: 14px;
+      font-size: 0.74rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .t-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 6px;
+    }
+
+    .t-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .t-lbl { color: var(--muted); }
+    .t-val { color: var(--bio-cyan); font-weight: 700; }
+    .t-val.green { color: var(--bio-green); }
+
+    /* ACTION POD BUTTON */
+    .btn-bio-access {
+      background: var(--bio-cyan);
+      color: #000;
+      border: none;
+      padding: 16px 24px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 4px;
+      box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-bio-access:hover {
+      background: var(--bio-green);
+      box-shadow: 0 0 45px rgba(0, 255, 102, 0.6);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .lab-layout { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL ECOSYSTEM DOCK -->
+  <header class="ecosystem-dock">
+    <div class="bio-brand">
+      <span class="bio-hazard-icon">☣</span>
+      <span>CAPTOORA // BIOMETRICS</span>
+    </div>
+
+    <nav class="dock-links">
+      <a href="index.html" class="dock-pill">✦ HUB GENERAL</a>
+      <a href="captoora_signature.html" class="dock-pill">01. SIGNATURE</a>
+      <a href="captoora_biometrics.html" class="dock-pill active">02. BIOMETRICS</a>
+      <a href="captoora_corp.html" class="dock-pill">03. CORP</a>
+      <a href="captoora_studio.html" class="dock-pill">04. STUDIO 3D</a>
+      <a href="captoora_pop.html" class="dock-pill">05. POP!</a>
+    </nav>
+  </header>
+
+  <!-- MAIN LAB SCREEN -->
+  <main class="lab-layout">
+
+    <!-- ESCÁNER DE ESPECIMEN -->
+    <div class="specimen-pod">
+      <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Biometrics Subject Scan" class="specimen-img" id="bioSubjectImg">
+      <div class="laser-scanner-beam"></div>
+
+      <!-- Malla biométrica facial -->
+      <div class="bio-facial-mesh">
+        <div class="mesh-node node-eye-l"></div>
+        <div class="mesh-node node-eye-r"></div>
+        <div class="mesh-node node-nose"></div>
+        <div class="mesh-node node-mouth"></div>
+      </div>
+    </div>
+
+    <!-- CONSOLA DE TELEMETRÍA Y ACCESO -->
+    <section class="telemetry-console">
+      <div>
+        <div class="clearance-badge">
+          <span>●</span> CLASIFICACIÓN UMBRELLA CORP // LEVEL 5
+        </div>
+
+        <h1 class="lab-title">
+          Mapeo Óptico &amp;<br>
+          <span>Biometría Subdérmica</span>
+        </h1>
+
+        <div class="telemetry-table">
+          <div class="t-row">
+            <span class="t-lbl">IDENTIFICACIÓN ESPECÍMEN:</span>
+            <span class="t-val">AMAPOLA // CPT_0853</span>
+          </div>
+          <div class="t-row">
+            <span class="t-lbl">SIMETRÍA ANATÓMICA:</span>
+            <span class="t-val green">99.82% NOMINAL</span>
+          </div>
+          <div class="t-row">
+            <span class="t-lbl">ESCANEO DE PIEL (24MP):</span>
+            <span class="t-val">TEXTURA REAL SIN SUAVIZADO</span>
+          </div>
+          <div class="t-row">
+            <span class="t-lbl">DISTORSIÓN ANGULAR:</span>
+            <span class="t-val green">0.00% (ZERO CROP)</span>
+          </div>
+          <div class="t-row">
+            <span class="t-lbl">COORDENADAS SENSOR:</span>
+            <span class="t-val">6000 x 4000 MATRIZ RGB</span>
+          </div>
+        </div>
+
+        <!-- SELECTOR DE ESPECÍMEN -->
+        <div style="display:flex; gap:8px; margin-bottom:20px;">
+          <button class="dock-pill active" onclick="setBioSubject(0, this)" style="flex:1; text-align:center;">
+            SUJETO 01 (0853)
+          </button>
+          <button class="dock-pill" onclick="setBioSubject(1, this)" style="flex:1; text-align:center;">
+            SUJETO 02 (0863)
+          </button>
+          <button class="dock-pill" onclick="setBioSubject(2, this)" style="flex:1; text-align:center;">
+            EXTERIOR (CHIP_01)
+          </button>
+        </div>
+      </div>
+
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20solicito%20acceso%20a%20sesion%20Biometrics%20Lab" target="_blank" class="btn-bio-access">
+        <span>🧬</span> SOLICITAR AUTORIZACIÓN BIOMÉTRICA
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+    const bioSubjects = [
+      'assets/media_jpg/pf-glow-cpt_0853.jpg',
+      'assets/media_jpg/pf-glow-cpt_0863.jpg',
+      'assets/media_jpg/pf-chipinque-01.jpg'
+    ];
+
+    function setBioSubject(idx, btn) {
+      document.querySelectorAll('.dock-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('bioSubjectImg');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = bioSubjects[idx];
+        img.style.opacity = '1';
+      }, 150);
+    }
+  </script>
+</body>
+</html>
