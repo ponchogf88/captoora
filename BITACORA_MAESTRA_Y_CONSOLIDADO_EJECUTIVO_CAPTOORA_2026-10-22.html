@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA STUDIO · BITÁCORA MAESTRA Y CONSOLIDADO EJECUTIVO 2026-10-22</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    @page {
+      size: A4 portrait;
+      margin: 14mm 12mm 14mm 12mm;
+    }
+
+    body {
+      background: #090a0d;
+      color: #e2e8f0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 30px 24px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    .header-box {
+      background: linear-gradient(135deg, #10131a 0%, #161922 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      page-break-after: avoid;
+    }
+
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+    .brand-title span { color: #f59e0b; }
+    .brand-subtitle {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-top: 6px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .tag-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .meta-badge-dark {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #94a3b8;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    /* SECCIONES Y TARJETAS */
+    .section-wrap {
+      margin-bottom: 30px;
+      page-break-inside: avoid;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 8px;
+    }
+
+    .section-number {
+      font-family: 'JetBrains Mono', monospace;
+      background: #f59e0b;
+      color: #000;
+      font-weight: 900;
+      font-size: 0.8rem;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.03em;
+    }
+
+    .card {
+      background: #0f1218;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 22px 26px;
+      margin-bottom: 14px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .item-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #f59e0b;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    p {
+      color: #cbd5e1;
+      font-size: 0.88rem;
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      color: #cbd5e1;
+      font-size: 0.86rem;
+    }
+
+    li { margin-bottom: 5px; }
+
+    /* TABLAS */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px 0;
+      font-size: 0.85rem;
+      background: #0b0d12;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    th {
+      background: #161b24;
+      color: #f59e0b;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      letter-spacing: 0.02em;
+    }
+
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: #cbd5e1;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    /* DIAGRAMA VISUAL DE ARQUITECTURA */
+    .flow-box {
+      background: #06070a;
+      border: 1px solid #f59e0b;
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: #f8fafc;
+      margin: 14px 0;
+      line-height: 1.45;
+    }
+
+    .highlight-gold {
+      color: #f59e0b;
+      font-weight: 700;
+    }
+
+    .contract-box {
+      background: #07080b;
+      border: 1px dashed rgba(245, 158, 11, 0.4);
+      border-radius: 12px;
+      padding: 18px 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #64748b;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 18px;
+      margin-top: 36px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header-box">
+    <div>
+      <div class="brand-title">CAPTOORA <span>STUDIO</span></div>
+      <div class="brand-subtitle">Bitácora Maestra & Consolidado Ejecutivo Integral · Monterrey, N.L.</div>
+    </div>
+    <div class="meta-badges">
+      <div class="tag-badge">SESIÓN OFICIAL 22 OCT 2026</div>
+      <div class="meta-badge-dark">DIRECCIÓN: LIC. ALFONSO GUTIÉRREZ</div>
+      <div class="meta-badge-dark">PRODUCCIÓN: FARMASI 31 OCT 2026</div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 1: FILOSOFÍA VISUAL -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-title">FILOSOFÍA VISUAL Y LEY CAPTOORA (CERO SLOP / 100% FULL-FRAME)</div>
+    </div>
+    <div class="card">
+      <p>En <strong>Captoora Studio</strong>, una fotografía profesional no es un gasto accesorio ni un contenido improvisado para redes: <strong>es un activo comercial de alto rendimiento</strong>. El estudio opera bajo estándares visuales inquebrantables:</p>
+      <div class="grid-3" style="margin-top: 14px;">
+        <div class="item-card">
+          <div class="item-title">📐 Zero Crop / 100% Full-Frame</div>
+          <p>Queda terminantemente prohibido recortar calzado, tenis, piernas, manos o cabeza. El cuerpo entero proyecta estatura, seguridad, postura y elegancia editorial.</p>
+        </div>
+        <div class="item-card">
+          <div class="item-title">⚪ Ciclorama Comercial Puro</div>
+          <p>Fondo blanco impecable sin arrugas, sin pinzas expuestas, sin cables atravesados ni plásticos en el piso. Contact shadows naturales bajo pies y productos.</p>
+        </div>
+        <div class="item-card">
+          <div class="item-title">🚫 Cero Láminas de Texto</div>
+          <p>Jamás tapar la imagen con bloques de texto sobre la foto. Las imágenes hablan por sí solas; la narrativa y los detalles técnicos van en el copy o diapositivas separadas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 2: CARRUSEL Y CASTING -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-title">CARRUSEL ESTRATÉGICO Y 4 COPYS DE CASTING (SAN JERÓNIMO)</div>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div>
+          <div class="item-title">📊 Los 6 Slides del Carrusel "La Foto es una Inversión"</div>
+          <ul>
+            <li><strong>Slide 1:</strong> Portada óptica de cine 8K prime: <em>"¿Gasto superfluo o tu activo más rentable de 2027?"</em></li>
+            <li><strong>Slide 2:</strong> Paradoja del maquillaje de lujo exhibido en fotos oscuras de celular.</li>
+            <li><strong>Slide 3:</strong> 3 Retornos: Doble tarifa de patrocinios, aceleración de reclutamiento y 90 días de stock.</li>
+            <li><strong>Slide 4:</strong> Iluminación de estudio envolvente + dirección de poses guiada.</li>
+            <li><strong>Slide 5:</strong> Black Card VIP Socia Fundadora ($4,000 MXN) de cortesía.</li>
+            <li><strong>Slide 6:</strong> Call to Action: "Solo 25 accesos para el 31 de Octubre. Comenta FARMASI."</li>
+          </ul>
+        </div>
+        <div>
+          <div class="item-title">✍️ 4 Copys de Convocatoria para Redes</div>
+          <p><strong>1. Enfoque Negocio & Cheque:</strong> <em>"¿Tu imagen proyecta el cheque que quieres cobrar en Farmasi? Sesión de producción exclusiva para 25 Top Leaders en San Jerónimo."</em></p>
+          <p><strong>2. Enfoque Socia Fundadora:</strong> <em>"Deja de verte como distribuidora y empieza a verte como socia fundadora. 2 sets editoriales completos."</em></p>
+          <p><strong>3. Enfoque Comunidad & Glamour:</strong> <em>"Mimosas, set de luces de estudio y tu mejor versión ante la cámara con Alfonso Gutiérrez."</em></p>
+          <p><strong>4. Enfoque Urgencia Relámpago:</strong> <em>"Casting San Jerónimo: 25 lugares disponibles. Registro cierra al completar cupo."</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3: STAGING GHOST HOUSE & HOSPITALIDAD VIP -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-title">STAGING "GHOST HOUSE" Y BARRA DE MIMOSAS VIP</div>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div class="item-card">
+          <div class="item-title">🏰 Protocolo "Ghost House" (Cero Vida Doméstica)</div>
+          <ul>
+            <li><strong>Cocina 100% Despejada:</strong> Ni un solo plato, jabón ni garrafón a la vista. La isla se transforma en barra gourmet de hospitalidad.</li>
+            <li><strong>Puertas Cerradas con Señalética:</strong> Habitaciones personales cerradas con letreros discretos: <em>"Staff Only / Zona Técnica"</em>.</li>
+            <li><strong>Cero Cables Sueltos:</strong> Todo cableado de iluminación fijado con cinta gaffer mate negra contra rodapiés.</li>
+            <li><strong>Detalles de Lujo:</strong> Plantas de gran formato lustradas y libros de arte/moda de pasta dura (Taschen, Vogue).</li>
+          </ul>
+        </div>
+        <div class="item-card">
+          <div class="item-title">🥂 Barra de Mimosas & Popotes Oro Rosa</div>
+          <ul>
+            <li><strong>Cava & Jugo Fresco:</strong> Prosecco/Cava frío con jugo de naranja Valencia recién exprimido y doblemente colado.</li>
+            <li><strong>Popotes Delgados Oro Rosa:</strong> <em>Regla de oro:</em> Las invitadas toman con popote fino para <strong>proteger el labial y maquillaje</strong> antes del set.</li>
+            <li><strong>Botanas Secas Anti-Grasa:</strong> Frutos secos, uvas frías, fresas y macarons (nada que manche dedos o ropa).</li>
+            <li><strong>Audio Lo-Fi a 35 dB:</strong> Música relajada que permite conversar y grabar historias con audio limpio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 4: ARQUITECTURA EN DOS NIVELES -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-title">ARQUITECTURA DEL ESTUDIO EN DOS NIVELES Y SETS DE PRODUCCIÓN</div>
+    </div>
+    <div class="card">
+      <div class="flow-box">
+┌────────────────────────────────────────────────────────────────────────┐
+│                   PLANTA ALTA: ZONA DE PRODUCCIÓN                      │
+│                                                                        │
+│   ┌──────────────────────────────┐    ┌────────────────────────────┐   │
+│   │   SET 01: CICLORAMA BLANCO   │    │  SET 02: DARK LUXURY       │   │
+│   │   Nutriplus Sport & Energy   │    │  La Gran Mesa Expandible   │   │
+│   │   Look: Ropa deportiva chic  │    │  Look: Blazer / CEO Glam   │   │
+│   │   7 min por modelo (Nikon)   │    │  7 min por modelo (Godox)  │   │
+│   └──────────────────────────────┘    └────────────────────────────┘   │
+└───────────────────────────────────┬────────────────────────────────────┘
+                                    │ ESCALERA DE ACCESO (Filtro)
+┌───────────────────────────────────▼────────────────────────────────────┐
+│                    PLANTA BAJA: HOSPITALIDAD & LOUNGE                  │
+│                                                                        │
+│   ┌──────────────────────────────┐    ┌────────────────────────────┐   │
+│   │   CHECK-IN & CONTRATO LEGAL  │    │  BARRA DE MIMOSAS & LOUNGE │   │
+│   │   Recepción por la Hermana   │    │  Popotes Oro Rosa          │   │
+│   │   Firma de acuerdo LFDA      │    │  Espejo Selfie Ring BTS    │   │
+│   └──────────────────────────────┘    └────────────────────────────┘   │
+└────────────────────────────────────────────────────────────────────────┘
+      </div>
+      <div class="grid-2" style="margin-top: 12px;">
+        <div>
+          <p><strong>Planta Baja (Recepción y Lounge):</strong> La hermana de Poncho Gutiérrez recibe a las invitadas, coordina la firma del Contrato Legal, entrega gafetes y gestiona la barra de Mimosas y el spot para selfies.</p>
+        </div>
+        <div>
+          <p><strong>Planta Alta (Sets de Disparo):</strong> Zona restringida para tomas profesionales. Nikon D3500 con iluminación Godox Octabox y visualización tethering en pantalla para revisión en vivo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 5: ROTACIÓN MILITARIZADA -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-title">SISTEMA DE ROTACIÓN ANTI-CAOS (4 ESCUADRONES)</div>
+    </div>
+    <div class="card">
+      <p>Para brindar atención de primer nivel a 25 creadoras en 4 horas (10:00 a 14:00 hrs) sin cuellos de botella ni estrés:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>ESCUADRÓN</th>
+            <th>CANTIDAD</th>
+            <th>HORARIO EN SETS</th>
+            <th>ACTIVIDAD EN PLANTA BAJA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong class="highlight-gold">Escuadrón Alpha</strong></td>
+            <td>Chicas 01 a 06</td>
+            <td>10:15 - 11:00</td>
+            <td>Llegada 10:00, Mimosas de bienvenida y firma de contrato.</td>
+          </tr>
+          <tr>
+            <td><strong class="highlight-gold">Escuadrón Beta</strong></td>
+            <td>Chicas 07 a 12</td>
+            <td>11:00 - 11:45</td>
+            <td>Retoque de maquillaje, fotos en espejo lounge y socialización.</td>
+          </tr>
+          <tr>
+            <td><strong class="highlight-gold">Escuadrón Gamma</strong></td>
+            <td>Chicas 13 a 18</td>
+            <td>11:45 - 12:30</td>
+            <td>Grabación de contenido detrás de cámaras (BTS) para TikTok.</td>
+          </tr>
+          <tr>
+            <td><strong class="highlight-gold">Escuadrón Delta</strong></td>
+            <td>Chicas 19 a 25</td>
+            <td>12:30 - 13:15</td>
+            <td>Preparación de outfit y transición hacia la planta alta.</td>
+          </tr>
+          <tr>
+            <td><strong style="color: #38bdf8;">BRINDIS GENERAL</strong></td>
+            <td><strong>Todas (25)</strong></td>
+            <td><strong>13:15 - 13:30</strong></td>
+            <td><strong>Foto Grupal Editorial y Brindis de Celebración Oficial.</strong></td>
+          </tr>
+          <tr>
+            <td><strong style="color: #4ade80;">TESTIMONIOS PING-PONG</strong></td>
+            <td><strong>Todas (25)</strong></td>
+            <td><strong>13:30 - 14:00</strong></td>
+            <td><strong>Grabación de video testimonial individual con micro de solapa.</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 6: GUÍA DE POSES -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">06</div>
+      <div class="section-title">GUÍA DE POSES: "BEAUTY CEO" Y "NUTRIPLUS SPORT"</div>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div class="item-card">
+          <div class="item-title">👑 Set Dark Luxury (La Gran Mesa Expandible)</div>
+          <ul>
+            <li><strong>El Mentón de Autoridad:</strong> Codos en la mesa de madera oscura, manos entrelazadas acariciando el mentón, mirada directa al lente.</li>
+            <li><strong>La Sien Pensativa:</strong> Dedo índice en la sien, hombro ligeramente inclinado, expresión de aplomo ejecutivo.</li>
+            <li><strong>La Vitrina Dr. C. Tuna:</strong> Una mano sobre la mesa sosteniendo el suero facial; la otra mano acompañando la postura.</li>
+            <li><strong>Brazos Cruzados Relajados:</strong> Apoyo frontal sobre la mesa con hombros atrás, transmitiendo solvencia y éxito.</li>
+          </ul>
+        </div>
+        <div class="item-card">
+          <div class="item-title">⚡ Set Ciclorama Blanco (Nutriplus Sport)</div>
+          <ul>
+            <li><strong>Extensión Dinámica:</strong> Pierna adelantada en 45°, torso erguido, interactuando con shaker o colágeno.</li>
+            <li><strong>Poder Atlético Completo:</strong> 100% full-frame, tenis impecables, brazos en jarra o mancuernas ligeras.</li>
+            <li><strong>El Destello de Rostro:</strong> Plano americano medio, cabello al viento, producto a la altura del hombro con logotipo visible.</li>
+            <li><strong>La Risa Espontánea:</strong> Movimiento fluido hacia un costado con giro rápido a cámara, capturando naturalidad.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- SECCIÓN 7: DELIVERY GATE -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">07</div>
+      <div class="section-title">EL "DELIVERY GATE": CANDADO DE RETRIBUCIÓN E INVIOLABILIDAD</div>
+    </div>
+    <div class="card">
+      <p>Para garantizar que las 25 influencers cumplan con la difusión pactada y evitar que reciban el servicio sin retribuir con menciones:</p>
+      <div class="grid-3" style="margin-top: 10px;">
+        <div class="item-card">
+          <div class="item-title">📋 1. Filtro Previo (48h antes)</div>
+          <p>La líder organizadora entrega el padrón con Nombre, WhatsApp, Instagram y rol de cada una de las 25 invitadas.</p>
+        </div>
+        <div class="item-card">
+          <div class="item-title">🔒 2. Vista Previa con Marca</div>
+          <p>Se les envía una galería web con miniaturas y sello de agua diagonal <em>"CAPTOORA - VISTA PREVIA"</em>.</p>
+        </div>
+        <div class="item-card">
+          <div class="item-title">🔓 3. Liberación Master 4K</div>
+          <p>La entrega del enlace final descargable en ultra resolución está formalmente condicionada a verificar la publicación etiquetando a <strong>@captoora</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 8: CONTRATO LEGAL INTEGRAL -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">08</div>
+      <div class="section-title">CONTRATO LEGAL DE COLABORACIÓN Y LIBERACIÓN DE IMAGEN (LFDA)</div>
+    </div>
+    <div class="card">
+      <p>Texto legal definitivo sustentado en los artículos 87 y 88 de la Ley Federal del Derecho de Autor (LFDA):</p>
+      <div class="contract-box">
+<strong>ACUERDO DE COLABORACIÓN CREATIVA, LICENCIA DE USO DE IMAGEN Y AUTORIZACIÓN DE TESTIMONIO COMERCIAL</strong><br><br>
+En Monterrey, N.L., celebran el presente CAPTOORA STUDIO (representado por ALFONSO GUTIÉRREZ) y LA CREADORA identificada al calce.<br><br>
+<strong>CLÁUSULAS ESENCIALES:</strong><br>
+<strong>PRIMERA (OBJETO):</strong> Producción fotográfica en dos sets (Ciclorama Blanco y Set Ejecutivo Dark Luxury) y entrega de fotos editadas en alta resolución bajo modalidad de intercambio profesional (TFP / Value For Value).<br>
+<strong>SEGUNDA (CONTRAPRESTACIÓN):</strong> LA CREADORA se obliga a publicar al menos una (1) historia y un (1) Reel/TikTok dentro de los 5 días hábiles siguientes, etiquetando visiblemente a <strong>@captoora</strong> y agregando la ubicación del estudio en San Jerónimo.<br>
+<strong>TERCERA (TESTIMONIO):</strong> Autorización expresa para registrar en audio y video la experiencia y opinión libre de LA CREADORA al finalizar la sesión.<br>
+<strong>CUARTA (LICENCIA DE IMAGEN - ARTS. 87 Y 88 LFDA):</strong> Cesión de derechos de imagen, voz y nombre de forma no exclusiva, gratuita, mundial y perpetua para su difusión en sitio web, redes sociales, pauta publicitaria y portafolio comercial de Captoora.<br>
+<strong>QUINTA (CONDICIÓN SUSPENSIVA - DELIVERY GATE):</strong> La entrega final de los archivos en alta resolución y sin marcas de agua queda sujeta a la verificación previa del cumplimiento de las etiquetas y publicaciones pactadas.<br>
+<strong>SEXTA (JURISDICCIÓN):</strong> Tribunales competentes de la ciudad de Monterrey, Nuevo León.
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 9: PROTOCOLO DE TESTIMONIOS -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">09</div>
+      <div class="section-title">DINÁMICA DE TESTIMONIOS: PING-PONG Y DISTRIBUCIÓN A 12 SEMANAS</div>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div class="item-card">
+          <div class="item-title">🎙️ Las 4 Preguntas del Ping-Pong (45s en 9:16)</div>
+          <ol>
+            <li><strong>Identificación:</strong> "¿Tu nombre y qué rango tienes en Farmasi?"</li>
+            <li><strong>Experiencia de Estudio:</strong> "Del 1 al 10, ¿cómo viviste tener un estudio profesional con ciclorama para ti sola?"</li>
+            <li><strong>Dirección de Poses:</strong> "¿Qué fue lo que más te sorprendió de la dirección de Poncho Gutiérrez?"</li>
+            <li><strong>Recomendación:</strong> "En 3 palabras: ¿por qué toda creadora de Monterrey debe venir a Captoora?"</li>
+          </ol>
+        </div>
+        <div class="item-card">
+          <div class="item-title">📅 Estrategia de Difusión (Social Proof Continuo)</div>
+          <ul>
+            <li><strong>Cadencia:</strong> 2 testimonios por semana (Martes de Autoridad y Jueves de Caso de Éxito).</li>
+            <li><strong>Distribución:</strong> 25 testimonios distribuidos estratégicamente a lo largo de <strong>12 semanas completas (3 meses)</strong>.</li>
+            <li><strong>Canales:</strong> Instagram Reels, TikTok nativo, historias destacadas y landing page oficial.</li>
+            <li><strong>Impacto:</strong> Prueba social ininterrumpida que convierte visitas en clientes de pago sin gastar en pauta.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 10 & 11: PASE VIP Y CHECKLIST -->
+  <div class="section-wrap">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <div class="section-title">PASE VIP SOCIA FUNDADORA & CHECKLIST OPERATIVO MAESTRO</div>
+    </div>
+    <div class="card">
+      <div class="grid-2">
+        <div class="item-card">
+          <div class="item-title">💳 Pase VIP Socia Fundadora ($4,000 MXN)</div>
+          <p>Black Card física/digital entregada a cada una de las 25 líderes. Acredita su acceso a los dos sets de producción, hospitalidad de mimosas, dirección de arte 1-a-1 y galería digital oficial, formalizando el compromiso de reciprocidad creativa.</p>
+        </div>
+        <div class="item-card">
+          <div class="item-title">⏱️ Checklist Maestro de Producción</div>
+          <ul>
+            <li><strong>Día -2 (29 Oct):</strong> Padrón nominal de 25 chicas validado, impresión de contratos y compra de catering.</li>
+            <li><strong>Día -1 (30 Oct):</strong> Staging Ghost House en residencia, set de luces montado, prueba de tethering y micro Lavalier.</li>
+            <li><strong>Día D (31 Oct):</strong> 08:30 música Lo-Fi, 09:30 mimosas frías, 10:00 inicio continuo de escuadrones y 13:30 testimonios.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    CAPTOORA STUDIO · COLINAS DE SAN JERÓNIMO, MONTERREY, N.L. · TODOS LOS DERECHOS RESERVADOS 2026
+  </div>
+
+</div>
+
+</body>
+</html>
