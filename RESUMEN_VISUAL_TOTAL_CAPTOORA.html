@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA · RESUMEN 100% VISUAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Space+Grotesk:wght@700;800&family=JetBrains+Mono:wght@700&family=Cinzel:wght@800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #000; color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    .slide {
+      width: 1200px;
+      height: 800px;
+      background: #06070a;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 50px;
+      margin-bottom: 40px;
+    }
+
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 16px;
+    }
+
+    .slide-num {
+      font-family: 'JetBrains Mono', monospace;
+      color: #f59e0b;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+    }
+
+    .slide-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .slide-title span { color: #f59e0b; }
+
+    .slide-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    /* SLIDE 1: CLAUDE VS TONY */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: auto 0;
+    }
+    .compare-card {
+      background: #0b0d14;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card-claude { border-top: 4px solid #ef4444; }
+    .card-tony { border-top: 4px solid #10b981; background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.1), #0b0d14 70%); }
+    .badge-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      width: fit-content;
+      font-weight: 700;
+    }
+    .badge-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid #ef4444; }
+    .badge-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid #10b981; }
+
+    .compare-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+    .compare-items li { display: flex; align-items: center; gap: 10px; }
+
+    /* SLIDE 2: ARQUITECTURA CASA */
+    .house-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: auto 0;
+    }
+    .level-box {
+      background: #0b0d14;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .level-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .level-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* SLIDE 3: FOTOGRAFOS FB VS HERMANA */
+    .split-trust {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: auto 0;
+    }
+
+    /* SLIDE 4: LA GRAN MESA & POSES */
+    .poses-grid {
+      display: grid;
+      grid-template-columns: 300px repeat(3, 1fr);
+      gap: 20px;
+      align-items: center;
+      margin: auto 0;
+    }
+    .pose-card-box {
+      background: #0b0d14;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      border-radius: 14px;
+      padding: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .pose-card-box h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.15rem;
+      color: #f59e0b;
+      margin-bottom: 8px;
+    }
+
+    /* SLIDE 5: PASE FUNDADOR */
+    .founder-showcase {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 36px;
+      align-items: center;
+      margin: auto 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       SLIDE 1: EL MITO DE CLAUDE VS LA REALIDAD
+  ========================================== -->
+  <section class="slide" id="slide1">
+    <div class="slide-header">
+      <div class="slide-num">SLIDE 01 // LA VERDAD TECNOLÓGICA</div>
+      <div style="font-family:'Space Grotesk',sans-serif; color:#94a3b8; font-size:0.9rem;">¿POR QUÉ TODOS GRITAN "CLAUDE" EN INSTAGRAM?</div>
+    </div>
+
+    <div>
+      <h2 class="slide-title">El Mito de los Influencers vs. <span>Tu Máquina Real</span></h2>
+      <p style="color:#94a3b8; font-size:1rem; margin-top:6px;">Los creadores de Reels venden plantillas. Tú tienes la infraestructura directa.</p>
+    </div>
+
+    <div class="compare-grid">
+      <div class="compare-card card-claude">
+        <span class="badge-status badge-red">CLAUDE WEB (LO QUE VEN EN TIKTOK)</span>
+        <h3 style="font-size:1.4rem;">Atrapado en una Pestaña Web</h3>
+        <ul class="compare-items">
+          <li>❌ <strong>Cero acceso a tu disco duro:</strong> No puede tocar tus fotos ni tus videos.</li>
+          <li>❌ <strong>No tiene editor de video:</strong> El video viral usaba scripts externos con FFmpeg.</li>
+          <li>❌ <strong>Efecto Rebaño:</strong> Todos repiten "Claude" para venderte un curso de $27 USD.</li>
+          <li>❌ <strong>No puede publicar nada:</strong> Requiere que el humano copie y pegue todo.</li>
+        </ul>
+      </div>
+
+      <div class="compare-card card-tony">
+        <span class="badge-status badge-green">TONY / ANTIGRAVITY (LO QUE YA TIENES TÚ)</span>
+        <h3 style="font-size:1.4rem; color:#34d399;">Agente Autónomo en tu Mac</h3>
+        <ul class="compare-items">
+          <li>✅ <strong>Acceso a tus 200+ fotos de estudio</strong> en tu Google Drive y disco local.</li>
+          <li>✅ <strong>Control de Navegador Chrome</strong> para auditar, publicar y verificar.</li>
+          <li>✅ <strong>Despliegue automático a Vercel</strong> y renderizado de PDFs en 4K.</li>
+          <li>✅ <strong>Cero intermediarios:</strong> Código, diseño y operaciones en una sola terminal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div>CAPTOORA EXECUTIVE INTEL · CERO HUMO DE REDES</div>
+      <div>100% CAPACIDAD LOCAL INSTALADA</div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLIDE 2: ARQUITECTURA CASA (ARRIBA VS ABAJO)
+  ========================================== -->
+  <section class="slide" id="slide2">
+    <div class="slide-header">
+      <div class="slide-num">SLIDE 02 // ARQUITECTURA DEL EVENTO 31 OCTUBRE</div>
+      <div style="font-family:'Space Grotesk',sans-serif; color:#94a3b8; font-size:0.9rem;">25 INFLUENCERS · 2 NIVELES · CERO CAOS</div>
+    </div>
+
+    <div>
+      <h2 class="slide-title">Tu Casa como Estudio de <span>Beverly Hills</span></h2>
+      <p style="color:#94a3b8; font-size:1rem; margin-top:6px;">Separación física de hospitalidad y producción para que las fotos fluyan sin interrupciones.</p>
+    </div>
+
+    <div class="house-grid">
+      <div class="level-box">
+        <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" class="level-img">
+        <div class="level-content">
+          <span style="color:#f59e0b; font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700;">NIVEL 1 // PLANTA BAJA</span>
+          <h3 style="font-size:1.3rem;">Chill Out &amp; Mimosas Lounge</h3>
+          <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+            🥂 <strong>Barra de Mimosas:</strong> Prosecco helado con popotes oro rosa (cero labial despintado).<br>
+            🤳 <strong>Instagram Spots:</strong> Espejo vertical con luz cálida para selfies y BTS.<br>
+            👑 <strong>Tu Hermana de Hostess:</strong> Bienvenida VIP y control de la lista de turnos.
+          </p>
+        </div>
+      </div>
+
+      <div class="level-box">
+        <img src="assets/media_jpg/escenario-1.jpg" class="level-img">
+        <div class="level-content">
+          <span style="color:#34d399; font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700;">NIVEL 2 // PLANTA ALTA</span>
+          <h3 style="font-size:1.3rem;">Doble Set de Producción Rápida</h3>
+          <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+            ⚡ <strong>Set Blanco Ciclorama:</strong> Fotos deportivas, fitness y Nutriplus (como Karla).<br>
+            💎 <strong>Set Negro &amp; Gran Mesa:</strong> Poses soberbias de Beauty CEO con productos Farmasi.<br>
+            📸 <strong>Nikon D3500 + Godox:</strong> 8 minutos exactos por chica sin público estorbando.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div>CAPTOORA STUDIO LAYOUT · SAN JERÓNIMO MTY</div>
+      <div>ROTACIÓN DE 4 ESCUADRONES CADA 45 MINUTOS</div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLIDE 3: EL PASTEL SE QUEDA EN CASA
+  ========================================== -->
+  <section class="slide" id="slide3">
+    <div class="slide-header">
+      <div class="slide-num">SLIDE 03 // ESTRATEGIA DE EQUIPO</div>
+      <div style="font-family:'Space Grotesk',sans-serif; color:#94a3b8; font-size:0.9rem;">¿FOTÓGRAFOS DE FACEBOOK O TU FAMILIA?</div>
+    </div>
+
+    <div>
+      <h2 class="slide-title">El Pastel de Captoora <span>Se Queda en Casa</span></h2>
+      <p style="color:#94a3b8; font-size:1rem; margin-top:6px;">Por qué meter a otro fotógrafo es un riesgo mortal y tu hermana es tu mejor socia.</p>
+    </div>
+
+    <div class="split-trust">
+      <div class="compare-card card-claude">
+        <span class="badge-status badge-red">FOTÓGRAFO EXTERNO / FACEBOOK / EMILIO</span>
+        <h3 style="font-size:1.35rem;">Peligro de Fuga de Clientes</h3>
+        <ul class="compare-items">
+          <li>⚠️ <strong>Caza de contactos:</strong> Les pide el Instagram a las 25 influencers directamente.</li>
+          <li>⚠️ <strong>Te baja el precio:</strong> Al día siguiente les manda DM ofreciéndoles fotos más baratas.</li>
+          <li>⚠️ <strong>Confusión de marca:</strong> No saben si el estudio es tuyo o de él.</li>
+          <li>⚠️ <strong>Guerra de egos:</strong> Querrá opinar y cambiar la iluminación en tu propio set.</li>
+        </ul>
+      </div>
+
+      <div class="compare-card card-tony">
+        <span class="badge-status badge-green">TU HERMANA COMO STUDIO HOST &amp; CONCIERGE</span>
+        <h3 style="font-size:1.35rem; color:#34d399;">Confianza Total &amp; Lujo Femenino</h3>
+        <ul class="compare-items">
+          <li>🛡️ <strong>Seguridad Femenina:</strong> 25 chicas se sienten 1000 veces más cómodas y cuidadas.</li>
+          <li>🛡️ <strong>Hospitalidad VIP:</strong> Ella atiende las mimosas, cuida el espejo y coordina los turnos.</li>
+          <li>🛡️ <strong>Lealtad 100%:</strong> Todo el dinero, los contactos y el prestigio quedan en familia.</li>
+          <li>🛡️ <strong>Tú como Master Director:</strong> Tú solo disparas la cámara con máxima autoridad.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div>ESTRATEGIA BLINDADA DE NEGOCIO · CAPTOORA ENGINE</div>
+      <div>ALFONSO GUTIÉRREZ = DIRECTOR CREATIVO TITULAR</div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLIDE 4: LA GRAN MESA & POSES SOBERBIAS
+  ========================================== -->
+  <section class="slide" id="slide4">
+    <div class="slide-header">
+      <div class="slide-num">SLIDE 04 // DIRECCIÓN DE ARTE</div>
+      <div style="font-family:'Space Grotesk',sans-serif; color:#94a3b8; font-size:0.9rem;">LA GRAN MESA EXPANDIBLE · BEAUTY CEO</div>
+    </div>
+
+    <div>
+      <h2 class="slide-title">La Gran Mesa: <span>Poses Soberbias de Poder</span></h2>
+      <p style="color:#94a3b8; font-size:1rem; margin-top:6px;">Las líderes de Farmasi no quieren parecer vendedoras de catálogo: quieren lucir como empresarias millonarias.</p>
+    </div>
+
+    <div class="poses-grid">
+      <div style="height:320px; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.15);">
+        <img src="assets/media_jpg/FARMASI_CPT_0558_BRENDA_ESTUDIO_PRO.jpg" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+
+      <div class="pose-card-box">
+        <div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#f59e0b;">POSE 01</span>
+          <h3>Codo en Mesa &amp; Dedo en Sien</h3>
+          <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.5;">
+            Parada erguida apoyando un codo sobre la mesa de madera. El dedo índice toca sutilmente la sien. Mirada fija y soberbia al lente. Proyecta visión y liderazgo directivo.
+          </p>
+        </div>
+        <div style="font-size:0.7rem; color:#64748b; font-family:'JetBrains Mono',monospace;">VOGUE BUSINESS ATTITUDE</div>
+      </div>
+
+      <div class="pose-card-box">
+        <div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#f59e0b;">POSE 02</span>
+          <h3>Mano en el Mentón</h3>
+          <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.5;">
+            La mano descansa suavemente en el mentón con dedos finos, destacando manicura y joyas. El producto Farmasi colocado en primer plano sobre la mesa con brillo sutil.
+          </p>
+        </div>
+        <div style="font-size:0.7rem; color:#64748b; font-family:'JetBrains Mono',monospace;">ELEGANCIA DE ALTA COSTURA</div>
+      </div>
+
+      <div class="pose-card-box">
+        <div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:#f59e0b;">POSE 03</span>
+          <h3>The Hero Product</h3>
+          <p style="font-size:0.82rem; color:#cbd5e1; line-height:1.5;">
+            Una mano acaricia la botella de suero Dr. C. Tuna o labial sobre la mesa, con la otra mano en la cintura y blazer negro sobre los hombros. Estatus absoluto de socia diamante.
+          </p>
+        </div>
+        <div style="font-size:0.7rem; color:#64748b; font-family:'JetBrains Mono',monospace;">HERO BEAUTY SHOWCASE</div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div>ILUMINACIÓN CLAROSCURO · FONDO NEGRO CON LUZ DE RECORTE</div>
+      <div>PROPS: LA MESA EXPANDIBLE + PRODUCTOS DR. C. TUNA</div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SLIDE 5: EL PASE DE SOCIA FUNDADORA ($4,000 MXN)
+  ========================================== -->
+  <section class="slide" id="slide5">
+    <div class="slide-header">
+      <div class="slide-num">SLIDE 05 // LEVANTAMIENTO DE CAPITAL CÍRCULO CERO</div>
+      <div style="font-family:'Space Grotesk',sans-serif; color:#94a3b8; font-size:0.9rem;">LA BLACK CARD PARA TU CLIENTA Y FAMILIA</div>
+    </div>
+
+    <div>
+      <h2 class="slide-title">Pase Socia Fundadora: <span>$4,000 MXN en Mano</span></h2>
+      <p style="color:#94a3b8; font-size:1rem; margin-top:6px;">Por qué tu clienta modelo/abogada y familiares te dicen "toma mi dinero y cállate".</p>
+    </div>
+
+    <div class="founder-showcase">
+      <div style="border-radius:16px; overflow:hidden; border:2px solid #f59e0b; box-shadow:0 20px 50px rgba(0,0,0,0.8);">
+        <img src="PASE_SOCIA_FUNDADORA_VIP_PREVIEW.png" style="width:100%; display:block;">
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background:#0b0d14; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:18px;">
+          <h4 style="color:#f59e0b; font-size:1.1rem; margin-bottom:4px;">1. La Oferta Irresistible para Ella</h4>
+          <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+            Ella es modelo: pagar $4,000 pesos únicos por tener 1 sesión de estudio mensual todo el año + escaneo de avatar biométrico + cobertura de 1 evento personal es un ahorro de más de $35,000 pesos.
+          </p>
+        </div>
+
+        <div style="background:#0b0d14; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:18px;">
+          <h4 style="color:#34d399; font-size:1.1rem; margin-bottom:4px;">2. El Pacto de Reciprocidad</h4>
+          <p style="font-size:0.85rem; color:#cbd5e1; line-height:1.5;">
+            A cambio del beneficio, ella se compromete a etiquetar y mencionar a <strong>@captoora</strong> en cada publicación. Se convierte en tu embajadora permanente de alto impacto.
+          </p>
+        </div>
+
+        <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.3); border-radius:12px; padding:18px; display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <div style="font-size:0.75rem; font-family:'JetBrains Mono',monospace; color:#94a3b8;">CAPITAL INMEDIATO:</div>
+            <div style="font-size:1.6rem; font-weight:800; color:#f59e0b;">$20,000 a $40,000 MXN</div>
+          </div>
+          <div style="font-size:0.8rem; color:#cbd5e1; text-align:right;">
+            Colocando de 5 a 10 pases exclusivos<br>entre clientas VIP, hermano, cuñado y familia.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-footer">
+      <div>FOUNDING MEMBER PASS · FOLIO CPT-FOUNDER-001</div>
+      <div>CAPTOORA STUDIO · COLINAS DE SAN JERÓNIMO</div>
+    </div>
+  </section>
+
+</body>
+</html>
