@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA · PASE SOCIA FUNDADORA · CÍRCULO CERO VIP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: 11in 8.5in;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      background: #030407;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .pass-container {
+      width: 100%;
+      max-width: 1060px;
+      background: radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.12) 0%, rgba(8, 10, 15, 0.98) 70%);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      border-radius: 24px;
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      padding: 44px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Borde de lujo reflectante */
+    .pass-container::before {
+      content: '';
+      position: absolute;
+      top: -2px; left: -2px; right: -2px; bottom: -2px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.4), transparent 40%, rgba(245, 158, 11, 0.2));
+      z-index: -1;
+    }
+
+    /* TOP HEADER */
+    .pass-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .brand-group h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      color: #fff;
+    }
+
+    .brand-group h1 span {
+      color: #f59e0b;
+    }
+
+    .brand-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      letter-spacing: 0.12em;
+      margin-top: 4px;
+    }
+
+    .badge-serial {
+      text-align: right;
+    }
+
+    .serial-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid #f59e0b;
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: #f59e0b;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    .serial-slot {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #64748b;
+      margin-top: 6px;
+    }
+
+    /* MAIN GRID: FOTO DE ALTA COSTURA + DETALLES DE LA MEMBRESÍA */
+    .pass-main-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 36px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 860px) {
+      .pass-main-grid { grid-template-columns: 1fr; }
+    }
+
+    /* TARJETA VISUAL DE LA FOTO (ZERO CROP / ALTA GAMA) */
+    .vip-photo-card {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #000;
+      aspect-ratio: 4/5;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+    }
+
+    .vip-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-watermark {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: #fff;
+      letter-spacing: 0.1em;
+    }
+
+    .card-chip {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      width: 44px;
+      height: 32px;
+      background: linear-gradient(135deg, #d4af37, #f59e0b, #aa771c);
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* DERECHA: LOS 3 BENEFICIOS MAESTROS */
+    .vip-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .pass-headline {
+      font-family: 'Cinzel', serif;
+      font-size: 1.7rem;
+      color: #fff;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .pass-intro {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .benefit-item {
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-left: 3px solid #f59e0b;
+      border-radius: 10px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .benefit-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .benefit-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .benefit-desc {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+
+    /* FOOTER CON PRECIO, RECIPROCIDAD Y FIRMA */
+    .pass-footer-box {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 14px;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .price-tag {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #f59e0b;
+    }
+
+    .price-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #94a3b8;
+      letter-spacing: 0.08em;
+    }
+
+    .reciprocity-note {
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      max-width: 440px;
+      line-height: 1.45;
+    }
+
+    .reciprocity-note strong {
+      color: #f59e0b;
+    }
+
+    .signature-box {
+      text-align: right;
+    }
+
+    .sig-name {
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .sig-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.66rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pass-container">
+
+    <!-- CABECERA DE LA TARJETA -->
+    <header class="pass-header">
+      <div class="brand-group">
+        <h1>CAPTOORA <span>STUDIO</span></h1>
+        <div class="brand-sub">PRIVATE FOUNDING MEMBER PASS · CÍRCULO CERO</div>
+      </div>
+      <div class="badge-serial">
+        <div class="serial-pill">★ SOCIA FUNDADORA VIP</div>
+        <div class="serial-slot">FOLIO: CPT-FOUNDER-001 / 005 EXCLUSIVOS</div>
+      </div>
+    </header>
+
+    <!-- CUERPO PRINCIPAL VISUAL -->
+    <main class="pass-main-grid">
+
+      <!-- FOTO EDITORIAL LIMPIA (100% LEY VISUAL) -->
+      <div class="vip-photo-card">
+        <img src="assets/media_jpg/IG_CPT_0700_4x5.jpg" alt="Lookbook Editorial Captoora">
+        <div class="card-watermark">CAPTOORA MASTER GLASS</div>
+        <div class="card-chip"></div>
+      </div>
+
+      <!-- DETALLES DEL PASE Y BENEFICIOS -->
+      <div class="vip-details">
+        <h2 class="pass-headline">Acceso Anual Anticipado a Todas las Marcas</h2>
+        <p class="pass-intro">
+          Por tu estrecha confianza y trayectoria como abogada y modelo, tienes reservado uno de los <strong>5 Pases Fundadores Oficiales</strong> para la inauguración de Captoora Studio en Colinas de San Jerónimo.
+        </p>
+
+        <div class="benefits-grid">
+          <!-- Beneficio 1 -->
+          <div class="benefit-item">
+            <div class="benefit-icon">📸</div>
+            <div>
+              <div class="benefit-title">01. CAPTOORA STUDIO · 1 SESIÓN MENSUAL DE POR VIDA</div>
+              <div class="benefit-desc">1 sesión fotográfica cada mes en ciclorama con iluminación de autor. 6 a 8 fotos editadas en alta resolución listas para tu book y portafolio.</div>
+            </div>
+          </div>
+
+          <!-- Beneficio 2 -->
+          <div class="benefit-item">
+            <div class="benefit-icon">🧬</div>
+            <div>
+              <div class="benefit-title">02. CAPTOORA BIOMETRICS · REGISTRO DE IDENTIDAD VISUAL</div>
+              <div class="benefit-desc">Sesión prioritaria de modelado y registro biométrico de cuerpo y rostro en alta fidelidad en nuestro laboratorio.</div>
+            </div>
+          </div>
+
+          <!-- Beneficio 3 -->
+          <div class="benefit-item">
+            <div class="benefit-icon">🥂</div>
+            <div>
+              <div class="benefit-title">03. CAPTOORA SIGNATURE · COBERTURA DE 1 EVENTO ESPECIAL</div>
+              <div class="benefit-desc">Cobertura fotográfica completa de 1 evento personal o profesional durante el año (hasta 3 horas de producción) sin costo extra.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- PIE DE TARJETA: VALOR, CONDICIÓN DE RECIPROCIDAD Y FIRMA -->
+    <footer class="pass-footer-box">
+      <div>
+        <div class="price-tag">$4,000 <span style="font-size:1.1rem; font-weight:700;">MXN</span></div>
+        <div class="price-sub">APORTACIÓN ÚNICA DE SOCIA FUNDADORA</div>
+      </div>
+
+      <div class="reciprocity-note">
+        <strong>Pacto de Reciprocidad:</strong> Este pase tiene un valor comercial de más de $35,000 MXN al año. Como socia fundadora, tu única reciprocidad es etiquetar y mencionar a <strong>@captoora</strong> en tus publicaciones y redes.
+      </div>
+
+      <div class="signature-box">
+        <div class="sig-name">Alfonso Gutiérrez</div>
+        <div class="sig-title">DIRECTOR GENERAL · CAPTOORA STUDIO</div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
