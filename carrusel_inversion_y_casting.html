@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA · Carrusel "La Foto es Inversión" & Convocatoria de Modelos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@600;700;800&family=JetBrains+Mono:wght@400;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050609;
+      --card-bg: #0b0d14;
+      --border: rgba(255, 255, 255, 0.1);
+      --amber: #f59e0b;
+      --cyan: #06b6d4;
+      --green: #10b981;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding-bottom: 90px;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 6, 9, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+    }
+
+    .brand-title span { color: var(--amber); }
+
+    .hero-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 50px 24px 20px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 5px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .section-wrap {
+      max-width: 1240px;
+      margin: 40px auto 0;
+      padding: 0 24px;
+    }
+
+    .section-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-header h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    /* CARRUSEL SLIDES INTERACTIVO */
+    .carousel-slider-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      margin-bottom: 60px;
+    }
+
+    .carousel-viewer {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #020305;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-slide-item {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: scale(0.98);
+      pointer-events: none;
+    }
+
+    .carousel-slide-item.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    .slide-bg-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: contrast(1.05) brightness(0.95);
+    }
+
+    .slide-overlay-card {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      background: rgba(8, 10, 16, 0.88);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    }
+
+    .slide-num-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--amber);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .slide-headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .slide-body-text {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    .carousel-nav-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .btn-c-nav {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-c-nav:hover {
+      background: var(--amber);
+      color: #000;
+    }
+
+    /* 4 OPCIONES DE CASTING FACEBOOK */
+    .casting-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .casting-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      transition: border-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .casting-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-4px);
+    }
+
+    .casting-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+
+    .casting-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+
+    .casting-copy-box {
+      background: #040508;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      white-space: pre-line;
+    }
+
+    .btn-launch-fb {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+    }
+
+    .btn-launch-fb:hover {
+      background: var(--amber);
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="brand-title">CAPTOORA <span>MARKETING DISPATCH</span></div>
+    <div style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--muted);">
+      AUTONOMOUS SOCIAL DISPATCH // 0 PASOS HUMANOS
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-container">
+    <div class="hero-badge">⚡ TRABAJO RESCATADO Y AMPLIADO</div>
+    <h1 class="hero-title">
+      Carrusel de Inversión &amp;<br>
+      4 Convocatorias de Casting
+    </h1>
+    <p style="color:var(--muted); max-width:700px; margin:0 auto; font-size:1rem;">
+      Lupita se quedó sin cuota, pero el flujo no se detiene. Aquí tienes el carrusel completo listo con fotografía de autor y las 4 opciones de convocatoria listas para disparar en Facebook.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 1: CARRUSEL "LA FOTO ES UNA INVERSIÓN" -->
+  <section class="section-wrap">
+    <div class="section-header">
+      <div>
+        <h2>01. Carrusel: La Fotografía No Es un Gasto, Es una Inversión</h2>
+        <p style="color:var(--muted); font-size:0.9rem;">6 Láminas respetando la Ley Visual (Zero Crop, Fotografía Real de GlowTours &amp; Chipinque).</p>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace; color:var(--amber); font-size:0.8rem;" id="slideIndicator">
+        SLIDE 1 DE 6
+      </div>
+    </div>
+
+    <div class="carousel-slider-box">
+      <div class="carousel-viewer">
+        <!-- Slide 1 -->
+        <div class="carousel-slide-item active">
+          <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Slide 1" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 01 // EL GANCHO</div>
+            <div class="slide-headline">Un gasto se evapora en días. Una buena fotografía gana valor con cada año que pasa.</div>
+            <div class="slide-body-text">El café de moda y la ropa de temporada terminan en el olvido. La fotografía profesional es de los pocos activos que multiplican su peso emocional y de estatus con el tiempo.</div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide-item">
+          <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Slide 2" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 02 // LA JOYA ETERNA</div>
+            <div class="slide-headline">Como un diamante fino: el único elemento que no tiene fecha de caducidad.</div>
+            <div class="slide-body-text">Un diamante es eterno porque trasciende generaciones. Una captura de autor hace exactamente lo mismo: inmortaliza quién eres hoy para que nunca se borre de la historia.</div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide-item">
+          <img src="assets/media_jpg/pf-chipinque-fam.jpg" alt="Slide 3" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 03 // LA PLUSVALÍA DEL TIEMPO</div>
+            <div class="slide-headline">La única máquina del tiempo que sube de valor a medida que el reloj avanza.</div>
+            <div class="slide-body-text">Hoy esa foto con tu familia o en tu mejor momento físico es hermosa. En 10, 20 o 30 años, será invaluable. Nada en el mercado tiene esa tasa de retorno emocional.</div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="carousel-slide-item">
+          <img src="assets/media_jpg/pf-glow-cpt_0878.jpg" alt="Slide 4" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 04 // EL PODER PROBATORIO</div>
+            <div class="slide-headline">Certeza y verdad: una fotografía es prueba indiscutible ante los ojos del mundo.</div>
+            <div class="slide-body-text">Una fotografía auténtica puede demostrar inocencia ante un tribunal o sellar un hecho histórico para siempre. La imagen no miente; documenta la realidad sin filtros.</div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="carousel-slide-item">
+          <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Slide 5" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 05 // RETORNO COMERCIAL</div>
+            <div class="slide-headline">En negocios y marcas personales: tu imagen cierra o tira contratos antes de hablar.</div>
+            <div class="slide-body-text">Los clientes compran confianza a primera vista. Un retrato de autor con luz cuidada y 24MP transmite autoridad inmediata y multiplica el valor percibido de tus proyectos.</div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="carousel-slide-item">
+          <img src="assets/media_jpg/pf-chipinque-02.jpg" alt="Slide 6" class="slide-bg-photo">
+          <div class="slide-overlay-card">
+            <div class="slide-num-tag">SLIDE 06 // CIERRE & ACCIÓN</div>
+            <div class="slide-headline">No gastes en lo efímero. Invierte en tu propio legado visual.</div>
+            <div class="slide-body-text">¿Estás registrando tu mejor versión o la estás dejando escapar? Dale like si sabes el valor de una foto real, compártelo y síguenos en @Captoora.studio para más claves de luz.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-nav-controls">
+        <button class="btn-c-nav" onclick="prevSlide()">&larr; Slide Anterior</button>
+        <button class="btn-c-nav" onclick="nextSlide()">Siguiente Slide &rarr;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: 4 OPCIONES DE CONVOCATORIA DE CASTING -->
+  <section class="section-wrap">
+    <div class="section-header">
+      <div>
+        <h2>02. Convocatoria de Modelos / Creadoras (Facebook)</h2>
+        <p style="color:var(--muted); font-size:0.9rem;">4 Enfoques profesionales listos para publicar en tu perfil de Alfonso Gutiérrez y grupos de MTY.</p>
+      </div>
+    </div>
+
+    <div class="casting-grid">
+      <!-- Opción A -->
+      <div class="casting-card">
+        <div>
+          <div class="casting-badge">OPCIÓN A // EDITORIAL & ALTA COSTURA</div>
+          <div class="casting-title">Casting TFP Moda &amp; Retrato de Autor</div>
+          <div class="casting-copy-box">📸 CONVOCATORIA DE MODELOS &amp; CREADORAS // MONTERREY (TFP / COLABORACIÓN)
+
+Buscamos 2 creadoras / modelos para sesión fotográfica editorial en estudio en Colinas de San Jerónimo para actualización de portafolio de temporada y redes.
+
+✨ LO QUE INCLUYE:
+• 1.5 horas en set profesional (Ciclorama blanco + Luz de autor)
+• 10 a 15 fotografías master editadas en alta resolución (24MP)
+• Clips de video en crudo listos para Reels / TikTok
+
+📍 Ubicación: Captoora Studio (San Jerónimo, Monterrey)
+📅 Fechas: Esta semana / fin de semana
+👗 Requisitos: Actitud frente a cámara y compromiso con la fecha (sin experiencia obligatoria).
+
+Si te interesa renovar tu material con iluminación de revista, mándame inbox o deja un puntito y te comparto detalles. 📩</div>
+        </div>
+        <button class="btn-launch-fb" onclick="copyCastingText(this, 0)">Copiar Texto Opción A</button>
+      </div>
+
+      <!-- Opción B -->
+      <div class="casting-card">
+        <div>
+          <div class="casting-badge">OPCIÓN B // BEAUTY & CREADORAS FARMASI</div>
+          <div class="casting-title">Casting Beauty, Skincare &amp; Lifestyle</div>
+          <div class="casting-copy-box">💄 BUSCO MODELOS / CREADORAS DE CONTENIDO // MONTERREY 📸
+
+Estamos armando una serie fotográfica enfocada en Beauty, piel radiante y marcas de cuidado personal en nuestro estudio en San Jerónimo.
+
+🎯 IDEAL PARA:
+Creadoras de contenido, influencers de belleza o chicas que quieran fotos de nivel profesional para sus perfiles.
+
+🎁 ENTREGABLES:
+• Set con modificadores de luz gigante (piel suave sin filtros de celular)
+• Galería digital completa con fotos full-frame
+• Clips verticales para TikTok
+
+Déjame mensaje directo con tu perfil de Instagram para coordinar disponibilidad y lookbook. ¡Cupo limitado a 3 colaboraciones! ✨</div>
+        </div>
+        <button class="btn-launch-fb" onclick="copyCastingText(this, 1)">Copiar Texto Opción B</button>
+      </div>
+
+      <!-- Opción C -->
+      <div class="casting-card">
+        <div>
+          <div class="casting-badge">OPCIÓN C // FITNESS & SPORT WELLNESS</div>
+          <div class="casting-title">Casting Atletas &amp; Creadoras Fitness</div>
+          <div class="casting-copy-box">⚡ OPEN CALL FITNESS &amp; ATHLETIC PORTFOLIO // MONTERREY
+
+¿Eres atleta, entrenadora o creadora fitness y necesitas fotos que realmente reflejen tu disciplina y definición muscular?
+
+Abrimos 2 sesiones de colaboración en estudio con iluminación dramática de autor y ciclorama blanco.
+
+📸 QUÉ RECIBES:
+• Sesión guiada de poses deportivas
+• Fotos con iluminación esculpida para resaltar tono muscular
+• Entrega digital rápida para redes o patrocinadores
+
+Envía un mensaje privado con tu disciplina para agendar tu bloque en set. Colinas de San Jerónimo, MTY. 🏋️‍♀️</div>
+        </div>
+        <button class="btn-launch-fb" onclick="copyCastingText(this, 2)">Copiar Texto Opción C</button>
+      </div>
+
+      <!-- Opción D -->
+      <div class="casting-card">
+        <div>
+          <div class="casting-badge">OPCIÓN D // CREATIVA / SOMBRAS & CONTRASTE</div>
+          <div class="casting-title">Casting Iluminación &amp; Retrato de Impacto</div>
+          <div class="casting-copy-box">🎞️ PROYECTO VISUAL: "PARA DOMINAR LA LUZ" // MONTERREY
+
+Convocatoria para modelos femeninas interesadas en fotografía de autor con contrastes marcados, blanco y negro fino y sombras cinematográficas.
+
+"Para dominar la luz, primero hay que aprender a controlar la oscuridad."
+
+• Estudio profesional en San Jerónimo
+• Entrega de material pulido para portafolio mutuo (TFP)
+• Cero poses genéricas; dirección personalizada 1 a 1
+
+Si buscas fotos que parezcan de cartelera de cine, déjame un comentario o mándame DM para enviarte el moodboard. 🖤</div>
+        </div>
+        <button class="btn-launch-fb" onclick="copyCastingText(this, 3)">Copiar Texto Opción D</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide-item');
+    const indicator = document.getElementById('slideIndicator');
+
+    function showSlide(idx) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+      indicator.innerText = `SLIDE ${idx + 1} DE ${slides.length}`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function copyCastingText(btn, idx) {
+      const text = document.querySelectorAll('.casting-copy-box')[idx].innerText;
+      navigator.clipboard.writeText(text);
+      const prev = btn.innerText;
+      btn.innerText = '✓ ¡Copiado al Portapapeles!';
+      btn.style.background = '#10b981';
+      btn.style.color = '#000';
+      setTimeout(() => {
+        btn.innerText = prev;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
