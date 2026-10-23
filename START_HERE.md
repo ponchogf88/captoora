@@ -9,7 +9,7 @@ Pega esto al inicio del chat:
 ```
 Proyecto: Captoora. Un solo carril.
 Lee en https://github.com/ponchogf88/captoora
-en este orden: START_HERE.md → USER.md → SOUL.md → IDENTITY.md → AGENTS.md → CONTEXT.md
+en este orden: START_HERE.md → USER.md → SOUL.md → IDENTITY.md → LEY_CAPTOORA.md → AGENTS.md → CONTEXT.md
 YO canónico (largo) está en Drive MY PROJECTS / READMEFIRST.rtf — no lo copies al repo público.
 No inventes handles. No publiques en @jagf87. Si digo “ya”, ejecuta.
 Tarea de esta sesión: [UNA FRASE]

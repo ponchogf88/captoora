@@ -32,6 +32,7 @@ En Captoora Studio, una fotografía no es un accesorio decorativo ni un post cas
 2. **Ciclorama Limpio e Inmaculado:** El fondo blanco debe ser de alto contraste comercial (high-key), sin arrugas en telas, sin pinzas visibles, sin cinta adhesiva expuesta ni reflejos de plástico en el suelo.
 3. **Cero Láminas de Texto sobre Fotos:** El texto jamás debe tapar al sujeto, el producto o la composición. El contenido técnico va en el copy o en diapositivas dedicadas.
 4. **Iluminación Comercial Tridimensional:** Uso de luz principal suave (Octabox Godox), luz de relleno y luz de recorte para despegar al sujeto del fondo y dotar a la piel de un brillo saludable (skin glow).
+5. **Las fotos de sesión no tocan el disco interno** (mandamiento del 23 de octubre de 2026, texto vigente en `LEY_CAPTOORA.md`): de la SD pasan directo a la nube. La edición se hace con esos archivos. Si cae una copia en un disco local, se borra después de verificar el peso. Solo se conservan la original cruda (Drive) y la edición final subida a Pixieset.
 
 ---
 
