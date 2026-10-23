@@ -1,0 +1,66 @@
+{
+  "at_utc": "2026-10-21T04:07:48.892648+00:00",
+  "topic": "Obturación",
+  "master_audio": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/audio/likinya-obturacion-maestro-v1.mp3",
+    "bytes": 370948,
+    "sha256": "312f075c21bd4b4a3afda96cfd5df6bd0a3ec12a5c2c058e0c2828d16927433e",
+    "duration_seconds": 22.125714,
+    "voice": "Liza - Natural Mexican Creator",
+    "review": "decoded_ok_listening_review_pending",
+    "drive_url": "https://drive.google.com/file/d/1NY634fwo3QHARUhnMUt70q7mYC8fgodi/view?usp=drivesdk",
+    "drive_file_id": "1NY634fwo3QHARUhnMUt70q7mYC8fgodi",
+    "drive_readback_verified": true
+  },
+  "avatar_id": "e1a4dc7bc02f4752b6f307cf88cc3009",
+  "heygen_audio_batch": "063aa51dbbb4449c8b30ac521e447770",
+  "abandoned_unuploaded_batch": "126b6306893e4cdeb7e7886d5ca01ab1",
+  "heygen_jobs": [
+    {
+      "role": "opening",
+      "id": "375848ad3c917b0466fcdfb0a25377b3",
+      "audio_asset": "8250db105c224aa4a06d031f27cbfd6a",
+      "status": "completed_downloaded"
+    },
+    {
+      "role": "closing",
+      "id": "707fecca00cfc1f6c6cad8d48fa8d187",
+      "audio_asset": "86cb1a3183d94e1a92602ea7ab2caa99",
+      "status": "completed_downloaded"
+    }
+  ],
+  "credits_verified": {
+    "elevenlabs": 332,
+    "heygen": 4
+  },
+  "final_reel_status": "pilot_rendered_review_pending_not_published",
+  "central_visual": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/obturacion-diagrama-v1.mp4",
+    "bytes": 91471,
+    "duration_seconds": 15.75,
+    "kind": "original_educational_diagram",
+    "review": "decoded_ok_and_one_frame_visual_checked",
+    "drive_file_id": "1EbYb_G50syxWQ3rEqi_Y7A--XGjGDrE9",
+    "drive_url": "https://drive.google.com/file/d/1EbYb_G50syxWQ3rEqi_Y7A--XGjGDrE9/view?usp=drivesdk"
+  },
+  "pilot": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/CAPTOORA_Likinya_Obturacion_Piloto_v2.mp4",
+    "bytes": 1583056,
+    "duration_seconds_target": 22.125714,
+    "resolution": "720x1280",
+    "status": "reviewable_draft_not_published",
+    "drive_url": "https://drive.google.com/file/d/1WCA6fHvDTh4SQowvh8ExueEz1bxdII5u/view?usp=drivesdk",
+    "drive_file_id": "1WCA6fHvDTh4SQowvh8ExueEz1bxdII5u",
+    "review": "decoded_ok_subtitle_size_corrected_sample_checked_full_audio_lipsync_review_pending"
+  },
+  "pilot_v1_superseded": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/CAPTOORA_Likinya_Obturacion_Piloto_v1.mp4",
+    "bytes": 1514175,
+    "duration_seconds_target": 22.125714,
+    "resolution": "720x1280",
+    "subtitles": "burned_in_manual_timing_review_pending",
+    "drive_file_id": "1H6YFsQMEWVG0qzQ5ud3J3mWFqpnp7Rtp",
+    "drive_url": "https://drive.google.com/file/d/1H6YFsQMEWVG0qzQ5ud3J3mWFqpnp7Rtp/view?usp=drivesdk",
+    "review": "decoded_ok_sample_frame_inspected_full_lipsync_review_pending"
+  }
+}

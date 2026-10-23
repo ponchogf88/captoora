@@ -1,0 +1,174 @@
+{
+  "at_utc": "2026-10-21T04:07:48.892648+00:00",
+  "topic": "Obturación",
+  "master_audio": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/audio/likinya-obturacion-maestro-v1.mp3",
+    "bytes": 370948,
+    "sha256": "312f075c21bd4b4a3afda96cfd5df6bd0a3ec12a5c2c058e0c2828d16927433e",
+    "duration_seconds": 22.125714,
+    "voice": "Liza - Natural Mexican Creator",
+    "review": "decoded_ok_listening_review_pending",
+    "drive_url": "https://drive.google.com/file/d/1NY634fwo3QHARUhnMUt70q7mYC8fgodi/view?usp=drivesdk",
+    "drive_file_id": "1NY634fwo3QHARUhnMUt70q7mYC8fgodi",
+    "drive_readback_verified": true
+  },
+  "avatar_id": "e1a4dc7bc02f4752b6f307cf88cc3009",
+  "heygen_audio_batch": "063aa51dbbb4449c8b30ac521e447770",
+  "abandoned_unuploaded_batch": "126b6306893e4cdeb7e7886d5ca01ab1",
+  "heygen_jobs": [
+    {
+      "role": "opening",
+      "id": "375848ad3c917b0466fcdfb0a25377b3",
+      "audio_asset": "8250db105c224aa4a06d031f27cbfd6a",
+      "status": "completed_downloaded"
+    },
+    {
+      "role": "closing",
+      "id": "707fecca00cfc1f6c6cad8d48fa8d187",
+      "audio_asset": "86cb1a3183d94e1a92602ea7ab2caa99",
+      "status": "completed_downloaded"
+    }
+  ],
+  "credits_verified": {
+    "elevenlabs": 332,
+    "heygen": 4
+  },
+  "final_reel_status": "pilot_rendered_review_pending_not_published",
+  "central_visual": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/obturacion-diagrama-v1.mp4",
+    "bytes": 91471,
+    "duration_seconds": 15.75,
+    "kind": "original_educational_diagram",
+    "review": "decoded_ok_and_one_frame_visual_checked",
+    "drive_file_id": "1EbYb_G50syxWQ3rEqi_Y7A--XGjGDrE9",
+    "drive_url": "https://drive.google.com/file/d/1EbYb_G50syxWQ3rEqi_Y7A--XGjGDrE9/view?usp=drivesdk"
+  },
+  "pilot": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/CAPTOORA_Likinya_Obturacion_Piloto_v2.mp4",
+    "bytes": 1583056,
+    "duration_seconds_target": 22.125714,
+    "resolution": "720x1280",
+    "status": "reviewable_draft_not_published",
+    "drive_url": "https://drive.google.com/file/d/1WCA6fHvDTh4SQowvh8ExueEz1bxdII5u/view?usp=drivesdk",
+    "drive_file_id": "1WCA6fHvDTh4SQowvh8ExueEz1bxdII5u",
+    "review": "decoded_ok_subtitle_size_corrected_sample_checked_full_audio_lipsync_review_pending",
+    "editorial_review": "user_rejected_static_caption_style_requires_dynamic_captions_and_capcut_finish"
+  },
+  "pilot_v1_superseded": {
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/CAPTOORA_Likinya_Obturacion_Piloto_v1.mp4",
+    "bytes": 1514175,
+    "duration_seconds_target": 22.125714,
+    "resolution": "720x1280",
+    "subtitles": "burned_in_manual_timing_review_pending",
+    "drive_file_id": "1H6YFsQMEWVG0qzQ5ud3J3mWFqpnp7Rtp",
+    "drive_url": "https://drive.google.com/file/d/1H6YFsQMEWVG0qzQ5ud3J3mWFqpnp7Rtp/view?usp=drivesdk",
+    "review": "decoded_ok_sample_frame_inspected_full_lipsync_review_pending"
+  },
+  "local_batch_check": {
+    "at_utc": "2026-10-21T17:08:44.699586+00:00",
+    "new_files": [],
+    "verified_clip_count": 3,
+    "clip_bytes": 3122026,
+    "ai_credits_consumed_by_local_batch": 0,
+    "usable_clip_count": 0,
+    "rejected_clip_count": 3,
+    "status": "support_clips_only_not_final_reels",
+    "pending": [
+      "Rejected support clips must not enter educational reels; see reporte.json for provider and pilot status"
+    ]
+  },
+  "source_recovery": {
+    "at_utc": "2026-10-21T04:32:43.918418+00:00",
+    "drive_id": "1nzB2HMv72uBIzmiaiQdaHnr5CJZ5zPjm",
+    "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/maestros-recuperados/enfoque-original.pdf",
+    "bytes": 809540,
+    "sha256": "1538dfd63891fbdc31692c87d1a429adf3776911f82b475e4a56b63f645f1dd3",
+    "pages": 1,
+    "visual_review": "cover_only_not_complete_lesson",
+    "iso_master": "not_located"
+  },
+  "heartbeat_0430": {
+    "new_reels": 0,
+    "new_ai_generations": 0,
+    "heygen_before": 1051,
+    "heygen_after": 1051,
+    "heygen_credits_consumed": 0,
+    "elevenlabs_current_balance": null,
+    "elevenlabs_consumption_this_run": null,
+    "recovered_source_bytes": 809540
+  },
+  "requested_revision": {
+    "status": "provider_repeated_approval_loop_no_render",
+    "reuse_existing_audio_and_avatar": true,
+    "new_render_created": false,
+    "requirements": [
+      "dynamic_synchronized_captions",
+      "short_caption_blocks",
+      "highlight_active_word",
+      "avoid_covering_face_or_demonstration",
+      "real_capcut_template_or_finish"
+    ]
+  },
+  "capcut": {
+    "template_search_id": "7e453873-f8d6-4296-b181-ca3e76f5eda7",
+    "template_results": 5,
+    "template_applied": false,
+    "session_id": "446490F1-BBB0-49EE-B96E-662B764CA64E",
+    "next_event_id": "200753882",
+    "status": "loop_turn_completed",
+    "assets": [
+      {
+        "file_name": "likinya-entrada-v1.mp4",
+        "vid": "v10b9eg5000cdbc4uh7og65kd715prvg",
+        "bytes": 2647530
+      },
+      {
+        "file_name": "obturacion-diagrama-v1.mp4",
+        "vid": "v10b9eg5000cdbc4ujnog65lp0abcr10",
+        "bytes": 91471
+      },
+      {
+        "file_name": "likinya-cierre-v1.mp4",
+        "vid": "v10b9eg5000cdbc4uifog65ru9h3h2kg",
+        "bytes": 2271356
+      }
+    ],
+    "uploaded_bytes": 5010357,
+    "master_audio": "extracted_by_capcut_confirmed",
+    "credits_consumed": null,
+    "card_id": "446490F1-BBB0-49EE-B96E-662B764CA64E:200753858:plan",
+    "new_render_created": false,
+    "audio_carrier_vid": "v10b9eg5000cdbc63gnog65o3gngnagg",
+    "audio_carrier_bytes": 1583056,
+    "generation_approved": true,
+    "prior_plan_approved": true,
+    "blocker": "Repeated plan approval loop: provider reinitialized project and returned another plan instead of render; latest card renderer has empty after_event_id; use saved successful poll cursor"
+  },
+  "heartbeat_0653": {
+    "at_utc": "2026-10-21T06:55:29.065312+00:00",
+    "new_media_files": 0,
+    "uploaded_existing_bytes": 1583056,
+    "heygen_before": 1051,
+    "heygen_after": 1051,
+    "heygen_consumption": 0,
+    "capcut_consumption": null,
+    "elevenlabs_current_balance": null
+  },
+  "latest_heartbeat": {
+    "at_utc": "2026-10-23T04:42:55.892003+00:00",
+    "new_media_files": 0,
+    "new_media_bytes": 0,
+    "status": "local_storage_below_required_8_GiB",
+    "free_bytes": 6810554368,
+    "required_free_bytes": 8589934592,
+    "generation_submissions": 0,
+    "provider_balances_current": null,
+    "action": "No downloads or rendering until storage restored; no files deleted"
+  },
+  "new_reference": {
+    "url": "https://www.instagram.com/reel/DdPKLpGuT91/",
+    "reviewed": false,
+    "shot_plan": "PLAN_TOMAS_LIKINYA.csv",
+    "generations_started": 0
+  }
+}

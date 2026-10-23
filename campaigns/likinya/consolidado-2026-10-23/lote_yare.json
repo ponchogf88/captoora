@@ -1,0 +1,40 @@
+{
+  "account": "yare.btnc@gmail.com",
+  "project_id": "c6ca78ae-d422-46a1-8162-ac733dd01a66",
+  "project_url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66",
+  "requested_images": 12,
+  "requested_videos": 4,
+  "image_model": "Nano Banana 2.1",
+  "video_model": "Veo 3.1 Fast",
+  "ratio": "9:16",
+  "status": "one_image_downloaded_batch_remaining",
+  "completed_assets": [
+    {
+      "id": "49de7c87-275a-4ef0-b7d0-8dbb8b18185a",
+      "kind": "image",
+      "title": "Red ball suspended in air",
+      "model": "Nano Banana 2.1",
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/49de7c87-275a-4ef0-b7d0-8dbb8b18185a",
+      "download_status": "verified",
+      "visual_review": "reviewed_in_conversation_illustrative_ball_suitable_not_real_camera_test",
+      "local_path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/yare/imagenes/01-pelota-congelada.jpg",
+      "bytes": 626223,
+      "sha256": "06b9713ecfb8f9789ebf79900106686a6ff0abd499093fdc876f2caf0f2115de"
+    }
+  ],
+  "before_credits": 1050,
+  "after_credits": null,
+  "quoted_credits": 80,
+  "approval": "one_batch_only",
+  "measured_consumption": null,
+  "failed_image_requests": 12,
+  "failed_video_requests": 4,
+  "single_image_retry": "completed",
+  "failed_batch_balance": {
+    "before": 1050,
+    "after": 1050,
+    "measured_consumption": 0,
+    "scope": "failed_16_asset_batch_only"
+  },
+  "balance_note": "Saldo posterior a imagen individual aún no verificado; no atribuirle consumo cero del lote fallido."
+}

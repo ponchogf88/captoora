@@ -1,0 +1,158 @@
+{
+  "captured_at_utc": "2026-10-23T06:42:38.737493+00:00",
+  "repository_private_verified": true,
+  "files": [
+    {
+      "path": "ANDREA_INVENTARIO.json",
+      "sha256_utf8": "53c738f342bcfbc9a359e05f0de8323f4fbcf048767a72f91cf2c9633a4cc3e1",
+      "bytes_utf8": 11224
+    },
+    {
+      "path": "BIBLIOTECA_Y_REMIXES.md",
+      "sha256_utf8": "f8c33e8b3304a1c80c46f1b9480b17313a2dbb01cd48409e890b13b71e9e81dc",
+      "bytes_utf8": 1773
+    },
+    {
+      "path": "CAPACIDAD_HERRAMIENTAS.json",
+      "sha256_utf8": "476469ac8b718e55401398a3fa068724f1d21db3cf75d6921dda5cceaa16553c",
+      "bytes_utf8": 21498
+    },
+    {
+      "path": "CAPACIDAD_Y_APROVECHAMIENTO.md",
+      "sha256_utf8": "352c8d540a08d9f4054a4a5578abf0045d7c1b05acba878ca8721475cbb29fca",
+      "bytes_utf8": 7411
+    },
+    {
+      "path": "CONTRATO_OPERATIVO.md",
+      "sha256_utf8": "f5a1ab89d6c16be1401f4a32217b328a70f855683b7dae4a98a94106f6c0a822",
+      "bytes_utf8": 8992
+    },
+    {
+      "path": "ELENA_RYLINA_LIKINYA.md",
+      "sha256_utf8": "bf44e60e29724accba85cf1b66ff5de59d4f3f527cb87995bdfd65028a681c9f",
+      "bytes_utf8": 10264
+    },
+    {
+      "path": "LEEME_PLAN_CSV.md",
+      "sha256_utf8": "a2cbc52f6bdc4ce71bf43b8985939884bff1e6ebbe59fba941abbd5ea945753d",
+      "bytes_utf8": 1496
+    },
+    {
+      "path": "PLAN_EPISODIOS_CAPTOORA.csv",
+      "sha256_utf8": "059b791cb757853c734ce7a2d08c0dadc0d5f7120b2de3859154e9c813cf642c",
+      "bytes_utf8": 4692
+    },
+    {
+      "path": "PLAN_RECURSOS_CAPTOORA.csv",
+      "sha256_utf8": "e808ddb1cf5ef3183640c01a831a63102cb2b9cda4be8efa833051b95e58f75d",
+      "bytes_utf8": 35760
+    },
+    {
+      "path": "PLAN_TOMAS_LIKINYA.csv",
+      "sha256_utf8": "e726bb4c8bc5351215e5a82a7dd40061cfb455c083995026e3d825c661a13695",
+      "bytes_utf8": 915
+    },
+    {
+      "path": "PLAN_Y_GUIONES.md",
+      "sha256_utf8": "25c3570672411c94d9c9d0bf677b63505800e35369a7a7358970bd335f5a36bf",
+      "bytes_utf8": 8008
+    },
+    {
+      "path": "PRODUCCION_LIKINYA.md",
+      "sha256_utf8": "f8a1377d1c26185c8a5b2d8f999f467b9d6e36dabd9469d4feaf523bb7d528af",
+      "bytes_utf8": 13822
+    },
+    {
+      "path": "REFERENCIAS_Y_TEMARIO.md",
+      "sha256_utf8": "b809f7d51af1276a8b58ae434c8c3654b758badd1271495cb2d027db5514c0f4",
+      "bytes_utf8": 7367
+    },
+    {
+      "path": "REQUISITOS.md",
+      "sha256_utf8": "e587e4edd749c3a03c757b49190402512fbd28ae71a2c4387589e69ebab4aa2b",
+      "bytes_utf8": 23710
+    },
+    {
+      "path": "RUTINA_PRODUCCION.md",
+      "sha256_utf8": "ada3ff5586ec0fb78416ee2c56a491fc2e1bbc80620365c3727458a53e818f18",
+      "bytes_utf8": 4238
+    },
+    {
+      "path": "animar_obturacion.py",
+      "sha256_utf8": "248a203cf439f813b8e9ed22f1987ee7bd54fab143f3f14671012659b1d0cc02",
+      "bytes_utf8": 2359
+    },
+    {
+      "path": "cuotas.json",
+      "sha256_utf8": "5afa8b26b62b67606bae8c94c33fab19a964e337158cedf6eb50a61cc3dcfc98",
+      "bytes_utf8": 1446
+    },
+    {
+      "path": "ejecuciones.jsonl",
+      "sha256_utf8": "d43866abb8b9fa1eb88a091b54f03727c325f48fd6c991eb19b7c8632e282829",
+      "bytes_utf8": 7494
+    },
+    {
+      "path": "lote_yare.json",
+      "sha256_utf8": "16c3f1ecf7965c172fc9f0a3ed9a359234f9f1ea9aecb31f9bd6adc65a9ebe15",
+      "bytes_utf8": 1616
+    },
+    {
+      "path": "manifest.json",
+      "sha256_utf8": "d663b1a85adf3d7135b8a317b68832fd292b72c76c7d2dc4def267ef80ccd4cc",
+      "bytes_utf8": 2891
+    },
+    {
+      "path": "piloto-obturacion-v1.srt",
+      "sha256_utf8": "0b90eada9d389519f524a7599f649d7f1ffa5d00d41a0be93425224c1916c91d",
+      "bytes_utf8": 572
+    },
+    {
+      "path": "piloto_obturacion.json",
+      "sha256_utf8": "ccd6943df0dd7255aa05f90ec6824fe71ee84b7e7eb50957efe9dfb365b80ac9",
+      "bytes_utf8": 3078
+    },
+    {
+      "path": "producir_lote.py",
+      "sha256_utf8": "137ca5c25f549fbf4b05fe0e37fe94fa829c65f4b9824d35c76ba4bcd66b83cd",
+      "bytes_utf8": 4461
+    },
+    {
+      "path": "reporte.json",
+      "sha256_utf8": "0ac1fb12f7c9b60c3040c9635ef19f3821edca18b3b469049dd4aacf04d4a789",
+      "bytes_utf8": 6976
+    },
+    {
+      "path": "reporte_lote_local.json",
+      "sha256_utf8": "0c1cd9ec31e4f8708d81792bfe6d3145e10879a57f234bb56bbaf1032ed8658a",
+      "bytes_utf8": 400
+    },
+    {
+      "path": "plan-9-dias/CALENDARIO_90.json",
+      "sha256_utf8": "455275eab1204ff371a1f35db1a730a75938d2e25363e2ca2d28d72acaca9f63",
+      "bytes_utf8": 41040
+    },
+    {
+      "path": "plan-9-dias/PLAN_90_PUBLICACIONES.md",
+      "sha256_utf8": "b163c341602c311339a5aa1cd3db46c4dc9066c539dd3af0d3efbd26c356d651",
+      "bytes_utf8": 13618
+    },
+    {
+      "path": "consolidado-repositorio/CUENTAS_CORREOS_Y_PLANES.json",
+      "sha256_utf8": "9ecbd88aa5dabf3bb890a5530fa15b329e9f669a5011c8d0c2cfe0180599f5c9",
+      "bytes_utf8": 5137
+    },
+    {
+      "path": "consolidado-repositorio/CUENTAS_CORREOS_Y_PLANES.md",
+      "sha256_utf8": "76366b29a9088c1c1d2d7fa4a57eb596bab05843142dc6f7afb71234ec8c7164",
+      "bytes_utf8": 3742
+    },
+    {
+      "path": "consolidado-repositorio/PLAN_ACCION_OTONO_INVIERNO_2026_2027.md",
+      "sha256_utf8": "97304aa24ea1a80ed3d4f2873b56cc609688fc78a9d8094b0ff13fb812d953e0",
+      "bytes_utf8": 5087
+    }
+  ],
+  "scope": "Documentación y código de apoyo; medios en rutas/Drive documentados, no binarios",
+  "source_note": "Conserva estados históricos; README y último checkpoint prevalecen"
+}

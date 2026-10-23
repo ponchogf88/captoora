@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:01,700
+¿Tus fotos salen movidas?
+
+2
+00:00:01,900 --> 00:00:03,600
+Mira la velocidad de obturación.
+
+3
+00:00:04,060 --> 00:00:07,400
+Una exposición más corta ayuda
+a congelar el movimiento.
+
+4
+00:00:07,740 --> 00:00:10,050
+Una más larga puede dejar estelas.
+
+5
+00:00:10,290 --> 00:00:13,200
+Prueba ambas con el mismo sujeto
+y compara.
+
+6
+00:00:13,370 --> 00:00:19,250
+Si aceleras la velocidad, revisa también
+apertura, ISO y luz para mantener la exposición.
+
+7
+00:00:19,580 --> 00:00:22,130
+Guarda este ejercicio
+y pruébalo con tu cámara.

@@ -1,0 +1,13 @@
+{
+  "at_utc": "2026-10-21T17:08:44.699586+00:00",
+  "new_files": [],
+  "verified_clip_count": 3,
+  "clip_bytes": 3122026,
+  "ai_credits_consumed_by_local_batch": 0,
+  "usable_clip_count": 0,
+  "rejected_clip_count": 3,
+  "status": "support_clips_only_not_final_reels",
+  "pending": [
+    "Rejected support clips must not enter educational reels; see reporte.json for provider and pilot status"
+  ]
+}
