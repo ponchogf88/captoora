@@ -7,3 +7,6 @@ Leer en orden:
 4. [Consolidado y calendario](../likinya/consolidado-2026-10-23/README.md).
 
 Estas reglas conservan solicitudes acumulativas: todas las herramientas, diez o más posts/día como objetivo, 90 sin techo fijo, biblioteca propia y remixes de varios referentes, no publicación automática, máxima utilización útil y medición real. La revisión de suscripciones del usuario sigue abierta.
+
+## Actualización editorial aprobada · 23 octubre 2026
+Mínimo dos piezas diarias, sin techo fijo. Likinya se enfoca principalmente en educación; las demás categorías pueden usar portafolio propio, imágenes generadas y stock con licencia verificada. Las 90 ideas se conservan como banco editorial. Ver [objetivo y mezcla aprobada](OBJETIVO_EDITORIAL_2026-10-23.md) y [banco de ideas](BANCO_90_PUBLICACIONES.md). Producción autorizada; no publicar automáticamente.
