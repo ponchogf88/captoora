@@ -131,3 +131,7 @@ X: @jagf87 · GitHub: ponchogf88
 ## Ley visual obligatoria
 
 Antes de producir o entregar cualquier pieza visual comercial, leer y aplicar [docs/LEY_VISUAL_CAPTOORA.md](docs/LEY_VISUAL_CAPTOORA.md). Toda pieza debe incluir fotografía protagonista; quedan prohibidas las entregas exclusivamente tipográficas. Respetar la fuente fotográfica autorizada para cada encargo.
+
+
+## Producción de contenido: instrucciones acumulativas
+Para cualquier encargo de contenido, leer [campañas: entrada para agentes](campaigns/operacion-contenido/README.md), las reglas de producción y los ciclos de cuotas. Los accesos secretos solo se referencian en SECRET_REFERENCES.md, nunca se copian al repositorio. Mantener evidencia y no declarar todos los servicios aprovechados sin comprobarlo.
