@@ -10,3 +10,7 @@ Marca: **Captoora** (Captura + doble O).
 
 ## Fondo hero
 Void negro + pocas estrellas. El monograma o el wordmark van encima, no ambos gigantes.
+
+## Ley visual obligatoria
+
+Antes de producir o entregar cualquier pieza visual comercial, leer y aplicar [docs/LEY_VISUAL_CAPTOORA.md](docs/LEY_VISUAL_CAPTOORA.md). Toda pieza debe incluir fotografía protagonista; quedan prohibidas las entregas exclusivamente tipográficas. Respetar la fuente fotográfica autorizada para cada encargo.
