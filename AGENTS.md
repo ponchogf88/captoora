@@ -114,7 +114,7 @@ Airbnb Experiences, agente de prospección autónomo, “growth engine”, 12 ve
 ## Reglas para cualquier agente que edite este repo
 
 1. Lee `IDENTITY.md`. El nombre es Captoora.
-2. Lee `LEY_CAPTOORA.md` antes de tocar una foto, una entrega o una publicación. Esa ley manda.
+2. Lee `docs/LEY_VISUAL_CAPTOORA.md` antes de tocar una foto, una entrega o una publicación. Esa ley manda. Las fotos de sesión no tocan el disco interno.
 3. No inventes reseñas, conteos ni handles.
 4. No borres `index.html` sin dejar una home que reserve por WhatsApp.
 5. Commits en español o inglés, pero mensajes concretos: `fix: quitar métrica +500 del hero`.

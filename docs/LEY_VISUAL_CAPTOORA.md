@@ -22,6 +22,22 @@ La fuente se elige según la instrucción vigente del fundador. Para la reformul
 
 Una pieza que no cumpla debe corregirse antes de entregarse. Esta regla es un criterio interno de marca, no una disposición legal ni una sanción jurídica.
 
+## Custodia de las fotos de sesión
+
+Ratificada por el fundador el 23 de octubre de 2026. Esta sección manda sobre cualquier costumbre de guardar rollos en la Mac.
+
+Queda estrictamente prohibido que las fotografías de las sesiones de Captoora toquen el almacenamiento interno de sus computadoras. Eso incluye el SSD, el iMac y cualquier disco interno.
+
+1. La tarjeta SD es el único origen.
+2. Las fotos pasan directo de la SD a la nube. No se descargan al Escritorio, a Descargas, a `CAPTOORA.STUDIO`, a este repositorio ni a otra carpeta local para ordenarlas después.
+3. La edición se hace con los archivos que ya están en la nube.
+4. Si una herramienta obliga a guardar una copia en un disco local, esa copia es de paso. Se borra al terminar. No se archiva en el SSD ni en un disco duro.
+5. No se borra esa copia hasta comprobar que el archivo ya está en la nube y que el peso coincide. No se borra nada que no sea foto de sesión.
+6. De cada toma solo se conservan dos archivos, y los dos viven en la nube: la original cruda en Google Drive (`lic.jagf87@gmail.com`) y la edición final que se sube a Pixieset.
+7. Pruebas, correcciones, hojas de contacto, exports intermedios y carpetas de entrega no se quedan en los discos de las computadoras.
+
+El repositorio no es bodega de rollos, RAW ni entregas. No se instala la app de Google Drive para escritorio: replica los archivos otra vez en la computadora. WhatsApp, Mail, notas de voz, código y la biblioteca de Fotos de iCloud no se usan como cajón de las sesiones ni se borran para hacerles espacio.
+
 ## Antecedentes del repositorio
 
 - [Calendario maestro de octubre](../CALENDARIO_OCTUBRE_19_AL_31_COMPLETO.md): «100% Fotográfico · Cero Láminas de Texto · Zero Crop (Full-Frame) · Respaldo Triple».

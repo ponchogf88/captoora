@@ -1,6 +1,6 @@
 # LOG 2026-10-23 — Ley de custodia: las fotos de sesión no tocan el disco interno
 
-- Quedó vigente `LEY_CAPTOORA.md` en https://github.com/ponchogf88/captoora
+- Quedó vigente en `docs/LEY_VISUAL_CAPTOORA.md`: https://github.com/ponchogf88/captoora/blob/main/docs/LEY_VISUAL_CAPTOORA.md
 - Mandamiento nuevo: prohibido que las fotografías de sesión toquen el almacenamiento interno.
 - Camino: SD → nube. La edición se hace sobre el archivo en la nube.
 - Si cae una copia local, se borra solo después de verificar que el peso en la nube coincide.
