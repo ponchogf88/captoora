@@ -127,3 +127,7 @@ Airbnb Experiences, agente de prospección autónomo, “growth engine”, 12 ve
 
 Jesús Gutiérrez · WhatsApp estudio +52 81 4005 0088
 X: @jagf87 · GitHub: ponchogf88
+
+## Ley visual obligatoria
+
+Antes de producir o entregar cualquier pieza visual comercial, leer y aplicar [docs/LEY_VISUAL_CAPTOORA.md](docs/LEY_VISUAL_CAPTOORA.md). Toda pieza debe incluir fotografía protagonista; quedan prohibidas las entregas exclusivamente tipográficas. Respetar la fuente fotográfica autorizada para cada encargo.
