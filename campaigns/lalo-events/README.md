@@ -1,3 +1,5 @@
+> CORRECCIÓN DE AUDITORÍA · 25 octubre: sí existe el plan maestro original FARMASI del 31 octubre, con convocatoria de 25 y programa 08:30–13:45. Leer primero [recuperación y fuentes originales](RECUPERACION_FARMASI_Y_LALO.md). Las frases siguientes que trataban fecha/aforo/programa de Farmasi como ausentes quedan superadas por esa evidencia documental; siguen pendientes las confirmaciones de ejecución, no repetir el relato al titular.
+
 # Lalo Events · coordinación operativa de eventos CAPTOORA
 Actualizado 25 octubre 2026. Encargo: organizar eventos del estudio y convertir su ejecución en oportunidades comerciales atendidas, con costos y compromisos controlados.
 Este es el espacio operativo y las instrucciones reutilizables del rol. No es un bot de Grok recuperado, servicio en segundo plano, integración automática ni otro agente ejecutándose. La coordinación la realiza el asistente en este hilo con las herramientas disponibles. No se contrató ni activó servicio adicional.
