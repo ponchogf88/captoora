@@ -1,3 +1,5 @@
+> RECOMENDACIÓN RETIRADA: el usuario rechazó presupuestos que no se justifiquen por recuperación económica. Los $700–$1,400 siguientes se conservan como historia, no recomendación vigente. No hay gasto autorizado. Consultar [estudio con fuentes y sensibilidad](ESTUDIO_MERCADO_Y_RETORNO_2026-10-25.md) antes de presupuestar. La decisión de no gastar por ahora permanece hasta evaluar margen y autorizar una prueba concreta.
+
 # Presupuesto propuesto de publicidad · CAPTOORA
 Fecha: 25 octubre 2026. Estado: propuesta; no hay campaña contratada, gasto autorizado ni permisos publicitarios verificados. La solicitud de subir documentos a GitHub no autoriza anuncios.
 
