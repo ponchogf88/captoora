@@ -2,7 +2,7 @@
 Carpeta especializada solicitada por el usuario el 25 octubre 2026.
 
 - [Auditoría y plan de siete días](OPERACION_7_DIAS.md): oferta básica, ruta de reserva, fuentes, mensajes, briefs y acciones 25–31 octubre.
-- [Presupuesto y plan publicitario](PRESUPUESTO_PUBLICIDAD.md): Meta como prueba inicial propuesta, $700–$1,400 MXN de pauta; sin garantía de ventas ni autorización de gasto.
+- [Presupuesto histórico retirado](PRESUPUESTO_PUBLICIDAD.md) y [estudio de mercado y retorno](ESTUDIO_MERCADO_Y_RETORNO_2026-10-25.md): fuentes y escenarios; sin gasto autorizado.
 - [Plantilla de oportunidades](REGISTRO_OPORTUNIDADES.csv): sin prospectos demo ni cobros inventados.
 
 ## Continuidad y vigencia
@@ -20,3 +20,7 @@ Copias previas compartidas:
 - [Registro en Drive](https://drive.google.com/file/d/197BNu-makeuWKBj9GLRJJyKgYR8Klcf_/view)
 
 GitHub conserva la documentación; no sincroniza automáticamente chats, CSV de Drive ni cuentas. Evitar pipelines paralelos: al habilitar oportunidades reales, elegir un único registro operativo restringido y enlazarlo desde aquí.
+
+## Prioridad urgente · escuelas y temporada
+- [Estrategia, ofertas candidatas y mensajes](ESCUELAS_Y_TEMPORADA_2026.md).
+- [Seis escuelas, canales y siguientes acciones](ESCUELAS_CONTACTO_2026.csv). Tres borradores Gmail creados, ninguno enviado. Sets no montados; hojas de arce disponibles declaradas por titular. Falta confirmar remitente, agenda y condiciones antes de salida.
