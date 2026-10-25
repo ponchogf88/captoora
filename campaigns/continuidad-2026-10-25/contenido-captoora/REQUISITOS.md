@@ -196,3 +196,15 @@ MP4 con textos progresivos creado medianteFFmpeg, sin sustituirLiza ni música, 
 
 ## Navidad recurso recuperado
 835c03ec-43cd-4f7c-a3ce-d2e266ca97a8 exportado original720p8s,1882688bytes,Drive1RQNwN6Eyob-bgkQAGPlsP913tLO3E8PE. Sin generación nueva. Archivo contiene pista de audio pese a promptsinmúsica: no aprobar sonido sin revisión; silenciar en montaje si no valida. RecursoIA conceptual, no set real anunciado. Tres clips restantes por recuperar.
+
+## Recurso regalo recuperado
+ccd9c702-9e66-4e87-89a6-4ce5fe09a59c descargado1727933bytes y respaldadoDrive1jJHMePvbfKLtZqdA6kYSVAv8DvdVXHmD, sin gasto adicional. Revisión audiovisual pendiente. Quedan producto e iluminación por recuperar; no duplicar.
+
+## Producto recuperado
+cad105c9-1107-46b8-a430-8b60c86f5ae4 descargado929049bytes, Drive1uiNkz4wS07M9uK4qzhK2tCyUxBHqTszZ. Frasco genéricoIA, noFARMASI ni portafolio real. Sin gasto adicional; revisión pendiente. Solo iluminación resta por recuperar.
+
+## BibliotecaFlowrecuperada
+Último clipiluminación c246c53f-f4a5-4da0-8101-27775198f7cd recuperado1084415bytes,Drive1up0FC-fFtyYaBsn8Xl7p905bu9YYAgkE. Los6clips originales ya descargados y respaldados; no repetir recuperación. Revisión y montaje continúan pendientes; setIA conceptual no localreal. Sin créditos adicionales.
+
+## CAL004 cierreeditorial
+Versionv00211s silenciosa con monogramaoriginal yCTAWhatsApp. Decodificación264frames sinerrores y cierrevisual revisados. Texto acompaña ydeclaraIA. Drive1RnKnQkFXJq3dhlALruVTKmHvV06MzyUW en04_LISTOS. No publicado, sin gasto adicional.
