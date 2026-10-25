@@ -1,0 +1,39 @@
+{
+  "status": "canva_generation_in_progress",
+  "account_link": "Captoora",
+  "brand_kit_id": "kAHVO-u6csA",
+  "requested_biometrics": {
+    "male": 2,
+    "female": 2
+  },
+  "proposed_signature": 4,
+  "signature_style": "mujeres maduras elegantes; retrato personal no corporativo",
+  "subbrand_logos": "not_yet_located",
+  "gift_value": null,
+  "validity": null,
+  "actual_canva_design_id": null,
+  "heygen_balance_checked": 1051,
+  "heygen_reset": "2026-10-24T02:48:46Z",
+  "new_heygen_jobs": 0,
+  "signature_logo_candidate": {
+    "path": "/Users/user/captoora/assets/captoora_signature_logo.png",
+    "bytes": 439894,
+    "sha256": "7bafbbb9e21ee0fd7f94ef64eb84e82cdf1f0785a9e30b00f091b911f0951517",
+    "status": "image_inspected_brand_role_unconfirmed",
+    "incorporated_canva": false,
+    "visual_note": "Símbolo blanco circular tipo lente con destello sobre fondo negro; no contiene el nombre Signature."
+  },
+  "logo_search_checkpoint": {
+    "checked_at": "2026-10-23T08:51:41Z",
+    "scope": [
+      "repo file names",
+      "captoora_biometrics.html",
+      "captoora_signature.html"
+    ],
+    "result": "No se localizó logo independiente Biometrics; las páginas revisadas no referencian un archivo de logo de submarca. El candidato Signature sigue sin acreditar su uso como logo exclusivo.",
+    "new_designs": 0,
+    "new_generation_requests": 0
+  },
+  "generation_job_id": "0cdea0ae-7bd9-46bf-9e9c-adc05e0557cc",
+  "generation_requested_after": "Usuario reiteró generar piezas con sus recursos en voz"
+}

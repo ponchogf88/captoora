@@ -1,0 +1,181 @@
+{
+  "scope": "Registro interno autorizado para repo privado; no contraseñas ni secretos",
+  "source": "conversación y AGENTS del usuario; lista completa aún bajo revisión del usuario",
+  "accounts": [
+    {
+      "service": "Ollama local",
+      "email": "agf07@hotmail.com",
+      "status": "declarado; ejecución local no depende de saldo web"
+    },
+    {
+      "service": "Copilot Extend",
+      "email": "jgutierrezf@uanl.edu.mx",
+      "status": "declarado"
+    },
+    {
+      "service": "Perplexity Pro",
+      "email": "lic.jagf87@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "SuperGrok",
+      "email": "lic.jagf87@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "GrokBot",
+      "email": "lic.jagf87@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "ChatGPT Plus",
+      "email": "jgutierrezf@uanl.edu.mx",
+      "status": "declarado; identidad de conector por conciliar"
+    },
+    {
+      "service": "Google AI Pro",
+      "email": "lic.jagf87@gmail.com",
+      "status": "Flow PRO observado; saldo histórico 1050"
+    },
+    {
+      "service": "Google AI Pro",
+      "email": "alfonsogf.88@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "Google AI Pro",
+      "email": "yare.btnc@gmail.com",
+      "status": "Flow PRO observado; una imagen producida"
+    },
+    {
+      "service": "Google AI Pro / Nano Banana / Flow",
+      "email": "trevinoglauber@gmail.com",
+      "status": "cuenta adicional declarada; plan no verificado"
+    },
+    {
+      "service": "Meta AI Premium",
+      "email": "l.jagf87@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "Meta AI Premium",
+      "email": "alfonsogf.88@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "ElevenLabs Pro",
+      "email": "l.jagf87@gmail.com",
+      "status": "Pro declarado; interfaz mostró Starter, discrepancia pendiente"
+    },
+    {
+      "service": "CapCut Pro",
+      "email": "l.jagf87@gmail.com",
+      "status": "declarado; usuario mencionó posible renovación en otra cuenta, no confirmada"
+    },
+    {
+      "service": "Canva Business",
+      "email": "trevinoglauber@gmail.com",
+      "status": "declarado; conector pidió reconectar"
+    },
+    {
+      "service": "HeyGen Creator",
+      "email": "l.jagf87@gmail.com",
+      "status": "identidad y Creator verificados históricamente"
+    },
+    {
+      "service": "Notion EDU",
+      "email": "jgutierrezf@uanl.edu.mx",
+      "status": "declarado"
+    },
+    {
+      "service": "Picsart Pro",
+      "email": "trevinoglauber@gmail.com",
+      "status": "confirmado por usuario; 5 créditos del conector sin correspondencia de cuenta verificada"
+    },
+    {
+      "service": "YouTube Premium",
+      "email": "trevinoglauber@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "Spotify Premium",
+      "email": "lic.jagf87@gmail.com",
+      "status": "declarado"
+    },
+    {
+      "service": "Captions",
+      "email": null,
+      "status": "suscripción declarada; correo pendiente"
+    },
+    {
+      "service": "OpusClip",
+      "email": null,
+      "status": "suscripción declarada; correo pendiente"
+    },
+    {
+      "service": "InVideo",
+      "email": null,
+      "status": "suscripción declarada; correo pendiente"
+    },
+    {
+      "service": "Pippit AI",
+      "email": null,
+      "status": "declarado; correo pendiente"
+    },
+    {
+      "service": "Evoto",
+      "email": null,
+      "status": "prueba gratuita 65 créditos declarados; correo y saldo actual pendientes"
+    },
+    {
+      "service": "Pixieset",
+      "email": null,
+      "status": "galería observada; correo/plan pendientes"
+    },
+    {
+      "service": "Edits de Instagram",
+      "email": null,
+      "status": "declarado; identidad vinculada pendiente"
+    },
+    {
+      "service": "Google Photos",
+      "email": null,
+      "status": "biblioteca/cuenta por inventariar"
+    },
+    {
+      "service": "Fotos de Apple / iCloud",
+      "email": null,
+      "status": "Apple ID no suministrado; no inferir"
+    },
+    {
+      "service": "GitHub",
+      "email": "ponchogf88 (usuario, no correo)",
+      "status": "repositorio privado verificado"
+    },
+    {
+      "service": "Obsidian",
+      "email": null,
+      "status": "proyecto solicita sincronizar; plan/cuenta pendientes"
+    },
+    {
+      "service": "Page Agent / Browser Use / Video Use / Browser Flow",
+      "email": null,
+      "status": "solicitados; no acreditar instalaciones por disponer de otro navegador"
+    }
+  ],
+  "business_channels": {
+    "Instagram": "@captoora.studio",
+    "TikTok": "Captoora.studiomty",
+    "X": "@captoora_studio",
+    "Facebook": "Captoora Studio / Alfonso Gutierrez, declarado",
+    "WhatsApp Business": "+52 81 4005 0088",
+    "project_email": "alfonsogf.88@gmail.com"
+  },
+  "other_declared_identities": {
+    "principal": "lic.jagf87@gmail.com",
+    "educacional": "jgutierrezf@uanl.edu.mx",
+    "Facebook Jesus": "agf07@hotmail.com",
+    "Facebook Chuy": "l.jagf87@gmail.com",
+    "Instagram personal @ponchogf88": "alfonsogf.88@gmail.com"
+  }
+}

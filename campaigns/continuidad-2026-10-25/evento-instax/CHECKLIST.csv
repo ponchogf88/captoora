@@ -1,0 +1,11 @@
+prioridad,tarea,estado,responsable_propuesto,observaciones
+P0,"Confirmar fecha, hora, lugar y aforo esperado",pendiente,Usuario,No se infiere fecha exacta de próximo fin de semana
+P0,Definir beneficio y condiciones exactas de gift card,pendiente,Usuario + agente,No reutilizar sin revisar las tarjetas FARMASI ni ofertas forever
+P0,Localizar/crear enlace específico de reservas del evento,pendiente,Agente,Inspeccionar Calendly y validar duración/disponibilidad; sin modificar calendario aún
+P0,Inventariar cámara y película Instax disponibles,pendiente,Responsable físico,"Modelo, formato compatible, unidades y prueba de funcionamiento"
+P0,Confirmar cámara de sobrina y quién la transporta,pendiente,Usuario/familia,No se envió mensaje externo
+P1,Calcular consumibles con aforo y fotos por persona,pendiente,Agente,"cantidad=max(0,asistentes*fotos_por_persona+reserva-película_utilizable); variables desconocidas"
+P1,Preparar gift card y señalética QR,pendiente,Agente,QR solo cuando enlace correcto esté verificado
+P1,Ensayar recorrido de asistente,pendiente,Agente + responsable físico,"Bienvenida, toma, entrega, reserva y registro de canje"
+P1,"Checklist transporte, baterías y respaldo",pendiente,Responsable físico,Sin compras ni equipos nuevos asumidos
+P1,Crear registro de entrega y canje,implemented,Agente,"REGISTRO_CANJES.csv vacío, no clientes ficticios"

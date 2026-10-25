@@ -1,0 +1,56 @@
+<item anchor="intro" title="Qué lente usar para cada situación" text="Parte 3: decide según encuadre, distancia, luz y movimiento."></item>
+<say lang="es-MX" title="Elegir" text="[Elegir un lente](#intro) empieza por la fotografía que necesitas conseguir."/>
+<item type="image" anchor="situaciones" title="Una cámara, distintos trabajos" prompt="A professional photography studio arranged as a coherent teaching scene: on the left a portrait stool with softbox, in the center a tabletop cosmetic product with a small reflector, and on the right a window overlooking a distant moving cyclist. Wide balanced composition, clear separation of near portrait and product subjects and far exterior. Editorial educational illustration, warm ivory background, charcoal outlines and teal accents. No text, no words, no labels."></item>
+<say lang="es-MX" title="El problema primero" text="[Estas situaciones](#situaciones) piden encuadres y distancias distintas. Un retrato necesita atención a la cara; un grupo necesita espacio; un producto exige detalle; un sujeto lejano puede requerir una focal larga. Empieza por el resultado, después revisa el espacio físico. No existe un objetivo que resuelva todas las situaciones con las mismas ventajas y sin compromisos."/>
+<item layout="cards" anchor="interiores" title="Interiores y grupos">
+<item anchor="amplio" title="Campo amplio" text="Incluye personas o espacio con menos distancia."/>
+<item anchor="bordes" title="Cuida los bordes" text="Evita caras demasiado cerca de las esquinas."/>
+</item>
+<say lang="es-MX" title="Espacio limitado" text="[En interiores y grupos](#interiores), una focal corta puede ayudarte cuando no puedes retroceder. Cuida la inclinación de la cámara y la posición de las personas. Una cara muy cercana al lente puede mostrar proporciones poco favorecedoras; las figuras junto a los bordes también pueden estirarse en una proyección rectilínea amplia. Si hay varias filas, comprueba profundidad de campo y enfoca de forma deliberada. Abrir al máximo no garantiza que todo el grupo salga nítido."/>
+<item layout="cards" anchor="retrato" title="Retratos: encuadre y distancia">
+<item anchor="ambiental" title="Ambiental" text="Persona y entorno cuentan la historia."/>
+<item anchor="cerrado" title="Cerrado" text="Más atención a rostro y expresión."/>
+</item>
+<say lang="es-MX" title="Personas" text="[Un retrato ambiental](#ambiental) puede aprovechar una focal más amplia sin acercar excesivamente la cámara a la cara. Para [un retrato cerrado](#cerrado), una focal más larga suele permitir trabajar a mayor distancia manteniendo la cara grande en el encuadre. En una habitación pequeña podrías quedarte sin espacio. Elige apertura según el detalle que necesitas: el ojo cercano, ambos ojos, el peinado o incluso un producto junto al rostro."/>
+<item layout="cards" anchor="producto" title="Productos: tamaño y detalle">
+<item anchor="minima" title="Enfoque mínimo" text="Distancia más cercana que permite enfocar."/>
+<item anchor="macro" title="Magnificación" text="Tamaño de reproducción sobre el sensor."/>
+<item anchor="iluminar" title="Luz y reflejos" text="Determinan forma, textura y legibilidad."/>
+</item>
+<say lang="es-MX" title="Objetos pequeños" text="[En producto](#producto), pregunta qué tan grande necesitas mostrar el objeto. Una focal larga no garantiza poder enfocar desde muy cerca. Revisa [distancia mínima y magnificación](#minima); los objetivos macro están diseñados para reproducción cercana, pero sus prestaciones concretas varían. Una botella brillante también necesita controlar reflejos y fondo. Si la etiqueta y la tapa están en planos distintos, quizá necesites cerrar apertura o realizar una técnica de apilado de enfoque cuando proceda."/>
+<item layout="cards" anchor="lejos" title="Sujetos lejanos y movimiento">
+<item anchor="tele" title="Teleobjetivo" text="Encuadre cerrado desde mayor distancia."/>
+<item anchor="velocidad" title="Velocidad" text="Controla cuánto movimiento queda registrado."/>
+<item anchor="seguimiento" title="Seguimiento" text="Mantiene el enfoque mientras cambia la distancia."/>
+</item>
+<say lang="es-MX" title="Acción y distancia" text="[Un sujeto lejano](#lejos) puede justificar un teleobjetivo, pero encuadrar más cerrado también hace evidente la trepidación. Elige una velocidad apropiada al movimiento, estabiliza cuando corresponda y verifica el enfoque continuo si el sujeto cambia de distancia. La estabilización del objetivo no congela a un corredor. En acción, la rapidez del autofocus, el comportamiento del equipo y la luz disponible pueden importar tanto como el rango de milímetros."/>
+<item layout="cards" anchor="profesional" title="Qué hace diferente a un objetivo">
+<item anchor="rendimiento" title="Rendimiento" text="Nitidez, aberraciones, contraste y flare."/>
+<item anchor="operacion" title="Operación" text="Autofocus, construcción, sellado y controles."/>
+<item anchor="compromiso" title="Compromisos" text="Peso, tamaño, precio y rango disponible."/>
+</item>
+<say lang="es-MX" title="Más allá de la etiqueta" text="[La etiqueta profesional](#profesional) no describe una sola propiedad universal. Un objetivo puede destacar por abertura, resistencia, autofocus, reproducción de detalle o control de reflejos internos. Dos modelos con los mismos milímetros pueden rendir distinto. También hay herramientas accesibles que sirven muy bien en estudio con luz controlada. No compres una focal extrema únicamente porque su número es mayor: primero identifica qué problema concreto de tus fotos resolvería."/>
+<item layout="ol" anchor="compatibilidad" title="Antes de comprar o montar">
+<item anchor="montura" title="Comprueba montura y sensor" text="No toda óptica de una marca encaja en toda cámara."/>
+<item anchor="funciones" title="Verifica funciones" text="Autofocus, diafragma y estabilización."/>
+<item anchor="espacio" title="Prueba el espacio real" text="Distancia a sujeto, fondo y luces."/>
+</item>
+<say lang="es-MX" title="Tu equipo concreto" text="[La compatibilidad](#compatibilidad) exige revisar cámara y objetivo exactos. En tu Nikon D tres mil quinientos, no basta con que un lente diga Nikon: hay diferencias de montura y funcionamiento. Algunas combinaciones no ofrecen autofocus o tienen limitaciones de controles. Antes de recomendar una compra, necesitamos la denominación completa del objetivo. Tu televisión conectada puede ayudar a observar encuadre, pero para juzgar nitidez conviene revisar también la fotografía capturada ampliada."/>
+<item anchor="tabla" title="Guía de decisión práctica">
+| Situación | Prioridad | Comprueba |
+| :--- | :--- | :--- |
+| Interior o grupo | Campo suficiente | Bordes y profundidad |
+| Retrato | Distancia y encuadre | Ojos y proporciones |
+| Producto pequeño | Detalle cercano | Magnificación y reflejos |
+| Sujeto lejano | Encuadre cerrado | Velocidad y seguimiento |
+</item>
+<say lang="es-MX" title="Usar la guía" text="[Esta guía](#tabla) resume prioridades, no impone una focal obligatoria. Un mismo zoom puede cubrir varias tareas. El tamaño del sensor, la distancia disponible y el encuadre deseado cambian qué milímetros resultan útiles. Si todavía no dominas tu equipo, comienza con el objetivo que ya tienes: comprobar sus límites te dará una razón concreta para ampliar el sistema en lugar de comprar por una etiqueta."/>
+<item layout="ol" anchor="reto" title="Reto en tu estudio">
+<item anchor="r1" title="Mismo punto, dos focales" text="Observa el campo de visión."/>
+<item anchor="r2" title="Mismo encuadre, otra distancia" text="Observa las proporciones."/>
+<item anchor="r3" title="Mismo sujeto, otro enfoque" text="Observa qué plano tiene detalle."/>
+<item anchor="r4" title="Misma foto, otra apertura" text="Compensa exposición y compara profundidad."/>
+</item>
+<say lang="es-MX" title="Cierre de la serie" text="[El reto del estudio](#reto) une las tres partes. Cambia una variable cada vez, guarda los ajustes y compara las fotos ampliadas. Los milímetros modifican el campo de visión; tu posición modifica la perspectiva; el enfoque selecciona una distancia y la apertura influye en luz y profundidad de campo. Con esas cuatro decisiones puedes explicar por qué una fotografía funciona y qué necesitas cambiar. El siguiente paso será aplicar la prueba a tus objetivos reales."/>
+<followup prompt="¿Qué pruebas hago con el objetivo exacto de mi Nikon D3500?"/>
+<followup prompt="¿Cómo ilumino un producto brillante para leer bien la etiqueta?"/>

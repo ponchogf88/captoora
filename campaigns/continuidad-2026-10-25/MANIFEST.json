@@ -1,0 +1,506 @@
+{
+  "fecha": "2026-10-25",
+  "alcance": "Documentación y prototipo; sin medios, contraseñas ni transcripción literal completa",
+  "archivos": [
+    {
+      "path": "contenido-captoora/REFERENCIAS_Y_TEMARIO.md",
+      "bytes": 7367,
+      "sha256": "b809f7d51af1276a8b58ae434c8c3654b758badd1271495cb2d027db5514c0f4"
+    },
+    {
+      "path": "contenido-captoora/CAPACIDAD_HERRAMIENTAS.json",
+      "bytes": 21498,
+      "sha256": "476469ac8b718e55401398a3fa068724f1d21db3cf75d6921dda5cceaa16553c"
+    },
+    {
+      "path": "contenido-captoora/PLAN_RECURSOS_CAPTOORA.csv",
+      "bytes": 35763,
+      "sha256": "043c08dbd02e4dfdf0856375dab86ef688168a10438e80d60fd41b22b0a24d22"
+    },
+    {
+      "path": "contenido-captoora/PLAN_EPISODIOS_CAPTOORA.csv",
+      "bytes": 4695,
+      "sha256": "9cf5349386383d62813903a673acb892c239c26f1fdbda4d89b8613855fe690e"
+    },
+    {
+      "path": "contenido-captoora/PLAN_TOMAS_LIKINYA.csv",
+      "bytes": 918,
+      "sha256": "04f35d6e271b573b82cb2c10b469aa5aeef8f0e805ba66fb65eb5b8f819ba7c7"
+    },
+    {
+      "path": "contenido-captoora/lote_yare.json",
+      "bytes": 1616,
+      "sha256": "16c3f1ecf7965c172fc9f0a3ed9a359234f9f1ea9aecb31f9bd6adc65a9ebe15"
+    },
+    {
+      "path": "contenido-captoora/cuotas.json",
+      "bytes": 1446,
+      "sha256": "5afa8b26b62b67606bae8c94c33fab19a964e337158cedf6eb50a61cc3dcfc98"
+    },
+    {
+      "path": "contenido-captoora/LEEME_PLAN_CSV.md",
+      "bytes": 1496,
+      "sha256": "a2cbc52f6bdc4ce71bf43b8985939884bff1e6ebbe59fba941abbd5ea945753d"
+    },
+    {
+      "path": "contenido-captoora/REQUISITOS.md",
+      "bytes": 34724,
+      "sha256": "731ff8c4d9726dd2247eb928f0790aa53fc8cee6b1f16d17d541e8e09469dc90"
+    },
+    {
+      "path": "contenido-captoora/ELENA_RYLINA_LIKINYA.md",
+      "bytes": 10264,
+      "sha256": "bf44e60e29724accba85cf1b66ff5de59d4f3f527cb87995bdfd65028a681c9f"
+    },
+    {
+      "path": "contenido-captoora/CONTRATO_OPERATIVO.md",
+      "bytes": 8992,
+      "sha256": "f5a1ab89d6c16be1401f4a32217b328a70f855683b7dae4a98a94106f6c0a822"
+    },
+    {
+      "path": "contenido-captoora/piloto_obturacion.json",
+      "bytes": 3078,
+      "sha256": "ccd6943df0dd7255aa05f90ec6824fe71ee84b7e7eb50957efe9dfb365b80ac9"
+    },
+    {
+      "path": "contenido-captoora/RECIBO_SUBIDA_REPOSITORIO_2026-10-23.json",
+      "bytes": 309,
+      "sha256": "1e6bee2e742f50d8abd71ccbbd2aea6506359d880e8eab649b022d0b584bd4ff"
+    },
+    {
+      "path": "contenido-captoora/reporte_lote_local.json",
+      "bytes": 400,
+      "sha256": "0c1cd9ec31e4f8708d81792bfe6d3145e10879a57f234bb56bbaf1032ed8658a"
+    },
+    {
+      "path": "contenido-captoora/BIBLIOTECA_Y_REMIXES.md",
+      "bytes": 1773,
+      "sha256": "f8c33e8b3304a1c80c46f1b9480b17313a2dbb01cd48409e890b13b71e9e81dc"
+    },
+    {
+      "path": "contenido-captoora/CAPACIDAD_Y_APROVECHAMIENTO.md",
+      "bytes": 7411,
+      "sha256": "352c8d540a08d9f4054a4a5578abf0045d7c1b05acba878ca8721475cbb29fca"
+    },
+    {
+      "path": "contenido-captoora/PLAN_Y_GUIONES.md",
+      "bytes": 8008,
+      "sha256": "25c3570672411c94d9c9d0bf677b63505800e35369a7a7358970bd335f5a36bf"
+    },
+    {
+      "path": "contenido-captoora/manifest.json",
+      "bytes": 2891,
+      "sha256": "d663b1a85adf3d7135b8a317b68832fd292b72c76c7d2dc4def267ef80ccd4cc"
+    },
+    {
+      "path": "contenido-captoora/RUTINA_PRODUCCION.md",
+      "bytes": 4920,
+      "sha256": "bbf34b53cfb0a199860b7a9397f29d4ac0c442c9e9be847c3fa8b391b0722720"
+    },
+    {
+      "path": "contenido-captoora/ANDREA_INVENTARIO.json",
+      "bytes": 11224,
+      "sha256": "53c738f342bcfbc9a359e05f0de8323f4fbcf048767a72f91cf2c9633a4cc3e1"
+    },
+    {
+      "path": "contenido-captoora/gift_cards_estado.json",
+      "bytes": 1525,
+      "sha256": "b1ab3ea1f884e0495e7dc5d5aa8848418d6fb1796e3c001dfe798c73a7e54898"
+    },
+    {
+      "path": "contenido-captoora/PRODUCCION_LIKINYA.md",
+      "bytes": 13822,
+      "sha256": "f8a1377d1c26185c8a5b2d8f999f467b9d6e36dabd9469d4feaf523bb7d528af"
+    },
+    {
+      "path": "contenido-captoora/PIEZAS_CANVA_ADAPTADAS.json",
+      "bytes": 690,
+      "sha256": "19deffd50caa3f89d9684d3fe56a4306e7262d940e511ccb80269f2790a586eb"
+    },
+    {
+      "path": "contenido-captoora/reporte.json",
+      "bytes": 6906,
+      "sha256": "e8cac51400f197aef18adf50b1306db2ac667845ae901f466f05f344c7f0f665"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/SALDOS.json",
+      "bytes": 8087,
+      "sha256": "e89dbb6b70e2ba465321ea10a625d519b4880cb50e87ffae32a9b2a56c82744e"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/PRODUCCION.json",
+      "bytes": 4174,
+      "sha256": "7d953397e9753fed34792cf9b190e1457b8046ffd6172447d63481935248ece9"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/LEEME.md",
+      "bytes": 1007,
+      "sha256": "18cd1dce3cd1f3a0bf1af025056fa190f7391ecf5096bc0d0b76141d44a4f64e"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/PILOTO_EDICION_Y_RESULTADOS.md",
+      "bytes": 2053,
+      "sha256": "1ff4cf811725db42413cb53c61fe8d46af69b4a30a2995624035527f00885035"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/LIMITES_Y_DECISION_COMPRA.md",
+      "bytes": 921,
+      "sha256": "15bd4c266e9e5dff24838888321448e74127bd2cdceb389d7887fea7a2d1fd62"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/SALDOS.csv",
+      "bytes": 3354,
+      "sha256": "487644d5953e79aa6de61280c175143d6fdb3263af0641b3c521e3d9c5e992e2"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/COMING_SOON_REFERENCIA.json",
+      "bytes": 324,
+      "sha256": "96ffda22eb525fb41613c0c37cc8d9462785c61c5a2dc884cba1e53925f7e4f5"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/PLAN_EJECUCION.md",
+      "bytes": 2681,
+      "sha256": "b644e99719da8bf58396fc0f22000fceace628521088c2d66af004002ef24ac5"
+    },
+    {
+      "path": "contenido-captoora/auditoria-produccion-actual/ARCHIVOS.json",
+      "bytes": 965,
+      "sha256": "24ef11d45680c6c45a268ef491a11a3f22cd20c3297813635c62e0a3df960b95"
+    },
+    {
+      "path": "contenido-captoora/plan-9-dias/PLAN_90_PUBLICACIONES.md",
+      "bytes": 14068,
+      "sha256": "5e5907b6a271d1d7fced3ef846ec91c1ecc1a818585579c1b5e5e69829bfc8b6"
+    },
+    {
+      "path": "contenido-captoora/plan-9-dias/CALENDARIO_90.json",
+      "bytes": 41040,
+      "sha256": "455275eab1204ff371a1f35db1a730a75938d2e25363e2ca2d28d72acaca9f63"
+    },
+    {
+      "path": "contenido-captoora/CAL-004/REQUISITOS.md",
+      "bytes": 356,
+      "sha256": "73a37e4afdeb69959b4424d4212e662a1202ead91864a220726935fa0cdaca8d"
+    },
+    {
+      "path": "contenido-captoora/CAL-004/ESTADO.json",
+      "bytes": 775,
+      "sha256": "a8d8d8a90263f090bdb1d52a40a4252734cb14254abda86c60c84cc59941282b"
+    },
+    {
+      "path": "contenido-captoora/CAL-004/REVISION_TECNICA.md",
+      "bytes": 423,
+      "sha256": "ffbd53b5e0c78a41e4b5a48f6b1c38e3dbcd8f6df34c3a3e26ccc9f61feac242"
+    },
+    {
+      "path": "contenido-captoora/consolidado-repositorio/CUENTAS_CORREOS_Y_PLANES.md",
+      "bytes": 3742,
+      "sha256": "76366b29a9088c1c1d2d7fa4a57eb596bab05843142dc6f7afb71234ec8c7164"
+    },
+    {
+      "path": "contenido-captoora/consolidado-repositorio/PLAN_ACCION_OTONO_INVIERNO_2026_2027.md",
+      "bytes": 5087,
+      "sha256": "97304aa24ea1a80ed3d4f2873b56cc609688fc78a9d8094b0ff13fb812d953e0"
+    },
+    {
+      "path": "contenido-captoora/consolidado-repositorio/CUENTAS_CORREOS_Y_PLANES.json",
+      "bytes": 5137,
+      "sha256": "9ecbd88aa5dabf3bb890a5530fa15b329e9f669a5011c8d0c2cfe0180599f5c9"
+    },
+    {
+      "path": "contenido-captoora/portafolio/REQUISITOS.md",
+      "bytes": 579,
+      "sha256": "dd5eeb9fe73cce3bd5621cb14e7acf7c3146fdb2b7896c96de3afee112f52799"
+    },
+    {
+      "path": "contenido-captoora/portafolio/ESTADO.json",
+      "bytes": 326,
+      "sha256": "79a333457329363de4636cafc8a6bce56c34f4448dc70ae460eeda99fc3a5019"
+    },
+    {
+      "path": "contenido-captoora/portafolio/LEEME_PORTAFOLIO.md",
+      "bytes": 2830,
+      "sha256": "1058b08ea682ec4ab74dcd4417c18031fdd5c2351e45c81e09b1b7f6c639af03"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/CANVA_ENTREGA.json",
+      "bytes": 1827,
+      "sha256": "5a3ec15e9ffd0963ba4028c7e074a00a4f4944bc7831f46b5f454354c10af509"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/BORRADOR_CANVA_DINAMICO.json",
+      "bytes": 387,
+      "sha256": "5707eaaba9315d65e0414228ff55399e3faee210f2d35d29a731745205bfea0d"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/manifest.json",
+      "bytes": 1471,
+      "sha256": "2a225d1721c99043d5cd6d1d75ac88dcdce241ca153fa0d5f2e1f990d16bafa9"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/INVENTARIO_INICIAL.csv",
+      "bytes": 1470,
+      "sha256": "1ef590013c44cdc56336ee34052bf15399942195a6f7a724f33c8a0d02f50a81"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/REGISTRO_PUBLICACIONES.csv",
+      "bytes": 125,
+      "sha256": "dca96c7eaeb8be5326e3fefb27e166ac2d3dc1fde659a70c82e3dd55ffe7b085"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/ESTRUCTURA_DRIVE.json",
+      "bytes": 7728,
+      "sha256": "bd522c272fa4953ad247356096f2b4046d355832eb0ac7b381e7cd29ba362ff1"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/LEEME.md",
+      "bytes": 3600,
+      "sha256": "8a68e1a99dbbd5fddc6e4ef8b9e91f91f9b4c925fc1b4fffad93e535054258af"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/REQUISITOS.md",
+      "bytes": 1148,
+      "sha256": "7301c47b3dba457f76c74d57a4d129ff0362300a5ea5906f558d7a27b8a5c7f7"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/CALENDARIO_9_DIAS.md",
+      "bytes": 3760,
+      "sha256": "fdb8dfd84fec57739ff66458222af476e546891d3e4f917e7a1a5c71b29fbdb0"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/REQUISITOS_AGENDA.md",
+      "bytes": 1174,
+      "sha256": "60c8de4ffcbd3325c125ade95b1571eb5835900c8bb1509cf3ec65750240a6e5"
+    },
+    {
+      "path": "contenido-captoora/organizacion-drive/AGENDA_PRODUCCION.md",
+      "bytes": 4713,
+      "sha256": "b9ff99fc0ad2ad3bb2f5e561481130f06465c015d0c10926cf7242009f259567"
+    },
+    {
+      "path": "contenido-captoora/heygen-jornada/COLA_HOY.csv",
+      "bytes": 3549,
+      "sha256": "32dfc35d61b0861d0fe31372c892872fe5346209f11c6cd0474494b289c91367"
+    },
+    {
+      "path": "contenido-captoora/heygen-jornada/ESTADO_VERIFICADO.json",
+      "bytes": 498,
+      "sha256": "e060530e51680b03da97e9e8c80dffdbf493a18afb4b83013ee6cd72d80a9634"
+    },
+    {
+      "path": "contenido-captoora/heygen-jornada/PLAN.md",
+      "bytes": 1676,
+      "sha256": "8bc300b646f1b44f79883ca60f594104d114b29b9249a6784ec929e18c5506f1"
+    },
+    {
+      "path": "contenido-captoora/kit-marca/RECONSTRUIR_EN_CANVA.md",
+      "bytes": 3561,
+      "sha256": "4f4225d3cb82549927703382adbf95290d1e17a534292ef62c16851fb9dee1df"
+    },
+    {
+      "path": "contenido-captoora/kit-marca/REQUISITOS.md",
+      "bytes": 1166,
+      "sha256": "06246a23be8b20651c67bcc9473fd9389945efca32b3a09906c48ac3f7da45e4"
+    },
+    {
+      "path": "contenido-captoora/kit-marca/CANVA_CAPACIDAD.md",
+      "bytes": 2797,
+      "sha256": "0b0f1681c320d728df3bb8e1ceacfcc1975d1fd9cf96489636512bf55f647db0"
+    },
+    {
+      "path": "contenido-captoora/kit-marca/RESPALDO.json",
+      "bytes": 5586,
+      "sha256": "aac5cd7d0ba3100e97f874a51a483981d403da64f83f9cf19b781e8fac9df474"
+    },
+    {
+      "path": "contenido-captoora/manual-agente/SECRET_REFERENCES.md",
+      "bytes": 2047,
+      "sha256": "3b9f06e9003ebb356e7d0c2a8e3033bb064a731e3f78518444bf01f708e200cf"
+    },
+    {
+      "path": "contenido-captoora/manual-agente/CICLOS_Y_COLA.md",
+      "bytes": 3362,
+      "sha256": "aac26d4c7e03d7c395792a0c8bd21266c869b1c8f46c5c987a625d5fb5a863d5"
+    },
+    {
+      "path": "contenido-captoora/manual-agente/REGLAS_PRODUCCION.md",
+      "bytes": 5200,
+      "sha256": "3f2aecb9db6e06625d724fb7753d3d2bf8b1d5b65033cd4e1ecdc9130c5eb752"
+    },
+    {
+      "path": "contenido-captoora/manual-agente/README.md",
+      "bytes": 638,
+      "sha256": "6736cc7b3ec419321247b914d5b2275c1c143802bc3deeb4ec400094c31ec23a"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/ideas-8-retocadas/CANVA_ENTREGA.json",
+      "bytes": 3262,
+      "sha256": "1f11be1e3bd91e05649aa6234ffc604ee74515fdd91cd81862006105175c8180"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/ideas-8-retocadas/manifest.json",
+      "bytes": 3426,
+      "sha256": "5ae736ef12df384187e94ec3762741b0fbbd438a18081555db695faa366f0c20"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/ideas-8/REVISION.md",
+      "bytes": 837,
+      "sha256": "6781a351952a5d439d433a85ff8d15d0a4c832e4f7b0cf1c9f21c8cfd203ce14"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/ideas-8/manifest.json",
+      "bytes": 3266,
+      "sha256": "ba334b6e24601d76957e76d670ee5ed33cd8022b297d64ba1a70972afa0ac0af"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v3/CANVA_ENTREGA.json",
+      "bytes": 1921,
+      "sha256": "9cb4813f675aeea8b5fab8591229ea6a324c2989fda1016fb720e2a1f41fc4f9"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v3/manifest.json",
+      "bytes": 1850,
+      "sha256": "8569ccaf00fbbe4b7c392d1730d8a3c208b7117946a892567e218679516fdb41"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v2/CANVA_ENTREGA.json",
+      "bytes": 2151,
+      "sha256": "563b5c3d80fd21caaec2405d774b79af1dd0cd4f8cdc5042e2d8f7f633d9c6f0"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v2/manifest.json",
+      "bytes": 1850,
+      "sha256": "a69af4121ee0ee57691fb4cbb8adb95872b5a0070de77b77357f905b60d7d3cd"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v4-likinya/CANVA_ENTREGA.json",
+      "bytes": 1779,
+      "sha256": "4a2a03f949d239f241719f6aafc80822e90f1fe5478b5b0344eee88fd8060a2e"
+    },
+    {
+      "path": "contenido-captoora/gift-cards-farmasi/vertical-v4-likinya/manifest.json",
+      "bytes": 1531,
+      "sha256": "3aac549bac8c517c9d0d0307528716c0e6069d142ab19e8c8d46113c1918faa8"
+    },
+    {
+      "path": "conversion-captoora/MEDICION_VENTA.csv",
+      "bytes": 113,
+      "sha256": "c3bbb196853ada8701fed46728652ba7dfd9de1e4ecfc841c094259271ccb166"
+    },
+    {
+      "path": "conversion-captoora/REQUISITOS.md",
+      "bytes": 4714,
+      "sha256": "6fbc1cb4c66ab2dcf839e01ae3093dc777f5ecc81020da5f353d51ab7987f5de"
+    },
+    {
+      "path": "conversion-captoora/CAMBIOS.md",
+      "bytes": 1477,
+      "sha256": "8a8863952a82f953a74a00a026c22ec555cbe88bf4f7f171b1c9b7b3e1c30acd"
+    },
+    {
+      "path": "conversion-captoora/PAQUETE_DE_CONVERSION.md",
+      "bytes": 8575,
+      "sha256": "28cab8bbaab809595d341328fcc1f19333a148a0af7197595b4567097aef52bd"
+    },
+    {
+      "path": "conversion-captoora/ACTIVACION_UNA_SESION.md",
+      "bytes": 4142,
+      "sha256": "af35b87446440af004c4570994093dd0328db085966f4885aa757f7191081810"
+    },
+    {
+      "path": "conversion-captoora/DIAGNOSTICO_Y_FUENTES.md",
+      "bytes": 4666,
+      "sha256": "45a567fab951bd24fc49fddd90a379086a6770c677cb89595f359129b52f11d3"
+    },
+    {
+      "path": "evento-instax/CHECKLIST.csv",
+      "bytes": 1387,
+      "sha256": "49ee778a4a2a9abd57ccf33bc7662872835aa2a756295a15c99841b40ec0a77c"
+    },
+    {
+      "path": "evento-instax/CONTEXTO.json",
+      "bytes": 690,
+      "sha256": "30e6d7a85c85ae8329eee7773b40fce8cdfb6fde585b82bc2a43ceab52add9fd"
+    },
+    {
+      "path": "evento-instax/REGISTRO_CANJES.csv",
+      "bytes": 96,
+      "sha256": "722379e51b8aa4432be64d634f5a3d2c080456ed9d2ae31ee783c97562baedb0"
+    },
+    {
+      "path": "evento-instax/PLAN_OPERATIVO.md",
+      "bytes": 2125,
+      "sha256": "39df622a0a42c35df08e735311ab4442d4fd91add7b57009d96354c2e690807c"
+    },
+    {
+      "path": "evento-instax/REQUISITOS.csv",
+      "bytes": 1236,
+      "sha256": "e9f4ee30af20e1b8706d3f17542fc273dbd8944b5a275e1bcbb9ab8b26778a7d"
+    },
+    {
+      "path": "explainer-familia-captoora/index.html",
+      "bytes": 2956,
+      "sha256": "7f639fc7690a53c83d75f422521ce320a9dfeef302489c08224f4694cdd63e97"
+    },
+    {
+      "path": "explainer-familia-captoora/proyecto.json",
+      "bytes": 1761,
+      "sha256": "d45a1871b75cce63b6105c6b51e3cd5a988066a5e7ae82e1d47fcf0881a0849a"
+    },
+    {
+      "path": "explainer-familia-captoora/GUION_BASE.md",
+      "bytes": 1893,
+      "sha256": "7aae270958390af1d544461a16f7a9b9a1d286a987c32e74cb078c48859a8d94"
+    },
+    {
+      "path": "explainer-familia-captoora/ESTADO_FRENTES.md",
+      "bytes": 873,
+      "sha256": "8ca867a573929c0392eb0043eea75b057630e75fd4955f77d9e22c61253083cb"
+    },
+    {
+      "path": "explainer-familia-captoora/fotos.csv",
+      "bytes": 87,
+      "sha256": "abf1d56ad970d37bca7788698f2440c3d1e93d5e5ef271f3d9c17bbd1ddefb89"
+    },
+    {
+      "path": "explainer-familia-captoora/REQUISITOS.csv",
+      "bytes": 1164,
+      "sha256": "969d2e34e4eaca6db2853656076520fe92cfb22c8f174028c7e9e78150a3e437"
+    },
+    {
+      "path": "explainer-lentes/parte-1.explainer.xml",
+      "bytes": 8748,
+      "sha256": "e254f69d87a4edc4c66f54fbae9aaac8b35ec4bed1580ecf053d65e80a8c1ee1"
+    },
+    {
+      "path": "explainer-lentes/parte-2.explainer.xml",
+      "bytes": 7663,
+      "sha256": "5074ea48a74e49b7b9859c342b8ca96b916fb53dbc964748820b2ae855f0bd41"
+    },
+    {
+      "path": "explainer-lentes/proyecto.json",
+      "bytes": 3753,
+      "sha256": "75fac43865afb155511cfc069e3754caa370e5981e836aab39b7d409a432f465"
+    },
+    {
+      "path": "explainer-lentes/ENTREGA_EXPLAINERS.json",
+      "bytes": 1184,
+      "sha256": "df69010af0bf3481c3e661904e1b61a19b8abf3c2d18bcf8ea70f47cbcae205a"
+    },
+    {
+      "path": "explainer-lentes/SERIE_TRES_PARTES.md",
+      "bytes": 966,
+      "sha256": "31fff491492787ba63e3f6812eb9002889e93c64298a4124a7b538f1cca787c7"
+    },
+    {
+      "path": "explainer-lentes/GUION_BASE.md",
+      "bytes": 1974,
+      "sha256": "54a2d43e4fab2d3a84abe5f655bbf00f85faa458c21735c92f8c52362f8e5b0f"
+    },
+    {
+      "path": "explainer-lentes/parte-3.explainer.xml",
+      "bytes": 8578,
+      "sha256": "9a86fc8ed436e973ed744606ceb2fcf97225c496d83552d7079fd8d2a753bd8e"
+    }
+  ]
+}

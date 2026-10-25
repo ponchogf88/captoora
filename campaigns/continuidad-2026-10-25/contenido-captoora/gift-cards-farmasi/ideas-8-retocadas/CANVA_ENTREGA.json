@@ -1,0 +1,104 @@
+{
+  "status": "eight_designs_created",
+  "designs": [
+    {
+      "stem": "01-rose-cover",
+      "id": "DAHY4bEaUWE",
+      "title": "FARMASI · Idea 1 · Rose · Portada · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/fFgkfGDaPyR-aT_",
+        "view_url": "https://www.canva.com/d/aJkE3SXVcBSaOqC"
+      },
+      "created_at": 1792805680,
+      "updated_at": 1792805680,
+      "page_count": 1
+    },
+    {
+      "stem": "02-pop-club",
+      "id": "DAHY4cB2oVk",
+      "title": "FARMASI · Idea 2 · Pop · Beauty Club · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/DJOh6xi9WqlviT7",
+        "view_url": "https://www.canva.com/d/q88EQhXISJP62Pn"
+      },
+      "created_at": 1792805686,
+      "updated_at": 1792805686,
+      "page_count": 1
+    },
+    {
+      "stem": "03-signature-noir",
+      "id": "DAHY4aX0WRE",
+      "title": "FARMASI · Idea 3 · Signature · Noir · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/WGxr_o8bZeDxZZt",
+        "view_url": "https://www.canva.com/d/Jb13h48S8Sr6lna"
+      },
+      "created_at": 1792805691,
+      "updated_at": 1792805691,
+      "page_count": 1
+    },
+    {
+      "stem": "04-editorial-pixieset",
+      "id": "DAHY4RvkTzA",
+      "title": "FARMASI · Idea 4 · Editorial · Galería · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/XZG3F4Vm9nRkbvc",
+        "view_url": "https://www.canva.com/d/wCH0GA-RsLovryw"
+      },
+      "created_at": 1792805697,
+      "updated_at": 1792805697,
+      "page_count": 1
+    },
+    {
+      "stem": "05-vega-bold",
+      "id": "DAHY4TKgkk8",
+      "title": "FARMASI · Idea 5 · Vega · Bold · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/RBNji2uuxw2CVp8",
+        "view_url": "https://www.canva.com/d/mc-aqm2SndC8phV"
+      },
+      "created_at": 1792805703,
+      "updated_at": 1792805703,
+      "page_count": 1
+    },
+    {
+      "stem": "06-beauty-lilac",
+      "id": "DAHY4dnZcgY",
+      "title": "FARMASI · Idea 6 · Beauty · Lilac · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/7c6zrqycu6w4f8r",
+        "view_url": "https://www.canva.com/d/wAQWsWS0cKAD2JB"
+      },
+      "created_at": 1792805709,
+      "updated_at": 1792805709,
+      "page_count": 1
+    },
+    {
+      "stem": "07-fit-energy",
+      "id": "DAHY4X7p7EY",
+      "title": "FARMASI · Idea 7 · Fit · Energy · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/DwXGbyPK7Vf8Q8p",
+        "view_url": "https://www.canva.com/d/yW8uFS9GpHs6qb2"
+      },
+      "created_at": 1792805715,
+      "updated_at": 1792805715,
+      "page_count": 1
+    },
+    {
+      "stem": "08-polaroid-story",
+      "id": "DAHY4cd-z5U",
+      "title": "FARMASI · Idea 8 · Polaroid · Session · Likinya",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/cAFqNluEGQAn47R",
+        "view_url": "https://www.canva.com/d/dUvXOe7xsKl2Vrw"
+      },
+      "created_at": 1792805721,
+      "updated_at": 1792805721,
+      "page_count": 1
+    }
+  ],
+  "published": false,
+  "photo_treatment": "AI editorial retouch of user supplied contact sheet; background cleanup, new grade; exact historical recipe not claimed",
+  "credits_consumed": null
+}

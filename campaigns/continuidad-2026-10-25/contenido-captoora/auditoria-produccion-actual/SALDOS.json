@@ -1,0 +1,256 @@
+{
+  "consultado_utc": "2026-10-25T07:56:25.901745+00:00",
+  "cuentas": [
+    {
+      "servicio": "HeyGen",
+      "correo": "l.jagf87@gmail.com",
+      "plan": "Free",
+      "saldo": 0,
+      "unidad": "creditos web",
+      "reinicio": null,
+      "estado": "verificado",
+      "evidencia": "Web saldo 0; conector confirma Free y saldo null"
+    },
+    {
+      "servicio": "Google Flow",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Pro",
+      "saldo": 1050,
+      "unidad": "creditos Flow",
+      "reinicio": null,
+      "estado": "verificado",
+      "evidencia": "Panel de cuenta"
+    },
+    {
+      "servicio": "Google Flow",
+      "correo": "alfonsogf.88@gmail.com",
+      "plan": "Pro",
+      "saldo": 1050,
+      "unidad": "creditos Flow",
+      "reinicio": null,
+      "estado": "verificado",
+      "evidencia": "Panel muestra alfonsogf88@gmail.com; misma cuenta Gmail con puntos omitidos"
+    },
+    {
+      "servicio": "Google Flow",
+      "correo": "yare.btnc@gmail.com",
+      "plan": "Pro",
+      "saldo": 640,
+      "unidad": "creditos Flow",
+      "reinicio": null,
+      "estado": "verificado",
+      "evidencia": "760 antes; 740 tras primer envio;720 tras segundo;640 tras cuatro adicionales. Consumo medido120."
+    },
+    {
+      "servicio": "ElevenLabs",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Starter",
+      "saldo": 33455,
+      "unidad": "creditos ElevenCreative",
+      "reinicio": "2026-11-04",
+      "estado": "verificado",
+      "evidencia": "Total 34772; usados 1317. No es el correo declarado para Likinya; no se genero audio"
+    },
+    {
+      "servicio": "ElevenLabs",
+      "correo": "l.jagf87@gmail.com",
+      "plan": "Free",
+      "saldo": 10000,
+      "unidad": "creditos ElevenCreative",
+      "reinicio": null,
+      "estado": "acceso_verificado",
+      "evidencia": "Login Google seleccionado; Jesus Workspace Free 10000; contrastar perfil exacto y recursos Liza antes de producir"
+    },
+    {
+      "servicio": "Picsart web",
+      "correo": "trevinoglauber@gmail.com",
+      "plan": "Pro declarado; facturacion sin detalle",
+      "saldo": 500,
+      "unidad": "creditos web",
+      "reinicio": null,
+      "estado": "parcial",
+      "evidencia": "Sesion glaubertrevio/Glauber Trevino; correo oculto por interfaz y facturacion no muestra plan"
+    },
+    {
+      "servicio": "Picsart conector",
+      "correo": null,
+      "plan": null,
+      "saldo": 5,
+      "unidad": "creditos conector",
+      "reinicio": "2026-10-28T17:29:21.304Z",
+      "estado": "verificado_saldo",
+      "evidencia": "No equiparar con 500 de la web; identidad de conector pendiente"
+    },
+    {
+      "servicio": "Canva web",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Negocios equipo agradecimiento sincero",
+      "saldo": null,
+      "unidad": "cuota IA",
+      "reinicio": null,
+      "estado": "parcial",
+      "evidencia": "Equipo Negocios 2 miembros; no saldo numerico obtenido"
+    },
+    {
+      "servicio": "Canva Business",
+      "correo": "trevinoglauber@gmail.com",
+      "plan": "Business declarado",
+      "saldo": null,
+      "unidad": "cuota IA",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "Conector Captoora disponible; no auditoria de saldo Business"
+    },
+    {
+      "servicio": "Grok / Grok Bot",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Premium observado",
+      "saldo": 6,
+      "unidad": "porcentaje semanal restante",
+      "reinicio": "2026-10-29 20:57 local mostrado",
+      "estado": "verificado_cuota",
+      "evidencia": "94% usado; Bot83 Build7 Voz2 Chat1 Automatizaciones1. Adicional $0; recarga automatica $5 activa, no modificada ni utilizada"
+    },
+    {
+      "servicio": "ChatGPT / Codex",
+      "correo": "jgutierrezf@uanl.edu.mx",
+      "plan": "Plus",
+      "saldo": 60,
+      "unidad": "porcentaje ventana 5h",
+      "reinicio": 1792924329,
+      "estado": "verificado_cuota",
+      "evidencia": "Semanal 63% restante; reset1793382709; compartido entre tareas"
+    },
+    {
+      "servicio": "Perplexity Pro",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Pro declarado",
+      "saldo": null,
+      "unidad": "cuota",
+      "reinicio": null,
+      "estado": "consulta_sin_resultado",
+      "evidencia": "Panel de configuracion vacio incluso en captura; no saldo obtenido"
+    },
+    {
+      "servicio": "CapCut Pro",
+      "correo": "l.jagf87@gmail.com",
+      "plan": "Pro declarado",
+      "saldo": null,
+      "unidad": "creditos IA",
+      "reinicio": null,
+      "estado": "sin_herramienta_saldo",
+      "evidencia": "Plugin disponible no expone consulta saldo; no browser por regla del plugin"
+    },
+    {
+      "servicio": "Meta AI",
+      "correo": "l.jagf87@gmail.com",
+      "plan": "Premium declarado",
+      "saldo": null,
+      "unidad": "cuota",
+      "reinicio": null,
+      "estado": "parcial",
+      "evidencia": "Pagina accesible; identidad/plan/saldo no visibles"
+    },
+    {
+      "servicio": "Meta AI",
+      "correo": "alfonsogf.88@gmail.com",
+      "plan": "Premium declarado",
+      "saldo": null,
+      "unidad": "cuota",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "Segunda cuenta no verificada"
+    },
+    {
+      "servicio": "Copilot Extend",
+      "correo": "jgutierrezf@uanl.edu.mx",
+      "plan": "Declarado",
+      "saldo": null,
+      "unidad": "cuota",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "No consulta actual"
+    },
+    {
+      "servicio": "Notion EDU",
+      "correo": "jgutierrezf@uanl.edu.mx",
+      "plan": "EDU declarado",
+      "saldo": null,
+      "unidad": "cuota IA",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "No consulta actual; no equivale EDU a IA ilimitada"
+    },
+    {
+      "servicio": "YouTube Premium",
+      "correo": "trevinoglauber@gmail.com",
+      "plan": "Premium declarado",
+      "saldo": null,
+      "unidad": "no saldo generacion confirmado",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "No asignar creditos de video a Premium"
+    },
+    {
+      "servicio": "Spotify Premium",
+      "correo": "lic.jagf87@gmail.com",
+      "plan": "Premium declarado",
+      "saldo": null,
+      "unidad": "no saldo generacion confirmado",
+      "reinicio": null,
+      "estado": "pendiente",
+      "evidencia": "Suscripcion de escucha; no licencia comercial musical asumida"
+    },
+    {
+      "servicio": "Ollama",
+      "correo": "agf07@hotmail.com",
+      "plan": "Local",
+      "saldo": null,
+      "unidad": "sin creditos web",
+      "reinicio": null,
+      "estado": "parcial",
+      "evidencia": "Binario localizado; ollama list no devolvio lista dentro de primer segundo"
+    },
+    {
+      "servicio": "Evoto",
+      "correo": null,
+      "plan": "Prueba declarada",
+      "saldo": null,
+      "unidad": "creditos retoque",
+      "reinicio": null,
+      "estado": "bloqueado_acceso",
+      "evidencia": "CUA no pudo adquirir app por nombre ni bundle; no repetir sin cambio"
+    },
+    {
+      "servicio": "GitHub",
+      "correo": null,
+      "plan": null,
+      "saldo": null,
+      "unidad": "no cuota de generacion",
+      "reinicio": null,
+      "estado": "acceso_verificado",
+      "evidencia": "gh api user: ponchogf88; plan null"
+    },
+    {
+      "servicio": "Captions",
+      "correo": null,
+      "plan": "Free confirmado por usuario 2026-10-25",
+      "saldo": null,
+      "unidad": "uso incluido por verificar",
+      "reinicio": null,
+      "estado": "declarado_usuario",
+      "evidencia": "Corrección humana; no asumir plan de pago ni compra autorizada"
+    },
+    {
+      "servicio": "OpusClip",
+      "correo": null,
+      "plan": "Free confirmado por usuario 2026-10-25",
+      "saldo": null,
+      "unidad": "uso incluido por verificar",
+      "reinicio": null,
+      "estado": "declarado_usuario",
+      "evidencia": "Usuario confirma nombre OpusClip y plan Free; compra no autorizada."
+    }
+  ],
+  "advertencia": "No es auditoria completa: los estados pendiente, parcial y consulta_sin_resultado no representan saldo cero."
+}

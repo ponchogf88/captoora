@@ -1,0 +1,60 @@
+{
+  "status": "four_designs_imported",
+  "source": "two user supplied collages",
+  "photo_editing": "none; original collage photos placed through layout crop windows",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "designs": [
+    {
+      "stem": "01-rose",
+      "id": "DAHY4e2xWhk",
+      "title": "Likinya · FARMASI Session · Rosa · frontal · 9:16",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/8DxoVYhhNvfCY_S",
+        "view_url": "https://www.canva.com/d/U8gvh1tcz0zm9c8"
+      },
+      "created_at": 1792805409,
+      "updated_at": 1792805409,
+      "page_count": 1
+    },
+    {
+      "stem": "02-noir",
+      "id": "DAHY4Skmx1A",
+      "title": "Likinya · FARMASI Session · Negra · primer plano · 9:16",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/qW9RpRbhQY6DoSB",
+        "view_url": "https://www.canva.com/d/c2PQE5v5NPHKR_E"
+      },
+      "created_at": 1792805415,
+      "updated_at": 1792805415,
+      "page_count": 1
+    },
+    {
+      "stem": "03-nude",
+      "id": "DAHY4VBiiKE",
+      "title": "Likinya · FARMASI Session · Nude · producto junto al rostro · 9:16",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/80woJX8H-kUmIDj",
+        "view_url": "https://www.canva.com/d/KqwMRuUqF1sZzWQ"
+      },
+      "created_at": 1792805420,
+      "updated_at": 1792805420,
+      "page_count": 1
+    },
+    {
+      "stem": "04-salvia",
+      "id": "DAHY4WjRVsA",
+      "title": "Likinya · FARMASI Session · Salvia · cuerpo completo · 9:16",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/ziGUYVGHJjBUURM",
+        "view_url": "https://www.canva.com/d/pN-ef55AAkq_FRh"
+      },
+      "created_at": 1792805426,
+      "updated_at": 1792805426,
+      "page_count": 1
+    }
+  ],
+  "published": false
+}

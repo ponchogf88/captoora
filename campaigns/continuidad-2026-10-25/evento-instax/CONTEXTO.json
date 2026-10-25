@@ -1,0 +1,19 @@
+{
+  "evento": "Gift cards Instax",
+  "confirmado_por_usuario": true,
+  "fecha": null,
+  "hora": null,
+  "lugar": null,
+  "aforo": null,
+  "fuente_bot": "Lalo Eventos",
+  "url_bot": "https://grok.com/bot/e5deb806-1466-4c4f-ac18-39175df52862",
+  "pendientes_recuperados": [
+    "más película Instax Mini",
+    "cámara de sobrina",
+    "enlace Calendly específico para sesiones"
+  ],
+  "mensajes_enviados_a_bot": 0,
+  "grok_ultimo_uso_observado": "96% semanal; reinicia 2026-10-29 20:57, según interfaz",
+  "dots_fuente": "https://learn.chatgpt.com/docs/dots",
+  "dots_disponibilidad": "Pro100/200/500 elegibles según región/edad; despliegue gradual, acceso inmediato no garantizado"
+}

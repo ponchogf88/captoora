@@ -1,0 +1,45 @@
+{
+  "policy": "Usuario acepta cargos adicionales para producir; no se realizó compra ni se fijó presupuesto. Priorizar ejecución útil y consumo medido.",
+  "heygen": {
+    "remaining": 1051,
+    "unit": "premium_credits",
+    "reset_at": "2026-10-24T02:48:46Z",
+    "evidence": "get_current_user consultado el 2026-10-20 en este hilo",
+    "period_allowance": null,
+    "used_percent": null,
+    "checked_at_utc": "2026-10-21T13:24:51.821947+00:00",
+    "previous_remaining": 1051,
+    "interval_consumption_verified": 0
+  },
+  "elevenlabs": {
+    "remaining": 33948,
+    "previous_remaining": 34280,
+    "interval_consumption_verified": 332,
+    "unit": "credits",
+    "reset_at": null,
+    "checked_at_utc": "2026-10-21T04:07:48.892648+00:00",
+    "voice": "Liza - Natural Mexican Creator",
+    "model": "eleven_v4",
+    "status": "generation_downloaded",
+    "workspace_plan_visible": "Starter"
+  },
+  "other_services": {
+    "status": "subscriptions_declared_access_and_quotas_unverified"
+  },
+  "capcut": {
+    "remaining": null,
+    "unit": null,
+    "checked_at_utc": "2026-10-21T05:35:07Z",
+    "consumed": null,
+    "status": "editing_session_started_no_balance_exposed"
+  },
+  "google_flow_yare": {
+    "account": "yare.btnc@gmail.com",
+    "remaining": 1050,
+    "unit": "Google Flow credits",
+    "checked_at_utc": "2026-10-21T13:30:29.624234+00:00",
+    "reset_at": null,
+    "plan_visible": "PRO",
+    "consumption": null
+  }
+}

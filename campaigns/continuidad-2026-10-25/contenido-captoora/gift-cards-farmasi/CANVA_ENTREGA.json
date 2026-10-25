@@ -1,0 +1,58 @@
+{
+  "status": "four_examples_created",
+  "designs": [
+    {
+      "stem": "01-rose",
+      "id": "DAHY4Tq9fUg",
+      "title": "FARMASI Session · Rose Beauty · revisión limpia",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/ipG7k3LngxTauOl",
+        "view_url": "https://www.canva.com/d/i6bA8MNxmyMU9kj"
+      },
+      "created_at": 1792804885,
+      "updated_at": 1792804885,
+      "page_count": 1
+    },
+    {
+      "stem": "02-noir",
+      "id": "DAHY4YAn7VQ",
+      "title": "FARMASI Session · Noir Editorial · revisión limpia",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/Y6gjBglpuPT6kTz",
+        "view_url": "https://www.canva.com/d/qyhvmwqp7Rwj41F"
+      },
+      "created_at": 1792804891,
+      "updated_at": 1792804891,
+      "page_count": 1
+    },
+    {
+      "stem": "03-nude",
+      "id": "DAHY4R9M0r8",
+      "title": "FARMASI Session · Nude Studio · revisión limpia",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/7sYvNH84Gv_yUoo",
+        "view_url": "https://www.canva.com/d/OnIeZh8fB8SpOyo"
+      },
+      "created_at": 1792804897,
+      "updated_at": 1792804897,
+      "page_count": 1
+    },
+    {
+      "stem": "04-salvia",
+      "id": "DAHY4YcDs_M",
+      "title": "FARMASI Session · Fresh Beauty · revisión limpia",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/kllIkPbuKqWOvK6",
+        "view_url": "https://www.canva.com/d/wk834yfUqoPfK1Y"
+      },
+      "created_at": 1792804902,
+      "updated_at": 1792804902,
+      "page_count": 1
+    }
+  ],
+  "source_catalog": "https://drive.google.com/file/d/1O2Kf8UK09sJBtpAbM21Or4MB3pW3FdaZ/view",
+  "client_photos_used": false,
+  "ai_generation_credits": null,
+  "visual_review": "local PNGs reviewed; Canva imports succeeded; original draft imports superseded",
+  "published": false
+}

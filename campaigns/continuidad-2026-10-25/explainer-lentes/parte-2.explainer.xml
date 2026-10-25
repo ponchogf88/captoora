@@ -1,0 +1,50 @@
+<item anchor="intro" title="Números de los lentes: mm y apertura" text="Parte 2: lee un objetivo y separa distancia focal, apertura y tamaño del sensor."></item>
+<say lang="es-MX" title="Leer un objetivo" text="[Los números del lente](#intro) describen funciones distintas que puedes aprender a separar."/>
+<item layout="cards" anchor="inscripciones" title="Un ejemplo: 18–55 mm 1:3.5–5.6">
+<item anchor="milimetros" title="18–55 mm" text="Rango de distancias focales."/>
+<item anchor="aperturas" title="1:3.5–5.6" text="Apertura máxima según la posición del zoom."/>
+<item anchor="filtro" title="Ø 55 mm" text="Diámetro de filtro, si aparece esta inscripción."/>
+</item>
+<say lang="es-MX" title="Tres números diferentes" text="[Un 18 a 55 milímetros](#milimetros) permite cambiar la distancia focal entre esos extremos. [Tres punto cinco a cinco punto seis](#aperturas) puede indicar que su abertura máxima cambia al usar el zoom. El [símbolo de diámetro](#filtro), en cambio, identifica la rosca del filtro cuando está marcado así. Por eso dos cifras expresadas en milímetros pueden describir cosas distintas. Es un ejemplo didáctico; debes leer las inscripciones de tu objetivo concreto."/>
+<item type="image" anchor="encuadres" title="Desde el mismo lugar" prompt="A wide conceptual educational illustration of a photographer and tripod facing one table with a plant and a portrait bust, with three nested translucent rectangular framing windows showing wide, medium and tight fields of view from the same tripod position; keep all framing windows centered on the same bust and do not move the camera. Editorial educational illustration, warm ivory background, charcoal outlines and teal accents. No text, no words, no labels."></item>
+<say lang="es-MX" title="Campo de visión" text="[Desde el mismo lugar](#encuadres), y usando el mismo sensor, una focal corta incluye un campo más amplio. Una focal larga muestra una porción más estrecha y representa al sujeto más grande dentro de la imagen. Esto es lo que notas al girar un zoom. Los milímetros no indican cuántos metros puede alcanzar el objetivo ni cuánta calidad tiene."/>
+<item layout="cards" anchor="origen" title="Por qué se mide en milímetros">
+<item anchor="optica" title="Distancia focal" text="Propiedad óptica medida con enfoque al infinito."/>
+<item anchor="barril" title="Longitud física" text="El barril no mide necesariamente lo mismo."/>
+</item>
+<say lang="es-MX" title="Significado óptico" text="[La distancia focal](#optica) se define ópticamente usando los planos principales del sistema y su plano focal, con enfoque al infinito. Para aprender a fotografiar, su consecuencia más útil es el campo de visión y la escala de la imagen. No se mide simplemente desde el vidrio delantero hasta el sensor, y un objetivo de doscientos milímetros no necesita un barril de veinte centímetros: los grupos internos cambian el diseño."/>
+<item layout="cards" anchor="fija-zoom" title="Focal fija o zoom">
+<item anchor="fija" title="Fija: 50 mm" text="Una distancia focal nominal."/>
+<item anchor="zoom" title="Zoom: 18–55 mm" text="Varias focales dentro de un rango."/>
+</item>
+<say lang="es-MX" title="Dos herramientas" text="[Una focal fija](#fija) te obliga a cambiar de posición o aceptar otro encuadre cuando necesitas incluir más o menos escena. [Un zoom](#zoom) te permite variar el encuadre desde un lugar. Ambos pueden ser de buena calidad. Un zoom de dieciocho a cincuenta y cinco tiene una relación cercana a tres aumentos entre sus extremos, pero ese número no describe su alcance absoluto: un setenta a doscientos encuadra mucho más cerrado aunque su relación también ronde tres."/>
+<item anchor="sensor" title="El sensor cambia el encuadre">
+| Mismo objetivo | Campo de visión |
+| :--- | :--- |
+| Sensor grande | Incluye más imagen |
+| Sensor pequeño | Registra una zona más reducida |
+| 50 mm en Nikon DX | Encuadre parecido a 75 mm en formato completo |
+</item>
+<say lang="es-MX" title="Recorte" text="[El tamaño del sensor](#sensor) explica por qué dos cámaras pueden encuadrar diferente con un cincuenta milímetros. En Nikon DX, el factor habitual de comparación es uno punto cinco. El encuadre de cincuenta se parece al de setenta y cinco en formato completo, desde el mismo punto. El objetivo sigue siendo de cincuenta milímetros: el sensor no cambia físicamente su distancia focal ni convierte una apertura uno punto ocho en otra abertura real."/>
+<item type="math" anchor="numero-f" title="La abertura relativa"><![CDATA[
+N = \frac{f}{D}
+]]></item>
+<say lang="es-MX" title="Número f" text="[El número f](#numero-f) es la distancia focal dividida entre el diámetro de la pupila de entrada. Con la misma focal, una entrada mayor produce un número menor. Por eso uno punto ocho representa una abertura relativa mayor que ocho. A igualdad de escena y demás ajustes, una abertura mayor deja llegar más luz por unidad de área al sensor. El número f es una relación, no el diámetro físico del agujero expresado en milímetros."/>
+<item layout="cards" anchor="maxima" title="Máxima abertura y ajuste elegido">
+<item anchor="limite" title="Máxima" text="La mayor abertura que permite el objetivo."/>
+<item anchor="elegida" title="Elegida" text="La abertura con la que haces la fotografía."/>
+</item>
+<say lang="es-MX" title="Límite frente a ajuste" text="[La apertura máxima](#limite) es un límite disponible, no una obligación de disparar siempre ahí. Un cincuenta uno punto ocho también puede permitir aperturas más cerradas. En un zoom de apertura variable, al pasar al extremo largo puede dejar de estar disponible la abertura máxima del extremo corto. Esa diferencia afecta exposición y opciones de desenfoque; no significa que el objetivo haya dejado de enfocar."/>
+<item layout="cards" anchor="perspectiva" title="Zoom y movimiento producen cambios distintos">
+<item anchor="quieta" title="Cámara quieta" text="Cambiar focal modifica el encuadre."/>
+<item anchor="cerca" title="Cámara más cerca" text="Cambia la relación de tamaños y distancias."/>
+</item>
+<say lang="es-MX" title="Perspectiva" text="[La perspectiva](#perspectiva) depende de dónde colocas la cámara. Si usas una focal corta y te acercas mucho a una cara para llenar el encuadre, la nariz puede verse mayor en relación con las orejas. Al alejarte y utilizar una focal más larga para recuperar el mismo encuadre, cambian esas proporciones. No atribuyas todo al lente: en esa comparación también cambiaste la distancia."/>
+<item layout="ol" anchor="practica" title="Lee y prueba tu objetivo">
+<item anchor="leer" title="Identifica las inscripciones" text="Focal, abertura máxima y diámetro de filtro."/>
+<item anchor="comparar" title="Compara focales sin moverte" text="Conserva sujeto, sensor y posición."/>
+<item anchor="abrir" title="Cambia la apertura" text="Comprueba exposición y profundidad de campo."/>
+</item>
+<say lang="es-MX" title="Ejercicio y transición" text="[Prueba tu propio lente](#practica): anota sus números y fotografía una misma escena desde un punto fijo en ambos extremos del zoom. Después cambia la apertura, compensando exposición según sea necesario. Observa qué cambia y qué permanece. Un número grande no vuelve profesional a un lente. En la tercera parte elegiremos herramientas para interiores, retratos, productos y sujetos lejanos, considerando también enfoque mínimo, luz, compatibilidad y presupuesto."/>
+<followup prompt="¿Cómo cambia un retrato al acercarme con un gran angular?"/>
+<followup prompt="¿Qué significan AF-S, AF-P y VR en un objetivo Nikon?"/>

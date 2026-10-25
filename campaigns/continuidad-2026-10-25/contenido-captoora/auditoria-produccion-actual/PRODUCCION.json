@@ -1,0 +1,110 @@
+{
+  "cuenta": "yare.btnc@gmail.com",
+  "saldo_antes": 760,
+  "saldo_despues": 640,
+  "consumo_medido": 120,
+  "piezas": [
+    {
+      "id": "2aeef430-be45-436a-acdb-aa8fe70f4073",
+      "tipo": "imagen",
+      "tema": "diafragma",
+      "modelo": "Nano Banana 2.1",
+      "estado": "generado_descargado_revisado",
+      "archivo": "apertura-nanobanana.jpg",
+      "bytes": 626471,
+      "ratio": "768x1376",
+      "coste_cotizado": 0,
+      "coste_real": 0,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/2aeef430-be45-436a-acdb-aa8fe70f4073"
+    },
+    {
+      "id": "b250519d-07f0-4d75-b078-c408d62e0697",
+      "tipo": "video",
+      "tema": "recuerdos otono",
+      "modelo": "Veo 3.1 Fast",
+      "estado": "mp4_descargado_verificado; montaje pendiente",
+      "duracion": 8,
+      "resolucion": "720p",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/b250519d-07f0-4d75-b078-c408d62e0697",
+      "archivo": "recursos-flow/otono-album.mp4",
+      "bytes": 1792623,
+      "sha256": "6c0ee7abb9627ab8b0255f2328a1b0a5ad21e52a0e1b83eb1bae2a593dc59758"
+    },
+    {
+      "id": "ad9c2d37-0333-41b7-9257-78a6338cf49e",
+      "tipo": "video",
+      "tema": "set Halloween",
+      "modelo": "Veo 3.1 Fast",
+      "estado": "mp4_descargado_verificado; montaje pendiente",
+      "duracion": 8,
+      "resolucion": "720p",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/ad9c2d37-0333-41b7-9257-78a6338cf49e",
+      "archivo": "recursos-flow/halloween-set.mp4",
+      "bytes": 1615713,
+      "sha256": "3abbb8cb918f3cef0faf54b9b42bea820cfbc7a7cd2b177fdf369741cfb1997d"
+    }
+  ],
+  "reels_finales": 0,
+  "canva": {
+    "id": "DAHY_0kHr8Y",
+    "estado": "generado; seis paginas y texto verificados; revision visual parcial",
+    "url": "https://www.canva.com/d/IAGeCaL5kFn_Hua",
+    "edit_url": "https://www.canva.com/d/Hjv8e32_CsP0JYa",
+    "paginas": 6,
+    "formato_real": "3:4",
+    "coste_real": null
+  },
+  "videos_adicionales_enviados": [
+    {
+      "tema": "Navidad",
+      "modelo": "Veo 3.1 Fast",
+      "duracion": 8,
+      "estado": "descargado_verificado; revision completa pendiente",
+      "id": "835c03ec-43cd-4f7c-a3ce-d2e266ca97a8",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/835c03ec-43cd-4f7c-a3ce-d2e266ca97a8",
+      "archivo": "recursos-flow/navidad-set.mp4",
+      "bytes": 1882688,
+      "sha256": "9f036ae81d9c8b9c03781046b435a79323a4ef3401d779eba9f135e4ea63c870",
+      "drive_id": "1RQNwN6Eyob-bgkQAGPlsP913tLO3E8PE",
+      "coste_recuperacion": 0,
+      "revision_tecnica": "8s192fotogramas decodificados; contiene pista de audio no revisada, silenciar antes de usar si no valida"
+    },
+    {
+      "tema": "Regalo fotografico",
+      "modelo": "Veo 3.1 Fast",
+      "duracion": 8,
+      "estado": "generado_web; archivo local no descargado",
+      "id": "ccd9c702-9e66-4e87-89a6-4ce5fe09a59c",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/ccd9c702-9e66-4e87-89a6-4ce5fe09a59c"
+    },
+    {
+      "tema": "Producto estrella",
+      "modelo": "Veo 3.1 Fast",
+      "duracion": 8,
+      "estado": "generado_web; archivo local no descargado",
+      "id": "cad105c9-1107-46b8-a430-8b60c86f5ae4",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/cad105c9-1107-46b8-a430-8b60c86f5ae4"
+    },
+    {
+      "tema": "Iluminacion",
+      "modelo": "Veo 3.1 Fast",
+      "duracion": 8,
+      "estado": "generado_web; archivo local no descargado",
+      "id": "c246c53f-f4a5-4da0-8101-27775198f7cd",
+      "coste_real": 20,
+      "url": "https://flow.google.com/u/3/project/c6ca78ae-d422-46a1-8162-ac733dd01a66/edit/c246c53f-f4a5-4da0-8101-27775198f7cd"
+    }
+  ],
+  "total_clips_generados": 6,
+  "automatizacion": {
+    "id": "producci-n-captoora-likinya",
+    "estado": "ACTIVE",
+    "frecuencia": "horaria",
+    "confirmacion": "Updated automation in the app."
+  }
+}

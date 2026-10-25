@@ -1,0 +1,183 @@
+{
+  "root": {
+    "id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v",
+    "url": "https://drive.google.com/drive/folders/1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+  },
+  "folders": {
+    "00_CONTROL_Y_CALENDARIO": {
+      "success": true,
+      "id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8",
+      "url": "https://drive.google.com/drive/folders/14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8",
+      "title": "00_CONTROL_Y_CALENDARIO",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "01_RECURSOS_ORIGINALES": {
+      "success": true,
+      "id": "1S9jrqBLQZ52YrQ3PwZ6qFvzqeSVnJwWM",
+      "url": "https://drive.google.com/drive/folders/1S9jrqBLQZ52YrQ3PwZ6qFvzqeSVnJwWM",
+      "title": "01_RECURSOS_ORIGINALES",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "02_PRUEBAS_Y_REVISION": {
+      "success": true,
+      "id": "1wrAl-uleKEwqK1Se6jzyvqSRtAP7pb8N",
+      "url": "https://drive.google.com/drive/folders/1wrAl-uleKEwqK1Se6jzyvqSRtAP7pb8N",
+      "title": "02_PRUEBAS_Y_REVISION",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "03_PROYECTOS_EN_EDICION": {
+      "success": true,
+      "id": "1r4Af_hFao5YBsnTswrTSL1IS0OK2MizJ",
+      "url": "https://drive.google.com/drive/folders/1r4Af_hFao5YBsnTswrTSL1IS0OK2MizJ",
+      "title": "03_PROYECTOS_EN_EDICION",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "04_LISTOS_PARA_PUBLICAR": {
+      "success": true,
+      "id": "1OimeLw2ah59UsFjz9LzysAHwFo737tra",
+      "url": "https://drive.google.com/drive/folders/1OimeLw2ah59UsFjz9LzysAHwFo737tra",
+      "title": "04_LISTOS_PARA_PUBLICAR",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "05_PUBLICADOS": {
+      "success": true,
+      "id": "1dbuC1fGGntSmj-8XDTtTT3KX7agyyrSK",
+      "url": "https://drive.google.com/drive/folders/1dbuC1fGGntSmj-8XDTtTT3KX7agyyrSK",
+      "title": "05_PUBLICADOS",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    },
+    "06_MARCA_Y_PLANTILLAS": {
+      "success": true,
+      "id": "1Lhuq4XL4tmZQkHsxdMefVsCTNb1tlvQu",
+      "url": "https://drive.google.com/drive/folders/1Lhuq4XL4tmZQkHsxdMefVsCTNb1tlvQu",
+      "title": "06_MARCA_Y_PLANTILLAS",
+      "parent_id": "1Ci8qttyyh5M6SCoSi60JKTumZg_LYB4v"
+    }
+  },
+  "uploads": [
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1yN-HPUdmNh4QZVT7ckIiujEcxF55bmTQ",
+      "title": "CPT-20261025-001_otono-album_9x16_Veo_v001_CRUDO.mp4",
+      "file_name": "CPT-20261025-001_otono-album_9x16_Veo_v001_CRUDO.mp4",
+      "mime_type": "video/mp4",
+      "url": "https://drive.google.com/file/d/1yN-HPUdmNh4QZVT7ckIiujEcxF55bmTQ/view?usp=drivesdk",
+      "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1yN-HPUdmNh4QZVT7ckIiujEcxF55bmTQ",
+        "title": "CPT-20261025-001_otono-album_9x16_Veo_v001_CRUDO.mp4",
+        "file_name": "CPT-20261025-001_otono-album_9x16_Veo_v001_CRUDO.mp4",
+        "mime_type": "video/mp4",
+        "url": "https://drive.google.com/file/d/1yN-HPUdmNh4QZVT7ckIiujEcxF55bmTQ/view?usp=drivesdk",
+        "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1WLRY3n-1BNUR40vnSmCY_z8hs_rMy6kI",
+      "title": "CPT-20261025-002_halloween-set_9x16_Veo_v001_CRUDO.mp4",
+      "file_name": "CPT-20261025-002_halloween-set_9x16_Veo_v001_CRUDO.mp4",
+      "mime_type": "video/mp4",
+      "url": "https://drive.google.com/file/d/1WLRY3n-1BNUR40vnSmCY_z8hs_rMy6kI/view?usp=drivesdk",
+      "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1WLRY3n-1BNUR40vnSmCY_z8hs_rMy6kI",
+        "title": "CPT-20261025-002_halloween-set_9x16_Veo_v001_CRUDO.mp4",
+        "file_name": "CPT-20261025-002_halloween-set_9x16_Veo_v001_CRUDO.mp4",
+        "mime_type": "video/mp4",
+        "url": "https://drive.google.com/file/d/1WLRY3n-1BNUR40vnSmCY_z8hs_rMy6kI/view?usp=drivesdk",
+        "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "17Ndi7JuvG1R0ucOx0OWW53pTiWcOsN4w",
+      "title": "CPT-20261025-003_diafragma_NanoBanana_v001_CRUDO.jpg",
+      "file_name": "CPT-20261025-003_diafragma_NanoBanana_v001_CRUDO.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/17Ndi7JuvG1R0ucOx0OWW53pTiWcOsN4w/view?usp=drivesdk",
+      "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "17Ndi7JuvG1R0ucOx0OWW53pTiWcOsN4w",
+        "title": "CPT-20261025-003_diafragma_NanoBanana_v001_CRUDO.jpg",
+        "file_name": "CPT-20261025-003_diafragma_NanoBanana_v001_CRUDO.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/17Ndi7JuvG1R0ucOx0OWW53pTiWcOsN4w/view?usp=drivesdk",
+        "parent_id": "15-U854ga31mmWVVFTlg0UTbgoXRNjpWK"
+      }
+    }
+  ],
+  "control": [
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1bP3VJDYSbWONOf9v8B9Op6iBRnebqFQm",
+      "title": "LEEME.md",
+      "file_name": "LEEME.md",
+      "mime_type": "text/markdown",
+      "url": "https://drive.google.com/file/d/1bP3VJDYSbWONOf9v8B9Op6iBRnebqFQm/view?usp=drivesdk",
+      "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1bP3VJDYSbWONOf9v8B9Op6iBRnebqFQm",
+        "title": "LEEME.md",
+        "file_name": "LEEME.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1bP3VJDYSbWONOf9v8B9Op6iBRnebqFQm/view?usp=drivesdk",
+        "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1u9Dg3SwYCK_pcmGprvMLp-L5R-AoSTeE",
+      "title": "INVENTARIO_INICIAL.csv",
+      "file_name": "INVENTARIO_INICIAL.csv",
+      "mime_type": "text/csv",
+      "url": "https://drive.google.com/file/d/1u9Dg3SwYCK_pcmGprvMLp-L5R-AoSTeE/view?usp=drivesdk",
+      "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1u9Dg3SwYCK_pcmGprvMLp-L5R-AoSTeE",
+        "title": "INVENTARIO_INICIAL.csv",
+        "file_name": "INVENTARIO_INICIAL.csv",
+        "mime_type": "text/csv",
+        "url": "https://drive.google.com/file/d/1u9Dg3SwYCK_pcmGprvMLp-L5R-AoSTeE/view?usp=drivesdk",
+        "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1HOo9KvlzeL4c97iQU8A_K7UVQ6bIMrAU",
+      "title": "REGISTRO_PUBLICACIONES.csv",
+      "file_name": "REGISTRO_PUBLICACIONES.csv",
+      "mime_type": "text/csv",
+      "url": "https://drive.google.com/file/d/1HOo9KvlzeL4c97iQU8A_K7UVQ6bIMrAU/view?usp=drivesdk",
+      "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1HOo9KvlzeL4c97iQU8A_K7UVQ6bIMrAU",
+        "title": "REGISTRO_PUBLICACIONES.csv",
+        "file_name": "REGISTRO_PUBLICACIONES.csv",
+        "mime_type": "text/csv",
+        "url": "https://drive.google.com/file/d/1HOo9KvlzeL4c97iQU8A_K7UVQ6bIMrAU/view?usp=drivesdk",
+        "parent_id": "14dtM1ne7tVHfFrStRrt98XxPtVHJjaW8"
+      }
+    }
+  ],
+  "verification": "Listado remoto confirma 7 carpetas, 3 recursos y 3 archivos de control; bytes de recursos coinciden.",
+  "total_media_bytes": 4034807
+}

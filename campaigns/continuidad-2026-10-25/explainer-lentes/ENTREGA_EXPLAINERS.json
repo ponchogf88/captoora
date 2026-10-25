@@ -1,0 +1,32 @@
+{
+  "status": "three_didactic_explainers_finalized",
+  "provider": "Scrimba Explain",
+  "voice": "provider narration es-MX; not ElevenLabs Liza",
+  "avatar_included": false,
+  "production_with_avatar_status": "pending",
+  "parts": [
+    {
+      "part": 1,
+      "url": "https://scrimba.com/explain/guide0eviajeb6?claim=OMITIDO&fullscreen=1",
+      "narration_estimated_ms": 222195
+    },
+    {
+      "part": 2,
+      "url": "https://scrimba.com/explain/guide08b79sr16?claim=OMITIDO&fullscreen=1",
+      "narration_estimated_ms": 240774
+    },
+    {
+      "part": 3,
+      "url": "https://scrimba.com/explain/guide04ptv45vb?claim=OMITIDO&fullscreen=1",
+      "narration_estimated_ms": 239224
+    }
+  ],
+  "sources": [
+    "https://www.nei.nih.gov/eye-health-information/healthy-vision/how-eyes-work",
+    "https://www.aoa.org/AOA/Documents/Healthy%20Eyes/For%20Teachers/How%20Your%20Eyes%20Work.pdf",
+    "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-maximum-aperture",
+    "https://www.nikonusa.com/learn-and-explore/c/tips-and-techniques/understanding-focal-length?generate=pdf"
+  ],
+  "published_to_social": false,
+  "mp4_export_verified": false
+}

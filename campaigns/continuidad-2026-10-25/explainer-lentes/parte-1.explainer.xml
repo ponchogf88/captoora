@@ -1,0 +1,72 @@
+<item anchor="intro" title="Ojo y cámara: cómo enfocar" text="Parte 1: luz, enfoque y nitidez comparando el ojo con una cámara."></item>
+<say lang="es-MX" title="Enfoque" text="[Enfocar](#intro) decide dónde aparece el detalle más nítido de la imagen."/>
+<item type="image" anchor="escena" title="Una escena, dos sistemas" prompt="A tabletop camera beside a human eye shown naturally in side profile, both oriented toward a small ceramic cup on a studio table, a second cup farther behind; a conceptual teaching scene rather than an anatomical cross-section. Wide balanced composition with eye on left, camera on right, cups in depth. Editorial educational illustration, warm ivory background, charcoal outlines and teal accents. No text, no words, no labels."></item>
+<say lang="es-MX" title="Luz y detalle" text="[El ojo y la cámara](#escena) reciben luz reflejada por los objetos. Para distinguir los bordes de una taza, esa luz debe formar una imagen suficientemente definida sobre una superficie sensible. Si enfocas la taza cercana, la del fondo puede verse suave. Esa elección de distancia es el punto de partida: enfocar no equivale a iluminar más ni a acercarte con el zoom."/>
+<item layout="cards" anchor="funciones" title="Tres preguntas diferentes">
+<item anchor="entrada" title="¿Cuánta luz entra?" text="Abertura y tiempo de exposición."/>
+<item anchor="foco" title="¿Qué distancia está enfocada?" text="Ajuste óptico para el sujeto."/>
+<item anchor="encuadre" title="¿Qué entra en la imagen?" text="Posición, focal y sensor."/>
+</item>
+<say lang="es-MX" title="Separar controles" text="[Estas tres preguntas](#funciones) evitan confusiones. [La entrada de luz](#entrada) influye en exposición; [el enfoque](#foco) selecciona una distancia; y [el encuadre](#encuadre) decide cuánto entorno incluyes. En una cámara, girar el zoom puede cambiar el encuadre, pero todavía necesitas comprobar el enfoque. Una foto brillante también puede estar desenfocada."/>
+<item anchor="comparacion" title="Ojo y cámara: semejanzas útiles">
+| Función | Ojo | Cámara |
+| :--- | :--- | :--- |
+| Desviar la luz | Córnea y cristalino | Elementos del objetivo |
+| Regular abertura | Iris y pupila | Diafragma y abertura |
+| Recibir imagen | Retina | Sensor |
+| Interpretar | Sistema visual | Procesado y observador |
+</item>
+<say lang="es-MX" title="Comparación" text="[La comparación](#comparacion) sirve por funciones, no porque ambas cosas sean idénticas. La córnea y el cristalino participan en el enfoque del ojo; el iris regula el tamaño de la pupila. En la cámara, el objetivo reúne elementos ópticos y el diafragma regula su abertura. La retina convierte luz en señales nerviosas; el sensor genera una señal electrónica. La visión humana incluye procesamiento cerebral y no se reduce a una fotografía fija."/>
+<item layout="cards" anchor="acomodacion" title="Cómo cambia el enfoque">
+<item anchor="ojo" title="Ojo" text="El cristalino cambia de forma: acomodación."/>
+<item anchor="camara" title="Objetivo" text="En muchos diseños se desplazan grupos ópticos."/>
+</item>
+<say lang="es-MX" title="Cambiar de distancia" text="[Para cambiar la distancia enfocada](#acomodacion), el ojo modifica la forma del cristalino mediante la acomodación. En [muchos objetivos](#camara), el ajuste mueve elementos o grupos de lentes. Los diseños varían: no todos extienden el barril por fuera. El autofocus decide un ajuste y acciona el mecanismo; en enfoque manual, tú controlas ese ajuste."/>
+<item type="animation" anchor="rayos" title="Del círculo borroso al punto"><![CDATA[
+export function build(manim) {
+ const {Scene,Line,Ellipse,Text,Create,FadeIn,Transform,Dot,TEAL,YELLOW,WHITE}=manim;
+ const scene=new Scene();
+ const lens=Ellipse({width:0.45,height:3.5,color:TEAL});
+ const sensor=Line([3,-2,0],[3,2,0],{color:WHITE});
+ const label=Text("Sensor",{color:WHITE}).scale(0.5).move_to([3,-2.5,0]);
+ const top=Line([-4,0,0],[0,1.4,0],{color:YELLOW});
+ const bottom=Line([-4,0,0],[0,-1.4,0],{color:YELLOW});
+ const out1=Line([0,1.4,0],[3,-0.7,0],{color:YELLOW});
+ const out2=Line([0,-1.4,0],[3,0.7,0],{color:YELLOW});
+ scene.play(Create(lens),Create(sensor),FadeIn(label),{run_time:1});
+ scene.play(Create(top),Create(bottom),{run_time:1});
+ scene.play(Create(out1),Create(out2),{run_time:1.5});
+ scene.wait(1);
+ scene.play(Transform(out1,Line([0,1.4,0],[3,0,0],{color:YELLOW})),Transform(out2,Line([0,-1.4,0],[3,0,0],{color:YELLOW})),{run_time:2});
+ scene.play(FadeIn(Dot({point:[3,0,0],radius:0.1,color:TEAL})),{run_time:1});
+ scene.wait(1);
+ return scene;
+}
+]]></item>
+<say lang="es-MX" title="Formar un punto" text="[Este esquema simplificado](#rayos) sigue la luz procedente de un solo punto del sujeto. Con un ajuste incorrecto, sus rayos llegan separados al sensor y forman una mancha. Al ajustar el enfoque, se reúnen cerca del mismo punto. La imagen completa reúne muchísimos puntos. Es una explicación geométrica idealizada: un objetivo real también tiene aberraciones, difracción y límites de resolución."/>
+<item layout="cards" anchor="profundidad" title="La zona que aceptamos como nítida">
+<item anchor="plano" title="Plano enfocado" text="La distancia ajustada tiene la mejor definición."/>
+<item anchor="zona" title="Profundidad de campo" text="Zona cercana y lejana con nitidez aceptable."/>
+</item>
+<say lang="es-MX" title="Profundidad de campo" text="[La profundidad de campo](#profundidad) explica por qué a veces parece enfocada solo una cara y otras veces un grupo completo. No todo queda igual de nítido: aceptamos cierta suavidad según tamaño de salida y distancia de observación. La apertura, la distancia al sujeto, la focal y el criterio de comparación afectan el resultado. Por eso cerrar el diafragma puede ayudar a un grupo, pero también exige compensar exposición."/>
+<item layout="cards" anchor="fallos" title="Tres causas de una foto suave">
+<item anchor="desenfoque" title="Enfoque equivocado" text="El detalle está nítido delante o detrás del sujeto."/>
+<item anchor="movimiento" title="Movimiento" text="Sujeto o cámara se desplazan durante la exposición."/>
+<item anchor="limites" title="Otros límites" text="Ruido, resolución, óptica o reducción excesiva."/>
+</item>
+<say lang="es-MX" title="Diagnóstico" text="[Una foto suave](#fallos) necesita diagnóstico. Si una oreja está definida pero el ojo no, revisa [dónde enfocaste](#desenfoque). Si los bordes muestran estelas, revisa [movimiento y velocidad](#movimiento). La estabilización puede reducir trepidación de la cámara, pero no congela a una persona que se mueve. También puedes perder detalle por ruido o procesado. Cambiar de lente sin identificar la causa puede dejar el mismo problema."/>
+<item layout="ol" anchor="ejercicio" title="Ejercicio: dos objetos a distinta distancia">
+<item anchor="paso1" title="Coloca dos objetos" text="Uno cerca y otro detrás, con buena luz."/>
+<item anchor="paso2" title="Enfoca el cercano" text="Haz una foto sin mover la cámara."/>
+<item anchor="paso3" title="Enfoca el lejano" text="Mantén encuadre y ajustes; cambia solo el enfoque."/>
+<item anchor="paso4" title="Compara detalles" text="Amplía bordes o letras en la pantalla."/>
+</item>
+<say lang="es-MX" title="Prueba controlada" text="[Haz esta prueba](#ejercicio) con dos tazas o dos productos. Apoya la cámara y usa luz suficiente. Enfoca el objeto cercano; después enfoca el lejano sin cambiar el zoom. [Compara los detalles](#paso4) ampliando la imagen, no únicamente en una pantalla pequeña. Si la cámara sigue eligiendo el fondo, selecciona un punto de enfoque sobre el sujeto o utiliza enfoque manual. No fuerces una distancia más cercana que la mínima permitida por el objetivo."/>
+<item layout="ul" anchor="cierre" title="Antes de cambiar de lente">
+<item anchor="c1" title="Elige el sujeto" text="Decide qué parte necesita detalle."/>
+<item anchor="c2" title="Comprueba el enfoque" text="Revisa la imagen ampliada."/>
+<item anchor="c3" title="Distingue causas" text="Enfoque, movimiento y profundidad de campo."/>
+</item>
+<say lang="es-MX" title="Resumen y siguiente parte" text="[Antes de cambiar de lente](#cierre), decide qué quieres nítido y comprueba dónde cayó el enfoque. El ojo y la cámara comparten funciones ópticas, pero funcionan de manera distinta. Tu objetivo no tiene que mantener todo enfocado a la vez. En la segunda parte vamos a leer sus números: milímetros, apertura y rango de zoom. Así separarás el ajuste de enfoque del tipo de encuadre que un objetivo puede ofrecer."/>
+<followup prompt="¿Qué significan 18–55 mm y f/3.5–5.6 en mi lente?"/>
+<followup prompt="¿Cómo elijo el punto de enfoque para retratos y grupos?"/>

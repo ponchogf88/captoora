@@ -1,0 +1,10 @@
+id,requisito,estado,destino,evidencia_o_pendiente
+F01,Fotografías familiares en orden cronológico definido por usuario,waiting,fotos.csv,Fotos aún no entregadas; no deducir fechas
+F02,Historia familiar enlazada con origen de CAPTOORA,implemented,GUION_BASE.md,Relatos concretos pendientes
+F03,Avatar femenino presenta y narra; voz Liza,requested,proyecto.json,No generar narración definitiva antes de fotos y revisión
+F04,Mostrar estudio y proyecto de influencers,implemented,proyecto.json,"Usar recursos reales, diferenciar futuro de disponible"
+F05,Invitación a unirse al proyecto,implemented,GUION_BASE.md,No publicar ni cobrar
+F06,1000 pesos: mínimo una sesión mensual; 3000: sesiones ilimitadas,implemented,proyecto.json,Periodicidad de pago y agenda por precisar
+F07,Beneficios para siempre,verified,proyecto.json,Respuesta directa del usuario: Forever
+F08,Cronología editable sin inventar parentescos o fechas,implemented,index.html y fotos.csv,Importar según orden manual
+G01,Rehacer gift cards con diseño y tipografía dinámica nativos Canva,requested,ESTADO_FRENTES.md,Borrador Canva anterior aún no aprobado; no afirmar rediseño terminado

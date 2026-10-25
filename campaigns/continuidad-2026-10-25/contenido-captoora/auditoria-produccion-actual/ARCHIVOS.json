@@ -1,0 +1,24 @@
+[
+  {
+    "id": "b250519d-07f0-4d75-b078-c408d62e0697",
+    "archivo": "entregables/contenido-captoora/auditoria-produccion-actual/recursos-flow/otono-album.mp4",
+    "bytes": 1792623,
+    "sha256": "6c0ee7abb9627ab8b0255f2328a1b0a5ad21e52a0e1b83eb1bae2a593dc59758",
+    "verificado_utc": "2026-10-25T08:50:46.888568+00:00",
+    "cuenta": "yare.btnc@gmail.com",
+    "consumo_adicional": 0,
+    "saldo_actual": null,
+    "estado": "mp4_descargado_verificado; montaje pendiente"
+  },
+  {
+    "id": "ad9c2d37-0333-41b7-9257-78a6338cf49e",
+    "archivo": "entregables/contenido-captoora/auditoria-produccion-actual/recursos-flow/halloween-set.mp4",
+    "bytes": 1615713,
+    "sha256": "3abbb8cb918f3cef0faf54b9b42bea820cfbc7a7cd2b177fdf369741cfb1997d",
+    "verificado_utc": "2026-10-25T08:50:46.900940+00:00",
+    "cuenta": "yare.btnc@gmail.com",
+    "consumo_adicional": 0,
+    "saldo_actual": null,
+    "estado": "mp4_descargado_verificado; montaje pendiente"
+  }
+]

@@ -1,0 +1,130 @@
+{
+  "root": "https://drive.google.com/drive/folders/1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT",
+  "folders": {
+    "01_LOGOS_ORIGINALES": {
+      "success": true,
+      "id": "1PU64IMiEtTAUlP5k3DsABe7-fn9vi042",
+      "url": "https://drive.google.com/drive/folders/1PU64IMiEtTAUlP5k3DsABe7-fn9vi042",
+      "title": "01_LOGOS_ORIGINALES",
+      "parent_id": "1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT"
+    },
+    "02_BANNERS_Y_PERFILES": {
+      "success": true,
+      "id": "1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27",
+      "url": "https://drive.google.com/drive/folders/1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27",
+      "title": "02_BANNERS_Y_PERFILES",
+      "parent_id": "1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT"
+    },
+    "03_COLORES_Y_TIPOGRAFIAS": {
+      "success": true,
+      "id": "1XbqN5jHvb4mXDeu_nsyvXKFrvcxgaGJX",
+      "url": "https://drive.google.com/drive/folders/1XbqN5jHvb4mXDeu_nsyvXKFrvcxgaGJX",
+      "title": "03_COLORES_Y_TIPOGRAFIAS",
+      "parent_id": "1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT"
+    },
+    "04_PLANTILLAS_EDITABLES_Y_LOTES": {
+      "success": true,
+      "id": "1vpT9-fb5UlNJAj_kPwC651QWjWZyK1ej",
+      "url": "https://drive.google.com/drive/folders/1vpT9-fb5UlNJAj_kPwC651QWjWZyK1ej",
+      "title": "04_PLANTILLAS_EDITABLES_Y_LOTES",
+      "parent_id": "1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT"
+    },
+    "00_GUIA_E_INVENTARIO": {
+      "success": true,
+      "id": "1arj_cFdSBlHJPUlfE-hjQVZ9pzAyro-Q",
+      "url": "https://drive.google.com/drive/folders/1arj_cFdSBlHJPUlfE-hjQVZ9pzAyro-Q",
+      "title": "00_GUIA_E_INVENTARIO",
+      "parent_id": "1wwaziHZxYlQbnu9eB5h6hs-14UABqNpT"
+    }
+  },
+  "files": [
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1tLUUt_ImaCWvu3s36RCiY5Z7U3B1AN0p",
+      "title": "CAPTOORA_STUDIO_original.png",
+      "file_name": "CAPTOORA_STUDIO_original.png",
+      "mime_type": "image/png",
+      "url": "https://drive.google.com/file/d/1tLUUt_ImaCWvu3s36RCiY5Z7U3B1AN0p/view?usp=drivesdk",
+      "parent_id": "1PU64IMiEtTAUlP5k3DsABe7-fn9vi042",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1tLUUt_ImaCWvu3s36RCiY5Z7U3B1AN0p",
+        "title": "CAPTOORA_STUDIO_original.png",
+        "file_name": "CAPTOORA_STUDIO_original.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1tLUUt_ImaCWvu3s36RCiY5Z7U3B1AN0p/view?usp=drivesdk",
+        "parent_id": "1PU64IMiEtTAUlP5k3DsABe7-fn9vi042"
+      },
+      "source": "/Users/user/Desktop/Projects/CAPTOORA.STUDIO/MARCA/CAPTOORA LOGO OFICIAL.png"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1XGFDEtE4tM3nH9dgWehuPJysEpXE2yXr",
+      "title": "CAPTOORA_SIGNATURE_original.png",
+      "file_name": "CAPTOORA_SIGNATURE_original.png",
+      "mime_type": "image/png",
+      "url": "https://drive.google.com/file/d/1XGFDEtE4tM3nH9dgWehuPJysEpXE2yXr/view?usp=drivesdk",
+      "parent_id": "1PU64IMiEtTAUlP5k3DsABe7-fn9vi042",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1XGFDEtE4tM3nH9dgWehuPJysEpXE2yXr",
+        "title": "CAPTOORA_SIGNATURE_original.png",
+        "file_name": "CAPTOORA_SIGNATURE_original.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1XGFDEtE4tM3nH9dgWehuPJysEpXE2yXr/view?usp=drivesdk",
+        "parent_id": "1PU64IMiEtTAUlP5k3DsABe7-fn9vi042"
+      },
+      "source": "/Users/user/Desktop/Projects/CAPTOORA.STUDIO/MARCA/Captoora Signature Logo.png"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1eCnXkOn0l52fWrZu0datYH5xjZt3wN3e",
+      "title": "CAPTOORA_banner_existente_1064x394.png",
+      "file_name": "CAPTOORA_banner_existente_1064x394.png",
+      "mime_type": "image/png",
+      "url": "https://drive.google.com/file/d/1eCnXkOn0l52fWrZu0datYH5xjZt3wN3e/view?usp=drivesdk",
+      "parent_id": "1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1eCnXkOn0l52fWrZu0datYH5xjZt3wN3e",
+        "title": "CAPTOORA_banner_existente_1064x394.png",
+        "file_name": "CAPTOORA_banner_existente_1064x394.png",
+        "mime_type": "image/png",
+        "url": "https://drive.google.com/file/d/1eCnXkOn0l52fWrZu0datYH5xjZt3wN3e/view?usp=drivesdk",
+        "parent_id": "1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27"
+      },
+      "source": "/Users/user/captoora/assets/banner.png"
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1akkQwWpLQUI3YNRpEE4ElzcydzL5Y3Jx",
+      "title": "CAPTOORA_perfil_existente_1080x1080.jpg",
+      "file_name": "CAPTOORA_perfil_existente_1080x1080.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1akkQwWpLQUI3YNRpEE4ElzcydzL5Y3Jx/view?usp=drivesdk",
+      "parent_id": "1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1akkQwWpLQUI3YNRpEE4ElzcydzL5Y3Jx",
+        "title": "CAPTOORA_perfil_existente_1080x1080.jpg",
+        "file_name": "CAPTOORA_perfil_existente_1080x1080.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1akkQwWpLQUI3YNRpEE4ElzcydzL5Y3Jx/view?usp=drivesdk",
+        "parent_id": "1MhrtjsvXBsADrLG1nsAUW96PvYiLWd27"
+      },
+      "source": "/Users/user/captoora/assets/google_business_kit/01_google_profile_logo_1080x1080.jpg"
+    }
+  ],
+  "brand_kit_id": "kAHVO-u6csA",
+  "brand_template_id": "EAHVQWRq5bA",
+  "dataset": {},
+  "quota": null
+}

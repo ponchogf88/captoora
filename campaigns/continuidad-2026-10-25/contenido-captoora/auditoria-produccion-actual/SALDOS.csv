@@ -1,0 +1,24 @@
+servicio,correo,plan,saldo,unidad,reinicio,estado,evidencia
+HeyGen,l.jagf87@gmail.com,Free,0,creditos web,,verificado,Web saldo 0; conector confirma Free y saldo null
+Google Flow,lic.jagf87@gmail.com,Pro,1050,creditos Flow,,verificado,Panel de cuenta
+Google Flow,alfonsogf.88@gmail.com,Pro,1050,creditos Flow,,verificado,Panel muestra alfonsogf88@gmail.com; misma cuenta Gmail con puntos omitidos
+Google Flow,yare.btnc@gmail.com,Pro,640,creditos Flow,,verificado,760 antes; 740 tras primer envio;720 tras segundo;640 tras cuatro adicionales. Consumo medido120.
+ElevenLabs,lic.jagf87@gmail.com,Starter,33455,creditos ElevenCreative,2026-11-04,verificado,Total 34772; usados 1317. No es el correo declarado para Likinya; no se genero audio
+ElevenLabs,l.jagf87@gmail.com,Free,10000,creditos ElevenCreative,,acceso_verificado,Login Google seleccionado; Jesus Workspace Free 10000; contrastar perfil exacto y recursos Liza antes de producir
+Picsart web,trevinoglauber@gmail.com,Pro declarado; facturacion sin detalle,500,creditos web,,parcial,Sesion glaubertrevio/Glauber Trevino; correo oculto por interfaz y facturacion no muestra plan
+Picsart conector,,,5,creditos conector,2026-10-28T17:29:21.304Z,verificado_saldo,No equiparar con 500 de la web; identidad de conector pendiente
+Canva web,lic.jagf87@gmail.com,Negocios equipo agradecimiento sincero,,cuota IA,,parcial,Equipo Negocios 2 miembros; no saldo numerico obtenido
+Canva Business,trevinoglauber@gmail.com,Business declarado,,cuota IA,,pendiente,Conector Captoora disponible; no auditoria de saldo Business
+Grok / Grok Bot,lic.jagf87@gmail.com,Premium observado,6,porcentaje semanal restante,2026-10-29 20:57 local mostrado,verificado_cuota,"94% usado; Bot83 Build7 Voz2 Chat1 Automatizaciones1. Adicional $0; recarga automatica $5 activa, no modificada ni utilizada"
+ChatGPT / Codex,jgutierrezf@uanl.edu.mx,Plus,60,porcentaje ventana 5h,1792924329,verificado_cuota,Semanal 63% restante; reset1793382709; compartido entre tareas
+Perplexity Pro,lic.jagf87@gmail.com,Pro declarado,,cuota,,consulta_sin_resultado,Panel de configuracion vacio incluso en captura; no saldo obtenido
+CapCut Pro,l.jagf87@gmail.com,Pro declarado,,creditos IA,,sin_herramienta_saldo,Plugin disponible no expone consulta saldo; no browser por regla del plugin
+Meta AI,l.jagf87@gmail.com,Premium declarado,,cuota,,parcial,Pagina accesible; identidad/plan/saldo no visibles
+Meta AI,alfonsogf.88@gmail.com,Premium declarado,,cuota,,pendiente,Segunda cuenta no verificada
+Copilot Extend,jgutierrezf@uanl.edu.mx,Declarado,,cuota,,pendiente,No consulta actual
+Notion EDU,jgutierrezf@uanl.edu.mx,EDU declarado,,cuota IA,,pendiente,No consulta actual; no equivale EDU a IA ilimitada
+YouTube Premium,trevinoglauber@gmail.com,Premium declarado,,no saldo generacion confirmado,,pendiente,No asignar creditos de video a Premium
+Spotify Premium,lic.jagf87@gmail.com,Premium declarado,,no saldo generacion confirmado,,pendiente,Suscripcion de escucha; no licencia comercial musical asumida
+Ollama,agf07@hotmail.com,Local,,sin creditos web,,parcial,Binario localizado; ollama list no devolvio lista dentro de primer segundo
+Evoto,,Prueba declarada,,creditos retoque,,bloqueado_acceso,CUA no pudo adquirir app por nombre ni bundle; no repetir sin cambio
+GitHub,,,,no cuota de generacion,,acceso_verificado,gh api user: ponchogf88; plan null

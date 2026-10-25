@@ -1,0 +1,9 @@
+id,requisito,fuente,estado,destino,evidencia_pendiente
+E01,Continuar evento de gift cards Instax,Usuario confirma 2026-10-25,verified,PLAN_OPERATIVO.md,
+E02,Recuperar contexto de Event Planner,Usuario y conversación Lalo Eventos en Grok,verified,CONTEXTO.json,"Solo conversación visible, no archivos del bot"
+E03,Conseguir más película Instax Mini,"Lalo Eventos, conversación visible",requested,CHECKLIST.csv,Cantidad y presupuesto sin confirmar; no comprado
+E04,Confirmar cámara que llevará sobrina,"Lalo Eventos, conversación visible",requested,CHECKLIST.csv,"Modelo, compatibilidad y responsable por confirmar"
+E05,Calendly correcto para sesiones del evento,"Lalo Eventos, conversación visible",requested,CHECKLIST.csv,Bot reporta que existe solo express-influencers; no verificado en Calendly
+E06,Organizar próximos cinco días sin depender de cuota Grok,Petición humana,implemented,PLAN_OPERATIVO.md,Fechas absolutas pendientes
+E07,No condicionar evento a upgrade Dots,Consulta humana + documentación oficial,verified,PLAN_OPERATIVO.md,Elegibilidad no garantiza despliegue inmediato
+E08,"Confirmar fecha, hora y sede",Necesario para logística,requested,CONTEXTO.json,Respuesta confirmó evento pero no fecha/hora/sede

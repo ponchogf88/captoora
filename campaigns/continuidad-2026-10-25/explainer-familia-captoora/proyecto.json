@@ -1,0 +1,65 @@
+{
+  "title": "De nuestra historia a CAPTOORA",
+  "status": "preproduccion",
+  "format": "16:9",
+  "presenter": "avatar femenino CAPTOORA (Likinya)",
+  "voice": "Liza - Natural Mexican Creator",
+  "family_photos": [],
+  "ordering": "manual_user_order_only",
+  "chapters": [
+    {
+      "id": "recuerdos",
+      "title": "Nuestra historia",
+      "duration_hint_seconds": 60,
+      "notes": "Fotos familiares según orden proporcionado; duración ajustable al número de fotos."
+    },
+    {
+      "id": "puente",
+      "title": "Lo que una fotografía conserva",
+      "duration_hint_seconds": 20
+    },
+    {
+      "id": "estudio",
+      "title": "Esto es CAPTOORA",
+      "duration_hint_seconds": 40
+    },
+    {
+      "id": "futuro",
+      "title": "Lo que queremos construir",
+      "duration_hint_seconds": 30,
+      "notes": "Proyecto de influencers y servicios futuros como propuesta, no disponibles por inferencia."
+    },
+    {
+      "id": "invitacion",
+      "title": "Te invitamos a formar parte",
+      "duration_hint_seconds": 35
+    }
+  ],
+  "offer": {
+    "currency": "MXN",
+    "benefit_term": "forever",
+    "term_source": "Respuesta humana Forever",
+    "payment_frequency": null,
+    "packages": [
+      {
+        "contribution": 1000,
+        "benefit": "al menos una sesión por mes",
+        "per_month": 1
+      },
+      {
+        "contribution": 3000,
+        "benefit": "sesiones ilimitadas",
+        "per_month": null
+      }
+    ],
+    "pending": [
+      "Aportación única o pagos periódicos",
+      "Titularidad individual o familiar",
+      "Cómo se reservan horarios",
+      "Alcance de cada sesión",
+      "Cómo opera la promesa permanente"
+    ],
+    "include_final_voiceover": false
+  },
+  "publishing_authorized": false
+}

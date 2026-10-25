@@ -1,0 +1,73 @@
+{
+  "designs": [
+    {
+      "stem": "01-rose",
+      "id": "DAHY4ZKtXsc",
+      "title": "FARMASI Gift Card · Rosa · 9:16 v2",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/ogz4Gsn0oDOkEdi",
+        "view_url": "https://www.canva.com/d/74xjMXVZQ_L4g3p"
+      },
+      "created_at": 1792805213,
+      "updated_at": 1792805213,
+      "page_count": 1
+    },
+    {
+      "stem": "02-noir",
+      "id": "DAHY4ZqLYNM",
+      "title": "FARMASI Gift Card · Negra · 9:16 v2",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/Y0SMReF9PEerOKl",
+        "view_url": "https://www.canva.com/d/6wR11H9Ss5cE1f3"
+      },
+      "created_at": 1792805219,
+      "updated_at": 1792805219,
+      "page_count": 1
+    },
+    {
+      "stem": "03-nude",
+      "id": "DAHY4SD3U5M",
+      "title": "FARMASI Gift Card · Nude · 9:16 v2",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/J6U-DD0sJLOOcAX",
+        "view_url": "https://www.canva.com/d/bTGnngaVE5JL22h"
+      },
+      "created_at": 1792805224,
+      "updated_at": 1792805224,
+      "page_count": 1
+    },
+    {
+      "stem": "04-salvia",
+      "id": "DAHY4T5Z2PU",
+      "title": "FARMASI Gift Card · Salvia · 9:16 v2",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/Z7vumr3ISL13qEq",
+        "view_url": "https://www.canva.com/d/u2m4KZhKx4mDKb_"
+      },
+      "created_at": 1792805228,
+      "updated_at": 1792805228,
+      "page_count": 1
+    },
+    {
+      "stem": "05-peach",
+      "id": "DAHY4RyS7PQ",
+      "title": "FARMASI Gift Card · Peach Perfect · alternativa · 9:16 v2",
+      "urls": {
+        "edit_url": "https://www.canva.com/d/FZkqjh20MIQ33uR",
+        "view_url": "https://www.canva.com/d/AeH-Eymfhkg26QG"
+      },
+      "created_at": 1792805233,
+      "updated_at": 1792805233,
+      "page_count": 1
+    }
+  ],
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "status": "imported_successfully",
+  "published": false,
+  "farmasi_logo_source": "https://file.brd.so/j5oUcSLQZ9FXdCcCkNN53QsVaogH.pdf",
+  "captoora_logo_variants": "background removal and monochrome variants generated from local official logo",
+  "credits_consumed": null
+}

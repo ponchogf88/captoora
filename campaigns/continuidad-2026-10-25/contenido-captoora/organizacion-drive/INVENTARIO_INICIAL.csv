@@ -1,0 +1,9 @@
+id,tema,tipo,estado,url,bytes,id_proveedor,notas
+CPT-20261025-001,Otoño,video IA,CRUDO,https://drive.google.com/file/d/1yN-HPUdmNh4QZVT7ckIiujEcxF55bmTQ/view,1792623,b250519d-07f0-4d75-b078-c408d62e0697,IA ilustrativa; no portafolio real
+CPT-20261025-002,Halloween,video IA,CRUDO,https://drive.google.com/file/d/1WLRY3n-1BNUR40vnSmCY_z8hs_rMy6kI/view,1615713,ad9c2d37-0333-41b7-9257-78a6338cf49e,"Set conceptual, no disponibilidad real acreditada"
+CPT-20261025-003,Diafragma,imagen IA,CRUDO,https://drive.google.com/file/d/17Ndi7JuvG1R0ucOx0OWW53pTiWcOsN4w/view,626471,2aeef430-be45-436a-acdb-aa8fe70f4073,Ilustración educativa
+REF-OBT-P1,Obturación,piloto,PRUEBA,https://drive.google.com/file/d/1H6YFsQMEWVG0qzQ5ud3J3mWFqpnp7Rtp/view,1514175,,Ya existente; no movido ni aprobado final
+REF-OBT-P2,Obturación,piloto,PRUEBA,https://drive.google.com/file/d/1WCA6fHvDTh4SQowvh8ExueEz1bxdII5u/view,1583056,,Ya existente; no movido ni aprobado final
+REF-OBT-AUDIO,Obturación,audio,MAESTRO_POR_REVALIDAR,https://drive.google.com/file/d/1NY634fwo3QHARUhnMUt70q7mYC8fgodi/view,370948,,Ya existente; identidad de voz a revalidar para nueva producción
+REF-OBT-DIAG,Obturación,diagrama,RECURSO,https://drive.google.com/file/d/1EbYb_G50syxWQ3rEqi_Y7A--XGjGDrE9/view,91471,,Existente; no movido
+REF-CANVA-LENTES,Lentes,carrusel editable,BORRADOR_REVISION_PARCIAL,https://www.canva.com/d/Hjv8e32_CsP0JYa,,DAHY_0kHr8Y,6 páginas; formato real3:4; fuente editable permanece Canva

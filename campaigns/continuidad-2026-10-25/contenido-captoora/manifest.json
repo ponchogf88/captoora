@@ -1,0 +1,55 @@
+{
+  "clips": [
+    {
+      "key": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52:0.000:3.690:fit1080-v1",
+      "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/estudio-apoyo-01.mp4",
+      "source": "/Users/user/captoora/assets/media/studio-vertical.mp4.b64",
+      "source_sha256": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52",
+      "start_seconds": 0.0,
+      "duration_seconds_target": 3.69,
+      "bytes": 1422292,
+      "sha256": "c9be16617db12dbbc0dcced254e1d81ae548376c5d49083debdd339f19f4aadd",
+      "status": "rejected_for_educational_pilot",
+      "kind": "b_roll_without_voice",
+      "visual_review": {
+        "sample": "clips/revision-01.jpg",
+        "scope": "single_frame_at_1_second",
+        "reason": "Marca TikTok incrustada; material sin demostración técnica del piloto. Clips 02/03 mayormente luna con poco detalle."
+      }
+    },
+    {
+      "key": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52:3.690:3.690:fit1080-v1",
+      "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/estudio-apoyo-02.mp4",
+      "source": "/Users/user/captoora/assets/media/studio-vertical.mp4.b64",
+      "source_sha256": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52",
+      "start_seconds": 3.69,
+      "duration_seconds_target": 3.69,
+      "bytes": 912440,
+      "sha256": "0afbe831a1a5dc8228c05f2bda6825190df4e8708f758b601034815037d2bc85",
+      "status": "rejected_for_educational_pilot",
+      "kind": "b_roll_without_voice",
+      "visual_review": {
+        "sample": "clips/revision-02.jpg",
+        "scope": "single_frame_at_1_second",
+        "reason": "Marca TikTok incrustada; material sin demostración técnica del piloto. Clips 02/03 mayormente luna con poco detalle."
+      }
+    },
+    {
+      "key": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52:7.380:3.690:fit1080-v1",
+      "path": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/contenido-captoora/clips/estudio-apoyo-03.mp4",
+      "source": "/Users/user/captoora/assets/media/studio-vertical.mp4.b64",
+      "source_sha256": "4c826f444f8c0e31d2d7025940545d86b2664bea209d42713bd2a31c9e6f6d52",
+      "start_seconds": 7.38,
+      "duration_seconds_target": 3.69,
+      "bytes": 787294,
+      "sha256": "33b9cc4c07b1c06d71e4d4cd72dba3be459e2cba730bde85b734647d0a12fd27",
+      "status": "rejected_for_educational_pilot",
+      "kind": "b_roll_without_voice",
+      "visual_review": {
+        "sample": "clips/revision-03.jpg",
+        "scope": "single_frame_at_1_second",
+        "reason": "Marca TikTok incrustada; material sin demostración técnica del piloto. Clips 02/03 mayormente luna con poco detalle."
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> Continuidad actualizada25oct2026: leer primero [CONTINUAR_EN_OTRA_COMPUTADORA.md](CONTINUAR_EN_OTRA_COMPUTADORA.md). Las fechas y direcciones de inauguración que siguen son históricas; consultar el expediente y js/config.js para el estado vigente.
+
 # Captoora — README para agentes
 
 Este archivo es el mapa del repo. Si llegas nuevo: lee `IDENTITY.md` primero, luego esto.

@@ -1,0 +1,138 @@
+{
+  "title": "Del ojo humano al lente de tu cámara",
+  "status": "estructura_tres_partes_preparada_no_renderizada",
+  "camera_context": "Nikon D3500 declarada por usuario; objetivos que posee pendientes de comprobar",
+  "presenter": "avatar femenino CAPTOORA",
+  "voice": "Liza - Natural Mexican Creator",
+  "requirements": [
+    {
+      "item": "Comparar enfoque del ojo y cámara",
+      "status": "implemented",
+      "output": "GUION_BASE.md"
+    },
+    {
+      "item": "Explicar números de lentes y situaciones de uso",
+      "status": "implemented",
+      "output": "GUION_BASE.md"
+    },
+    {
+      "item": "Animaciones y ejemplos visuales comparables",
+      "status": "requested"
+    },
+    {
+      "item": "Render final con voz y avatar",
+      "status": "requested"
+    }
+  ],
+  "chapters": [
+    "Analogía ojo y cámara con límites",
+    "Distancia focal en mm",
+    "Zoom y focal fija",
+    "Ángulo de visión y tamaño del sensor",
+    "Apertura y enfoque",
+    "Ejemplos por situación"
+  ],
+  "pending": [
+    "Comprobar qué lentes tiene el usuario",
+    "Seleccionar ejemplos autorizados y equivalentes",
+    "Producir audio y montaje"
+  ],
+  "delivery": {
+    "videos": 3,
+    "target_seconds_each": 240,
+    "target_total_seconds": 720,
+    "user_requested_total_range_minutes": [
+      10,
+      15
+    ]
+  },
+  "parts": [
+    {
+      "id": 1,
+      "title": "Tu ojo y la cámara: cómo funciona el enfoque",
+      "seconds": 240,
+      "sections": [
+        {
+          "seconds": 30,
+          "topic": "Por qué una foto puede salir desenfocada"
+        },
+        {
+          "seconds": 70,
+          "topic": "Pupila, iris, cristalino y retina frente a diafragma, óptica y sensor"
+        },
+        {
+          "seconds": 80,
+          "topic": "Plano de enfoque, sujeto y distancia; ojo humano acomoda, óptica desplaza grupos"
+        },
+        {
+          "seconds": 40,
+          "topic": "Ejercicio: enfocar un ojo y después un producto"
+        },
+        {
+          "seconds": 20,
+          "topic": "Resumen y enlace a parte 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "18–55 mm, 50 mm y f/1.8: entender tu lente",
+      "seconds": 240,
+      "sections": [
+        {
+          "seconds": 25,
+          "topic": "Cómo leer las inscripciones del objetivo"
+        },
+        {
+          "seconds": 75,
+          "topic": "Milímetros y campo de visión: comparación desde el mismo punto"
+        },
+        {
+          "seconds": 50,
+          "topic": "Zoom frente a focal fija; tamaño del sensor"
+        },
+        {
+          "seconds": 65,
+          "topic": "Apertura máxima, número f y profundidad de campo"
+        },
+        {
+          "seconds": 25,
+          "topic": "Ejercicio y resumen"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Qué lente usar para cada fotografía",
+      "seconds": 240,
+      "sections": [
+        {
+          "seconds": 20,
+          "topic": "El resultado y el espacio determinan la elección"
+        },
+        {
+          "seconds": 45,
+          "topic": "Interiores y grupos: campo amplio y distancia"
+        },
+        {
+          "seconds": 45,
+          "topic": "Retratos: encuadre, distancia y perspectiva"
+        },
+        {
+          "seconds": 45,
+          "topic": "Producto: enfoque cercano, detalle y luz"
+        },
+        {
+          "seconds": 40,
+          "topic": "Sujetos lejanos y movimiento: focal y velocidad"
+        },
+        {
+          "seconds": 45,
+          "topic": "Ejercicio comparativo y tabla final"
+        }
+      ]
+    }
+  ],
+  "didactic_version": "three explainers finalized; see ENTREGA_EXPLAINERS.json",
+  "avatar_final": "pending; no Liza replacement in brand production"
+}
