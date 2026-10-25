@@ -1,0 +1,48 @@
+0	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/0257.jpg
+1	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/03_barrio_antiguo_bookstore.jpg
+2	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/04_fundidora_santa_lucia.jpg
+3	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/08_balcony_sunset_linen.jpg
+4	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/AMIGA_CORE.jpg
+5	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/C04_orilla_golden_hour.jpg
+6	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/C06_muelle_atardecer.jpg
+7	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/C07_pies_en_agua.jpg
+8	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/Camera lens.jpg
+9	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/Camera.jpg
+10	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/Camera_1.jpg
+11	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/Camera_Floating.PNG
+12	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/DSC_1024.JPG
+13	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/DSC_1063.JPG
+14	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G01_lobby_pantsuit.jpg
+15	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G03_profile_side.jpg
+16	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G04_seated_office.jpg
+17	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G05_diploma_steps.jpg
+18	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G06_lookback_corridor.jpg
+19	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G07_campus_walk_hair.jpg
+20	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/G08_law_library.jpg
+21	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/IG01b_lentes_alt.jpg
+22	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/IG02_bebidas_mesa.jpg
+23	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/IG02b_mesa_alt.jpg
+24	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/IG04_detalle_vaso.jpg
+25	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J01_lobby_ponytail.jpg
+26	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J02_walk_loose.jpg
+27	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J03_profile_ponytail.jpg
+28	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J04_seated_loose.jpg
+29	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J06_lookback_loose.jpg
+30	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J07_library_ponytail.jpg
+31	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/J08_campus_loose.jpg
+32	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/JT01_overshoulder_ponytail.jpg
+33	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/JT03_smile_ponytail.jpg
+34	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/PUMPKIN_PATCH_MKT_0926_01.jpg
+35	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/PUMPKIN_PATCH_MKT_0926_02.jpg
+36	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/PUMPKIN_PATCH_MKT_0926_03.jpg
+37	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/PUMPKIN_PATCH_MKT_0926_04.jpg
+38	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/S03_campus_fullbody (1).jpg
+39	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/S03_campus_fullbody.jpg
+40	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/T01_blazer_overshoulder.jpg
+41	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/T02_lowbun_gaze.jpg
+42	/Users/user/Desktop/Projects/SESSIONS PORTAFOLIO/T03_threequarter_smile.jpg
+43	/Users/user/Desktop/Projects/CAPTOORA.STUDIO/ENTREGAS_CLIENTES/FARMASI_SESION_10_OCT/01_Alta_Resolucion_Cliente/FARMASI_CPT_0550_FULLFRAME_HQ.jpg
+44	/Users/user/Desktop/Projects/CAPTOORA.STUDIO/ENTREGAS_CLIENTES/FARMASI_SESION_10_OCT/01_Alta_Resolucion_Cliente/FARMASI_CPT_0550_HQ.jpg
+45	/Users/user/Desktop/Projects/CAPTOORA.STUDIO/ENTREGAS_CLIENTES/FARMASI_SESION_10_OCT/01_Alta_Resolucion_Cliente/FARMASI_CPT_0580_FULLFRAME_HQ.jpg
+46	/Users/user/Desktop/Projects/CAPTOORA.STUDIO/ENTREGAS_CLIENTES/FARMASI_SESION_10_OCT/01_Alta_Resolucion_Cliente/FARMASI_CPT_0580_HQ.jpg
+47	/Users/user/Desktop/Projects/CAPTOORA.STUDIO/ENTREGAS_CLIENTES/FARMASI_SESION_10_OCT/01_Alta_Resolucion_Cliente/FARMASI_CPT_0630_FULLFRAME_HQ.jpg
