@@ -1,3 +1,5 @@
+> CORRECCIÓN DE AUDITORÍA · 25 octubre: sí existe el plan maestro original FARMASI del 31 octubre, con convocatoria de 25 y programa 08:30–13:45. Leer primero [recuperación y fuentes originales](RECUPERACION_FARMASI_Y_LALO.md). Las frases siguientes que trataban fecha/aforo/programa de Farmasi como ausentes quedan superadas por esa evidencia documental; siguen pendientes las confirmaciones de ejecución, no repetir el relato al titular.
+
 # EVT-002 · visita coro/Farmasi · preparación para 31 octubre 2026
 Estado: preparación. No convocatoria enviada ni agenda confirmada. No confundir con EVT-001 Instax.
 Objetivo comercial propuesto: aprovechar la visita ya prevista para obtener consultas calificadas de sesiones pagadas, sin aumentar regalos ni improvisar compromisos.
