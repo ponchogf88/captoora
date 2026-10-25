@@ -24,3 +24,6 @@ GitHub conserva la documentación; no sincroniza automáticamente chats, CSV de 
 ## Prioridad urgente · escuelas y temporada
 - [Estrategia, ofertas candidatas y mensajes](ESCUELAS_Y_TEMPORADA_2026.md).
 - [Seis escuelas, canales y siguientes acciones](ESCUELAS_CONTACTO_2026.csv). Tres borradores Gmail creados, ninguno enviado. Sets no montados; hojas de arce disponibles declaradas por titular. Falta confirmar remitente, agenda y condiciones antes de salida.
+
+## Coordinación de eventos vigente
+[Lalo Events](../lalo-events/README.md) organiza el evento Instax y la visita coro/Farmasi sin asumir que son el mismo. Nueva instrucción: no producir ni ofrecer más gift cards; revisar únicamente compromisos existentes. Prioridad a servicios pagados y control de costos.
