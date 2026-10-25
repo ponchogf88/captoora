@@ -1,3 +1,5 @@
+> ACLARACIÓN VIGENTE DEL TITULAR: Farmasi, “chicas del coro” e Instax son UN SOLO evento. La sobrina entregará una instantánea/gift card a cada una de las 25 invitadas al terminar su sesión. Conservar esas 25 previstas; no añadir nuevas. Leer primero [evento único confirmado](EVENTO_UNICO_FARMASI_CONFIRMADO.md). Toda separación provisional posterior en este archivo queda superada.
+
 > CORRECCIÓN DE AUDITORÍA · 25 octubre: sí existe el plan maestro original FARMASI del 31 octubre, con convocatoria de 25 y programa 08:30–13:45. Leer primero [recuperación y fuentes originales](RECUPERACION_FARMASI_Y_LALO.md). Las frases siguientes que trataban fecha/aforo/programa de Farmasi como ausentes quedan superadas por esa evidencia documental; siguen pendientes las confirmaciones de ejecución, no repetir el relato al titular.
 
 # Lalo Events · coordinación operativa de eventos CAPTOORA
