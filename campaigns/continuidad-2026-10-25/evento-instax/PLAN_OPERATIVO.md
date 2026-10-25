@@ -1,3 +1,5 @@
+> Actualización del titular: no crear ni ofrecer nuevas gift cards. Este plan se conserva como antecedente; sus tareas de diseñar nuevas tarjetas quedan retiradas. No cancelar obligaciones ya aceptadas por inferencia. Continuar en [Lalo Events](../../lalo-events/README.md), donde se controla agenda, materiales, costos y ventas.
+
 # Evento de gift cards Instax: continuidad operativa
 
 Evento confirmado por usuario. Fecha, hora, sede y aforo aún no constan. Este documento conserva lo recuperado de Lalo Eventos; no afirma que su checklist esté resuelto ni que otros archivos hayan sido importados.
