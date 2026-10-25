@@ -1,3 +1,9 @@
+# AVISO HISTÓRICO
+
+> Este archivo documenta la etapa de inauguración de septiembre de 2026. La dirección, el sitio
+> y el estado comercial vigentes están en `docs/ESTADO_ACTUAL.md`; no reutilizar los datos
+> históricos de este documento en publicaciones.
+
 # Captoora
 
 Estudio fotográfico en Monterrey. Momentos que permanecen.

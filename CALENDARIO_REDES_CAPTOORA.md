@@ -1,3 +1,8 @@
+# AVISO HISTÓRICO
+
+> Calendario conservado como referencia. Antes de reutilizar una pieza, validar oferta, anticipo,
+> vigencia, disponibilidad, dirección y enlace contra `docs/ESTADO_ACTUAL.md` y `js/config.js`.
+
 # 🗓️ Calendario Editorial de Redes Sociales | Captoora Studio
 *Estrategia Semanal de Contenido (Lunes a Domingo)*
 

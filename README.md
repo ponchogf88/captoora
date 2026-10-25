@@ -2,8 +2,29 @@
 
 Estudio fotográfico en Monterrey. *Momentos que permanecen.*
 
-**Agentes: empiecen por [`IDENTITY.md`](IDENTITY.md) y luego [`AGENTS.md`](AGENTS.md).**
+> **Estado vigente:** consulta primero [`docs/ESTADO_ACTUAL.md`](docs/ESTADO_ACTUAL.md).
+> Los documentos con fechas anteriores se conservan como historial y no sustituyen esa fuente.
 
-- Staging: https://ponchogf88.github.io/captoora/
-- WhatsApp: https://wa.me/528140050088
-- Inauguración: 23 septiembre 2026, 19:00 — Colinas de San Jerónimo 11
+## Accesos operativos
+
+- Sitio vigente verificado: <https://captoora-site.vercel.app>
+- WhatsApp Business: <https://wa.me/528140050088>
+- Dirección: Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L., CP 64630
+- Atención: con cita
+
+El antiguo sitio `ponchogf88.github.io/captoora` devuelve 404 y no debe utilizarse en
+bios, anuncios ni mensajes comerciales.
+
+## Fuente única
+
+- [`docs/ESTADO_ACTUAL.md`](docs/ESTADO_ACTUAL.md): datos comerciales y operativos vigentes.
+- [`docs/MAPA_REPOSITORIO.md`](docs/MAPA_REPOSITORIO.md): qué carpeta manda y cuáles son respaldos.
+- [`docs/DECISIONES_PENDIENTES.md`](docs/DECISIONES_PENDIENTES.md): decisiones aún no aprobadas.
+- [`CONTINUAR_EN_OTRA_COMPUTADORA.md`](CONTINUAR_EN_OTRA_COMPUTADORA.md): instrucciones de continuidad.
+- [`AGENTS.md`](AGENTS.md): reglas para agentes que trabajen en el repositorio.
+
+## Regla de seguridad
+
+El repositorio es privado. No deben versionarse contraseñas, tokens, sesiones completas,
+fotografías RAW ni datos de pago. Las referencias privadas deben apuntar a una fuente con
+control de acceso, sin copiar su contenido sensible al repositorio.

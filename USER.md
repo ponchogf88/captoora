@@ -30,7 +30,7 @@ Formularios y clics: Browserflow, browser-use, Page Agent, Grok Bot.
 - TikTok: Captoora.studiomty
 - X: @captoora_studio
 - WhatsApp Business: +52 81 4005 0088 → https://wa.me/528140050088
-- Staging: https://ponchogf88.github.io/captoora/
+- Sitio vigente: https://captoora-site.vercel.app
 - Repo: https://github.com/ponchogf88/captoora
 
 Cuentas personales (@jagf87, etc.) no se usan para publicar Captoora salvo que él lo diga.

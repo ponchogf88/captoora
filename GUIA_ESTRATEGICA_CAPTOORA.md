@@ -1,3 +1,9 @@
+# AVISO HISTÓRICO
+
+> Este documento conserva una estrategia anterior. El anticipo general vigente es 30%, según
+> `docs/ESTADO_ACTUAL.md` y `js/config.js`. Las referencias a 50% no deben reutilizarse sin una
+> nueva aprobación humana explícita.
+
 # 📸 Captoora Studio | Guía Estratégica & Operativa del Negocio
 *“Momentos que permanecen”*
 

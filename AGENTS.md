@@ -1,4 +1,8 @@
-> Continuidad actualizada25oct2026: leer primero [CONTINUAR_EN_OTRA_COMPUTADORA.md](CONTINUAR_EN_OTRA_COMPUTADORA.md). Las fechas y direcciones de inauguración que siguen son históricas; consultar el expediente y js/config.js para el estado vigente.
+> **FUENTE VIGENTE:** leer primero [`docs/ESTADO_ACTUAL.md`](docs/ESTADO_ACTUAL.md),
+> [`docs/DECISIONES_PENDIENTES.md`](docs/DECISIONES_PENDIENTES.md) y
+> [`docs/MAPA_REPOSITORIO.md`](docs/MAPA_REPOSITORIO.md). `js/config.js` manda para los
+> datos renderizados por el sitio. Las fechas, direcciones y porcentajes posteriores en este
+> archivo se conservan como contexto histórico y no deben publicarse.
 
 # Captoora — README para agentes
 
@@ -11,7 +15,7 @@ Marca: **Captoora** (Captura + doble O)
 
 ---
 
-## Misión inmediata (hoy → miércoles 23 sep 2026, 19:00)
+## Misión histórica (cerrada: miércoles 23 sep 2026, 19:00)
 
 Inaugurar el estudio físico en Colinas de San Jerónimo 11 con presencia digital *creíble*, no con un growth engine inflado.
 
@@ -91,7 +95,7 @@ No reescribas el esqueleto entero el domingo. Parchea el hero + métricas + inau
 
 ---
 
-## Objetivos
+## Objetivos históricos
 
 ### Semana 0 (19–23 sep 2026)
 - [ ] Identity sheet y este README vivos en el repo

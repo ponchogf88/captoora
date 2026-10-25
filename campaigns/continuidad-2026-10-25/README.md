@@ -1,5 +1,9 @@
 # Continuar CAPTOORA desde otra computadora
 
+> **Expediente congelado al 25-oct-2026.** Para el estado vigente consulta
+> [`../../docs/ESTADO_ACTUAL.md`](../../docs/ESTADO_ACTUAL.md). No edites copias dentro de
+> `contenido-captoora/` como si fueran la fuente principal.
+
 Actualizado25oct2026. Este expediente conserva documentación de trabajo y decisiones; no es una transcripción literal del chat ni sincroniza conversaciones. Leer este archivo primero; documentos anteriores pueden tener estados históricos superados.
 
 ## Cómo continuar

@@ -1,5 +1,9 @@
 # Captoora — Contexto conciliado (18 oct 2026)
 
+> **Contexto histórico.** El estado vigente está en [`docs/ESTADO_ACTUAL.md`](docs/ESTADO_ACTUAL.md)
+> y las decisiones sin cerrar en [`docs/DECISIONES_PENDIENTES.md`](docs/DECISIONES_PENDIENTES.md).
+> Lo que sigue conserva evidencia del corte del 18 de octubre y no sustituye esos documentos.
+
 Leer primero [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md): cronología, oferta publicada, sesiones, versiones, pendientes P01–P28 y límites de evidencia. [Fuentes y 48 turnos de ocho chats](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). La bitácora técnica de septiembre y la crónica del fundador son antecedentes conservados.
 
 Estado: web y dirección comprobadas en este corte; 12 fotos configuradas con archivos locales. Los logs del 17/18 registran 28 individuales y 23 grupales seleccionadas; falta cotejar los finales y su recepción. Drive registra cuatro publicaciones previas y calendarios guardados como Ideas. No confundir documentación con automatización funcionando.

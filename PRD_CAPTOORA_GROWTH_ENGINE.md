@@ -1,3 +1,9 @@
+# AVISO HISTÓRICO
+
+> Este PRD contiene hipótesis, metas y condiciones comerciales históricas. No es fuente vigente
+> de precios, descuentos, dirección, sitio ni anticipo. Consultar `docs/ESTADO_ACTUAL.md` y
+> `js/config.js` antes de ejecutar o publicar cualquiera de sus propuestas.
+
 # 🏛️ PRD & Blueprint Operativo: Captoora Growth Engine 2026
 *Sistema Integral de Adquisición, Distribución y Monetización para Estudio Fotográfico*
 **Versión:** 1.0.0 &nbsp;|&nbsp; **Metodología:** Open Design Architecture &nbsp;|&nbsp; **Estado:** Aprobado para Ejecución
