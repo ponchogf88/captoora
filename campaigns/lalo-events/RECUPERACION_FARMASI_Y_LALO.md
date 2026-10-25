@@ -1,3 +1,5 @@
+> ACLARACIÓN VIGENTE DEL TITULAR: Farmasi, “chicas del coro” e Instax son UN SOLO evento. La sobrina entregará una instantánea/gift card a cada una de las 25 invitadas al terminar su sesión. Conservar esas 25 previstas; no añadir nuevas. Leer primero [evento único confirmado](EVENTO_UNICO_FARMASI_CONFIRMADO.md). Toda separación provisional posterior en este archivo queda superada.
+
 # Punto de entrada recuperado · Farmasi y Lalo Events
 Verificado por lectura directa de main el 25 octubre 2026. Estos archivos existían antes de crear campaigns/lalo-events. La revisión previa del asistente fue incompleta; no pedir al titular que reconstruya datos ya escritos.
 
