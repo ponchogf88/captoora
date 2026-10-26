@@ -1,3 +1,5 @@
+> Actualización del titular · 26 octubre 2026: TikTok oficial **@captoora.studio**, con doble O en CAPTOORA, tomando “punto estudio” del dictado como Studio de la marca. Sustituye captoora.studiomty y la conexión antigua captoora.mty. Cambio documental solicitado; perfil público no verificado en esta sesión. Metricool conserva conexión antigua hasta reautorizar la cuenta correcta.
+
 # Captoora — Contexto conciliado (18 oct 2026)
 
 Leer primero [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md): cronología, oferta publicada, sesiones, versiones, pendientes P01–P28 y límites de evidencia. [Fuentes y 48 turnos de ocho chats](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). La bitácora técnica de septiembre y la crónica del fundador son antecedentes conservados.
@@ -19,7 +21,7 @@ CAPTOORA — Bitácora y pendientes (fuente única)
 https://docs.google.com/document/d/1b_7S2n4-RQHfCh7duAURftttl-Ivd2GySPY3O_DbOS0/edit
 
 ## Handles
-IG @Captoora.studio · TikTok @captoora.studiomty · X @captoora_studio · WA 81 4005 0088
+IG @Captoora.studio · TikTok @captoora.studio · X @captoora_studio · WA 81 4005 0088
 
 ## Hecho reciente
 - Sitio vivo en GitHub Pages (dirección corregida, mapa, portafolio inicial)
