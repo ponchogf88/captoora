@@ -17,6 +17,17 @@ Existe un heartbeat horario `producci-n-captoora-likinya` en este hilo. Despiert
 3. Dependencias que desbloquean varias publicaciones (maestro voz, referencias, plantilla, selección de álbum).
 4. Calidad y entrega: no sacrificar por llenar terabytes o consumir tokens.
 
+### Guardia obligatoria antes de utilizar Flow
+
+- No generar imágenes estáticas en Flow.
+- Seleccionar primero una imagen autorizada de biblioteca propia, Canva o Pexels. Pinterest
+  requiere verificación de derechos para utilizarse como fuente; de otro modo es referencia.
+- Flow solo anima una imagen aprobada mediante movimiento real definido en el brief.
+- No gastar cuota por vencimiento si el recurso no tiene uso editorial concreto.
+- Un zoom sobre una imagen no cuenta como video y se rechaza antes del montaje.
+- Títulos y subtítulos dinámicos se terminan en Canva, Captions, OpusClip o CapCut; FFmpeg no
+  sustituye ese acabado.
+
 Si una cuenta queda bloqueada, pasar a otra dependencia autorizada; no repetir login ni notificar cada hora lo mismo. No consumir cuotas de cuenta distinta de la solicitada. No cambiar voz/identidad.
 
 ## Ficha mínima de cola

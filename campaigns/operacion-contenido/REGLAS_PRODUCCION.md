@@ -36,4 +36,33 @@ Estado por servicio: declarado → acceso comprobado → piloto → archivo desc
 ## Evidencia y seguridad
 Conservar originales, permisos y fuentes. Las fotos de sesión no viven en el disco interno: se cumple [la ley visual](../../docs/LEY_VISUAL_CAPTOORA.md). El crudo queda en Drive y la final en Pixieset; la copia local se borra solo cuando el peso en la nube coincide. Guardar ID de proveedor antes de repetir ante incertidumbre; no duplicar gastos. Separar piezas finales de insumos, borradores y propuestas. Mantener mínimo 8 GiB locales; última medición 6.34 GiB, por debajo del mínimo, debe recertificarse antes de descargas/render. No borrar archivos por inferencia. Drive destino verificado, capacidad libre no medida.
 
+## Regla obligatoria de fuentes, Flow y títulos dinámicos · 26 octubre 2026
+
+Esta regla fue reiterada expresamente por el fundador y prevalece sobre cualquier plan anterior
+orientado a consumir cuotas de generación.
+
+1. Las imágenes base se seleccionan primero de la biblioteca propia autorizada, Canva y
+   Pexels. Pinterest sirve como referencia visual o como fuente únicamente cuando se verifiquen
+   derechos suficientes para el uso concreto; no se descarga ni publica material ajeno por
+   inferencia.
+2. Está prohibido generar imágenes estáticas en Google Flow para CAPTOORA. Tampoco se usa
+   Nano Banana dentro de Flow para sustituir material que ya existe en Canva, Pexels o las
+   bibliotecas autorizadas.
+3. Flow se utiliza únicamente para transformar una imagen base previamente seleccionada y
+   aprobada en un video con movimiento real y propósito narrativo. Antes de gastar créditos se
+   registra la fuente, licencia o autorización de la imagen, el movimiento solicitado y el uso
+   editorial previsto.
+4. Un zoom, paneo o parallax sobre una imagen esencialmente inmóvil no cuenta como video
+   terminado. Debe existir acción, progresión visual, cambio narrativo o movimiento interno
+   perceptible.
+5. Los títulos y subtítulos finales se producen con Canva, Captions, OpusClip o CapCut, según
+   el encargo. Deben ser dinámicos, sincronizados, legibles en móvil y no cubrir al sujeto ni la
+   demostración. FFmpeg puede validar, ensamblar o transcodificar, pero no sustituye el acabado
+   tipográfico dinámico exigido.
+6. No se generan recursos para gastar cuota, llenar calendario o marcar una herramienta como
+   utilizada. Si Canva, Pexels o la biblioteca autorizada ya resuelven la necesidad, no se
+   consume IA generativa.
+7. Antes de entregar una pieza se informa su procedencia real y las herramientas efectivamente
+   utilizadas. Un MP4 técnico no se presenta como video editorial si solo anima una fotografía.
+
 El usuario está revisando suscripciones y correos: mantener espera para auditoría de cuentas y nuevas generaciones hasta recibir lista completa o instrucción de reanudar. Investigación editorial autorizada sí puede continuar. La autorización general de cargos adicionales no fija presupuesto ni autoriza compras automáticas; rutina actual usa saldo incluido sin sobreconsumo.
