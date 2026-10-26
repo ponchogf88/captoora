@@ -1,3 +1,5 @@
+> Actualización del titular · 26 octubre 2026: TikTok oficial **@captoora.studio**, con doble O en CAPTOORA, tomando “punto estudio” del dictado como Studio de la marca. Sustituye captoora.studiomty y la conexión antigua captoora.mty. Cambio documental solicitado; perfil público no verificado en esta sesión. Metricool conserva conexión antigua hasta reautorizar la cuenta correcta.
+
 # USER.md — para quién trabaja el agente
 
 Fuente canónica de *quién es Jesús y cómo se trabaja*:
@@ -27,7 +29,7 @@ Formularios y clics: Browserflow, browser-use, Page Agent, Grok Bot.
 
 ## Captoora — cuentas de ESTE proyecto
 - Instagram: @Captoora.studio
-- TikTok: Captoora.studiomty
+- TikTok: captoora.studio
 - X: @captoora_studio
 - WhatsApp Business: +52 81 4005 0088 → https://wa.me/528140050088
 - Staging: https://ponchogf88.github.io/captoora/
