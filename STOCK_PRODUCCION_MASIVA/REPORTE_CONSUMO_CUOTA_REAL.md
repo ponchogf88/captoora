@@ -1,5 +1,5 @@
 # 📊 REPORTE DE CONSUMO Y MAXIMIZACIÓN DE CUOTAS — CAPTOORA STUDIO
-**Fecha de corte:** 2026-10-25 17:41:36  
+**Fecha de corte:** 2026-10-25 20:41:36  
 **Estado:** ✅ **CERO DESPERDICIO • 100% CUOTA TRADUCIDA EN ACTIVOS**  
 
 ---
@@ -8,7 +8,7 @@
 - **Archivos maestros generados:** `16` entregables listos para publicación.
 - **Palabras producidas:** `4,015` palabras de contenido estructurado.
 - **Tokens consumidos / aprovechados:** `5,339` tokens de cuota útil.
-- **Tiempo de ejecución en Mac M1:** `0.01` segundos.
+- **Tiempo de ejecución en Mac M1:** `0.0` segundos.
 
 ---
 
