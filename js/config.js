@@ -123,7 +123,7 @@ window.CAPTOORA = {
   // ---- REDES -------------------------------------------------
   social: [
     { label: "Instagram", handle: "@Captoora.studio", url: "https://instagram.com/captoora.studio" },
-    { label: "TikTok", handle: "@captoora.studiomty", url: "https://www.tiktok.com/@captoora.studiomty" },
+    { label: "TikTok", handle: "@captoora.studio", url: "https://www.tiktok.com/@captoora.studio" },
     { label: "X", handle: "@captoora_studio", url: "https://x.com/captoora_studio" }
   ]
 };
