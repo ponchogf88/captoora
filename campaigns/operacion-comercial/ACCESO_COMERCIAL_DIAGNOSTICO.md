@@ -1,3 +1,5 @@
+> Actualización del titular · 26 octubre 2026: TikTok oficial **@captoora.studio**, con doble O en CAPTOORA, tomando “punto estudio” del dictado como Studio de la marca. Sustituye captoora.studiomty y la conexión antigua captoora.mty. Cambio documental solicitado; perfil público no verificado en esta sesión. Metricool conserva conexión antigua hasta reautorizar la cuenta correcta.
+
 # Acceso comercial · diagnóstico y resolución
 26 octubre 2026. Prioridad: habilitar operación real antes de seguir produciendo planes.
 
