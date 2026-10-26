@@ -63,11 +63,29 @@ Catálogo curado de plataformas, estudios de animación, sistemas de diseño, bi
 
 ## 5. Plataformas Clave Adicionales (Curaduría de la Comunidad X)
 
+### A. Motion UI, Componentes & Landing Pages
+* **`motionin.design`:** Biblioteca curada exclusivamente de animaciones web y micro-interacciones de alta gama.
 * **`60fps.design`:** El catálogo definitivo de animaciones fluidas a 60 FPS para estudiar timing y aceleración.
 * **`scrolltide.co`:** Más de 600 prompts y código fuente de experiencias 3D y scroll-driven design.
+* **`modulify.ai/templates`:** Plantillas modulares de landing pages modernas listas para producción.
+* **`landdding.com`:** Directorio de páginas de aterrizaje con alta conversión y estética visual pulida.
+* **`godly.website`:** El referente de diseño web premium con efectos de shaders y WebGL.
 * **`detail.design`:** Colección de micro-interacciones y detalles de producto que marcan la diferencia.
 * **`collectui.com` & `recent.design`:** Ideas diarias de interfaz y micro-layouts listos para maquetar.
-* **`theinternetdesigns.com` & `bestdesignsonx.com`:** Los diseños más destacados compartidos por la comunidad global de X.
-* **`navbar.gallery` & `footer.design`:** Referencias especializadas para cabeceras y cierres de página.
-* **`VoiceStudio` (`github.com/debpalash/VoiceStudio`):** Clonación y doblaje de voz en local para locuciones de reels.
-* **`REA` (`github.com/morluto/rea`):** Ingeniería inversa limpia para desarmar micro-interacciones de apps virales.
+* **`wonderlist.design` & `on.design`:** Sitios web minimalistas y de estética editorial limpia.
+
+### B. Audio Háptico, Shaders & Fondos (El Toque de Cámara Fotográfica)
+* **`audiocn.dev`:** Colección de efectos de sonido (SFX) para interfaces web. **Clave para Captoora:** permite integrar el sonido háptico del click de obturador en el botón de reserva y confirmaciones con sonido de lente.
+* **`squints.app`:** Generador de shaders, gradientes líquidos y distorsiones visuales en tiempo real.
+* **`backgrounds.supply`:** Texturas de grano analógico, noise y gradientes oscuros para la estética Dark Void.
+* **`iconly.design` & `encyclopedia.iconography.co`:** Enciclopedia de iconografía técnica para controles de cámara (ISO, apertura, obturador).
+* **`fontinlogo.com`:** Buscador y analizador de tipografías usadas en identidades de marca icónicas.
+
+### C. Herramientas de Inteligencia, SEO & Seguridad
+* **`Searchata.com` (MCP de Google Search Console):** Protocolo MCP para conectar agentes de IA directamente a Google Search Console. Permite monitorear clics, impresiones y términos de búsqueda ("estudio fotográfico San Jerónimo", "fotos ejecutivas Monterrey") sin salir de la consola.
+* **Seguridad de Llaves & Repositorios:** Regla crítica recordada por la comunidad: nunca incluir llaves de API, credenciales o tokens en archivos Markdown (`README.md`, `AGENTS.md`) ni subirlos a GitHub. Mantener siempre `.gitignore` activo con `.env` y llaves locales.
+* **Repositorios de Referencia:**
+  * `VoiceStudio` (`github.com/debpalash/VoiceStudio`): Clonación y doblaje de voz en local para locuciones de reels.
+  * `REA` (`github.com/morluto/rea`): Ingeniería inversa limpia para desarmar micro-interacciones de apps virales.
+  * `paperclip` (`github.com/skunzu/paperclip`): Optimización de assets visuales y vectorización.
+
