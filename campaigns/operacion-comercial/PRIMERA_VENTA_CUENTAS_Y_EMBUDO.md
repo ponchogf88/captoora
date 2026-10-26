@@ -1,3 +1,5 @@
+> CONFIRMADO POR EL TITULAR · 26 octubre: correo oficial **alfonsogf.88@gmail.com**, el del repositorio. El “87” fue transcripción por dictado. Esta confirmación resuelve cualquier discrepancia descrita abajo. No usar lic.jagf87@gmail.com como remitente comercial. Acceso/conexión a Alfonso y asociaciones Meta siguen sin verificar; no equivalen a confirmación de dirección. Usuario dicta por voz: resolver erratas con fuentes y contexto, consultar solo diferencias que afecten acciones.
+
 # Ruta a primera venta · cuentas, dominio y conversión
 Actualización 26 octubre 2026. Sin compras, publicaciones, cambios de Meta ni envíos ejecutados.
 
