@@ -36,3 +36,7 @@ Formularios y clics: Browserflow, browser-use, Page Agent, Grok Bot.
 - Repo: https://github.com/ponchogf88/captoora
 
 Cuentas personales (@jagf87, etc.) no se usan para publicar Captoora salvo que él lo diga.
+
+## Enlaces sociales · preferencia 26 octubre 2026
+Cuando el titular envíe enlaces de Facebook, Instagram o X, abrir e investigar el contenido. Si falla una vía, resolver redirección/canonical y probar alternativas públicas o sesión autorizada disponible antes de pedirle que descargue/suba material. No dejar la tarea en el primer throttling. No afirmar visionado por leer solo título; distinguir video, subtítulos automáticos y metadatos. Respetar autenticación/permisos: no eludir login ni controles privados, no extraer credenciales, no contratar servicios por inferencia.
+Referencia comprobada: Facebook share/v/1EyuvhjBwS redirige al reel 1356052246509044 de Modular Estudio, sobre brand sprint. Se recuperaron video público (aprox. 124s) y subtítulos automáticos; lectura de subtítulos completa y fotograma inspeccionado. No confundir con explicación de sincronización de ChatGPT. Material ajeno de referencia, no portafolio CAPTOORA ni permiso para republicar.
