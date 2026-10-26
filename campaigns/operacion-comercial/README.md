@@ -1,3 +1,5 @@
+> Prioridad vigente: [estrategia sin gasto adicional y propuesta de prepago de $2,000](ESTRATEGIA_CERO_PESOS_Y_PREVENTA.md). No hay pauta autorizada; no nuevos regalos. Farmasi/coro/Instax son un solo evento según [aclaración del titular](../lalo-events/EVENTO_UNICO_FARMASI_CONFIRMADO.md). Esta aclaración supera cualquier separación provisional escrita abajo.
+
 # CAPTOORA · operación comercial
 Carpeta especializada solicitada por el usuario el 25 octubre 2026.
 
