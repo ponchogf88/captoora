@@ -1,3 +1,5 @@
+> CONFIRMADO POR EL TITULAR · 26 octubre: correo oficial **alfonsogf.88@gmail.com**, el del repositorio. El “87” fue transcripción por dictado. Esta confirmación resuelve cualquier discrepancia descrita abajo. No usar lic.jagf87@gmail.com como remitente comercial. Acceso/conexión a Alfonso y asociaciones Meta siguen sin verificar; no equivalen a confirmación de dirección. Usuario dicta por voz: resolver erratas con fuentes y contexto, consultar solo diferencias que afecten acciones.
+
 > 26 octubre: [primera venta, cuenta oficial, dominio y embudo](PRIMERA_VENTA_CUENTAS_Y_EMBUDO.md). No enviar desde lic: el titular identifica Alfonso como cuenta comercial; existe discrepancia .87/.88 pendiente de confirmación exacta. Tres borradores en cuenta personal NO equivalen a envíos. Sin compra ni pauta autorizada.
 
 > Prioridad vigente: [estrategia sin gasto adicional y propuesta de prepago de $2,000](ESTRATEGIA_CERO_PESOS_Y_PREVENTA.md). No hay pauta autorizada; no nuevos regalos. Farmasi/coro/Instax son un solo evento según [aclaración del titular](../lalo-events/EVENTO_UNICO_FARMASI_CONFIRMADO.md). Esta aclaración supera cualquier separación provisional escrita abajo.
