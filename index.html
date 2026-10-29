@@ -6,10 +6,10 @@
   <title>CAPTOORA STUDIO · Flagship 3D Storytelling · Nikon Z9</title>
   <meta name="description" content="Experiencia de producto 3D cinematográfica para Captoora Studio. Nikon Z9 con Nikkor Z 50mm f/1.2 S. Galería de autor en vórtice 3D infinito y estudio en Colinas de San Jerónimo, Monterrey.">
 
-  <!-- GOOGLE FONTS: PLUS JAKARTA SANS & SPACE GROTESK -->
+  <!-- GOOGLE FONTS: SYNCOPATE, SYNE & SPACE GROTESK (LUXURY EDITORIAL DISPLAY & MONO) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syncopate:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- THREE.JS, GSAP, SCROLLTRIGGER & LENIS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -37,7 +37,9 @@
       --lime: #CCFF00;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --font-body: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-display: 'Syncopate', -apple-system, sans-serif;
+      --font-serif: 'Syne', -apple-system, sans-serif;
+      --font-body: 'Syne', -apple-system, sans-serif;
       --font-mono: 'Space Grotesk', monospace;
     }
 
@@ -83,21 +85,26 @@
     }
 
     .brand-logo-img {
-      width: 42px;
-      height: 42px;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      padding: 3px;
+      border: 1.5px solid rgba(204, 255, 0, 0.45);
+      background: radial-gradient(circle, rgba(204, 255, 0, 0.12) 0%, rgba(0, 0, 0, 0.65) 80%);
       object-fit: contain;
-      filter: drop-shadow(0 0 16px rgba(204, 255, 0, 0.45));
-      transition: transform 0.3s ease;
+      filter: drop-shadow(0 0 16px rgba(204, 255, 0, 0.5));
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
     .brand-wrap:hover .brand-logo-img {
       transform: scale(1.08) rotate(5deg);
+      border-color: var(--lime);
     }
 
     .brand-wordmark {
-      font-family: var(--font-body);
-      font-size: 20px;
-      font-weight: 900;
-      letter-spacing: 4px;
+      font-family: var(--font-display);
+      font-size: 21px;
+      font-weight: 700;
+      letter-spacing: 5px;
       color: #ffffff;
       text-transform: uppercase;
       display: flex;
@@ -107,10 +114,10 @@
     /* LEY DE MARCA: ÚLTIMA LETRA "A" ILUMINADA EN LIMA FULGOR */
     .brand-wordmark .lit-a {
       color: var(--lime);
-      text-shadow: 0 0 14px rgba(204, 255, 0, 0.85), 0 0 28px rgba(204, 255, 0, 0.5);
-      font-size: 21px;
+      text-shadow: 0 0 14px rgba(204, 255, 0, 0.95), 0 0 28px rgba(204, 255, 0, 0.6);
+      font-size: 22px;
       display: inline-block;
-      margin-left: 1px;
+      margin-left: 2px;
     }
 
     .nav-actions {
@@ -195,16 +202,276 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #000000;
     }
 
     #webgl-canvas {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       display: block;
-      cursor: grab;
+      z-index: 2;
+      pointer-events: auto;
+      cursor: crosshair;
     }
-    #webgl-canvas:active {
-      cursor: grabbing;
+
+    /* ==========================================================================
+       ULTRA 8K CINEMATIC CAMERA COMPOSITOR (PEXELS REAL PHOTOGRAPHY)
+       ========================================================================== */
+    #camera-cinematic-stage {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .cam-layer {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform-style: preserve-3d;
+      will-change: transform, opacity;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .cam-photo {
+      max-width: 92vw;
+      max-height: 86vh;
+      object-fit: contain;
+      filter: contrast(1.08) brightness(1.0);
+      user-select: none;
+      -webkit-user-drag: none;
+      mask-image: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,1) 62%, rgba(0,0,0,0) 98%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,1) 62%, rgba(0,0,0,0) 98%);
+      transition: filter 0.3s ease;
+    }
+
+    .cam-layer-top {
+      opacity: 1;
+      transform: scale(1.05) rotateX(10deg);
+    }
+
+    .cam-layer-front {
+      opacity: 0;
+      transform: scale(0.92) rotateY(-15deg);
+    }
+
+    .cam-layer-macro {
+      opacity: 0;
+      transform: scale(1.15);
+    }
+
+    /* ANAMORPHIC VOLUMETRIC LIGHTING (CYAN LEFT, AMBER RIGHT) */
+    .anamorphic-flare-left {
+      position: absolute;
+      top: 35%;
+      left: 12%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.28) 0%, rgba(0, 212, 255, 0.08) 45%, rgba(0, 212, 255, 0) 70%);
+      filter: blur(48px);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      animation: pulseCyanGlow 4s infinite alternate ease-in-out;
+    }
+    .anamorphic-flare-right {
+      position: absolute;
+      top: 38%;
+      right: 12%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.30) 0%, rgba(245, 158, 11, 0.08) 45%, rgba(245, 158, 11, 0) 70%);
+      filter: blur(48px);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      animation: pulseAmberGlow 4.5s infinite alternate ease-in-out;
+    }
+    @keyframes pulseCyanGlow {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+    @keyframes pulseAmberGlow {
+      0% { transform: scale(1.08); opacity: 0.8; }
+      100% { transform: scale(0.92); opacity: 1; }
+    }
+
+    .lens-specular-sheen {
+      position: absolute;
+      inset: -50%;
+      background: linear-gradient(115deg, rgba(255,255,255,0) 38%, rgba(0,212,255,0.12) 48%, rgba(204,255,0,0.18) 50%, rgba(245,158,11,0.14) 52%, rgba(255,255,255,0) 62%);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: 0.7;
+      transform: translateX(-40%) rotate(-12deg);
+      transition: transform 0.5s ease-out;
+    }
+
+    /* ==========================================================================
+       VIEWFINDER CAMERA FRAMING OVERLAY (MARCO CON DECORACIÓN ESTILO CÁMARA)
+       ========================================================================== */
+    .camera-viewfinder-frame {
+      position: absolute;
+      inset: 32px;
+      pointer-events: none;
+      z-index: 40;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: opacity 0.5s ease;
+    }
+    @media (max-width: 768px) {
+      .camera-viewfinder-frame { inset: 16px; }
+    }
+
+    /* 4 VIEW-FINDER CORNERS CON MARCAS DE CALIBRACIÓN */
+    .vf-corner {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      border-color: rgba(255, 255, 255, 0.55);
+      border-style: solid;
+    }
+    .vf-tl { top: -2px; left: -2px; border-width: 2px 0 0 2px; }
+    .vf-tr { top: -2px; right: -2px; border-width: 2px 2px 0 0; }
+    .vf-bl { bottom: -2px; left: -2px; border-width: 0 0 2px 2px; }
+    .vf-br { bottom: -2px; right: -2px; border-width: 0 2px 2px 0; }
+    .vf-corner::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background: var(--lime);
+      box-shadow: 0 0 8px var(--lime);
+    }
+    .vf-tl::after { top: -1px; left: -1px; }
+    .vf-tr::after { top: -1px; right: -1px; }
+    .vf-bl::after { bottom: -1px; left: -1px; }
+    .vf-br::after { bottom: -1px; right: -1px; }
+
+    /* REGLA DE TERCIOS CINEMATOGRÁFICA */
+    .vf-grid-guide {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+    }
+    .vf-h1 { top: 33.33%; left: 0; right: 0; height: 1px; }
+    .vf-h2 { top: 66.66%; left: 0; right: 0; height: 1px; }
+    .vf-v1 { left: 33.33%; top: 0; bottom: 0; width: 1px; }
+    .vf-v2 { left: 66.66%; top: 0; bottom: 0; width: 1px; }
+
+    /* RETÍCULA DE ENFOQUE AF CENTRAL */
+    .vf-center-reticle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .reticle-box {
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      border-radius: 4px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reticle-box.locked {
+      border-color: var(--lime);
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.7);
+      transform: scale(0.94);
+    }
+    .reticle-crosshair {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+    }
+    .reticle-crosshair::before, .reticle-crosshair::after {
+      content: '';
+      position: absolute;
+      background: rgba(255, 255, 255, 0.65);
+    }
+    .reticle-crosshair::before {
+      top: 7px; left: 0; right: 0; height: 1px;
+    }
+    .reticle-crosshair::after {
+      left: 7px; top: 0; bottom: 0; width: 1px;
+    }
+    .reticle-lock-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    .reticle-box.locked ~ .reticle-lock-dot {
+      background: var(--lime);
+      box-shadow: 0 0 12px var(--lime);
+    }
+
+    /* TELEMETRÍA DE CÁMARA (INDICADOR REC & VÚMETROS) */
+    .rec-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #ef4444;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .rec-dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ef4444;
+      animation: blinkRec 1.2s infinite ease-in-out;
+    }
+    @keyframes blinkRec {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .vu-meter-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, 0.45);
+    }
+    .vu-level {
+      display: inline-block;
+      width: 44px;
+      height: 4px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+    .vu-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 75%;
+      background: linear-gradient(90deg, #10b981 0%, #f59e0b 70%, #ef4444 100%);
+      animation: pulseVu 0.8s infinite alternate ease-in-out;
+    }
+    @keyframes pulseVu {
+      0% { width: 55%; }
+      100% { width: 90%; }
     }
 
     /* ==========================================================================
@@ -219,6 +486,7 @@
       flex-direction: column;
       justify-content: space-between;
       z-index: 100;
+      transition: opacity 0.4s ease;
     }
 
     .hud-header-bar {
@@ -239,6 +507,7 @@
     }
     .hud-lens-tag .lens-name {
       color: #fff;
+      font-family: var(--font-display);
       font-weight: 700;
       font-size: 13px;
       letter-spacing: 3px;
@@ -246,6 +515,7 @@
     .hud-lens-tag .lens-sub {
       color: var(--amber);
       font-size: 10px;
+      letter-spacing: 2px;
     }
 
     .hud-center-brackets {
@@ -279,27 +549,28 @@
       transition: opacity 0.3s ease;
     }
     .act1-kicker {
-      font-family: var(--font-mono);
+      font-family: var(--font-display);
       font-size: 11px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       color: var(--cyan);
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .act1-title {
-      font-size: clamp(26px, 3.5vw, 44px);
-      font-weight: 900;
-      letter-spacing: 4px;
+      font-family: var(--font-display);
+      font-size: clamp(26px, 3.8vw, 48px);
+      font-weight: 700;
+      letter-spacing: 6px;
       text-transform: uppercase;
-      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 100%);
+      background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.45) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .act1-scroll-cue {
-      margin-top: 10px;
+      margin-top: 12px;
       font-family: var(--font-mono);
       font-size: 11px;
-      letter-spacing: 2px;
+      letter-spacing: 2.5px;
       color: var(--amber);
       text-transform: uppercase;
       display: inline-flex;
@@ -317,25 +588,30 @@
     /* ACT 2: FACE OFF QUOTE */
     #act2-quote {
       position: absolute;
-      bottom: 50px;
+      bottom: 110px;
       left: 0;
       width: 100%;
       text-align: center;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 120;
     }
     .act2-quote-text {
-      font-family: var(--font-mono);
-      font-size: clamp(14px, 1.8vw, 22px);
-      letter-spacing: 2.5px;
-      color: #f1f5f9;
-      text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-      background: rgba(0, 0, 0, 0.65);
-      padding: 12px 28px;
+      font-family: var(--font-serif);
+      font-size: clamp(16px, 2.2vw, 26px);
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+      background: rgba(8, 9, 12, 0.85);
+      padding: 14px 34px;
       border-radius: 999px;
       display: inline-block;
-      border: 1px solid rgba(0, 212, 255, 0.3);
+      border: 1px solid rgba(0, 212, 255, 0.35);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
     }
 
     /* ACT 3: FLASH QUOTE */
@@ -345,25 +621,33 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 90%;
-      max-width: 800px;
+      max-width: 860px;
       text-align: center;
       opacity: 0;
       pointer-events: none;
       transition: opacity 0.4s ease;
+      background: rgba(8, 9, 12, 0.82);
+      padding: 32px 44px;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
+      z-index: 120;
     }
     .act3-quote-text {
-      font-size: clamp(28px, 4vw, 52px);
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 4.2vw, 54px);
       font-weight: 800;
       line-height: 1.25;
-      letter-spacing: -0.5px;
+      letter-spacing: 0.5px;
       color: #ffffff;
-      text-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+      text-shadow: 0 0 45px rgba(255, 255, 255, 0.75);
     }
     .act3-quote-sub {
-      margin-top: 14px;
-      font-family: var(--font-mono);
+      margin-top: 16px;
+      font-family: var(--font-display);
       font-size: 13px;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       color: var(--amber);
       text-transform: uppercase;
     }
@@ -1106,8 +1390,53 @@
   <main id="story-stage">
     
     <div id="webgl-container">
-      <!-- CANVAS THREE.JS WEBGL RENDERER -->
+      <!-- CANVAS FOR AMBIENT PARTICLES & VOLUMETRIC ATMOSPHERE -->
       <canvas id="webgl-canvas"></canvas>
+
+      <!-- ULTRA 8K CINEMATIC CAMERA COMPOSITOR (PEXELS REAL PHOTOGRAPHY) -->
+      <div id="camera-cinematic-stage">
+        
+        <!-- LAYER 1: MACRO TOP VIEW (DIALS & OLED DISPLAY 6932296) -->
+        <div class="cam-layer cam-layer-top" id="layer-top-oled">
+          <img src="assets/pexels/nikon_hero_6932296.jpg" alt="Nikon Z9 Top View OLED Dial" class="cam-photo">
+        </div>
+
+        <!-- LAYER 2: FLAGSHIP 3/4 FRONTAL HERO (6932297) -->
+        <div class="cam-layer cam-layer-front" id="layer-front-hero">
+          <img src="assets/pexels/nikon_hero_6932297.jpg" alt="Nikon Z9 Flagship Front View" class="cam-photo">
+          <div class="anamorphic-flare-left"></div>
+          <div class="anamorphic-flare-right"></div>
+          <div class="lens-specular-sheen" id="specular-sheen"></div>
+        </div>
+
+        <!-- LAYER 3: MACRO SHUTTER RELEASE & PENTAPRISM (6934978) -->
+        <div class="cam-layer cam-layer-macro" id="layer-macro-shutter">
+          <img src="assets/pexels/nikon_hero_6934978.jpg" alt="Nikon Z9 Shutter Release Macro" class="cam-photo">
+        </div>
+
+      </div>
+
+      <!-- VIEWFINDER CAMERA FRAMING OVERLAY (MARCO ESTILO ENCUADRE DE CÁMARA) -->
+      <div class="camera-viewfinder-frame" id="camera-vf-frame">
+        <!-- 4 CORNERS DE CALIBRACIÓN -->
+        <div class="vf-corner vf-tl"></div>
+        <div class="vf-corner vf-tr"></div>
+        <div class="vf-corner vf-bl"></div>
+        <div class="vf-corner vf-br"></div>
+
+        <!-- REGLA DE TERCIOS GUIDES -->
+        <div class="vf-grid-guide vf-h1"></div>
+        <div class="vf-grid-guide vf-h2"></div>
+        <div class="vf-grid-guide vf-v1"></div>
+        <div class="vf-grid-guide vf-v2"></div>
+
+        <!-- RETÍCULA AF DE ENFOQUE CENTRAL -->
+        <div class="vf-center-reticle" id="af-reticle">
+          <div class="reticle-box" id="af-reticle-box"></div>
+          <div class="reticle-crosshair"></div>
+          <div class="reticle-lock-dot"></div>
+        </div>
+      </div>
 
       <!-- LIVE HUD TELEMETRY & OVERLAYS -->
       <div class="hud-overlay">
@@ -1115,22 +1444,29 @@
         <!-- HUD TOP BAR -->
         <div class="hud-header-bar">
           <div class="hud-lens-tag">
-            <span class="lens-name">NIKON Z 9 · NIKKOR 50MM F/1.2 S</span>
-            <span class="lens-sub">REC ● 45.7 MP STACKED RAW // FX FULL-FRAME</span>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="rec-indicator"><span class="rec-dot"></span>REC</div>
+              <span class="lens-name">NIKON Z 9 · NIKKOR 50MM F/1.2 S</span>
+            </div>
+            <span class="lens-sub">8K 60p N-RAW FX // 45.7 MP STACKED SENSOR</span>
           </div>
 
-          <div style="display: flex; gap: 10px; pointer-events: auto;">
+          <div style="display: flex; align-items: center; gap: 14px; pointer-events: auto;">
+            <!-- VU METERS & BATTERY TELEMETRY -->
+            <div class="hud-status-group" style="display: flex; align-items: center; gap: 12px; font-family: var(--font-mono); font-size: 10px;">
+              <div class="vu-meter-bar"><span>CH1</span><span class="vu-level"><span class="vu-fill"></span></span></div>
+              <div class="vu-meter-bar"><span>CH2</span><span class="vu-level"><span class="vu-fill" style="animation-delay: -0.3s;"></span></span></div>
+              <span style="color: var(--lime); font-weight: 700;">[▮▮▮▯] 84%</span>
+            </div>
+
             <a href="captoora_hub.html" style="text-decoration: none; color: #fff; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.22); padding: 5px 12px; border-radius: 999px; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px;">✦ HUB ↗</a>
             <a href="top_10_visual_showcase.html" style="text-decoration: none; color: #000; background: var(--amber); padding: 5px 12px; border-radius: 999px; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.05em; box-shadow: 0 0 16px rgba(245,158,11,0.5); display: inline-flex; align-items: center; gap: 6px;">⚡ LAB MOTIONS ↗</a>
           </div>
         </div>
 
-        <!-- CENTER ROTATING RETICLE & TARGET BRACKETS -->
-        <div class="hud-center-brackets"></div>
-
         <!-- ACT 1: THE REVEAL TITLE -->
         <div id="act1-hud">
-          <div class="act1-kicker">Acto 1 // The Reveal // 360° Inspection</div>
+          <div class="act1-kicker">Acto 1 // The Reveal // Flagship Inspection</div>
           <h1 class="act1-title">Nikon Z 9 Flagship</h1>
           <div class="act1-scroll-cue">
             <span>Haz Scroll Down para rotar e iniciar la experiencia</span>
@@ -1160,11 +1496,13 @@
           <div class="hud-specs-pills">
             <span class="hud-pill">ISO 100</span>
             <span class="hud-pill">1/8000s</span>
-            <span class="hud-pill" style="color: var(--amber); font-weight: 700;">f/1.2 S</span>
+            <span class="hud-pill" style="color: var(--lime); font-weight: 700; border-color: rgba(204,255,0,0.4);">f/1.2 S</span>
+            <span class="hud-pill">+0.0 EV</span>
             <span class="hud-pill">WB 5600K</span>
+            <span class="hud-pill" style="color: var(--cyan);">AF-C [EYE-AF LOCK]</span>
           </div>
 
-          <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 2px;">
             COLINAS DE SAN JERÓNIMO // MONTERREY, N.L.
           </div>
         </div>
