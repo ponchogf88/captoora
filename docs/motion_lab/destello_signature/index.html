@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Captoora Signature — El Destello (10 s · 60 FPS · seek(t))</title>
+<!--
+  PLAN A · "El Destello" — Captoora Signature
+  Arquitectura: función pura render(t). Ningún estado depende del reloj de pared.
+  - Preview interactivo: abrir este archivo en Chrome.
+  - Render MP4: tools/motion_render/render_destello.py (Chrome headless + ffmpeg, 600 frames).
+  Ley Visual: fotografía protagonista completa (sin recorte), texto breve fuera del sujeto,
+  isotipo oficial sin modificar (la estrella animada se alinea sobre la estrella del logo).
+-->
+<style>
+  html, body { margin: 0; background: #000; height: 100%; }
+  canvas { display: block; }
+  body.preview {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    font: 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #9ca3af;
+  }
+  body.preview canvas {
+    height: min(84vh, calc((100vw - 40px) * 16 / 9)); width: auto; aspect-ratio: 9 / 16;
+    border: 1px solid rgba(255,255,255,.08); border-radius: 10px;
+  }
+  .bar { display: flex; gap: 10px; align-items: center; width: min(92vw, 540px); }
+  .bar button { background: #C6F135; color: #000; border: 0; border-radius: 999px; padding: 6px 16px; font-weight: 800; cursor: pointer; }
+  .bar input { flex: 1; accent-color: #C6F135; }
+  .bar span { font-variant-numeric: tabular-nums; min-width: 120px; text-align: right; }
+  body.render .bar { display: none; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div class="bar">
+  <button id="play" type="button">▶</button>
+  <input id="scrub" type="range" min="0" max="599" value="0" aria-label="Fotograma">
+  <span id="tc">0.00 s · f000</span>
+</div>
+<audio id="sfx" src="destello_sfx.m4a" preload="auto"></audio>
+<script>
+(() => {
+'use strict';
+
+/* ------------------------------------------------------------------ CONFIG */
+const RENDER = new URLSearchParams(location.search).has('render');
+document.body.className = RENDER ? 'render' : 'preview';
+
+const W = 1080, H = 1920, FPS = 60, DUR = 10, NF = FPS * DUR;
+const LIME = '#C6F135', LIME_RGB = '198,241,53', VOID = '#030407';
+
+const ASSETS = {
+  // Foto de estudio ya preparada para IG en el repo (cuerpo completo, cero recorte).
+  photo: '../../../assets/media_jpg/IG_CPT_0550_4x5.jpg',
+  // Isotipo oficial Captoora Signature (blanco sobre negro). No se modifica.
+  logo:  '../../../assets/captoora_signature_logo.png',
+};
+// Coordenadas normalizadas medidas sobre IG_CPT_0550 (4000x5000).
+const PHOTO = { eye: { x: 0.5145, y: 0.1354 }, face: { x: 0.5375, y: 0.152, size: 0.19 } };
+// Geometría medida del isotipo (1446x1516): centro y brazo de la estrella, centro de la C.
+const LOGO = { w: 1446, h: 1516, sx: 1098, sy: 460, sL: 348, cy: 830 };
+
+const RECT_A = { x: 100, y: 280, w: 880, h: 1100 };   // foto en beats 2-3
+const RECT_B = { x: 160, y: 140, w: 760, h: 950 };    // foto en beat 4 (deja espacio al lockup)
+const CENTER = { x: 540, y: 960 };
+const HOVER  = { x: 540, y: 1600 };
+const LOGO_H = 280, LOGO_Y = 1128;
+
+const T = { burst: 0.30, travel0: 1.80, travel1: 2.45, expose: 2.50,
+            af: 5.00, leave0: 5.45, leave1: 6.45, b4: 7.40, dock: 8.00 };
+
+const WM_FONT  = '600 96px "Avenir Next", "Helvetica Neue", Arial, sans-serif';
+const SIG_FONT = '400 34px Didot, "Bodoni 72", "Times New Roman", serif';
+const CAP_FONT = '600 30px "Avenir Next", "Helvetica Neue", Arial, sans-serif';
+const WM_SPACING = 8, SIG_SPACING_END = 17;
+
+const CAPS = [
+  { n: '01', txt: 'EL FLASH QUE DETIENE EL TIEMPO', a: 0.55, b: 2.25 },
+  { n: '02', txt: 'LA VIDA EN TU MIRADA',           a: 2.85, b: 4.85 },
+  { n: '03', txt: 'LA VISIÓN DEL FUTURO',           a: 5.25, b: 7.15 },
+];
+
+/* ------------------------------------------------------------------- MATH */
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const seg = (t, a, b) => clamp((t - a) / (b - a), 0, 1);
+const easeInOutCubic = x => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const easeOutCubic = x => 1 - Math.pow(1 - x, 3);
+const easeInCubic = x => x * x * x;
+const easeOutExpo = x => x >= 1 ? 1 : 1 - Math.pow(2, -10 * x);
+const smooth = (a, b, t) => { const x = seg(t, a, b); return x * x * (3 - 2 * x); };
+// Respuesta al escalón de un oscilador armónico amortiguado (zeta, f en Hz). Pura en t.
+function spring(t, zeta, f) {
+  if (t <= 0) return 0;
+  const w = 2 * Math.PI * f;
+  if (zeta < 1) {
+    const r = Math.sqrt(1 - zeta * zeta), wd = w * r;
+    return 1 - Math.exp(-zeta * w * t) * (Math.cos(wd * t) + (zeta / r) * Math.sin(wd * t));
+  }
+  return 1 - Math.exp(-w * t) * (1 + w * t);
+}
+// Pulso de luz: subida lineal y caída exponencial.
+function pulse(t, t0, attack, tau) {
+  if (t < t0) return 0;
+  const d = t - t0;
+  return d < attack ? d / attack : Math.exp(-(d - attack) / tau);
+}
+function mulberry32(seed) {
+  return function () {
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+/* ----------------------------------------------------------------- CANVAS */
+const cv = document.getElementById('c');
+const ctx = cv.getContext('2d');
+const mk = (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const loadImg = src => new Promise((res, rej) => {
+  const i = new Image();
+  i.onload = () => res(i);
+  i.onerror = () => rej(new Error('No cargó ' + src));
+  i.src = src;
+});
+// Reducción por mitades para conservar nitidez al bajar de 4000 px.
+function downscale(img, w, h) {
+  let cur = img, cw = img.naturalWidth || img.width, ch = img.naturalHeight || img.height;
+  while (cw / 2 > w && ch / 2 > h) {
+    const nw = Math.round(cw / 2), nh = Math.round(ch / 2);
+    const c = mk(nw, nh), x = c.getContext('2d');
+    x.imageSmoothingQuality = 'high';
+    x.drawImage(cur, 0, 0, nw, nh);
+    cur = c; cw = nw; ch = nh;
+  }
+  const out = mk(w, h), o = out.getContext('2d');
+  o.imageSmoothingQuality = 'high';
+  o.drawImage(cur, 0, 0, w, h);
+  return out;
+}
+
+let photoC, ambientC, logoC, vignetteC, grains = [], particles = [], dockParticles = [];
+let path = null, rotTable = null, LK = null;
+
+/* --------------------------------------------------------------- GEOMETRY */
+function eyeAt(r) { return { x: r.x + PHOTO.eye.x * r.w, y: r.y + PHOTO.eye.y * r.h }; }
+function photoRect(t) {
+  const sIn = lerp(0.94, 1, spring(t - T.expose, 0.92, 2.2));
+  const m = spring(t - T.b4, 0.9, 2.0);
+  const w0 = lerp(RECT_A.w, RECT_B.w, m), h0 = lerp(RECT_A.h, RECT_B.h, m);
+  const cx = lerp(RECT_A.x, RECT_B.x, m) + w0 / 2, cy = lerp(RECT_A.y, RECT_B.y, m) + h0 / 2;
+  const w = w0 * sIn, h = h0 * sIn;
+  return { x: cx - w / 2, y: cy - h / 2, w, h };
+}
+
+function buildPath() {
+  const r = RECT_A, e = eyeAt(r);
+  const top = r.y - 34, right = r.x + r.w + 44, bottom = r.y + r.h + 46;
+  let pts = [e, { x: e.x, y: top }, { x: right, y: top }, { x: right, y: bottom }, { x: HOVER.x + 160, y: HOVER.y - 10 }, HOVER];
+  for (let k = 0; k < 4; k++) {           // Chaikin: esquinas redondeadas
+    const n = [pts[0]];
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p = pts[i], q = pts[i + 1];
+      n.push({ x: 0.75 * p.x + 0.25 * q.x, y: 0.75 * p.y + 0.25 * q.y });
+      n.push({ x: 0.25 * p.x + 0.75 * q.x, y: 0.25 * p.y + 0.75 * q.y });
+    }
+    n.push(pts[pts.length - 1]);
+    pts = n;
+  }
+  const cum = [0];
+  for (let i = 1; i < pts.length; i++) cum.push(cum[i - 1] + Math.hypot(pts[i].x - pts[i - 1].x, pts[i].y - pts[i - 1].y));
+  return { pts, cum, total: cum[cum.length - 1] };
+}
+function pathAt(u) {
+  const s = clamp(u, 0, 1) * path.total, c = path.cum;
+  let lo = 0, hi = c.length - 1;
+  while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (c[mid] <= s) lo = mid; else hi = mid; }
+  const k = (s - c[lo]) / Math.max(1e-6, c[hi] - c[lo]);
+  return { x: lerp(path.pts[lo].x, path.pts[hi].x, k), y: lerp(path.pts[lo].y, path.pts[hi].y, k) };
+}
+
+// Rotación libre integrada (tabla fija a 1 ms → determinista).
+function omega(t) { return 0.30 + 2.6 * smooth(6.3, 6.9, t) * (1 - smooth(7.25, 7.45, t)); }
+function buildRot() {
+  const n = 10001, tab = new Float64Array(n);
+  for (let i = 1; i < n; i++) tab[i] = tab[i - 1] + omega((i - 0.5) * 0.001) * 0.001;
+  return tab;
+}
+function rotFree(t) {
+  const x = clamp(t, 0, 10) * 1000, i = Math.min(9999, Math.floor(x));
+  return lerp(rotTable[i], rotTable[i + 1], x - i);
+}
+function rotStar(t) {
+  if (t < T.b4) return rotFree(t);
+  const r0 = rotFree(T.b4), q = Math.PI / 2;
+  const target = Math.ceil((r0 + q) / q) * q;   // aterriza a 0° (mod 90°) para calzar con el logo
+  return lerp(r0, target, easeInOutCubic(seg(t, T.b4, T.dock)));
+}
+
+/* -------------------------------------------------------------- STAR STATE */
+function starState(t) {
+  const s = { x: CENTER.x, y: CENTER.y, L: 0, rot: rotStar(t), k8: 0, alpha: 1, glow: 1 };
+  if (t < T.burst) {
+    s.L = 7 * easeOutCubic(seg(t, 0.05, T.burst)); s.glow = 0.6;
+  } else if (t < T.expose) {
+    let L = 7 + (230 - 7) * spring(t - T.burst, 0.35, 2.6);
+    const u = easeInOutCubic(seg(t, T.travel0, T.travel1));
+    const e = eyeAt(photoRect(T.expose));
+    s.x = lerp(CENTER.x, e.x, u); s.y = lerp(CENTER.y, e.y, u);
+    s.L = lerp(L, 150, u);
+  } else if (t < T.leave0) {
+    const e = eyeAt(photoRect(t));
+    s.x = e.x; s.y = e.y;
+    s.L = lerp(150, 13, easeOutExpo(seg(t, T.expose, 3.25)));
+    const tw = pulse(t, 3.45, 0.04, 0.18) + pulse(t, 4.15, 0.04, 0.18) + pulse(t, 4.75, 0.04, 0.16);
+    s.L *= 1 + 0.55 * tw; s.glow = 0.55 + 0.6 * tw;
+  } else if (t < T.b4) {
+    const u = easeInOutCubic(seg(t, T.leave0, T.leave1));
+    const p = pathAt(u);
+    s.x = p.x; s.y = p.y; s.L = lerp(13, 34, u);
+    if (t >= T.leave1) {
+      s.L = lerp(34, 112, spring(t - T.leave1, 0.6, 2.8));
+      s.k8 = 0.5 * easeOutCubic(seg(t, T.leave1 + 0.05, 7.0));
+    }
+  } else if (t < T.dock) {
+    const u = seg(t, T.b4, T.dock), e = easeInCubic(u);
+    const dx = LK.D.x - HOVER.x, dy = LK.D.y - HOVER.y, len = Math.hypot(dx, dy);
+    const arc = Math.sin(Math.PI * e) * 90;
+    s.x = lerp(HOVER.x, LK.D.x, e) + (-dy / len) * arc;
+    s.y = lerp(HOVER.y, LK.D.y, e) + (dx / len) * arc;
+    s.L = lerp(112, LK.Ld, easeInOutCubic(u));
+    s.k8 = 0.5 * (1 - easeInOutCubic(seg(t, T.b4, 7.85)));
+  } else {
+    const d = t - T.dock;
+    s.x = LK.D.x; s.y = LK.D.y;
+    s.L = LK.Ld * (1 + 0.32 * Math.exp(-d / 0.08) * Math.cos(2 * Math.PI * 7 * d));
+    s.alpha = 1 - seg(t, T.dock + 0.06, T.dock + 0.36);
+  }
+  return s;
+}
+
+/* ------------------------------------------------------------------ DRAW */
+// Estrella de 4 puntas = superelipse |x|^0.4 + |y|^0.4 = L^0.4 (mismo perfil que el isotipo).
+function starPath(c, L) {
+  c.beginPath();
+  const N = 180;
+  for (let i = 0; i <= N; i++) {
+    const a = (i / N) * Math.PI * 2, co = Math.cos(a), si = Math.sin(a);
+    const x = L * Math.sign(co) * Math.pow(Math.abs(co), 5);
+    const y = L * Math.sign(si) * Math.pow(Math.abs(si), 5);
+    i ? c.lineTo(x, y) : c.moveTo(x, y);
+  }
+  c.closePath();
+}
+function drawStar(s) {
+  if (s.L <= 0.3 || s.alpha <= 0.001) return;
+  ctx.save();
+  ctx.translate(s.x, s.y);
+  ctx.globalCompositeOperation = 'lighter';
+  const hr = s.L * 2.2;
+  const g = ctx.createRadialGradient(0, 0, 0, 0, 0, hr);
+  g.addColorStop(0, `rgba(255,255,255,${0.55 * s.glow * s.alpha})`);
+  g.addColorStop(0.25, `rgba(${LIME_RGB},${0.33 * s.glow * s.alpha})`);
+  g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(0, 0, hr, 0, Math.PI * 2); ctx.fill();
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.rotate(s.rot);
+  ctx.globalAlpha = s.alpha;
+  ctx.shadowColor = `rgba(${LIME_RGB},0.9)`;
+  ctx.shadowBlur = Math.min(60, s.L * 0.45);
+  ctx.fillStyle = '#ffffff';
+  starPath(ctx, s.L); ctx.fill();
+  if (s.k8 > 0.001) { ctx.rotate(Math.PI / 4); starPath(ctx, s.L * s.k8); ctx.fill(); }
+  ctx.restore();
+}
+function drawStreak(x, y, len, a) {
+  if (a <= 0.002) return;
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  const g = ctx.createLinearGradient(x - len, 0, x + len, 0);
+  g.addColorStop(0, 'rgba(0,0,0,0)');
+  g.addColorStop(0.35, `rgba(${LIME_RGB},${0.35 * a})`);
+  g.addColorStop(0.5, `rgba(255,255,255,${0.9 * a})`);
+  g.addColorStop(0.65, `rgba(${LIME_RGB},${0.35 * a})`);
+  g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(x - len, y - 1.5, len * 2, 3);
+  ctx.globalAlpha = 0.22;
+  ctx.fillRect(x - len * 0.6, y - 7, len * 1.2, 14);
+  ctx.restore();
+}
+function drawParticles(list, t0, cx, cy, t) {
+  const d = t - t0;
+  if (d <= 0) return;
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter';
+  for (const p of list) {
+    if (d > p.life) continue;
+    const f = (1 - Math.exp(-p.k * d)) / p.k;
+    const x = cx + p.vx * f, y = cy + p.vy * f;
+    const a = Math.pow(1 - d / p.life, 1.6) * p.a;
+    ctx.fillStyle = p.lime ? `rgba(${LIME_RGB},${a})` : `rgba(255,255,255,${a})`;
+    ctx.fillRect(x - p.r, y - p.r, p.r * 2, p.r * 2);
+  }
+  ctx.restore();
+}
+function drawSpaced(text, x, y, spacing, align) {
+  let w = 0;
+  const ws = [...text].map(ch => { const m = ctx.measureText(ch).width; w += m; return m; });
+  w += spacing * (ws.length - 1);
+  let cx = align === 'center' ? x - w / 2 : x;
+  [...text].forEach((ch, i) => { ctx.fillText(ch, cx, y); cx += ws[i] + spacing; });
+  return w;
+}
+function spacedWidth(text, spacing) {
+  let w = 0; for (const ch of text) w += ctx.measureText(ch).width;
+  return w + spacing * (text.length - 1);
+}
+
+function drawPhoto(t) {
+  if (t < T.expose) return null;
+  const r = photoRect(t);
+  const expo = easeOutCubic(seg(t, T.expose, 3.15));
+  ctx.save();
+  ctx.shadowColor = 'rgba(0,0,0,0.65)'; ctx.shadowBlur = 70; ctx.shadowOffsetY = 24;
+  ctx.globalAlpha = expo; ctx.fillStyle = '#000';
+  ctx.fillRect(r.x, r.y, r.w, r.h);
+  ctx.restore();
+  ctx.drawImage(photoC, r.x, r.y, r.w, r.h);
+  if (expo < 1) { ctx.fillStyle = `rgba(3,4,7,${1 - expo})`; ctx.fillRect(r.x, r.y, r.w, r.h); }
+  ctx.strokeStyle = 'rgba(255,255,255,0.12)'; ctx.lineWidth = 1;
+  ctx.strokeRect(r.x + 0.5, r.y + 0.5, r.w - 1, r.h - 1);
+  return r;
+}
+function drawViewfinder(t, r) {
+  const a = easeOutCubic(seg(t, 5.0, 5.3)) * (1 - seg(t, 7.1, 7.5));
+  if (!r || a <= 0) return;
+  const L = 52 * easeOutCubic(seg(t, 5.0, 5.35)), o = 18;
+  ctx.save();
+  ctx.strokeStyle = `rgba(${LIME_RGB},${0.85 * a})`; ctx.lineWidth = 2; ctx.lineCap = 'square';
+  const xs = [r.x - o, r.x + r.w + o], ys = [r.y - o, r.y + r.h + o];
+  for (const x of xs) for (const y of ys) {
+    const sx = x < r.x ? 1 : -1, sy = y < r.y ? 1 : -1;
+    ctx.beginPath(); ctx.moveTo(x, y + sy * L); ctx.lineTo(x, y); ctx.lineTo(x + sx * L, y); ctx.stroke();
+  }
+  ctx.restore();
+}
+function drawAF(t, r) {
+  const a = seg(t, 5.0, 5.06) * (1 - seg(t, 6.1, 6.5));
+  if (!r || a <= 0) return;
+  const cx = r.x + PHOTO.face.x * r.w, cy = r.y + PHOTO.face.y * r.h;
+  const sz = PHOTO.face.size * r.w * lerp(1.7, 1, spring(t - 5.0, 0.55, 4.5));
+  const locked = t >= 5.2;
+  const blink = locked && t < 5.42 ? (Math.floor((t - 5.2) / 0.055) % 2 ? 0.35 : 1) : 1;
+  const col = locked ? `rgba(${LIME_RGB},${a * blink})` : `rgba(255,255,255,${0.85 * a})`;
+  const h = sz / 2, l = sz * 0.22;
+  ctx.save();
+  ctx.strokeStyle = col; ctx.lineWidth = 3;
+  for (const sx of [-1, 1]) for (const sy of [-1, 1]) {
+    const x = cx + sx * h, y = cy + sy * h;
+    ctx.beginPath(); ctx.moveTo(x, y - sy * l); ctx.lineTo(x, y); ctx.lineTo(x - sx * l, y); ctx.stroke();
+  }
+  ctx.fillStyle = col; ctx.font = '700 20px "Avenir Next", sans-serif'; ctx.textBaseline = 'bottom';
+  ctx.fillText(locked ? 'AF · LOCK' : 'AF', cx - h, cy - h - 10);
+  ctx.restore();
+}
+function drawTrail(t) {
+  if (t < T.leave0 || t > T.leave1 + 0.3) return;
+  const head = easeInOutCubic(seg(t, T.leave0, T.leave1));
+  const tail = easeInOutCubic(seg(t - 0.22, T.leave0, T.leave1));
+  if (head - tail < 0.002) return;
+  ctx.save();
+  ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+  const N = 28;
+  for (let j = 0; j < N; j++) {
+    const a = (j + 1) / N;
+    const p1 = pathAt(lerp(tail, head, j / N)), p2 = pathAt(lerp(tail, head, (j + 1) / N));
+    ctx.strokeStyle = `rgba(${LIME_RGB},${0.85 * a})`; ctx.lineWidth = 1 + 2.5 * a;
+    ctx.beginPath(); ctx.moveTo(p1.x, p1.y); ctx.lineTo(p2.x, p2.y); ctx.stroke();
+  }
+  ctx.restore();
+}
+function drawRings(t) {
+  const fade = 1 - seg(t, 7.35, 7.75);
+  if (t < 6.5 || fade <= 0) return;
+  ctx.save();
+  ctx.translate(HOVER.x, HOVER.y);
+  // anillo de puntos (eco del anillo punteado del isotipo)
+  ctx.save(); ctx.rotate(-0.6 * (t - 6.5));
+  ctx.fillStyle = `rgba(255,255,255,${0.9 * fade})`;
+  for (let i = 0; i < 40; i++) {
+    const a = seg(t, 6.5 + i * 0.012, 6.58 + i * 0.012);
+    if (a <= 0) continue;
+    const ang = (i / 40) * Math.PI * 2;
+    ctx.globalAlpha = a;
+    ctx.beginPath(); ctx.arc(Math.cos(ang) * 170, Math.sin(ang) * 170, 3.4, 0, Math.PI * 2); ctx.fill();
+  }
+  ctx.restore();
+  // graduación de lente
+  const p = easeOutCubic(seg(t, 6.6, 7.1));
+  ctx.rotate(0.4 * (t - 6.6));
+  ctx.strokeStyle = `rgba(${LIME_RGB},${0.55 * fade})`; ctx.lineWidth = 1.4;
+  ctx.beginPath(); ctx.arc(0, 0, 212, 0, Math.PI * 2 * p); ctx.stroke();
+  for (let i = 0; i < 60; i++) {
+    const ang = (i / 60) * Math.PI * 2;
+    if (ang > Math.PI * 2 * p) break;
+    const l = i % 5 === 0 ? 16 : 8;
+    ctx.beginPath();
+    ctx.moveTo(Math.cos(ang) * 212, Math.sin(ang) * 212);
+    ctx.lineTo(Math.cos(ang) * (212 + l), Math.sin(ang) * (212 + l));
+    ctx.stroke();
+  }
+  ctx.restore();
+}
+function drawLogo(t) {
+  const ga = 0.16 * easeOutCubic(seg(t, 7.45, 7.8)) * (1 - seg(t, T.dock, T.dock + 0.1));
+  if (ga > 0) {
+    ctx.save(); ctx.globalAlpha = ga; ctx.globalCompositeOperation = 'screen';
+    ctx.drawImage(logoC, LK.logoX, LOGO_Y); ctx.restore();
+  }
+  if (t < T.dock) return;
+  const rr = 340 * easeOutCubic(seg(t, T.dock, T.dock + 0.42));
+  ctx.save();
+  ctx.beginPath(); ctx.arc(LK.D.x, LK.D.y, Math.max(0.1, rr), 0, Math.PI * 2); ctx.clip();
+  ctx.globalCompositeOperation = 'screen';
+  ctx.drawImage(logoC, LK.logoX, LOGO_Y);
+  ctx.restore();
+  // respiración de luz sobre la estrella del logo
+  const b = seg(t, 8.45, 8.9) * (0.22 + 0.1 * Math.sin(2 * Math.PI * 0.8 * (t - 8.45))) + 0.9 * pulse(t, 9.62, 0.03, 0.14);
+  if (b > 0.002) {
+    ctx.save(); ctx.globalCompositeOperation = 'lighter';
+    const g = ctx.createRadialGradient(LK.D.x, LK.D.y, 0, LK.D.x, LK.D.y, LK.Ld * 1.8);
+    g.addColorStop(0, `rgba(255,255,255,${0.6 * b})`);
+    g.addColorStop(0.3, `rgba(${LIME_RGB},${0.4 * b})`);
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.arc(LK.D.x, LK.D.y, LK.Ld * 1.8, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+  }
+}
+function drawWordmark(t) {
+  if (t < 8.1) return;
+  ctx.save();
+  ctx.font = WM_FONT; ctx.textBaseline = 'alphabetic';
+  LK.letters.forEach((lt, i) => {
+    const ti = 8.18 + 0.05 * i;
+    const a = seg(t, ti, ti + 0.2);
+    if (a <= 0) return;
+    const dy = 26 * (1 - spring(t - ti, 0.62, 4.5));
+    if (lt.ch === '*') {
+      const cx = lt.x + lt.w / 2, cy = LK.wmBase - LK.capH / 2 + dy;
+      const fl = pulse(t, ti, 0.02, 0.22);
+      ctx.save();
+      ctx.globalCompositeOperation = 'lighter';
+      const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, lt.w * (0.9 + 1.2 * fl));
+      g.addColorStop(0, `rgba(${LIME_RGB},${(0.35 + 0.6 * fl) * a})`);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(cx, cy, lt.w * (0.9 + 1.2 * fl), 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+      ctx.save(); ctx.translate(cx, cy); ctx.globalAlpha = a; ctx.fillStyle = LIME;
+      starPath(ctx, lt.w * 0.5); ctx.fill(); ctx.restore();
+    } else {
+      ctx.globalAlpha = a; ctx.fillStyle = '#ffffff';
+      ctx.fillText(lt.ch, lt.x, LK.wmBase + dy);
+    }
+  });
+  ctx.restore();
+  const sa = seg(t, 8.9, 9.35);
+  if (sa > 0) {
+    ctx.save();
+    ctx.font = SIG_FONT; ctx.fillStyle = `rgba(255,255,255,${0.92 * sa})`; ctx.textBaseline = 'alphabetic';
+    drawSpaced('SIGNATURE', LK.textX + 4, LK.sigBase, lerp(4, SIG_SPACING_END, easeOutCubic(seg(t, 8.9, 9.6))), 'left');
+    ctx.restore();
+  }
+}
+function drawCaptions(t) {
+  for (const c of CAPS) {
+    const a = easeOutCubic(seg(t, c.a, c.a + 0.35)) * (1 - easeInOutCubic(seg(t, c.b - 0.3, c.b)));
+    if (a <= 0) continue;
+    ctx.save();
+    ctx.font = CAP_FONT; ctx.textBaseline = 'middle';
+    const y = 168 + 10 * (1 - a), sp = 5;
+    const nW = spacedWidth(c.n, sp), dotW = spacedWidth('  ·  ', sp), tW = spacedWidth(c.txt, sp);
+    let x = 540 - (nW + dotW + tW) / 2;
+    ctx.fillStyle = `rgba(${LIME_RGB},${a})`; drawSpaced(c.n, x, y, sp, 'left'); x += nW;
+    ctx.fillStyle = `rgba(255,255,255,${0.45 * a})`; drawSpaced('  ·  ', x, y, sp, 'left'); x += dotW;
+    ctx.fillStyle = `rgba(255,255,255,${0.88 * a})`; drawSpaced(c.txt, x, y, sp, 'left');
+    ctx.restore();
+  }
+}
+
+/* ---------------------------------------------------------------- RENDER */
+function render(t) {
+  t = clamp(t, 0, DUR);
+  const f = Math.round(t * FPS);
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+  ctx.fillStyle = VOID; ctx.fillRect(0, 0, W, H);
+
+  const amb = 0.55 * easeOutCubic(seg(t, T.expose, 3.3));
+  if (amb > 0) { ctx.globalAlpha = amb; ctx.drawImage(ambientC, 0, 0); ctx.globalAlpha = 1; }
+
+  // sacudida de cámara al embonar
+  const d = t - T.dock;
+  const sh = d > 0 ? Math.exp(-d / 0.09) : 0;
+  ctx.save();
+  ctx.translate(4 * sh * Math.sin(2 * Math.PI * 19 * d + 1), 7 * sh * Math.sin(2 * Math.PI * 24 * d));
+
+  const r = drawPhoto(t);
+  drawViewfinder(t, r);
+  drawAF(t, r);
+  drawRings(t);
+  drawTrail(t);
+  drawLogo(t);
+
+  const s = starState(t);
+  drawParticles(particles, T.burst, CENTER.x, CENTER.y, t);
+  if (t < T.expose) {
+    const sa = (0.85 * pulse(t, T.burst, 0.02, 0.45) + 0.28 * seg(t, T.burst, 0.6)) * (1 - seg(t, 1.8, 2.3));
+    drawStreak(s.x, s.y, 120 + 520 * spring(t - T.burst, 0.8, 2.0), sa);
+  }
+  drawStar(s);
+  drawParticles(dockParticles, T.dock, LK.D.x, LK.D.y, t);
+  drawWordmark(t);
+
+  // onda expansiva + flash local al embonar
+  if (d > 0) {
+    const u = seg(t, T.dock, T.dock + 0.6);
+    if (u < 1) {
+      ctx.save(); ctx.globalCompositeOperation = 'lighter';
+      ctx.strokeStyle = `rgba(${LIME_RGB},${0.7 * (1 - u)})`; ctx.lineWidth = 1 + 3 * (1 - u);
+      ctx.beginPath(); ctx.arc(LK.D.x, LK.D.y, 900 * easeOutCubic(u), 0, Math.PI * 2); ctx.stroke();
+      ctx.restore();
+    }
+    const fa = 0.8 * pulse(t, T.dock, 0.012, 0.13);
+    if (fa > 0.002) {
+      ctx.save(); ctx.globalCompositeOperation = 'lighter';
+      const g = ctx.createRadialGradient(LK.D.x, LK.D.y, 0, LK.D.x, LK.D.y, 560);
+      g.addColorStop(0, `rgba(255,255,255,${fa})`);
+      g.addColorStop(0.35, `rgba(${LIME_RGB},${0.4 * fa})`);
+      g.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = g; ctx.fillRect(LK.D.x - 560, LK.D.y - 560, 1120, 1120);
+      ctx.restore();
+    }
+  }
+  ctx.restore();
+
+  ctx.drawImage(vignetteC, 0, 0);
+  ctx.save(); ctx.globalCompositeOperation = 'overlay'; ctx.globalAlpha = 0.09;
+  ctx.imageSmoothingEnabled = false; ctx.drawImage(grains[f % grains.length], 0, 0, W, H);
+  ctx.restore();
+
+  // flash de estudio a pantalla completa
+  const fl = 0.85 * pulse(t, T.burst, 0.015, 0.14) + 0.6 * pulse(t, T.expose, 0.015, 0.16);
+  if (fl > 0.002) { ctx.fillStyle = `rgba(255,255,255,${Math.min(1, fl)})`; ctx.fillRect(0, 0, W, H); }
+
+  drawCaptions(t);
+}
+
+/* ------------------------------------------------------------------ INIT */
+async function init() {
+  const [photo, logo] = await Promise.all([loadImg(ASSETS.photo), loadImg(ASSETS.logo)]);
+  try { await Promise.all([document.fonts.load(WM_FONT), document.fonts.load(SIG_FONT), document.fonts.load(CAP_FONT)]); } catch (e) { /* fuentes del sistema */ }
+
+  photoC = downscale(photo, RECT_A.w, RECT_A.h);
+
+  ambientC = mk(W, H);
+  { const a = ambientC.getContext('2d'), sc = Math.max(W / RECT_A.w, H / RECT_A.h);
+    const w = RECT_A.w * sc, h = RECT_A.h * sc;
+    a.fillStyle = VOID; a.fillRect(0, 0, W, H);
+    a.filter = 'blur(50px) brightness(0.45) saturate(1.1)';
+    a.drawImage(photoC, (W - w) / 2, (H - h) / 2, w, h); }
+
+  const lw = Math.round(LOGO_H * LOGO.w / LOGO.h);
+  logoC = downscale(logo, lw, LOGO_H);
+
+  vignetteC = mk(W, H);
+  { const v = vignetteC.getContext('2d');
+    const g = v.createRadialGradient(W / 2, H * 0.46, H * 0.25, W / 2, H * 0.5, H * 0.78);
+    g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(0,0,0,0.6)');
+    v.fillStyle = g; v.fillRect(0, 0, W, H); }
+
+  const rnd = mulberry32(20261026);
+  for (let k = 0; k < 4; k++) {
+    const c = mk(540, 960), g = c.getContext('2d'), img = g.createImageData(540, 960);
+    for (let i = 0; i < img.data.length; i += 4) { const v = 128 + (rnd() - 0.5) * 255; img.data[i] = img.data[i + 1] = img.data[i + 2] = v; img.data[i + 3] = 255; }
+    g.putImageData(img, 0, 0); grains.push(c);
+  }
+  const mkParticles = (n, vmin, vmax, lmin, lmax) => Array.from({ length: n }, () => {
+    const ang = rnd() * Math.PI * 2, sp = lerp(vmin, vmax, Math.pow(rnd(), 0.7));
+    return { vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, k: lerp(1.6, 2.8, rnd()),
+             life: lerp(lmin, lmax, rnd()), r: lerp(0.8, 2.6, rnd()), a: lerp(0.5, 1, rnd()), lime: rnd() < 0.3 };
+  });
+  particles = mkParticles(160, 150, 1100, 1.2, 2.4);
+  dockParticles = mkParticles(70, 100, 650, 0.5, 1.2);
+
+  path = buildPath();
+  rotTable = buildRot();
+
+  // Lockup: isotipo oficial + wordmark CAPTO✦RA + SIGNATURE, centrado.
+  ctx.font = WM_FONT;
+  const capH = ctx.measureText('H').actualBoundingBoxAscent;
+  const oW = ctx.measureText('O').width;
+  const chars = ['C', 'A', 'P', 'T', 'O', '*', 'R', 'A'];
+  let x = 0;
+  const letters = chars.map(ch => { const w = ch === '*' ? oW : ctx.measureText(ch).width; const o = { ch, x, w }; x += w + WM_SPACING; return o; });
+  const wmW = x - WM_SPACING;
+  ctx.font = SIG_FONT;
+  const sigW = spacedWidth('SIGNATURE', SIG_SPACING_END);
+  const gap = 30, total = lw + gap + Math.max(wmW, sigW + 4);
+  const logoX = Math.round(W / 2 - total / 2), textX = logoX + lw + gap;
+  letters.forEach(l => { l.x += textX; });
+  const ls = LOGO_H / LOGO.h, cMid = LOGO_Y + LOGO.cy * ls;
+  LK = { logoX, textX, letters, capH,
+         D: { x: logoX + LOGO.sx * ls, y: LOGO_Y + LOGO.sy * ls }, Ld: LOGO.sL * ls,
+         wmBase: Math.round(cMid + capH / 2 - 26), sigBase: Math.round(cMid + capH / 2 + 30) };
+}
+
+/* -------------------------------------------------------------- PREVIEW UI */
+const playBtn = document.getElementById('play'), scrub = document.getElementById('scrub'), tc = document.getElementById('tc'), sfx = document.getElementById('sfx');
+let playing = false, t0 = 0, tStart = 0, cur = 0;
+function show(t) { cur = t; render(t); const f = Math.min(NF - 1, Math.round(t * FPS)); scrub.value = f; tc.textContent = `${t.toFixed(2)} s · f${String(f).padStart(3, '0')}`; }
+function loop(now) {
+  if (!playing) return;
+  let t = tStart + (now - t0) / 1000;
+  if (t >= DUR) { tStart = 0; t0 = now; t = 0; try { sfx.currentTime = 0; } catch (e) {} }
+  show(t); requestAnimationFrame(loop);
+}
+function setPlay(p) {
+  playing = p; playBtn.textContent = p ? '❚❚' : '▶';
+  if (p) { tStart = cur >= DUR - 0.02 ? 0 : cur; t0 = performance.now(); try { sfx.currentTime = tStart; sfx.play().catch(() => {}); } catch (e) {} requestAnimationFrame(loop); }
+  else { try { sfx.pause(); } catch (e) {} }
+}
+playBtn.addEventListener('click', () => setPlay(!playing));
+scrub.addEventListener('input', () => { setPlay(false); show(scrub.value / FPS); });
+document.addEventListener('keydown', e => {
+  if (e.code === 'Space') { e.preventDefault(); setPlay(!playing); }
+  if (e.code === 'ArrowRight') { setPlay(false); show(Math.min(DUR, cur + 1 / FPS)); }
+  if (e.code === 'ArrowLeft') { setPlay(false); show(Math.max(0, cur - 1 / FPS)); }
+});
+
+/* ------------------------------------------------------------- PUBLIC API */
+window.addEventListener('error', e => { window.__error = String(e.message || e); });
+window.seek = t => render(t);
+window.seekAndWait = t => new Promise(res => { render(t); requestAnimationFrame(() => requestAnimationFrame(() => res(true))); });
+init().then(() => { show(RENDER ? 0 : 8.95); window.__ready = true; })
+      .catch(e => { window.__error = String(e && e.message || e); console.error(e); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA // GROK PROTOCOL // FREEMIUM ENGINE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&family=JetBrains+Mono:wght@700;900&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000000;
+      color: #FFFFFF;
+      font-family: 'Space Grotesk', sans-serif;
+      width: 1080px;
+      height: 1920px;
+      padding: 48px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.15) 0%, transparent 60%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 40px 40px, 40px 40px;
+    }
+
+    /* TELEMETRY TOP BAR */
+    .hud-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #1E293B;
+      padding-bottom: 20px;
+    }
+
+    .hud-brand {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hud-logo {
+      background: #CCFF00;
+      color: #000000;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .hud-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      color: #CCFF00;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(204, 255, 0, 0.1);
+      border: 2px solid #CCFF00;
+      padding: 8px 20px;
+      border-radius: 999px;
+      letter-spacing: 1px;
+    }
+
+    .hud-dot {
+      width: 14px;
+      height: 14px;
+      background: #CCFF00;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #CCFF00;
+    }
+
+    /* MISSION HERO */
+    .mission-hero {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .mission-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      font-weight: 900;
+      color: #64748B;
+      letter-spacing: 6px;
+      margin-bottom: 12px;
+    }
+
+    .mission-title {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+    }
+
+    .mission-title span {
+      color: #CCFF00;
+      text-shadow: 0 0 40px rgba(204, 255, 0, 0.6);
+    }
+
+    /* TELEMETRY METRIC COMPARISON */
+    .telemetry-row {
+      display: grid;
+      grid-template-columns: 1fr 120px 1fr;
+      align-items: center;
+      background: #0A0D14;
+      border: 3px solid #1E293B;
+      border-radius: 24px;
+      padding: 24px;
+      gap: 16px;
+    }
+
+    .metric-box {
+      text-align: center;
+    }
+
+    .metric-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #64748B;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .metric-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 60px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .metric-val.red {
+      color: #EF4444;
+    }
+
+    .metric-val.green {
+      color: #CCFF00;
+      text-shadow: 0 0 30px rgba(204, 255, 0, 0.5);
+    }
+
+    .arrow-convert {
+      font-size: 54px;
+      color: #CCFF00;
+      text-align: center;
+      font-weight: 900;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* STAGES (BRUTALIST CARDS) */
+    .stages-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .stage-card {
+      background: #080B11;
+      border: 3px solid #1E293B;
+      border-radius: 24px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .stage-card.active {
+      border-color: #CCFF00;
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.15);
+      background: linear-gradient(90deg, #0D131F 0%, #080B11 100%);
+    }
+
+    .stage-left {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .stage-index {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 32px;
+      font-weight: 900;
+      background: #1E293B;
+      color: #CCFF00;
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stage-info h3 {
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .stage-info p {
+      font-size: 20px;
+      color: #94A3B8;
+      font-weight: 700;
+    }
+
+    .stage-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 900;
+      padding: 12px 24px;
+      border-radius: 12px;
+      background: #1E293B;
+      color: #FFFFFF;
+      text-align: right;
+    }
+
+    .stage-pill.lime {
+      background: #CCFF00;
+      color: #000000;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+    }
+
+    /* THE UPGRADE CARDS (3 COLUMNS) */
+    .upgrades-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .up-box {
+      background: #090C14;
+      border: 3px solid #1E293B;
+      border-radius: 20px;
+      padding: 24px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .up-box.featured {
+      border-color: #CCFF00;
+      background: #0E1624;
+      box-shadow: 0 0 25px rgba(204, 255, 0, 0.2);
+    }
+
+    .up-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      color: #64748B;
+      font-weight: 900;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .up-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 50px;
+      font-weight: 900;
+      color: #CCFF00;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .up-perk {
+      font-size: 19px;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.25;
+    }
+
+    /* VIRAL MULTIPLIER */
+    .viral-engine {
+      background: #0A0D14;
+      border: 3px solid #334155;
+      border-radius: 24px;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .viral-title {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .viral-sub {
+      font-size: 18px;
+      color: #94A3B8;
+      font-weight: 700;
+    }
+
+    .viral-stat {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 44px;
+      font-weight: 900;
+      color: #CCFF00;
+      text-align: right;
+    }
+
+    /* BOTTOM DECISION BUTTON */
+    .launch-panel {
+      background: #000000;
+      border: 4px solid #CCFF00;
+      border-radius: 28px;
+      padding: 24px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 50px rgba(204, 255, 0, 0.35);
+    }
+
+    .launch-text h2 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+    }
+
+    .launch-text span {
+      font-size: 18px;
+      color: #94A3B8;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .launch-btn {
+      background: #CCFF00;
+      color: #000000;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 30px;
+      font-weight: 900;
+      padding: 18px 40px;
+      border-radius: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 0 30px rgba(204, 255, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HUD -->
+  <div class="hud-top">
+    <div class="hud-brand">
+      <div class="hud-logo">X</div>
+      <div>CAPTOORA // PROTOCOL 01</div>
+    </div>
+    <div class="hud-status">
+      <div class="hud-dot"></div>
+      TELEMETRY: ONLINE
+    </div>
+  </div>
+
+  <!-- MISSION HERO -->
+  <div class="mission-hero">
+    <div class="mission-tag">OPERATION FARMASI // SATURDAY OCT 31</div>
+    <div class="mission-title">
+      THE <span>FREEMIUM</span> ENGINE
+    </div>
+  </div>
+
+  <!-- TELEMETRY NUMBERS -->
+  <div class="telemetry-row">
+    <div class="metric-box">
+      <div class="metric-label">COSTO ADQUISICIÓN (CAC)</div>
+      <div class="metric-val red">$0 MXN</div>
+    </div>
+    <div class="arrow-convert">➔</div>
+    <div class="metric-box">
+      <div class="metric-label">PROYECCIÓN EN CAJA</div>
+      <div class="metric-val green">+$10,000</div>
+    </div>
+  </div>
+
+  <!-- STAGES -->
+  <div class="stages-wrapper">
+
+    <!-- STAGE 1: THE BAIT -->
+    <div class="stage-card active">
+      <div class="stage-left">
+        <div class="stage-index">01</div>
+        <div class="stage-info">
+          <h3>EL CEBO (HOOK GRATIS)</h3>
+          <p>3 Fotos Pro con Flashes Godox</p>
+        </div>
+      </div>
+      <div class="stage-pill lime">
+        DOPAMINA: 100%
+      </div>
+    </div>
+
+    <!-- STAGE 2: THE 3 UPGRADES -->
+    <div class="upgrades-container">
+      <div class="up-box">
+        <div class="up-tag">TIER 1</div>
+        <div class="up-price">$300</div>
+        <div class="up-perk">+5 FOTOS EDITADAS<br>(SET BLANCO + NEGRO)</div>
+      </div>
+      <div class="up-box featured">
+        <div class="up-tag" style="color: #CCFF00;">TIER 2 (VIP)</div>
+        <div class="up-price">$500</div>
+        <div class="up-perk">+10 FOTOS EDITADAS<br>+ 2 CLIPS TIKTOK 4K</div>
+      </div>
+      <div class="up-box">
+        <div class="up-tag">TIER 3</div>
+        <div class="up-price">$500</div>
+        <div class="up-perk">TALLER FOTO CON CEL<br>(APARTA CON $200)</div>
+      </div>
+    </div>
+
+    <!-- STAGE 3: VIRAL FLYWHEEL -->
+    <div class="viral-engine">
+      <div>
+        <div class="viral-title">⚡ 3-4 INFLUENCERS EN VIVO</div>
+        <div class="viral-sub">Ping-Pong de 40 seg + Colaboración en Instagram</div>
+      </div>
+      <div>
+        <div class="viral-stat">+100,000</div>
+        <div style="font-size: 14px; color: #64748B; font-family: 'JetBrains Mono', monospace; text-align: right;">VISTAS ORGÁNICAS MTY</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- LAUNCH PANEL -->
+  <div class="launch-panel">
+    <div class="launch-text">
+      <h2>DICTAMEN DEL COMITÉ</h2>
+      <span>ZERO RIESGO // 100% MARGEN // ZERO DISCO DURO</span>
+    </div>
+    <div class="launch-btn">
+      ¡APROBADO!
+    </div>
+  </div>
+
+</body>
+</html>

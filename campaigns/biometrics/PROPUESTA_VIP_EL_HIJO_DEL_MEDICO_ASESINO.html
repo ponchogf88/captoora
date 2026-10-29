@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>PROPUESTA VIP // CAPTOORA BIOMETRICS x EL HIJO DEL MÉDICO ASESINO</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap');
+
+    @page {
+      size: letter;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #000000;
+      color: #E2E8F0;
+      font-family: 'Space Grotesk', sans-serif;
+      line-height: 1.4;
+      font-size: 10pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background-image: 
+        radial-gradient(circle at 80% 0%, rgba(204, 255, 0, 0.08) 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 30px 30px, 30px 30px;
+    }
+
+    .page {
+      height: 258mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #1E293B;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-x {
+      background: #CCFF00;
+      color: #000;
+      font-weight: 900;
+      font-size: 16pt;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .brand-title {
+      font-size: 14pt;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #FFFFFF;
+    }
+
+    .brand-sub {
+      font-size: 7.5pt;
+      color: #CCFF00;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5pt;
+      color: #64748B;
+      line-height: 1.35;
+    }
+
+    .doc-meta span {
+      color: #CCFF00;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      background: linear-gradient(135deg, rgba(204, 255, 0, 0.12) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid rgba(204, 255, 0, 0.4);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+
+    .target-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      font-weight: 800;
+      color: #CCFF00;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 18pt;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #FFFFFF;
+      letter-spacing: -0.6px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    h1 span {
+      color: #CCFF00;
+      text-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
+    }
+
+    .hero-desc {
+      font-size: 9.5pt;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    /* GRIDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #090C14;
+      border: 1px solid #1E293B;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .card-accent {
+      border-color: rgba(204, 255, 0, 0.4);
+      background: #0D131F;
+    }
+
+    .card-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #64748B;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 12pt;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 8.5pt;
+      color: #94A3B8;
+      line-height: 1.35;
+    }
+
+    /* SECTION TITLES */
+    h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 .num {
+      background: #1E293B;
+      color: #CCFF00;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 14px;
+      font-size: 8.5pt;
+    }
+
+    th {
+      background: #101624;
+      color: #CCFF00;
+      text-align: left;
+      padding: 8px 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #1E293B;
+    }
+
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #161F30;
+      color: #CBD5E1;
+      line-height: 1.35;
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .tag-free {
+      background: rgba(204, 255, 0, 0.15);
+      color: #CCFF00;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5pt;
+      border: 1px solid rgba(204, 255, 0, 0.3);
+    }
+
+    /* QUOTE BOX */
+    .quote-box {
+      background: #090C14;
+      border-left: 3px solid #CCFF00;
+      border-radius: 0 8px 8px 0;
+      padding: 10px 14px;
+      margin: 12px 0;
+    }
+
+    .quote-text {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #FFFFFF;
+      font-style: italic;
+    }
+
+    .quote-sub {
+      font-size: 7.5pt;
+      color: #CCFF00;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* STAMP */
+    .verdict-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #090C14;
+      border: 2px solid #CCFF00;
+      border-radius: 10px;
+      padding: 12px 18px;
+      box-shadow: 0 0 25px rgba(204, 255, 0, 0.2);
+    }
+
+    .stamp-text {
+      font-size: 11pt;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+
+    .stamp-sub {
+      font-size: 7.5pt;
+      color: #94A3B8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .stamp-badge {
+      background: #CCFF00;
+      color: #000000;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10pt;
+      font-weight: 900;
+      padding: 6px 16px;
+      border-radius: 6px;
+      letter-spacing: 1.5px;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid #1E293B;
+      padding-top: 8px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7pt;
+      font-family: 'JetBrains Mono', monospace;
+      color: #64748B;
+    }
+
+    .footer strong {
+      color: #94A3B8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="brand-group">
+        <div class="logo-x">X</div>
+        <div>
+          <div class="brand-title">CAPTOORA BIOMETRICS</div>
+          <div class="brand-sub">High-Performance Athletic Visual Engine</div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        SPECIAL OPS // <span>VIP DOSSIER</span><br>
+        TARGET: <span>EL HIJO DEL MÉDICO ASESINO</span><br>
+        LOCATION: SAN JERÓNIMO, MONTERREY
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero-banner">
+      <div class="target-tag">INVITACIÓN DE COLABORACIÓN EXCLUSIVA // DEBUT OFICIAL</div>
+      <h1>LA FUSIÓN DE UNA <span>LEYENDA DEL RING</span> Y EL <span>ALTO RENDIMIENTO</span></h1>
+      <div class="hero-desc">
+        Captoora Studio estrena su división de fotografía y cinematografía atlética de alta gama: <strong>Captoora Biometrics</strong>. Diseñada para capturar la biomecánica, la anatomía y el misticismo del atleta de élite mediante iluminación de claroscuro editorial y física de sombras real.
+      </div>
+    </div>
+
+    <!-- CONTEXTO Y SOBERANÍA -->
+    <h2><span class="num">01</span> ¿Por Qué El Hijo del Médico Asesino?</h2>
+    <div class="grid-2">
+      <div class="card card-accent">
+        <div class="card-label">Legado & Mística</div>
+        <div class="card-title">Ídolo de Dinastía Nacional</div>
+        <div class="card-text">
+          Portador de una de las máscaras y legados más respetados en la historia de la Lucha Libre Mexicana. Mística pura, respeto de la afición y presencia imponente en cuadriláteros de México y el mundo.
+        </div>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Presente & Poder</div>
+        <div class="card-title">Coach de Transformación Física</div>
+        <div class="card-text">
+          Entrenador y mentor de atletas en Nuevo León. Representa la disciplina, la fuerza biomecánica real y la estética muscular de alto nivel que inspira a miles de personas a entrenar.
+        </div>
+      </div>
+    </div>
+
+    <!-- EL CONCEPTO DE SET DUAL -->
+    <h2><span class="num">02</span> Arquitectura de la Sesión en Estudio (Set Dual)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-label">Set A // Fondo Negro Editorial</div>
+        <div class="card-title">🥊 La Máscara del Ídolo</div>
+        <div class="card-text">
+          Iluminación dramática Split y Rembrandt. Claroscuro cinematográfico, la máscara en alta textura, mirada penetrante, capa o bata oficial y poses clásicas de campeonato que imponen autoridad legendaria.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Set B // Luz Biomecánica</div>
+        <div class="card-title">⚡ El Coach de Élite</div>
+        <div class="card-text">
+          Fotografía de acción y tensión muscular con accesorios de entrenamiento (mancuernas, cadenas, ropes o vendaje de manos). Resalta la definición muscular y la potencia atlética para su marca de coaching.
+        </div>
+      </div>
+    </div>
+
+    <!-- LEY VISUAL Y CERO RECORTE -->
+    <div class="quote-box">
+      <div class="quote-text">«Cero recortes, cero filtros artificiales de celular. Fotografía Full-Frame que honra la fuerza, el peso de la máscara y la estética física del atleta.»</div>
+      <div class="quote-sub">— Chuy Poncho Gutiérrez // Fundador y Fotógrafo Titular de Captoora</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div>CAPTOORA STUDIO // Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.</div>
+    <div>PÁGINA 1 DE 2</div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="brand-group">
+        <div class="logo-x">X</div>
+        <div>
+          <div class="brand-title">CAPTOORA BIOMETRICS</div>
+          <div class="brand-sub">Deliverables & Synergy Agreement</div>
+        </div>
+      </div>
+      <div class="doc-meta">
+        COLLAB AGREEMENT // <span>ZERO CASH FRICTION</span><br>
+        STATUS: <span>VIP INVITATION</span>
+      </div>
+    </div>
+
+    <!-- ENTREGABLES EXACTOS -->
+    <h2><span class="num">03</span> Entregables para el Atleta (Cortesía Total de Captoora)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Activo Visual</th>
+          <th>Detalle Técnico</th>
+          <th>Uso Comercial / Redes</th>
+          <th>Inversión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>15 Fotos Master Editadas</strong></td>
+          <td>Revelado de alta gama en colorimetría de piel y sombras de contacto reales. Alta resolución en Pixieset.</td>
+          <td>Pósters oficiales, fotos de perfil, material para arenas, patrocinadores y prensa.</td>
+          <td><span class="tag-free">CORTESÍA $0</span></td>
+        </tr>
+        <tr>
+          <td><strong>2 Video-Clips 4K Verticales</strong></td>
+          <td>10 a 15 segundos en formato 9:16 con iluminación de estudio, cámara lenta y edición de impacto.</td>
+          <td>Reels y TikToks con audio de tendencia para captar nuevos alumnos de fitness.</td>
+          <td><span class="tag-free">CORTESÍA $0</span></td>
+        </tr>
+        <tr>
+          <td><strong>Foto Instantánea Instax Mini</strong></td>
+          <td>Entrega física de cortesía en el momento de la sesión como recuerdo tangible.</td>
+          <td>Pieza conmemorativa del set.</td>
+          <td><span class="tag-free">CORTESÍA $0</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SINERGIA MUTUA -->
+    <h2><span class="num">04</span> La Sinergia de Colaboración (Win-Win)</h2>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-label">Paso 01</div>
+        <div class="card-title">Sesión Privada</div>
+        <div class="card-text">
+          60 a 90 minutos en Captoora Studio en Colinas de San Jerónimo. Café, música, vestidor privado y atención 100% personalizada por Poncho.
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">Paso 02</div>
+        <div class="card-title">Instagram Collabs</div>
+        <div class="card-text">
+          Se lanza el Reel y el carrusel estelar como <strong>Publicación en Colaboración</strong> mutua entre su cuenta oficial y @captoora.
+        </div>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Paso 03</div>
+        <div class="card-title">Embajador Biometrics</div>
+        <div class="card-text">
+          El Hijo del Médico Asesino queda registrado como el Atleta Inaugural de la línea Captoora Biometrics en Monterrey.
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGÍSTICA DE CONTACTO -->
+    <h2><span class="num">05</span> Logística de Sede y Fechas</h2>
+    <div class="card" style="margin-bottom: 14px;">
+      <p style="font-size: 8.5pt; color: #CBD5E1; margin-bottom: 4px;">
+        📍 <strong>Sede:</strong> Captoora Studio — Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.
+      </p>
+      <p style="font-size: 8.5pt; color: #CBD5E1; margin-bottom: 4px;">
+        📅 <strong>Fecha:</strong> Agenda abierta en horario matutino o vespertino de acuerdo a la disponibilidad del Coach.
+      </p>
+      <p style="font-size: 8.5pt; color: #CBD5E1; margin: 0;">
+        💬 <strong>Línea de Enlace Directo:</strong> WhatsApp Oficial Captoora: <strong>+52 81 4005 0088</strong> (Atendido por Marcos / Marin).
+      </p>
+    </div>
+
+    <!-- VEREDICTO FINAL -->
+    <div class="verdict-box">
+      <div>
+        <div class="stamp-text">PROPUESTA DE COLABORACIÓN OFICIAL // AVALADA POR DIRECCIÓN</div>
+        <div class="stamp-sub">CAPTOORA STUDIO // JAGF87 FOUNDER // AUTORIZADO PARA ENVÍO INMEDIATO</div>
+      </div>
+      <div class="stamp-badge">100% VIP ACCORD</div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div>CAPTOORA STUDIO // WhatsApp Oficial: +52 81 4005 0088 // San Jerónimo, Monterrey</div>
+    <div>PÁGINA 2 DE 2</div>
+  </div>
+</div>
+
+</body>
+</html>
