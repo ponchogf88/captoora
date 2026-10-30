@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Catálogo Maestro de Recursos de Diseño, Motion UI y Herramientas Web</title>
+<style>
+  @page {
+    size: letter portrait;
+    margin: 14mm 14mm 16mm 14mm;
+    @bottom-right {
+      content: counter(page) " de " counter(pages);
+      font-size: 8pt;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #666;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+    line-height: 1.45;
+    font-size: 9.5pt;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* HEADER & COVER SECTION */
+  .doc-header {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+  }
+  
+  .badge-top {
+    display: inline-block;
+    background: #000000;
+    color: #CCFF00;
+    font-size: 7.5pt;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+  
+  h1 {
+    font-size: 19pt;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #000000;
+    margin: 0 0 6px 0;
+    line-height: 1.15;
+  }
+  
+  .subtitle {
+    font-size: 10pt;
+    color: #4b5563;
+    margin: 0 0 12px 0;
+    font-weight: 500;
+  }
+  
+  .meta-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #000000;
+    padding: 10px 14px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+    font-size: 8.5pt;
+  }
+  
+  .meta-item strong {
+    color: #111827;
+  }
+  
+  .meta-item span {
+    color: #4b5563;
+  }
+  
+  .notice-banner {
+    margin-top: 14px;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-left: 4px solid #f59e0b;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    color: #92400e;
+    line-height: 1.4;
+  }
+  
+  /* SECTION STYLING */
+  .section-title {
+    font-size: 12pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #000000;
+    border-bottom: 1.5px solid #000000;
+    padding-bottom: 4px;
+    margin: 22px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    page-break-after: avoid;
+  }
+  
+  .section-tag {
+    font-size: 8pt;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.02em;
+    text-transform: none;
+  }
+  
+  .section-desc {
+    font-size: 8.5pt;
+    color: #4b5563;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+  }
+  
+  /* RESOURCE CARD / TABLE */
+  table.resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 14px;
+    font-size: 8.5pt;
+    page-break-inside: auto;
+  }
+  
+  table.resource-table tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  
+  table.resource-table th {
+    background: #111827;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 7pt;
+    padding: 7px 10px;
+    text-align: left;
+    border: 1px solid #111827;
+  }
+  
+  table.resource-table td {
+    border: 1px solid #e5e7eb;
+    padding: 8px 10px;
+    vertical-align: top;
+  }
+  
+  table.resource-table tr:nth-child(even) td {
+    background: #fbfcfd;
+  }
+  
+  .res-num {
+    font-weight: 800;
+    color: #111827;
+    width: 26px;
+    text-align: center;
+    background: #f3f4f6 !important;
+  }
+  
+  .res-name {
+    font-weight: 800;
+    color: #000000;
+    font-size: 9pt;
+  }
+  
+  .res-url {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 7.5pt;
+    color: #2563eb;
+    margin-top: 2px;
+    word-break: break-all;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .res-desc {
+    color: #374151;
+    line-height: 1.4;
+  }
+  
+  .res-utility {
+    margin-top: 4px;
+    font-size: 8pt;
+    color: #059669;
+    font-weight: 500;
+  }
+  
+  .res-source {
+    font-size: 7.5pt;
+    color: #6b7280;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+    background: #f3f4f6;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+  
+  .page-break {
+    page-break-after: always;
+  }
+  
+  .summary-stat-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 16px 0 20px 0;
+  }
+  
+  .stat-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .stat-num {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1;
+  }
+  
+  .stat-label {
+    font-size: 7.5pt;
+    color: #6b7280;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+  
+  .footer-sig {
+    margin-top: 25px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 8pt;
+    color: #6b7280;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER / INTRO -->
+<div class="doc-header">
+  <div class="badge-top">Auditoría Exhaustiva & Cotejo Técnico</div>
+  <h1>Catálogo Maestro de Recursos de Diseño, Motion UI y Herramientas Web</h1>
+  <div class="subtitle">Inventario consolidado de las 76 plataformas, repositorios, motores gráficos, shaders y librerías extraídas de las capturas de pantalla de X (Twitter) y referencias discutidas para Captoora Studio.</div>
+  
+  <div class="meta-box">
+    <div class="meta-item"><strong>Solicitado por:</strong> <span>Alfonso "Poncho" Gutiérrez Flores (@ponchogf88)</span></div>
+    <div class="meta-item"><strong>Fecha de Generación:</strong> <span>30 de Octubre de 2026</span></div>
+    <div class="meta-item"><strong>Proyecto:</strong> <span>Captoora Studio (Colinas de San Jerónimo 11, Mty)</span></div>
+    <div class="meta-item"><strong>Estado de Auditoría:</strong> <span>100% Cotejado contra Capturas y Logs (Cero Omisiones)</span></div>
+  </div>
+  
+  <div class="notice-banner">
+    <strong>Propósito de este documento:</strong> Este expediente reúne de forma minuciosa, transparente y no complaciente la totalidad de las referencias visuales, repositorios y recursos que fueron compartidos mediante capturas de pantalla de tu dispositivo móvil y en los diálogos del proyecto. Incluye URLs directas, propósito técnico, qué se prometió/analizó para la web y la procedencia exacta de cada captura.
+  </div>
+</div>
+
+<div class="summary-stat-box">
+  <div class="stat-card">
+    <div class="stat-num">76</div>
+    <div class="stat-label">Recursos Totales</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">14</div>
+    <div class="stat-label">Capturas de X Auditadas</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">7</div>
+    <div class="stat-label">Categorías Especializadas</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Cotejo Verificado</div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 1: EL "SANTO GRIAL" DE MOTION UI -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>1. El "Santo Grial" de Motion UI & Componentes Interactivos</span>
+  <span class="section-tag">Captura de Noah (@noahelhadedy) · media_1793038662459.png</span>
+</div>
+<div class="section-desc">
+  Plataformas de componentes de código listos para React y Tailwind CSS para animaciones con resortes táctiles, bordes iluminados y fondos dinámicos.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Recurso & Enlace</th>
+      <th style="width: 45%;">Descripción Técnica & Propósito</th>
+      <th style="width: 25%;">Aplicación Planteada / Caso de Uso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">1</td>
+      <td>
+        <div class="res-name">21st.dev</div>
+        <a class="res-url" href="https://21st.dev" target="_blank">https://21st.dev</a>
+        <div class="res-source">media_1793038662459.png · Noah #1</div>
+      </td>
+      <td class="res-desc">
+        El "npm" de los componentes de diseño. Catálogo comunitario abierto con componentes animados creados por los mejores ingenieros visuales del mundo (Tailwind, Framer Motion, Radix).
+        <div class="res-utility">Enfoque: Copiar y pegar código modular sin dependencias pesadas.</div>
+      </td>
+      <td class="res-desc">
+        Tarjetas interactivas de servicios, modales fluidos y micro-interacciones de navegación.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">2</td>
+      <td>
+        <div class="res-name">motion-primitives.com</div>
+        <a class="res-url" href="https://motion-primitives.com" target="_blank">https://motion-primitives.com</a>
+        <div class="res-source">media_1793038662459.png · Noah #2</div>
+      </td>
+      <td class="res-desc">
+        Primitivas avanzadas de animación construidas sobre Motion (antes Framer Motion). Incluye componentes de texto revelador, acordeones elásticos, morphing y transiciones de layout compartidas.
+        <div class="res-utility">Enfoque: Física de resortes y movimiento declarativo.</div>
+      </td>
+      <td class="res-desc">
+        Revelación suave de citas editoriales, transiciones entre pestañas de paquetes y acordeones de preguntas frecuentes.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">3</td>
+      <td>
+        <div class="res-name">reactbits.dev</div>
+        <a class="res-url" href="https://reactbits.dev" target="_blank">https://reactbits.dev</a>
+        <div class="res-source">media_1793038662459.png · Noah #3</div>
+      </td>
+      <td class="res-desc">
+        Librería de componentes React especializada en fondos animados, shaders WebGL, partículas atmosféricas, ruido analógico y refracciones de cristal (*glassmorphism*).
+        <div class="res-utility">Enfoque: Fondos de alta fidelidad sin penalizar el rendimiento.</div>
+      </td>
+      <td class="res-desc">
+        Fondo oscuro *Dark Void* interactivo con motas de polvo estelar y destellos para el Hero de la web de Captoora.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">4</td>
+      <td>
+        <div class="res-name">hover.dev</div>
+        <a class="res-url" href="https://hover.dev" target="_blank">https://hover.dev</a>
+        <div class="res-source">media_1793038662459.png · Noah #4</div>
+      </td>
+      <td class="res-desc">
+        Colección de micro-interacciones animadas para botones, menús, cursores magnéticos, tarjetas con efecto 3D al mouse y retroalimentación táctil.
+        <div class="res-utility">Enfoque: Sensación táctil y reactividad inmediata.</div>
+      </td>
+      <td class="res-desc">
+        Botón magnético de WhatsApp con rebote elástico y tarjetas de fotógrafos que se inclinan en 3D según el cursor.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">5</td>
+      <td>
+        <div class="res-name">ui.aceternity.com</div>
+        <a class="res-url" href="https://ui.aceternity.com" target="_blank">https://ui.aceternity.com</a>
+        <div class="res-source">media_1793038662459.png · Noah #5</div>
+      </td>
+      <td class="res-desc">
+        Biblioteca de componentes premium creada por Manu Arora con Tailwind y Framer Motion. Pionera en efectos de Bento Grid, 3D Pin, lámparas de luz (Spotlight) y bordes con trazado resplandeciente.
+        <div class="res-utility">Enfoque: Estética Obsidian / Dark Luxe de clase mundial.</div>
+      </td>
+      <td class="res-desc">
+        Bento Grid interactivo para exhibir las tarifas ($1,000 básica, $350 renta, combos) con bordes iluminados de 1px.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">6</td>
+      <td>
+        <div class="res-name">magicui.design</div>
+        <a class="res-url" href="https://magicui.design" target="_blank">https://magicui.design</a>
+        <div class="res-source">Thread Noah (Componentes animados)</div>
+      </td>
+      <td class="res-desc">
+        Más de 50 componentes animados para páginas de aterrizaje construidos con React, TypeScript y Tailwind CSS. Incluye bordes brillantes giratorios, animaciones de texto typewriter y globos de luz.
+        <div class="res-utility">Enfoque: Landing pages de alta conversión visual.</div>
+      </td>
+      <td class="res-desc">
+        Bordes dorados/lima giratorios para la tarjeta del paquete Signature y testimonios de clientas.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">7</td>
+      <td>
+        <div class="res-name">cult-ui.com</div>
+        <a class="res-url" href="https://cult-ui.com" target="_blank">https://cult-ui.com</a>
+        <div class="res-source">Thread Noah (Componentes animados)</div>
+      </td>
+      <td class="res-desc">
+        Colección de componentes y primitivas de diseño con estética austera, minimalista y refinada para aplicaciones y landing pages web modernas.
+        <div class="res-utility">Enfoque: Tipografía elegante y micro-interacciones sutiles.</div>
+      </td>
+      <td class="res-desc">
+        Selectores de fecha, acordeones técnicos y controles de reproducción visual discretos.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 2: ARQUITECTURA OPUS 5.5 MOTION LAB -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>2. Arquitectura Opus 5.5 Motion Lab & Pipeline de 4 Fases (60 FPS)</span>
+  <span class="section-tag">Captura de Florian / Skunzu (@skunzu) · media_1793038829583.jpg</span>
+</div>
+<div class="section-desc">
+  Arquitectura técnica determinista para generar gráficos, 3D y video a 60 FPS reales mediante un pipeline desacoplado: <strong>AST Gen &rarr; Physics &rarr; Raster &rarr; WASM Transcode</strong>.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Módulo / Repositorio</th>
+      <th style="width: 45%;">Función en el Pipeline Determinista (Opus 5.5)</th>
+      <th style="width: 25%;">Rol en el Storytelling de Cámara</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">8</td>
+      <td>
+        <div class="res-name">three.js / Three.js Runtime</div>
+        <a class="res-url" href="https://threejs.org" target="_blank">https://threejs.org</a>
+        <div class="res-source">Node 01 · 16.3K stars · 120 FPS</div>
+      </td>
+      <td class="res-desc">
+        Motor 3D para la web. Responsable del viewport tridimensional, rig de cámara orbital (<code>scene_camera_rig.js</code>) y shaders GLSL personalizados compilados (<code>custom_shaders.glsl</code>).
+      </td>
+      <td class="res-desc">
+        Renderizado del lente, curvatura de cristal y rotación 360° de la cámara en el Acto 1.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">9</td>
+      <td>
+        <div class="res-name">motion (Framer Motion)</div>
+        <a class="res-url" href="https://motion.dev" target="_blank">https://motion.dev</a>
+        <div class="res-source">Node 02 · 34.8K stars · Spring FSM</div>
+      </td>
+      <td class="res-desc">
+        Motor de físicas de resorte (<code>spring_physics.ts</code>). Controla masa, rigidez y amortiguación elástica, con transformaciones FLIP sin impacto en el DOM (<code>layout_shift.tsx</code>).
+      </td>
+      <td class="res-desc">
+        Micro-respiración óptica del encuadre y desaceleración fluida al detener el scroll.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">10</td>
+      <td>
+        <div class="res-name">Fabric.js (Vector Canvas)</div>
+        <a class="res-url" href="https://fabricjs.com" target="_blank">https://fabricjs.com</a>
+        <div class="res-source">Node 03 · 31.4K stars · 2D Engine</div>
+      </td>
+      <td class="res-desc">
+        Lienzo vectorial 2D interactivo con serialización a modelo de objetos JSON (<code>object_model.js</code>) e interpolación de trazados bezier (<code>path_tween.js</code>).
+      </td>
+      <td class="res-desc">
+        Generación de la retícula de enfoque Live View del sensor y gráfico de histograma.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">11</td>
+      <td>
+        <div class="res-name">ffmpeg.wasm</div>
+        <a class="res-url" href="https://ffmpegwasm.netlify.app" target="_blank">https://ffmpegwasm.netlify.app</a>
+        <div class="res-source">Node 04 · 17.8K stars · WASM Heap</div>
+      </td>
+      <td class="res-desc">
+        Transcodificador de video y audio en WebAssembly (WASM). Buffer en memoria de 512MB, captura de fotogramas cliente (<code>frame_grab.ts</code>) y mezcla de audio con precisión de 1.2 ms (<code>audio_join.ts</code>).
+      </td>
+      <td class="res-desc">
+        Exportación programática de clips MP4 para redes sociales directamente en la máquina del usuario.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">12</td>
+      <td>
+        <div class="res-name">Deck.gl</div>
+        <a class="res-url" href="https://deck.gl" target="_blank">https://deck.gl</a>
+        <div class="res-source">Node 05 · 14.6K stars · WebGL2 Big-Data</div>
+      </td>
+      <td class="res-desc">
+        Capas de aceleración gráfica WebGL2 para renderizar nubes de puntos densas (<code>point_cloud.js</code>) y proyecciones geográficas en perspectiva (<code>geo_project.js</code>).
+      </td>
+      <td class="res-desc">
+        Nube de partículas tridimensional que simula el haz de luz estroboscópico del flash.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">13</td>
+      <td>
+        <div class="res-name">canvas-confetti</div>
+        <a class="res-url" href="https://github.com/catdad/canvas-confetti" target="_blank">https://github.com/catdad/canvas-confetti</a>
+        <div class="res-source">Node 06 · 12.7K stars · Zero deps</div>
+      </td>
+      <td class="res-desc">
+        Motor de simulación de partículas ultra-liviano. Calcula gravedad, velocidad angular y trayectorias de ráfagas a 60 FPS (<code>particle_vel.js</code>, <code>burst_seq.js</code>).
+      </td>
+      <td class="res-desc">
+        Destello de celebración al confirmar una reserva o presionar el botón de disparo.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">14</td>
+      <td>
+        <div class="res-name">@react-three/drei</div>
+        <a class="res-url" href="https://github.com/pmndrs/drei" target="_blank">https://github.com/pmndrs/drei</a>
+        <div class="res-source">Node 07 · 27.0% GPU load · Helpers</div>
+      </td>
+      <td class="res-desc">
+        Paquete de utilidades para React Three Fiber: skybox de iluminación HDR de estudio (<code>hdr_env.tsx</code>) y controles orbitales amortiguados (<code>orbit_ctrl.tsx</code>).
+      </td>
+      <td class="res-desc">
+        Simulación de los reflejos de las luces de recorte cian/ámbar en el cuerpo de aleación de magnesio.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">15</td>
+      <td>
+        <div class="res-name">cobe (3D WebGL Globe)</div>
+        <a class="res-url" href="https://github.com/shuding/cobe" target="_blank">https://github.com/shuding/cobe</a>
+        <div class="res-source">Node 08 · 5KB · WebGL Dot Globe</div>
+      </td>
+      <td class="res-desc">
+        Globo terráqueo 3D interactivo en WebGL creado por Shu Ding (Vercel). Puntos matemáticos (<code>dot_globe.js</code>) y pulsos de arcos de coordenadas (<code>marker_pulse.js</code>).
+      </td>
+      <td class="res-desc">
+        Visualización de clientes foráneos que viajan a Monterrey o mapa de cobertura de sesiones.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">16</td>
+      <td>
+        <div class="res-name">twgl.js (Tiny WebGL)</div>
+        <a class="res-url" href="https://twgljs.org" target="_blank">https://twgljs.org</a>
+        <div class="res-source">Node 09 · Buffer Clean · Zero boilerplate</div>
+      </td>
+      <td class="res-desc">
+        Librería ultraligera creada por Greggman para eliminar el código repetitivo de WebGL nativo: vinculación de buffers (<code>buffer_bind.js</code>) y compilación limpia de programas shader.
+      </td>
+      <td class="res-desc">
+        Efecto de diafragma iris de 9 palas con aceleración gráfica pura sin sobrecargar memoria.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">17</td>
+      <td>
+        <div class="res-name">Rive Runtime (@rive-app)</div>
+        <a class="res-url" href="https://rive.app" target="_blank">https://rive.app</a>
+        <div class="res-source">Node 10 · 1.2K stars · Vector FSM</div>
+      </td>
+      <td class="res-desc">
+        Motor vectorial interactivo basado en máquinas de estados finitos booleanas (<code>state_machine.ts</code>). Archivos binarios de pocos kilobytes con bucles fluidos a 128 FPS.
+      </td>
+      <td class="res-desc">
+        Monograma interactivo de Captoora cuyo destello reacciona al cursor y a eventos de clic.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 3: GALERÍAS DE DISEÑO, MICRO-DETALLES Y LANDING PAGES -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>3. Galerías de Diseño, Micro-detalles & Landing Pages</span>
+  <span class="section-tag">Capturas de Dev Patel, Bardhyl Bytyqi, Nero y Tripti Tripathi</span>
+</div>
+<div class="section-desc">
+  Colecciones curadas de interfaces, animación de UI a 60 FPS, diseño de pies de página, barras de navegación y plantillas modulares.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Plataforma & Enlace</th>
+      <th style="width: 45%;">Especialidad Visual & Enfoque</th>
+      <th style="width: 25%;">Origen de la Captura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">18</td>
+      <td>
+        <div class="res-name">60fps.design</div>
+        <a class="res-url" href="https://60fps.design" target="_blank">https://60fps.design</a>
+      </td>
+      <td class="res-desc">
+        Catálogo curado de micro-interacciones de aplicaciones móviles y web que se ejecutan a 60 FPS reales. Ideal para estudiar aceleración, inercia y transiciones sin tirones.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #1</div>
+        <div class="res-source">media_1793038932620.png · Bardhyl #9</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">19</td>
+      <td>
+        <div class="res-name">godly.website</div>
+        <a class="res-url" href="https://godly.website" target="_blank">https://godly.website</a>
+      </td>
+      <td class="res-desc">
+        El estándar dorado de curaduría de sitios web premiados. Referencia mundial en diseño web premium con shaders WebGL, estética oscura, tipografías elegantes y transiciones de página continuas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932620.png · Bardhyl #8</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">20</td>
+      <td>
+        <div class="res-name">detail.design</div>
+        <a class="res-url" href="https://detail.design" target="_blank">https://detail.design</a>
+      </td>
+      <td class="res-desc">
+        Directorio dedicado exclusivamente a micro-detalles y elementos de alta artesanía digital: interruptores táctiles, estados de hover no convencionales, tooltips dinámicos y controles finos.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #5</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">21</td>
+      <td>
+        <div class="res-name">scrolltide.co</div>
+        <a class="res-url" href="https://scrolltide.co" target="_blank">https://scrolltide.co</a>
+      </td>
+      <td class="res-desc">
+        Más de 600 prompts de diseño y código fuente completo para sitios 3D, desplazamiento interactivo (*scroll-driven*) y elementos web dinámicos.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Tripti #1</div>
+        <div class="res-source">media_1793038932460.png · Nero #8</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">22</td>
+      <td>
+        <div class="res-name">landdding.com</div>
+        <a class="res-url" href="https://landdding.com" target="_blank">https://landdding.com</a>
+      </td>
+      <td class="res-desc">
+        Directorio de referencias para páginas de aterrizaje (*landing pages*) con estructura de alta conversión, jerarquía tipográfica probada y estética moderna.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932620.png · Bardhyl #3</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">23</td>
+      <td>
+        <div class="res-name">modulify.ai / templates</div>
+        <a class="res-url" href="https://modulify.ai/templates" target="_blank">https://modulify.ai/templates</a>
+      </td>
+      <td class="res-desc">
+        Plantillas modulares de sitios web listas para producción. Alternativa visual de alto calibre para generar maquetas y estructuras completas de interfaces rápidamente.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932460.png · Nero #1</div>
+        <div class="res-source">media_1793038932620.png · Bardhyl #1</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">24</td>
+      <td>
+        <div class="res-name">motionin.design</div>
+        <a class="res-url" href="https://motionin.design" target="_blank">https://motionin.design</a>
+      </td>
+      <td class="res-desc">
+        Galería de inspiración enfocada puramente en diseño de movimiento para la web y aplicaciones. Muestra ejemplos reales de aceleraciones, resortes y transiciones de pantallas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932620.png · Bardhyl #2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">25</td>
+      <td>
+        <div class="res-name">inspora.design</div>
+        <a class="res-url" href="https://inspora.design" target="_blank">https://inspora.design</a>
+      </td>
+      <td class="res-desc">
+        Inspiración visual diaria recolectada desde la comunidad creativa global de X: branding, pósters digitales, tipografía en movimiento y maquetas de interfaces.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #4</div>
+        <div class="res-source">media_1793038932460.png · Nero #4</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">26</td>
+      <td>
+        <div class="res-name">bestdesignsonx.com</div>
+        <a class="res-url" href="https://bestdesignsonx.com" target="_blank">https://bestdesignsonx.com</a>
+      </td>
+      <td class="res-desc">
+        Repositorio de los diseños de producto, interfaz y sitios web más votados y virales publicados por ingenieros y diseñadores en X.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #6</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">27</td>
+      <td>
+        <div class="res-name">theinternetdesigns.com</div>
+        <a class="res-url" href="https://theinternetdesigns.com" target="_blank">https://theinternetdesigns.com</a>
+      </td>
+      <td class="res-desc">
+        Inspiración de interfaces contemporáneas y proyectos experimentales nacidos en comunidades de diseño digital independiente.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #7</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">28</td>
+      <td>
+        <div class="res-name">collectui.com</div>
+        <a class="res-url" href="https://collectui.com" target="_blank">https://collectui.com</a>
+      </td>
+      <td class="res-desc">
+        Archivo diario de componentes clasificados por patrón de interacción: formularios de registro, modales de confirmación, tablas de precios y pantallas de pago.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">29</td>
+      <td>
+        <div class="res-name">recent.design</div>
+        <a class="res-url" href="https://recent.design" target="_blank">https://recent.design</a>
+      </td>
+      <td class="res-desc">
+        Descubrimientos diarios de diseño web y nuevas herramientas de desarrollo visual curadas para creativos independientes.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Dev Patel #3</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">30</td>
+      <td>
+        <div class="res-name">wonderlist.design</div>
+        <a class="res-url" href="https://wonderlist.design" target="_blank">https://wonderlist.design</a>
+      </td>
+      <td class="res-desc">
+        Directorio curado de archivos, librerías de componentes y kits de UI profesionales para Figma creados por diseñadores de élite.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932620.png · Bardhyl #4</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">31</td>
+      <td>
+        <div class="res-name">on.design</div>
+        <a class="res-url" href="https://on.design" target="_blank">https://on.design</a>
+      </td>
+      <td class="res-desc">
+        Comunidad y plataforma de descubrimiento de portafolios de diseño, sitios editoriales sobrios y páginas de tipografía suiza.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932620.png · Bardhyl #7</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">32</td>
+      <td>
+        <div class="res-name">navbar.gallery</div>
+        <a class="res-url" href="https://navbar.gallery" target="_blank">https://navbar.gallery</a>
+      </td>
+      <td class="res-desc">
+        Galería de inspiración dedicada exclusivamente a cabeceras de navegación (navbars), islas dinámicas flotantes, menús en cristal esmerilado y headers responsive.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Tripti #2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">33</td>
+      <td>
+        <div class="res-name">footer.design</div>
+        <a class="res-url" href="https://footer.design" target="_blank">https://footer.design</a>
+      </td>
+      <td class="res-desc">
+        Colección especializada en el diseño y arquitectura de pies de página (*footers*): enlaces de contacto, acreditación de autor, avisos legales y llamadas a la acción finales.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038829919.png · Tripti #3</div>
+        <div class="res-source">media_1793038932460.png · Nero #7</div>
+        <div class="res-source">media_1793038932620.png · Bardhyl #10</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 4: SHADERS, FONDOS, AUDIO HÁPTICO, ICONOS Y TIPOGRAFÍA -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>4. Shaders, Fondos, Audio Háptico, Iconos & Tipografía</span>
+  <span class="section-tag">Capturas de Nero y Bardhyl Bytyqi · media_1793038932460.png y 620.png</span>
+</div>
+<div class="section-desc">
+  Herramientas para inyectar micro-sonidos táctiles (click de cámara), shaders ópticos, texturas de grano analógico y diseño tipográfico de alta gama.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Recurso & Enlace</th>
+      <th style="width: 45%;">Descripción Técnica & Capacidad</th>
+      <th style="width: 25%;">Aplicación al Concepto de Cámara</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">34</td>
+      <td>
+        <div class="res-name">audiocn.dev</div>
+        <a class="res-url" href="https://audiocn.dev" target="_blank">https://audiocn.dev</a>
+        <div class="res-source">media_1793038932460.png · Nero #5</div>
+      </td>
+      <td class="res-desc">
+        Componentes de audio y catálogo de efectos de sonido (SFX) para la web. Diseñado para añadir respuesta sonora inmediata a interacciones de usuario en tiempo real.
+      </td>
+      <td class="res-desc">
+        Sonido háptico de obturador de cámara Nikon Z9 al presionar el botón de reserva o disparar la foto.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">35</td>
+      <td>
+        <div class="res-name">squints.app</div>
+        <a class="res-url" href="https://squints.app" target="_blank">https://squints.app</a>
+        <div class="res-source">media_1793038932460.png · Nero #2</div>
+      </td>
+      <td class="res-desc">
+        Plataforma interactiva para crear shaders, distorsiones visuales, aberración cromática y gradientes dinámicos en código directo ("Design is moving into code").
+      </td>
+      <td class="res-desc">
+        Simulación de la refracción del cristal f/1.2 y destello anamórfico en el pentaprisma.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">36</td>
+      <td>
+        <div class="res-name">backgrounds.supply</div>
+        <a class="res-url" href="https://backgrounds.supply" target="_blank">https://backgrounds.supply</a>
+        <div class="res-source">media_1793038932460.png · Nero #3</div>
+      </td>
+      <td class="res-desc">
+        Colección curada de fondos oscuros de alta definición, grano de película analógico (*film grain*), ruido estocástico y gradientes de luz sutiles.
+      </td>
+      <td class="res-desc">
+        Texturizado del vacío negro puro (#000000) para evitar que la pantalla se sienta plana o plástica.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">37</td>
+      <td>
+        <div class="res-name">encyclopedia.iconography.co</div>
+        <a class="res-url" href="https://encyclopedia.iconography.co" target="_blank">https://encyclopedia.iconography.co</a>
+        <div class="res-source">media_1793038932460.png · Nero #6</div>
+      </td>
+      <td class="res-desc">
+        Directorio y enciclopedia de iconografía, símbolos técnicos y semiótica visual de interfaces analógicas y digitales.
+      </td>
+      <td class="res-desc">
+        Iconografía del visor de cámara (ISO, apertura, obturador, horquillado AF y regla de tercios).
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">38</td>
+      <td>
+        <div class="res-name">iconly.design</div>
+        <a class="res-url" href="https://iconly.design" target="_blank">https://iconly.design</a>
+        <div class="res-source">media_1793038932620.png · Bardhyl #5</div>
+      </td>
+      <td class="res-desc">
+        Sistema de más de 600 iconos vectoriales con estilos ajustables (línea fina, dos tonos, sólido) listos para aplicaciones web y móviles.
+      </td>
+      <td class="res-desc">
+        Iconos de contacto, geolocalización de estudio, WhatsApp y amenidades del set.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">39</td>
+      <td>
+        <div class="res-name">fontinlogo.com</div>
+        <a class="res-url" href="https://fontinlogo.com" target="_blank">https://fontinlogo.com</a>
+        <div class="res-source">media_1793038932620.png · Bardhyl #6</div>
+      </td>
+      <td class="res-desc">
+        Buscador de tipografías detrás de las marcas y logotipos más icónicos del mundo. Permite identificar la fuente exacta o análogos libres.
+      </td>
+      <td class="res-desc">
+        Identificación de fuentes display geométricas de alta gama para la palabra CAPTOORA sin sesgo de IA.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 5: REPOSITORIOS OPEN SOURCE & INFRAESTRUCTURA DE NEGOCIO -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>5. Repositorios Open Source & Infraestructura de Negocio</span>
+  <span class="section-tag">Capturas de Leonard Radman, Trending GitHub y Shahid Malik</span>
+</div>
+<div class="section-desc">
+  Herramientas de código abierto para automatizar citas, analítica web sin cookies, ingeniería inversa de video y agentes autónomos.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Repositorio & Enlace</th>
+      <th style="width: 45%;">Propósito Técnico & Arquitectura</th>
+      <th style="width: 25%;">Valor para Captoora Studio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">40</td>
+      <td>
+        <div class="res-name">Cal.com</div>
+        <a class="res-url" href="https://github.com/calcom/cal.com" target="_blank">github.com/calcom/cal.com</a>
+        <div class="res-source">media_1793038662441.png · Radman #1</div>
+      </td>
+      <td class="res-desc">
+        Plataforma de agenda y reserva de citas de código abierto (alternativa autoalojada a Calendly). Soporta pagos de anticipos vía Stripe, sincronización bidireccional con Google Calendar y zonas horarias automáticas.
+      </td>
+      <td class="res-desc">
+        Reserva instantánea de sesiones fotográficas y renta de estudio sin fricción por WhatsApp.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">41</td>
+      <td>
+        <div class="res-name">n8n</div>
+        <a class="res-url" href="https://github.com/n8n-io/n8n" target="_blank">github.com/n8n-io/n8n</a>
+        <div class="res-source">media_1793038662441.png · Radman #4</div>
+        <div class="res-source">media_1793038662528.png · Shahid Malik</div>
+      </td>
+      <td class="res-desc">
+        Plataforma de automatización de flujos de trabajo (*workflow automation*) extensible y autoalojada. Conecta más de 400 nodos con soporte nativo de agentes de IA y Webhooks.
+      </td>
+      <td class="res-desc">
+        Conexión de WhatsApp Business con Google Drive (fotos crudas), Google Sheets y notificaciones a clientas.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">42</td>
+      <td>
+        <div class="res-name">Ghost</div>
+        <a class="res-url" href="https://github.com/TryGhost/Ghost" target="_blank">github.com/TryGhost/Ghost</a>
+        <div class="res-source">media_1793038662441.png · Radman #3</div>
+      </td>
+      <td class="res-desc">
+        CMS moderno de código abierto para publicaciones, membresías y boletines por correo con arquitectura ultrarrápida en Node.js.
+      </td>
+      <td class="res-desc">
+        Publicación del blog fotográfico ("Cómo posar", "Guía Pumpkin Patch") y club de beneficios.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">43</td>
+      <td>
+        <div class="res-name">Plausible Analytics</div>
+        <a class="res-url" href="https://github.com/plausible/analytics" target="_blank">github.com/plausible/analytics</a>
+        <div class="res-source">media_1793038662441.png · Radman #2</div>
+      </td>
+      <td class="res-desc">
+        Analítica web ligera (<1KB), respetuosa de la privacidad, compatible con GDPR y sin requerir banners de cookies.
+      </td>
+      <td class="res-desc">
+        Métricas de conversión del sitio web de Captoora sin ralentizar la carga en teléfonos móviles.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">44</td>
+      <td>
+        <div class="res-name">Supabase</div>
+        <a class="res-url" href="https://github.com/supabase/supabase" target="_blank">github.com/supabase/supabase</a>
+        <div class="res-source">media_1793038662441.png · Radman #5</div>
+      </td>
+      <td class="res-desc">
+        Backend de código abierto alternativo a Firebase: PostgreSQL nativo, autenticación segura, almacenamiento de archivos y APIs en tiempo real.
+      </td>
+      <td class="res-desc">
+        Base de datos de clientas, historial de sesiones y registro de pagos.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">45</td>
+      <td>
+        <div class="res-name">Medusa</div>
+        <a class="res-url" href="https://github.com/medusajs/medusa" target="_blank">github.com/medusajs/medusa</a>
+        <div class="res-source">media_1793038662441.png · Radman #6</div>
+      </td>
+      <td class="res-desc">
+        Motor de comercio electrónico modular y *headless* de código abierto para desarrolladores (alternativa a Shopify).
+      </td>
+      <td class="res-desc">
+        Venta digital de tarjetas de regalo (Gift Cards) y paquetes de revelado de fotos.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">46</td>
+      <td>
+        <div class="res-name">VoiceStudio</div>
+        <a class="res-url" href="https://github.com/debpalash/VoiceStudio" target="_blank">github.com/debpalash/VoiceStudio</a>
+        <div class="res-source">media_1793038829824.png · Trending #1 (57K)</div>
+      </td>
+      <td class="res-desc">
+        Herramienta local que clona voces, dobla videos y transcribe en 646 idiomas sin enviar datos a la nube ni pagar créditos.
+      </td>
+      <td class="res-desc">
+        Locución en off para reels de Instagram y TikTok manteniendo la voz de marca del estudio.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">47</td>
+      <td>
+        <div class="res-name">ppt-master</div>
+        <a class="res-url" href="https://github.com/hugohe3/ppt-master" target="_blank">github.com/hugohe3/ppt-master</a>
+        <div class="res-source">media_1793038829824.png · Trending #2 (59K)</div>
+      </td>
+      <td class="res-desc">
+        Transforma archivos PDF o documentos de Word en presentaciones de PowerPoint editables con estructura visual profesional.
+      </td>
+      <td class="res-desc">
+        Generación automática del Lookbook de clientes y propuestas de eventos corporativos.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">48</td>
+      <td>
+        <div class="res-name">gods-eye-view</div>
+        <a class="res-url" href="https://github.com/bilawalsidhu/gods-eye-view" target="_blank">github.com/bilawalsidhu/gods-eye-view</a>
+        <div class="res-source">media_1793038829824.png · Trending #3 (50K)</div>
+      </td>
+      <td class="res-desc">
+        Visualizador satelital 3D en el navegador con rastreo en vivo de aviones, barcos y cámaras reales por Bilawal Sidhu.
+      </td>
+      <td class="res-desc">
+        Experiencia de mapa inmersivo 3D para la ubicación de San Jerónimo 11.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">49</td>
+      <td>
+        <div class="res-name">REA (Reverse Engineer Anything)</div>
+        <a class="res-url" href="https://github.com/morluto/rea" target="_blank">github.com/morluto/rea</a>
+        <div class="res-source">media_1793038829823.jpg · Prompt REA</div>
+        <div class="res-source">media_1793038829824.png · Trending #4 (65K)</div>
+      </td>
+      <td class="res-desc">
+        Metodología y prompt formal de ingeniería inversa bajo regla *Clean Room*. Deconstruye el comportamiento de aplicaciones nativas, APKs o sitios web en un archivo <code>SPEC.md</code> con mediciones exactas sin copiar código fuente.
+      </td>
+      <td class="res-desc">
+        Deconstrucción cuadro por cuadro de las animaciones elásticas de Duolingo y videos virales para replicar sus resortes en Captoora.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">50</td>
+      <td>
+        <div class="res-name">diagram-design</div>
+        <a class="res-url" href="https://github.com/cathrynlavery/diagram-design" target="_blank">github.com/cathrynlavery/diagram-design</a>
+        <div class="res-source">media_1793038829824.png · Trending #5 (49K)</div>
+      </td>
+      <td class="res-desc">
+        Generador automático de diagramas vectoriales estructurados adaptados a la paleta cromática e identidad de una marca.
+      </td>
+      <td class="res-desc">
+        Diagramas del flujo de reserva del cliente y organigrama del escuadrón de agentes.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">51</td>
+      <td>
+        <div class="res-name">paperclip</div>
+        <a class="res-url" href="https://github.com/paperclipai/paperclip" target="_blank">github.com/paperclipai/paperclip</a>
+        <div class="res-source">media_1793038829824.png · Trending #6 (99K)</div>
+      </td>
+      <td class="res-desc">
+        Plataforma de orquestación de agentes de IA para operar empresas autónomas con división de roles, tareas programadas y auditoría de ejecución.
+      </td>
+      <td class="res-desc">
+        Supervisión autónoma del escuadrón de agentes (Marin, Conan, Lalo) en segundo plano.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 6: MOTORES DE VIDEO PROGRAMÁTICO, 3D & MOTION MENCIONADOS -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>6. Motores de Video Programático, 3D & Motion Mencionados</span>
+  <span class="section-tag">Herramientas troncales discutidas en el chat y prompts del proyecto</span>
+</div>
+<div class="section-desc">
+  Tecnologías de renderizado de video, transcodificación determinista y motores de física web que se discutieron directamente para la construcción de la web de Captoora.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Tecnología & Enlace</th>
+      <th style="width: 45%;">Qué es & Capacidad Técnica</th>
+      <th style="width: 25%;">Promesa y Discusión en el Chat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">52</td>
+      <td>
+        <div class="res-name">Remotion</div>
+        <a class="res-url" href="https://remotion.dev" target="_blank">https://remotion.dev</a>
+        <div class="res-source">Discutido en chat · "El santo grial de video"</div>
+      </td>
+      <td class="res-desc">
+        Framework para crear videos reales en MP4 usando React, TypeScript y CSS. Permite programar animaciones frame por frame a 60 FPS con sincronización de audio exacta y renderizado por línea de comandos.
+      </td>
+      <td class="res-desc">
+        Creación de videos explicativos automatizados de 15 segundos y transiciones de portafolio sin abrir Premiere o After Effects.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">53</td>
+      <td>
+        <div class="res-name">FFmpeg (Suite & Core)</div>
+        <a class="res-url" href="https://ffmpeg.org" target="_blank">https://ffmpeg.org</a>
+        <div class="res-source">Discutido en chat · Mención explícita</div>
+      </td>
+      <td class="res-desc">
+        La navaja suiza universal para decodificar, codificar, recortar, multiplexar y filtrar cualquier formato de audio o video.
+      </td>
+      <td class="res-desc">
+        Compresión de videos pesados de 80MB del estudio a clips de 4MB de carga instantánea en iPhone y Android.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">54</td>
+      <td>
+        <div class="res-name">Rive (Rive App)</div>
+        <a class="res-url" href="https://rive.app" target="_blank">https://rive.app</a>
+        <div class="res-source">README.md · AGENTS.md · Stack Creativo</div>
+      </td>
+      <td class="res-desc">
+        Herramienta de diseño y motor gráfico interactivo que sustituye a Lottie. Utiliza máquinas de estados para que las animaciones reaccionen en tiempo real al puntero, clics o entradas numéricas.
+      </td>
+      <td class="res-desc">
+        El lente de Captoora que abre y cierra sus palas de diafragma al hacer scroll en la página.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">55</td>
+      <td>
+        <div class="res-name">GSAP + ScrollTrigger</div>
+        <a class="res-url" href="https://gsap.com" target="_blank">https://gsap.com</a>
+        <div class="res-source">captoora_3d_engine.js · Stack Oficial</div>
+      </td>
+      <td class="res-desc">
+        El estándar de la industria en motores de animación web ultrarrápidos. ScrollTrigger sincroniza las líneas de tiempo de animación directamente con la posición del desplazamiento.
+      </td>
+      <td class="res-desc">
+        Choreografía de los 5 Actos de scroll (Reveal, Face Off, Flash, Absorption, Galería Vórtice).
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">56</td>
+      <td>
+        <div class="res-name">Lenis Smooth Scroll</div>
+        <a class="res-url" href="https://lenis.darkroom.engineering" target="_blank">https://lenis.darkroom.engineering</a>
+        <div class="res-source">index.html · Darkroom Engineering</div>
+      </td>
+      <td class="res-desc">
+        Motor de desplazamiento suave (*smooth scroll*) ultraligero y accesible que desacopla la rueda física del mouse para lograr inercia cinematográfica como en las páginas de producto de Apple.
+      </td>
+      <td class="res-desc">
+        Sensación táctil premium de peso y suavidad al desplazarse por el Hero 3D de la cámara.
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">57</td>
+      <td>
+        <div class="res-name">React Three Fiber (R3F)</div>
+        <a class="res-url" href="https://docs.pmnd.rs/react-three-fiber" target="_blank">https://docs.pmnd.rs/react-three-fiber</a>
+        <div class="res-source">Discutido en chat · Mención técnica</div>
+      </td>
+      <td class="res-desc">
+        Envoltorio declarativo de Three.js para React. Permite componer escenas tridimensionales con físicas, sombras, reflejos y cámaras virtuales reutilizando el ciclo de vida de React.
+      </td>
+      <td class="res-desc">
+        Composición interactiva de hardware de estudio con iluminación de doble recorte en tiempo real.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ========================================== -->
+<!-- SECCIÓN 7: HERRAMIENTAS DE IA PARA INVESTIGACIÓN, CONTENIDO Y SEO -->
+<!-- ========================================== -->
+<div class="section-title">
+  <span>7. Herramientas de IA para Investigación, Contenido & SEO</span>
+  <span class="section-tag">Capturas de Virginio Gallardo, Tom Zaragoza, UI/UX Savior y KlodCat</span>
+</div>
+<div class="section-desc">
+  Plataformas de inteligencia artificial para búsqueda fundamentada, generación visual, protocolo MCP para Google Search Console y seguridad de repositorios.
+</div>
+
+<table class="resource-table">
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 25%;">Herramienta & Enlace</th>
+      <th style="width: 45%;">Función Principal & Metodología</th>
+      <th style="width: 25%;">Origen de la Captura</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="res-num">58</td>
+      <td>
+        <div class="res-name">prompts.chat</div>
+        <a class="res-url" href="https://prompts.chat" target="_blank">https://prompts.chat</a>
+      </td>
+      <td class="res-desc">
+        El repositorio abierto más grande del mundo para prompts de IA (>170k estrellas en GitHub). Contiene meta-prompts estructurados para programadores, redactores y directores de arte.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038662490.png · UI/UX Savior</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">59</td>
+      <td>
+        <div class="res-name">Searchata.com (MCP)</div>
+        <a class="res-url" href="https://searchata.com" target="_blank">https://searchata.com</a>
+      </td>
+      <td class="res-desc">
+        Protocolo MCP para conectar Claude y ChatGPT directamente a Google Search Console. Permite monitorear impresiones, clics y términos de búsqueda SEO de clientes en Monterrey sin salir del chat.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932527.png · Tom Zaragoza</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">60</td>
+      <td>
+        <div class="res-name">Consensus</div>
+        <a class="res-url" href="https://consensus.app" target="_blank">https://consensus.app</a>
+      </td>
+      <td class="res-desc">
+        Motor de búsqueda académica que utiliza IA para extraer hallazgos y consensos científicos a partir de más de 200 millones de publicaciones arbitradas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #4</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">61</td>
+      <td>
+        <div class="res-name">Elicit</div>
+        <a class="res-url" href="https://elicit.com" target="_blank">https://elicit.com</a>
+      </td>
+      <td class="res-desc">
+        Asistente de investigación para automatizar revisiones de literatura, resumir papers clave y tabular resultados de investigaciones complejas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #6</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">62</td>
+      <td>
+        <div class="res-name">ChatPDF</div>
+        <a class="res-url" href="https://chatpdf.com" target="_blank">https://chatpdf.com</a>
+      </td>
+      <td class="res-desc">
+        Permite subir documentos PDF (manuales, contratos legales o libros) e interactuar con ellos mediante preguntas y respuestas con citas textuales directas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #3</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">63</td>
+      <td>
+        <div class="res-name">Humata</div>
+        <a class="res-url" href="https://humata.ai" target="_blank">https://humata.ai</a>
+      </td>
+      <td class="res-desc">
+        Herramienta de análisis documental con IA enfocada en archivos técnicos y legales extensos para responder consultas y redactar informes rápidos.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #9</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">64</td>
+      <td>
+        <div class="res-name">Paperpal</div>
+        <a class="res-url" href="https://paperpal.com" target="_blank">https://paperpal.com</a>
+      </td>
+      <td class="res-desc">
+        Asistente de escritura y corrección de estilo académico que ofrece sugerencias de lenguaje formal y verificación de consistencia.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #12</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">65</td>
+      <td>
+        <div class="res-name">Perplexity AI</div>
+        <a class="res-url" href="https://perplexity.ai" target="_blank">https://perplexity.ai</a>
+      </td>
+      <td class="res-desc">
+        Motor de búsqueda conversacional que responde consultas complejas en tiempo real respaldando cada afirmación con fuentes web citadas.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #13</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">66</td>
+      <td>
+        <div class="res-name">Research Rabbit</div>
+        <a class="res-url" href="https://researchrabbit.ai" target="_blank">https://researchrabbit.ai</a>
+      </td>
+      <td class="res-desc">
+        Plataforma visual ("el Spotify de la investigación") para mapear redes de autores, citas interconectadas y literatura relacionada.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #14</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">67</td>
+      <td>
+        <div class="res-name">Scite.ai</div>
+        <a class="res-url" href="https://scite.ai" target="_blank">https://scite.ai</a>
+      </td>
+      <td class="res-desc">
+        Herramienta analítica para evaluar cómo se citan los artículos científicos, identificando si han sido respaldados, contrastados o refutados.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #15</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">68</td>
+      <td>
+        <div class="res-name">Midjourney</div>
+        <a class="res-url" href="https://midjourney.com" target="_blank">https://midjourney.com</a>
+      </td>
+      <td class="res-desc">
+        Sistema generativo de imágenes de alta fidelidad estética, iluminación cinematográfica y renderizado fotorrealista.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #11</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">69</td>
+      <td>
+        <div class="res-name">Stable Diffusion</div>
+        <a class="res-url" href="https://stability.ai" target="_blank">https://stability.ai</a>
+      </td>
+      <td class="res-desc">
+        Modelo de difusión generativo de imágenes de código abierto, personalizable mediante LoRAs y ControlNet para control de poses.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #16</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">70</td>
+      <td>
+        <div class="res-name">DeepL</div>
+        <a class="res-url" href="https://deepl.com" target="_blank">https://deepl.com</a>
+      </td>
+      <td class="res-desc">
+        Traductor neuronal de máxima fidelidad y comprensión contextual entre idiomas para redacción profesional.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #5</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">71</td>
+      <td>
+        <div class="res-name">Grammarly</div>
+        <a class="res-url" href="https://grammarly.com" target="_blank">https://grammarly.com</a>
+      </td>
+      <td class="res-desc">
+        Corrector de estilo, tono, gramática y claridad para redacción comercial y ejecutiva.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #8</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">72</td>
+      <td>
+        <div class="res-name">Claude (Anthropic)</div>
+        <a class="res-url" href="https://claude.ai" target="_blank">https://claude.ai</a>
+      </td>
+      <td class="res-desc">
+        Modelo de inteligencia artificial conversacional y de razonamiento avanzado con ventana de contexto extendida y habilidades de codificación.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #10</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">73</td>
+      <td>
+        <div class="res-name">ChatGPT / GPT-4o (OpenAI)</div>
+        <a class="res-url" href="https://chatgpt.com" target="_blank">https://chatgpt.com</a>
+      </td>
+      <td class="res-desc">
+        Sistema conversacional multimodal insignia de OpenAI para generación de texto, lógica y redacción.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #2</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">74</td>
+      <td>
+        <div class="res-name">Google Gemini</div>
+        <a class="res-url" href="https://gemini.google.com" target="_blank">https://gemini.google.com</a>
+      </td>
+      <td class="res-desc">
+        Modelo de IA nativamente multimodal de Google capaz de procesar audio, video, código y documentos extensos.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #7</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">75</td>
+      <td>
+        <div class="res-name">Microsoft Copilot</div>
+        <a class="res-url" href="https://copilot.microsoft.com" target="_blank">https://copilot.microsoft.com</a>
+      </td>
+      <td class="res-desc">
+        Asistente de IA integrado en el ecosistema de Microsoft para búsqueda conectada a Bing y automatización ofimática.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932904.png · Virginio #1</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="res-num">76</td>
+      <td>
+        <div class="res-name">klodcat.com</div>
+        <a class="res-url" href="https://klodcat.com" target="_blank">https://klodcat.com</a>
+      </td>
+      <td class="res-desc">
+        Plataforma y juego interactivo para aprender buenas prácticas de desarrollo con Claude Code y protocolos de seguridad para no exponer llaves de API en repositorios públicos de GitHub.
+      </td>
+      <td class="res-desc">
+        <div class="res-source">media_1793038932670.png · claudecode_es</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footer-sig">
+  <div><strong>Captoora Studio</strong> · Expediente Técnico de Auditoría de Diseño</div>
+  <div>Documento generado para Alfonso Gutiérrez Flores · Monterrey, N.L.</div>
+</div>
+
+</body>
+</html>
