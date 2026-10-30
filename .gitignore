@@ -23,3 +23,5 @@ test_video.mp4
 videos/
 web/
 docs/capturas_escritorio/
+assets/screen_recordings_referencia/
+*.mov
