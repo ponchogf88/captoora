@@ -253,7 +253,7 @@ html_story1 = f"""<!DOCTYPE html>
 </html>
 """
 
-# 2. POST 01 (1080x1350 Feed - Halloween Studio)
+# 2. POST 01 (1080x1350 Feed - Halloween Studio Full-Frame Master)
 html_post1 = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -263,92 +263,190 @@ html_post1 = f"""<!DOCTYPE html>
 .container {{
     width: 1080px; height: 1350px;
     position: relative;
-    background: #000000;
+    background: #08090b;
+    overflow: hidden;
 }}
-.main-photo {{
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+.backdrop-blur {{
+    position: absolute;
+    top: -40px; left: -40px; width: 1160px; height: 1430px;
     background-image: url('{PHOTO_STORY1_URI}');
     background-size: cover;
     background-position: center;
+    filter: blur(40px) brightness(0.48);
+    opacity: 0.95;
+    transform: scale(1.06);
 }}
-.vignette {{
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.65) 100%);
-    pointer-events: none;
-}}
-.logo-corner {{
+.fullframe-wrapper {{
     position: absolute;
-    bottom: 65px;
-    right: 65px;
-    z-index: 60;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }}
-.logo-post {{
-    width: 110px;
-    height: 110px;
+.fullframe-img {{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 4px 20px rgba(0,0,0,0.85));
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
 }}
-.brand-callout {{
+.vignette-overlay {{
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.5) 100%),
+                linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 16%, transparent 84%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none;
+    z-index: 20;
+}}
+.corner-bracket {{
     position: absolute;
-    bottom: 75px;
-    left: 65px;
+    width: 44px; height: 44px;
+    pointer-events: none;
+    z-index: 50;
+}}
+.cb-tl {{
+    top: 32px; left: 32px;
+    border-top: 2.5px solid #CCFF00;
+    border-left: 2.5px solid #CCFF00;
+}}
+.cb-tr {{
+    top: 32px; right: 32px;
+    border-top: 2.5px solid #CCFF00;
+    border-right: 2.5px solid #CCFF00;
+}}
+.cb-bl {{
+    bottom: 32px; left: 32px;
+    border-bottom: 2.5px solid #CCFF00;
+    border-left: 2.5px solid #CCFF00;
+}}
+.cb-br {{
+    bottom: 32px; right: 32px;
+    border-bottom: 2.5px solid #CCFF00;
+    border-right: 2.5px solid #CCFF00;
+}}
+.editorial-header {{
+    position: absolute;
+    top: 42px;
+    left: 95px;
+    right: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 60;
-    background: rgba(10, 10, 10, 0.82);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.18);
-    padding: 14px 26px;
-    border-radius: 40px;
+}}
+.header-badge {{
+    background: rgba(10, 12, 14, 0.78);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.92);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 9px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }}
-.brand-name-callout {{
+.header-dot {{
+    width: 8px;
+    height: 8px;
+    background: #CCFF00;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #CCFF00, 0 0 18px rgba(204, 255, 0, 0.6);
+}}
+.signature-bar {{
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 60;
+    background: rgba(8, 10, 12, 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 1px rgba(204, 255, 0, 0.4);
+    padding: 12px 28px 12px 22px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    white-space: nowrap;
+}}
+.sig-logo {{
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(204, 255, 0, 0.45));
+}}
+.sig-brand-text {{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}}
+.sig-title {{
     font-family: 'Syncopate', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 4px;
     color: #FFFFFF;
+    line-height: 1.1;
 }}
-.sub-tag {{
-    font-family: 'Orbitron', monospace;
-    font-size: 15px;
-    font-weight: 700;
+.sig-location {{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
     letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+}}
+.sig-divider {{
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.22);
+    margin: 0 4px;
+}}
+.sig-tag {{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.2px;
     color: #CCFF00;
-    border-left: 1px solid rgba(255,255,255,0.3);
-    padding-left: 12px;
+    text-transform: uppercase;
 }}
 </style>
 </head>
 <body>
 <div class="container">
-    <div class="main-photo"></div>
-    <div class="vignette"></div>
+    <div class="backdrop-blur"></div>
+    <div class="fullframe-wrapper">
+        <img class="fullframe-img" src="{PHOTO_STORY1_URI}">
+    </div>
+    <div class="vignette-overlay"></div>
     
-    <div class="camera-viewfinder">
-        <div class="corner-tl"></div>
-        <div class="corner-tr"></div>
-        <div class="corner-bl"></div>
-        <div class="corner-br"></div>
-        <div class="reticle-center"></div>
-        
-        <div class="telemetry-row">
-            <div class="telemetry-chip"><span class="rec-dot"></span>STANDBY</div>
-            <div class="telemetry-chip">85mm · PRO LIGHT</div>
-        </div>
-        <div class="telemetry-row">
-            <div class="telemetry-chip">ISO 100 · 1/250s · f/2.2</div>
-            <div class="telemetry-chip">[ 4:5 FULL-FRAME ]</div>
-        </div>
+    <div class="corner-bracket cb-tl"></div>
+    <div class="corner-bracket cb-tr"></div>
+    <div class="corner-bracket cb-bl"></div>
+    <div class="corner-bracket cb-br"></div>
+    
+    <div class="editorial-header">
+        <div class="header-badge"><span class="header-dot"></span>CAPTOORA STUDIO</div>
+        <div class="header-badge">EDICIÓN ESPECIAL OTOÑO 2026</div>
     </div>
     
-    <div class="brand-callout">
-        <div class="brand-name-callout">CAPTOOR<span class="lit-a">A</span></div>
-        <div class="sub-tag">SET CLIMATIZADO</div>
-    </div>
-    
-    <div class="logo-corner">
-        <img class="logo-post" src="{LOGO_URI}">
+    <div class="signature-bar">
+        <img class="sig-logo" src="{LOGO_URI}">
+        <div class="sig-brand-text">
+            <div class="sig-title">CAPTOOR<span class="lit-a">A</span></div>
+            <div class="sig-location">SAN JERÓNIMO · MONTERREY</div>
+        </div>
+        <div class="sig-divider"></div>
+        <div class="sig-tag">DONDE LA MAGIA SUCEDE</div>
     </div>
 </div>
 </body>

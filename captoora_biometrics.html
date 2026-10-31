@@ -2,393 +2,2045 @@
 <html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CAPTOORA BIOMETRICS · Umbrella Cybernetics Lab // Level 5 Clearance</title>
-  <meta name="description" content="Captoora Biometrics Lab. Reconocimiento óptico de alta precisión, mapeo volumétrico 3D y análisis facial subdérmico.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA BIOMETRICS · Recomposición Anatómica & Esculpido de Luz // Monterrey</title>
+  <meta name="description" content="Captoora Biometrics Lab. Fotografía volumétrica de alta precisión, registro anatómico con iluminación contra luz y sensor Nikon Z9 45.7MP. San Jerónimo, Monterrey.">
+
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700;800&family=Space+Grotesk:wght@600;700;800&family=Syne:wght@800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #030508;
-      --card-bg: rgba(6, 12, 19, 0.88);
-      --bio-cyan: #00f0ff;
-      --bio-green: #00ff66;
-      --hazard-red: #ff003c;
-      --border: rgba(0, 240, 255, 0.2);
-      --text: #e2f1f8;
-      --muted: #527588;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Space+Grotesk:wght@400;500;600;700;800&family=Syncopate:wght@400;700;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    * {
+  <style>
+    /* ==========================================================================
+       RESET & BIOMETRICS MASTER PALETTE (PURE #000 VOID, LIME #CCFF00, CYAN #00f0ff)
+       ========================================================================== */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       -webkit-font-smoothing: antialiased;
     }
 
+    :root {
+      --bg: #030508;
+      --bg-darker: #000000;
+      --card-bg: rgba(8, 14, 22, 0.78);
+      --card-glass: rgba(10, 18, 28, 0.65);
+      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-bio: rgba(0, 240, 255, 0.25);
+      --border-lime: rgba(204, 255, 0, 0.4);
+      --bio-cyan: #00f0ff;
+      --bio-lime: #CCFF00;
+      --bio-amber: #f59e0b;
+      --text-main: #f1f5f9;
+      --text-muted: #849ca9;
+      --font-display: 'Syncopate', sans-serif;
+      --font-title: 'Syne', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-body: 'Space Grotesk', sans-serif;
+    }
+
+    ::selection {
+      background: var(--bio-lime);
+      color: #000;
+    }
+
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-body);
       overflow-x: hidden;
       min-height: 100vh;
       background-image: 
-        radial-gradient(circle at 20% 30%, rgba(0, 240, 255, 0.05) 0%, transparent 40%),
-        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
-      background-size: 100% 100%, 30px 30px, 30px 30px;
+        radial-gradient(circle at 15% 20%, rgba(0, 240, 255, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 85% 60%, rgba(204, 255, 0, 0.035) 0%, transparent 40%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
     }
 
-    /* GLOBAL ECOSYSTEM DOCK */
-    .ecosystem-dock {
-      position: sticky;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ==========================================================================
+       TOP NAVIGATION BAR (EMBERKIRI STYLE DOCK)
+       ========================================================================== */
+    .top-dock {
+      position: fixed;
       top: 0;
-      z-index: 1000;
-      background: rgba(3, 5, 8, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 28px;
+      left: 0;
+      width: 100%;
+      height: 74px;
+      padding: 0 36px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.74rem;
+      z-index: 5000;
+      backdrop-filter: blur(24px);
+      background: rgba(3, 5, 8, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .bio-brand {
+    .brand-group {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-    }
-
-    .bio-hazard-icon {
-      color: var(--hazard-red);
-      animation: pulseAlert 1.6s infinite ease-in-out;
-    }
-
-    @keyframes pulseAlert {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.92); }
-    }
-
-    .dock-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .dock-pill {
-      font-size: 0.68rem;
-      padding: 5px 12px;
-      border-radius: 4px;
+      gap: 14px;
       text-decoration: none;
-      color: var(--muted);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.2s ease;
     }
 
-    .dock-pill:hover, .dock-pill.active {
-      color: #000;
-      background: var(--bio-cyan);
-      border-color: var(--bio-cyan);
-      font-weight: 800;
-      box-shadow: 0 0 14px rgba(0, 240, 255, 0.5);
-    }
-
-    /* MAIN LAB LAYOUT */
-    .lab-layout {
-      max-width: 1360px;
-      margin: 0 auto;
-      padding: 40px 24px;
-      display: grid;
-      grid-template-columns: 1.35fr 1fr;
-      gap: 32px;
-      align-items: stretch;
-      min-height: calc(100vh - 65px);
-    }
-
-    /* SPECIMEN SCANNING POD */
-    .specimen-pod {
-      background: #020407;
-      border: 1px solid var(--border);
-      position: relative;
-      border-radius: 6px;
-      overflow: hidden;
+    .brand-logo-frame {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--bio-lime);
+      background: radial-gradient(circle, rgba(204, 255, 0, 0.18) 0%, rgba(0, 0, 0, 0.85) 90%);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
-      min-height: 520px;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.35);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .brand-group:hover .brand-logo-frame {
+      transform: scale(1.08) rotate(6deg);
     }
 
-    .specimen-img {
-      width: 100%;
-      height: 100%;
-      max-height: 520px;
+    .brand-logo-frame img {
+      width: 32px;
+      height: 32px;
       object-fit: contain;
-      filter: contrast(1.1) saturate(1.05);
-      transition: opacity 0.3s ease;
     }
 
-    /* LASER SCANNER & NODES */
-    .laser-scanner-beam {
-      position: absolute;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--bio-cyan), #fff, var(--bio-cyan), transparent);
-      box-shadow: 0 0 20px var(--bio-cyan), 0 0 40px var(--bio-cyan);
-      animation: bioSweep 3s infinite ease-in-out;
-      pointer-events: none;
-    }
-
-    @keyframes bioSweep {
-      0% { top: 2%; opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { top: 98%; opacity: 0; }
-    }
-
-    .bio-facial-mesh {
-      position: absolute;
-      top: 32%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 160px;
-      height: 190px;
-      border: 1px dashed rgba(0, 240, 255, 0.6);
-      border-radius: 50% 50% 45% 45%;
-      pointer-events: none;
-      box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.2);
-    }
-
-    .mesh-node {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: var(--bio-green);
-      border-radius: 50%;
-      box-shadow: 0 0 8px var(--bio-green);
-    }
-    .node-eye-l { top: 35%; left: 30%; }
-    .node-eye-r { top: 35%; right: 30%; }
-    .node-nose { top: 55%; left: 50%; transform: translateX(-50%); }
-    .node-mouth { top: 75%; left: 50%; transform: translateX(-50%); }
-
-    /* TELEMETRY CONSOLE */
-    .telemetry-console {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 28px;
+    .brand-text-block {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
-    .clearance-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255, 0, 60, 0.12);
-      border: 1px solid var(--hazard-red);
-      color: var(--hazard-red);
-      font-size: 0.72rem;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 2px;
-      margin-bottom: 14px;
-      letter-spacing: 0.12em;
-    }
-
-    .lab-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 3.2vw, 2.6rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
+    .brand-wordmark {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 4px;
       color: #fff;
-      margin-bottom: 14px;
+      text-transform: uppercase;
+      line-height: 1.1;
     }
 
-    .lab-title span {
+    /* LEY DE MARCA: ÚLTIMA LETRA "A" EN LIMA FULGOR */
+    .brand-wordmark .lit-a {
+      color: var(--bio-lime);
+      text-shadow: 0 0 12px rgba(204, 255, 0, 0.9), 0 0 24px rgba(204, 255, 0, 0.5);
+    }
+
+    .brand-subtag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      color: var(--bio-cyan);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .dock-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .dock-menu a {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+    .dock-menu a:hover {
+      color: #fff;
+    }
+    .dock-menu a.active {
       color: var(--bio-cyan);
     }
 
-    .telemetry-table {
-      background: #020407;
-      border: 1px solid rgba(0, 240, 255, 0.15);
-      border-radius: 4px;
-      padding: 14px;
-      font-size: 0.74rem;
+    .dock-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 20px;
+      border-radius: 999px;
+      background: var(--bio-lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+    .dock-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(204, 255, 0, 0.6);
+      background: #e2ff40;
+    }
+
+    /* ==========================================================================
+       HERO: SCROLLTIDE EMBERKIRI REVEAL STAGE
+       ========================================================================== */
+    .ember-hero-section {
+      position: relative;
+      min-height: 720px;
+      padding: 110px 48px 60px 48px;
+      display: grid;
+      grid-template-columns: 1.05fr 1.15fr;
+      align-items: center;
+      gap: 40px;
+      max-width: 1540px;
+      margin: 0 auto;
+      z-index: 10;
+    }
+
+    @media (max-width: 1024px) {
+      .ember-hero-section {
+        grid-template-columns: 1fr;
+        padding: 100px 24px 60px 24px;
+        gap: 40px;
+      }
+    }
+
+    /* LEFT EDITORIAL COLUMN */
+    .hero-editorial {
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 20px;
+      justify-content: center;
+      z-index: 2;
     }
 
-    .t-row {
+    .bio-kicker-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--bio-cyan);
+      margin-bottom: 24px;
+    }
+
+    .bio-kicker-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--bio-cyan);
+      box-shadow: 0 0 10px var(--bio-cyan);
+      animation: pulseBio 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulseBio {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-title);
+      font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 24px;
+    }
+
+    .hero-headline .glow-text {
+      background: linear-gradient(135deg, #ffffff 40%, var(--bio-cyan) 80%, var(--bio-lime) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead-text {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 36px;
+      font-weight: 400;
+    }
+
+    .hero-lead-text strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .hero-actions-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .btn-ember-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: #000000;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+      transition: all 0.25s ease;
+    }
+    .btn-ember-primary:hover {
+      background: var(--bio-lime);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 40px rgba(204, 255, 0, 0.45);
+    }
+
+    .btn-ember-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 28px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.25s ease;
+    }
+    .btn-ember-secondary:hover {
+      background: rgba(0, 240, 255, 0.1);
+      border-color: var(--bio-cyan);
+      color: var(--bio-cyan);
+    }
+
+    .hero-stats-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+      max-width: 540px;
+    }
+
+    .stat-box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .stat-val {
+      font-family: var(--font-mono);
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -1px;
+    }
+    .stat-val span {
+      color: var(--bio-lime);
+    }
+
+    .stat-lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      line-height: 1.35;
+    }
+
+    /* RIGHT COLUMN: THE EMBERKIRI REVEAL VIEWPORT */
+    .ember-viewport-container {
+      position: relative;
+      width: 100%;
+      height: 680px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: #000000;
+      border: 1px solid rgba(0, 240, 255, 0.2);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 60px rgba(0, 240, 255, 0.08);
+      user-select: none;
+      cursor: crosshair;
+    }
+
+    @media (max-width: 768px) {
+      .ember-viewport-container {
+        height: 520px;
+      }
+    }
+
+    /* BASE ATHLETE IMAGE (SCULPTED MUSCLES IN DRAMATIC RIM LIGHT) */
+    .ember-img-base {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.15) brightness(0.95);
+      z-index: 1;
+    }
+
+    /* SILHOUETTE DARK SHADOW OVERLAY (BURNT THROUGH BY MOUSE) */
+    .ember-silhouette-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 40%, rgba(10, 16, 26, 0.94) 0%, #030508 85%);
+      z-index: 2;
+      pointer-events: none;
+      /* CSS MASK TO BURN HOLE AT CURSOR (DYNAMICALLY UPDATED) */
+      mask-image: radial-gradient(circle 170px at var(--mx, 50%) var(--my, 50%), transparent 0%, transparent 75%, black 100%);
+      -webkit-mask-image: radial-gradient(circle 170px at var(--mx, 50%) var(--my, 50%), transparent 0%, transparent 75%, black 100%);
+      transition: -webkit-mask-image 0.04s ease-out;
+    }
+
+    /* INK & MATRIX TEXTURE BACKDROP */
+    .ember-ink-brush {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(ellipse at 70% 30%, rgba(204, 255, 0, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 30% 70%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
+      mix-blend-mode: screen;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* BURNING LASER RIM / EMBER PARTICLES CANVAS */
+    #ember-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    /* TELEMETRY HUD OVERLAY */
+    .bio-hud-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      pointer-events: none;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .hud-top-bar {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding-bottom: 6px;
+      align-items: flex-start;
     }
 
-    .t-row:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
+    .hud-tag {
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid var(--border-bio);
+      padding: 6px 12px;
+      border-radius: 4px;
+      backdrop-filter: blur(10px);
+      color: var(--bio-cyan);
     }
 
-    .t-lbl { color: var(--muted); }
-    .t-val { color: var(--bio-cyan); font-weight: 700; }
-    .t-val.green { color: var(--bio-green); }
+    .hud-reticle-crosshair {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border: 1px dashed rgba(204, 255, 0, 0.6);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      left: var(--mx, 50%);
+      top: var(--my, 50%);
+      transition: left 0.05s ease-out, top 0.05s ease-out;
+      box-shadow: 0 0 16px rgba(204, 255, 0, 0.4);
+    }
+    .hud-reticle-crosshair::before, .hud-reticle-crosshair::after {
+      content: '';
+      position: absolute;
+      background: var(--bio-lime);
+    }
+    .hud-reticle-crosshair::before {
+      top: 50%; left: -6px; width: 60px; height: 1px; transform: translateY(-50%);
+    }
+    .hud-reticle-crosshair::after {
+      left: 50%; top: -6px; height: 60px; width: 1px; transform: translateX(-50%);
+    }
 
-    /* ACTION POD BUTTON */
-    .btn-bio-access {
-      background: var(--bio-cyan);
-      color: #000;
-      border: none;
-      padding: 16px 24px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
+    .hud-bottom-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .hud-data-pill {
+      background: rgba(6, 12, 19, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 6px;
+      backdrop-filter: blur(12px);
+      line-height: 1.5;
+    }
+    .hud-data-pill span {
+      color: var(--bio-lime);
+      font-weight: 700;
+    }
+
+    .ember-interactive-hint {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.75);
+      border: 1px solid var(--border-lime);
+      padding: 7px 18px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      text-decoration: none;
+      color: var(--bio-lime);
+      z-index: 6;
+      pointer-events: none;
+      box-shadow: 0 0 15px rgba(204, 255, 0, 0.25);
+    }
+
+    /* ==========================================================================
+       SECTION 2: SCROLLTIDE REEL SLIDER (3D COVERFLOW PORTFOLIO)
+       ========================================================================== */
+    .reel-slider-section {
+      position: relative;
+      padding: 120px 24px 100px 24px;
+      background: radial-gradient(circle at 50% 50%, #060b13 0%, #000000 80%);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      overflow: hidden;
+    }
+
+    .section-headline-wrap {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 60px auto;
+    }
+
+    .sec-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--bio-lime);
+      margin-bottom: 14px;
+    }
+
+    .sec-title {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 3.4vw, 3.2rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .sec-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 3D CAROUSEL VIEWPORT */
+    .reel-carousel-viewport {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      height: 600px;
+      margin: 0 auto;
+      perspective: 1200px;
       display: flex;
       align-items: center;
       justify-content: center;
+      user-select: none;
+    }
+
+    .reel-track {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+    }
+    .reel-track:active {
+      cursor: grabbing;
+    }
+
+    /* 9:16 VERTICAL REEL CARD */
+    .reel-card {
+      position: absolute;
+      width: 320px;
+      height: 540px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #0d1520;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.55s ease, border-color 0.4s ease;
+      will-change: transform, opacity;
+    }
+
+    .reel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .reel-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .reel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.92) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      z-index: 2;
+    }
+
+    .reel-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--bio-lime);
+      margin-bottom: 6px;
+    }
+
+    .reel-name {
+      font-family: var(--font-title);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .reel-meta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* REEL NAVIGATION CONTROLS */
+    .reel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .reel-arrow-btn {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+    }
+    .reel-arrow-btn:hover {
+      background: var(--bio-lime);
+      color: #000;
+      border-color: var(--bio-lime);
+      transform: scale(1.08);
+      box-shadow: 0 0 24px rgba(204, 255, 0, 0.4);
+    }
+
+    .reel-dots {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .reel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .reel-dot.active {
+      width: 28px;
+      border-radius: 999px;
+      background: var(--bio-lime);
+      box-shadow: 0 0 12px rgba(204, 255, 0, 0.6);
+    }
+
+    /* ==========================================================================
+       SECTION 3: SCROLLTIDE PARALLAX ROW (STAGGERED HORIZONTAL DRIFT)
+       ========================================================================== */
+    .parallax-section {
+      position: relative;
+      padding: 120px 0;
+      background: #000000;
+      overflow: hidden;
+    }
+
+    .parallax-track-container {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 40px 0;
+      cursor: grab;
+    }
+    .parallax-track-container::-webkit-scrollbar {
+      display: none;
+    }
+    .parallax-track-container:active {
+      cursor: grabbing;
+    }
+
+    .parallax-row {
+      display: flex;
+      gap: 40px;
+      padding: 0 60px;
+      width: max-content;
+      align-items: center;
+    }
+
+    .parallax-frame {
+      position: relative;
+      flex-shrink: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0a0f16;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9);
+      transition: transform 0.4s ease, border-color 0.3s ease;
+    }
+    .parallax-frame:hover {
+      border-color: var(--bio-cyan);
+    }
+
+    /* STAGGERED VERTICAL OFFSETS (SCROLLTIDE SIGNATURE) */
+    .parallax-frame.offset-high {
+      transform: translateY(-40px);
+    }
+    .parallax-frame.offset-low {
+      transform: translateY(40px);
+    }
+    .parallax-frame.offset-mid {
+      transform: translateY(0);
+    }
+
+    .parallax-frame:hover.offset-high { transform: translateY(-48px) scale(1.02); }
+    .parallax-frame:hover.offset-low { transform: translateY(32px) scale(1.02); }
+    .parallax-frame:hover.offset-mid { transform: translateY(-8px) scale(1.02); }
+
+    .parallax-frame.wide {
+      width: 460px;
+      height: 340px;
+    }
+    .parallax-frame.tall {
+      width: 360px;
+      height: 500px;
+    }
+    .parallax-frame.square {
+      width: 400px;
+      height: 400px;
+    }
+
+    .parallax-frame .inner-img {
+      width: 120%;
+      height: 120%;
+      margin-left: -10%;
+      margin-top: -10%;
+      object-fit: cover;
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+
+    .parallax-badge {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      background: rgba(3, 6, 10, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      backdrop-filter: blur(10px);
+      z-index: 3;
+    }
+
+    /* ==========================================================================
+       SECTION 4: SCROLLTIDE TIER CARDS (BIOMETRICS PRICING & TIERS)
+       ========================================================================== */
+    .tier-section {
+      position: relative;
+      padding: 140px 24px 120px 24px;
+      background: radial-gradient(circle at 50% 30%, #06111f 0%, #030508 75%);
+      overflow: hidden;
+    }
+
+    /* GHOST WORDMARK BACKGROUND (SCROLLTIDE SIGNATURE) */
+    .ghost-wordmark {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 15vw, 15rem);
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: rgba(255, 255, 255, 0.025);
+      text-transform: uppercase;
+      pointer-events: none;
+      z-index: 1;
+      white-space: nowrap;
+    }
+
+    .tier-header-wrap {
+      position: relative;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      z-index: 2;
+    }
+
+    /* BILLING TOGGLE SWITCH (MES vs TRIMESTRAL -20%) */
+    .billing-toggle-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(14, 24, 38, 0.7);
+      border: 1px solid var(--border-bio);
+      padding: 6px 8px;
+      border-radius: 999px;
+      backdrop-filter: blur(20px);
+      margin-top: 24px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .billing-option {
+      padding: 8px 18px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .billing-option.active {
+      background: var(--bio-cyan);
+      color: #000;
+      font-weight: 700;
+      box-shadow: 0 0 16px rgba(0, 240, 255, 0.45);
+    }
+    .save-badge {
+      background: var(--bio-lime);
+      color: #000;
+      font-size: 9px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-left: 4px;
+    }
+
+    /* 3 TIER GLASS CARDS GRID */
+    .tier-cards-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1280px;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    @media (max-width: 1024px) {
+      .tier-cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+      }
+    }
+
+    .tier-card {
+      position: relative;
+      background: var(--card-glass);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 44px 36px;
+      backdrop-filter: blur(28px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .tier-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.9);
+    }
+
+    /* HIGHLIGHTED STUDIO TIER */
+    .tier-card.featured {
+      background: radial-gradient(circle at 50% 0%, rgba(0, 240, 255, 0.12) 0%, rgba(6, 14, 24, 0.85) 100%);
+      border: 1.5px solid var(--bio-cyan);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.85), 0 0 45px rgba(0, 240, 255, 0.2);
+    }
+    .tier-card.featured:hover {
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.95), 0 0 60px rgba(0, 240, 255, 0.35);
+    }
+
+    .tier-card-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bio-lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 999px;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.45);
+    }
+
+    .tier-name {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .tier-card.featured .tier-name {
+      color: var(--bio-cyan);
+    }
+
+    .tier-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tier-price {
+      font-family: var(--font-title);
+      font-size: 3rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .tier-period {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .tier-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 32px;
+      min-height: 48px;
+    }
+
+    .tier-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .tier-features li {
+      display: flex;
+      align-items: flex-start;
       gap: 12px;
-      border-radius: 4px;
-      box-shadow: 0 0 30px rgba(0, 240, 255, 0.35);
-      transition: all 0.2s ease;
+      font-size: 0.92rem;
+      color: #e2e8f0;
+      line-height: 1.45;
     }
 
-    .btn-bio-access:hover {
-      background: var(--bio-green);
-      box-shadow: 0 0 45px rgba(0, 255, 102, 0.6);
+    .feature-check {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(0, 240, 255, 0.15);
+      border: 1px solid var(--bio-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 11px;
+      color: var(--bio-cyan);
+      margin-top: 1px;
+    }
+    .tier-card:not(.featured) .feature-check {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .tier-btn {
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 999px;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+      display: inline-block;
+    }
+    .tier-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.25);
+    }
+
+    .tier-card.featured .tier-btn {
+      background: var(--bio-cyan);
+      color: #000;
+      border-color: var(--bio-cyan);
+      box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+    }
+    .tier-card.featured .tier-btn:hover {
+      background: var(--bio-lime);
+      border-color: var(--bio-lime);
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.55);
+    }
+
+    /* ==========================================================================
+       SECTION 5: STUDIO PHYSICAL LOCATION & GUARANTEES
+       ========================================================================== */
+    .location-section {
+      position: relative;
+      padding: 100px 24px;
+      background: #020406;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .location-card-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: rgba(8, 14, 22, 0.7);
+      border: 1px solid var(--border-bio);
+      border-radius: 28px;
+      padding: 56px 48px;
+      backdrop-filter: blur(20px);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 860px) {
+      .location-card-wrap {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+      }
+    }
+
+    .loc-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .loc-address {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--bio-cyan);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .loc-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .loc-guarantees {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .guar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #fff;
+    }
+    .guar-item span {
+      color: var(--bio-lime);
+    }
+
+    .loc-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .btn-maps {
+      padding: 16px 24px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+    .btn-maps:hover {
+      background: rgba(0, 240, 255, 0.12);
+      border-color: var(--bio-cyan);
+      color: var(--bio-cyan);
+    }
+
+    .btn-wa-reserve {
+      padding: 18px 24px;
+      border-radius: 14px;
+      background: var(--bio-lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0 25px rgba(204, 255, 0, 0.35);
+      transition: all 0.25s ease;
+    }
+    .btn-wa-reserve:hover {
       transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.6);
+      background: #e2ff40;
     }
 
-    @media (max-width: 900px) {
-      .lab-layout { grid-template-columns: 1fr; }
+    /* FOOTER */
+    footer {
+      padding: 40px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
 
-  <!-- GLOBAL ECOSYSTEM DOCK -->
-  <header class="ecosystem-dock">
-    <div class="bio-brand">
-      <span class="bio-hazard-icon">☣</span>
-      <span>CAPTOORA // BIOMETRICS</span>
-    </div>
+  <!-- ==========================================================================
+       TOP DOCK
+       ========================================================================== -->
+  <header class="top-dock">
+    <a href="index.html" class="brand-group">
+      <div class="brand-logo-frame">
+        <img src="assets/captoora_signature_logo.png" alt="Captoora Signature Logo">
+      </div>
+      <div class="brand-text-block">
+        <div class="brand-wordmark">
+          CAPTOOR<span class="lit-a">A</span>
+        </div>
+        <div class="brand-subtag">BIOMETRICS LAB</div>
+      </div>
+    </a>
 
-    <nav class="dock-links">
-      <a href="index.html" class="dock-pill">✦ HUB GENERAL</a>
-      <a href="captoora_signature.html" class="dock-pill">01. SIGNATURE</a>
-      <a href="captoora_biometrics.html" class="dock-pill active">02. BIOMETRICS</a>
-      <a href="captoora_corp.html" class="dock-pill">03. CORP</a>
-      <a href="captoora_studio.html" class="dock-pill">04. STUDIO 3D</a>
-      <a href="captoora_pop.html" class="dock-pill">05. POP!</a>
+    <nav class="dock-menu">
+      <a href="#hero-stage" class="active">DIAGNÓSTICO</a>
+      <a href="#reel-stage">REEL 3D</a>
+      <a href="#parallax-stage">GALERÍA</a>
+      <a href="#tiers-stage">PLANES & TIERS</a>
+      <a href="#location-stage">ESTUDIO</a>
     </nav>
+
+    <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20mi%20Diagn%C3%B3stico%20Biom%C3%A9trico%20en%20el%20estudio" target="_blank" class="dock-cta">
+      <span>Agendar WA</span>
+      <span>→</span>
+    </a>
   </header>
 
-  <!-- MAIN LAB SCREEN -->
-  <main class="lab-layout">
+  <!-- ==========================================================================
+       HERO: SCROLLTIDE EMBERKIRI REVEAL STAGE
+       ========================================================================== -->
+  <main id="hero-stage" class="ember-hero-section">
 
-    <!-- ESCÁNER DE ESPECIMEN -->
-    <div class="specimen-pod">
-      <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="Biometrics Subject Scan" class="specimen-img" id="bioSubjectImg">
-      <div class="laser-scanner-beam"></div>
+    <!-- EDITORIAL COLUMN -->
+    <div class="hero-editorial">
+      <div class="bio-kicker-badge">
+        <div class="bio-kicker-dot"></div>
+        <span>Umbrella Biometrics // Nivel 05 Clearance</span>
+      </div>
 
-      <!-- Malla biométrica facial -->
-      <div class="bio-facial-mesh">
-        <div class="mesh-node node-eye-l"></div>
-        <div class="mesh-node node-eye-r"></div>
-        <div class="mesh-node node-nose"></div>
-        <div class="mesh-node node-mouth"></div>
+      <h1 class="hero-headline">
+        La Evolución de tu Cuerpo, <span class="glow-text">Esculpida en Luz y Sombra.</span>
+      </h1>
+
+      <p class="hero-lead-text">
+        Olvídate de las básculas mentirosas y los muñecos de palo sin volumen. Registramos la verdad de tu <strong>musculatura, simetría y vascularidad</strong> mediante iluminación direccional de autor y sensor Nikon Z9 full-frame de 45.7MP.
+      </p>
+
+      <div class="hero-actions-row">
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20mi%20Diagn%C3%B3stico%20Biom%C3%A9trico" target="_blank" class="btn-ember-primary">
+          <span>✦ Agendar Diagnóstico</span>
+          <span>→</span>
+        </a>
+        <a href="#tiers-stage" class="btn-ember-secondary">
+          <span>⊞ Ver Paquetes & Tiers</span>
+        </a>
+      </div>
+
+      <div class="hero-stats-strip">
+        <div class="stat-box">
+          <div class="stat-val">45.7<span>MP</span></div>
+          <div class="stat-lbl">Detalle de fibra muscular y grano subdérmico</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">100<span>%</span></div>
+          <div class="stat-lbl">Zero Crop · Full-Frame real sin mutilaciones</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">0.01<span>%</span></div>
+          <div class="stat-lbl">Precisión de simetría y progresión semana a semana</div>
+        </div>
       </div>
     </div>
 
-    <!-- CONSOLA DE TELEMETRÍA Y ACCESO -->
-    <section class="telemetry-console">
-      <div>
-        <div class="clearance-badge">
-          <span>●</span> CLASIFICACIÓN UMBRELLA CORP // LEVEL 5
+    <!-- RIGHT INTERACTIVE EMBERKIRI REVEAL VIEWPORT -->
+    <div class="ember-viewport-container" id="ember-viewport">
+      <!-- 1. BASE IMAGE: SCULPTED ATHLETE BODY IN CONTRA LUZ (RIM LIGHT) -->
+      <img src="assets/biometrics_athlete_rimlight.jpg" alt="Captoora Biometrics Atleta Rim Light" class="ember-img-base">
+
+      <!-- 2. SILHOUETTE DARK OVERLAY (BURNED THROUGH BY MOUSE) -->
+      <div class="ember-silhouette-overlay" id="ember-mask"></div>
+
+      <!-- 3. INK & MATRIX TEXTURE BACKDROP -->
+      <div class="ember-ink-brush"></div>
+
+      <!-- 4. BURNING LASER RIM / EMBER PARTICLES CANVAS -->
+      <canvas id="ember-canvas"></canvas>
+
+      <!-- 5. RETICLE TARGET CROSSHAIR -->
+      <div class="hud-reticle-crosshair" id="hud-reticle"></div>
+
+      <!-- 6. TELEMETRY HUD -->
+      <div class="bio-hud-overlay">
+        <div class="hud-top-bar">
+          <div class="hud-tag">SENSOR: NIKON Z9 // 50MM F/1.2 S</div>
+          <div class="hud-tag" style="color: var(--bio-lime);">AF-C [DELTOID LOCK]</div>
         </div>
 
-        <h1 class="lab-title">
-          Mapeo Óptico &amp;<br>
-          <span>Biometría Subdérmica</span>
-        </h1>
-
-        <div class="telemetry-table">
-          <div class="t-row">
-            <span class="t-lbl">IDENTIFICACIÓN ESPECÍMEN:</span>
-            <span class="t-val">AMAPOLA // CPT_0853</span>
+        <div class="hud-bottom-bar">
+          <div class="hud-data-pill">
+            TELEMETRÍA ÓPTICA<br>
+            <span>ISO 64 · 1/250s · f/1.4</span>
           </div>
-          <div class="t-row">
-            <span class="t-lbl">SIMETRÍA ANATÓMICA:</span>
-            <span class="t-val green">99.82% NOMINAL</span>
+          <div class="hud-data-pill" style="text-align: right;">
+            ESTADO BIOMÉTRICO<br>
+            <span>VASCULARIDAD ÓPTIMA // 98.4%</span>
           </div>
-          <div class="t-row">
-            <span class="t-lbl">ESCANEO DE PIEL (24MP):</span>
-            <span class="t-val">TEXTURA REAL SIN SUAVIZADO</span>
-          </div>
-          <div class="t-row">
-            <span class="t-lbl">DISTORSIÓN ANGULAR:</span>
-            <span class="t-val green">0.00% (ZERO CROP)</span>
-          </div>
-          <div class="t-row">
-            <span class="t-lbl">COORDENADAS SENSOR:</span>
-            <span class="t-val">6000 x 4000 MATRIZ RGB</span>
-          </div>
-        </div>
-
-        <!-- SELECTOR DE ESPECÍMEN -->
-        <div style="display:flex; gap:8px; margin-bottom:20px;">
-          <button class="dock-pill active" onclick="setBioSubject(0, this)" style="flex:1; text-align:center;">
-            SUJETO 01 (0853)
-          </button>
-          <button class="dock-pill" onclick="setBioSubject(1, this)" style="flex:1; text-align:center;">
-            SUJETO 02 (0863)
-          </button>
-          <button class="dock-pill" onclick="setBioSubject(2, this)" style="flex:1; text-align:center;">
-            EXTERIOR (CHIP_01)
-          </button>
         </div>
       </div>
 
-      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20solicito%20acceso%20a%20sesion%20Biometrics%20Lab" target="_blank" class="btn-bio-access">
-        <span>🧬</span> SOLICITAR AUTORIZACIÓN BIOMÉTRICA
-      </a>
-    </section>
+      <div class="ember-interactive-hint">
+        ✦ Pasa el cursor para quemar la silueta y revelar la musculatura a contra luz ✦
+      </div>
+    </div>
 
   </main>
 
-  <script>
-    const bioSubjects = [
-      'assets/media_jpg/pf-glow-cpt_0853.jpg',
-      'assets/media_jpg/pf-glow-cpt_0863.jpg',
-      'assets/media_jpg/pf-chipinque-01.jpg'
-    ];
+  <!-- ==========================================================================
+       SECTION 2: SCROLLTIDE REEL SLIDER (3D COVERFLOW PORTFOLIO)
+       ========================================================================== -->
+  <section id="reel-stage" class="reel-slider-section">
+    <div class="section-headline-wrap">
+      <div class="sec-kicker">Scrolltide Coverflow 3D // Activos 9:16</div>
+      <h2 class="sec-title">Cámara en Mano. Perspectiva Tridimensional.</h2>
+      <p class="sec-subtitle">
+        Desliza horizontalmente para navegar entre sesiones de recomposición atlética, retratos de estudio y exteriores sin recortes.
+      </p>
+    </div>
 
-    function setBioSubject(idx, btn) {
-      document.querySelectorAll('.dock-pill').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const img = document.getElementById('bioSubjectImg');
-      img.style.opacity = '0';
-      setTimeout(() => {
-        img.src = bioSubjects[idx];
-        img.style.opacity = '1';
-      }, 150);
+    <div class="reel-carousel-viewport" id="reel-viewport">
+      <div class="reel-track" id="reel-track">
+
+        <!-- REEL 1: RIM LIGHT ATHLETE -->
+        <div class="reel-card" data-index="0">
+          <img src="assets/biometrics_athlete_rimlight.jpg" alt="Biometría Atleta">
+          <div class="reel-overlay">
+            <span class="reel-tag">BIOMETRÍA // RIM LIGHT</span>
+            <div class="reel-name">Esculpido Muscular de Autor</div>
+            <span class="reel-meta">Nikon Z9 · 50mm f/1.2 S · ISO 64</span>
+          </div>
+        </div>
+
+        <!-- REEL 2: EL MEDICO ASESINO -->
+        <div class="reel-card" data-index="1">
+          <img src="campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg" alt="El Médico Asesino Biometrics">
+          <div class="reel-overlay">
+            <span class="reel-tag">LUCHA LIBRE // LEYENDA</span>
+            <div class="reel-name">El Médico Asesino · Anatomía y Poder</div>
+            <span class="reel-meta">División Atlética · Monterrey 2026</span>
+          </div>
+        </div>
+
+        <!-- REEL 3: KARLA FITNESS -->
+        <div class="reel-card" data-index="2">
+          <img src="assets/google_business_kit/07_google_interior_fitness_karla.jpg" alt="Karla Atleta Fitness">
+          <div class="reel-overlay">
+            <span class="reel-tag">FITNESS // MARCA PERSONAL</span>
+            <div class="reel-name">Karla P. · Nutrición & Rendimiento</div>
+            <span class="reel-meta">Iluminación Suave de Estudio · Ciclorama</span>
+          </div>
+        </div>
+
+        <!-- REEL 4: LULU EDITORIAL -->
+        <div class="reel-card" data-index="3">
+          <img src="assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg" alt="Lulú H. Editorial">
+          <div class="reel-overlay">
+            <span class="reel-tag">EDITORIAL // FULGOR ESTELAR</span>
+            <div class="reel-name">Lulú H. · Presencia Ejecutiva</div>
+            <span class="reel-meta">1/250s · f/1.4 · 45.7MP Full-Frame</span>
+          </div>
+        </div>
+
+        <!-- REEL 5: BRENDA BEAUTY -->
+        <div class="reel-card" data-index="4">
+          <img src="assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg" alt="Brenda Beauty">
+          <div class="reel-overlay">
+            <span class="reel-tag">BEAUTY // PIEL REAL</span>
+            <div class="reel-name">Brenda M. · Definición de Estudio</div>
+            <span class="reel-meta">Textura Natural Sin Filtros Plásticos</span>
+          </div>
+        </div>
+
+        <!-- REEL 6: GLOWTOURS SET -->
+        <div class="reel-card" data-index="5">
+          <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="GlowTours Oficial">
+          <div class="reel-overlay">
+            <span class="reel-tag">EVENTOS // SET AMAPOLA</span>
+            <div class="reel-name">GlowTours Oficial · Atmósfera Cálida</div>
+            <span class="reel-meta">San Jerónimo Studio · Set Temático</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONTROLS -->
+    <div class="reel-controls">
+      <button class="reel-arrow-btn" id="btn-reel-prev" aria-label="Anterior">←</button>
+      <div class="reel-dots" id="reel-dots"></div>
+      <button class="reel-arrow-btn" id="btn-reel-next" aria-label="Siguiente">→</button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: SCROLLTIDE PARALLAX ROW (STAGGERED LUXURY FRAMES)
+       ========================================================================== -->
+  <section id="parallax-stage" class="parallax-section">
+    <div class="section-headline-wrap">
+      <div class="sec-kicker">Scrolltide Drift // Profundidad Óptica</div>
+      <h2 class="sec-title">Secuencia Parallax de Autor</h2>
+      <p class="sec-subtitle">
+        Cuadros flotantes con desplazamiento interno de lente. Arrastra horizontalmente para recorrer el muro de revelado.
+      </p>
+    </div>
+
+    <div class="parallax-track-container" id="parallax-container">
+      <div class="parallax-row" id="parallax-row">
+
+        <!-- FRAME 1 -->
+        <div class="parallax-frame tall offset-high">
+          <img src="assets/biometrics_athlete_rimlight.jpg" alt="Atleta Rim Light" class="inner-img">
+          <div class="parallax-badge">01 // RECOMPOSICIÓN</div>
+        </div>
+
+        <!-- FRAME 2 -->
+        <div class="parallax-frame wide offset-low">
+          <img src="campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg" alt="Médico Asesino" class="inner-img">
+          <div class="parallax-badge">02 // FUERZA & MITO</div>
+        </div>
+
+        <!-- FRAME 3 -->
+        <div class="parallax-frame square offset-mid">
+          <img src="assets/media_jpg/pf-chipinque-01.jpg" alt="Chipinque" class="inner-img">
+          <div class="parallax-badge">03 // CHIPINQUE EXTERIORES</div>
+        </div>
+
+        <!-- FRAME 4 -->
+        <div class="parallax-frame tall offset-low">
+          <img src="assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg" alt="Lulú H." class="inner-img">
+          <div class="parallax-badge">04 // LUZ DIRECCIONAL</div>
+        </div>
+
+        <!-- FRAME 5 -->
+        <div class="parallax-frame wide offset-high">
+          <img src="assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg" alt="Brenda" class="inner-img">
+          <div class="parallax-badge">05 // BEAUTY & MARCA</div>
+        </div>
+
+        <!-- FRAME 6 -->
+        <div class="parallax-frame square offset-mid">
+          <img src="assets/google_business_kit/07_google_interior_fitness_karla.jpg" alt="Karla Fitness" class="inner-img">
+          <div class="parallax-badge">06 // ATLETA NUTRICIÓN</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: SCROLLTIDE TIER CARDS (BIOMETRICS PRICING)
+       ========================================================================== -->
+  <section id="tiers-stage" class="tier-section">
+    <!-- GHOST WORDMARK BACKGROUND -->
+    <div class="ghost-wordmark">BIOMETRICS</div>
+
+    <div class="tier-header-wrap">
+      <div class="sec-kicker">Inversión Clara // Sin Letras Chiquitas</div>
+      <h2 class="sec-title">Planes de Registro & Recomposición</h2>
+      <p class="sec-subtitle">
+        Diseñado para atletas naturales, culturistas, preparadores físicos y personas comprometidas con su transformación física.
+      </p>
+
+      <!-- BILLING TOGGLE PILL -->
+      <div class="billing-toggle-container">
+        <div class="billing-option active" id="toggle-single" onclick="setBillingMode('single')">
+          Sesión Diagnóstico Única
+        </div>
+        <div class="billing-option" id="toggle-trim" onclick="setBillingMode('trimestral')">
+          Plan Continuidad Trimestral
+          <span class="save-badge">-20% OFF</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier-cards-grid">
+
+      <!-- TIER 1: STARTER -->
+      <div class="tier-card">
+        <div>
+          <div class="tier-name">Diagnóstico Volumétrico</div>
+          <div class="tier-price-row">
+            <div class="tier-price" id="price-starter">$1,850</div>
+            <div class="tier-period" id="period-starter">/ sesión</div>
+          </div>
+          <div class="tier-desc">
+            Punto de partida visual para documentar el inicio de un ciclo de volumen, definición o reto de transformación.
+          </div>
+          <ul class="tier-features">
+            <li>
+              <div class="feature-check">✓</div>
+              <span>1 hora de sesión privada en estudio con luz de autor</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>10 tomas master full-frame editadas en 45.7MP</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Registro de ángulos anatómicos (frente, perfil, espalda)</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Zero Crop: Proporción anatómica 100% respetada</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Entrega digital privada en Pixieset sin compresión</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20mi%20Diagn%C3%B3stico%20Volum%C3%A9trico%20Biometrics" target="_blank" class="tier-btn">
+          Apartar Diagnóstico →
+        </a>
+      </div>
+
+      <!-- TIER 2: STUDIO (FEATURED) -->
+      <div class="tier-card featured">
+        <div class="tier-card-badge">Más Elegido · Atletas Pro</div>
+        <div>
+          <div class="tier-name">Recomposición Pro & Clon 3D</div>
+          <div class="tier-price-row">
+            <div class="tier-price" id="price-pro">$3,450</div>
+            <div class="tier-period" id="period-pro">/ sesión</div>
+          </div>
+          <div class="tier-desc">
+            El estándar para culturistas, crossfitters y coaches que necesitan destacar cada fibra muscular y vascularidad extrema.
+          </div>
+          <ul class="tier-features">
+            <li>
+              <div class="feature-check">✓</div>
+              <span>2 horas en set oscuro con iluminación de corte (rim light)</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>25 fotografías master con microcontraste subdérmico</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>6 clips de video en 4K 60fps / 120fps para Reels & TikTok</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Telemetría biométrica de simetría sobrepuesta opcional</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Comparativa visual de progresión vs meses anteriores</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Entrega prioritaria en 48 horas en nube Pixieset</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20agendar%20el%20Plan%20Recomposici%C3%B3n%20Pro%20Biometrics" target="_blank" class="tier-btn">
+          Elegir Recomposición Pro →
+        </a>
+      </div>
+
+      <!-- TIER 3: SCALE -->
+      <div class="tier-card">
+        <div>
+          <div class="tier-name">Atleta Elite & Peak Week</div>
+          <div class="tier-price-row">
+            <div class="tier-price" id="price-elite">$5,900</div>
+            <div class="tier-period" id="period-elite">/ cobertura</div>
+          </div>
+          <div class="tier-desc">
+            Cobertura exhaustiva pre-competencia, tarima y sesión de estudio con iluminación cinematográfica y efectos de atmósfera.
+          </div>
+          <ul class="tier-features">
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Tiempo extendido en set sin prisas hasta lograr la toma perfecta</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Efectos de humo y reflectores Godox con rejillas nido de abeja</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>40 fotografías master de nivel portada de revista internacional</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Paquete completo de clips 4K para marcas y patrocinadores</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Acompañamiento en pose escénica y congestión previa</span>
+            </li>
+            <li>
+              <div class="feature-check">✓</div>
+              <span>Acceso directo a Poncho Gutiérrez (Head Photographer)</span>
+            </li>
+          </ul>
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20informaci%C3%B3n%20del%20Plan%20Atleta%20Elite%20Peak%20Week" target="_blank" class="tier-btn">
+          Contactar Elite →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: STUDIO PHYSICAL LOCATION & GUARANTEES
+       ========================================================================== -->
+  <section id="location-stage" class="location-section">
+    <div class="location-card-wrap">
+      <div class="loc-info">
+        <div class="sec-kicker">Estudio Físico // San Jerónimo</div>
+        <h3 class="loc-title">Colinas de San Jerónimo 11</h3>
+        <p class="loc-address">
+          Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. (CP 64630)
+        </p>
+        <p class="loc-desc">
+          Set profesional climatizado, cicloramas sinfín, softbox parabólicos y parque privado contiguo. Acceso discreto para atletas, vestidor privado y monitoreo en pantalla en tiempo real de cada disparo.
+        </p>
+
+        <div class="loc-guarantees">
+          <div class="guar-item">
+            <span>✦</span>
+            <strong>Ley Zero Crop:</strong> Ninguna extremidad o músculo recortado jamás.
+          </div>
+          <div class="guar-item">
+            <span>✦</span>
+            <strong>Privacidad de Datos:</strong> Tus tomas van directo de la tarjeta SD a la nube encriptada; cero archivos en discos locales de terceros.
+          </div>
+          <div class="guar-item">
+            <span>✦</span>
+            <strong>Nikon Z9 Full-Frame:</strong> Sensor sin obturador mecánico de 45.7MP a 1/32000s.
+          </div>
+        </div>
+      </div>
+
+      <div class="loc-actions">
+        <a href="https://www.google.com/maps/search/?api=1&query=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630" target="_blank" class="btn-maps">
+          <span>Abrir en Google Maps / Uber</span>
+          <span>📍</span>
+        </a>
+        <a href="https://wa.me/528140050088?text=Hola%20Poncho,%20quiero%20agendar%20mi%20sesi%C3%B3n%20Biometrics%20en%20el%20estudio%20de%20San%20Jer%C3%B3nimo" target="_blank" class="btn-wa-reserve">
+          <span>Apartar por WhatsApp</span>
+          <span>💬</span>
+        </a>
+        <a href="index.html" class="btn-maps" style="text-align: center; justify-content: center;">
+          ← Volver al Sitio Principal Captoora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 CAPTOORA STUDIO · CAPTOORA BIOMETRICS · TODOS LOS DERECHOS RESERVADOS.</p>
+    <p style="margin-top: 6px; font-size: 10px; color: #556977;">
+      COLINAS DE SAN JERÓNIMO // MONTERREY, MÉXICO // WA: +52 81 4005 0088
+    </p>
+  </footer>
+
+  <!-- ==========================================================================
+       JAVASCRIPT: INTERACTIVE EMBERKIRI REVEAL + REEL SLIDER + PARALLAX ROW
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       1. EMBERKIRI BURN REVEAL & LASER EMBER ENGINE
+       -------------------------------------------------------------------------- */
+    (function initEmberkiri() {
+      const viewport = document.getElementById('ember-viewport');
+      const mask = document.getElementById('ember-mask');
+      const canvas = document.getElementById('ember-canvas');
+      const reticle = document.getElementById('hud-reticle');
+      if (!viewport || !canvas || !mask) return;
+
+      const ctx = canvas.getContext('2d');
+      let width = canvas.width = viewport.offsetWidth;
+      let height = canvas.height = viewport.offsetHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = viewport.offsetWidth;
+        height = canvas.height = viewport.offsetHeight;
+      });
+
+      // Pointer tracking with smooth interpolation
+      let mouse = { x: width * 0.52, y: height * 0.42, targetX: width * 0.52, targetY: height * 0.42, active: false };
+      const particles = [];
+      const MAX_PARTICLES = 140;
+
+      class EmberParticle {
+        constructor(x, y) {
+          this.reset(x, y);
+        }
+        reset(x, y) {
+          this.x = x + (Math.random() - 0.5) * 60;
+          this.y = y + (Math.random() - 0.5) * 60;
+          const angle = Math.random() * Math.PI * 2;
+          const speed = Math.random() * 2.8 + 0.8;
+          this.vx = Math.cos(angle) * speed;
+          this.vy = Math.sin(angle) * speed - 1.2; // slight upward drift
+          this.life = Math.random() * 0.6 + 0.4;
+          this.decay = Math.random() * 0.02 + 0.015;
+          this.size = Math.random() * 2.8 + 1.2;
+          this.isLime = Math.random() > 0.4;
+        }
+        update() {
+          this.x += this.vx;
+          this.y += this.vy;
+          this.life -= this.decay;
+        }
+        draw(ctx) {
+          if (this.life <= 0) return;
+          ctx.save();
+          ctx.globalAlpha = this.life;
+          ctx.fillStyle = this.isLime ? '#CCFF00' : '#00f0ff';
+          ctx.shadowColor = this.isLime ? '#CCFF00' : '#00f0ff';
+          ctx.shadowBlur = 8;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      // Event listeners
+      function updatePointer(e) {
+        const rect = viewport.getBoundingClientRect();
+        mouse.targetX = e.clientX - rect.left;
+        mouse.targetY = e.clientY - rect.top;
+        mouse.active = true;
+      }
+
+      viewport.addEventListener('mousemove', updatePointer);
+      viewport.addEventListener('mouseenter', () => { mouse.active = true; });
+      viewport.addEventListener('mouseleave', () => { mouse.active = false; });
+      viewport.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          updatePointer(e.touches[0]);
+        }
+      }, { passive: true });
+
+      // Telemetry matrix glyphs
+      const glyphs = '0123456789+[]/-*%=#$DELTA_ISO_F1.2_Z9_98.4%';
+      const glyphList = [];
+      for (let i = 0; i < 24; i++) {
+        glyphList.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          char: glyphs[Math.floor(Math.random() * glyphs.length)],
+          alpha: Math.random() * 0.4 + 0.1,
+          timer: Math.floor(Math.random() * 40)
+        });
+      }
+
+      function loop() {
+        // Interpolate mouse coordinates
+        mouse.x += (mouse.targetX - mouse.x) * 0.15;
+        mouse.y += (mouse.targetY - mouse.y) * 0.15;
+
+        // Update CSS mask variables for smooth radial burn hole
+        viewport.style.setProperty('--mx', mouse.x + 'px');
+        viewport.style.setProperty('--my', mouse.y + 'px');
+
+        ctx.clearRect(0, 0, width, height);
+
+        // Spawn ember particles around burn rim
+        if (mouse.active && particles.length < MAX_PARTICLES) {
+          for (let i = 0; i < 3; i++) {
+            particles.push(new EmberParticle(mouse.x, mouse.y));
+          }
+        }
+
+        // Draw and update particles
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.update();
+          p.draw(ctx);
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+          }
+        }
+
+        // Draw glowing cut boundary rim circle on canvas
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, 160, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(204, 255, 0, 0.55)';
+        ctx.lineWidth = 2;
+        ctx.shadowColor = '#CCFF00';
+        ctx.shadowBlur = 18;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(mouse.x, mouse.y, 140, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(0, 240, 255, 0.35)';
+        ctx.lineWidth = 1.5;
+        ctx.shadowColor = '#00f0ff';
+        ctx.shadowBlur = 12;
+        ctx.stroke();
+        ctx.restore();
+
+        // Draw subtle matrix telemetry characters near cut rim
+        ctx.save();
+        ctx.font = '10px "JetBrains Mono", monospace';
+        glyphList.forEach(g => {
+          g.timer--;
+          if (g.timer <= 0) {
+            g.char = glyphs[Math.floor(Math.random() * glyphs.length)];
+            g.timer = Math.floor(Math.random() * 40) + 10;
+          }
+          const dx = g.x - mouse.x;
+          const dy = g.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 260) {
+            ctx.fillStyle = dist < 170 ? 'rgba(204, 255, 0, 0.75)' : 'rgba(0, 240, 255, 0.35)';
+            ctx.fillText(g.char, g.x, g.y);
+          }
+        });
+        ctx.restore();
+
+        requestAnimationFrame(loop);
+      }
+      requestAnimationFrame(loop);
+    })();
+
+    /* --------------------------------------------------------------------------
+       2. SCROLLTIDE 3D COVERFLOW REEL SLIDER
+       -------------------------------------------------------------------------- */
+    (function initReelSlider() {
+      const track = document.getElementById('reel-track');
+      const cards = Array.from(track.getElementsByClassName('reel-card'));
+      const dotsContainer = document.getElementById('reel-dots');
+      const prevBtn = document.getElementById('btn-reel-prev');
+      const nextBtn = document.getElementById('btn-reel-next');
+      if (!track || !cards.length) return;
+
+      let currentIndex = 0;
+      const total = cards.length;
+
+      // Build pagination dots
+      dotsContainer.innerHTML = '';
+      cards.forEach((_, idx) => {
+        const dot = document.createElement('div');
+        dot.className = 'reel-dot' + (idx === 0 ? ' active' : '');
+        dot.addEventListener('click', () => { goToIndex(idx); });
+        dotsContainer.appendChild(dot);
+      });
+      const dots = Array.from(dotsContainer.getElementsByClassName('reel-dot'));
+
+      function updateCoverflow() {
+        cards.forEach((card, idx) => {
+          const diff = idx - currentIndex;
+          const absDiff = Math.abs(diff);
+
+          if (diff === 0) {
+            // ACTIVE CENTER CARD
+            card.style.transform = `translateX(0px) translateZ(0px) rotateY(0deg) scale(1)`;
+            card.style.opacity = '1';
+            card.style.filter = 'none';
+            card.style.zIndex = '10';
+            card.style.borderColor = 'rgba(204, 255, 0, 0.6)';
+            card.style.boxShadow = '0 30px 90px rgba(0,0,0,0.9), 0 0 35px rgba(204, 255, 0, 0.25)';
+          } else if (diff < 0) {
+            // CARDS TO THE LEFT
+            const offset = diff * 260;
+            const rot = Math.min(32, 24 + absDiff * 3);
+            const scale = Math.max(0.74, 1 - absDiff * 0.12);
+            const z = -120 * absDiff;
+            card.style.transform = `translateX(${offset}px) translateZ(${z}px) rotateY(${rot}deg) scale(${scale})`;
+            card.style.opacity = Math.max(0.2, 0.85 - absDiff * 0.28).toString();
+            card.style.filter = `blur(${Math.min(6, absDiff * 2)}px)`;
+            card.style.zIndex = (10 - absDiff).toString();
+            card.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            card.style.boxShadow = '0 20px 50px rgba(0,0,0,0.7)';
+          } else {
+            // CARDS TO THE RIGHT
+            const offset = diff * 260;
+            const rot = -Math.min(32, 24 + absDiff * 3);
+            const scale = Math.max(0.74, 1 - absDiff * 0.12);
+            const z = -120 * absDiff;
+            card.style.transform = `translateX(${offset}px) translateZ(${z}px) rotateY(${rot}deg) scale(${scale})`;
+            card.style.opacity = Math.max(0.2, 0.85 - absDiff * 0.28).toString();
+            card.style.filter = `blur(${Math.min(6, absDiff * 2)}px)`;
+            card.style.zIndex = (10 - absDiff).toString();
+            card.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+            card.style.boxShadow = '0 20px 50px rgba(0,0,0,0.7)';
+          }
+        });
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      function goToIndex(index) {
+        currentIndex = (index + total) % total;
+        updateCoverflow();
+      }
+
+      prevBtn.addEventListener('click', () => { goToIndex(currentIndex - 1); });
+      nextBtn.addEventListener('click', () => { goToIndex(currentIndex + 1); });
+
+      // Click on cards directly
+      cards.forEach((card, idx) => {
+        card.addEventListener('click', () => {
+          if (idx !== currentIndex) {
+            goToIndex(idx);
+          }
+        });
+      });
+
+      // Drag & swipe support
+      let isDragging = false;
+      let startX = 0;
+      let diffX = 0;
+
+      track.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        diffX = 0;
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        diffX = e.clientX - startX;
+      });
+      window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        if (diffX < -50) goToIndex(currentIndex + 1);
+        else if (diffX > 50) goToIndex(currentIndex - 1);
+      });
+
+      // Touch swipe
+      track.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) startX = e.touches[0].clientX;
+        diffX = 0;
+      }, { passive: true });
+      track.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) diffX = e.touches[0].clientX - startX;
+      }, { passive: true });
+      track.addEventListener('touchend', () => {
+        if (diffX < -40) goToIndex(currentIndex + 1);
+        else if (diffX > 40) goToIndex(currentIndex - 1);
+      });
+
+      // Initialize initial state
+      updateCoverflow();
+    })();
+
+    /* --------------------------------------------------------------------------
+       3. SCROLLTIDE PARALLAX ROW DRIFT
+       -------------------------------------------------------------------------- */
+    (function initParallaxRow() {
+      const container = document.getElementById('parallax-container');
+      const innerImgs = Array.from(document.querySelectorAll('.parallax-frame .inner-img'));
+      if (!container || !innerImgs.length) return;
+
+      // Smooth horizontal drift with mouse drag and scroll
+      let isDown = false;
+      let startX, scrollLeft;
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      });
+      container.addEventListener('mouseleave', () => { isDown = false; });
+      container.addEventListener('mouseup', () => { isDown = false; });
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        container.scrollLeft = scrollLeft - walk;
+        updateParallaxShift();
+      });
+
+      // Update inner image translation based on scroll position
+      function updateParallaxShift() {
+        const center = container.scrollLeft + container.offsetWidth / 2;
+        innerImgs.forEach(img => {
+          const frame = img.parentElement;
+          const frameCenter = frame.offsetLeft + frame.offsetWidth / 2;
+          const delta = (frameCenter - center) * 0.12;
+          img.style.transform = `translateX(${delta}px)`;
+        });
+      }
+
+      container.addEventListener('scroll', updateParallaxShift, { passive: true });
+      updateParallaxShift();
+    })();
+
+    /* --------------------------------------------------------------------------
+       4. BILLING MODE TOGGLE (TIERS)
+       -------------------------------------------------------------------------- */
+    function setBillingMode(mode) {
+      const singleTab = document.getElementById('toggle-single');
+      const trimTab = document.getElementById('toggle-trim');
+      const pStarter = document.getElementById('price-starter');
+      const perStarter = document.getElementById('period-starter');
+      const pPro = document.getElementById('price-pro');
+      const perPro = document.getElementById('period-pro');
+      const pElite = document.getElementById('price-elite');
+      const perElite = document.getElementById('period-elite');
+
+      if (mode === 'trimestral') {
+        singleTab.classList.remove('active');
+        trimTab.classList.add('active');
+
+        // -20% calculation
+        pStarter.textContent = '$1,480';
+        perStarter.textContent = '/ mes (Trimestral)';
+
+        pPro.textContent = '$2,760';
+        perPro.textContent = '/ mes (Trimestral)';
+
+        pElite.textContent = '$4,720';
+        perElite.textContent = '/ mes (Trimestral)';
+      } else {
+        trimTab.classList.remove('active');
+        singleTab.classList.add('active');
+
+        pStarter.textContent = '$1,850';
+        perStarter.textContent = '/ sesión';
+
+        pPro.textContent = '$3,450';
+        perPro.textContent = '/ sesión';
+
+        pElite.textContent = '$5,900';
+        perElite.textContent = '/ cobertura';
+      }
     }
   </script>
 </body>

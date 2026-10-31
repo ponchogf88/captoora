@@ -1343,6 +1343,225 @@
     }
 
     /* ==========================================================================
+       SCROLLTIDE REEL SLIDER (3D COVERFLOW CAROUSEL)
+       ========================================================================== */
+    .reel-carousel-container {
+      position: relative;
+      width: 100%;
+      height: 640px;
+      margin-bottom: 80px;
+      perspective: 1200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    .reel-carousel-container.hidden {
+      display: none;
+    }
+
+    .reel-track {
+      position: relative;
+      width: 100%;
+      height: 530px;
+      transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+    }
+    .reel-track:active {
+      cursor: grabbing;
+    }
+
+    .reel-card {
+      position: absolute;
+      width: 310px;
+      height: 510px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #0d1520;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.55s ease, border-color 0.4s ease;
+      will-change: transform, opacity;
+      cursor: pointer;
+    }
+    .reel-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .reel-card:hover img {
+      transform: scale(1.04);
+    }
+    .reel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.92) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      z-index: 2;
+    }
+    .reel-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 6px;
+    }
+    .reel-name {
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .reel-meta {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+    .reel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      z-index: 10;
+    }
+    .reel-arrow-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+    }
+    .reel-arrow-btn:hover {
+      background: var(--lime);
+      color: #000;
+      border-color: var(--lime);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.4);
+    }
+    .reel-dots {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .reel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .reel-dot.active {
+      width: 26px;
+      border-radius: 999px;
+      background: var(--lime);
+      box-shadow: 0 0 10px rgba(204, 255, 0, 0.6);
+    }
+
+    /* ==========================================================================
+       SCROLLTIDE PARALLAX ROW DRIFT
+       ========================================================================== */
+    .parallax-strip-wrap {
+      width: 100%;
+      margin: 80px 0 100px 0;
+      overflow: hidden;
+    }
+    .parallax-strip-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .parallax-track-container {
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 30px 0;
+      cursor: grab;
+    }
+    .parallax-track-container::-webkit-scrollbar {
+      display: none;
+    }
+    .parallax-track-container:active {
+      cursor: grabbing;
+    }
+    .parallax-row {
+      display: flex;
+      gap: 36px;
+      padding: 0 40px;
+      width: max-content;
+      align-items: center;
+    }
+    .parallax-frame {
+      position: relative;
+      flex-shrink: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #0a0f16;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+      transition: transform 0.4s ease, border-color 0.3s ease;
+    }
+    .parallax-frame:hover {
+      border-color: var(--cyan);
+    }
+    .parallax-frame.offset-high { transform: translateY(-30px); }
+    .parallax-frame.offset-low { transform: translateY(30px); }
+    .parallax-frame.offset-mid { transform: translateY(0); }
+    .parallax-frame:hover.offset-high { transform: translateY(-38px) scale(1.02); }
+    .parallax-frame:hover.offset-low { transform: translateY(22px) scale(1.02); }
+    .parallax-frame:hover.offset-mid { transform: translateY(-8px) scale(1.02); }
+    .parallax-frame.wide { width: 420px; height: 300px; }
+    .parallax-frame.tall { width: 320px; height: 460px; }
+    .parallax-frame.square { width: 360px; height: 360px; }
+    .parallax-frame .inner-img {
+      width: 120%;
+      height: 120%;
+      margin-left: -10%;
+      margin-top: -10%;
+      object-fit: cover;
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+    .parallax-badge {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(3, 6, 10, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: #fff;
+      backdrop-filter: blur(10px);
+      z-index: 3;
+    }
+
+    /* ==========================================================================
        RESPONSIVE ADAPTATIONS
        ========================================================================== */
     @media (max-width: 768px) {
@@ -1372,6 +1591,11 @@
     </div>
 
     <div class="nav-actions">
+      <!-- CAPTOORA BIOMETRICS LAB LINK -->
+      <a href="captoora_biometrics.html" class="nav-pill-btn" style="background: rgba(0, 240, 255, 0.12); color: var(--cyan); border: 1px solid rgba(0, 240, 255, 0.45); box-shadow: 0 0 16px rgba(0, 240, 255, 0.25);" title="Ver experiencia interactiva Captoora Biometrics">
+        <span>✦ BIOMETRICS</span>
+      </a>
+
       <!-- BOTÓN TOGGLE DE SONIDO (OBTURADOR NIKON Z9 DISPARABLE) -->
       <button class="nav-pill-btn sound-btn" id="sound-toggle-btn" title="Activar/Desactivar sonido del obturador Nikon Z9">
         <span>SONIDO: ON</span> 🔊
@@ -1536,20 +1760,102 @@
         </p>
       </div>
 
-      <!-- SELECTOR DE VISTAS (TÚNEL VÓRTICE 3D vs MURO DE REVELADO) -->
+      <!-- SELECTOR DE VISTAS (COVERFLOW 3D REELS vs TÚNEL VÓRTICE 3D vs PARALLAX DRIFT vs MURO DE REVELADO) -->
       <div class="view-mode-selector">
-        <button class="view-mode-btn active" id="btn-vortex-mode" onclick="setGalleryViewMode('vortex')">
+        <button class="view-mode-btn active" id="btn-reels-mode" onclick="setGalleryViewMode('reels')">
+          🎞️ Coverflow 3D Reel Slider
+        </button>
+        <button class="view-mode-btn" id="btn-vortex-mode" onclick="setGalleryViewMode('vortex')">
           🌀 Túnel Vórtice 3D (Reelfolio)
         </button>
-        <button class="view-mode-btn" id="btn-grid-mode" onclick="setGalleryViewMode('grid')">
-          ⊞ Muro de Revelado Parallax
+        <button class="view-mode-btn" id="btn-parallax-mode" onclick="setGalleryViewMode('parallax')">
+          ✦ Parallax Drift Strip
         </button>
+        <button class="view-mode-btn" id="btn-grid-mode" onclick="setGalleryViewMode('grid')">
+          ⊞ Muro de Revelado 45.7MP
+        </button>
+      </div>
+
+      <!-- ====================================================================
+           MODO 0: SCROLLTIDE 3D COVERFLOW REEL SLIDER (ACTIVOS 9:16)
+           ==================================================================== -->
+      <div class="reel-carousel-container" id="reels-viewport">
+        <div class="reel-track" id="index-reel-track">
+
+          <!-- REEL 1: RIM LIGHT ATHLETE -->
+          <div class="reel-card" data-index="0" onclick="openLightbox('assets/biometrics_athlete_rimlight.jpg', 'Captoora Biometrics · Esculpido Muscular en Rim Light', 'Nikon Z9 · Nikkor Z 50mm f/1.2 S · 1/250s · f/1.4 · ISO 64')">
+            <img src="assets/biometrics_athlete_rimlight.jpg" alt="Atleta Biometrics Rim Light">
+            <div class="reel-overlay">
+              <span class="reel-tag">BIOMETRICS // RIM LIGHT</span>
+              <div class="reel-name">Esculpido Muscular de Autor</div>
+              <span class="reel-meta">Nikon Z9 · 50mm f/1.2 S · ISO 64</span>
+            </div>
+          </div>
+
+          <!-- REEL 2: LULU H. -->
+          <div class="reel-card" data-index="1" onclick="openLightbox('assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg', 'Lulú H. · Retrato de Autor en Estudio', 'Nikon Z9 · Nikkor Z 50mm f/1.2 S · 1/250s · f/1.4 · ISO 100')">
+            <img src="assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg" alt="Lulú H. Retrato Editorial">
+            <div class="reel-overlay">
+              <span class="reel-tag">EDITORIAL // BEAUTY</span>
+              <div class="reel-name">Lulú H. · Presencia Ejecutiva</div>
+              <span class="reel-meta">1/250s · f/1.4 · 45.7MP Full-Frame</span>
+            </div>
+          </div>
+
+          <!-- REEL 3: BRENDA M. -->
+          <div class="reel-card" data-index="2" onclick="openLightbox('assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg', 'Brenda M. · Sesión Beauty & Marca', 'Nikon Z9 · 50mm f/1.2 S · ISO 100')">
+            <img src="assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg" alt="Brenda M. Beauty">
+            <div class="reel-overlay">
+              <span class="reel-tag">BEAUTY // PIEL REAL</span>
+              <div class="reel-name">Brenda M. · Definición de Estudio</div>
+              <span class="reel-meta">Textura Natural Sin Filtros Plásticos</span>
+            </div>
+          </div>
+
+          <!-- REEL 4: GLOWTOURS -->
+          <div class="reel-card" data-index="3" onclick="openLightbox('assets/media_jpg/pf-glow-cpt_0853.jpg', 'GlowTours Oficial · Set Temático Amapola', 'San Jerónimo Studio · 50mm f/1.2 S')">
+            <img src="assets/media_jpg/pf-glow-cpt_0853.jpg" alt="GlowTours Oficial">
+            <div class="reel-overlay">
+              <span class="reel-tag">EVENTOS // SET AMAPOLA</span>
+              <div class="reel-name">GlowTours · Atmósfera Cálida</div>
+              <span class="reel-meta">Colinas de San Jerónimo 11</span>
+            </div>
+          </div>
+
+          <!-- REEL 5: CHIPINQUE -->
+          <div class="reel-card" data-index="4" onclick="openLightbox('assets/media_jpg/pf-chipinque-01.jpg', 'Sierra de Chipinque · Senderos Naturales', 'Nikon Z9 · 50mm f/1.2 S · ISO 64')">
+            <img src="assets/media_jpg/pf-chipinque-01.jpg" alt="Sierra de Chipinque">
+            <div class="reel-overlay">
+              <span class="reel-tag">EXTERIORES // SIERRA MADRE</span>
+              <div class="reel-name">Senderos de Chipinque 45.7MP</div>
+              <span class="reel-meta">Luz Natural de Montaña · Monterrey</span>
+            </div>
+          </div>
+
+          <!-- REEL 6: EL MEDICO ASESINO -->
+          <div class="reel-card" data-index="5" onclick="openLightbox('campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg', 'El Médico Asesino · Anatomía y Fuerza Lucha Libre', 'División Atlética · Monterrey 2026')">
+            <img src="campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg" alt="El Médico Asesino Biometrics">
+            <div class="reel-overlay">
+              <span class="reel-tag">LUCHA LIBRE // LEYENDA</span>
+              <div class="reel-name">El Médico Asesino · Anatomía</div>
+              <span class="reel-meta">División Atlética · Monterrey 2026</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- REEL NAVIGATION CONTROLS -->
+        <div class="reel-controls">
+          <button class="reel-arrow-btn" id="btn-idx-reel-prev" aria-label="Anterior">←</button>
+          <div class="reel-dots" id="idx-reel-dots"></div>
+          <button class="reel-arrow-btn" id="btn-idx-reel-next" aria-label="Siguiente">→</button>
+        </div>
       </div>
 
       <!-- ====================================================================
            MODO 1: TÚNEL VÓRTICE 3D EN ESPIRAL (REELFOLIO SWIRL INSPIRATION)
            ==================================================================== -->
-      <div class="vortex-container" id="vortex-viewport">
+      <div class="vortex-container" id="vortex-viewport" style="display: none;">
         <div class="vortex-stage" id="vortex-spiral-stage">
           <!-- Tarjetas 3D generadas dinámicamente por JavaScript -->
         </div>
@@ -1559,7 +1865,57 @@
       </div>
 
       <!-- ====================================================================
-           MODO 2: MURO DE REVELADO 3D (GRID CON FILTROS Y PARALLAX TILT)
+           MODO 2: SCROLLTIDE PARALLAX ROW DRIFT (DESPLAZAMIENTO FLOTANTE)
+           ==================================================================== -->
+      <div class="parallax-strip-wrap" id="parallax-viewport" style="display: none; margin: 20px 0 60px 0;">
+        <div class="parallax-track-container" id="index-parallax-container">
+          <div class="parallax-row" id="index-parallax-row">
+
+            <!-- FRAME 1 -->
+            <div class="parallax-frame tall offset-high" onclick="openLightbox('assets/biometrics_athlete_rimlight.jpg', 'Captoora Biometrics · Esculpido Muscular en Rim Light', 'Nikon Z9 · Nikkor Z 50mm f/1.2 S · 1/250s · f/1.4 · ISO 64')">
+              <img src="assets/biometrics_athlete_rimlight.jpg" alt="Atleta Rim Light" class="inner-img">
+              <div class="parallax-badge">01 // BIOMETRICS</div>
+            </div>
+
+            <!-- FRAME 2 -->
+            <div class="parallax-frame wide offset-low" onclick="openLightbox('campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg', 'El Médico Asesino · Anatomía y Fuerza Lucha Libre', 'División Atlética · Monterrey 2026')">
+              <img src="campaigns/biometrics/POSTER_BIOMETRICS_MEDICO_ASESINO.jpg" alt="Médico Asesino" class="inner-img">
+              <div class="parallax-badge">02 // FUERZA &amp; MITO</div>
+            </div>
+
+            <!-- FRAME 3 -->
+            <div class="parallax-frame square offset-mid" onclick="openLightbox('assets/media_jpg/pf-chipinque-01.jpg', 'Sierra de Chipinque · Senderos Naturales', 'Nikon Z9 · 50mm f/1.2 S · ISO 64')">
+              <img src="assets/media_jpg/pf-chipinque-01.jpg" alt="Chipinque" class="inner-img">
+              <div class="parallax-badge">03 // CHIPINQUE EXTERIORES</div>
+            </div>
+
+            <!-- FRAME 4 -->
+            <div class="parallax-frame tall offset-low" onclick="openLightbox('assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg', 'Lulú H. · Retrato de Autor en Estudio', 'Nikon Z9 · Nikkor Z 50mm f/1.2 S · 1/250s · f/1.4 · ISO 100')">
+              <img src="assets/media_jpg/FARMASI_CPT_0728_LULU_ESTUDIO_PRO.jpg" alt="Lulú H." class="inner-img">
+              <div class="parallax-badge">04 // LUZ DIRECCIONAL</div>
+            </div>
+
+            <!-- FRAME 5 -->
+            <div class="parallax-frame wide offset-high" onclick="openLightbox('assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg', 'Brenda M. · Sesión Beauty &amp; Marca', 'Nikon Z9 · 50mm f/1.2 S · ISO 100')">
+              <img src="assets/media_jpg/FARMASI_CPT_0554_BRENDA_ESTUDIO_PRO.jpg" alt="Brenda" class="inner-img">
+              <div class="parallax-badge">05 // BEAUTY &amp; MARCA</div>
+            </div>
+
+            <!-- FRAME 6 -->
+            <div class="parallax-frame square offset-mid" onclick="openLightbox('assets/google_business_kit/07_google_interior_fitness_karla.jpg', 'Karla P. · Atleta Fitness &amp; Nutrición', 'Colinas de San Jerónimo 11 · Nikon Z9')">
+              <img src="assets/google_business_kit/07_google_interior_fitness_karla.jpg" alt="Karla Fitness" class="inner-img">
+              <div class="parallax-badge">06 // ATLETA NUTRICIÓN</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="vortex-hint-pill" style="margin-top: 25px;">
+          <span>Arrastra horizontalmente o desliza para experimentar el desplazamiento óptico parallax</span> ✦
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           MODO 3: MURO DE REVELADO 3D (GRID CON FILTROS Y PARALLAX TILT)
            ==================================================================== -->
       <div class="grid-view-container" id="grid-view-box">
         
@@ -1810,19 +2166,20 @@
         </div>
 
         <!-- 5. Captoora Biometrics -->
-        <div class="pkg-glass-card">
+        <div class="pkg-glass-card" style="border-color: rgba(0, 240, 255, 0.45); box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);">
+          <div class="pkg-pill-badge" style="background: var(--cyan); color: #000; font-weight: 800;">Experiencia Interactiva</div>
           <div>
-            <div class="pkg-title">Captoora Biometrics</div>
-            <div class="pkg-cost">Cotización <span>/ Clon 3D</span></div>
+            <div class="pkg-title" style="color: var(--cyan);">Captoora Biometrics</div>
+            <div class="pkg-cost">$1,850 <span>/ Diagnóstico</span></div>
             <ul class="pkg-features">
-              <li>Fotografía médica y deportiva en estudio</li>
-              <li>Seguimiento de recomposición física y simetría</li>
-              <li>Clon digital volumétrico 3D sin stickmen</li>
-              <li>Monitoreo semana a semana</li>
+              <li>Fotografía médica y deportiva de autor</li>
+              <li>Iluminación direccional rim light de alta definición</li>
+              <li>Monitoreo de recomposición física y simetría</li>
+              <li>Visualizador interactivo Emberkiri &amp; Clon 3D</li>
             </ul>
           </div>
-          <a href="CAPTOORA_BIOMETRICS/biometrics_motion_explainer.html" class="pkg-action-btn" style="border-color: var(--cyan); color: var(--cyan);">
-            Ver Motion 3D Explainer →
+          <a href="captoora_biometrics.html" class="pkg-action-btn" style="border-color: var(--cyan); color: #000; background: var(--cyan); font-weight: 800; box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);">
+            ✦ Entrar al Biometrics Lab →
           </a>
         </div>
       </div>
@@ -2051,24 +2408,207 @@
       requestAnimationFrame(updateVortex);
     }
 
-    // VIEW MODE SWITCHER (VORTEX vs GRID)
+    // VIEW MODE SWITCHER (REELS vs VORTEX vs PARALLAX vs GRID)
     function setGalleryViewMode(mode) {
+      const btnReels = document.getElementById('btn-reels-mode');
       const btnVortex = document.getElementById('btn-vortex-mode');
+      const btnParallax = document.getElementById('btn-parallax-mode');
       const btnGrid = document.getElementById('btn-grid-mode');
+
+      const reelsBox = document.getElementById('reels-viewport');
       const vortexBox = document.getElementById('vortex-viewport');
+      const parallaxBox = document.getElementById('parallax-viewport');
       const gridBox = document.getElementById('grid-view-box');
 
-      if (mode === 'vortex') {
-        btnVortex.classList.add('active');
-        btnGrid.classList.remove('active');
-        vortexBox.style.display = 'block';
-        gridBox.classList.remove('active');
-      } else {
-        btnGrid.classList.add('active');
-        btnVortex.classList.remove('active');
-        vortexBox.style.display = 'none';
-        gridBox.classList.add('active');
+      // Reset all buttons
+      [btnReels, btnVortex, btnParallax, btnGrid].forEach(b => { if (b) b.classList.remove('active'); });
+
+      // Reset all views
+      if (reelsBox) reelsBox.style.display = 'none';
+      if (vortexBox) vortexBox.style.display = 'none';
+      if (parallaxBox) parallaxBox.style.display = 'none';
+      if (gridBox) gridBox.classList.remove('active');
+
+      if (mode === 'reels') {
+        if (btnReels) btnReels.classList.add('active');
+        if (reelsBox) reelsBox.style.display = 'flex';
+        if (window.updateIndexCoverflow) window.updateIndexCoverflow();
+      } else if (mode === 'vortex') {
+        if (btnVortex) btnVortex.classList.add('active');
+        if (vortexBox) vortexBox.style.display = 'block';
+      } else if (mode === 'parallax') {
+        if (btnParallax) btnParallax.classList.add('active');
+        if (parallaxBox) parallaxBox.style.display = 'block';
+        if (window.updateIndexParallaxShift) window.updateIndexParallaxShift();
+      } else if (mode === 'grid') {
+        if (btnGrid) btnGrid.classList.add('active');
+        if (gridBox) gridBox.classList.add('active');
       }
+    }
+
+    /* ==========================================================================
+       SCROLLTIDE 3D COVERFLOW REEL SLIDER (INDEX)
+       ========================================================================== */
+    function initIndexReelSlider() {
+      const track = document.getElementById('index-reel-track');
+      const cards = Array.from(document.querySelectorAll('#index-reel-track .reel-card'));
+      const dotsContainer = document.getElementById('idx-reel-dots');
+      const btnPrev = document.getElementById('btn-idx-reel-prev');
+      const btnNext = document.getElementById('btn-idx-reel-next');
+
+      if (!track || !cards.length) return;
+
+      let currentIndex = 0;
+      const total = cards.length;
+
+      // Create pagination dots
+      if (dotsContainer) {
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, i) => {
+          const dot = document.createElement('button');
+          dot.className = `reel-dot ${i === 0 ? 'active' : ''}`;
+          dot.setAttribute('aria-label', `Reel ${i + 1}`);
+          dot.addEventListener('click', () => goToIndex(i));
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      function updateCoverflow() {
+        const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('.reel-dot')) : [];
+        cards.forEach((card, i) => {
+          const diff = i - currentIndex;
+          const absDiff = Math.abs(diff);
+
+          if (diff === 0) {
+            // Center active card
+            card.style.transform = `translateX(0) translateZ(0) rotateY(0deg) scale(1)`;
+            card.style.opacity = '1';
+            card.style.zIndex = '10';
+            card.style.filter = 'drop-shadow(0 20px 40px rgba(0,0,0,0.85)) drop-shadow(0 0 25px rgba(204,255,0,0.25))';
+            card.style.pointerEvents = 'auto';
+            card.classList.add('active');
+          } else {
+            // Surrounding cards with perspective depth
+            const xOffset = diff * 260;
+            const zOffset = -120 * absDiff;
+            const rotY = diff < 0 ? 28 : -28;
+            const scale = Math.max(0.72, 1 - absDiff * 0.14);
+            const opacity = Math.max(0, 0.85 - absDiff * 0.28);
+
+            card.style.transform = `translateX(${xOffset}px) translateZ(${zOffset}px) rotateY(${rotY}deg) scale(${scale})`;
+            card.style.opacity = `${opacity}`;
+            card.style.zIndex = `${10 - absDiff}`;
+            card.style.filter = 'brightness(0.65) drop-shadow(0 15px 30px rgba(0,0,0,0.8))';
+            card.style.pointerEvents = absDiff > 2 ? 'none' : 'auto';
+            card.classList.remove('active');
+          }
+        });
+
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      window.updateIndexCoverflow = updateCoverflow;
+
+      function goToIndex(idx) {
+        currentIndex = Math.max(0, Math.min(total - 1, idx));
+        updateCoverflow();
+      }
+
+      if (btnPrev) btnPrev.addEventListener('click', () => goToIndex(currentIndex - 1));
+      if (btnNext) btnNext.addEventListener('click', () => goToIndex(currentIndex + 1));
+
+      // Click card to navigate if not center
+      cards.forEach((card, idx) => {
+        card.addEventListener('click', (e) => {
+          if (idx !== currentIndex) {
+            e.stopPropagation();
+            goToIndex(idx);
+          }
+        });
+      });
+
+      // Swipe / Drag Physics
+      let startX = 0;
+      let diffX = 0;
+      let isDragging = false;
+
+      track.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        diffX = 0;
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        diffX = e.clientX - startX;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        if (diffX < -50) goToIndex(currentIndex + 1);
+        else if (diffX > 50) goToIndex(currentIndex - 1);
+      });
+
+      track.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) startX = e.touches[0].clientX;
+        diffX = 0;
+      }, { passive: true });
+
+      track.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) diffX = e.touches[0].clientX - startX;
+      }, { passive: true });
+
+      track.addEventListener('touchend', () => {
+        if (diffX < -40) goToIndex(currentIndex + 1);
+        else if (diffX > 40) goToIndex(currentIndex - 1);
+      });
+
+      updateCoverflow();
+    }
+
+    /* ==========================================================================
+       SCROLLTIDE PARALLAX ROW DRIFT (INDEX)
+       ========================================================================== */
+    function initIndexParallaxRow() {
+      const container = document.getElementById('index-parallax-container');
+      const innerImgs = Array.from(document.querySelectorAll('#index-parallax-row .inner-img'));
+      if (!container || !innerImgs.length) return;
+
+      let isDown = false;
+      let startX, scrollLeft;
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+      });
+      container.addEventListener('mouseleave', () => { isDown = false; });
+      container.addEventListener('mouseup', () => { isDown = false; });
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        container.scrollLeft = scrollLeft - walk;
+        updateIndexParallaxShift();
+      });
+
+      function updateIndexParallaxShift() {
+        const center = container.scrollLeft + container.offsetWidth / 2;
+        innerImgs.forEach(img => {
+          const frame = img.parentElement;
+          const frameCenter = frame.offsetLeft + frame.offsetWidth / 2;
+          const delta = (frameCenter - center) * 0.12;
+          img.style.transform = `translateX(${delta}px)`;
+        });
+      }
+
+      window.updateIndexParallaxShift = updateIndexParallaxShift;
+      container.addEventListener('scroll', updateIndexParallaxShift, { passive: true });
+      updateIndexParallaxShift();
     }
 
     // CATEGORY FILTER
@@ -2105,10 +2645,12 @@
       }
     }
 
-    // Initialize 3D Vortex on load
+    // Initialize 3D Vortex, Coverflow, and Parallax on load
     document.addEventListener('DOMContentLoaded', () => {
       build3DVortex();
       updateVortex();
+      initIndexReelSlider();
+      initIndexParallaxRow();
     });
   </script>
 
