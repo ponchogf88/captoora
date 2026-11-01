@@ -81,6 +81,16 @@ No empieces por el lente 3D del hero si el miércoles alguien no encuentra la di
 | `agente_prospeccion.py` | Script de research | Herramienta interna. No es producto de cliente. |
 | `*.bat` | Lanzadores Windows / yt-dlp | Solo máquina local del dueño. |
 
+### Expediente Farmasi, 31 de octubre de 2026
+
+Borradores. No cierran precios ni hechos. Lo que falta va como `[POR CONFIRMAR]`.
+
+| Ruta | Qué es |
+| --- | --- |
+| [`docs/legal/`](docs/legal/README.md) | Convenio con Evelyn, consentimiento de modelos y checklist de cumplimiento. |
+| [`docs/colaboracion/`](docs/colaboracion/README.md) | Cómo quedó el intercambio y los complementos, que se cobran aparte. |
+| [`docs/post-captura/`](docs/post-captura/README.md) | Flujo del bot después de la sesión y el papel de cada herramienta. |
+
 ---
 
 ## Canales (llenar handles reales; no inventar)
