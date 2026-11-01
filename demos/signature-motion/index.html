@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Captoora Signature · demo de movimiento</title>
+  <meta name="description" content="Demostración de movimiento de Captoora Signature. No es la página pública del estudio. Precio por confirmar.">
+  <link rel="stylesheet" href="css/signature.css">
+</head>
+<body>
+  <header class="tope">
+    <p class="marca">Captoora <span>Signature</span></p>
+    <p class="aviso">Demostración de movimiento. No sustituye la página del estudio.</p>
+  </header>
+
+  <main class="hoja">
+    <figure class="marco" id="marco">
+      <img
+        id="retrato"
+        src="assets/hero.jpg"
+        width="1400"
+        height="2100"
+        alt="Retrato de cuerpo completo, de banco: una mujer de pie, con vestido negro y botas, sobre fondo claro. Fotografía de Pietro Henricky en Pexels. No es una sesión de Captoora.">
+      <figcaption>
+        Referencia de banco, encuadre completo. Pietro Henricky · Pexels.
+        No es una sesión de Captoora.
+      </figcaption>
+    </figure>
+
+    <section class="texto">
+      <p class="kicker">Monterrey · retrato de autor</p>
+      <h1 id="placa">Luz quieta para una fecha que se queda.</h1>
+      <p class="prosa">
+        Captoora Signature es la línea de bodas, quince años y producciones que piden más tiempo.
+        Lo que incluye y el precio de esta línea están <strong>[POR CONFIRMAR]</strong>.
+        Escríbenos con la fecha y te decimos si el estudio puede tomarla.
+      </p>
+
+      <a class="wa" href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20informaci%C3%B3n%20de%20Signature.%20El%20precio%20y%20lo%20que%20incluye%20siguen%20por%20confirmar.">
+        WhatsApp 81 4005 0088
+      </a>
+
+      <div class="lente-bloque">
+        <canvas id="lente" width="320" height="320" aria-label="Diafragma ilustrado. Arrástralo para girarlo."></canvas>
+        <p class="lente-nota">Arrastra el diafragma. Es un dibujo, no una foto del lente del estudio.</p>
+      </div>
+
+      <button type="button" id="pausa" hidden>Pausar movimiento</button>
+      <p id="estado" role="status"></p>
+      <p id="lectura" class="lectura"></p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.</p>
+    <p>WhatsApp del estudio: 81 4005 0088 · +52 8140050088</p>
+    <p>Movimiento: Zdog, glfx.js y VFX-JS. El sitio público no depende de esta carpeta.</p>
+  </footer>
+  <script src="dist/demo.js"></script>
+</body>
+</html>
