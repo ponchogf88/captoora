@@ -1,3 +1,6 @@
+> **Pertenencia:** repo [ponchogf88/captoora](https://github.com/ponchogf88/captoora) · Drive [POR CONFIRMAR] · WhatsApp +52 81 4005 0088 · Calendly [POR CONFIRMAR]
+> **YLOSABES.md:** [POR CONFIRMAR]. No está en el repositorio en este corte.
+
 # LOG 2026-10-18 — Fotos Grupales, Cirugía Digital & Sincronización Total
 
 ## Selector Interactivo de Fotos Grupales
@@ -15,7 +18,7 @@
 
 ## Consolidación documental solicitada por Jesús — 18 oct 2026
 
-Se cotejaron ocho chats/48 turnos con fechas locales y UTC, bitácora extensa de Drive hasta el 17, fuentes comerciales y los logs GitHub existentes. Se amplió la [bitácora operativa](../BITACORA_CAPTOORA_2026-10-18.md), el tablero y CONTEXT; se añadieron [fuentes y cronología de turnos](../docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). Se conservó el texto anterior de las bitácoras y se delimitaron estados reportados frente a comprobados.
+Se cotejaron ocho chats/48 turnos con fechas locales y UTC, bitácora extensa de Drive hasta el 17, fuentes comerciales y los logs GitHub existentes. Se amplió la [bitácora operativa](../BITACORA_CAPTOORA_2026-10-18.md), el tablero y CONTEXT; se añadieron [fuentes y cronología de turnos](../desde-docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). Se conservó el texto anterior de las bitácoras y se delimitaron estados reportados frente a comprobados.
 
 Aclaración de esta revisión: la existencia de los relatos de corrección y de espejo no demuestra por sí sola inspección de los JPG finales, recepción del cliente o sincronización de todas las cuentas. En particular, crónica y log difieren sobre cierre/preparación de algunas cirugías grupales. Quedan pendientes de cotejo; los avances relatados arriba no se eliminan.
 

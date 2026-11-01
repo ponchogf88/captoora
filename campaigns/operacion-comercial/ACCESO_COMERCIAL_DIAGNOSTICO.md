@@ -1,3 +1,6 @@
+> **Pertenencia:** repo [ponchogf88/captoora](https://github.com/ponchogf88/captoora) · Drive [POR CONFIRMAR] · WhatsApp +52 81 4005 0088 · Calendly [POR CONFIRMAR]
+> **YLOSABES.md:** [POR CONFIRMAR]. No está en el repositorio en este corte.
+
 > Actualización del titular · 26 octubre 2026: TikTok oficial **@captoora.studio**, con doble O en CAPTOORA, tomando “punto estudio” del dictado como Studio de la marca. Sustituye captoora.studiomty y la conexión antigua captoora.mty. Cambio documental solicitado; perfil público no verificado en esta sesión. Metricool conserva conexión antigua hasta reautorizar la cuenta correcta.
 
 # Acceso comercial · diagnóstico y resolución
@@ -31,7 +34,7 @@ La habilidad usada para descubrir alternativas fue Plugin Management; no un perm
 ## Prioridad corregida: reutilizar stack existente · 26 octubre
 Titular confirma disponer de Browser Use, Browser Flow, Video Use, Page Agent, ChatGPT en Chrome y Desktop Commander. No recomendar TinyFish como requisito ni contratarlo antes de revisar estas herramientas. TinyFish no instalado al consultar directorio.
 Inventario localizado: [32 herramientas](../likinya/consolidado-2026-10-23/CAPACIDAD_HERRAMIENTAS.json) — enlace relativo desde esta carpeta debe resolverse al directorio campaigns/likinya; contenido histórico, no estados vivos.
-Fuente de uso anterior: [bitácora agentes y medios](../../BITACORA_MAESTRA_PROYECTO_AGENTES_Y_MEDIOS.md), corte 21 septiembre; registra Browser Use Cloud con USD15 históricos al 17 septiembre, Browserflow y diferencias entre SDK cloud y open source. No tratar crédito antiguo como saldo vigente.
+Fuente de uso anterior: [bitácora agentes y medios](../../docs/archivo/BITACORA_MAESTRA_PROYECTO_AGENTES_Y_MEDIOS.md), corte 21 septiembre; registra Browser Use Cloud con USD15 históricos al 17 septiembre, Browserflow y diferencias entre SDK cloud y open source. No tratar crédito antiguo como saldo vigente.
 [Capacidad/aprovechamiento](../likinya/consolidado-2026-10-23/CAPACIDAD_Y_APROVECHAMIENTO.md) registra Browser Use como capacidad observada mediante Chrome, aclarando que no demuestra CLI/producto, y Page Agent/Video Use/Browser Flow sin comprobación específica.
 Desktop Commander reconsultado: solo MacBook Pro registrada y offline. No hay iMac registrada en la respuesta; no concluir que usuario no posee iMac. No se ejecutaron comandos ni leyeron archivos locales.
 Ruta preferida: volver disponible dispositivo/perfil Chrome ya autorizado, probar sesión de cuenta comercial por navegador soportado, y comprobar instalación/configuración no secreta de automatizadores si hace falta. Desktop Commander puede ayudar a inventario y ejecución local; no equivale por sí solo a una sesión visual autenticada ni sustituye el runtime Browser exigido por su skill.

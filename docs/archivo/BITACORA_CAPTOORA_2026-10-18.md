@@ -1,8 +1,11 @@
+> **Pertenencia:** repo [ponchogf88/captoora](https://github.com/ponchogf88/captoora) · Drive [POR CONFIRMAR] · WhatsApp +52 81 4005 0088 · Calendly [POR CONFIRMAR]
+> **YLOSABES.md:** [POR CONFIRMAR]. No está en el repositorio en este corte.
+
 # CAPTOORA — Consolidación de bitácora al 18 de octubre de 2026
 
 **Alcance:** fotografía, estudio, marca, web, edición, entregas, marketing, archivo y agentes de CAPTOORA. Actualización solicitada por Jesús en el chat `01a14dad-51bc-7d33-8546-e951998721e0`, con confirmación expresa del repositorio CAPTOORA. Corte documental: 18 de octubre de 2026. Fechas locales: `America/Mexico_City` (UTC−06:00).
 
-Esta consolidación amplía el documento operativo que ya señalaba `CONTEXT.md`. Conserva íntegro su texto anterior en el apartado «Registro previo», y mantiene la [bitácora técnica de septiembre](BITACORA_MAESTRA_PROYECTO_FOTOS_CAPTOORA.md), la [crónica del fundador](CRONICA_HISTORICA_FUNDACION_CAPTOORA.md) y los logs diarios. El [registro de fuentes y conversaciones](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md) permite recuperar fechas, identificadores y documentos sin volver a pedir el contexto.
+Esta consolidación amplía el documento operativo que ya señalaba `CONTEXT.md`. Conserva íntegro su texto anterior en el apartado «Registro previo», y mantiene la [bitácora técnica de septiembre](BITACORA_MAESTRA_PROYECTO_FOTOS_CAPTOORA.md), la [crónica del fundador](../../CRONICA_HISTORICA_FUNDACION_CAPTOORA.md) y los logs diarios en [logs/](logs/). El [registro de fuentes y conversaciones](desde-docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md) permite recuperar fechas, identificadores y documentos sin volver a pedir el contexto.
 
 ## 1. Criterios para leer el estado
 
