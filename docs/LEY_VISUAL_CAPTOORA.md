@@ -40,7 +40,7 @@ El repositorio no es bodega de rollos, RAW ni entregas. No se instala la app de 
 
 ## Antecedentes del repositorio
 
-- [Calendario maestro de octubre](../CALENDARIO_OCTUBRE_19_AL_31_COMPLETO.md): «100% Fotográfico · Cero Láminas de Texto · Zero Crop (Full-Frame) · Respaldo Triple».
+- [Calendario maestro de octubre](archivo/CALENDARIO_OCTUBRE_19_AL_31_COMPLETO.md): «100% Fotográfico · Cero Láminas de Texto · Zero Crop (Full-Frame) · Respaldo Triple».
 - [Protocolo de agentes](TRIADA_AGENTES_GROKBOT_ANTIGRAVITY_CODEX.md): «Cero posts de puro texto; la imagen y el hook visual lo son todo».
-- [Bitácora maestra del 22 de octubre](../BITACORA_MAESTRA_Y_CONSOLIDADO_EJECUTIVO_CAPTOORA_2026-10-22.md), sección 1: calidad visual y preservación del sujeto; sección 10: tarjeta con fotografía completa.
+- [Bitácora maestra del 22 de octubre](archivo/BITACORA_MAESTRA_Y_CONSOLIDADO_EJECUTIVO_CAPTOORA_2026-10-22.md), sección 1: calidad visual y preservación del sujeto; sección 10: tarjeta con fotografía completa.
 - [Identidad oficial](../IDENTITY.md).

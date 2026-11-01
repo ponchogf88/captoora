@@ -1,3 +1,6 @@
+> **Pertenencia:** repo [ponchogf88/captoora](https://github.com/ponchogf88/captoora) · Drive [POR CONFIRMAR] · WhatsApp +52 81 4005 0088 · Calendly [POR CONFIRMAR]
+> **YLOSABES.md:** [POR CONFIRMAR]. No está en el repositorio en este corte.
+
 # CAPTOORA — registro de conversación y pendientes al 30 de octubre de 2026
 
 **Fuente:** conversación de ChatGPT accesible en este turno y bitácoras existentes del repositorio. **Zona horaria de referencia:** America/Monterrey. La fecha de este corte es 2026-10-30; la interfaz disponible no expone la hora exacta de cada mensaje de esta conversación. Este documento no es una exportación íntegra ni una transcripción literal de todos los chats históricos.
@@ -39,10 +42,10 @@
 
 ## Referencias existentes y continuidad
 
-- [Bitácora de CAPTOORA al 18 de octubre](../BITACORA_CAPTOORA_2026-10-18.md) (si se abre desde `docs/`, el enlace relativo apunta a la raíz).
+- [Bitácora de CAPTOORA al 18 de octubre](../BITACORA_CAPTOORA_2026-10-18.md).
 - [Bitácora técnica histórica](../BITACORA_MAESTRA_PROYECTO_FOTOS_CAPTOORA.md).
-- [Crónica histórica](../CRONICA_HISTORICA_FUNDACION_CAPTOORA.md).
-- [Contrato de colaboración e imagen, borrador existente](../CONTRATO_COLABORACION_Y_LIBERACION_IMAGEN_CAPTOORA.md).
+- [Crónica histórica](../../../CRONICA_HISTORICA_FUNDACION_CAPTOORA.md).
+- [Contrato de colaboración e imagen, borrador existente](../../../CONTRATO_COLABORACION_Y_LIBERACION_IMAGEN_CAPTOORA.md).
 - Revisar los registros de fuentes y logs ya existentes antes de convertir un resumen histórico en cita textual.
 
 ## Pendiente para una transcripción íntegra

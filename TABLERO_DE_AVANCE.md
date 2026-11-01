@@ -1,6 +1,9 @@
+> **Pertenencia:** repo [ponchogf88/captoora](https://github.com/ponchogf88/captoora) · Drive [POR CONFIRMAR] · WhatsApp +52 81 4005 0088 · Calendly [POR CONFIRMAR]
+> **YLOSABES.md:** [POR CONFIRMAR]. No está en el repositorio en este corte.
+
 # Tablero Captoora — corte documental 2026-10-18
 
-Estado detallado: [bitácora operativa](BITACORA_CAPTOORA_2026-10-18.md), pendientes P01–P28. [Fuentes y fechas](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). No hay porcentaje global actualizado con base medible; el ~35% queda como estimación histórica del 30 sep.
+Estado detallado: [bitácora operativa](docs/archivo/BITACORA_CAPTOORA_2026-10-18.md), pendientes P01–P28. [Fuentes y fechas](docs/archivo/desde-docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). No hay porcentaje global actualizado con base medible; el ~35% queda como estimación histórica del 30 sep.
 
 ## Comprobado en este corte
 
@@ -32,7 +35,7 @@ Estado detallado: [bitácora operativa](BITACORA_CAPTOORA_2026-10-18.md), pendie
 Progreso real de operación (no de documentos): **~35%**.
 Sitio esqueleto vivo. Estudio aún no es línea que factura cada semana.
 
-Detalle: `AUDITORIA_NEGOCIO_CAPTOORA_2026-09-30.md`
+Detalle: `docs/archivo/AUDITORIA_NEGOCIO_CAPTOORA_2026-09-30.md`
 
 ## Vivo
 - https://ponchogf88.github.io/captoora/
