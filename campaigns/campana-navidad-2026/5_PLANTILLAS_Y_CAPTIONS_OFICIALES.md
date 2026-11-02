@@ -150,3 +150,33 @@ No dejes que esta etapa se quede únicamente en fotos movidas del teléfono.
 
 #CaptooraPop #NavidadInfantil #FotosDeNinos #MagiaNavidena #MamasDeMonterrey #SanJeronimoMTY #InfanciaFeliz
 ```
+
+---
+
+## 🎨 10 PLANTILLAS OFICIALES TRANSPARENTES V2 (OVERLAYS SUELTOS 4:5)
+*Archivos PNG con transparencia real (canal alfa 100%), lente de la cámara del isotipo ópticamente centrado, cero letras negritas/gorditas, teléfonos ampliados en píldora ergonómica y cero mención de precios.*
+
+### 📂 Ubicaciones de los Archivos
+- **Carpeta en el repositorio:** `assets/plantillas_oficiales_captoora/`
+- **Carpeta en el Escritorio (Acceso Rápido):** `/Users/imac/Desktop/PLANTILLAS_OFICIALES_TRANSPARENTES/`
+- **Logotipos Maestros Centrados (1024x1024 px Alfa):**
+  - `assets/captoora_logo_lente_centrado_blanco.png` (Isotipo blanco puro sobre transparente)
+  - `assets/captoora_logo_lente_centrado_negro.png` (Isotipo negro carbón sobre transparente)
+
+### 📋 Matriz de las 5 Opciones Oficiales (Dual Contrast: Fondo Oscuro y Fondo Claro)
+
+| Opción & Sub-Marca | Archivo Fondo Oscuro | Archivo Fondo Claro | Copy Dinámico Aplicado (Sin Precios) | Teléfono / WhatsApp |
+| :--- | :--- | :--- | :--- | :--- |
+| **Opción 1 · Signature** | `OPCION_01_SIGNATURE_EDITORIAL_FONDO_OSCURO_4x5.png` | `OPCION_01_SIGNATURE_EDITORIAL_FONDO_CLARO_4x5.png` | **Titular:** RETRATO EDITORIAL DE AUTOR<br>**Sub:** ATMÓSFERA DE GALA · SAN JERÓNIMO, MONTERREY | `WHATSAPP  81 4005 0088` (Píldora grande, tipografía fina) |
+| **Opción 2 · Studio** | `OPCION_02_STUDIO_FAMILIAR_FONDO_OSCURO_4x5.png` | `OPCION_02_STUDIO_FAMILIAR_FONDO_CLARO_4x5.png` | **Titular:** DONDE TODOS FORMAN PARTE DEL RECUERDO<br>**Sub:** SET DE ESTUDIO & EXTERIOR ARBOLADO · PET-FRIENDLY | `WHATSAPP  81 4005 0088` (Píldora grande, tipografía fina) |
+| **Opción 3 · Corp** | `OPCION_03_CORP_EJECUTIVO_FONDO_OSCURO_4x5.png` | `OPCION_03_CORP_EJECUTIVO_FONDO_CLARO_4x5.png` | **Titular:** PROYECCIÓN EJECUTIVA & REPUTACIÓN VISUAL<br>**Sub:** ESTUDIO PRIVADO & COBERTURA IN-COMPANY | `WHATSAPP  81 4005 0088` (Píldora grande, tipografía fina) |
+| **Opción 4 · Biometrics** | `OPCION_04_BIOMETRICS_FITNESS_FONDO_OSCURO_4x5.png` | `OPCION_04_BIOMETRICS_FITNESS_FONDO_CLARO_4x5.png` | **Titular:** REGISTRO ATLÉTICO · RECOMPOSICIÓN CORPORAL<br>**Sub:** NIKON Z9 // 50mm f/1.2 S // RAW FX [36x24] · RIM-LIGHT | `WHATSAPP  81 4005 0088` (Píldora grande, tipografía fina) |
+| **Opción 5 · Pop!** | `OPCION_05_POP_INFANTIL_FONDO_OSCURO_4x5.png` | `OPCION_05_POP_INFANTIL_FONDO_CLARO_4x5.png` | **Titular:** LA MAGIA SUCEDE CUANDO JUEGAN SIN POSAR<br>**Sub:** SET NAVIDEÑO & JUGUETES CLÁSICOS DE MADERA | `WHATSAPP  81 4005 0088` (Píldora grande, tipografía fina) |
+
+### 🛠️ Reglas Técnicas Aplicadas
+1. **Lente del Logotipo Centrado:** Se corrigió el desfase óptico de 52.5px. El círculo que representa el lente de la cámara está situado exactamente en el centro matemático vertical superior `(x=540px)`, permitiendo que el destello estelar (flash) se proyecte naturalmente a la derecha sin desequilibrar la simetría.
+2. **Cero Letras Negritas/Gorditas:** Tipografías dinámicas de alta gama (*Cinzel*, *Space Grotesk*, *Plus Jakarta Sans*, *JetBrains Mono*) en pesos ligeros (300 y 400) con espaciado expandido (`letter-spacing: 0.16em a 0.38em`).
+3. **Cero Precios:** Las plantillas están limpias de tarifas para que sirvan permanentemente como overlays oficiales en cualquier campaña.
+4. **Teléfono Prominente:** El número de WhatsApp (`81 4005 0088`) tiene un tamaño de 24px dentro de una cápsula ergonómica con cristal esmerilado que destaca sobre cualquier fondo sin ensuciar la toma.
+
+
