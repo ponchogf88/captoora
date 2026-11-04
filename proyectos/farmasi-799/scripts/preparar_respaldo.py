@@ -17,6 +17,8 @@ def main():
     registry = json.loads((production / 'REGISTRO_EDICION.json').read_text())
     readback = json.loads((production / 'RESPALDO_DRIVE_READBACK.json').read_text())
     prompts = json.loads((production / 'PROMPTS_EJECUTADOS_RECUPERADOS.json').read_text())
+    approved_counts = collections.Counter(x['title'].split('_')[0] for x in readback.get('approved', {}).get('results', []))
+    assert all(n == 1 for n in approved_counts.values()), 'Duplicated versions in approved Drive folder; reconcile before backup'
     known = {x['source_name']: x for x in registry['files']}
     sources = []
     for item in registry['files']:
