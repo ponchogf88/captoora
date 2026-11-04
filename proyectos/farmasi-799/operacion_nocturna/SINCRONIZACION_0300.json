@@ -1,0 +1,10 @@
+{
+  "commit_local_y_remoto": "7d94d8cf5afe2eaa2d518f8188b8223ddfe90546",
+  "rama": "farmasi/continuidad-edicion-799",
+  "verificacion": "git ls-remote coincide con HEAD",
+  "hora_utc": "2026-11-04T09:40:59.928911+00:00",
+  "nuevas": 40,
+  "acumulado": 80,
+  "prompts_exactos": 128,
+  "estado": "verificado"
+}
