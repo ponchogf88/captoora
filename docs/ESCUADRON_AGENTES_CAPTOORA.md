@@ -114,10 +114,12 @@ El sistema opera bajo un esquema **Hub-and-Spoke** (Director centralizado + 4 ag
   2. Componentes de código de carruseles interactivos con rebote elástico.
   3. Fórmulas y shaders documentados en `docs/motion_lab/`.
 
-### Agente 08: `Captoora-RetouchLab` (Studio Retouch & Color Master)
+### Agente 08: `Eddy / Captoora-RetouchLab` (Studio Retouch & Color Master)
+* **Alias:** Eddy (Agente de Ediciones). Ficha completa en [docs/PROMPT_AGENTE_EDDY_EDICIONES.md](PROMPT_AGENTE_EDDY_EDICIONES.md).
 * **Misión:** Revelado digital de alta gama, calibración de colorimetría de piel, suavizado de cicloramas de estudio y preservación estricta de sombras de contacto físicas. Erradicación total del "recorte plano estilo Mercado Libre".
+* **Lema Rector:** *"Para dominar la luz, primero tienes que aprender a controlar la oscuridad."*
 * **Tecnologías y Estándares que Domina:**
-  - **Motor:** `farmasi_retouch_master.py` / `foto_engine.py` (OpenCV, Pillow, NumPy).
+  - **Motor:** `farmasi_retouch_master.py` / `foto_engine.py` / `tools/event_curator/` (OpenCV, Pillow, NumPy).
   - **Filtros de Ciclorama:** Separación de frecuencias y erosión de máscara segura para disolver arrugas de tela sin tocar cabello rizado ni transparencias de ropa (tul, encajes).
   - **Física de Sombra:** Preservación de oclusión ambiental bajo calzado, tacones y utilería.
   - **Pipeline RAW/JPEG:** Configuración de cámara en RAW+Fine para preservar 14 bits de rango dinámico; revelado LAB para luminancia limpia sin deriva de tono en la piel.

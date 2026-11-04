@@ -45,7 +45,10 @@ Cada línea aborda un deseo psicológico no resuelto en el mercado regiomontano:
 ## 📁 MAPA DE DOCUMENTOS DE LA CAMPAÑA
 | Archivo | Función |
 | :--- | :--- |
+| [`../../campana_navidad_2026.html`](../../campana_navidad_2026.html) | **Command Center Interactivo:** Contador en vivo, visor visual Full-Frame, Muro de Testimonios VIP (25 creadoras y 3 influencers MTY), copys con 1 clic y explorador de los 40 posts. |
+| [`EMBUDO_INBOUND_VIRAL_SPGG_TESTIMONIOS.md`](EMBUDO_INBOUND_VIRAL_SPGG_TESTIMONIOS.md) | **Estrategia Inbound Viral San Pedro & MTY Elite:** Anatomía psicológica del cliente regio, aprovechamiento orgánico de los 25 testimonios, $0 en pauta publicitaria y 6 ganchos de inyección de necesidad. |
 | [`8_POSTS_LANZAMIENTO_Y_MONTAJE.md`](8_POSTS_LANZAMIENTO_Y_MONTAJE.md) | Los 8 copys maestros completos con ganchos virales, psicología de compra y CTA directo de WhatsApp. |
 | [`MATRIZ_MAESTRA_40_POSTS.csv`](MATRIZ_MAESTRA_40_POSTS.csv) | Tabla completa con los 40 posts (8 por marca) lista para programación en Meta Business Suite / Notion / Hootsuite. |
 | [`GUIONES_REELS_MONTAJE_15S.md`](GUIONES_REELS_MONTAJE_15S.md) | Guiones paso a paso para grabar videos de 15 segundos detrás de cámaras mientras se montan los tripiés y luces. |
 | `assets/navidad_2026/` | Carpeta local con los 5 artes visuales generados en calidad publicitaria y 100% Full-Frame. |
+
