@@ -88,6 +88,10 @@ def main():
     scripts = dest / 'scripts'
     scripts.mkdir(exist_ok=True)
     shutil.copy2(Path(__file__), scripts / 'preparar_respaldo.py')
+    for name in ['guardar_resultado_nativo.py', 'registrar_lote_nocturno.py']:
+        helper = source / name
+        if helper.exists():
+            shutil.copy2(helper, scripts / name)
     print(json.dumps({'sources': len(sources), 'exact_prompts': len(prompts), 'approved_artifacts': sum(x['estado'] == 'aprobada' for x in artifacts), 'review_artifacts': sum(x['estado'] == 'en_revision' for x in artifacts), 'original_hashes': len(hashes)}, ensure_ascii=False))
 
 if __name__ == '__main__':

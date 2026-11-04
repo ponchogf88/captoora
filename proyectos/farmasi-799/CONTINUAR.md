@@ -40,3 +40,6 @@ Estado final de lote05: siete salidas en Drive, aceptadas expresamente y movidas
 
 ## Operacion nocturna vigente
 Automatizacion farmasi-producci-n-nocturna-hasta-200-4-nov activa solo4nov:01/03/05/07/09produccion,10cierre. Objetivos40/80/120/160/200 nuevas verificadas. Actualmente20nuevas verificadas(lotes06y07),restan180; la activacion01solo completa20mas para alcanzar40. Las29anteriores aprobadas no se cuentan. Ver protocolo y reserva antes de generar; no duplicar trabajo. Persistir prompt/resultado inmediatamente al recibir cada salida, no depender de variables de una celda que aun corre.
+
+## Registro portable del turno01:00
+Scripts guardar_resultado_nativo.py y registrar_lote_nocturno.py preservan el prompt exacto y registran solo salidas revisadas y verificadas en nube. Admiten --production /ruta/FARMASI_799/produccion cuando se ejecutan desde este respaldo. No generan imagenes, no suben archivos, no tienen claves y no marcan aprobacion de cliente. Registrar requiere lectura fresca de Drive y lista explicita --reviewed de fotos inspeccionadas. El contador usa fuente unica para evitar duplicacion.
