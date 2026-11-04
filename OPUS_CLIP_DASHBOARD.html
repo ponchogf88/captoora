@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA STUDIO — Panel de Control Opus Clip 4.0 Pro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: rgba(255, 255, 255, 0.04);
+      --border: rgba(255, 255, 255, 0.08);
+      --gold: #dfb15b;
+      --gold-glow: rgba(223, 177, 91, 0.25);
+      --text: #f0f2f8;
+      --text-muted: #8e95a5;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      color: #fff;
+    }
+    h1 span { color: var(--gold); }
+    .badge-sub {
+      background: rgba(223, 177, 91, 0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .grid-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .stat-card h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .stat-card .val {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--card-bg);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      border: 1px solid var(--border);
+    }
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .badge.duration { background: rgba(255,255,255,0.08); color: #fff; }
+    .badge.clips { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid var(--success); }
+    .btn-action {
+      background: var(--gold);
+      color: #000;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .hooks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .hook-card {
+      background: rgba(223, 177, 91, 0.04);
+      border: 1px solid rgba(223, 177, 91, 0.2);
+      border-radius: 16px;
+      padding: 22px;
+    }
+    .hook-badge {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .hook-card h4 {
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .hook-cta { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+    .hook-tags span {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      color: var(--gold);
+      margin-right: 6px;
+    }
+    .opus-cta-box {
+      background: linear-gradient(135deg, rgba(99, 91, 255, 0.15) 0%, rgba(223, 177, 91, 0.15) 100%);
+      border: 1px solid var(--gold);
+      border-radius: 18px;
+      padding: 26px;
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .opus-btn {
+      background: linear-gradient(135deg, var(--gold) 0%, #b88628 100%);
+      color: #000;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px var(--gold-glow);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>CAPTOORA STUDIO · <span>OPUS CLIP 4.0 PRO</span></h1>
+        <p style="color:var(--text-muted); font-size:14px; margin-top:4px;">
+          Centro de Ingesta & Optimización Viral · Dirección Ejecutiva: Agente Eddy💫
+        </p>
+      </div>
+      <div class="badge-sub">Membresía Pro Activa (1 Mes) · Versión 4.0</div>
+    </header>
+
+    <div class="grid-summary">
+      <div class="stat-card">
+        <h3>Videos Maestros Listos</h3>
+        <div class="val">17 Videos</div>
+      </div>
+      <div class="stat-card">
+        <h3>Minutos de Ingesta</h3>
+        <div class="val">44.3 Minutos</div>
+      </div>
+      <div class="stat-card">
+        <h3>Potencial de Clips Virales</h3>
+        <div class="val">~68 Shorts / Reels</div>
+      </div>
+      <div class="stat-card">
+        <h3>Formato de Salida</h3>
+        <div class="val" style="font-size:18px;">9:16 Vertical + Karaoke</div>
+      </div>
+    </div>
+
+    <h2 style="font-family:'Cinzel',serif; font-size:18px; margin-bottom:16px; color:#fff;">
+      📁 Inventario de Videos Maestros para Opus Clip
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Archivo Maestro</th>
+          <th>Duración</th>
+          <th>Resolución</th>
+          <th>Tamaño</th>
+          <th>Rendimiento Estimado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td><strong>CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4</small></td>
+          <td><span class="badge duration">20m 43s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>205.77 MB</td>
+          <td><span class="badge clips">~20 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_00_57.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_00_57.mp4</small></td>
+          <td><span class="badge duration">0m 45s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>7.74 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_00_57.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_13_07.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_13_07.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.86 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_13_07.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_22_50_59.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_22_50_59.mp4</small></td>
+          <td><span class="badge duration">0m 17s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>2.88 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_22_50_59.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_09_10.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_09_10.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.89 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_09_10.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_22_54.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_22_54.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.99 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_22_54.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_08_46.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_08_46.mp4</small></td>
+          <td><span class="badge duration">0m 22s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>3.76 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_08_46.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_10_49_40.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_49_40.mp4</small></td>
+          <td><span class="badge duration">0m 43s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>7.33 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_49_40.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_06_44.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_06_44.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>20.04 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_06_44.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_23_59_55.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_23_59_55.mp4</small></td>
+          <td><span class="badge duration">1m 10s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>11.61 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_23_59_55.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_10_59_53.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_59_53.mp4</small></td>
+          <td><span class="badge duration">1m 4s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>10.59 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_59_53.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_40_34.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_40_34.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.83 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_40_34.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_52_19.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_52_19.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.91 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_52_19.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_50_21.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_50_21.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.96 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_50_21.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>T8417T0025231D52_2026_10_31_11_11_09.mp4</strong><br><small style="color:#8e95a5;">/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_11_09.mp4</small></td>
+          <td><span class="badge duration">2m 0s</span></td>
+          <td>1920x1080 (h264)</td>
+          <td>19.89 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_11_09.mp4" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>Screen Recording 2026-10-28 at 1.22.33.mov</strong><br><small style="color:#8e95a5;">/Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 1.22.33.mov</small></td>
+          <td><span class="badge duration">1m 26s</span></td>
+          <td>4096x2304 (h264)</td>
+          <td>153.93 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 1.22.33.mov" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td><strong>Screen Recording 2026-10-28 at 7.53.06.mov</strong><br><small style="color:#8e95a5;">/Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 7.53.06.mov</small></td>
+          <td><span class="badge duration">1m 38s</span></td>
+          <td>4096x2304 (h264)</td>
+          <td>232.92 MB</td>
+          <td><span class="badge clips">~3 Clips Virales</span></td>
+          <td>
+            <a href="file:///Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 7.53.06.mov" class="btn-action">Ver Archivo</a>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <h2 style="font-family:'Cinzel',serif; font-size:18px; margin-bottom:16px; color:#fff;">
+      🎯 Ganchos Virales Diseñados por Agente Eddy💫
+    </h2>
+    <div class="hooks-grid">
+      
+        <div class="hook-card">
+          <div class="hook-badge">HOOK_01_CEO_BEAUTY · Cómo posar como CEO de Belleza</div>
+          <h4>"Cómo posar como Directora Ejecutiva en 3 segundos sin verte tiesa 📸💄"</h4>
+          <p class="hook-cta"><strong>CTA:</strong> Comenta FOTO si quieres la guía de poses comerciales de Captoora.</p>
+          <div class="hook-tags"><span>#Farmasi</span> <span>#Beauty CEO</span> <span>#Poses de Estudio</span> <span>#Monterrey</span></div>
+        </div>
+        
+        <div class="hook-card">
+          <div class="hook-badge">HOOK_02_BTS_CAOS_ORDENADO · Detrás de Cámaras Real</div>
+          <h4>"¿Qué pasa realmente cuando juntas a 25 líderes en un ciclorama? 🥂✨"</h4>
+          <p class="hook-cta"><strong>CTA:</strong> Síguenos para ver la sesión completa con mimosas y alta costura.</p>
+          <div class="hook-tags"><span>#BTS</span> <span>#Captoora Studio</span> <span>#Fotografía Comercial</span> <span>#Vibra</span></div>
+        </div>
+        
+        <div class="hook-card">
+          <div class="hook-badge">HOOK_03_ZERO_CROP_SECRETO · Técnica de Fotografía Zero Crop</div>
+          <h4>"La razón exacta por la que jamás recortamos una foto en Captoora Studio 📐🎞️"</h4>
+          <p class="hook-cta"><strong>CTA:</strong> Guarda este video si eres creador de contenido o fotógrafo.</p>
+          <div class="hook-tags"><span>#Zero Crop</span> <span>#Full Frame</span> <span>#Dirección de Arte</span> <span>#Iluminación</span></div>
+        </div>
+        
+        <div class="hook-card">
+          <div class="hook-badge">HOOK_04_TESTIMONIOS_PING_PONG · Testimonios Dinámicos de Marca</div>
+          <h4>"Le preguntamos a 5 directoras qué sintieron al verse en ciclorama puro... 😲✨"</h4>
+          <p class="hook-cta"><strong>CTA:</strong> Visita nuestro perfil para agendar tu fecha comercial.</p>
+          <div class="hook-tags"><span>#Testimonios</span> <span>#Transformación</span> <span>#Autoestima</span> <span>#Marca Personal</span></div>
+        </div>
+        
+    </div>
+
+    <div class="opus-cta-box">
+      <div>
+        <h3 style="font-size:18px; color:#fff; margin-bottom:4px;">🚀 Listo para Subir a Opus Clip 4.0 Pro</h3>
+        <p style="font-size:13px; color:var(--text-muted);">
+          Sube el archivo maestro <strong>CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4</strong> a tu cuenta de opus.pro con un solo clic.
+        </p>
+      </div>
+      <a href="https://www.opus.pro" target="_blank" class="opus-btn">
+        Abrir Opus Clip Pro (opus.pro) ➔
+      </a>
+    </div>
+  </div>
+</body>
+</html>
