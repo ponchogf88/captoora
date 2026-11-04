@@ -3772,7 +3772,11 @@
     "source_name": "DSC02748.JPG",
     "source_id": "1tCnlecOhBccQ_-8M56X4E6KEF5BCqyJj",
     "source_url": "https://drive.google.com/file/d/1tCnlecOhBccQ_-8M56X4E6KEF5BCqyJj/view?usp=drivesdk",
-    "estado": "pendiente"
+    "estado": "aprobada",
+    "lote_actual": "piloto_recuperado",
+    "version_actual": "piloto_v01_vertical",
+    "decision_usuario_actual": "aprobada",
+    "approved_jpg_drive": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk"
   },
   {
     "source_name": "DSC02750.JPG",

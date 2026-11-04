@@ -1,5 +1,15 @@
 [
   {
+    "file_name": "DSC02748_piloto_v01_vertical.jpg",
+    "source_name": "DSC02748.JPG",
+    "estado": "aprobada",
+    "drive_id": "1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF",
+    "drive_url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
+    "cloud_bytes": 308197,
+    "bytes": 308197,
+    "sha256": "3b9f5ae126f0fddf444592d16ef9607e98a12cee81d98ddc7f943c448909efd0"
+  },
+  {
     "file_name": "DSC07706_v04.jpg",
     "source_name": "DSC07706.JPG",
     "estado": "aprobada",

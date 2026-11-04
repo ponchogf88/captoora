@@ -2,6 +2,25 @@
   "approved": {
     "results": [
       {
+        "url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
+        "title": "DSC02748_piloto_v01_vertical.jpg",
+        "id": "1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF",
+        "mime_type": "image/jpeg",
+        "size": "308197",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:35.825Z",
+        "updated_at": "2026-11-04T18:02:35.825Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02748_piloto_v01_vertical.jpg",
+        "display_url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "shared": true,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
         "url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
         "title": "DSC07706_v04.jpg",
         "id": "1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY",
@@ -16,7 +35,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -35,7 +54,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -54,7 +73,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -73,7 +92,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -92,7 +111,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -111,7 +130,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -130,7 +149,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -149,7 +168,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -168,7 +187,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -187,7 +206,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -206,7 +225,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -225,7 +244,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -238,13 +257,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T06:09:20.943Z",
         "updated_at": "2026-11-04T06:09:20.943Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:55.305Z",
         "display_title": "DSC01550_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -257,13 +276,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T06:05:13.917Z",
         "updated_at": "2026-11-04T06:05:13.917Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:52.915Z",
         "display_title": "DSC01539_v02.jpg",
         "display_url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -276,13 +295,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T06:05:11.100Z",
         "updated_at": "2026-11-04T06:05:11.100Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:53.682Z",
         "display_title": "DSC01542_v02.jpg",
         "display_url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -295,13 +314,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T06:05:08.957Z",
         "updated_at": "2026-11-04T06:05:08.957Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:56.092Z",
         "display_title": "DSC01543_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -314,13 +333,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:29:59.509Z",
         "updated_at": "2026-11-04T05:29:59.509Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:50.764Z",
         "display_title": "DSC00043_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -333,13 +352,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:29:55.242Z",
         "updated_at": "2026-11-04T05:29:55.242Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:50.198Z",
         "display_title": "DSC00033_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -352,13 +371,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:28:17.440Z",
         "updated_at": "2026-11-04T05:28:17.440Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:49.484Z",
         "display_title": "DSC00029_v02.jpg",
         "display_url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -371,13 +390,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:28:14.894Z",
         "updated_at": "2026-11-04T05:28:14.894Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:48.887Z",
         "display_title": "DSC00027_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -390,13 +409,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:43.611Z",
         "updated_at": "2026-11-04T05:26:43.611Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:46.864Z",
         "display_title": "DSC00024_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -409,13 +428,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:41.068Z",
         "updated_at": "2026-11-04T05:26:41.068Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:46.197Z",
         "display_title": "DSC00020_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -428,13 +447,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:38.889Z",
         "updated_at": "2026-11-04T05:26:38.889Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:47.813Z",
         "display_title": "DSC00025_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -447,13 +466,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:35.618Z",
         "updated_at": "2026-11-04T05:26:35.618Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:45.362Z",
         "display_title": "DSC00019_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -466,13 +485,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:31.401Z",
         "updated_at": "2026-11-04T05:26:31.401Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:43.770Z",
         "display_title": "DSC00013_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -485,13 +504,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:26:27.585Z",
         "updated_at": "2026-11-04T05:26:27.585Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:45.009Z",
         "display_title": "DSC00017_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -504,13 +523,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:22:30.120Z",
         "updated_at": "2026-11-04T05:22:30.120Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:51.415Z",
         "display_title": "DSC00108_C_peluche_ligero_APROBADA.jpg",
         "display_url": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -523,13 +542,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:22:26.709Z",
         "updated_at": "2026-11-04T05:22:26.709Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:52.164Z",
         "display_title": "DSC01197_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -542,13 +561,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:22:23.524Z",
         "updated_at": "2026-11-04T05:22:23.524Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:49:11.390Z",
         "display_title": "DSC02415_v02.jpg",
         "display_url": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -561,13 +580,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:22:19.535Z",
         "updated_at": "2026-11-04T05:22:19.535Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:31.101Z",
         "display_title": "DSC00001_negro_v05.jpg",
         "display_url": "https://drive.google.com/file/d/15gHN2WJFUewLo2Rdrb6ecE0JL9JeAwgs/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -586,7 +605,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -605,7 +624,7 @@
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -618,13 +637,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:22:05.910Z",
         "updated_at": "2026-11-04T05:22:05.910Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:49:09.650Z",
         "display_title": "DSC02116_negro_v05.jpg",
         "display_url": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -637,13 +656,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:17:17.069Z",
         "updated_at": "2026-11-04T05:17:17.069Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:41.712Z",
         "display_title": "DSC00009_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1Jzpdg5TViS4a04mc-__Q-A4j00vUYQ1O/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -656,13 +675,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:17:13.485Z",
         "updated_at": "2026-11-04T05:17:13.485Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:37.587Z",
         "display_title": "DSC00004_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -675,13 +694,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:17:09.493Z",
         "updated_at": "2026-11-04T05:17:09.493Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:40.508Z",
         "display_title": "DSC00007_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -694,13 +713,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:17:06.931Z",
         "updated_at": "2026-11-04T05:17:06.931Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:36.559Z",
         "display_title": "DSC00003_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1JbifUSkdwgZX9_1djn4KHdReiFUbL5wZ/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       },
@@ -713,13 +732,13 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T05:17:04.838Z",
         "updated_at": "2026-11-04T05:17:04.838Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:48:34.911Z",
         "display_title": "DSC00002_v02.jpg",
         "display_url": "https://drive.google.com/file/d/1jbIoggd93hE_JV3myGNEWlIUWFttPfzG/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": false,
+        "shared": true,
         "can_download": true,
         "can_list_children": false
       }
@@ -3189,6 +3208,348 @@
   },
   "approved_png_readback": {
     "results": [
+      {
+        "url": "https://drive.google.com/file/d/1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB/view?usp=drivesdk",
+        "title": "DSC01557_v02.png",
+        "id": "1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB",
+        "mime_type": "image/png",
+        "size": "1694186",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:03:12.031Z",
+        "updated_at": "2026-11-04T18:03:12.031Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01557_v02.png",
+        "display_url": "https://drive.google.com/file/d/1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ/view?usp=drivesdk",
+        "title": "DSC01556_v02.png",
+        "id": "1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ",
+        "mime_type": "image/png",
+        "size": "1727224",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:03:08.898Z",
+        "updated_at": "2026-11-04T18:03:08.898Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01556_v02.png",
+        "display_url": "https://drive.google.com/file/d/1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco/view?usp=drivesdk",
+        "title": "DSC01551_v02.png",
+        "id": "16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco",
+        "mime_type": "image/png",
+        "size": "1754939",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:03:05.209Z",
+        "updated_at": "2026-11-04T18:03:05.209Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01551_v02.png",
+        "display_url": "https://drive.google.com/file/d/16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM/view?usp=drivesdk",
+        "title": "DSC01550_v02.png",
+        "id": "1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM",
+        "mime_type": "image/png",
+        "size": "1672923",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:03:02.555Z",
+        "updated_at": "2026-11-04T18:03:02.555Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01550_v02.png",
+        "display_url": "https://drive.google.com/file/d/1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B/view?usp=drivesdk",
+        "title": "DSC01543_v02.png",
+        "id": "1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B",
+        "mime_type": "image/png",
+        "size": "1808243",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:59.171Z",
+        "updated_at": "2026-11-04T18:02:59.171Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01543_v02.png",
+        "display_url": "https://drive.google.com/file/d/1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1fY9NQxkmoPErCG_hAueR5I65RumDZRs3/view?usp=drivesdk",
+        "title": "DSC01542_v02.png",
+        "id": "1fY9NQxkmoPErCG_hAueR5I65RumDZRs3",
+        "mime_type": "image/png",
+        "size": "1788268",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:55.814Z",
+        "updated_at": "2026-11-04T18:02:55.814Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01542_v02.png",
+        "display_url": "https://drive.google.com/file/d/1fY9NQxkmoPErCG_hAueR5I65RumDZRs3/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ/view?usp=drivesdk",
+        "title": "DSC01539_v02.png",
+        "id": "1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ",
+        "mime_type": "image/png",
+        "size": "1745323",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:52.004Z",
+        "updated_at": "2026-11-04T18:02:52.004Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC01539_v02.png",
+        "display_url": "https://drive.google.com/file/d/1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy/view?usp=drivesdk",
+        "title": "DSC02748_piloto_v01_vertical.png",
+        "id": "1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy",
+        "mime_type": "image/png",
+        "size": "1294266",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:33.195Z",
+        "updated_at": "2026-11-04T18:02:33.195Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02748_piloto_v01_vertical.png",
+        "display_url": "https://drive.google.com/file/d/1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu/view?usp=drivesdk",
+        "title": "DSC00043_v02.png",
+        "id": "1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu",
+        "mime_type": "image/png",
+        "size": "1731419",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:02:00.444Z",
+        "updated_at": "2026-11-04T18:02:00.444Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00043_v02.png",
+        "display_url": "https://drive.google.com/file/d/1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH/view?usp=drivesdk",
+        "title": "DSC00033_v02.png",
+        "id": "1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH",
+        "mime_type": "image/png",
+        "size": "1839524",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:56.421Z",
+        "updated_at": "2026-11-04T18:01:56.421Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00033_v02.png",
+        "display_url": "https://drive.google.com/file/d/1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1CB2b0hERh3VOouI58zJBWIihslr6S3YR/view?usp=drivesdk",
+        "title": "DSC00029_v02.png",
+        "id": "1CB2b0hERh3VOouI58zJBWIihslr6S3YR",
+        "mime_type": "image/png",
+        "size": "1942854",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:53.201Z",
+        "updated_at": "2026-11-04T18:01:53.201Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00029_v02.png",
+        "display_url": "https://drive.google.com/file/d/1CB2b0hERh3VOouI58zJBWIihslr6S3YR/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl/view?usp=drivesdk",
+        "title": "DSC00027_v02.png",
+        "id": "1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl",
+        "mime_type": "image/png",
+        "size": "1917926",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:50.074Z",
+        "updated_at": "2026-11-04T18:01:50.074Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00027_v02.png",
+        "display_url": "https://drive.google.com/file/d/1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs/view?usp=drivesdk",
+        "title": "DSC00025_v02.png",
+        "id": "1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs",
+        "mime_type": "image/png",
+        "size": "1838132",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:46.310Z",
+        "updated_at": "2026-11-04T18:01:46.310Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00025_v02.png",
+        "display_url": "https://drive.google.com/file/d/1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe/view?usp=drivesdk",
+        "title": "DSC00024_v02.png",
+        "id": "16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe",
+        "mime_type": "image/png",
+        "size": "1820102",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:43.256Z",
+        "updated_at": "2026-11-04T18:01:43.256Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00024_v02.png",
+        "display_url": "https://drive.google.com/file/d/16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm/view?usp=drivesdk",
+        "title": "DSC00020_v02.png",
+        "id": "1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm",
+        "mime_type": "image/png",
+        "size": "1854283",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:40.729Z",
+        "updated_at": "2026-11-04T18:01:40.729Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00020_v02.png",
+        "display_url": "https://drive.google.com/file/d/1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6/view?usp=drivesdk",
+        "title": "DSC00019_v02.png",
+        "id": "1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6",
+        "mime_type": "image/png",
+        "size": "2269723",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:38.141Z",
+        "updated_at": "2026-11-04T18:01:38.141Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00019_v02.png",
+        "display_url": "https://drive.google.com/file/d/1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh/view?usp=drivesdk",
+        "title": "DSC00017_v02.png",
+        "id": "1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh",
+        "mime_type": "image/png",
+        "size": "1981024",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:34.587Z",
+        "updated_at": "2026-11-04T18:01:34.587Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00017_v02.png",
+        "display_url": "https://drive.google.com/file/d/1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2/view?usp=drivesdk",
+        "title": "DSC00013_v02.png",
+        "id": "1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2",
+        "mime_type": "image/png",
+        "size": "1894377",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T18:01:31.285Z",
+        "updated_at": "2026-11-04T18:01:31.285Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00013_v02.png",
+        "display_url": "https://drive.google.com/file/d/1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
       {
         "url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
         "title": "DSC07706_v04.png",
