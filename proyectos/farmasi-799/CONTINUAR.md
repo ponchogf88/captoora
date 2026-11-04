@@ -32,3 +32,8 @@ python3 scripts/validar.py
 El expediente fuente debe tener `produccion/REGISTRO_EDICION.json`, lectura de Drive actual y `PROMPTS_EJECUTADOS_RECUPERADOS.json`. Registrar primero los nuevos prompts; el script no los obtiene mágicamente de otra conversación. No conserva credenciales ni cuotas en caché. Confirmar diff y publicar solo la carpeta de este proyecto en la rama `farmasi/continuidad-edicion-799`; no modificar la web ni fusionar cambios ajenos.
 
 Para ver las fuentes y descargar fotografías se requieren permisos de Drive, aunque el código se pueda leer. Un relevo sin acceso a los archivos está bloqueado: no reconstruir fotografías de memoria.
+
+## Peticion activa del 4 de noviembre
+Se localizaron tomas de la candidata de cabello largo negro y vestido blanco: DSC01532, DSC01536, DSC01539, DSC01540, DSC01542, DSC01543, DSC01550, DSC01551, DSC01556 y DSC01557. Seleccion visual de trabajo acorde con descripcion; no es identificacion personal por nombre ni confirmacion expresa del usuario. Lote05 en produccion, no aprobado. Lote04 anterior sigue en revision.
+
+Estado final de lote05: siete salidas en Drive, pendientes de aceptacion. Tres bloqueadas por filtro de salida de la herramienta; el error y prompt enviados estan en historial/lote_05_cabello_negro/procedencia_verificacion.json. No repetir ni modificar instrucciones para eludir el filtro. No hay diez salidas ni aprobacion implicita del lote04 o05.

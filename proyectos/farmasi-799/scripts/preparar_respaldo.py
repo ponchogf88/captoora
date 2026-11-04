@@ -28,7 +28,8 @@ def main():
     dump(dest / 'registros/drive_verificado.json', readback)
     dump(dest / 'registros/estado_799.json', dict(collections.Counter(x['estado'] for x in sources)))
     artifacts = []
-    for state, section, directory in [('aprobada', 'approved', production / 'aprobadas/JPG'), ('en_revision', 'review', production / 'lote_04_diversas')]:
+    sections = [('aprobada', 'approved', production / 'aprobadas/JPG'), ('en_revision', 'review', production / 'lote_04_diversas'), ('en_revision', 'review05', production / 'lote_05_cabello_negro')]
+    for state, section, directory in sections:
         for item in readback.get(section, {}).get('results', []):
             file = directory / item['title']
             entry = {'file_name': item['title'], 'source_name': item['title'].split('_')[0] + '.JPG', 'estado': state, 'drive_id': item['id'], 'drive_url': item['url'], 'cloud_bytes': int(item['size'])}
@@ -45,6 +46,12 @@ def main():
         path = dest / 'historial' / name
         path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(production / name, path)
+    for name in ['seleccion.json', 'procedencia_verificacion.json']:
+        src = production / 'lote_05_cabello_negro' / name
+        if src.exists():
+            path = dest / 'historial/lote_05_cabello_negro' / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, path)
     for name in ['FARMASI_799_REQUISITOS.md', 'PLAN_FARMASI_799.md']:
         shutil.copy2(source.parents[1] / name, dest / name)
     scripts = dest / 'scripts'

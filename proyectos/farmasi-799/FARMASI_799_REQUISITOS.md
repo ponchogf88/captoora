@@ -107,3 +107,8 @@ Verificado lote04: diez JPG en Drive, edicion nativa de diez fuentes inspecciona
 
 ## Respaldo GitHub autorizado
 Usuario solicita depositar proyecto, prompts exactos, proceso y detalles de calidad en GitHub para relevo de modelo al agotarse cuota. Destino verificado privado ponchogf88/captoora, rama farmasi/continuidad-edicion-799; solo carpeta proyectos/farmasi-799. Fotos permanecen en Drive conforme regla de custodia del repositorio; GitHub contiene enlaces/versiones/hash, no rollos. Recuperados 33 prompts exactos de ejecucion; faltantes historicos declarados como no recuperados, no inventados. Incluir proceso, fallos y limitaciones, registro799,22 aprobadas,10 en revision, plantillas separadas de prompts reales, guia de relevo y script idempotente de actualizacion sin generacion ni cobros. Estado solicitado, paquete en preparacion.
+
+## Lote05 prioridad cabello negro largo
+Usuario solicita diez de mujer descrita de piel clara, cabello largo lacio negro y sonrisa; candidata visual localizada en vestido blanco DSC01532 y DSC01663. Seleccionar diez de esa secuencia en orden y verificar cada sujeto antes de editar. Lote04 permanece en revision. GitHub respaldo inicial subido rama farmasi/continuidad-edicion-799; pendiente lectura remota y actualizacion de lote05.
+
+Lote05 verificado parcial: siete JPG generados, revisados y comprobados en Drive. DSC01532, DSC01536 y DSC01540 bloqueadas por filtro de salida de image_gen; codigo moderation_blocked. No se recibieron tres imagenes, no declarar lote de diez terminado ni reintentar para eludir filtro. Quedan pendientes. Total22 aprobadas,17 en revision y3 bloqueadas. Diez nuevos prompts exactos (7 con salida y3 bloqueados) anadidos al respaldo; total43.

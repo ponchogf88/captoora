@@ -1,6 +1,7 @@
 {
   "aprobada": 22,
-  "pendiente": 755,
-  "en_revision": 10,
-  "rechazada": 12
+  "pendiente": 745,
+  "en_revision": 17,
+  "rechazada": 12,
+  "bloqueada_herramienta": 3
 }

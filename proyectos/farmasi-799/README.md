@@ -1,6 +1,6 @@
 # FARMASI · continuidad de edición de 799 fotografías
 
-Respaldo privado del proyecto de sesión del 31 de octubre. Fecha de corte de este paquete: 3 de noviembre de 2026, hora Ciudad de México. No es publicación ni entrega al cliente.
+Respaldo privado del proyecto de sesión del 31 de octubre. Fecha de corte de este paquete: 4 de noviembre de 2026, hora Ciudad de México. No es publicación ni entrega al cliente.
 
 ## Empezar aquí
 
@@ -12,10 +12,11 @@ Respaldo privado del proyecto de sesión del 31 de octubre. Fecha de corte de es
 
 - 799 fuentes JPG inventariadas con ID y enlace de Drive.
 - 22 JPG aprobados expresamente, incluidos los diez del lote03 recién aceptados.
-- Diez JPG del lote04, con personas variadas, están en revisión; no hay aprobación de ese lote.
+- Diez JPG del lote04 y siete del lote05 están en revisión; no hay aprobación de esos lotes.
+- Lote05 de cabello negro: tres salidas bloqueadas por la herramienta (DSC01532, DSC01536, DSC01540). Solicitud de diez incompleta: siete entregables, tres pendientes. Los 43 prompts incluyen tres intentos bloqueados sin imagen.
 - Lote01 de veinte: rechazado por cabello y contornos. No reutilizar sus máscaras como método de producción.
-- 33 prompts exactos recuperados de las llamadas recientes, con procedencia y estado de cada variante.
-- 57 originales inspeccionados tienen SHA-256 registrado en este corte; no afirmar que los 799 tengan hash comprobado.
+- 43 prompts exactos recuperados de las llamadas recientes, con procedencia y estado de cada variante.
+- 70 originales inspeccionados tienen SHA-256 registrado en este corte; no afirmar que los 799 tengan hash comprobado.
 
 El registro distingue fuente, versión, aceptación y archivo verificado. Los campos históricos de rechazo no invalidan una versión posterior aprobada. `historial/` conserva fotografías documentales de registros anteriores; no es la cola vigente.
 
@@ -24,6 +25,7 @@ El registro distingue fuente, versión, aceptación y archivo verificado. Los ca
 - [Originales 799](https://drive.google.com/drive/folders/1fnUJljKnCMEuGlozJg8wxVTEDnWAI9lv).
 - [Aprobadas JPG](https://drive.google.com/drive/folders/1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11).
 - [Aprobadas PNG / referencias](https://drive.google.com/drive/folders/1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-).
+- [Lote05: siete en revisión](https://drive.google.com/drive/folders/1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq).
 - [Lote04 en revisión](https://drive.google.com/drive/folders/1RmnlaNjOJt8HFcZ0sSvx1ca-eprV-T66).
 
 GitHub respalda instrucciones, recetas, enlaces, hashes y decisiones. No contiene los JPG/PNG ni los 799 originales, conforme a la custodia del repositorio. Drive requiere acceso a la cuenta autorizada. No contiene claves ni enlaces temporales de descarga. No hay entrega Pixieset verificada para este proyecto.
