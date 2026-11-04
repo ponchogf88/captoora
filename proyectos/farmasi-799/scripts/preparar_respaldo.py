@@ -36,7 +36,7 @@ def main():
             if known.get(source_name, {}).get('estado') != state:
                 continue
             current_version = known.get(source_name, {}).get('version_actual')
-            if current_version == 'v03' and '_v03.' not in item['title']:
+            if current_version in ('v03','v04') and ('_'+current_version+'.') not in item['title']:
                 continue
             file = directory / item['title']
             entry = {'file_name': item['title'], 'source_name': item['title'].split('_')[0] + '.JPG', 'estado': state, 'drive_id': item['id'], 'drive_url': item['url'], 'cloud_bytes': int(item['size'])}

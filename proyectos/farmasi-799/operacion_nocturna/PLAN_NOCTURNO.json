@@ -753,5 +753,12 @@
     "version": "v04",
     "estado": "en_revision",
     "fuentes_nuevas": 0
+  },
+  "solicitud_directa_lote16": {
+    "solicitadas": 20,
+    "seleccion": "lote_16_variedad20/SELECCION_20.json",
+    "nuevas_entregadas": 0,
+    "estado": "pendiente_resolver_limpieza_sin_alterar_personas",
+    "no_contar_pruebas_internas": true
   }
 }

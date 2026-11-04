@@ -146,3 +146,8 @@ Usuario aprueba explicitamente las8correcciones v03. Pasar sus JPG/PNG maestros 
 
 ### Entrega cabello v04 verificada
 Ocho v03 aprobadas por usuario, JPG y PNG movidos y verificados en Drive. DSC07706 v04 candidata aparte: textura real de cabello restaurada, rostro y exterior de mascara con cero pixeles modificados. PNG y JPG subidos y bytes verificados; pendiente aprobacion visual. No generacion ni incremento de fuentes nocturnas.
+
+## Lote16 solicitado:20fuentes nuevas con variedad de modelos
+Usuario aprueba DSC07706v04 explicitamente; moverla a aprobadas conservandohistorial. Seleccionar20fuentes pendientes diversas, verificar orientacion, limpiar solo set sin alterar rostros/cabellos/cuerpos/productos/rotulos. Conservar alfombra y sombras reales, no repetir fotos ni aprobar nuevas automaticamente. Fuentes en lote_16_variedad20/SELECCION_20.json, estado solicitado. Priorizar fidelidad original mediante edicion local; nuevas versiones a revision Drive y trazabilidad GitHub.
+
+Control de calidad lote16: primer metodo local de relleno rechazado internamente por bordes artificiales y una invasion de region de rostro. NOsubido aDrive, NOentregado, NOcontado, NOaprobado. Veintefuentes seleccionadas siguen pendientes, no sustituirlas por pruebas fallidas. Aprobacionv04 deDSC07706 registrada y archivos movidos aaprobadas enDrive, nombres ypadres verificados.

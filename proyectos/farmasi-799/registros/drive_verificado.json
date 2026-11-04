@@ -2,6 +2,25 @@
   "approved": {
     "results": [
       {
+        "url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
+        "title": "DSC07706_v04.jpg",
+        "id": "1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY",
+        "mime_type": "image/jpeg",
+        "size": "4708011",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T16:52:37.092Z",
+        "updated_at": "2026-11-04T16:52:37.092Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v04.jpg",
+        "display_url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
         "url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
         "title": "DSC07726_v03.jpg",
         "id": "1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh",
@@ -3171,6 +3190,25 @@
   "approved_png_readback": {
     "results": [
       {
+        "url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
+        "title": "DSC07706_v04.png",
+        "id": "15DZ5Mjismi5RTwIFRXC49_iIg259lNuh",
+        "mime_type": "image/png",
+        "size": "9222543",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T16:52:42.119Z",
+        "updated_at": "2026-11-04T16:52:42.119Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v04.png",
+        "display_url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
         "url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
         "title": "DSC07726_v03.png",
         "id": "1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1",
@@ -3217,7 +3255,7 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T12:36:27.457Z",
         "updated_at": "2026-11-04T12:36:27.457Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:20:46.330Z",
         "display_title": "DSC08479_v03.png",
         "display_url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
         "parent_ids": [
@@ -3236,7 +3274,7 @@
         "file_or_folder": "file",
         "created_at": "2026-11-04T12:36:21.796Z",
         "updated_at": "2026-11-04T12:36:21.796Z",
-        "viewedByMeTime": null,
+        "viewedByMeTime": "2026-11-04T17:21:11.962Z",
         "display_title": "DSC08471_v03.png",
         "display_url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
         "parent_ids": [
