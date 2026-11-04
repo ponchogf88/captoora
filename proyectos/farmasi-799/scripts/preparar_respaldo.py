@@ -21,7 +21,7 @@ def main():
     sources = []
     for item in registry['files']:
         # Current status is distinct from rejected historical version fields.
-        sources.append({k: item[k] for k in ('source_name', 'source_id', 'source_url', 'estado', 'lote_actual', 'version_actual', 'decision_usuario_actual', 'approved_jpg_drive', 'revision_drive_url') if k in item})
+        sources.append({k: item[k] for k in ('source_name', 'source_id', 'source_url', 'estado', 'lote_actual', 'version_actual', 'decision_usuario_actual', 'approved_jpg_drive', 'revision_drive_url', 'correccion_en_revision') if k in item})
     assert len(sources) == 799 and len({x['source_id'] for x in sources}) == 799
     dump(dest / 'registros/fuentes_799.json', sources)
     dump(dest / 'prompts/ejecutados_exactos.json', prompts)

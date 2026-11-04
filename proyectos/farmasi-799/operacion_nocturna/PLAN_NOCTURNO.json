@@ -742,13 +742,16 @@
   "regla": "Contar solo salidas nuevas revisadas, guardadas y verificadas en Drive; originales y versiones anteriores no cuentan; ninguna nueva se aprueba automaticamente; no duplicar tareas activas.",
   "cierre": "10:00",
   "automation_id": "farmasi-producci-n-nocturna-hasta-200-4-nov",
-  "trabajo_en_curso": {
-    "estado": "sin_trabajo_activo",
-    "fuentes": []
-  },
+  "trabajo_en_curso": null,
   "producidas_verificadas": 100,
   "restantes_hasta_limite": 100,
   "ultima_entrega": "v03:7rostros+1etiqueta en8fuentes existentes,8JPG+8PNG verificados. No son nuevas:contador100/200. 2limitaciones de fuente declaradas, pendientes revision.",
   "prioridad_usuario": "20 solicitadas terminadas en revision, pendientes aprobacion",
-  "puerta_calidad": "Correcciones v03 finales8fuentes entregables para revision. No reiniciar generacion integral de caras/textos. Auditoria global pendiente; etiqueta necesita referencia de misma impresion yDSC08479 fuente enfocada para mayor nitidez. Mantener revision por lotes y originales."
+  "puerta_calidad": "Correcciones v03 finales8fuentes entregables para revision. No reiniciar generacion integral de caras/textos. Auditoria global pendiente; etiqueta necesita referencia de misma impresion yDSC08479 fuente enfocada para mayor nitidez. Mantener revision por lotes y originales.",
+  "ultima_correccion_cabello": {
+    "source": "DSC07706.JPG",
+    "version": "v04",
+    "estado": "en_revision",
+    "fuentes_nuevas": 0
+  }
 }
