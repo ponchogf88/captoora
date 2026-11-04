@@ -2,7 +2,7 @@
 
 ## Contrato de continuidad
 
-No recrear las 799 fotos ni empezar desde cero. Leer primero la cola y las aprobaciones; preservar originales. No preguntar de nuevo por decisiones que ya están documentadas. El siguiente lote solicitado prioriza a la mujer de cabello largo, lacio y negro descrita por el usuario: confirmar visualmente la selección antes de gastar generación. El lote04 aún no se aprobó.
+No recrear las 799 fotos ni empezar desde cero. Leer primero la cola y las aprobaciones; preservar originales. No preguntar de nuevo por decisiones que ya están documentadas. La instrucción activa es la producción nocturna autorizada hasta200nuevas del4noviembre; leer operacion_nocturna/PLAN_NOCTURNO.json antes de elegir fuentes. Lote04 aún no aprobado. Las siete salidas de lote05 ya se aprobaron; las tres bloqueadas siguen pendientes.
 
 ## Reanudar
 
@@ -34,6 +34,9 @@ El expediente fuente debe tener `produccion/REGISTRO_EDICION.json`, lectura de D
 Para ver las fuentes y descargar fotografías se requieren permisos de Drive, aunque el código se pueda leer. Un relevo sin acceso a los archivos está bloqueado: no reconstruir fotografías de memoria.
 
 ## Peticion activa del 4 de noviembre
-Se localizaron tomas de la candidata de cabello largo negro y vestido blanco: DSC01532, DSC01536, DSC01539, DSC01540, DSC01542, DSC01543, DSC01550, DSC01551, DSC01556 y DSC01557. Seleccion visual de trabajo acorde con descripcion; no es identificacion personal por nombre ni confirmacion expresa del usuario. Lote05 en produccion, no aprobado. Lote04 anterior sigue en revision.
+Se localizaron tomas de la candidata de cabello largo negro y vestido blanco: DSC01532, DSC01536, DSC01539, DSC01540, DSC01542, DSC01543, DSC01550, DSC01551, DSC01556 y DSC01557. Seleccion visual de trabajo acorde con descripcion; no es identificacion personal por nombre ni confirmacion expresa del usuario. Lote05: siete salidas aprobadas y tres bloqueadas sin salida. Lote04 anterior sigue en revision.
 
-Estado final de lote05: siete salidas en Drive, pendientes de aceptacion. Tres bloqueadas por filtro de salida de la herramienta; el error y prompt enviados estan en historial/lote_05_cabello_negro/procedencia_verificacion.json. No repetir ni modificar instrucciones para eludir el filtro. No hay diez salidas ni aprobacion implicita del lote04 o05.
+Estado final de lote05: siete salidas en Drive, aceptadas expresamente y movidas a aprobadas/JPG. Tres bloqueadas por filtro de salida de la herramienta; el error y prompt enviados estan en historial/lote_05_cabello_negro/procedencia_verificacion.json. No repetir ni modificar instrucciones para eludir el filtro. No hay diez salidas del lote05; lote04 sigue sin aprobacion.
+
+## Operacion nocturna vigente
+Automatizacion farmasi-producci-n-nocturna-hasta-200-4-nov activa solo4nov:01/03/05/07/09produccion,10cierre. Objetivos40/80/120/160/200 nuevas verificadas. Actualmente20nuevas verificadas(lotes06y07),restan180; la activacion01solo completa20mas para alcanzar40. Las29anteriores aprobadas no se cuentan. Ver protocolo y reserva antes de generar; no duplicar trabajo. Persistir prompt/resultado inmediatamente al recibir cada salida, no depender de variables de una celda que aun corre.

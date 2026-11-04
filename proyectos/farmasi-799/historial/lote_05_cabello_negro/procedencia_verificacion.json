@@ -23,7 +23,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01542",
@@ -48,7 +48,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01543",
@@ -73,7 +73,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01550",
@@ -98,7 +98,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01551",
@@ -123,7 +123,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01556",
@@ -148,7 +148,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     },
     {
       "name": "DSC01557",
@@ -173,7 +173,7 @@
           "parent_id": "1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq"
         }
       },
-      "estado": "en_revision"
+      "estado": "aprobada"
     }
   ],
   "blocked": [
