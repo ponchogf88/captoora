@@ -760,5 +760,12 @@
     "nuevas_entregadas": 0,
     "estado": "pendiente_resolver_limpieza_sin_alterar_personas",
     "no_contar_pruebas_internas": true
+  },
+  "aprobacion_total_usuario": {
+    "fecha": "2026-11-04",
+    "fuentes_aprobadas": 140,
+    "en_revision": 0,
+    "no_es_produccion_nueva": true,
+    "evidencia": "aprobacion_total_revision_2026-11-04/RESULTADO.json"
   }
 }

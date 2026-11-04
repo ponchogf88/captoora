@@ -2,745 +2,1494 @@
   "approved": {
     "results": [
       {
-        "url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
-        "title": "DSC02748_piloto_v01_vertical.jpg",
         "id": "1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF",
-        "mime_type": "image/jpeg",
+        "title": "DSC02748_piloto_v01_vertical.jpg",
+        "url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
         "size": "308197",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:35.825Z",
-        "updated_at": "2026-11-04T18:02:35.825Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02748_piloto_v01_vertical.jpg",
-        "display_url": "https://drive.google.com/file/d/1WlaDEqwSo_ZrJuHXOWbtch4h41oUVdFF/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
-        "title": "DSC07706_v04.jpg",
         "id": "1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY",
-        "mime_type": "image/jpeg",
+        "title": "DSC07706_v04.jpg",
+        "url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
         "size": "4708011",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T16:52:37.092Z",
-        "updated_at": "2026-11-04T16:52:37.092Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07706_v04.jpg",
-        "display_url": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
-        "title": "DSC07726_v03.jpg",
         "id": "1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh",
-        "mime_type": "image/jpeg",
+        "title": "DSC07726_v03.jpg",
+        "url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
         "size": "5010455",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:37.386Z",
-        "updated_at": "2026-11-04T12:33:37.386Z",
-        "viewedByMeTime": "2026-11-04T12:45:18.150Z",
-        "display_title": "DSC07726_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
-        "title": "DSC08484_v03.jpg",
         "id": "127up9vjISarVa-9S0Oql5F9ThMMDIBZF",
-        "mime_type": "image/jpeg",
+        "title": "DSC08484_v03.jpg",
+        "url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
         "size": "5685950",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:33.140Z",
-        "updated_at": "2026-11-04T12:33:33.140Z",
-        "viewedByMeTime": "2026-11-04T12:44:10.440Z",
-        "display_title": "DSC08484_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
-        "title": "DSC08479_v03.jpg",
         "id": "17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0",
-        "mime_type": "image/jpeg",
+        "title": "DSC08479_v03.jpg",
+        "url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
         "size": "5573202",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:29.340Z",
-        "updated_at": "2026-11-04T12:33:29.340Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC08479_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
-        "title": "DSC08471_v03.jpg",
         "id": "1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0",
-        "mime_type": "image/jpeg",
+        "title": "DSC08471_v03.jpg",
+        "url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
         "size": "5361032",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:25.597Z",
-        "updated_at": "2026-11-04T12:33:25.597Z",
-        "viewedByMeTime": "2026-11-04T12:45:20.282Z",
-        "display_title": "DSC08471_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
-        "title": "DSC07706_v03.jpg",
         "id": "1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR",
-        "mime_type": "image/jpeg",
+        "title": "DSC07706_v03.jpg",
+        "url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
         "size": "5251486",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:21.772Z",
-        "updated_at": "2026-11-04T12:33:21.772Z",
-        "viewedByMeTime": "2026-11-04T12:44:35.827Z",
-        "display_title": "DSC07706_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
-        "title": "DSC07732_v03.jpg",
         "id": "1L3HCz8bUArYeuas2riB22op9EyJzmCRQ",
-        "mime_type": "image/jpeg",
+        "title": "DSC07732_v03.jpg",
+        "url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
         "size": "4988721",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:17.310Z",
-        "updated_at": "2026-11-04T12:33:17.310Z",
-        "viewedByMeTime": "2026-11-04T12:45:19.809Z",
-        "display_title": "DSC07732_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
-        "title": "DSC07731_v03.jpg",
         "id": "1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF",
-        "mime_type": "image/jpeg",
+        "title": "DSC07731_v03.jpg",
+        "url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
         "size": "5079362",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:12.323Z",
-        "updated_at": "2026-11-04T12:33:12.323Z",
-        "viewedByMeTime": "2026-11-04T12:45:18.722Z",
-        "display_title": "DSC07731_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
-        "title": "DSC07724_v03.jpg",
         "id": "1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q",
-        "mime_type": "image/jpeg",
+        "title": "DSC07724_v03.jpg",
+        "url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
         "size": "5013688",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:33:08.564Z",
-        "updated_at": "2026-11-04T12:33:08.564Z",
-        "viewedByMeTime": "2026-11-04T12:45:16.681Z",
-        "display_title": "DSC07724_v03.jpg",
-        "display_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk",
-        "title": "DSC01557_v02.jpg",
+        "id": "1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy",
+        "title": "DSC07720_v02.jpg",
+        "url": "https://drive.google.com/file/d/1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy/view?usp=drivesdk",
+        "size": "367855",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Z_Q7mNXEOXfJbboaojHGMBhEp1pi2PVK",
+        "title": "DSC07731_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Z_Q7mNXEOXfJbboaojHGMBhEp1pi2PVK/view?usp=drivesdk",
+        "size": "419306",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT",
+        "title": "DSC08454_v02.jpg",
+        "url": "https://drive.google.com/file/d/1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT/view?usp=drivesdk",
+        "size": "512558",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1bc2p7-8qfl8Xh3GyD8U0TOIqf9irEVrt",
+        "title": "DSC08484_v02.jpg",
+        "url": "https://drive.google.com/file/d/1bc2p7-8qfl8Xh3GyD8U0TOIqf9irEVrt/view?usp=drivesdk",
+        "size": "524631",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP",
+        "title": "DSC08456_v02.jpg",
+        "url": "https://drive.google.com/file/d/1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP/view?usp=drivesdk",
+        "size": "503475",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB",
+        "title": "DSC07722_v02.jpg",
+        "url": "https://drive.google.com/file/d/1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB/view?usp=drivesdk",
+        "size": "381467",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1",
+        "title": "DSC08481_v02.jpg",
+        "url": "https://drive.google.com/file/d/1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1/view?usp=drivesdk",
+        "size": "515626",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "133DCqJZHogOeHZ4ioRCCJvTuX05btzcn",
+        "title": "DSC08477_v02.jpg",
+        "url": "https://drive.google.com/file/d/133DCqJZHogOeHZ4ioRCCJvTuX05btzcn/view?usp=drivesdk",
+        "size": "513607",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q",
+        "title": "DSC08459_v02.jpg",
+        "url": "https://drive.google.com/file/d/1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q/view?usp=drivesdk",
+        "size": "504203",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Xr9Lb7u3tQCqxrbfwXHZ-AlmFXkGsgQj",
+        "title": "DSC08479_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Xr9Lb7u3tQCqxrbfwXHZ-AlmFXkGsgQj/view?usp=drivesdk",
+        "size": "520122",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1dWcJxENlkBI3RuaFKd6P5NxrdPfA5ZBJ",
+        "title": "DSC08471_v02.jpg",
+        "url": "https://drive.google.com/file/d/1dWcJxENlkBI3RuaFKd6P5NxrdPfA5ZBJ/view?usp=drivesdk",
+        "size": "481398",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw",
+        "title": "DSC08466_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw/view?usp=drivesdk",
+        "size": "515840",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii",
+        "title": "DSC07721_v02.jpg",
+        "url": "https://drive.google.com/file/d/10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii/view?usp=drivesdk",
+        "size": "408334",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG",
+        "title": "DSC07734_v02.jpg",
+        "url": "https://drive.google.com/file/d/1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG/view?usp=drivesdk",
+        "size": "448339",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1L-x1cPqgfP0Y8qWmR0T8AW6DFQKT9WQa",
+        "title": "DSC07706_v02.jpg",
+        "url": "https://drive.google.com/file/d/1L-x1cPqgfP0Y8qWmR0T8AW6DFQKT9WQa/view?usp=drivesdk",
+        "size": "441191",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx",
+        "title": "DSC08457_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx/view?usp=drivesdk",
+        "size": "493549",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p",
+        "title": "DSC07733_v02.jpg",
+        "url": "https://drive.google.com/file/d/1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p/view?usp=drivesdk",
+        "size": "477279",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "14uXx_wmAlvjpFqvbci7G62hs6TwYruxT",
+        "title": "DSC07732_v02.jpg",
+        "url": "https://drive.google.com/file/d/14uXx_wmAlvjpFqvbci7G62hs6TwYruxT/view?usp=drivesdk",
+        "size": "414406",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1M5ic9OqJSC0tpPnglo-3AmX85gaT85jI",
+        "title": "DSC07724_v02.jpg",
+        "url": "https://drive.google.com/file/d/1M5ic9OqJSC0tpPnglo-3AmX85gaT85jI/view?usp=drivesdk",
+        "size": "404802",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1b8e5QyWaD4oJUvH_7pSALQQb4OhVWMV0",
+        "title": "DSC07726_v02.jpg",
+        "url": "https://drive.google.com/file/d/1b8e5QyWaD4oJUvH_7pSALQQb4OhVWMV0/view?usp=drivesdk",
+        "size": "403003",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ejMBBpOUCxw6zht10GYrySvG58CSLZfv",
+        "title": "DSC01859_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ejMBBpOUCxw6zht10GYrySvG58CSLZfv/view?usp=drivesdk",
+        "size": "461626",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4",
+        "title": "DSC01857_v02.jpg",
+        "url": "https://drive.google.com/file/d/1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4/view?usp=drivesdk",
+        "size": "478078",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw",
+        "title": "DSC01866_v02.jpg",
+        "url": "https://drive.google.com/file/d/1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw/view?usp=drivesdk",
+        "size": "451400",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1EvB8voJj1zAsDK88jmJHkv42AcibpPyB",
+        "title": "DSC01865_v02.jpg",
+        "url": "https://drive.google.com/file/d/1EvB8voJj1zAsDK88jmJHkv42AcibpPyB/view?usp=drivesdk",
+        "size": "483209",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1B2N-5x_ZKywRGD9v1r_V_cS_X4iwSMpU",
+        "title": "DSC01817_v02.jpg",
+        "url": "https://drive.google.com/file/d/1B2N-5x_ZKywRGD9v1r_V_cS_X4iwSMpU/view?usp=drivesdk",
+        "size": "540523",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v",
+        "title": "DSC02119_v02.jpg",
+        "url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+        "size": "518056",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ",
+        "title": "DSC02118_v02.jpg",
+        "url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+        "size": "488457",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo",
+        "title": "DSC02132_v02.jpg",
+        "url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+        "size": "518190",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA",
+        "title": "DSC01077_v02.jpg",
+        "url": "https://drive.google.com/file/d/176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA/view?usp=drivesdk",
+        "size": "497663",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1dedvFCvTRd3KWf__TWp-gARb9E1onpAM",
+        "title": "DSC01073_v02.jpg",
+        "url": "https://drive.google.com/file/d/1dedvFCvTRd3KWf__TWp-gARb9E1onpAM/view?usp=drivesdk",
+        "size": "511490",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca",
+        "title": "DSC02354_v02.jpg",
+        "url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+        "size": "504209",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86",
+        "title": "DSC02340_v02.jpg",
+        "url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+        "size": "523301",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2",
+        "title": "DSC02324_v02.jpg",
+        "url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+        "size": "470777",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi",
+        "title": "DSC02326_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+        "size": "500453",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1EDVzlGqt-N36nRvCagwavWDyufep66_M",
+        "title": "DSC02146_v02.jpg",
+        "url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+        "size": "442894",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J",
+        "title": "DSC01833_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J/view?usp=drivesdk",
+        "size": "475452",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei",
+        "title": "DSC01822_v02.jpg",
+        "url": "https://drive.google.com/file/d/1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei/view?usp=drivesdk",
+        "size": "486236",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl",
+        "title": "DSC02149_v02.jpg",
+        "url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+        "size": "420617",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1GB86QftoctO_4WochQYZQeRbsjAtIXa6",
+        "title": "DSC01855_v02.jpg",
+        "url": "https://drive.google.com/file/d/1GB86QftoctO_4WochQYZQeRbsjAtIXa6/view?usp=drivesdk",
+        "size": "490586",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8",
+        "title": "DSC02141_v02.jpg",
+        "url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+        "size": "418829",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty",
+        "title": "DSC02140_v02.jpg",
+        "url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+        "size": "488785",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t",
+        "title": "DSC01088_v02.jpg",
+        "url": "https://drive.google.com/file/d/1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t/view?usp=drivesdk",
+        "size": "467901",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU",
+        "title": "DSC02126_v02.jpg",
+        "url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+        "size": "520503",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz",
+        "title": "DSC01063_v02.jpg",
+        "url": "https://drive.google.com/file/d/1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz/view?usp=drivesdk",
+        "size": "505211",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf",
+        "title": "DSC01003_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf/view?usp=drivesdk",
+        "size": "510054",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g",
+        "title": "DSC01027_v02.jpg",
+        "url": "https://drive.google.com/file/d/1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g/view?usp=drivesdk",
+        "size": "491205",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo",
+        "title": "DSC01051_v02.jpg",
+        "url": "https://drive.google.com/file/d/166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo/view?usp=drivesdk",
+        "size": "530426",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv",
+        "title": "DSC02358_v02.jpg",
+        "url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+        "size": "524649",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG",
+        "title": "DSC02405_v02.jpg",
+        "url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+        "size": "645343",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX",
+        "title": "DSC02400_v02.jpg",
+        "url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+        "size": "520267",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ",
+        "title": "DSC02352_v02.jpg",
+        "url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+        "size": "473880",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd",
+        "title": "DSC02363_v02.jpg",
+        "url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+        "size": "463877",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1i4u6enwEdhLQ3CReWRzATcpGWL_JCUET",
+        "title": "DSC01812_v02.jpg",
+        "url": "https://drive.google.com/file/d/1i4u6enwEdhLQ3CReWRzATcpGWL_JCUET/view?usp=drivesdk",
+        "size": "529124",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp",
+        "title": "DSC01819_v02.jpg",
+        "url": "https://drive.google.com/file/d/1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp/view?usp=drivesdk",
+        "size": "446507",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ",
+        "title": "DSC02136_v02.jpg",
+        "url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+        "size": "414620",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ",
+        "title": "DSC02134_v02.jpg",
+        "url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+        "size": "468638",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp",
+        "title": "DSC01067_v02.jpg",
+        "url": "https://drive.google.com/file/d/1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp/view?usp=drivesdk",
+        "size": "477497",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1QZuFKypb5noapU4llEj24vkC4jgmsjAz",
+        "title": "DSC01080_v02.jpg",
+        "url": "https://drive.google.com/file/d/1QZuFKypb5noapU4llEj24vkC4jgmsjAz/view?usp=drivesdk",
+        "size": "501640",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l",
+        "title": "DSC01084_v02.jpg",
+        "url": "https://drive.google.com/file/d/1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l/view?usp=drivesdk",
+        "size": "485214",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS",
+        "title": "DSC02370_v02.jpg",
+        "url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+        "size": "641957",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1u3c5rBVbt16zdL84l4PL6VybUnlnaI43",
+        "title": "DSC02317_v02.jpg",
+        "url": "https://drive.google.com/file/d/1u3c5rBVbt16zdL84l4PL6VybUnlnaI43/view?usp=drivesdk",
+        "size": "578815",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1asFKFOvemnwBsKHcoc2Md-g0FhyZvwzC",
+        "title": "DSC02314_v02.jpg",
+        "url": "https://drive.google.com/file/d/1asFKFOvemnwBsKHcoc2Md-g0FhyZvwzC/view?usp=drivesdk",
+        "size": "621899",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1HccdTYKGZyZ43FtGfmI7ZhymrawbveQ3",
+        "title": "DSC02309_v02.jpg",
+        "url": "https://drive.google.com/file/d/1HccdTYKGZyZ43FtGfmI7ZhymrawbveQ3/view?usp=drivesdk",
+        "size": "554006",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "17MfD8FKVew9z-9g-n5P_myZzufVGbHhi",
+        "title": "DSC00936_v02.jpg",
+        "url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+        "size": "439010",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "12_JGm2aos0bkLixVwoVl5Pka2z57q1v3",
+        "title": "DSC00925_v02.jpg",
+        "url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+        "size": "437060",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1U6oqXudXu4Y2Xxe0Iv9yG6IbVxfQ-8-K",
+        "title": "DSC02297_v02.jpg",
+        "url": "https://drive.google.com/file/d/1U6oqXudXu4Y2Xxe0Iv9yG6IbVxfQ-8-K/view?usp=drivesdk",
+        "size": "563732",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "16NEKcRGVwhBFZnucT7jESLvtTFUM18CP",
+        "title": "DSC02296_v02.jpg",
+        "url": "https://drive.google.com/file/d/16NEKcRGVwhBFZnucT7jESLvtTFUM18CP/view?usp=drivesdk",
+        "size": "588597",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz",
+        "title": "DSC00921_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+        "size": "429577",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "15K68bv6wfVVKDPV78L33nmAlu7CDThTE",
+        "title": "DSC00920_v02.jpg",
+        "url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+        "size": "461797",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P",
+        "title": "DSC00919_v02.jpg",
+        "url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+        "size": "461390",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7",
+        "title": "DSC00916_v02.jpg",
+        "url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+        "size": "507363",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C",
+        "title": "DSC00896_v02.jpg",
+        "url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+        "size": "407236",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK",
+        "title": "DSC00913_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+        "size": "555822",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx",
+        "title": "DSC00910_v02.jpg",
+        "url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+        "size": "578777",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6",
+        "title": "DSC00893_v02.jpg",
+        "url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+        "size": "470230",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ZaDu3c_AceM7K8D7SGIFLsVkzjzom5t3",
+        "title": "DSC02292_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ZaDu3c_AceM7K8D7SGIFLsVkzjzom5t3/view?usp=drivesdk",
+        "size": "579062",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "162sos6j5ohpbDKZryjeinUvG2VNNd0QI",
+        "title": "DSC02291_v02.jpg",
+        "url": "https://drive.google.com/file/d/162sos6j5ohpbDKZryjeinUvG2VNNd0QI/view?usp=drivesdk",
+        "size": "506167",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1W75BVWtCcAdXpIrbM6J2EoftqJNU7xYP",
+        "title": "DSC02288_v02.jpg",
+        "url": "https://drive.google.com/file/d/1W75BVWtCcAdXpIrbM6J2EoftqJNU7xYP/view?usp=drivesdk",
+        "size": "586792",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1kLRftodbHkMG0sacF3m2clCRPxFcxGMQ",
+        "title": "DSC02285_v02.jpg",
+        "url": "https://drive.google.com/file/d/1kLRftodbHkMG0sacF3m2clCRPxFcxGMQ/view?usp=drivesdk",
+        "size": "646728",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "10k_hk-1BnyMr-UQCINSjYKWegOtiGrOt",
+        "title": "DSC02281_v02.jpg",
+        "url": "https://drive.google.com/file/d/10k_hk-1BnyMr-UQCINSjYKWegOtiGrOt/view?usp=drivesdk",
+        "size": "714520",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1cQ_of4DfzYcaOKh-R1gjim_tP74BbvjP",
+        "title": "DSC02280_v02.jpg",
+        "url": "https://drive.google.com/file/d/1cQ_of4DfzYcaOKh-R1gjim_tP74BbvjP/view?usp=drivesdk",
+        "size": "665263",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1xqcadPdFr4tchSqpB6bfSZCEXa4ZYKvb",
+        "title": "DSC02279_v02.jpg",
+        "url": "https://drive.google.com/file/d/1xqcadPdFr4tchSqpB6bfSZCEXa4ZYKvb/view?usp=drivesdk",
+        "size": "642022",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL",
+        "title": "DSC02275_v02.jpg",
+        "url": "https://drive.google.com/file/d/1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL/view?usp=drivesdk",
+        "size": "631528",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K",
+        "title": "DSC02259_v02.jpg",
+        "url": "https://drive.google.com/file/d/1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K/view?usp=drivesdk",
+        "size": "651987",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g",
+        "title": "DSC02254_v02.jpg",
+        "url": "https://drive.google.com/file/d/1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g/view?usp=drivesdk",
+        "size": "647460",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "18BhrprPJAzB4rhuNK-ceMpHCfM4DhyrT",
+        "title": "DSC02260_v02.jpg",
+        "url": "https://drive.google.com/file/d/18BhrprPJAzB4rhuNK-ceMpHCfM4DhyrT/view?usp=drivesdk",
+        "size": "670215",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Xp4HmUstmPF6k8SiD1jDFU63j4kgIMqc",
+        "title": "DSC02267_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Xp4HmUstmPF6k8SiD1jDFU63j4kgIMqc/view?usp=drivesdk",
+        "size": "650670",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1TXUj7jQURxAwqPhnOusXnWqWgC8XyRgt",
+        "title": "DSC00769_v02.jpg",
+        "url": "https://drive.google.com/file/d/1TXUj7jQURxAwqPhnOusXnWqWgC8XyRgt/view?usp=drivesdk",
+        "size": "452391",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1zPesCdzTZfVk9f2u2wqR3nOnuWLp1Hlh",
+        "title": "DSC00752_v02.jpg",
+        "url": "https://drive.google.com/file/d/1zPesCdzTZfVk9f2u2wqR3nOnuWLp1Hlh/view?usp=drivesdk",
+        "size": "617145",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-",
+        "title": "DSC00722_v02.jpg",
+        "url": "https://drive.google.com/file/d/1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-/view?usp=drivesdk",
+        "size": "450770",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1hRAmhsjxzIokejjB85X9y-GE_SoSSgGF",
+        "title": "DSC00688_v02.jpg",
+        "url": "https://drive.google.com/file/d/1hRAmhsjxzIokejjB85X9y-GE_SoSSgGF/view?usp=drivesdk",
+        "size": "524823",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr",
+        "title": "DSC00678_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr/view?usp=drivesdk",
+        "size": "537613",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Dp5R5pQMULQ-0nfvFP1n-b-t7Qp9TmDY",
+        "title": "DSC00629_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Dp5R5pQMULQ-0nfvFP1n-b-t7Qp9TmDY/view?usp=drivesdk",
+        "size": "477476",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "14VSVVnpzMeQUmvNcpTxL76Dr7h9fN7vz",
+        "title": "DSC00628_v02.jpg",
+        "url": "https://drive.google.com/file/d/14VSVVnpzMeQUmvNcpTxL76Dr7h9fN7vz/view?usp=drivesdk",
+        "size": "478484",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1dodsTsBsT8L7GWwHmVcwG0i1-VDeRFfH",
+        "title": "DSC00681_v02.jpg",
+        "url": "https://drive.google.com/file/d/1dodsTsBsT8L7GWwHmVcwG0i1-VDeRFfH/view?usp=drivesdk",
+        "size": "514986",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM",
+        "title": "DSC02269_v02.jpg",
+        "url": "https://drive.google.com/file/d/1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM/view?usp=drivesdk",
+        "size": "659094",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm",
+        "title": "DSC02278_v02.jpg",
+        "url": "https://drive.google.com/file/d/1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm/view?usp=drivesdk",
+        "size": "646140",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1OyrS9mZe76AGwrDu6jaRUBQZXh6SrZM1",
+        "title": "DSC00623_v02.jpg",
+        "url": "https://drive.google.com/file/d/1OyrS9mZe76AGwrDu6jaRUBQZXh6SrZM1/view?usp=drivesdk",
+        "size": "470088",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP",
+        "title": "DSC02256_v02.jpg",
+        "url": "https://drive.google.com/file/d/1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP/view?usp=drivesdk",
+        "size": "616691",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1DmRuLThJXsp_2WTGtx2ydzkMkbm1nr73",
+        "title": "DSC00634_v02.jpg",
+        "url": "https://drive.google.com/file/d/1DmRuLThJXsp_2WTGtx2ydzkMkbm1nr73/view?usp=drivesdk",
+        "size": "493315",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
         "id": "1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0",
-        "mime_type": "image/jpeg",
+        "title": "DSC01557_v02.jpg",
+        "url": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk",
         "size": "403641",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:09:30.043Z",
-        "updated_at": "2026-11-04T06:09:30.043Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01557_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk",
-        "title": "DSC01556_v02.jpg",
         "id": "1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO",
-        "mime_type": "image/jpeg",
+        "title": "DSC01556_v02.jpg",
+        "url": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk",
         "size": "416779",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:09:27.018Z",
-        "updated_at": "2026-11-04T06:09:27.018Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01556_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk",
-        "title": "DSC01551_v02.jpg",
         "id": "1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5",
-        "mime_type": "image/jpeg",
+        "title": "DSC01551_v02.jpg",
+        "url": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk",
         "size": "416750",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:09:23.438Z",
-        "updated_at": "2026-11-04T06:09:23.438Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01551_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
-        "title": "DSC01550_v02.jpg",
         "id": "1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV",
-        "mime_type": "image/jpeg",
+        "title": "DSC01550_v02.jpg",
+        "url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
         "size": "378210",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:09:20.943Z",
-        "updated_at": "2026-11-04T06:09:20.943Z",
-        "viewedByMeTime": "2026-11-04T17:48:55.305Z",
-        "display_title": "DSC01550_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
-        "title": "DSC01539_v02.jpg",
         "id": "10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA",
-        "mime_type": "image/jpeg",
+        "title": "DSC01539_v02.jpg",
+        "url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
         "size": "419622",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:05:13.917Z",
-        "updated_at": "2026-11-04T06:05:13.917Z",
-        "viewedByMeTime": "2026-11-04T17:48:52.915Z",
-        "display_title": "DSC01539_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
-        "title": "DSC01542_v02.jpg",
         "id": "14jXudouQku1rEJp69N5-gDmfulOy-e53",
-        "mime_type": "image/jpeg",
+        "title": "DSC01542_v02.jpg",
+        "url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
         "size": "437421",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:05:11.100Z",
-        "updated_at": "2026-11-04T06:05:11.100Z",
-        "viewedByMeTime": "2026-11-04T17:48:53.682Z",
-        "display_title": "DSC01542_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
-        "title": "DSC01543_v02.jpg",
         "id": "1ATdYhZB-COya5a-6dHH0uPJI154bqH3H",
-        "mime_type": "image/jpeg",
+        "title": "DSC01543_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
         "size": "453561",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T06:05:08.957Z",
-        "updated_at": "2026-11-04T06:05:08.957Z",
-        "viewedByMeTime": "2026-11-04T17:48:56.092Z",
-        "display_title": "DSC01543_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
-        "title": "DSC00043_v02.jpg",
+        "id": "1XD56vUS2WA3BURlU4-1V8J9Vv5TdJLWw",
+        "title": "DSC02209_v02.jpg",
+        "url": "https://drive.google.com/file/d/1XD56vUS2WA3BURlU4-1V8J9Vv5TdJLWw/view?usp=drivesdk",
+        "size": "512518",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1BNEY8ik6Vf1lOduqZCrCygherSKM-3CK",
+        "title": "DSC02172_v02.jpg",
+        "url": "https://drive.google.com/file/d/1BNEY8ik6Vf1lOduqZCrCygherSKM-3CK/view?usp=drivesdk",
+        "size": "477627",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1lOyRy6fBdhkrX01lFQtLAAIHRe3auSCE",
+        "title": "DSC02098_v02.jpg",
+        "url": "https://drive.google.com/file/d/1lOyRy6fBdhkrX01lFQtLAAIHRe3auSCE/view?usp=drivesdk",
+        "size": "527352",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1iyeqZy5c8vRwn4xZaIwThVXi88n32wXw",
+        "title": "DSC02117_v02.jpg",
+        "url": "https://drive.google.com/file/d/1iyeqZy5c8vRwn4xZaIwThVXi88n32wXw/view?usp=drivesdk",
+        "size": "463967",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1N9EGkHExPlgHrdO7YevLEXpT3DL8_z1f",
+        "title": "DSC01909_v02.jpg",
+        "url": "https://drive.google.com/file/d/1N9EGkHExPlgHrdO7YevLEXpT3DL8_z1f/view?usp=drivesdk",
+        "size": "479532",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1kjVX2NsBJXQ8O0dkXJ8s35jYYc-tb54V",
+        "title": "DSC01929_v02.jpg",
+        "url": "https://drive.google.com/file/d/1kjVX2NsBJXQ8O0dkXJ8s35jYYc-tb54V/view?usp=drivesdk",
+        "size": "480150",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1yCI2qjevWWnmLKAVBdzyWd8ylgwR1kMU",
+        "title": "DSC00904_v02.jpg",
+        "url": "https://drive.google.com/file/d/1yCI2qjevWWnmLKAVBdzyWd8ylgwR1kMU/view?usp=drivesdk",
+        "size": "489889",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1Ga4mq1yIbTsokPztpOIIGM-iroZC6Vnu",
+        "title": "DSC00771_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Ga4mq1yIbTsokPztpOIIGM-iroZC6Vnu/view?usp=drivesdk",
+        "size": "501308",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1XcfsbuEElRGdfXjMtEbIoi3O03NAXyF2",
+        "title": "DSC00612_v02.jpg",
+        "url": "https://drive.google.com/file/d/1XcfsbuEElRGdfXjMtEbIoi3O03NAXyF2/view?usp=drivesdk",
+        "size": "530157",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
+        "id": "1ElydZC4haDSSWnBwxmNFeGqihzKzqqDT",
+        "title": "DSC00216_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ElydZC4haDSSWnBwxmNFeGqihzKzqqDT/view?usp=drivesdk",
+        "size": "444384",
+        "parent_ids": [
+          "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
+        ],
+        "mime_type": "image/jpeg"
+      },
+      {
         "id": "1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK",
-        "mime_type": "image/jpeg",
+        "title": "DSC00043_v02.jpg",
+        "url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
         "size": "400265",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:29:59.509Z",
-        "updated_at": "2026-11-04T05:29:59.509Z",
-        "viewedByMeTime": "2026-11-04T17:48:50.764Z",
-        "display_title": "DSC00043_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
-        "title": "DSC00033_v02.jpg",
         "id": "1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi",
-        "mime_type": "image/jpeg",
+        "title": "DSC00033_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
         "size": "452642",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:29:55.242Z",
-        "updated_at": "2026-11-04T05:29:55.242Z",
-        "viewedByMeTime": "2026-11-04T17:48:50.198Z",
-        "display_title": "DSC00033_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
-        "title": "DSC00029_v02.jpg",
         "id": "10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3",
-        "mime_type": "image/jpeg",
+        "title": "DSC00029_v02.jpg",
+        "url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
         "size": "485155",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:28:17.440Z",
-        "updated_at": "2026-11-04T05:28:17.440Z",
-        "viewedByMeTime": "2026-11-04T17:48:49.484Z",
-        "display_title": "DSC00029_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
-        "title": "DSC00027_v02.jpg",
         "id": "1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1",
-        "mime_type": "image/jpeg",
+        "title": "DSC00027_v02.jpg",
+        "url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
         "size": "479763",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:28:14.894Z",
-        "updated_at": "2026-11-04T05:28:14.894Z",
-        "viewedByMeTime": "2026-11-04T17:48:48.887Z",
-        "display_title": "DSC00027_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
-        "title": "DSC00024_v02.jpg",
         "id": "1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_",
-        "mime_type": "image/jpeg",
+        "title": "DSC00024_v02.jpg",
+        "url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
         "size": "444228",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:43.611Z",
-        "updated_at": "2026-11-04T05:26:43.611Z",
-        "viewedByMeTime": "2026-11-04T17:48:46.864Z",
-        "display_title": "DSC00024_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
-        "title": "DSC00020_v02.jpg",
         "id": "1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq",
-        "mime_type": "image/jpeg",
+        "title": "DSC00020_v02.jpg",
+        "url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
         "size": "452134",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:41.068Z",
-        "updated_at": "2026-11-04T05:26:41.068Z",
-        "viewedByMeTime": "2026-11-04T17:48:46.197Z",
-        "display_title": "DSC00020_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
-        "title": "DSC00025_v02.jpg",
         "id": "1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P",
-        "mime_type": "image/jpeg",
+        "title": "DSC00025_v02.jpg",
+        "url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
         "size": "450637",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:38.889Z",
-        "updated_at": "2026-11-04T05:26:38.889Z",
-        "viewedByMeTime": "2026-11-04T17:48:47.813Z",
-        "display_title": "DSC00025_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
-        "title": "DSC00019_v02.jpg",
         "id": "1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C",
-        "mime_type": "image/jpeg",
+        "title": "DSC00019_v02.jpg",
+        "url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
         "size": "696442",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:35.618Z",
-        "updated_at": "2026-11-04T05:26:35.618Z",
-        "viewedByMeTime": "2026-11-04T17:48:45.362Z",
-        "display_title": "DSC00019_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
-        "title": "DSC00013_v02.jpg",
         "id": "1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za",
-        "mime_type": "image/jpeg",
+        "title": "DSC00013_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
         "size": "501520",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:31.401Z",
-        "updated_at": "2026-11-04T05:26:31.401Z",
-        "viewedByMeTime": "2026-11-04T17:48:43.770Z",
-        "display_title": "DSC00013_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
-        "title": "DSC00017_v02.jpg",
         "id": "1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI",
-        "mime_type": "image/jpeg",
+        "title": "DSC00017_v02.jpg",
+        "url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
         "size": "578392",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:26:27.585Z",
-        "updated_at": "2026-11-04T05:26:27.585Z",
-        "viewedByMeTime": "2026-11-04T17:48:45.009Z",
-        "display_title": "DSC00017_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk",
-        "title": "DSC00108_C_peluche_ligero_APROBADA.jpg",
         "id": "19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5",
-        "mime_type": "image/jpeg",
+        "title": "DSC00108_C_peluche_ligero_APROBADA.jpg",
+        "url": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk",
         "size": "465245",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:30.120Z",
-        "updated_at": "2026-11-04T05:22:30.120Z",
-        "viewedByMeTime": "2026-11-04T17:48:51.415Z",
-        "display_title": "DSC00108_C_peluche_ligero_APROBADA.jpg",
-        "display_url": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk",
-        "title": "DSC01197_v02.jpg",
         "id": "1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp",
-        "mime_type": "image/jpeg",
+        "title": "DSC01197_v02.jpg",
+        "url": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk",
         "size": "515231",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:26.709Z",
-        "updated_at": "2026-11-04T05:22:26.709Z",
-        "viewedByMeTime": "2026-11-04T17:48:52.164Z",
-        "display_title": "DSC01197_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk",
-        "title": "DSC02415_v02.jpg",
         "id": "11MLyLfYezelPzT50RfEtwZZR3f25kh1T",
-        "mime_type": "image/jpeg",
+        "title": "DSC02415_v02.jpg",
+        "url": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk",
         "size": "607052",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:23.524Z",
-        "updated_at": "2026-11-04T05:22:23.524Z",
-        "viewedByMeTime": "2026-11-04T17:49:11.390Z",
-        "display_title": "DSC02415_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/15gHN2WJFUewLo2Rdrb6ecE0JL9JeAwgs/view?usp=drivesdk",
-        "title": "DSC00001_negro_v05.jpg",
         "id": "15gHN2WJFUewLo2Rdrb6ecE0JL9JeAwgs",
-        "mime_type": "image/jpeg",
+        "title": "DSC00001_negro_v05.jpg",
+        "url": "https://drive.google.com/file/d/15gHN2WJFUewLo2Rdrb6ecE0JL9JeAwgs/view?usp=drivesdk",
         "size": "6455667",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:19.535Z",
-        "updated_at": "2026-11-04T05:22:19.535Z",
-        "viewedByMeTime": "2026-11-04T17:48:31.101Z",
-        "display_title": "DSC00001_negro_v05.jpg",
-        "display_url": "https://drive.google.com/file/d/15gHN2WJFUewLo2Rdrb6ecE0JL9JeAwgs/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1fCrWQNRDXnxZgAESi95_0eepFolijey_/view?usp=drivesdk",
-        "title": "DSC01863_v02.jpg",
         "id": "1fCrWQNRDXnxZgAESi95_0eepFolijey_",
-        "mime_type": "image/jpeg",
+        "title": "DSC01863_v02.jpg",
+        "url": "https://drive.google.com/file/d/1fCrWQNRDXnxZgAESi95_0eepFolijey_/view?usp=drivesdk",
         "size": "506378",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:14.455Z",
-        "updated_at": "2026-11-04T05:22:14.455Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01863_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1fCrWQNRDXnxZgAESi95_0eepFolijey_/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1PBo1NagxD1AjUnihCVkgugwr8u76L47D/view?usp=drivesdk",
-        "title": "DSC02003_negro_v05.jpg",
         "id": "1PBo1NagxD1AjUnihCVkgugwr8u76L47D",
-        "mime_type": "image/jpeg",
+        "title": "DSC02003_negro_v05.jpg",
+        "url": "https://drive.google.com/file/d/1PBo1NagxD1AjUnihCVkgugwr8u76L47D/view?usp=drivesdk",
         "size": "4753633",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:09.186Z",
-        "updated_at": "2026-11-04T05:22:09.186Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02003_negro_v05.jpg",
-        "display_url": "https://drive.google.com/file/d/1PBo1NagxD1AjUnihCVkgugwr8u76L47D/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk",
-        "title": "DSC02116_negro_v05.jpg",
         "id": "143bLvstSGb9TNmbdqFB95LUFkWyWNqsW",
-        "mime_type": "image/jpeg",
+        "title": "DSC02116_negro_v05.jpg",
+        "url": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk",
         "size": "4711978",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:22:05.910Z",
-        "updated_at": "2026-11-04T05:22:05.910Z",
-        "viewedByMeTime": "2026-11-04T17:49:09.650Z",
-        "display_title": "DSC02116_negro_v05.jpg",
-        "display_url": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1Jzpdg5TViS4a04mc-__Q-A4j00vUYQ1O/view?usp=drivesdk",
-        "title": "DSC00009_v02.jpg",
         "id": "1Jzpdg5TViS4a04mc-__Q-A4j00vUYQ1O",
-        "mime_type": "image/jpeg",
+        "title": "DSC00009_v02.jpg",
+        "url": "https://drive.google.com/file/d/1Jzpdg5TViS4a04mc-__Q-A4j00vUYQ1O/view?usp=drivesdk",
         "size": "597073",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:17:17.069Z",
-        "updated_at": "2026-11-04T05:17:17.069Z",
-        "viewedByMeTime": "2026-11-04T17:48:41.712Z",
-        "display_title": "DSC00009_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1Jzpdg5TViS4a04mc-__Q-A4j00vUYQ1O/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk",
-        "title": "DSC00004_v02.jpg",
         "id": "1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ",
-        "mime_type": "image/jpeg",
+        "title": "DSC00004_v02.jpg",
+        "url": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk",
         "size": "536573",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:17:13.485Z",
-        "updated_at": "2026-11-04T05:17:13.485Z",
-        "viewedByMeTime": "2026-11-04T17:48:37.587Z",
-        "display_title": "DSC00004_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk",
-        "title": "DSC00007_v02.jpg",
         "id": "1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0",
-        "mime_type": "image/jpeg",
+        "title": "DSC00007_v02.jpg",
+        "url": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk",
         "size": "541604",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:17:09.493Z",
-        "updated_at": "2026-11-04T05:17:09.493Z",
-        "viewedByMeTime": "2026-11-04T17:48:40.508Z",
-        "display_title": "DSC00007_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1JbifUSkdwgZX9_1djn4KHdReiFUbL5wZ/view?usp=drivesdk",
-        "title": "DSC00003_v02.jpg",
         "id": "1JbifUSkdwgZX9_1djn4KHdReiFUbL5wZ",
-        "mime_type": "image/jpeg",
+        "title": "DSC00003_v02.jpg",
+        "url": "https://drive.google.com/file/d/1JbifUSkdwgZX9_1djn4KHdReiFUbL5wZ/view?usp=drivesdk",
         "size": "570431",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:17:06.931Z",
-        "updated_at": "2026-11-04T05:17:06.931Z",
-        "viewedByMeTime": "2026-11-04T17:48:36.559Z",
-        "display_title": "DSC00003_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1JbifUSkdwgZX9_1djn4KHdReiFUbL5wZ/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       },
       {
-        "url": "https://drive.google.com/file/d/1jbIoggd93hE_JV3myGNEWlIUWFttPfzG/view?usp=drivesdk",
-        "title": "DSC00002_v02.jpg",
         "id": "1jbIoggd93hE_JV3myGNEWlIUWFttPfzG",
-        "mime_type": "image/jpeg",
+        "title": "DSC00002_v02.jpg",
+        "url": "https://drive.google.com/file/d/1jbIoggd93hE_JV3myGNEWlIUWFttPfzG/view?usp=drivesdk",
         "size": "603104",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:17:04.838Z",
-        "updated_at": "2026-11-04T05:17:04.838Z",
-        "viewedByMeTime": "2026-11-04T17:48:34.911Z",
-        "display_title": "DSC00002_v02.jpg",
-        "display_url": "https://drive.google.com/file/d/1jbIoggd93hE_JV3myGNEWlIUWFttPfzG/view?usp=drivesdk",
         "parent_ids": [
           "1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11"
         ],
-        "shared": true,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/jpeg"
       }
     ]
   },
@@ -3209,746 +3958,1541 @@
   "approved_png_readback": {
     "results": [
       {
-        "url": "https://drive.google.com/file/d/1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB/view?usp=drivesdk",
-        "title": "DSC01557_v02.png",
+        "id": "1-2lO4h5ZFo7bfO4TpvOgRowbHO82Kiyh",
+        "title": "DSC08471_v02.png",
+        "url": "https://drive.google.com/file/d/1-2lO4h5ZFo7bfO4TpvOgRowbHO82Kiyh/view?usp=drivesdk",
+        "size": "1796711",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "18soECjfwtVkzuIkb8Uxs0AFn_PLhhOJH",
+        "title": "DSC07724_v02.png",
+        "url": "https://drive.google.com/file/d/18soECjfwtVkzuIkb8Uxs0AFn_PLhhOJH/view?usp=drivesdk",
+        "size": "1723008",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1mSqJ6QkGP_vsvOj_7BBgZAprBecR-sjj",
+        "title": "DSC08479_v02.png",
+        "url": "https://drive.google.com/file/d/1mSqJ6QkGP_vsvOj_7BBgZAprBecR-sjj/view?usp=drivesdk",
+        "size": "1875338",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1brKQPVRglTsqZ96F-2RkAv0xxZqY5ODv",
+        "title": "DSC08484_v02.png",
+        "url": "https://drive.google.com/file/d/1brKQPVRglTsqZ96F-2RkAv0xxZqY5ODv/view?usp=drivesdk",
+        "size": "1913565",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1yPQ7UJ_aZMq4JaIHplQVspm--GIhONDl",
+        "title": "DSC07726_v02.png",
+        "url": "https://drive.google.com/file/d/1yPQ7UJ_aZMq4JaIHplQVspm--GIhONDl/view?usp=drivesdk",
+        "size": "1763941",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1NvOtwmp8K4DQI3rlj5rdHA8NkZUnXa__",
+        "title": "DSC07732_v02.png",
+        "url": "https://drive.google.com/file/d/1NvOtwmp8K4DQI3rlj5rdHA8NkZUnXa__/view?usp=drivesdk",
+        "size": "1703493",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1j1HWffZqlX3t2kv19xep9DFSDIWAa7Tg",
+        "title": "DSC07731_v02.png",
+        "url": "https://drive.google.com/file/d/1j1HWffZqlX3t2kv19xep9DFSDIWAa7Tg/view?usp=drivesdk",
+        "size": "1687982",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1CkrUhSRC1SUAttvBSm2j1ufbY_TYmoWE",
+        "title": "DSC07706_v02.png",
+        "url": "https://drive.google.com/file/d/1CkrUhSRC1SUAttvBSm2j1ufbY_TYmoWE/view?usp=drivesdk",
+        "size": "1822678",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Pt0jBBahVtayNvXkAZFEiItU3uyvVqA3",
+        "title": "DSC08466_v02.png",
+        "url": "https://drive.google.com/file/d/1Pt0jBBahVtayNvXkAZFEiItU3uyvVqA3/view?usp=drivesdk",
+        "size": "1861771",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1J-ogjYg9y6SmgOk3EUlPPZZG2JxEgTdc",
+        "title": "DSC08457_v02.png",
+        "url": "https://drive.google.com/file/d/1J-ogjYg9y6SmgOk3EUlPPZZG2JxEgTdc/view?usp=drivesdk",
+        "size": "1863729",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "15CbJJ2aqK-DYPXIDxRp9L2gYY1-SvNaK",
+        "title": "DSC08459_v02.png",
+        "url": "https://drive.google.com/file/d/15CbJJ2aqK-DYPXIDxRp9L2gYY1-SvNaK/view?usp=drivesdk",
+        "size": "1875215",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1ji-2g10BjjlFETm0GlqKoNAk25-yy-Cx",
+        "title": "DSC08456_v02.png",
+        "url": "https://drive.google.com/file/d/1ji-2g10BjjlFETm0GlqKoNAk25-yy-Cx/view?usp=drivesdk",
+        "size": "1862463",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1koUpjndx-FW5YECLYZmoxJCRPcrQR1Da",
+        "title": "DSC08481_v02.png",
+        "url": "https://drive.google.com/file/d/1koUpjndx-FW5YECLYZmoxJCRPcrQR1Da/view?usp=drivesdk",
+        "size": "1897151",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1DKNHX4HvCmQ-fg7BavDytM9YTuIf6iRP",
+        "title": "DSC08454_v02.png",
+        "url": "https://drive.google.com/file/d/1DKNHX4HvCmQ-fg7BavDytM9YTuIf6iRP/view?usp=drivesdk",
+        "size": "1892889",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1cR-ZRtqsYYArNpz-yu2GmgbKsC-PSLWz",
+        "title": "DSC08477_v02.png",
+        "url": "https://drive.google.com/file/d/1cR-ZRtqsYYArNpz-yu2GmgbKsC-PSLWz/view?usp=drivesdk",
+        "size": "1914891",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1TOZKqMFGVU9AZjKbuNTSmiAgyGPmbMOO",
+        "title": "DSC07721_v02.png",
+        "url": "https://drive.google.com/file/d/1TOZKqMFGVU9AZjKbuNTSmiAgyGPmbMOO/view?usp=drivesdk",
+        "size": "1772861",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1OQ28FhyQD_KbAJ9XE9yWdNRszWZW7_9s",
+        "title": "DSC07733_v02.png",
+        "url": "https://drive.google.com/file/d/1OQ28FhyQD_KbAJ9XE9yWdNRszWZW7_9s/view?usp=drivesdk",
+        "size": "1781645",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1wCsvjNGmyE2uoeU3wt_cyleAulFcLxEC",
+        "title": "DSC07722_v02.png",
+        "url": "https://drive.google.com/file/d/1wCsvjNGmyE2uoeU3wt_cyleAulFcLxEC/view?usp=drivesdk",
+        "size": "1684602",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1R8MwcUA84XlYBUYkDtwi2mSavzHBlz36",
+        "title": "DSC07734_v02.png",
+        "url": "https://drive.google.com/file/d/1R8MwcUA84XlYBUYkDtwi2mSavzHBlz36/view?usp=drivesdk",
+        "size": "1744447",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "184uXdQ1WNfLXvkKOfCTXHHCsDKK4Gsfz",
+        "title": "DSC07720_v02.png",
+        "url": "https://drive.google.com/file/d/184uXdQ1WNfLXvkKOfCTXHHCsDKK4Gsfz/view?usp=drivesdk",
+        "size": "1670355",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1ba1najUiZ9PalUH597_6FJLyKrUixId1",
+        "title": "DSC01819_v02.png",
+        "url": "https://drive.google.com/file/d/1ba1najUiZ9PalUH597_6FJLyKrUixId1/view?usp=drivesdk",
+        "size": "1759921",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1wxWPCB_kDlDZgYaF3sZ3IE9YDmX9zvEs",
+        "title": "DSC01812_v02.png",
+        "url": "https://drive.google.com/file/d/1wxWPCB_kDlDZgYaF3sZ3IE9YDmX9zvEs/view?usp=drivesdk",
+        "size": "1982524",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1X2mFn8u1I_-CX3kG3AHRuWNaOka2l5Et",
+        "title": "DSC01822_v02.png",
+        "url": "https://drive.google.com/file/d/1X2mFn8u1I_-CX3kG3AHRuWNaOka2l5Et/view?usp=drivesdk",
+        "size": "1861289",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1-VAXIMqSdibhcqbaceZqDkOQs9NIR88g",
+        "title": "DSC01855_v02.png",
+        "url": "https://drive.google.com/file/d/1-VAXIMqSdibhcqbaceZqDkOQs9NIR88g/view?usp=drivesdk",
+        "size": "1850964",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1MxGLiL4kLAYwrWY4tDKabwF2pfq_sp4s",
+        "title": "DSC01833_v02.png",
+        "url": "https://drive.google.com/file/d/1MxGLiL4kLAYwrWY4tDKabwF2pfq_sp4s/view?usp=drivesdk",
+        "size": "1871627",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1xh9GGGz3yJ0MFaC_Gpnes47lMvzO0C7j",
+        "title": "DSC01865_v02.png",
+        "url": "https://drive.google.com/file/d/1xh9GGGz3yJ0MFaC_Gpnes47lMvzO0C7j/view?usp=drivesdk",
+        "size": "1833936",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1UknK7HvoesXepfFAPC6RYikzvgBUj-lc",
+        "title": "DSC01817_v02.png",
+        "url": "https://drive.google.com/file/d/1UknK7HvoesXepfFAPC6RYikzvgBUj-lc/view?usp=drivesdk",
+        "size": "2008754",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1xQw2aiSrb4GYtly_1JKOru4kgKtyO8S1",
+        "title": "DSC01859_v02.png",
+        "url": "https://drive.google.com/file/d/1xQw2aiSrb4GYtly_1JKOru4kgKtyO8S1/view?usp=drivesdk",
+        "size": "1859172",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1jsFwcPbL37L1APCbTGVLEN7yP8EgGG_3",
+        "title": "DSC01857_v02.png",
+        "url": "https://drive.google.com/file/d/1jsFwcPbL37L1APCbTGVLEN7yP8EgGG_3/view?usp=drivesdk",
+        "size": "1861184",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1wajb5wJpMwxvh_qtOqF3qnP9jJHtQYf6",
+        "title": "DSC01866_v02.png",
+        "url": "https://drive.google.com/file/d/1wajb5wJpMwxvh_qtOqF3qnP9jJHtQYf6/view?usp=drivesdk",
+        "size": "1822479",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "13TnagHu5ujeE0StyJSXTis518ExXabNB",
+        "title": "DSC02134_v02.png",
+        "url": "https://drive.google.com/file/d/13TnagHu5ujeE0StyJSXTis518ExXabNB/view?usp=drivesdk",
+        "size": "1803798",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Fp8VeyHHEsj1kIxZKvNJ6cK7ERcN8MFS",
+        "title": "DSC02136_v02.png",
+        "url": "https://drive.google.com/file/d/1Fp8VeyHHEsj1kIxZKvNJ6cK7ERcN8MFS/view?usp=drivesdk",
+        "size": "1701833",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1CZ1p2kb4CNNf0IvL5Tvjgtdud4k4gW_6",
+        "title": "DSC02126_v02.png",
+        "url": "https://drive.google.com/file/d/1CZ1p2kb4CNNf0IvL5Tvjgtdud4k4gW_6/view?usp=drivesdk",
+        "size": "1905153",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1GTJNJLQ0WZ1SFC3wZITJhjWe06RP3p7d",
+        "title": "DSC02140_v02.png",
+        "url": "https://drive.google.com/file/d/1GTJNJLQ0WZ1SFC3wZITJhjWe06RP3p7d/view?usp=drivesdk",
+        "size": "1858618",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1JfM6EtoTe-o4cf0DCYJD4T9BeAFKUpF2",
+        "title": "DSC02141_v02.png",
+        "url": "https://drive.google.com/file/d/1JfM6EtoTe-o4cf0DCYJD4T9BeAFKUpF2/view?usp=drivesdk",
+        "size": "1757515",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1lNe28hWnwag_I61pUTkA3stmCMIr7zcB",
+        "title": "DSC02149_v02.png",
+        "url": "https://drive.google.com/file/d/1lNe28hWnwag_I61pUTkA3stmCMIr7zcB/view?usp=drivesdk",
+        "size": "1776671",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1yiQnThqzt4MXMJHt0OGtvDNx0pNpSVdn",
+        "title": "DSC02146_v02.png",
+        "url": "https://drive.google.com/file/d/1yiQnThqzt4MXMJHt0OGtvDNx0pNpSVdn/view?usp=drivesdk",
+        "size": "1780955",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1GF-4j_3-yFRr6XWgFDetQKd_XlRJifl3",
+        "title": "DSC02132_v02.png",
+        "url": "https://drive.google.com/file/d/1GF-4j_3-yFRr6XWgFDetQKd_XlRJifl3/view?usp=drivesdk",
+        "size": "1881934",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1rFC8-FQ4TVxKMgQJaqKbkJX-JIZrSvZd",
+        "title": "DSC02118_v02.png",
+        "url": "https://drive.google.com/file/d/1rFC8-FQ4TVxKMgQJaqKbkJX-JIZrSvZd/view?usp=drivesdk",
+        "size": "1840068",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1F6A4hXSBxxYQTMVEpdNqKwOUbxmS6QBN",
+        "title": "DSC02119_v02.png",
+        "url": "https://drive.google.com/file/d/1F6A4hXSBxxYQTMVEpdNqKwOUbxmS6QBN/view?usp=drivesdk",
+        "size": "1897975",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1dImOLdQ_-hYbDrgi-DlyXtnBhV8AKFQP",
+        "title": "DSC01080_v02.png",
+        "url": "https://drive.google.com/file/d/1dImOLdQ_-hYbDrgi-DlyXtnBhV8AKFQP/view?usp=drivesdk",
+        "size": "1875267",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1_8hUKcCiCye7MdogAS65X65CaQqaK3Al",
+        "title": "DSC01084_v02.png",
+        "url": "https://drive.google.com/file/d/1_8hUKcCiCye7MdogAS65X65CaQqaK3Al/view?usp=drivesdk",
+        "size": "1877137",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "16_ISeUBSM6_X34A__zG4PcX4l7HGiU42",
+        "title": "DSC01067_v02.png",
+        "url": "https://drive.google.com/file/d/16_ISeUBSM6_X34A__zG4PcX4l7HGiU42/view?usp=drivesdk",
+        "size": "1792930",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1eCO7WGyu0exHmiGfXf_bjk_DLwsFtj1s",
+        "title": "DSC01027_v02.png",
+        "url": "https://drive.google.com/file/d/1eCO7WGyu0exHmiGfXf_bjk_DLwsFtj1s/view?usp=drivesdk",
+        "size": "1909228",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1amm1er0uqHNMlx1tvW-j7aSc8IKURd-H",
+        "title": "DSC01051_v02.png",
+        "url": "https://drive.google.com/file/d/1amm1er0uqHNMlx1tvW-j7aSc8IKURd-H/view?usp=drivesdk",
+        "size": "1967484",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1M1d8Pw5wPsf1u0NvfLzJga2lnl_MrXHf",
+        "title": "DSC01003_v02.png",
+        "url": "https://drive.google.com/file/d/1M1d8Pw5wPsf1u0NvfLzJga2lnl_MrXHf/view?usp=drivesdk",
+        "size": "1901547",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1sweEdErdycL4giIZKs_6eZpG304F5KSa",
+        "title": "DSC01073_v02.png",
+        "url": "https://drive.google.com/file/d/1sweEdErdycL4giIZKs_6eZpG304F5KSa/view?usp=drivesdk",
+        "size": "1916234",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1JYmhN5qI36VCNUNLeGolJp0G1Va7vAGe",
+        "title": "DSC01063_v02.png",
+        "url": "https://drive.google.com/file/d/1JYmhN5qI36VCNUNLeGolJp0G1Va7vAGe/view?usp=drivesdk",
+        "size": "1893698",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Se6MZO-XPYQMevD03ilszW6UGzvwRWPj",
+        "title": "DSC01088_v02.png",
+        "url": "https://drive.google.com/file/d/1Se6MZO-XPYQMevD03ilszW6UGzvwRWPj/view?usp=drivesdk",
+        "size": "1836835",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1toG-uuOBKkpAodX_y4cQLDVEJEcOLOJE",
+        "title": "DSC01077_v02.png",
+        "url": "https://drive.google.com/file/d/1toG-uuOBKkpAodX_y4cQLDVEJEcOLOJE/view?usp=drivesdk",
+        "size": "1875180",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1AsbJyDHrKpjFdpEPtDorC5bzG3YUNBjb",
+        "title": "DSC02370_v02.png",
+        "url": "https://drive.google.com/file/d/1AsbJyDHrKpjFdpEPtDorC5bzG3YUNBjb/view?usp=drivesdk",
+        "size": "2187000",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1ObaRwjsbY2dDBzq_bwAO9Azf4Mn8oTJN",
+        "title": "DSC02400_v02.png",
+        "url": "https://drive.google.com/file/d/1ObaRwjsbY2dDBzq_bwAO9Azf4Mn8oTJN/view?usp=drivesdk",
+        "size": "1956658",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1RvVRqv2yZHWIRErLyTvQMBEJXwB76o1H",
+        "title": "DSC02405_v02.png",
+        "url": "https://drive.google.com/file/d/1RvVRqv2yZHWIRErLyTvQMBEJXwB76o1H/view?usp=drivesdk",
+        "size": "2207238",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1uP5rcxymFaosyLqqgEm193MSyePQPyR_",
+        "title": "DSC02363_v02.png",
+        "url": "https://drive.google.com/file/d/1uP5rcxymFaosyLqqgEm193MSyePQPyR_/view?usp=drivesdk",
+        "size": "1856621",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Ww4ldYLHeopYl9lp3Z4hw6jNkTaE4WRI",
+        "title": "DSC02352_v02.png",
+        "url": "https://drive.google.com/file/d/1Ww4ldYLHeopYl9lp3Z4hw6jNkTaE4WRI/view?usp=drivesdk",
+        "size": "1841680",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1oBrhysjDX7OzjrUSGlLTgprodQUkivex",
+        "title": "DSC02326_v02.png",
+        "url": "https://drive.google.com/file/d/1oBrhysjDX7OzjrUSGlLTgprodQUkivex/view?usp=drivesdk",
+        "size": "1874609",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1VlDHoCZ0Cg4sUjbFUdIhjHhkxvg76q9n",
+        "title": "DSC02358_v02.png",
+        "url": "https://drive.google.com/file/d/1VlDHoCZ0Cg4sUjbFUdIhjHhkxvg76q9n/view?usp=drivesdk",
+        "size": "1948469",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1zGi0wlr7MD4JIzdXIVkX7z_BZyn1bDo3",
+        "title": "DSC02324_v02.png",
+        "url": "https://drive.google.com/file/d/1zGi0wlr7MD4JIzdXIVkX7z_BZyn1bDo3/view?usp=drivesdk",
+        "size": "1830318",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1wD9xEJvSeF1ReSDIJccMFboCAyjJRisC",
+        "title": "DSC02340_v02.png",
+        "url": "https://drive.google.com/file/d/1wD9xEJvSeF1ReSDIJccMFboCAyjJRisC/view?usp=drivesdk",
+        "size": "1909465",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1HTFvIL5yMwtAcIvl7AnCA5ibEl5hKHSP",
+        "title": "DSC02354_v02.png",
+        "url": "https://drive.google.com/file/d/1HTFvIL5yMwtAcIvl7AnCA5ibEl5hKHSP/view?usp=drivesdk",
+        "size": "1863943",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "18m_QwhwqW_kgWpc7To_rawrGKsrPgH2A",
+        "title": "DSC00913_v02.png",
+        "url": "https://drive.google.com/file/d/18m_QwhwqW_kgWpc7To_rawrGKsrPgH2A/view?usp=drivesdk",
+        "size": "1952660",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1aunIdyeEqBrkJFmnWvKFpmLxXP1NNvOl",
+        "title": "DSC00893_v02.png",
+        "url": "https://drive.google.com/file/d/1aunIdyeEqBrkJFmnWvKFpmLxXP1NNvOl/view?usp=drivesdk",
+        "size": "1858442",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1vDoe31OGWRGCEUbI2h5X2sZiz3p0fdbP",
+        "title": "DSC00910_v02.png",
+        "url": "https://drive.google.com/file/d/1vDoe31OGWRGCEUbI2h5X2sZiz3p0fdbP/view?usp=drivesdk",
+        "size": "2012600",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1CVZBN-HqAILdNHaTbHTaztnOPfCZ2pDM",
+        "title": "DSC00916_v02.png",
+        "url": "https://drive.google.com/file/d/1CVZBN-HqAILdNHaTbHTaztnOPfCZ2pDM/view?usp=drivesdk",
+        "size": "1883571",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1qPLpTq3usvv1iPRVTjqMxwfkkiV9ehw_",
+        "title": "DSC00896_v02.png",
+        "url": "https://drive.google.com/file/d/1qPLpTq3usvv1iPRVTjqMxwfkkiV9ehw_/view?usp=drivesdk",
+        "size": "1739359",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1SOrpHFmd3KdNxet3n26xeAvnW2B1jd4V",
+        "title": "DSC00925_v02.png",
+        "url": "https://drive.google.com/file/d/1SOrpHFmd3KdNxet3n26xeAvnW2B1jd4V/view?usp=drivesdk",
+        "size": "1786386",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1iKqpZWbVmxgGRtysnTUG5r7zrylYlnye",
+        "title": "DSC00919_v02.png",
+        "url": "https://drive.google.com/file/d/1iKqpZWbVmxgGRtysnTUG5r7zrylYlnye/view?usp=drivesdk",
+        "size": "1837109",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Sm1FQvnlcyjXg2d1FiK_KepQ0RTfkseV",
+        "title": "DSC00920_v02.png",
+        "url": "https://drive.google.com/file/d/1Sm1FQvnlcyjXg2d1FiK_KepQ0RTfkseV/view?usp=drivesdk",
+        "size": "1842320",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Y3rfPs4oROn0Y_DkMKTD3CduO0M17nJj",
+        "title": "DSC00921_v02.png",
+        "url": "https://drive.google.com/file/d/1Y3rfPs4oROn0Y_DkMKTD3CduO0M17nJj/view?usp=drivesdk",
+        "size": "1762444",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1u1l0ei9f0Mh-EyU6FcT0Tzy-vPY5PyOv",
+        "title": "DSC00936_v02.png",
+        "url": "https://drive.google.com/file/d/1u1l0ei9f0Mh-EyU6FcT0Tzy-vPY5PyOv/view?usp=drivesdk",
+        "size": "1813617",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1Ue08JX63t885GW1bwlLJDT3QQ3Iqh-J2",
+        "title": "DSC02281_v02.png",
+        "url": "https://drive.google.com/file/d/1Ue08JX63t885GW1bwlLJDT3QQ3Iqh-J2/view?usp=drivesdk",
+        "size": "2309456",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1m6RijIGFTC_vKrJdrty48YJ3VUW1X8Dl",
+        "title": "DSC02285_v02.png",
+        "url": "https://drive.google.com/file/d/1m6RijIGFTC_vKrJdrty48YJ3VUW1X8Dl/view?usp=drivesdk",
+        "size": "2178196",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "16n_gwNyOhUCuHUKsAtyDxBSrPP3ngU9J",
+        "title": "DSC02288_v02.png",
+        "url": "https://drive.google.com/file/d/16n_gwNyOhUCuHUKsAtyDxBSrPP3ngU9J/view?usp=drivesdk",
+        "size": "2063135",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1H5PvhgY7dXE5_8Z405kaJ_kraVxgDOue",
+        "title": "DSC02291_v02.png",
+        "url": "https://drive.google.com/file/d/1H5PvhgY7dXE5_8Z405kaJ_kraVxgDOue/view?usp=drivesdk",
+        "size": "1910519",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "19m3n5GoksbPwkeQf1HI-nJJ4HN0eQNjl",
+        "title": "DSC02292_v02.png",
+        "url": "https://drive.google.com/file/d/19m3n5GoksbPwkeQf1HI-nJJ4HN0eQNjl/view?usp=drivesdk",
+        "size": "2059857",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1jnlcBci-NPtGbsEFm4wIiXDdgHWME_07",
+        "title": "DSC02296_v02.png",
+        "url": "https://drive.google.com/file/d/1jnlcBci-NPtGbsEFm4wIiXDdgHWME_07/view?usp=drivesdk",
+        "size": "2075846",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "18pkFeId_Mgx7WOYGLjXgbOA0HK1APz1N",
+        "title": "DSC02297_v02.png",
+        "url": "https://drive.google.com/file/d/18pkFeId_Mgx7WOYGLjXgbOA0HK1APz1N/view?usp=drivesdk",
+        "size": "2054988",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1iLI2o_Sd9GhAaTV6zA11iuJwAlA6anKz",
+        "title": "DSC02309_v02.png",
+        "url": "https://drive.google.com/file/d/1iLI2o_Sd9GhAaTV6zA11iuJwAlA6anKz/view?usp=drivesdk",
+        "size": "1980220",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1nmnicywfApHwu6hqzlkrLt66KjuR6qZo",
+        "title": "DSC02314_v02.png",
+        "url": "https://drive.google.com/file/d/1nmnicywfApHwu6hqzlkrLt66KjuR6qZo/view?usp=drivesdk",
+        "size": "2136220",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1L5TkguE6eJmdUEwCqpgnbN9TJWsjODy6",
+        "title": "DSC02317_v02.png",
+        "url": "https://drive.google.com/file/d/1L5TkguE6eJmdUEwCqpgnbN9TJWsjODy6/view?usp=drivesdk",
+        "size": "2047413",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1eyJDymPInDCYtEaI0-aJwpIK-Txnq0ls",
+        "title": "DSC02256_v02.png",
+        "url": "https://drive.google.com/file/d/1eyJDymPInDCYtEaI0-aJwpIK-Txnq0ls/view?usp=drivesdk",
+        "size": "2112480",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1T86XSdwXqz_797u3pDEv-l9aXMCYrOLu",
+        "title": "DSC02278_v02.png",
+        "url": "https://drive.google.com/file/d/1T86XSdwXqz_797u3pDEv-l9aXMCYrOLu/view?usp=drivesdk",
+        "size": "2181264",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1OEX9yxV7sSyOT7krsC81eAzeACX3rUzF",
+        "title": "DSC02269_v02.png",
+        "url": "https://drive.google.com/file/d/1OEX9yxV7sSyOT7krsC81eAzeACX3rUzF/view?usp=drivesdk",
+        "size": "2202209",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1BHD7y2RaELdzTM3XmBc8KtbSw_Tlg44Z",
+        "title": "DSC02267_v02.png",
+        "url": "https://drive.google.com/file/d/1BHD7y2RaELdzTM3XmBc8KtbSw_Tlg44Z/view?usp=drivesdk",
+        "size": "2173685",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "13aH0Sl96uhiGjPezsW4VYXy-xp_MK-pR",
+        "title": "DSC02260_v02.png",
+        "url": "https://drive.google.com/file/d/13aH0Sl96uhiGjPezsW4VYXy-xp_MK-pR/view?usp=drivesdk",
+        "size": "2221216",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1fTz09jkAT_VapMiExnemEUOPH3G7L9JQ",
+        "title": "DSC02254_v02.png",
+        "url": "https://drive.google.com/file/d/1fTz09jkAT_VapMiExnemEUOPH3G7L9JQ/view?usp=drivesdk",
+        "size": "2169292",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1WVuSpA2Vg4cMiL8ecDoESvPyv1zRADLi",
+        "title": "DSC02279_v02.png",
+        "url": "https://drive.google.com/file/d/1WVuSpA2Vg4cMiL8ecDoESvPyv1zRADLi/view?usp=drivesdk",
+        "size": "2147847",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1E1SAHFJ3B5cYupB_KytBgnJcRBCb9Qs7",
+        "title": "DSC02259_v02.png",
+        "url": "https://drive.google.com/file/d/1E1SAHFJ3B5cYupB_KytBgnJcRBCb9Qs7/view?usp=drivesdk",
+        "size": "2170845",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1qqPoG_3eOv4DXc6PXB-JzV5nFS2RKGe3",
+        "title": "DSC02280_v02.png",
+        "url": "https://drive.google.com/file/d/1qqPoG_3eOv4DXc6PXB-JzV5nFS2RKGe3/view?usp=drivesdk",
+        "size": "2203326",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1bK_iyxjZFFzJWSoRgTJchvwVwg9VWZGt",
+        "title": "DSC02275_v02.png",
+        "url": "https://drive.google.com/file/d/1bK_iyxjZFFzJWSoRgTJchvwVwg9VWZGt/view?usp=drivesdk",
+        "size": "2137175",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1fm2cLFBprX8GxKEhlCy8yuWXpSp-O6vQ",
+        "title": "DSC00634_v02.png",
+        "url": "https://drive.google.com/file/d/1fm2cLFBprX8GxKEhlCy8yuWXpSp-O6vQ/view?usp=drivesdk",
+        "size": "1889100",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1mRHgjT2w_DTQem7SP4-JjszUQRTskCMv",
+        "title": "DSC00623_v02.png",
+        "url": "https://drive.google.com/file/d/1mRHgjT2w_DTQem7SP4-JjszUQRTskCMv/view?usp=drivesdk",
+        "size": "1860685",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "11gyFjwN9L5EZxhKjbwFh9Ntj_jI94XX-",
+        "title": "DSC00681_v02.png",
+        "url": "https://drive.google.com/file/d/11gyFjwN9L5EZxhKjbwFh9Ntj_jI94XX-/view?usp=drivesdk",
+        "size": "1949549",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1FxcpRVY0SC9olc5nXiohwwmTJp3sbx0_",
+        "title": "DSC00628_v02.png",
+        "url": "https://drive.google.com/file/d/1FxcpRVY0SC9olc5nXiohwwmTJp3sbx0_/view?usp=drivesdk",
+        "size": "1888109",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1iMPVdvdb72q3UQZWIQWz-llVE-uyowMX",
+        "title": "DSC00629_v02.png",
+        "url": "https://drive.google.com/file/d/1iMPVdvdb72q3UQZWIQWz-llVE-uyowMX/view?usp=drivesdk",
+        "size": "1884957",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "10AU0BWUIRKugvSdfKmCFy6HBgvsYF8Dg",
+        "title": "DSC00688_v02.png",
+        "url": "https://drive.google.com/file/d/10AU0BWUIRKugvSdfKmCFy6HBgvsYF8Dg/view?usp=drivesdk",
+        "size": "1935122",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1u4gkyMtIFssHInhhUgfkI0XDfLnXijsU",
+        "title": "DSC00722_v02.png",
+        "url": "https://drive.google.com/file/d/1u4gkyMtIFssHInhhUgfkI0XDfLnXijsU/view?usp=drivesdk",
+        "size": "1827280",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "15inKp39C19jQ3iGR4A7ZVXzIalaQlqnb",
+        "title": "DSC00678_v02.png",
+        "url": "https://drive.google.com/file/d/15inKp39C19jQ3iGR4A7ZVXzIalaQlqnb/view?usp=drivesdk",
+        "size": "1954742",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1dXukjbCxyJcczzXy3HL7XYLDoaUoWUUb",
+        "title": "DSC00752_v02.png",
+        "url": "https://drive.google.com/file/d/1dXukjbCxyJcczzXy3HL7XYLDoaUoWUUb/view?usp=drivesdk",
+        "size": "2127014",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1xjlD2lbIVYQKpnLnXlt4EVAckA3bsyVl",
+        "title": "DSC00769_v02.png",
+        "url": "https://drive.google.com/file/d/1xjlD2lbIVYQKpnLnXlt4EVAckA3bsyVl/view?usp=drivesdk",
+        "size": "1815571",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "121aq3YbcFrornvO-Qs7lJUIeOKBUADNP",
+        "title": "DSC00216_v02.png",
+        "url": "https://drive.google.com/file/d/121aq3YbcFrornvO-Qs7lJUIeOKBUADNP/view?usp=drivesdk",
+        "size": "1818857",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1m9wp9oqVyQMO6g6vECXex50azMQbqxdd",
+        "title": "DSC00612_v02.png",
+        "url": "https://drive.google.com/file/d/1m9wp9oqVyQMO6g6vECXex50azMQbqxdd/view?usp=drivesdk",
+        "size": "1957171",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1e4XSuDK5VIE2s2WXeUv3VlF1F1ThNNSh",
+        "title": "DSC00771_v02.png",
+        "url": "https://drive.google.com/file/d/1e4XSuDK5VIE2s2WXeUv3VlF1F1ThNNSh/view?usp=drivesdk",
+        "size": "1893907",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1JK7jHuyHbu8O_1gW31plBPiLyMPm94rh",
+        "title": "DSC00904_v02.png",
+        "url": "https://drive.google.com/file/d/1JK7jHuyHbu8O_1gW31plBPiLyMPm94rh/view?usp=drivesdk",
+        "size": "1865204",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1hirf-VWfwaYTl9-m0fYckasIT3Tg-9zX",
+        "title": "DSC01929_v02.png",
+        "url": "https://drive.google.com/file/d/1hirf-VWfwaYTl9-m0fYckasIT3Tg-9zX/view?usp=drivesdk",
+        "size": "1859378",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1ah4eN4LoSKVeA6ERfRdzBglCC-2ZW1hV",
+        "title": "DSC01909_v02.png",
+        "url": "https://drive.google.com/file/d/1ah4eN4LoSKVeA6ERfRdzBglCC-2ZW1hV/view?usp=drivesdk",
+        "size": "1876061",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "18EOEYOgpAvZEB_XhVJZcOgAlogydBx9O",
+        "title": "DSC02117_v02.png",
+        "url": "https://drive.google.com/file/d/18EOEYOgpAvZEB_XhVJZcOgAlogydBx9O/view?usp=drivesdk",
+        "size": "1788541",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1k9i3HXTI8uFr9anQt3LIojfIUtoO9Dhl",
+        "title": "DSC02098_v02.png",
+        "url": "https://drive.google.com/file/d/1k9i3HXTI8uFr9anQt3LIojfIUtoO9Dhl/view?usp=drivesdk",
+        "size": "1904147",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1eLdzR7TriG8PLjTeG2YQ9EMW6iWpAX5w",
+        "title": "DSC02209_v02.png",
+        "url": "https://drive.google.com/file/d/1eLdzR7TriG8PLjTeG2YQ9EMW6iWpAX5w/view?usp=drivesdk",
+        "size": "1900282",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
+        "id": "1CftHT_erf3tFPCy7KomRqI93HLB4ACmc",
+        "title": "DSC02172_v02.png",
+        "url": "https://drive.google.com/file/d/1CftHT_erf3tFPCy7KomRqI93HLB4ACmc/view?usp=drivesdk",
+        "size": "1904245",
+        "parent_ids": [
+          "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
+        ],
+        "mime_type": "image/png"
+      },
+      {
         "id": "1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB",
-        "mime_type": "image/png",
+        "title": "DSC01557_v02.png",
+        "url": "https://drive.google.com/file/d/1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB/view?usp=drivesdk",
         "size": "1694186",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:03:12.031Z",
-        "updated_at": "2026-11-04T18:03:12.031Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01557_v02.png",
-        "display_url": "https://drive.google.com/file/d/1M9pj6BA0lhEQ0tirMVKHOAV3zd0DUteB/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ/view?usp=drivesdk",
-        "title": "DSC01556_v02.png",
         "id": "1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ",
-        "mime_type": "image/png",
+        "title": "DSC01556_v02.png",
+        "url": "https://drive.google.com/file/d/1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ/view?usp=drivesdk",
         "size": "1727224",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:03:08.898Z",
-        "updated_at": "2026-11-04T18:03:08.898Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01556_v02.png",
-        "display_url": "https://drive.google.com/file/d/1KZ862HzYtz2b94cG2ZxU6COomAFngDKJ/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco/view?usp=drivesdk",
-        "title": "DSC01551_v02.png",
         "id": "16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco",
-        "mime_type": "image/png",
+        "title": "DSC01551_v02.png",
+        "url": "https://drive.google.com/file/d/16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco/view?usp=drivesdk",
         "size": "1754939",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:03:05.209Z",
-        "updated_at": "2026-11-04T18:03:05.209Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01551_v02.png",
-        "display_url": "https://drive.google.com/file/d/16C-bXYZ_e_vSdT9pMEFGRIUcmoMbQLco/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM/view?usp=drivesdk",
-        "title": "DSC01550_v02.png",
         "id": "1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM",
-        "mime_type": "image/png",
+        "title": "DSC01550_v02.png",
+        "url": "https://drive.google.com/file/d/1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM/view?usp=drivesdk",
         "size": "1672923",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:03:02.555Z",
-        "updated_at": "2026-11-04T18:03:02.555Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01550_v02.png",
-        "display_url": "https://drive.google.com/file/d/1YJ2p5JmUTK93av_OoHlNuiCZU397HyWM/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B/view?usp=drivesdk",
-        "title": "DSC01543_v02.png",
         "id": "1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B",
-        "mime_type": "image/png",
+        "title": "DSC01543_v02.png",
+        "url": "https://drive.google.com/file/d/1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B/view?usp=drivesdk",
         "size": "1808243",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:59.171Z",
-        "updated_at": "2026-11-04T18:02:59.171Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01543_v02.png",
-        "display_url": "https://drive.google.com/file/d/1RpUgSMu8trjEfR7rcsH0NGQHhfyEla1B/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1fY9NQxkmoPErCG_hAueR5I65RumDZRs3/view?usp=drivesdk",
-        "title": "DSC01542_v02.png",
         "id": "1fY9NQxkmoPErCG_hAueR5I65RumDZRs3",
-        "mime_type": "image/png",
+        "title": "DSC01542_v02.png",
+        "url": "https://drive.google.com/file/d/1fY9NQxkmoPErCG_hAueR5I65RumDZRs3/view?usp=drivesdk",
         "size": "1788268",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:55.814Z",
-        "updated_at": "2026-11-04T18:02:55.814Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01542_v02.png",
-        "display_url": "https://drive.google.com/file/d/1fY9NQxkmoPErCG_hAueR5I65RumDZRs3/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ/view?usp=drivesdk",
-        "title": "DSC01539_v02.png",
         "id": "1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ",
-        "mime_type": "image/png",
+        "title": "DSC01539_v02.png",
+        "url": "https://drive.google.com/file/d/1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ/view?usp=drivesdk",
         "size": "1745323",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:52.004Z",
-        "updated_at": "2026-11-04T18:02:52.004Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01539_v02.png",
-        "display_url": "https://drive.google.com/file/d/1IzaLFKI_Bku3gJKcc0t0L82N9PfE8VbZ/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy/view?usp=drivesdk",
-        "title": "DSC02748_piloto_v01_vertical.png",
         "id": "1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy",
-        "mime_type": "image/png",
+        "title": "DSC02748_piloto_v01_vertical.png",
+        "url": "https://drive.google.com/file/d/1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy/view?usp=drivesdk",
         "size": "1294266",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:33.195Z",
-        "updated_at": "2026-11-04T18:02:33.195Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02748_piloto_v01_vertical.png",
-        "display_url": "https://drive.google.com/file/d/1EuzDoG1a26_X3MIeaIE6iHmr5P-D4Ycy/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu/view?usp=drivesdk",
-        "title": "DSC00043_v02.png",
         "id": "1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu",
-        "mime_type": "image/png",
+        "title": "DSC00043_v02.png",
+        "url": "https://drive.google.com/file/d/1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu/view?usp=drivesdk",
         "size": "1731419",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:02:00.444Z",
-        "updated_at": "2026-11-04T18:02:00.444Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00043_v02.png",
-        "display_url": "https://drive.google.com/file/d/1oSB_MomYJ93OVSfYpDdP2XAf_RbrirKu/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH/view?usp=drivesdk",
-        "title": "DSC00033_v02.png",
         "id": "1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH",
-        "mime_type": "image/png",
+        "title": "DSC00033_v02.png",
+        "url": "https://drive.google.com/file/d/1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH/view?usp=drivesdk",
         "size": "1839524",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:56.421Z",
-        "updated_at": "2026-11-04T18:01:56.421Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00033_v02.png",
-        "display_url": "https://drive.google.com/file/d/1Ow1si6TbUyS1EBfM2TbeW3ozZVS2aPrH/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1CB2b0hERh3VOouI58zJBWIihslr6S3YR/view?usp=drivesdk",
-        "title": "DSC00029_v02.png",
         "id": "1CB2b0hERh3VOouI58zJBWIihslr6S3YR",
-        "mime_type": "image/png",
+        "title": "DSC00029_v02.png",
+        "url": "https://drive.google.com/file/d/1CB2b0hERh3VOouI58zJBWIihslr6S3YR/view?usp=drivesdk",
         "size": "1942854",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:53.201Z",
-        "updated_at": "2026-11-04T18:01:53.201Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00029_v02.png",
-        "display_url": "https://drive.google.com/file/d/1CB2b0hERh3VOouI58zJBWIihslr6S3YR/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl/view?usp=drivesdk",
-        "title": "DSC00027_v02.png",
         "id": "1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl",
-        "mime_type": "image/png",
+        "title": "DSC00027_v02.png",
+        "url": "https://drive.google.com/file/d/1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl/view?usp=drivesdk",
         "size": "1917926",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:50.074Z",
-        "updated_at": "2026-11-04T18:01:50.074Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00027_v02.png",
-        "display_url": "https://drive.google.com/file/d/1oQCgJ_dDvIVMC9Iaz7O2MpsWaKF-lwCl/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs/view?usp=drivesdk",
-        "title": "DSC00025_v02.png",
         "id": "1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs",
-        "mime_type": "image/png",
+        "title": "DSC00025_v02.png",
+        "url": "https://drive.google.com/file/d/1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs/view?usp=drivesdk",
         "size": "1838132",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:46.310Z",
-        "updated_at": "2026-11-04T18:01:46.310Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00025_v02.png",
-        "display_url": "https://drive.google.com/file/d/1_cwPoZst2rKvD9Byt73vkEr0zrsB_SWs/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe/view?usp=drivesdk",
-        "title": "DSC00024_v02.png",
         "id": "16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe",
-        "mime_type": "image/png",
+        "title": "DSC00024_v02.png",
+        "url": "https://drive.google.com/file/d/16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe/view?usp=drivesdk",
         "size": "1820102",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:43.256Z",
-        "updated_at": "2026-11-04T18:01:43.256Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00024_v02.png",
-        "display_url": "https://drive.google.com/file/d/16Hs8_NZHSy8IjYmJJYJmZkd3623hRJEe/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm/view?usp=drivesdk",
-        "title": "DSC00020_v02.png",
         "id": "1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm",
-        "mime_type": "image/png",
+        "title": "DSC00020_v02.png",
+        "url": "https://drive.google.com/file/d/1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm/view?usp=drivesdk",
         "size": "1854283",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:40.729Z",
-        "updated_at": "2026-11-04T18:01:40.729Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00020_v02.png",
-        "display_url": "https://drive.google.com/file/d/1RAG_m4HnKZvurHJilHAUEokA7wYoq9Qm/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6/view?usp=drivesdk",
-        "title": "DSC00019_v02.png",
         "id": "1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6",
-        "mime_type": "image/png",
+        "title": "DSC00019_v02.png",
+        "url": "https://drive.google.com/file/d/1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6/view?usp=drivesdk",
         "size": "2269723",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:38.141Z",
-        "updated_at": "2026-11-04T18:01:38.141Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00019_v02.png",
-        "display_url": "https://drive.google.com/file/d/1N5ZQbcZFcAcNWwFqPDRy1Ss0KXirX4M6/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh/view?usp=drivesdk",
-        "title": "DSC00017_v02.png",
         "id": "1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh",
-        "mime_type": "image/png",
+        "title": "DSC00017_v02.png",
+        "url": "https://drive.google.com/file/d/1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh/view?usp=drivesdk",
         "size": "1981024",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:34.587Z",
-        "updated_at": "2026-11-04T18:01:34.587Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00017_v02.png",
-        "display_url": "https://drive.google.com/file/d/1ak1zmhylIW2Bxdd9xIO6jP6G2X2pNgrh/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2/view?usp=drivesdk",
-        "title": "DSC00013_v02.png",
         "id": "1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2",
-        "mime_type": "image/png",
+        "title": "DSC00013_v02.png",
+        "url": "https://drive.google.com/file/d/1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2/view?usp=drivesdk",
         "size": "1894377",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T18:01:31.285Z",
-        "updated_at": "2026-11-04T18:01:31.285Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00013_v02.png",
-        "display_url": "https://drive.google.com/file/d/1aEOVOZ9nshf8xp4f_CVNIG_glFXKdzH2/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
-        "title": "DSC07706_v04.png",
         "id": "15DZ5Mjismi5RTwIFRXC49_iIg259lNuh",
-        "mime_type": "image/png",
+        "title": "DSC07706_v04.png",
+        "url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
         "size": "9222543",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T16:52:42.119Z",
-        "updated_at": "2026-11-04T16:52:42.119Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07706_v04.png",
-        "display_url": "https://drive.google.com/file/d/15DZ5Mjismi5RTwIFRXC49_iIg259lNuh/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
-        "title": "DSC07726_v03.png",
         "id": "1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1",
-        "mime_type": "image/png",
+        "title": "DSC07726_v03.png",
+        "url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
         "size": "15514494",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:40.429Z",
-        "updated_at": "2026-11-04T12:36:40.429Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07726_v03.png",
-        "display_url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
-        "title": "DSC08484_v03.png",
         "id": "1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb",
-        "mime_type": "image/png",
+        "title": "DSC08484_v03.png",
+        "url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
         "size": "18943496",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:34.618Z",
-        "updated_at": "2026-11-04T12:36:34.618Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC08484_v03.png",
-        "display_url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
-        "title": "DSC08479_v03.png",
         "id": "1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W",
-        "mime_type": "image/png",
+        "title": "DSC08479_v03.png",
+        "url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
         "size": "18093418",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:27.457Z",
-        "updated_at": "2026-11-04T12:36:27.457Z",
-        "viewedByMeTime": "2026-11-04T17:20:46.330Z",
-        "display_title": "DSC08479_v03.png",
-        "display_url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
-        "title": "DSC08471_v03.png",
         "id": "1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-",
-        "mime_type": "image/png",
+        "title": "DSC08471_v03.png",
+        "url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
         "size": "16250223",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:21.796Z",
-        "updated_at": "2026-11-04T12:36:21.796Z",
-        "viewedByMeTime": "2026-11-04T17:21:11.962Z",
-        "display_title": "DSC08471_v03.png",
-        "display_url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
-        "title": "DSC07724_v03.png",
         "id": "1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE",
-        "mime_type": "image/png",
+        "title": "DSC07724_v03.png",
+        "url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
         "size": "14928083",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:15.553Z",
-        "updated_at": "2026-11-04T12:36:15.553Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07724_v03.png",
-        "display_url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
-        "title": "DSC07706_v03.png",
         "id": "18iNEKqy0yLUi4BXrg_ja46booBRv4iFl",
-        "mime_type": "image/png",
+        "title": "DSC07706_v03.png",
+        "url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
         "size": "16938051",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:10.075Z",
-        "updated_at": "2026-11-04T12:36:10.075Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07706_v03.png",
-        "display_url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
-        "title": "DSC07731_v03.png",
         "id": "1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ",
-        "mime_type": "image/png",
+        "title": "DSC07731_v03.png",
+        "url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
         "size": "14275062",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:36:03.732Z",
-        "updated_at": "2026-11-04T12:36:03.732Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07731_v03.png",
-        "display_url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
-        "title": "DSC07732_v03.png",
         "id": "1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr",
-        "mime_type": "image/png",
+        "title": "DSC07732_v03.png",
+        "url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
         "size": "14592161",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T12:35:58.170Z",
-        "updated_at": "2026-11-04T12:35:58.170Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC07732_v03.png",
-        "display_url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1sRW0x4YXeuM8WmfjXHAz93bRnsxwG4Cm/view?usp=drivesdk",
-        "title": "DSC00009_v02.png",
         "id": "1sRW0x4YXeuM8WmfjXHAz93bRnsxwG4Cm",
-        "mime_type": "image/png",
+        "title": "DSC00009_v02.png",
+        "url": "https://drive.google.com/file/d/1sRW0x4YXeuM8WmfjXHAz93bRnsxwG4Cm/view?usp=drivesdk",
         "size": "2085630",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:14:51.234Z",
-        "updated_at": "2026-11-04T05:14:51.234Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00009_v02.png",
-        "display_url": "https://drive.google.com/file/d/1sRW0x4YXeuM8WmfjXHAz93bRnsxwG4Cm/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1gCNRxkWiWUZS3JNanMGvYLlyMetErVMW/view?usp=drivesdk",
-        "title": "DSC00007_v02.png",
         "id": "1gCNRxkWiWUZS3JNanMGvYLlyMetErVMW",
-        "mime_type": "image/png",
+        "title": "DSC00007_v02.png",
+        "url": "https://drive.google.com/file/d/1gCNRxkWiWUZS3JNanMGvYLlyMetErVMW/view?usp=drivesdk",
         "size": "2003351",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:14:47.516Z",
-        "updated_at": "2026-11-04T05:14:47.516Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00007_v02.png",
-        "display_url": "https://drive.google.com/file/d/1gCNRxkWiWUZS3JNanMGvYLlyMetErVMW/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1o6pFnhRRYZPMazARvkJJEWFVyKwT-ZSo/view?usp=drivesdk",
-        "title": "DSC00004_v02.png",
         "id": "1o6pFnhRRYZPMazARvkJJEWFVyKwT-ZSo",
-        "mime_type": "image/png",
+        "title": "DSC00004_v02.png",
+        "url": "https://drive.google.com/file/d/1o6pFnhRRYZPMazARvkJJEWFVyKwT-ZSo/view?usp=drivesdk",
         "size": "1943687",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:14:44.607Z",
-        "updated_at": "2026-11-04T05:14:44.607Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00004_v02.png",
-        "display_url": "https://drive.google.com/file/d/1o6pFnhRRYZPMazARvkJJEWFVyKwT-ZSo/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1P02VCctUXEoGe0uURtMvkASnB7JrSHBD/view?usp=drivesdk",
-        "title": "DSC00003_v02.png",
         "id": "1P02VCctUXEoGe0uURtMvkASnB7JrSHBD",
-        "mime_type": "image/png",
+        "title": "DSC00003_v02.png",
+        "url": "https://drive.google.com/file/d/1P02VCctUXEoGe0uURtMvkASnB7JrSHBD/view?usp=drivesdk",
         "size": "2030993",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:14:40.661Z",
-        "updated_at": "2026-11-04T05:14:40.661Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00003_v02.png",
-        "display_url": "https://drive.google.com/file/d/1P02VCctUXEoGe0uURtMvkASnB7JrSHBD/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1X_-ZBwQ1e1RYCeP2ThYDnX2edUTLXJFE/view?usp=drivesdk",
-        "title": "DSC00002_v02.png",
         "id": "1X_-ZBwQ1e1RYCeP2ThYDnX2edUTLXJFE",
-        "mime_type": "image/png",
+        "title": "DSC00002_v02.png",
+        "url": "https://drive.google.com/file/d/1X_-ZBwQ1e1RYCeP2ThYDnX2edUTLXJFE/view?usp=drivesdk",
         "size": "2057517",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:14:37.649Z",
-        "updated_at": "2026-11-04T05:14:37.649Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00002_v02.png",
-        "display_url": "https://drive.google.com/file/d/1X_-ZBwQ1e1RYCeP2ThYDnX2edUTLXJFE/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/127mH1Qey8SlPAaFrRs0ISDWHh8jQQwmQ/view?usp=drivesdk",
-        "title": "DSC00108_C_peluche_ligero_APROBADA.png",
         "id": "127mH1Qey8SlPAaFrRs0ISDWHh8jQQwmQ",
-        "mime_type": "image/png",
+        "title": "DSC00108_C_peluche_ligero_APROBADA.png",
+        "url": "https://drive.google.com/file/d/127mH1Qey8SlPAaFrRs0ISDWHh8jQQwmQ/view?usp=drivesdk",
         "size": "1794194",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T05:07:23.529Z",
-        "updated_at": "2026-11-04T05:07:23.529Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00108_C_peluche_ligero_APROBADA.png",
-        "display_url": "https://drive.google.com/file/d/127mH1Qey8SlPAaFrRs0ISDWHh8jQQwmQ/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1UDyMZvUYp8PW29ZfP0x6XMZwZ96oxKkl/view?usp=drivesdk",
-        "title": "DSC02415_v02.png",
         "id": "1UDyMZvUYp8PW29ZfP0x6XMZwZ96oxKkl",
-        "mime_type": "image/png",
+        "title": "DSC02415_v02.png",
+        "url": "https://drive.google.com/file/d/1UDyMZvUYp8PW29ZfP0x6XMZwZ96oxKkl/view?usp=drivesdk",
         "size": "2091375",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:45:30.369Z",
-        "updated_at": "2026-11-04T00:45:30.369Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02415_v02.png",
-        "display_url": "https://drive.google.com/file/d/1UDyMZvUYp8PW29ZfP0x6XMZwZ96oxKkl/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1QMzW5hhfSQRfNX06YOZsN4CRfhVChKqS/view?usp=drivesdk",
-        "title": "DSC01197_v02.png",
         "id": "1QMzW5hhfSQRfNX06YOZsN4CRfhVChKqS",
-        "mime_type": "image/png",
+        "title": "DSC01197_v02.png",
+        "url": "https://drive.google.com/file/d/1QMzW5hhfSQRfNX06YOZsN4CRfhVChKqS/view?usp=drivesdk",
         "size": "1861646",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:45:26.412Z",
-        "updated_at": "2026-11-04T00:45:26.412Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01197_v02.png",
-        "display_url": "https://drive.google.com/file/d/1QMzW5hhfSQRfNX06YOZsN4CRfhVChKqS/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1kvCMyJwyj-Xik4syfO3v1DW8dtuY5nVx/view?usp=drivesdk",
-        "title": "DSC01863_v02.png",
         "id": "1kvCMyJwyj-Xik4syfO3v1DW8dtuY5nVx",
-        "mime_type": "image/png",
+        "title": "DSC01863_v02.png",
+        "url": "https://drive.google.com/file/d/1kvCMyJwyj-Xik4syfO3v1DW8dtuY5nVx/view?usp=drivesdk",
         "size": "1906103",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:45:21.758Z",
-        "updated_at": "2026-11-04T00:45:21.758Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC01863_v02.png",
-        "display_url": "https://drive.google.com/file/d/1kvCMyJwyj-Xik4syfO3v1DW8dtuY5nVx/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1nVWaMqtgnPD9rJew1qO2lbKj7FXH4hJO/view?usp=drivesdk",
-        "title": "DSC02116_negro_v05.png",
         "id": "1nVWaMqtgnPD9rJew1qO2lbKj7FXH4hJO",
-        "mime_type": "image/png",
+        "title": "DSC02116_negro_v05.png",
+        "url": "https://drive.google.com/file/d/1nVWaMqtgnPD9rJew1qO2lbKj7FXH4hJO/view?usp=drivesdk",
         "size": "22719946",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:45:17.180Z",
-        "updated_at": "2026-11-04T00:45:17.180Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02116_negro_v05.png",
-        "display_url": "https://drive.google.com/file/d/1nVWaMqtgnPD9rJew1qO2lbKj7FXH4hJO/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/1P4gn4ibAzkezeApTiw2wTMGqTFukcPRl/view?usp=drivesdk",
-        "title": "DSC02003_negro_v05.png",
         "id": "1P4gn4ibAzkezeApTiw2wTMGqTFukcPRl",
-        "mime_type": "image/png",
+        "title": "DSC02003_negro_v05.png",
+        "url": "https://drive.google.com/file/d/1P4gn4ibAzkezeApTiw2wTMGqTFukcPRl/view?usp=drivesdk",
         "size": "22069200",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:45:11.392Z",
-        "updated_at": "2026-11-04T00:45:11.392Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC02003_negro_v05.png",
-        "display_url": "https://drive.google.com/file/d/1P4gn4ibAzkezeApTiw2wTMGqTFukcPRl/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       },
       {
-        "url": "https://drive.google.com/file/d/10qhRuo9DLty-bwshJjTCo8FfbttY4FL-/view?usp=drivesdk",
-        "title": "DSC00001_negro_v05.png",
         "id": "10qhRuo9DLty-bwshJjTCo8FfbttY4FL-",
-        "mime_type": "image/png",
+        "title": "DSC00001_negro_v05.png",
+        "url": "https://drive.google.com/file/d/10qhRuo9DLty-bwshJjTCo8FfbttY4FL-/view?usp=drivesdk",
         "size": "27858447",
-        "file_or_folder": "file",
-        "created_at": "2026-11-04T00:43:24.031Z",
-        "updated_at": "2026-11-04T00:43:24.031Z",
-        "viewedByMeTime": null,
-        "display_title": "DSC00001_negro_v05.png",
-        "display_url": "https://drive.google.com/file/d/10qhRuo9DLty-bwshJjTCo8FfbttY4FL-/view?usp=drivesdk",
         "parent_ids": [
           "1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-"
         ],
-        "shared": false,
-        "can_download": true,
-        "can_list_children": false
+        "mime_type": "image/png"
       }
     ]
-  }
+  },
+  "aprobacion_total_readback": [
+    {
+      "id": "1RmnlaNjOJt8HFcZ0sSvx1ca-eprV-T66",
+      "results": []
+    },
+    {
+      "id": "1VkBJUZkKarh55p0LZfI8I5JCirArnZsI",
+      "results": []
+    },
+    {
+      "id": "1rcBPhUIC6Ha4QontlUBxk4r6dwlZ_hEl",
+      "results": []
+    },
+    {
+      "id": "1YF9CGZjvtAAOJu8fEuFEedkgHRjDSDKG",
+      "results": []
+    },
+    {
+      "id": "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T",
+      "results": []
+    },
+    {
+      "id": "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR",
+      "results": []
+    },
+    {
+      "id": "1NB-ehDrRcup6Grcrz6xGNGc8-B7sEv80",
+      "results": []
+    },
+    {
+      "id": "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx",
+      "results": []
+    },
+    {
+      "id": "12sd6RK0-uxZ_7zLpIchaX_5X2oPk4VaR",
+      "results": []
+    },
+    {
+      "id": "1sV-Hrh1DP53rmvkLOfm5Mh2uF2wg93Qm",
+      "results": []
+    },
+    {
+      "id": "1sltntZtPHJlhOFN9jXGYnJcPXyCRyj-a",
+      "results": []
+    }
+  ]
 }
