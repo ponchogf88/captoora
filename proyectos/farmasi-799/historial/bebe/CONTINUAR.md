@@ -1,0 +1,1 @@
+Prioridad bebe:11fuentes confirmadas y19inspeccionadas en secuencia. Tres pruebas en Drive, pendientes de aprobacion. No generar ni intercambiar caras de bebe. Seleccionar foco real, no inventar detalle. Mantener fuentes y conservar alfombra/sombras. El resto de la secuencia sigue pendiente, no se declara entregada. Versiones de entrega solo ultima aprobada por fuente.

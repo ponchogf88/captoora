@@ -1471,7 +1471,8 @@
     "review_lote_13_otra_persona_0300": "lote_13_otra_persona_0300",
     "review_lote_14_chica07722_sola": "lote_14_chica07722_sola",
     "review_lote_15_chica07722_grupo": "lote_15_chica07722_grupo",
-    "review_v03_final": "correcciones_rostros_textos_v03/entrega_final"
+    "review_v03_final": "correcciones_rostros_textos_v03/entrega_final",
+    "review_bebe_pruebas01": "bebe/pruebas_v01/JPG"
   },
   "review07": {
     "results": [
@@ -5209,5 +5210,127 @@
         }
       ]
     }
+  },
+  "review_bebe_pruebas01": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/143d19vyCBMVVFFqtWMX3-GLslt-MxGnT/view?usp=drivesdk",
+        "title": "DSC08295_bebe_v01.jpg",
+        "id": "143d19vyCBMVVFFqtWMX3-GLslt-MxGnT",
+        "mime_type": "image/jpeg",
+        "size": "3203551",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:53.015Z",
+        "updated_at": "2026-11-04T23:48:53.015Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08295_bebe_v01.jpg",
+        "display_url": "https://drive.google.com/file/d/143d19vyCBMVVFFqtWMX3-GLslt-MxGnT/view?usp=drivesdk",
+        "parent_ids": [
+          "1ohWX6i5k303Hq1Qc4VsMRY8DUqWoX3Q6"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1blwwWSLV1pdU5UpClxnWMPlEfZOVJ0yY/view?usp=drivesdk",
+        "title": "DSC08290 2_bebe_v01.jpg",
+        "id": "1blwwWSLV1pdU5UpClxnWMPlEfZOVJ0yY",
+        "mime_type": "image/jpeg",
+        "size": "3397847",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:45.714Z",
+        "updated_at": "2026-11-04T23:48:45.714Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08290 2_bebe_v01.jpg",
+        "display_url": "https://drive.google.com/file/d/1blwwWSLV1pdU5UpClxnWMPlEfZOVJ0yY/view?usp=drivesdk",
+        "parent_ids": [
+          "1ohWX6i5k303Hq1Qc4VsMRY8DUqWoX3Q6"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1J0vOE6mpTtSHL9omVvJ8sbc7ZKMZxWGY/view?usp=drivesdk",
+        "title": "DSC08258_bebe_v01.jpg",
+        "id": "1J0vOE6mpTtSHL9omVvJ8sbc7ZKMZxWGY",
+        "mime_type": "image/jpeg",
+        "size": "3733228",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:34.812Z",
+        "updated_at": "2026-11-04T23:48:34.812Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08258_bebe_v01.jpg",
+        "display_url": "https://drive.google.com/file/d/1J0vOE6mpTtSHL9omVvJ8sbc7ZKMZxWGY/view?usp=drivesdk",
+        "parent_ids": [
+          "1ohWX6i5k303Hq1Qc4VsMRY8DUqWoX3Q6"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  },
+  "masters_bebe_pruebas01": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1Q75TBY_sjmryowtu8umNXEsKUiyVunUv/view?usp=drivesdk",
+        "title": "DSC08295_bebe_v01.png",
+        "id": "1Q75TBY_sjmryowtu8umNXEsKUiyVunUv",
+        "mime_type": "image/png",
+        "size": "9474598",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:57.285Z",
+        "updated_at": "2026-11-04T23:48:57.285Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08295_bebe_v01.png",
+        "display_url": "https://drive.google.com/file/d/1Q75TBY_sjmryowtu8umNXEsKUiyVunUv/view?usp=drivesdk",
+        "parent_ids": [
+          "1Ju31thaWFzpXKiranO-zlhZ8cj-96dGF"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Ml9y9gkpNHcATNyBp8qs7W0gkbOECSa7/view?usp=drivesdk",
+        "title": "DSC08290 2_bebe_v01.png",
+        "id": "1Ml9y9gkpNHcATNyBp8qs7W0gkbOECSa7",
+        "mime_type": "image/png",
+        "size": "10211345",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:50.025Z",
+        "updated_at": "2026-11-04T23:48:50.025Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08290 2_bebe_v01.png",
+        "display_url": "https://drive.google.com/file/d/1Ml9y9gkpNHcATNyBp8qs7W0gkbOECSa7/view?usp=drivesdk",
+        "parent_ids": [
+          "1Ju31thaWFzpXKiranO-zlhZ8cj-96dGF"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1vkU2MaBKM8GFMJA9iq9U3h69ywNRcTTd/view?usp=drivesdk",
+        "title": "DSC08258_bebe_v01.png",
+        "id": "1vkU2MaBKM8GFMJA9iq9U3h69ywNRcTTd",
+        "mime_type": "image/png",
+        "size": "11562163",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T23:48:41.395Z",
+        "updated_at": "2026-11-04T23:48:41.395Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08258_bebe_v01.png",
+        "display_url": "https://drive.google.com/file/d/1vkU2MaBKM8GFMJA9iq9U3h69ywNRcTTd/view?usp=drivesdk",
+        "parent_ids": [
+          "1Ju31thaWFzpXKiranO-zlhZ8cj-96dGF"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
   }
 }
