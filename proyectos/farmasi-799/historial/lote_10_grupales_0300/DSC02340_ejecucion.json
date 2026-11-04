@@ -1,0 +1,11 @@
+{
+  "source_name": "DSC02340.JPG",
+  "source_id": "15qCnRhr6o2apfme_mqL8wzMetITchDtt",
+  "source_url": "https://drive.google.com/file/d/15qCnRhr6o2apfme_mqL8wzMetITchDtt/view?usp=drivesdk",
+  "estado": "generada_pendiente_revision",
+  "folder": "lote_10_grupales_0300",
+  "prompt": "Edit only residual personal clutter on the far LEFT floor edge of this already retouched group portrait: remove the pink personal bag if present, the loose unworn shoes/footwear and stray small yellow/purple bottle beside those shoes. Replace that small area seamlessly with matching white plush rug. Preserve the actual foreground Farmasi product display along the bottom center. Keep all FIVE foreground adults exactly unchanged: faces, expressions, hair, poses, hands, clothes, worn shoes, body dimensions, scale, crop. Keep man's dumbbell and all existing soft white studio shadows and lighting. No redesign, beautification, new objects or crop change.",
+  "model": "integrated_image_gen_model_not_exposed",
+  "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-4b0b67c0-9aea-40aa-a8e1-251ce143ee6c.png",
+  "correccion": "Retirar objetos personales residuales; ejecucion previa preservada."
+}

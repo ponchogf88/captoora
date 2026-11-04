@@ -1,0 +1,11 @@
+{
+  "source_name": "DSC02354.JPG",
+  "source_id": "1oo4riE4cJmc3pYqMzTF5e3AypMGOGo45",
+  "source_url": "https://drive.google.com/file/d/1oo4riE4cJmc3pYqMzTF5e3AypMGOGo45/view?usp=drivesdk",
+  "estado": "generada_pendiente_revision",
+  "folder": "lote_10_grupales_0300",
+  "prompt": "Change only the tiny clutter area on the far LEFT floor beside the standing woman's ankles: remove the loose unworn spare sneakers and the stray tall yellow/purple bottle standing with those shoes, replacing their footprint seamlessly with the same white plush rug. Keep ALL five foreground people absolutely unchanged, faces, curls, expressions, poses, worn shoes, body sizes, crop, lighting. Preserve all intentional Farmasi products arranged in the foreground center/bottom and man's dumbbell. No other edits, no new objects, no beautification.",
+  "model": "integrated_image_gen_model_not_exposed",
+  "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-f88d9827-c025-4021-9060-215e33907b4f.png",
+  "correccion": "Retirar objetos personales residuales; ejecucion previa preservada."
+}
