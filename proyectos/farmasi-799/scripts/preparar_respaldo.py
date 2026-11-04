@@ -35,6 +35,9 @@ def main():
             source_name = item['title'].split('_')[0] + '.JPG'
             if known.get(source_name, {}).get('estado') != state:
                 continue
+            current_version = known.get(source_name, {}).get('version_actual')
+            if current_version == 'v03' and '_v03.' not in item['title']:
+                continue
             file = directory / item['title']
             entry = {'file_name': item['title'], 'source_name': item['title'].split('_')[0] + '.JPG', 'estado': state, 'drive_id': item['id'], 'drive_url': item['url'], 'cloud_bytes': int(item['size'])}
             if file.exists():
@@ -88,7 +91,7 @@ def main():
     scripts = dest / 'scripts'
     scripts.mkdir(exist_ok=True)
     shutil.copy2(Path(__file__), scripts / 'preparar_respaldo.py')
-    for name in ['guardar_resultado_nativo.py', 'registrar_lote_nocturno.py']:
+    for name in ['guardar_resultado_nativo.py', 'registrar_lote_nocturno.py', 'restaurar_originales_v03.py', 'transferir_etiqueta_original.py', 'analizar_restauracion_local.py', 'finalizar_correcciones_marcadas.py', 'detectar_textos_originales.swift']:
         helper = source / name
         if helper.exists():
             shutil.copy2(helper, scripts / name)

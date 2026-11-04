@@ -43,3 +43,6 @@ Automatizacion farmasi-producci-n-nocturna-hasta-200-4-nov activa solo4nov:01/03
 
 ## Registro portable del turno01:00
 Scripts guardar_resultado_nativo.py y registrar_lote_nocturno.py preservan el prompt exacto y registran solo salidas revisadas y verificadas en nube. Admiten --production /ruta/FARMASI_799/produccion cuando se ejecutan desde este respaldo. No generan imagenes, no suben archivos, no tienen claves y no marcan aprobacion de cliente. Registrar requiere lectura fresca de Drive y lista explicita --reviewed de fotos inspeccionadas. El contador usa fuente unica para evitar duplicacion.
+
+
+Actualizacion posterior obligatoria: leer CORRECCION_LOCAL_V03.md. No continuar con generacion integral de caras o letras. Restauracion local desde originales expresamente autorizada; originales y versiones previas intactos, regiones y auditoria requeridas. No confundir aprobacion estetica previa con auditoria global de fidelidad de textos.

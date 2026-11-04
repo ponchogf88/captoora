@@ -1,0 +1,89 @@
+{
+  "source_name": "DSC07726.JPG",
+  "source_id": "1AG4-moNmg9QU_v-2xuyCJj7Igw8VYItu",
+  "source_url": "https://drive.google.com/file/d/1AG4-moNmg9QU_v-2xuyCJj7Igw8VYItu/view?usp=drivesdk",
+  "folder_anterior": "lote_14_chica07722_sola",
+  "version": "v03",
+  "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+  "original_sha256": "00a5dc32f63c67242cad39fa285f64474874782b5c0a4ade36e0f568c72b9f5d",
+  "base_v02_sha256": "af5f6d77cee2aca26e4b9a54669b808782fbdad8cd157a30da8337dc6b03d6ce",
+  "size": [
+    4128,
+    6192
+  ],
+  "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+  "outside_mask_changed_pixels": 0,
+  "regions": [
+    {
+      "role": "etiqueta_en_mano",
+      "polygon_output_v02": [
+        [
+          207,
+          536
+        ],
+        [
+          277,
+          536
+        ],
+        [
+          277,
+          615
+        ],
+        [
+          207,
+          615
+        ]
+      ],
+      "similarity": [
+        [
+          0.9959283538633186,
+          -0.003633390023175557,
+          3.5692257919182326
+        ],
+        [
+          0.003633390023175557,
+          0.9959283538633186,
+          0.8916639587447477
+        ]
+      ],
+      "registration_inliers": 8,
+      "light_gain": 1.2705882352941171,
+      "light_offset_rgb": [
+        -71.58823529411751,
+        -77.37647058823518,
+        -73.12941176470576
+      ],
+      "original_near_white_fraction": 0.1362328914882907,
+      "pixels_covered": 107304
+    },
+    {
+      "role": "etiqueta_donante_original_mismo_envase",
+      "donor": "DSC07722.JPG",
+      "donor_source_url": "https://drive.google.com/file/d/1IJYYz51EGYI39ADAUpnJdOTLq1TBpWmc/view",
+      "donor_output_box": [
+        298,
+        440,
+        355,
+        499
+      ],
+      "target_output_box": [
+        214,
+        545,
+        271,
+        609
+      ],
+      "light_offset_rgb": [
+        0.0,
+        -2.0,
+        -2.0
+      ],
+      "text_generation": false,
+      "nota": "Detalle fotografico de la misma impresion/envase en secuencia; no transcripcion ni caracteres inventados."
+    }
+  ],
+  "estado": "correccion_marcada_en_revision",
+  "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+  "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+  "limitacion": "Reflejo/sobreexposicion impide lectura completa de letra fina; fuente alternativaDSC07722 misma impresion.",
+  "png_sha256": "ba34cdfd9ba8bb5e5d43d3f21875ea135f351e4a18eb47186ce0ae4f99713a72"
+}

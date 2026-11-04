@@ -1,0 +1,101 @@
+{
+  "source_name": "DSC07731.JPG",
+  "source_id": "1J2ClOdDoZ5zgMVbLRX5gndYLs7rpIO8w",
+  "source_url": "https://drive.google.com/file/d/1J2ClOdDoZ5zgMVbLRX5gndYLs7rpIO8w/view?usp=drivesdk",
+  "folder_anterior": "lote_14_chica07722_sola",
+  "version": "v03",
+  "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+  "original_sha256": "48fc6834a5c946240f5c3b767bfc0fe4c569a1c51ec4a24cdd25fe9e292e2f6c",
+  "base_v02_sha256": "5b077e33cfdf7116daac0c75b30ae37617bcd0bc153bb89e6cc803faff46d366",
+  "size": [
+    4128,
+    6192
+  ],
+  "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+  "outside_mask_changed_pixels": 0,
+  "regions": [
+    {
+      "role": "rostro",
+      "polygon_output_v02": [
+        [
+          416,
+          628
+        ],
+        [
+          440,
+          614
+        ],
+        [
+          460,
+          619
+        ],
+        [
+          477,
+          634
+        ],
+        [
+          486,
+          645
+        ],
+        [
+          488,
+          665
+        ],
+        [
+          480,
+          683
+        ],
+        [
+          460,
+          700
+        ],
+        [
+          444,
+          704
+        ],
+        [
+          423,
+          690
+        ],
+        [
+          410,
+          677
+        ],
+        [
+          403,
+          660
+        ],
+        [
+          403,
+          643
+        ]
+      ],
+      "similarity": [
+        [
+          1.003137621233926,
+          0.0012902223468586388,
+          -2.8561113254622965
+        ],
+        [
+          -0.0012902223468586388,
+          1.003137621233926,
+          -1.3738842092430423
+        ]
+      ],
+      "registration_inliers": 30,
+      "light_gain": 1.3052631578947376,
+      "light_offset_rgb": [
+        -76.31578947368439,
+        -84.82105263157911,
+        -82.97894736842116
+      ],
+      "original_near_white_fraction": 0.0075518366487738135,
+      "pixels_covered": 112845
+    }
+  ],
+  "estado": "correccion_marcada_en_revision",
+  "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+  "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+  "limitacion": null,
+  "png_sha256": "604c5b93d7ea630ced32afbbe8ef1100e4c8cce3ea5a34bf2282e9fda2359f12"
+}

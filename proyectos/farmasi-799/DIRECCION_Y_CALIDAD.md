@@ -43,3 +43,6 @@ El lote01 se hizo con Vision/máscaras locales y un fondo generado antes. Fue re
 Las primeras generaciones de DSC00108 cambiaron escala y encuadre pese al prompt; fueron señaladas como pruebas, no como fidelidad garantizada. Las versiones posteriores recibieron aprobación estética. Mantener ese límite documentado y comparar siempre con el original, no solo contra una edición ya alterada.
 
 Los primeros seis aprobados tienen métodos mixtos: tres negros v05 compuestos localmente y tres blancos/grupal v02 generativos. Su aceptación no significa que ese algoritmo local vuelva a ser el recomendado para nuevos lotes.
+
+
+Actualizacion posterior obligatoria: leer CORRECCION_LOCAL_V03.md. No continuar con generacion integral de caras o letras. Restauracion local desde originales expresamente autorizada; originales y versiones previas intactos, regiones y auditoria requeridas. No confundir aprobacion estetica previa con auditoria global de fidelidad de textos.

@@ -9,3 +9,6 @@
 - Después de cada lote o aprobación, actualizar registros y prompts, verificar Drive y subir un commit de esta carpeta. No crear automatizaciones nuevas ni reactivar antiguas. Excepcion posterior expresamente autorizada: produccion nocturna exclusiva4nov2026 hasta200 o10:00, segun operacion_nocturna/PLAN_NOCTURNO.json y PROTOCOLO_AUTOMATIZACION.md.
 - No declarar identidad intacta, producto exacto, subida, aprobación o sincronización sin la evidencia correspondiente.
 - Mantener orden por nombre dentro de la selección; dejar los saltos pendientes explícitos.
+
+
+Actualizacion posterior obligatoria: leer CORRECCION_LOCAL_V03.md. No continuar con generacion integral de caras o letras. Restauracion local desde originales expresamente autorizada; originales y versiones previas intactos, regiones y auditoria requeridas. No confundir aprobacion estetica previa con auditoria global de fidelidad de textos.

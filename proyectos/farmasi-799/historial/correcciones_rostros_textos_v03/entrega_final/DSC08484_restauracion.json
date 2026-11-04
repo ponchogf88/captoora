@@ -1,0 +1,121 @@
+{
+  "source_name": "DSC08484.JPG",
+  "source_id": "1HfQ19A0EBO_M7BvIQ18iGaQDbotf0D1A",
+  "source_url": "https://drive.google.com/file/d/1HfQ19A0EBO_M7BvIQ18iGaQDbotf0D1A/view?usp=drivesdk",
+  "folder_anterior": "lote_15_chica07722_grupo",
+  "version": "v03",
+  "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+  "original_sha256": "da8575478361c0b8a8f8d7ec0bb5ac87335cb64733061bc31125ce2b4b127b25",
+  "base_v02_sha256": "0a69a4163d6252808035f84a159b8eba7ef338c1f35dd171a14b1f1df42a2524",
+  "size": [
+    4128,
+    6192
+  ],
+  "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+  "outside_mask_changed_pixels": 0,
+  "regions": [
+    {
+      "role": "rostro",
+      "polygon_output_v02": [
+        [
+          617,
+          422
+        ],
+        [
+          631,
+          413
+        ],
+        [
+          646,
+          415
+        ],
+        [
+          658,
+          427
+        ],
+        [
+          665,
+          444
+        ],
+        [
+          667,
+          461
+        ],
+        [
+          666,
+          482
+        ],
+        [
+          660,
+          501
+        ],
+        [
+          645,
+          516
+        ],
+        [
+          630,
+          520
+        ],
+        [
+          614,
+          514
+        ],
+        [
+          597,
+          502
+        ],
+        [
+          585,
+          487
+        ],
+        [
+          577,
+          474
+        ],
+        [
+          576,
+          457
+        ],
+        [
+          583,
+          451
+        ],
+        [
+          590,
+          461
+        ],
+        [
+          597,
+          443
+        ]
+      ],
+      "similarity": [
+        [
+          0.9997216266814823,
+          0.001535531674794324,
+          -1.1888606566209539
+        ],
+        [
+          -0.001535531674794324,
+          0.9997216266814823,
+          1.0429562144194504
+        ]
+      ],
+      "registration_inliers": 47,
+      "light_gain": 1.3260869565217401,
+      "light_offset_rgb": [
+        -82.86956521739154,
+        -97.00000000000023,
+        -100.04347826086973
+      ],
+      "original_near_white_fraction": 0.0003170845135923562,
+      "pixels_covered": 137951
+    }
+  ],
+  "estado": "correccion_marcada_en_revision",
+  "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+  "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+  "limitacion": null,
+  "png_sha256": "3f2560390e6a5c35f4c9181b145d45f22f68c8365f1ffbcabfcc5ec66a1c18ae"
+}
