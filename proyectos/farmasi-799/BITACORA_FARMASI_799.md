@@ -27,3 +27,5 @@ Main85618cf y respaldo32804ce leidos desde refs remotas tras fetch:148prompts ex
 
 ## 5 noviembre: prioridad modelo lila
 10 nuevas JPG verificadas en Drive, estado en_revision;143 aprobadas se conservan sin duplicados. 14 fuentes pendientes encontradas:10 editadas,3 oclusion de productos,1 JPEG no decodificable. Fondo vacio nativo + originales tonales, sin regenerar sujetos ni texto.150prompts exactos historicos.24candidatas cobrizo inspeccionadas,no editadas. Chat compartido adicional bloqueado por login; contenido no aplicado. Carpeta revision: https://drive.google.com/drive/folders/1qr41rfw0mHH-fWut7qkS2biTm5b0iH0F . Detalles/hashes/metodo en historial/modelo_lila_cabello_largo.
+
+Actualizacion de acceso: el chat compartido SI fue leido en Chrome con sesion existente.16 IDs corresponden a fuentes08219,08224,08230,08233,08235,08246,08258,08261,08272,08276 2,08282 2,08283 2,08284,08290 2,08294 2,08295. Montajes madre+bebe por recorte autorizados para despues de modelo lila; pendientes,no producidos. No modificar/generar rostros. Respuestas del otro asistente no cargan.
