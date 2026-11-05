@@ -23,7 +23,7 @@ def main():
     sources = []
     for item in registry['files']:
         # Current status is distinct from rejected historical version fields.
-        sources.append({k: item[k] for k in ('source_name', 'source_id', 'source_url', 'estado', 'lote_actual', 'version_actual', 'decision_usuario_actual', 'approved_jpg_drive', 'revision_drive_url', 'correccion_en_revision') if k in item})
+        sources.append({k: item[k] for k in ('source_name', 'source_id', 'source_url', 'estado', 'lote_actual', 'version_actual', 'decision_usuario_actual', 'approved_jpg_drive', 'revision_drive_url', 'correccion_en_revision', 'reemplazo_en_revision') if k in item})
     assert len(sources) == 799 and len({x['source_id'] for x in sources}) == 799
     dump(dest / 'registros/fuentes_799.json', sources)
     dump(dest / 'prompts/ejecutados_exactos.json', prompts)
@@ -38,6 +38,8 @@ def main():
             if known.get(source_name, {}).get('estado') != state:
                 continue
             current_version = known.get(source_name, {}).get('version_actual')
+            if current_version == 'D_v06' and '_D_v06.' not in item['title']:
+                continue
             if current_version in ('v03','v04') and ('_'+current_version+'.') not in item['title']:
                 continue
             file = directory / item['title']

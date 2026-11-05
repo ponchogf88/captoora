@@ -1,8 +1,8 @@
 ## Estado comprobado
 
 - 799 fuentes JPG inventariadas con ID y enlace de Drive.
-- 143 JPG aprobados y verificados en Drive.
-- 10 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
+- 144 JPG aprobados y verificados en Drive.
+- 9 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
 - 150 prompts exactos recuperados; incluyen intentos bloqueados sin imagen cuando están identificados así.
 - 193 originales inspeccionados con SHA-256; no afirmar que los 799 tengan hash comprobado.
 - 3 fuentes bloqueadas por herramienta; no cuentan como producción.
