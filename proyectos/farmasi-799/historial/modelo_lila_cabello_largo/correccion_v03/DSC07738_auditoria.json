@@ -1,0 +1,26 @@
+{
+  "source_name": "DSC07738.JPG",
+  "baseline": "lila_v02_rechazada_solo_fondo",
+  "method": "Superficie completa nativa vacia con mascara fotometrica local, sujetos y productos desde pixeles v02 originales; sin generacion de personas",
+  "status": "lista_para_revision_usuario_no_aprobada",
+  "foreground_window_600x900": [
+    108,
+    235,
+    495,
+    670
+  ],
+  "floor_600x900": 545,
+  "preserved_opaque_pixels": 11984157,
+  "protected_face_changed_pixels": 0,
+  "label_pixels_modified": 114609,
+  "label_method": "UnsharpMask radius1.1percent70threshold3; whitepackages monotone contrast curve; no synthesized text",
+  "png_sha256": "6ab71e5f5ebe9bbfc81346e33edd7e1096f7f3eb54a5523d6f68c49699488103",
+  "protected_warm_pixels_changed": 0,
+  "warm_pixel_protection_count": 4192818,
+  "warm_pixels_restored_after_label_adjustment": 71781,
+  "png_bytes": 10018882,
+  "jpg_bytes": 4631978,
+  "jpg_sha256": "d8c93fc79d55f9bb3b9a7ed9ea0e8a58790e6a56d5e441db69854607b1f81557",
+  "pre_final_opaque_nonlabel_changed_pixels": 0,
+  "audit_note": "La comprobacion de pixeles opacos es previa al resguardo final de piel; se restauran despues pixeles calidos de v02. No se afirma igualdad completa del producto: hay recuperacion autentica y nitidez/contraste local. Rostro protegido permanece intacto."
+}

@@ -20,5 +20,9 @@
     "lote_individual_v01 interpolacion y rellenos defectuosos: NO USAR",
     "DSC07747 generacion completa: solo ensayo; NO entregada. Se usa unicamente fondo VACIO nativo con composicion original en v02."
   ],
-  "limites": "No se recupera detalle de etiquetas quemado por flash ni zonas ocultas. Personas, pelo, productos y poses no se generan. Resto de la tarea sigue abierto."
+  "limites": "No se recupera detalle de etiquetas quemado por flash ni zonas ocultas. Personas, pelo, productos y poses no se generan. Resto de la tarea sigue abierto.",
+  "rechazadas_v02": 10,
+  "correccion_v03": "Implementada y verificada; 10 JPG en Drive, PNG/JPG completos locales, aprobacion humana pendiente. Fondo de superficie completa, mascara original y transicion por distancia, resguardo opaco de prendas/rostro/piel/productos; ajuste local no generativo de etiquetas. Fondo vacio nativo existente reutilizado: sin nueva generacion en esta correccion.",
+  "version_en_revision": "lila_v03",
+  "revision_drive_url": "https://drive.google.com/drive/folders/1-Z6byAycQ51QPPq1rpAMVcmbwbLCBk-V"
 }

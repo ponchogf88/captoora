@@ -187,3 +187,9 @@ Diez individuales v02 implementadas y verificadas en Drive (carpeta https://driv
 
 ### Actualizacion: chat compartido leido por Chrome
 Se resolvio el acceso con la sesion existente. Mensajes de usuario leidos; respuestas de asistente no cargan. Nueva peticion autorizada para despues de la modelo lila: composicion madre+bebe mirando a camara mediante recortes de originales compatibles, sin modificar/generar rostros ni expresiones. Esta peticion especifica sustituye la antigua prohibicion general de combinar tomas en cuanto a este montaje autorizado.16 referencias registradas en produccion/bebe/MONTAJES_MADRE_BEBE_REQUISITOS.json; estado solicitado, no producido ni aprobado. Verificar compatibilidad y mostrar donantes y composicion.
+
+## Correccion solicitada: diez lila_v02 rechazadas por usuario
+Las diez con empalmes laterales de fondo NO estan aprobadas. Rehacer fondo como superficie continua a todo el ancho, sin bandas ni uniones bruscas; conservar rostro,cuerpo,cabello,pose e iluminacion que usuario acepta. Etiquetas: preservar y verificar letras originales, sin inventar detalle quemado. Registrar v02 rechazada, nueva v03 a revision, originales intactos. Estado solicitado; no equivale a entrega.
+
+### Entrega de correccion lila_v03
+Implementadas diez correcciones; fondo entero continuo en lugar de franjas laterales, rostros protegidos de maestrosPNG sin cambios medidos, cuerpos/cabello de pixeles autenticos y capas originales. Envases perifericos recuperados desde fuente, texto genuino con nitidez/contraste local; limites por flash explicitados. Diez JPG verificados por nombre,padre ybytes en https://drive.google.com/drive/folders/1-Z6byAycQ51QPPq1rpAMVcmbwbLCBk-V. Nueva version en_revision, no aprobada; v02 rechazada en historico. PNG/JPG y auditoria local en produccion/modelo_lila_cabello_largo/correccion_v03. No hubo nueva generacion: receta local y fondo vacio nativo existente.
