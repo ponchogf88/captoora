@@ -12,6 +12,7 @@ ADS = [
         "filename": "01_PUBLICIDAD_CAPTOORA_STUDIO_FAMILIAR.png",
         "brand_title": "CAPTOORA STUDIO",
         "eyebrow": "SET NAVIDEÑO 2026 // MONTERREY, N.L.",
+        "is_collage": False,
         "image_path": "/Users/imac/captoora/assets/navidad_2026/02_navidad_studio_familiar.jpg",
         "package_title": "PAQUETE FAMILIAR DIGITAL",
         "bullets": [
@@ -32,6 +33,7 @@ ADS = [
         "filename": "02_PUBLICIDAD_CAPTOORA_SIGNATURE_GALA2027.png",
         "brand_title": "CAPTOORA SIGNATURE",
         "eyebrow": "HAUTE COUTURE // GALA AÑO NUEVO 2027",
+        "is_collage": False,
         "image_path": "/Users/imac/captoora/assets/navidad_2026/01_navidad_signature_luxury.jpg",
         "package_title": "PAQUETE GALA AÑO NUEVO 2027",
         "bullets": [
@@ -52,11 +54,14 @@ ADS = [
         "filename": "03_PUBLICIDAD_CAPTOORA_PETS_NAVIDAD.png",
         "brand_title": "CAPTOORA PETS",
         "eyebrow": "PET-FRIENDLY STUDIO // EDICIÓN NAVIDEÑA",
-        "image_path": "/Users/imac/captoora/assets/navidad_2026/06_navidad_pets_perro.jpg",
+        "is_collage": True,
+        "collage_main": "/Users/imac/captoora/assets/navidad_2026/07_navidad_duena_con_perro.jpg",
+        "collage_top": "/Users/imac/captoora/assets/navidad_2026/06_navidad_pets_perro.jpg",
+        "collage_bottom": "/Users/imac/captoora/assets/navidad_2026/08_navidad_perro_regalos.jpg",
         "package_title": "PAQUETE NAVIDAD PELUDA",
         "bullets": [
             "Hasta 2 mascotas + dueños incluidos",
-            "Set seguro con iluminación suave anti-estrés",
+            "Tú y tu mejor amigo en el Set Navideño",
             "Accesorios: gorritos navideños, bufandas y moños",
             "Premios hipoalergénicos y paciencia total en set",
             "Galería digital completa en alta resolución"
@@ -72,6 +77,7 @@ ADS = [
         "filename": "04_PUBLICIDAD_CAPTOORA_BIOMETRICS_2027.png",
         "brand_title": "CAPTOORA BIOMETRICS",
         "eyebrow": "PREVENTA 2027 // TU PRIME FÍSICO EN ALTA DEFINICIÓN",
+        "is_collage": False,
         "image_path": "/Users/imac/captoora/assets/biometrics_athlete_rimlight.jpg",
         "package_title": "PAQUETE PRIME FÍSICO 2027",
         "bullets": [
@@ -92,6 +98,7 @@ ADS = [
         "filename": "05_PUBLICIDAD_CAPTOORA_POP_KIDS.png",
         "brand_title": "CAPTOORA POP!",
         "eyebrow": "MINI-SESIONES // FOTOS SIN ESTRÉS",
+        "is_collage": False,
         "image_path": "/Users/imac/captoora/assets/navidad_2026/05_navidad_pop_infantil.jpg",
         "package_title": "PAQUETE KIDS & CARTAS A SANTA",
         "bullets": [
@@ -113,6 +120,30 @@ ADS = [
 def generate_html(ad):
     bullets_html = "".join([f"<li><span class='bullet-icon'>✦</span> {b}</li>" for b in ad["bullets"]])
     
+    if ad.get("is_collage"):
+        photo_markup = f"""
+        <div class="photo-collage">
+          <div class="collage-main">
+            <img src="file://{ad['collage_main']}" class="collage-img" alt="Main">
+          </div>
+          <div class="collage-side">
+            <div class="collage-side-top">
+              <img src="file://{ad['collage_top']}" class="collage-img" alt="Top">
+            </div>
+            <div class="collage-side-bottom">
+              <img src="file://{ad['collage_bottom']}" class="collage-img" alt="Bottom">
+            </div>
+          </div>
+        </div>
+        """
+    else:
+        photo_markup = f"""
+        <div class="photo-frame">
+          <img src="file://{ad['image_path']}" class="hero-photo" alt="Set">
+          <div class="photo-overlay"></div>
+        </div>
+        """
+        
     html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -129,7 +160,7 @@ def generate_html(ad):
     body {{
       width: 1080px;
       height: 1350px;
-      background: radial-gradient(circle at 50% 20%, #1f1815 0%, #0d0a09 70%, #050404 100%);
+      background: radial-gradient(circle at 50% 15%, #1f1815 0%, #0d0a09 70%, #050404 100%);
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
       color: #FFFFFF;
       position: relative;
@@ -137,7 +168,7 @@ def generate_html(ad):
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 44px 50px 38px 50px;
+      padding: 38px 46px 32px 46px;
     }}
     
     /* TOP HEADER & LOGO */
@@ -154,11 +185,11 @@ def generate_html(ad):
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }}
     
     .logo-img {{
-      height: 70px;
+      height: 72px;
       width: auto;
       object-fit: contain;
       filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
@@ -166,7 +197,7 @@ def generate_html(ad):
     
     .brand-title {{
       font-family: 'Cinzel', serif;
-      font-size: 32px;
+      font-size: 34px;
       font-weight: 800;
       letter-spacing: 4px;
       color: #FFFFFF;
@@ -175,19 +206,18 @@ def generate_html(ad):
     }}
     
     .eyebrow {{
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 600;
       letter-spacing: 3.5px;
       color: {ad["theme_accent"]};
       text-transform: uppercase;
-      margin-top: 2px;
     }}
     
-    /* MAIN PHOTO SHOWCASE */
+    /* SINGLE PHOTO FRAME */
     .photo-frame {{
       width: 100%;
       height: 730px;
-      border-radius: 24px;
+      border-radius: 20px;
       overflow: hidden;
       position: relative;
       box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
@@ -211,14 +241,56 @@ def generate_html(ad):
       background: linear-gradient(to top, rgba(13,10,9,0.85) 0%, transparent 100%);
     }}
     
+    /* 3-PHOTO COLLAGE (MATCHING USER REFERENCE) */
+    .photo-collage {{
+      width: 100%;
+      height: 730px;
+      display: flex;
+      gap: 12px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+      border: 1px solid rgba(229, 178, 93, 0.25);
+      background: #0d0a09;
+      padding: 6px;
+    }}
+    
+    .collage-main {{
+      flex: 1.55;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 14px;
+    }}
+    
+    .collage-side {{
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }}
+    
+    .collage-side-top, .collage-side-bottom {{
+      flex: 1;
+      overflow: hidden;
+      border-radius: 14px;
+    }}
+    
+    .collage-img {{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }}
+    
     /* BOTTOM CARD */
     .bottom-card {{
-      background: rgba(22, 17, 15, 0.88);
+      background: rgba(22, 17, 15, 0.92);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 30px 36px;
+      border-radius: 22px;
+      padding: 28px 34px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -237,7 +309,7 @@ def generate_html(ad):
       letter-spacing: 2px;
       color: {ad["theme_accent"]};
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -247,7 +319,7 @@ def generate_html(ad):
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 6px;
     }}
     
     .bullet-list li {{
@@ -280,7 +352,7 @@ def generate_html(ad):
       display: flex;
       align-items: baseline;
       gap: 6px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }}
     
     .price-amount {{
@@ -305,9 +377,8 @@ def generate_html(ad):
       color: {ad["theme_pill_text"]};
       font-size: 16px;
       font-weight: 800;
-      padding: 13px 24px;
+      padding: 12px 22px;
       border-radius: 50px;
-      text-transform: none;
       letter-spacing: 0.3px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.45), 0 0 15px {ad["theme_pill_bg"]}40;
       display: inline-flex;
@@ -322,7 +393,7 @@ def generate_html(ad):
       justify-content: space-between;
       align-items: center;
       padding: 0 10px;
-      font-size: 12.5px;
+      font-size: 12px;
       color: rgba(255, 255, 255, 0.55);
       font-weight: 500;
       letter-spacing: 1.2px;
@@ -355,11 +426,8 @@ def generate_html(ad):
     <div class="eyebrow">{ad["eyebrow"]}</div>
   </div>
 
-  <!-- SHOWCASE PHOTO -->
-  <div class="photo-frame">
-    <img src="file://{ad["image_path"]}" class="hero-photo" alt="Set">
-    <div class="photo-overlay"></div>
-  </div>
+  <!-- SHOWCASE PHOTO / COLLAGE -->
+  {photo_markup}
 
   <!-- BOTTOM CARD -->
   <div class="bottom-card">
@@ -392,7 +460,7 @@ def generate_html(ad):
     return html
 
 def main():
-    print("🎨 Renderizando las 5 Publicidades Oficiales de Navidad & Año Nuevo...")
+    print("🎨 Renderizando artes actualizados con collage de Captoora Pets...")
     for ad in ADS:
         out_file = os.path.join(OUTPUT_DIR, ad["filename"])
         html_code = generate_html(ad)
