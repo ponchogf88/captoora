@@ -213,3 +213,10 @@ Usuario aprueba acabadoD (textura y sombra suave) y autoriza expresamente TODAS:
 - Implementado y verificado:29 JPG nuevos en Drive con bytes y padre comprobados;19 lila y10 grupales cobrizo.20 son reemplazos en revision de aprobadas previas;9 eran pendientes.
 - ReferenciaDSC07738 D aprobada: JPG movido a aprobadas/JPG y PNG subido a aprobadas; original intacto.
 - Pendiente:75 fuentes cobrizo y4 incidencias lila. Los4 ensayos de limpieza cobrizo fallan control visual y NO se entregan. Tarea abierta, no declarar todas completadas.
+
+### Correccion de alcance entrega inmediata: cobrizo SOLA
+- Solicitado: ocho individuales, no grupales ni recortes contados como tomas nuevas.
+- Verificado visualmente: seis fuentes individuales en secuencia inspeccionada:DSC08318,DSC08500,DSC08504,DSC08536,DSC08540,DSC08554. Dos contienen asistente sosteniendo tela; limpiar solo set/asistente, sin generar rostro/cuerpo.
+- Pendiente de evidencia: otras dos fuentes individuales distintas; no afirmar ocho si solo seis verificadas.
+
+- Implementado:6 individuales cobrizo nuevas en revision Drive; originales sujetos restaurados sobre limpieza nativa alineada.6 subidas y bytes/padres verificados. Solicitud8: faltan2 fuentes individuales distintas por localizar.69 cobrizo restantes del inventario previo. No aprobadas automaticamente.

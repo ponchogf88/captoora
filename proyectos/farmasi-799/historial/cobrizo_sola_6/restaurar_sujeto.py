@@ -1,0 +1,21 @@
+from pathlib import Path
+from PIL import Image,ImageOps,ImageDraw
+import cv2,numpy as np,json,hashlib
+P=Path(__file__).resolve().parent;C=json.load(open(P.parent/'inventario_completo/cache_originales.json'));A=json.load(open(P.parent/'inventario_completo/ORIENTACION_COBRIZO.json'));M=json.load(open(P/'GENERACIONES.json'));outdir=P/'ENTREGA';outdir.mkdir(exist_ok=True);records=[]
+for name,gpath in M.items():
+ orig=ImageOps.exif_transpose(Image.open(C[name+'.JPG'])).convert('RGB');orig=orig.rotate(A[name+'.JPG'],expand=True) if A[name+'.JPG'] else orig;w,h=orig.size;hh=1500;ww=round(w*hh/h);raw=np.array(orig);src=np.array(orig.resize((ww,hh)));gen=np.array(Image.open(gpath).convert('RGB').resize((ww,hh)));sift=cv2.SIFT_create(nfeatures=6000);k1,d1=sift.detectAndCompute(cv2.cvtColor(gen,cv2.COLOR_RGB2GRAY),None);k2,d2=sift.detectAndCompute(cv2.cvtColor(src,cv2.COLOR_RGB2GRAY),None);matches=cv2.BFMatcher().knnMatch(d1,d2,k=2);good=[m for m,n in matches if m.distance<.72*n.distance];assert len(good)>8,(name,len(good));ps=np.float32([k1[m.queryIdx].pt for m in good]);pt=np.float32([k2[m.trainIdx].pt for m in good]);H,inliers=cv2.estimateAffinePartial2D(ps,pt,method=cv2.RANSAC,ransacReprojThreshold=4);assert H is not None;aligned=cv2.warpAffine(gen,H,(ww,hh),borderMode=cv2.BORDER_REFLECT)
+ a=src.astype('int16');y,x=np.indices((hh,ww));boxes={'DSC08318':(.14,.66,.25,.99),'DSC08500':(.22,.67,.12,.78),'DSC08504':(.24,.70,.18,.80),'DSC08536':(.15,.80,.18,.82),'DSC08540':(.15,.80,.17,.82),'DSC08554':(.19,.66,.20,.93)};xl,xr,yt,yb=boxes[name];warm=(a[:,:,0]-a[:,:,1]>6)&(a[:,:,0]-a[:,:,2]>13)&(x>xl*ww)&(x<xr*ww)&(y>yt*hh)&(y<yb*hh)
+ # Geometric exclusion of the assistant; train remains original up to its visible edge.
+ if name=='DSC08536':warm[(x>.76*ww)&(y<.42*hh)]=False
+ if name=='DSC08540':warm[(x>.79*ww)&(y<.39*hh)]=False
+ pts=cv2.findNonZero(warm.astype('uint8'));hull=cv2.convexHull(pts);core=np.zeros((hh,ww),np.uint8);cv2.fillConvexPoly(core,hull,255);core=cv2.dilate(core,np.ones((13,13),np.uint8));near=cv2.dilate(core,np.ones((51,51),np.uint8));core[(src.mean(2)<140)&(near>0)&(x<.82*ww)]=255
+ dist=cv2.distanceTransform(255-core,cv2.DIST_L2,5);alpha=np.exp(-(dist/28)**2);alpha[core>0]=1;alpha[alpha<.005]=0
+ # Keep the original real plush and contact shadows in the lower central region.
+ floor=.86 if name=='DSC08318' else .99
+ rug=(y>floor*hh)&(x>.07*ww)&(x<.82*ww)&(src.min(2)>180)&(src.max(2)-src.min(2)<20);alpha=np.maximum(alpha,cv2.GaussianBlur(rug.astype('float32'),(0,0),12))
+ af=cv2.resize(alpha,(w,h));bg=np.array(Image.fromarray(aligned).resize((w,h),Image.Resampling.LANCZOS));out=np.rint(raw*af[:,:,None]+bg*(1-af[:,:,None])).astype('uint8');protected=af>.99999;out[protected]=raw[protected];assert np.array_equal(out[protected],raw[protected]);out=np.clip(np.rint(out.astype(float)*1.25),0,255).astype('uint8') if name=='DSC08318' else out;f=outdir/(name+'_cobrizo_sola_v02.png');Image.fromarray(out).save(f);jpg=f.with_suffix('.jpg');Image.fromarray(out).save(jpg,quality=97,subsampling=0);v=Image.fromarray(out);v.thumbnail((650,975));v.save(outdir/(name+'_VISTA.jpg'),quality=95)
+ records.append({'source_name':name+'.JPG','file':jpg.name,'png':f.name,'bytes':jpg.stat().st_size,'sha256':hashlib.sha256(jpg.read_bytes()).hexdigest(),'original_sha256':hashlib.sha256(Path(C[name+'.JPG']).read_bytes()).hexdigest(),'original_protected_pixels_changed_before_exposure':0,'exposure_gain':1.25 if name=='DSC08318' else 1.0,'matches':len(good),'inliers':int(inliers.sum()),'background_alignment':H.tolist(),'status':'en_revision','method':'Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original.'});print(name,flush=True)
+(outdir/'MANIFIESTO.json').write_text(json.dumps(records,indent=2));sheet=Image.new('RGB',(1800,1900),'#eee');d=ImageDraw.Draw(sheet)
+for i,r in enumerate(records):
+ n=r['source_name'][:-4];im=Image.open(outdir/(n+'_VISTA.jpg'));im.thumbnail((580,890));x=i%3*600;y=i//3*950;sheet.paste(im,(x+(600-im.width)//2,y+30));d.text((x+12,y+10),n,fill='black')
+sheet.save(outdir/'CONTACTO_SEIS.jpg',quality=95)

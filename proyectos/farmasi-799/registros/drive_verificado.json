@@ -1520,7 +1520,8 @@
     "review_lote_15_chica07722_grupo": "lote_15_chica07722_grupo",
     "review_v03_final": "correcciones_rostros_textos_v03/entrega_final",
     "review_bebe_pruebas01": "bebe/pruebas_v01/JPG",
-    "review_modelo_D": "modelo_lila_cabello_largo/produccion_D_todas/JPG"
+    "review_modelo_D": "modelo_lila_cabello_largo/produccion_D_todas/JPG",
+    "review_cobrizo_sola": "modelo_lila_cabello_largo/solo_cobrizo/ENTREGA"
   },
   "review07": {
     "results": [
@@ -6334,6 +6335,130 @@
         "modified_time": null,
         "parent_ids": [
           "1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      }
+    ]
+  },
+  "review_cobrizo_sola": {
+    "results": [
+      {
+        "id": "1UJYG_XHGDYnuR_qfYs0GAd1496X-B_ZV",
+        "title": "DSC08318_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "4086905",
+        "url": "https://drive.google.com/file/d/1UJYG_XHGDYnuR_qfYs0GAd1496X-B_ZV/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1UJYG_XHGDYnuR_qfYs0GAd1496X-B_ZV/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      {
+        "id": "1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE",
+        "title": "DSC08500_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "3863919",
+        "url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      {
+        "id": "1LchpBIjpSKLpiXFdMFHYo4XciCnxTQPr",
+        "title": "DSC08504_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "4045929",
+        "url": "https://drive.google.com/file/d/1LchpBIjpSKLpiXFdMFHYo4XciCnxTQPr/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1LchpBIjpSKLpiXFdMFHYo4XciCnxTQPr/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      {
+        "id": "1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy",
+        "title": "DSC08536_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "3755556",
+        "url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      {
+        "id": "1TCL7B7PgiH9r4aUx9ROzoKROoztoIOZ_",
+        "title": "DSC08540_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "3691207",
+        "url": "https://drive.google.com/file/d/1TCL7B7PgiH9r4aUx9ROzoKROoztoIOZ_/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1TCL7B7PgiH9r4aUx9ROzoKROoztoIOZ_/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      {
+        "id": "1Y7ehMUfjR2TI6yBXUjudD0cQ1-tgGtHf",
+        "title": "DSC08554_cobrizo_sola_v02.jpg",
+        "mime_type": null,
+        "size": "3886788",
+        "url": "https://drive.google.com/file/d/1Y7ehMUfjR2TI6yBXUjudD0cQ1-tgGtHf/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1Y7ehMUfjR2TI6yBXUjudD0cQ1-tgGtHf/view?usp=drivesdk",
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv"
         ],
         "drive_id": null,
         "current_user_can_share": null,
