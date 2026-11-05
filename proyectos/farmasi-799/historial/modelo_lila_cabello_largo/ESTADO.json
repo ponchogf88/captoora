@@ -26,7 +26,7 @@
   "version_en_revision": "lila_v03",
   "revision_drive_url": "https://drive.google.com/drive/folders/1-Z6byAycQ51QPPq1rpAMVcmbwbLCBk-V",
   "pruebas_actuales_pared": {
-    "status": "tres_variantes_en_revision_sin_eleccion",
+    "status": "cuatro_variantes_A_B_C_D_en_revision_sin_eleccion",
     "folder_url": "https://drive.google.com/drive/folders/1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU",
     "variants": [
       {
@@ -40,9 +40,14 @@
       {
         "file": "DSC07738_pared_A_v04.jpg",
         "url": "https://drive.google.com/file/d/1_liOGqGwPVUgahJ4vNdnEsRh96Lq25Rz/view?usp=drivesdk"
+      },
+      {
+        "file": "DSC07738_pared_D_sombra_v05.jpg",
+        "url": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk"
       }
     ],
     "baseline": "lila_v03",
-    "scope": "Solo pared superior; modelo,piso,productos y sombras inferiores protegidos. No tres fuentes nuevas ni aprobacion automatica."
+    "scope": "Solo pared superior; modelo,piso,productos y sombras inferiores protegidos. No tres fuentes nuevas ni aprobacion automatica.",
+    "ultima_solicitud": "D: un poco mas de sombra suave de ella en pared, sin cambiar modelo/piso/productos"
   }
 }

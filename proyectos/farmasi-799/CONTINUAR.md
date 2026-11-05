@@ -10,6 +10,7 @@ Actualizado 5 noviembre 2026. Este documento sustituye la antigua guía nocturna
 5. La petición anterior de veinte fotos diversas sigue sin completar: las pruebas de relleno poligonal de lote16 fueron rechazadas internamente, no entregadas ni aprobadas. No usarlas. Las fuentes deben revalidarse contra el registro antes de continuar.
 
 ## Eleccion de pared pendiente
+Se agrega una cuarta variante D sobreB: sombra suave de ella proyectada en pared, segun nueva solicitud. A/B/C conservadas. Todas pendientes de eleccion; no aprobadas ni aplicadas a otras fotos. Ver MANIFIESTO_VERSION_D.json ycrear_version_D_sombra.py enel mismo historial.
 Tres variantes A/B/C sobre la misma DSC07738, no tres fuentes nuevas. Usuario acepta piso/sombras inferiores y solicita pared con relieve/textura sutil recuperada de fondo original: no plana, ni tela/arrugas evidentes. A tenue,B sombras mas presentes,C leve calidez. No aplicar al lote sin eleccion. Modelo/productos/piso preservados; cero nuevas generaciones. Ver historial/modelo_lila_cabello_largo/pruebas_textura_pared. Enlace de revision: https://drive.google.com/drive/folders/1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU .
 
 ## Qué usar para producir

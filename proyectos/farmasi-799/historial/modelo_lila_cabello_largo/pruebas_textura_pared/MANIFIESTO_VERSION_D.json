@@ -1,0 +1,46 @@
+{
+  "source_name": "DSC07738.JPG",
+  "variant": "D",
+  "label": "Textura y sombra suave de la modelo",
+  "baseline": "DSC07738_pared_B_v04.png",
+  "baseline_sha256": "6ed5f377509763a0be0422fffe895f24a693a68e7d1e71d4bcb6ef27e3ada092",
+  "silhouette_mask_sha256": "e97363029f8b9d3f68a2ee64a3261242a5902226cedfa0154f7214889ef0964d",
+  "method": "Sombra fotografica local a partir de silueta real protegida, dos proyecciones muy suaves sobre pared. Sin generacion de modelo, rostros, letras ni objetos.",
+  "primary_shadow_600x900": {
+    "shift": [
+      58,
+      8
+    ],
+    "sigma": 11,
+    "opacity": 0.075
+  },
+  "secondary_shadow_600x900": {
+    "shift": [
+      -28,
+      10
+    ],
+    "sigma": 19,
+    "opacity": 0.022
+  },
+  "wall_fade_600x900": [
+    435,
+    500
+  ],
+  "max_actual_shadow_opacity": 0.07035663723945618,
+  "protected_subject_pixels_changed": 0,
+  "floor_and_all_pixels_below_500_changed": 0,
+  "new_generations": 0,
+  "status": "en_revision_no_aprobada",
+  "size": [
+    4128,
+    6192
+  ],
+  "png_sha256": "34d50cf72d0c7cfaa3f1d00560872fc747f8504c3dc7e51edb666a0247b22e79",
+  "jpg_sha256": "7c971ebcbf7d8725517682d7a7d2ba51afc5e4deed91ff1dcf0c21894315c370",
+  "png_bytes": 10204548,
+  "jpg_bytes": 4664341,
+  "files": {
+    "png": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_D_sombra_v05.png",
+    "jpg": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_D_sombra_v05.jpg"
+  }
+}
