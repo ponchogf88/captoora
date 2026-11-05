@@ -1,3 +1,5 @@
+> **FARMASI799 — continuidad vigente4nov2026:** leer primero [FARMASI_799_CONTINUAR_AQUI.md](FARMASI_799_CONTINUAR_AQUI.md). Incluye148prompts históricos completos, recetas locales realmente utilizadas, bitácora,799fuentes y143aprobadas. No usar los antiguos scripts/horarios del repo como autorización para regenerar caras, etiquetas o relanzar la noche.
+
 # 📋 BITÁCORA MAESTRA DEL PROYECTO: ESTUDIO FOTOGRÁFICO CAPTOORA & FOTO_ENGINE
 
 > **Vigencia al 18 oct 2026:** este es el corte técnico histórico de septiembre. El estado conciliado, las conversaciones fechadas y las aclaraciones sobre entregas, dirección, ofertas y horarios están en [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md). Se conserva el texto original; sus estados no son una certificación operativa actual.
@@ -119,3 +121,17 @@
 
 ---
 *Bitácora generada por Antigravity. Lista para consulta, edición y seguimiento al regreso del usuario.*
+
+
+## Actualización4nov2026 — relevo operativo FARMASI799
+
+El usuario pidió que Antigravity pudiera continuar desde GitHub. Se comprobó que148prompts exactos ya estaban en farmasi/continuidad-edicion-799 pero faltaba el paquete en main, y que su guía de entrada tenía estado nocturno obsoleto. Se publica en main el paquete textual y la entrada raíz, conservando esta bitácora histórica.
+
+- [Prompts completos reales](proyectos/farmasi-799/prompts/EJECUTADOS_EXACTOS.md) y JSON sin alterar.
+- [Métodos vigentes y receta exacta del bebé](proyectos/farmasi-799/prompts/RECETAS_VIGENTES.md): edición local, no generación de caras.
+- [Bitácora específica](proyectos/farmasi-799/BITACORA_FARMASI_799.md) con fallos, cambios de método y aprobaciones.
+- [Registro799](proyectos/farmasi-799/registros/fuentes_799.json):143aprobadas,641pendientes,12rechazadas,3bloqueadas; cero en revisión. Las tres del bebé aceptadas están incorporadas.
+- Aprobadas contiene143JPG y143PNG, una sola versión vigente por fuente/formato. Históricos fuera de entrega. Originales en Drive; ninguna foto añadida a este commit.
+- Prompts históricos no equivalen a un motor masivo ni a fidelidad garantizada en otro modelo. Acceso a Drive y protección real del sujeto siguen siendo requisitos; no instalar/comprar ni usar APIs con cargo sin autorización.
+
+Verificación: ejecutar ambos validadores del paquete y comprobar el commit de main remoto. La publicación de documentación no es producción ni entrega de nuevas fotos.

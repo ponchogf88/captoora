@@ -1,0 +1,20 @@
+{
+  "nuevas_verificadas": 40,
+  "acumulado_nocturno": 80,
+  "fuentes_distintas": 40,
+  "lotes": 4,
+  "jpg_por_lote": 10,
+  "correcciones_internas": 5,
+  "prompts_exactos_totales": 128,
+  "registro799": {
+    "aprobada": 29,
+    "pendiente": 665,
+    "en_revision": 90,
+    "rechazada": 12,
+    "bloqueada_herramienta": 3
+  },
+  "aprobadas_nuevas": 0,
+  "originales": "intactos; preparacion orientacion solo en derivados",
+  "modelo": "integrated_image_gen_model_not_exposed",
+  "limites": "Revision visual, no garantia identidad pixel a pixel ni microtexto; salidas 1024x1536 o1536x1024, no resolucion sensor."
+}

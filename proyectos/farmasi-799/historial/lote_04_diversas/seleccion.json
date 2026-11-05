@@ -1,0 +1,112 @@
+[
+  {
+    "numero": 1,
+    "source_name": "DSC00216.JPG",
+    "source_id": "11G6pwrg_KyefCwuYb1uwnosl_KIaoaXX",
+    "source_url": "https://drive.google.com/file/d/11G6pwrg_KyefCwuYb1uwnosl_KIaoaXX/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "lote": 1,
+    "decision_usuario": "rechazada",
+    "edited_drive_id": "1ToEpuKxyD6HuY_s6jxE5JEw3DPkjkz_q",
+    "edited_drive_url": "https://drive.google.com/file/d/1ToEpuKxyD6HuY_s6jxE5JEw3DPkjkz_q/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "fondo": "negro",
+    "numero_historico": 4
+  },
+  {
+    "numero": 2,
+    "source_name": "DSC00612.JPG",
+    "source_id": "19JDbXjW7PdWWA65FEiHvfNbw_nm_il5c",
+    "source_url": "https://drive.google.com/file/d/19JDbXjW7PdWWA65FEiHvfNbw_nm_il5c/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "fondo": "blanco"
+  },
+  {
+    "numero": 3,
+    "source_name": "DSC00771.JPG",
+    "source_id": "1UbQAblZZrWcGrATxiVThaPBfEKoEazdk",
+    "source_url": "https://drive.google.com/file/d/1UbQAblZZrWcGrATxiVThaPBfEKoEazdk/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "fondo": "blanco"
+  },
+  {
+    "numero": 4,
+    "source_name": "DSC00904.JPG",
+    "source_id": "1t1pJ5qC-h2TX-T6cLC4LBJlsJKkXvStV",
+    "source_url": "https://drive.google.com/file/d/1t1pJ5qC-h2TX-T6cLC4LBJlsJKkXvStV/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "fondo": "blanco"
+  },
+  {
+    "numero": 5,
+    "source_name": "DSC01909.JPG",
+    "source_id": "1rXGbmiMx-SdPIA-T_FQdx0b59XIzcz4y",
+    "source_url": "https://drive.google.com/file/d/1rXGbmiMx-SdPIA-T_FQdx0b59XIzcz4y/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "lote": 1,
+    "decision_usuario": "rechazada",
+    "edited_drive_id": "16JC9_cTIaVmqbgTW-g65ntrK6zoLYtYV",
+    "edited_drive_url": "https://drive.google.com/file/d/16JC9_cTIaVmqbgTW-g65ntrK6zoLYtYV/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "fondo": "negro",
+    "numero_historico": 6
+  },
+  {
+    "numero": 6,
+    "source_name": "DSC01929.JPG",
+    "source_id": "1Wb5GTbOphzdXnVz2ShR_507PDKAfXTGF",
+    "source_url": "https://drive.google.com/file/d/1Wb5GTbOphzdXnVz2ShR_507PDKAfXTGF/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "lote": 1,
+    "decision_usuario": "rechazada",
+    "edited_drive_id": "1-R1An8ZnViZOeh3Gv5oCuTEO8cyttQ0D",
+    "edited_drive_url": "https://drive.google.com/file/d/1-R1An8ZnViZOeh3Gv5oCuTEO8cyttQ0D/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "fondo": "negro",
+    "numero_historico": 7
+  },
+  {
+    "numero": 7,
+    "source_name": "DSC02098.JPG",
+    "source_id": "1RD8N0UsmtUJGy7zrQwAMXHA88F_g_514",
+    "source_url": "https://drive.google.com/file/d/1RD8N0UsmtUJGy7zrQwAMXHA88F_g_514/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "lote": 1,
+    "decision_usuario": "rechazada",
+    "edited_drive_id": "1HHeYKVl34v0Tz61Gn_jTbAyNWSrVrdbR",
+    "edited_drive_url": "https://drive.google.com/file/d/1HHeYKVl34v0Tz61Gn_jTbAyNWSrVrdbR/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "fondo": "negro",
+    "numero_historico": 15
+  },
+  {
+    "numero": 8,
+    "source_name": "DSC02117.JPG",
+    "source_id": "1z0kZCG4U9BUGqv7kZJfV-9tlig1aYi0K",
+    "source_url": "https://drive.google.com/file/d/1z0kZCG4U9BUGqv7kZJfV-9tlig1aYi0K/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "lote": 1,
+    "decision_usuario": "rechazada",
+    "edited_drive_id": "1Yj6SymhxSXC23FyYjg3Y12WRld8Go7Gt",
+    "edited_drive_url": "https://drive.google.com/file/d/1Yj6SymhxSXC23FyYjg3Y12WRld8Go7Gt/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "fondo": "negro",
+    "numero_historico": 16
+  },
+  {
+    "numero": 9,
+    "source_name": "DSC02172.JPG",
+    "source_id": "1z1KjWr99LXxmwFkS6fyqkpiAMNFlndX7",
+    "source_url": "https://drive.google.com/file/d/1z1KjWr99LXxmwFkS6fyqkpiAMNFlndX7/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "fondo": "blanco"
+  },
+  {
+    "numero": 10,
+    "source_name": "DSC02209.JPG",
+    "source_id": "1CKrY6HpbFGtppHHp5HOtH4SdYho4pIhr",
+    "source_url": "https://drive.google.com/file/d/1CKrY6HpbFGtppHHp5HOtH4SdYho4pIhr/view?usp=drivesdk",
+    "estado": "seleccionada_para_revision",
+    "fondo": "blanco"
+  }
+]

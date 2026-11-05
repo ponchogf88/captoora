@@ -1,0 +1,11 @@
+{
+  "source_name": "DSC02352.JPG",
+  "source_id": "1O9vFWy4bZTUmOZ3qQJOu1ltWV9uVTRsf",
+  "source_url": "https://drive.google.com/file/d/1O9vFWy4bZTUmOZ3qQJOu1ltWV9uVTRsf/view?usp=drivesdk",
+  "estado": "generada_pendiente_revision",
+  "folder": "lote_10_grupales_0300",
+  "prompt": "Edit only the background clutter in this already retouched photograph. Remove the pink personal open bag at the far left floor edge and the small stray footwear/loose personal items immediately beside it; replace their area seamlessly with the same white plush rug. Keep all five foreground adults EXACTLY unchanged including faces, hair, expressions, poses, clothing, hands, scale, cropping. Keep the intentional foreground Farmasi product arrangement and the man's dumbbell. Preserve white studio soft shadows and existing lighting. Do not redraw or beautify people, do not crop or change anything else.",
+  "model": "integrated_image_gen_model_not_exposed",
+  "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-d0197079-7d95-46c2-b080-cf1db29df7a0.png",
+  "correccion": "Retirar bolsa personal residual; ejecucion previa preservada."
+}

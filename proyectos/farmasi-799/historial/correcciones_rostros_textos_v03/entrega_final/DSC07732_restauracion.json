@@ -1,0 +1,109 @@
+{
+  "source_name": "DSC07732.JPG",
+  "source_id": "1FeBTRx3T1WcIMlBmuXXJNbMplxhmvaWA",
+  "source_url": "https://drive.google.com/file/d/1FeBTRx3T1WcIMlBmuXXJNbMplxhmvaWA/view?usp=drivesdk",
+  "folder_anterior": "lote_14_chica07722_sola",
+  "version": "v03",
+  "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+  "original_sha256": "d1ccb698e339f762bbc8e1cc218ed35accde6e0d876c735ffcaa55b9b5de4d39",
+  "base_v02_sha256": "c423147ac4e51b4065dd15795d1a25b271fe6b4c92a59e2704ae5981342a83ea",
+  "size": [
+    4128,
+    6192
+  ],
+  "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+  "outside_mask_changed_pixels": 0,
+  "regions": [
+    {
+      "role": "rostro",
+      "polygon_output_v02": [
+        [
+          423,
+          617
+        ],
+        [
+          440,
+          607
+        ],
+        [
+          457,
+          608
+        ],
+        [
+          469,
+          620
+        ],
+        [
+          472,
+          633
+        ],
+        [
+          480,
+          644
+        ],
+        [
+          474,
+          651
+        ],
+        [
+          475,
+          663
+        ],
+        [
+          461,
+          678
+        ],
+        [
+          447,
+          682
+        ],
+        [
+          431,
+          671
+        ],
+        [
+          420,
+          660
+        ],
+        [
+          409,
+          647
+        ],
+        [
+          404,
+          635
+        ],
+        [
+          411,
+          630
+        ]
+      ],
+      "similarity": [
+        [
+          1.0014925465351001,
+          -0.005139985546614835,
+          3.4300553635868014
+        ],
+        [
+          0.005139985546614835,
+          1.0014925465351001,
+          -3.468457867458978
+        ]
+      ],
+      "registration_inliers": 22,
+      "light_gain": 1.5,
+      "light_offset_rgb": [
+        -125.5,
+        -133.5,
+        -131.0
+      ],
+      "original_near_white_fraction": 0.0016860323393190868,
+      "pixels_covered": 80615
+    }
+  ],
+  "estado": "correccion_marcada_en_revision",
+  "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+  "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+  "limitacion": null,
+  "png_sha256": "4bd29be6e616b900bbc940b1a70d9d4ea45123d710ec93479b66828c0a3a2091"
+}

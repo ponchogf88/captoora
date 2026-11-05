@@ -1,0 +1,14 @@
+{
+  "confirmadas_en_drive": 11,
+  "secuencia_ampliada_inspeccionada": 19,
+  "pruebas_editadas": 3,
+  "pruebas_aprobadas": 3,
+  "estado": "tres_aprobadas_resto_pendiente",
+  "metodo": "Color y luz desde originales; sin IA generativa ni intercambio de rostros",
+  "carpeta_revision": "https://drive.google.com/drive/folders/1ohWX6i5k303Hq1Qc4VsMRY8DUqWoX3Q6",
+  "tomassuaves_no_reconstruidas": [
+    "DSC08261.JPG",
+    "DSC08284.JPG"
+  ],
+  "limitaciones": "No es recuperacion de nitidez perdida ni edicion completa de las once. Conserva foco de captura y detalle original."
+}

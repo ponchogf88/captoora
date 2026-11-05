@@ -1,0 +1,498 @@
+{
+  "files": [
+    {
+      "source_name": "DSC00936.JPG",
+      "source_url": "https://drive.google.com/file/d/1TBAWBFemlTDtcD5lMVxn1XtemYuvoA4M/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00936.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-0a10b9fc-38f1-44e0-bb55-6b87722803ae.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+        "title": "DSC00936_v02.jpg",
+        "id": "17MfD8FKVew9z-9g-n5P_myZzufVGbHhi",
+        "mime_type": "image/jpeg",
+        "size": "439010",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:08.963Z",
+        "updated_at": "2026-11-04T07:16:08.963Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00936_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "5ec874523baff80619e38538168d1136918c9108cd891cc72fb9ad5b4f042202",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00925.JPG",
+      "source_url": "https://drive.google.com/file/d/1SgfMtNNmYloXHKox3NHZBq2Tej4n5A6T/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00925.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-339a9c4c-f583-4a63-99fb-5938ba6fc67e.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+        "title": "DSC00925_v02.jpg",
+        "id": "12_JGm2aos0bkLixVwoVl5Pka2z57q1v3",
+        "mime_type": "image/jpeg",
+        "size": "437060",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:06.788Z",
+        "updated_at": "2026-11-04T07:16:06.788Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00925_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "a6e054e140cda5eef856b45a9c1028497a2a3d71666d77180751b76b46e0c8e0",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00921.JPG",
+      "source_url": "https://drive.google.com/file/d/1Z3RItnkgQTqxyJM-QnaJtzb8s2wHNBgV/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00921.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-2a2b9f42-c896-4dba-b022-7f2f3195d844.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+        "title": "DSC00921_v02.jpg",
+        "id": "1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz",
+        "mime_type": "image/jpeg",
+        "size": "429577",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:00.001Z",
+        "updated_at": "2026-11-04T07:16:00.001Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00921_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "d9d2a58aafdd8d57f522c4bb782fcb3c113e3857e73f37a7bd5abfbfdf661a7f",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00920.JPG",
+      "source_url": "https://drive.google.com/file/d/1WwKh2b6RtT8V-eTqYE8KtiK5An7Fw270/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00920.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-2dcbcc1f-47bd-4883-bc99-cc1546662dfe.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+        "title": "DSC00920_v02.jpg",
+        "id": "15K68bv6wfVVKDPV78L33nmAlu7CDThTE",
+        "mime_type": "image/jpeg",
+        "size": "461797",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:10.323Z",
+        "updated_at": "2026-11-04T07:14:10.323Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00920_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "7173dfa935fb8a3bfc01d4d465daaa3c7d082c8413f62ba3dda10c7afb99de25",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00919.JPG",
+      "source_url": "https://drive.google.com/file/d/1nWQ0FIChqClHVfQxcNcnAjTNjqY47fmI/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00919.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-99e91999-3cbb-475a-817e-f5f79a484cec.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+        "title": "DSC00919_v02.jpg",
+        "id": "1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P",
+        "mime_type": "image/jpeg",
+        "size": "461390",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:07.782Z",
+        "updated_at": "2026-11-04T07:14:07.782Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00919_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "02a932b71b7219376643791f20350571873e51408ca4693369d6911a045e07fa",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00916.JPG",
+      "source_url": "https://drive.google.com/file/d/1-qK-U2qq6E3T7671ugqGkSwdViFmUhoq/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00916.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-8d7faec8-8ef3-45a0-817f-55c17270c297.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+        "title": "DSC00916_v02.jpg",
+        "id": "1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7",
+        "mime_type": "image/jpeg",
+        "size": "507363",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:04.078Z",
+        "updated_at": "2026-11-04T07:14:04.078Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00916_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "afeabbb77c623fed27a306f3e0ce4b1fc1fc17d74f60bc7b267fa948e0740f4a",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00896.JPG",
+      "source_url": "https://drive.google.com/file/d/1l4X-8J3UziEmNH-Ag5PqUwWN6P7m8Fow/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00896.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-4f6d6c07-e33d-4312-a4fa-9d5b781abe5d.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+        "title": "DSC00896_v02.jpg",
+        "id": "1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C",
+        "mime_type": "image/jpeg",
+        "size": "407236",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:01.601Z",
+        "updated_at": "2026-11-04T07:14:01.601Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00896_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "e423e295f72882a3eefd1343e23399429767a4c36f6c2e33f1d09cfd4f272e8f",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00913.JPG",
+      "source_url": "https://drive.google.com/file/d/11Yf3ZpNQSUNoQhxO70fnQjNq_NIgXC2o/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00913.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-9901643f-2e71-4088-b2ee-856a49476489.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+        "title": "DSC00913_v02.jpg",
+        "id": "1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK",
+        "mime_type": "image/jpeg",
+        "size": "555822",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:57.178Z",
+        "updated_at": "2026-11-04T07:13:57.178Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00913_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "a48ddb1fcb8044e22605d0d79b55d3f3965e384570bd6c1e9d436b5801ba2191",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00910.JPG",
+      "source_url": "https://drive.google.com/file/d/11Mny4SGjcPMewAF6tPSR54FY5OhSNn4E/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00910.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-6b8e03cb-9c03-4a6d-9fbb-f657f4dd3146.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+        "title": "DSC00910_v02.jpg",
+        "id": "1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx",
+        "mime_type": "image/jpeg",
+        "size": "578777",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:54.842Z",
+        "updated_at": "2026-11-04T07:13:54.842Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00910_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "ae5d011f9734a463848d4ce100804fee5bfa1675a8ef93e31fae7fa747c49283",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC00893.JPG",
+      "source_url": "https://drive.google.com/file/d/1Yq2FyiYgGLqdfzadi4zJqJuQ5eQAJg9q/view?usp=drivesdk",
+      "folder": "lote_09_otra_persona_0100",
+      "prompt": "Precise background-only retouch of this exact adult studio portrait. Preserve the REAL woman's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways, body dimensions/proportions, original pose, hands/fingers, white shirt, lilac leggings, sneakers, jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, gummy, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC00893.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "estado": "en_revision",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-c66881b6-e0e6-4a4f-b625-20b513a66bd8.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+        "title": "DSC00893_v02.jpg",
+        "id": "1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6",
+        "mime_type": "image/jpeg",
+        "size": "470230",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:51.776Z",
+        "updated_at": "2026-11-04T07:13:51.776Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00893_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "cb98f5877b417b420a7e14a9d513b1f7b07728a6ae268ddbefba02bb6fa26e14",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    }
+  ],
+  "readback": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+        "title": "DSC00936_v02.jpg",
+        "id": "17MfD8FKVew9z-9g-n5P_myZzufVGbHhi",
+        "mime_type": "image/jpeg",
+        "size": "439010",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:08.963Z",
+        "updated_at": "2026-11-04T07:16:08.963Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00936_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+        "title": "DSC00925_v02.jpg",
+        "id": "12_JGm2aos0bkLixVwoVl5Pka2z57q1v3",
+        "mime_type": "image/jpeg",
+        "size": "437060",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:06.788Z",
+        "updated_at": "2026-11-04T07:16:06.788Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00925_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+        "title": "DSC00921_v02.jpg",
+        "id": "1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz",
+        "mime_type": "image/jpeg",
+        "size": "429577",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:16:00.001Z",
+        "updated_at": "2026-11-04T07:16:00.001Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00921_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+        "title": "DSC00920_v02.jpg",
+        "id": "15K68bv6wfVVKDPV78L33nmAlu7CDThTE",
+        "mime_type": "image/jpeg",
+        "size": "461797",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:10.323Z",
+        "updated_at": "2026-11-04T07:14:10.323Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00920_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+        "title": "DSC00919_v02.jpg",
+        "id": "1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P",
+        "mime_type": "image/jpeg",
+        "size": "461390",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:07.782Z",
+        "updated_at": "2026-11-04T07:14:07.782Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00919_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+        "title": "DSC00916_v02.jpg",
+        "id": "1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7",
+        "mime_type": "image/jpeg",
+        "size": "507363",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:04.078Z",
+        "updated_at": "2026-11-04T07:14:04.078Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00916_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+        "title": "DSC00896_v02.jpg",
+        "id": "1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C",
+        "mime_type": "image/jpeg",
+        "size": "407236",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:14:01.601Z",
+        "updated_at": "2026-11-04T07:14:01.601Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00896_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+        "title": "DSC00913_v02.jpg",
+        "id": "1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK",
+        "mime_type": "image/jpeg",
+        "size": "555822",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:57.178Z",
+        "updated_at": "2026-11-04T07:13:57.178Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00913_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+        "title": "DSC00910_v02.jpg",
+        "id": "1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx",
+        "mime_type": "image/jpeg",
+        "size": "578777",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:54.842Z",
+        "updated_at": "2026-11-04T07:13:54.842Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00910_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+        "title": "DSC00893_v02.jpg",
+        "id": "1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6",
+        "mime_type": "image/jpeg",
+        "size": "470230",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T07:13:51.776Z",
+        "updated_at": "2026-11-04T07:13:51.776Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC00893_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+        "parent_ids": [
+          "1peWMbJHXKuJRzWL7joPKPJ-LLFAz3P_T"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  }
+}

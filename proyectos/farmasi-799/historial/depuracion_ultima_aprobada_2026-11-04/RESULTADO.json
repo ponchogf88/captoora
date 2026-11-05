@@ -1,0 +1,11 @@
+{
+  "estado": "verificado",
+  "jpg_vigentes": 140,
+  "png_vigentes": 140,
+  "fuentes_unicas": 140,
+  "versiones_obsoletas_archivadas": 18,
+  "duplicados_aprobadas": 0,
+  "DSC07706_vigente": "v04",
+  "historial_url": "https://drive.google.com/drive/folders/1PyB8uIJMFq0_cP1kLV15EC_ch5ax6PzD",
+  "regla": "Una ultima version expresamente aprobada por fuente y formato. Historico fuera de aprobadas. No seleccionar por fecha de subida."
+}

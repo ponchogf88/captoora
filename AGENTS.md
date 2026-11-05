@@ -1,3 +1,5 @@
+> **FARMASI799 — continuidad vigente4nov2026:** leer primero [FARMASI_799_CONTINUAR_AQUI.md](FARMASI_799_CONTINUAR_AQUI.md). Incluye148prompts históricos completos, recetas locales realmente utilizadas, bitácora,799fuentes y143aprobadas. No usar los antiguos scripts/horarios del repo como autorización para regenerar caras, etiquetas o relanzar la noche.
+
 # REGLAS MAESTRAS DE TRABAJO - AMDA AGENTIC ENGINE
 
 ## 🚀 PROTOCOLO VIGENTE (NOVIEMBRE 2026): SESIÓN 31 OCTUBRE, EMBAJADORAS FARMASI Y CAMPAÑA UNBOXING NAVIDEÑO

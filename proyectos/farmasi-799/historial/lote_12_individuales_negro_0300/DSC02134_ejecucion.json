@@ -1,0 +1,10 @@
+{
+  "source_name": "DSC02134.JPG",
+  "source_id": "1N2_0Pw4ren_6obbjJYxJyJLGk5Tb5x8R",
+  "source_url": "https://drive.google.com/file/d/1N2_0Pw4ren_6obbjJYxJyJLGk5Tb5x8R/view?usp=drivesdk",
+  "estado": "generada_pendiente_revision",
+  "folder": "lote_12_individuales_negro_0300",
+  "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02134.JPG.",
+  "model": "integrated_image_gen_model_not_exposed",
+  "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-3167ef34-8b1e-43f1-afe4-38bdb3771acb.png"
+}

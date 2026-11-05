@@ -1,0 +1,9 @@
+{
+  "source_name": "DSC02309.JPG",
+  "source_url": "https://drive.google.com/file/d/1Ihr0_8ek1xtfec3WWZa15g4yPrC3iTue/view?usp=drivesdk",
+  "folder": "lote_08_grupales_0100",
+  "prompt": "Background-only photographic retouch of this EXACT group portrait of five adults. Preserve all five REAL people: exact individual faces, expressions, gaze, skin texture, body size/proportions, poses, hands/fingers, hair curls/flyaways, clothing, shoes, jewelry. Keep original framing, scale, subject positions and aspect ratio; landscape remains landscape. Preserve all Farmasi packaging, count, labels, product positions, dumbbells and supporting stool. Remove domestic room edges, wall/baseboards, acoustic foam, mirrors/stands/cables outside intended set and unwanted background reflections. Extend a refined WHITE studio background with dimensional subtle cast shadows, faint natural warmth and softly shaded corners. Keep white plush rug and extend fine fibers seamlessly to cover exposed room floor, dreamy soft distant edges, realistic contact shadows. Do not flatten background to blank catalog white, tint it dark beige or invent extra floor by zooming out. No beautification, identity/pose changes, cutout halos, hair erosion, extra people, changed printed text, watermark. Exact source DSC02309.JPG.",
+  "model": "integrated_image_gen_model_not_exposed",
+  "estado": "generada_pendiente_revision",
+  "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-07e1c687-c218-4e39-8e5e-23bdc5b78fbd.png"
+}

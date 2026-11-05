@@ -1,0 +1,1484 @@
+{
+  "files": [
+    {
+      "source_name": "DSC07706.JPG",
+      "source_id": "1ZpzivGn-VHnWmfNDPFzEaVGdLxj335gf",
+      "source_url": "https://drive.google.com/file/d/1ZpzivGn-VHnWmfNDPFzEaVGdLxj335gf/view?usp=drivesdk",
+      "folder_anterior": "lote_14_chica07722_sola",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "6e104a8a7003ab3ebb3fe787f6f80834a60367db4b05ac03c0eec06e2ec86ff5",
+      "base_v02_sha256": "360a9cf7474da5ee5a2dc25c9eee29101a7dc856e470fc1330583dc8e227a039",
+      "size": [
+        6192,
+        4128
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              711,
+              257
+            ],
+            [
+              745,
+              241
+            ],
+            [
+              768,
+              243
+            ],
+            [
+              778,
+              258
+            ],
+            [
+              779,
+              282
+            ],
+            [
+              766,
+              305
+            ],
+            [
+              741,
+              326
+            ],
+            [
+              721,
+              333
+            ],
+            [
+              702,
+              320
+            ],
+            [
+              690,
+              306
+            ],
+            [
+              691,
+              286
+            ]
+          ],
+          "similarity": [
+            [
+              0.9962924074715289,
+              0.004163463718876494,
+              0.8971555712918821
+            ],
+            [
+              -0.004163463718876494,
+              0.9962924074715289,
+              3.8841586067453
+            ]
+          ],
+          "registration_inliers": 29,
+          "light_gain": 1.5,
+          "light_offset_rgb": [
+            -129.5,
+            -140.0,
+            -140.0
+          ],
+          "original_near_white_fraction": 0.10118145257276019,
+          "pixels_covered": 118465
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "a75ff788b3bebccf8a42e1454c1897dfb7bf9dfe592b1889713aaf1844372cdf",
+      "output": {
+        "url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+        "title": "DSC07706_v03.jpg",
+        "id": "1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR",
+        "mime_type": "image/jpeg",
+        "size": "5251486",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:21.772Z",
+        "updated_at": "2026-11-04T12:33:21.772Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
+        "title": "DSC07706_v03.png",
+        "id": "18iNEKqy0yLUi4BXrg_ja46booBRv4iFl",
+        "mime_type": "image/png",
+        "size": "16938051",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:10.075Z",
+        "updated_at": "2026-11-04T12:36:10.075Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v03.png",
+        "display_url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "29dcd59fd535eac5661b0bbe5903781e0f519945e7132a394bdec648e293896c"
+    },
+    {
+      "source_name": "DSC07724.JPG",
+      "source_id": "1FVUOM7IJotqduShUim8efNuL1KmT0pcR",
+      "source_url": "https://drive.google.com/file/d/1FVUOM7IJotqduShUim8efNuL1KmT0pcR/view?usp=drivesdk",
+      "folder_anterior": "lote_14_chica07722_sola",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "75836e12d1e7c7578cbe53ef517dd6bd468a4126739e1a09f1a3be2983a6aff7",
+      "base_v02_sha256": "2c0b6f3458acfbbea8eb0abeaba33c5b4c3d7e181ef586a7a3d58491b804c0e8",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              490,
+              582
+            ],
+            [
+              508,
+              573
+            ],
+            [
+              525,
+              580
+            ],
+            [
+              536,
+              599
+            ],
+            [
+              538,
+              613
+            ],
+            [
+              551,
+              615
+            ],
+            [
+              548,
+              635
+            ],
+            [
+              534,
+              642
+            ],
+            [
+              520,
+              650
+            ],
+            [
+              502,
+              649
+            ],
+            [
+              484,
+              640
+            ],
+            [
+              475,
+              625
+            ],
+            [
+              476,
+              607
+            ],
+            [
+              482,
+              590
+            ]
+          ],
+          "similarity": [
+            [
+              1.0120092919086048,
+              -0.0017726310829919662,
+              -5.58421940107721
+            ],
+            [
+              0.0017726310829919662,
+              1.0120092919086048,
+              -9.12507221141576
+            ]
+          ],
+          "registration_inliers": 20,
+          "light_gain": 1.166666666666667,
+          "light_offset_rgb": [
+            -43.50000000000006,
+            -53.33333333333343,
+            -52.83333333333337
+          ],
+          "original_near_white_fraction": 0.0005829416693992058,
+          "pixels_covered": 88172
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "532049a6a6a9b2e7a0d8470babb1a20cd8479977d2af289136e9ec963197766e",
+      "output": {
+        "url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+        "title": "DSC07724_v03.jpg",
+        "id": "1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q",
+        "mime_type": "image/jpeg",
+        "size": "5013688",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:08.564Z",
+        "updated_at": "2026-11-04T12:33:08.564Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07724_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
+        "title": "DSC07724_v03.png",
+        "id": "1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE",
+        "mime_type": "image/png",
+        "size": "14928083",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:15.553Z",
+        "updated_at": "2026-11-04T12:36:15.553Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07724_v03.png",
+        "display_url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "c440439e45a58a99266815f47a05ce2dfd175b535233ab2277212f4e007b0f9a"
+    },
+    {
+      "source_name": "DSC07731.JPG",
+      "source_id": "1J2ClOdDoZ5zgMVbLRX5gndYLs7rpIO8w",
+      "source_url": "https://drive.google.com/file/d/1J2ClOdDoZ5zgMVbLRX5gndYLs7rpIO8w/view?usp=drivesdk",
+      "folder_anterior": "lote_14_chica07722_sola",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "48fc6834a5c946240f5c3b767bfc0fe4c569a1c51ec4a24cdd25fe9e292e2f6c",
+      "base_v02_sha256": "5b077e33cfdf7116daac0c75b30ae37617bcd0bc153bb89e6cc803faff46d366",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              416,
+              628
+            ],
+            [
+              440,
+              614
+            ],
+            [
+              460,
+              619
+            ],
+            [
+              477,
+              634
+            ],
+            [
+              486,
+              645
+            ],
+            [
+              488,
+              665
+            ],
+            [
+              480,
+              683
+            ],
+            [
+              460,
+              700
+            ],
+            [
+              444,
+              704
+            ],
+            [
+              423,
+              690
+            ],
+            [
+              410,
+              677
+            ],
+            [
+              403,
+              660
+            ],
+            [
+              403,
+              643
+            ]
+          ],
+          "similarity": [
+            [
+              1.003137621233926,
+              0.0012902223468586388,
+              -2.8561113254622965
+            ],
+            [
+              -0.0012902223468586388,
+              1.003137621233926,
+              -1.3738842092430423
+            ]
+          ],
+          "registration_inliers": 30,
+          "light_gain": 1.3052631578947376,
+          "light_offset_rgb": [
+            -76.31578947368439,
+            -84.82105263157911,
+            -82.97894736842116
+          ],
+          "original_near_white_fraction": 0.0075518366487738135,
+          "pixels_covered": 112845
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "604c5b93d7ea630ced32afbbe8ef1100e4c8cce3ea5a34bf2282e9fda2359f12",
+      "output": {
+        "url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+        "title": "DSC07731_v03.jpg",
+        "id": "1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF",
+        "mime_type": "image/jpeg",
+        "size": "5079362",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:12.323Z",
+        "updated_at": "2026-11-04T12:33:12.323Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07731_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
+        "title": "DSC07731_v03.png",
+        "id": "1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ",
+        "mime_type": "image/png",
+        "size": "14275062",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:03.732Z",
+        "updated_at": "2026-11-04T12:36:03.732Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07731_v03.png",
+        "display_url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "dc3424770d1ff997a9fa726bd8b0c073f1a736d388df30503d1cfba876a6b8a3"
+    },
+    {
+      "source_name": "DSC07732.JPG",
+      "source_id": "1FeBTRx3T1WcIMlBmuXXJNbMplxhmvaWA",
+      "source_url": "https://drive.google.com/file/d/1FeBTRx3T1WcIMlBmuXXJNbMplxhmvaWA/view?usp=drivesdk",
+      "folder_anterior": "lote_14_chica07722_sola",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "d1ccb698e339f762bbc8e1cc218ed35accde6e0d876c735ffcaa55b9b5de4d39",
+      "base_v02_sha256": "c423147ac4e51b4065dd15795d1a25b271fe6b4c92a59e2704ae5981342a83ea",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              423,
+              617
+            ],
+            [
+              440,
+              607
+            ],
+            [
+              457,
+              608
+            ],
+            [
+              469,
+              620
+            ],
+            [
+              472,
+              633
+            ],
+            [
+              480,
+              644
+            ],
+            [
+              474,
+              651
+            ],
+            [
+              475,
+              663
+            ],
+            [
+              461,
+              678
+            ],
+            [
+              447,
+              682
+            ],
+            [
+              431,
+              671
+            ],
+            [
+              420,
+              660
+            ],
+            [
+              409,
+              647
+            ],
+            [
+              404,
+              635
+            ],
+            [
+              411,
+              630
+            ]
+          ],
+          "similarity": [
+            [
+              1.0014925465351001,
+              -0.005139985546614835,
+              3.4300553635868014
+            ],
+            [
+              0.005139985546614835,
+              1.0014925465351001,
+              -3.468457867458978
+            ]
+          ],
+          "registration_inliers": 22,
+          "light_gain": 1.5,
+          "light_offset_rgb": [
+            -125.5,
+            -133.5,
+            -131.0
+          ],
+          "original_near_white_fraction": 0.0016860323393190868,
+          "pixels_covered": 80615
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "4bd29be6e616b900bbc940b1a70d9d4ea45123d710ec93479b66828c0a3a2091",
+      "output": {
+        "url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+        "title": "DSC07732_v03.jpg",
+        "id": "1L3HCz8bUArYeuas2riB22op9EyJzmCRQ",
+        "mime_type": "image/jpeg",
+        "size": "4988721",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:17.310Z",
+        "updated_at": "2026-11-04T12:33:17.310Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07732_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
+        "title": "DSC07732_v03.png",
+        "id": "1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr",
+        "mime_type": "image/png",
+        "size": "14592161",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:35:58.170Z",
+        "updated_at": "2026-11-04T12:35:58.170Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07732_v03.png",
+        "display_url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "3cebe30482c1a8dbc6af3de58ef4601e64f61e5c6631a057437c06bc96b4ee73"
+    },
+    {
+      "source_name": "DSC08471.JPG",
+      "source_id": "1s84AQYS91VAg3OmdNLsDC4nEfTTDGPQp",
+      "source_url": "https://drive.google.com/file/d/1s84AQYS91VAg3OmdNLsDC4nEfTTDGPQp/view?usp=drivesdk",
+      "folder_anterior": "lote_15_chica07722_grupo",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "1dee56d686652149c65c1d111f264484bb0b7cf7705f845c2a08e6e817f03815",
+      "base_v02_sha256": "d3d8f433ca5f1ce8723e544b64df27aac528c0b3c0294a057fa20e83b366d1e6",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              676,
+              583
+            ],
+            [
+              693,
+              574
+            ],
+            [
+              709,
+              579
+            ],
+            [
+              720,
+              594
+            ],
+            [
+              724,
+              613
+            ],
+            [
+              727,
+              628
+            ],
+            [
+              728,
+              644
+            ],
+            [
+              721,
+              660
+            ],
+            [
+              707,
+              674
+            ],
+            [
+              691,
+              678
+            ],
+            [
+              671,
+              672
+            ],
+            [
+              653,
+              658
+            ],
+            [
+              640,
+              642
+            ],
+            [
+              635,
+              623
+            ],
+            [
+              641,
+              615
+            ],
+            [
+              650,
+              622
+            ],
+            [
+              654,
+              609
+            ]
+          ],
+          "similarity": [
+            [
+              1.0040779650899618,
+              -0.0017785885608530459,
+              -1.8676144271885005
+            ],
+            [
+              0.0017785885608530459,
+              1.0040779650899618,
+              -3.9815501482927838
+            ]
+          ],
+          "registration_inliers": 38,
+          "light_gain": 1.2705882352941171,
+          "light_offset_rgb": [
+            -69.72941176470573,
+            -84.95294117647049,
+            -90.52941176470574
+          ],
+          "original_near_white_fraction": 0.002389108284423887,
+          "pixels_covered": 134087
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "1502dcb251b83429dca85135132ac8b8d9fe32f75c8cfecdf1ebeb305853ddc1",
+      "output": {
+        "url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+        "title": "DSC08471_v03.jpg",
+        "id": "1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0",
+        "mime_type": "image/jpeg",
+        "size": "5361032",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:25.597Z",
+        "updated_at": "2026-11-04T12:33:25.597Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08471_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
+        "title": "DSC08471_v03.png",
+        "id": "1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-",
+        "mime_type": "image/png",
+        "size": "16250223",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:21.796Z",
+        "updated_at": "2026-11-04T12:36:21.796Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08471_v03.png",
+        "display_url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "8b5f077a6a49aac2227cf4565c146d48942e9c1cefc85ca0a3615d37dfa99008"
+    },
+    {
+      "source_name": "DSC08479.JPG",
+      "source_id": "1Lwaim3AqX7Vn0DaTjWqs9Bw6BjTjcGYO",
+      "source_url": "https://drive.google.com/file/d/1Lwaim3AqX7Vn0DaTjWqs9Bw6BjTjcGYO/view?usp=drivesdk",
+      "folder_anterior": "lote_15_chica07722_grupo",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "45f3a782db2b28d92c1c8c7a5c9cb3e17eea1b0ec1496573f26223b1098de0b1",
+      "base_v02_sha256": "9bf1d95e41c7ace41c127be339b9e51c2bb737299feb83883b4d14379df08c22",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              700,
+              489
+            ],
+            [
+              717,
+              480
+            ],
+            [
+              731,
+              484
+            ],
+            [
+              743,
+              498
+            ],
+            [
+              750,
+              517
+            ],
+            [
+              753,
+              538
+            ],
+            [
+              750,
+              557
+            ],
+            [
+              747,
+              574
+            ],
+            [
+              737,
+              589
+            ],
+            [
+              721,
+              595
+            ],
+            [
+              702,
+              589
+            ],
+            [
+              681,
+              576
+            ],
+            [
+              670,
+              560
+            ],
+            [
+              660,
+              542
+            ],
+            [
+              660,
+              531
+            ],
+            [
+              670,
+              526
+            ],
+            [
+              677,
+              536
+            ],
+            [
+              681,
+              520
+            ]
+          ],
+          "similarity": [
+            [
+              0.9994139650087493,
+              0.0003859565032716256,
+              -0.177554287238382
+            ],
+            [
+              -0.0003859565032716256,
+              0.9994139650087493,
+              0.05027970137294074
+            ]
+          ],
+          "registration_inliers": 50,
+          "light_gain": 1.3267326732673257,
+          "light_offset_rgb": [
+            -84.04950495049479,
+            -98.45544554455421,
+            -101.49504950495026
+          ],
+          "original_near_white_fraction": 0.00033734844125176116,
+          "pixels_covered": 146294
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": "Desenfoque presente en original; no se invento cara nitida.",
+      "png_sha256": "34cb3b32a192e2f5f6391c13ead9dc09ed1969d3702a0cb41e1dcf7382bfa799",
+      "output": {
+        "url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+        "title": "DSC08479_v03.jpg",
+        "id": "17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0",
+        "mime_type": "image/jpeg",
+        "size": "5573202",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:29.340Z",
+        "updated_at": "2026-11-04T12:33:29.340Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08479_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
+        "title": "DSC08479_v03.png",
+        "id": "1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W",
+        "mime_type": "image/png",
+        "size": "18093418",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:27.457Z",
+        "updated_at": "2026-11-04T12:36:27.457Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08479_v03.png",
+        "display_url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "dc29567ffe29baff74bdfeaac60bf164e52161f875c13d090be00cde493c6277"
+    },
+    {
+      "source_name": "DSC08484.JPG",
+      "source_id": "1HfQ19A0EBO_M7BvIQ18iGaQDbotf0D1A",
+      "source_url": "https://drive.google.com/file/d/1HfQ19A0EBO_M7BvIQ18iGaQDbotf0D1A/view?usp=drivesdk",
+      "folder_anterior": "lote_15_chica07722_grupo",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "da8575478361c0b8a8f8d7ec0bb5ac87335cb64733061bc31125ce2b4b127b25",
+      "base_v02_sha256": "0a69a4163d6252808035f84a159b8eba7ef338c1f35dd171a14b1f1df42a2524",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "rostro",
+          "polygon_output_v02": [
+            [
+              617,
+              422
+            ],
+            [
+              631,
+              413
+            ],
+            [
+              646,
+              415
+            ],
+            [
+              658,
+              427
+            ],
+            [
+              665,
+              444
+            ],
+            [
+              667,
+              461
+            ],
+            [
+              666,
+              482
+            ],
+            [
+              660,
+              501
+            ],
+            [
+              645,
+              516
+            ],
+            [
+              630,
+              520
+            ],
+            [
+              614,
+              514
+            ],
+            [
+              597,
+              502
+            ],
+            [
+              585,
+              487
+            ],
+            [
+              577,
+              474
+            ],
+            [
+              576,
+              457
+            ],
+            [
+              583,
+              451
+            ],
+            [
+              590,
+              461
+            ],
+            [
+              597,
+              443
+            ]
+          ],
+          "similarity": [
+            [
+              0.9997216266814823,
+              0.001535531674794324,
+              -1.1888606566209539
+            ],
+            [
+              -0.001535531674794324,
+              0.9997216266814823,
+              1.0429562144194504
+            ]
+          ],
+          "registration_inliers": 47,
+          "light_gain": 1.3260869565217401,
+          "light_offset_rgb": [
+            -82.86956521739154,
+            -97.00000000000023,
+            -100.04347826086973
+          ],
+          "original_near_white_fraction": 0.0003170845135923562,
+          "pixels_covered": 137951
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": null,
+      "png_sha256": "3f2560390e6a5c35f4c9181b145d45f22f68c8365f1ffbcabfcc5ec66a1c18ae",
+      "output": {
+        "url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+        "title": "DSC08484_v03.jpg",
+        "id": "127up9vjISarVa-9S0Oql5F9ThMMDIBZF",
+        "mime_type": "image/jpeg",
+        "size": "5685950",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:33.140Z",
+        "updated_at": "2026-11-04T12:33:33.140Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08484_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
+        "title": "DSC08484_v03.png",
+        "id": "1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb",
+        "mime_type": "image/png",
+        "size": "18943496",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:34.618Z",
+        "updated_at": "2026-11-04T12:36:34.618Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08484_v03.png",
+        "display_url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "7518d12a17ed736d6860424319249609d8196dafa3357439bc58a0287115a999"
+    },
+    {
+      "source_name": "DSC07726.JPG",
+      "source_id": "1AG4-moNmg9QU_v-2xuyCJj7Igw8VYItu",
+      "source_url": "https://drive.google.com/file/d/1AG4-moNmg9QU_v-2xuyCJj7Igw8VYItu/view?usp=drivesdk",
+      "folder_anterior": "lote_14_chica07722_sola",
+      "version": "v03",
+      "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+      "original_sha256": "00a5dc32f63c67242cad39fa285f64474874782b5c0a4ade36e0f568c72b9f5d",
+      "base_v02_sha256": "af5f6d77cee2aca26e4b9a54669b808782fbdad8cd157a30da8337dc6b03d6ce",
+      "size": [
+        4128,
+        6192
+      ],
+      "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+      "outside_mask_changed_pixels": 0,
+      "regions": [
+        {
+          "role": "etiqueta_en_mano",
+          "polygon_output_v02": [
+            [
+              207,
+              536
+            ],
+            [
+              277,
+              536
+            ],
+            [
+              277,
+              615
+            ],
+            [
+              207,
+              615
+            ]
+          ],
+          "similarity": [
+            [
+              0.9959283538633186,
+              -0.003633390023175557,
+              3.5692257919182326
+            ],
+            [
+              0.003633390023175557,
+              0.9959283538633186,
+              0.8916639587447477
+            ]
+          ],
+          "registration_inliers": 8,
+          "light_gain": 1.2705882352941171,
+          "light_offset_rgb": [
+            -71.58823529411751,
+            -77.37647058823518,
+            -73.12941176470576
+          ],
+          "original_near_white_fraction": 0.1362328914882907,
+          "pixels_covered": 107304
+        },
+        {
+          "role": "etiqueta_donante_original_mismo_envase",
+          "donor": "DSC07722.JPG",
+          "donor_source_url": "https://drive.google.com/file/d/1IJYYz51EGYI39ADAUpnJdOTLq1TBpWmc/view",
+          "donor_output_box": [
+            298,
+            440,
+            355,
+            499
+          ],
+          "target_output_box": [
+            214,
+            545,
+            271,
+            609
+          ],
+          "light_offset_rgb": [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          "text_generation": false,
+          "nota": "Detalle fotografico de la misma impresion/envase en secuencia; no transcripcion ni caracteres inventados."
+        }
+      ],
+      "estado": "en_revision",
+      "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+      "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+      "limitacion": "Reflejo/sobreexposicion impide lectura completa de letra fina; fuente alternativaDSC07722 misma impresion.",
+      "png_sha256": "ba34cdfd9ba8bb5e5d43d3f21875ea135f351e4a18eb47186ce0ae4f99713a72",
+      "output": {
+        "url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+        "title": "DSC07726_v03.jpg",
+        "id": "1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh",
+        "mime_type": "image/jpeg",
+        "size": "5010455",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:37.386Z",
+        "updated_at": "2026-11-04T12:33:37.386Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07726_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "png_master": {
+        "url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
+        "title": "DSC07726_v03.png",
+        "id": "1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1",
+        "mime_type": "image/png",
+        "size": "15514494",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:40.429Z",
+        "updated_at": "2026-11-04T12:36:40.429Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07726_v03.png",
+        "display_url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "8859e8bc36c9b1d3b7bbf8dc02c1ce70864d0945234219c235ab94e78c1b203f"
+    }
+  ],
+  "readback": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+        "title": "DSC07726_v03.jpg",
+        "id": "1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh",
+        "mime_type": "image/jpeg",
+        "size": "5010455",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:37.386Z",
+        "updated_at": "2026-11-04T12:33:37.386Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07726_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+        "title": "DSC08484_v03.jpg",
+        "id": "127up9vjISarVa-9S0Oql5F9ThMMDIBZF",
+        "mime_type": "image/jpeg",
+        "size": "5685950",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:33.140Z",
+        "updated_at": "2026-11-04T12:33:33.140Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08484_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+        "title": "DSC08479_v03.jpg",
+        "id": "17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0",
+        "mime_type": "image/jpeg",
+        "size": "5573202",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:29.340Z",
+        "updated_at": "2026-11-04T12:33:29.340Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08479_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+        "title": "DSC08471_v03.jpg",
+        "id": "1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0",
+        "mime_type": "image/jpeg",
+        "size": "5361032",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:25.597Z",
+        "updated_at": "2026-11-04T12:33:25.597Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08471_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+        "title": "DSC07706_v03.jpg",
+        "id": "1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR",
+        "mime_type": "image/jpeg",
+        "size": "5251486",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:21.772Z",
+        "updated_at": "2026-11-04T12:33:21.772Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+        "title": "DSC07732_v03.jpg",
+        "id": "1L3HCz8bUArYeuas2riB22op9EyJzmCRQ",
+        "mime_type": "image/jpeg",
+        "size": "4988721",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:17.310Z",
+        "updated_at": "2026-11-04T12:33:17.310Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07732_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+        "title": "DSC07731_v03.jpg",
+        "id": "1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF",
+        "mime_type": "image/jpeg",
+        "size": "5079362",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:12.323Z",
+        "updated_at": "2026-11-04T12:33:12.323Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07731_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+        "title": "DSC07724_v03.jpg",
+        "id": "1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q",
+        "mime_type": "image/jpeg",
+        "size": "5013688",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:33:08.564Z",
+        "updated_at": "2026-11-04T12:33:08.564Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07724_v03.jpg",
+        "display_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+        "parent_ids": [
+          "1XqkNi7OGZPY-q_BB2q_LDvUmAVOfNPUV"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  },
+  "readback_png": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
+        "title": "DSC07726_v03.png",
+        "id": "1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1",
+        "mime_type": "image/png",
+        "size": "15514494",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:40.429Z",
+        "updated_at": "2026-11-04T12:36:40.429Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07726_v03.png",
+        "display_url": "https://drive.google.com/file/d/1n6NY-XjqpXTLVhmvMxO0n5FWFxsyyEu1/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
+        "title": "DSC08484_v03.png",
+        "id": "1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb",
+        "mime_type": "image/png",
+        "size": "18943496",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:34.618Z",
+        "updated_at": "2026-11-04T12:36:34.618Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08484_v03.png",
+        "display_url": "https://drive.google.com/file/d/1ZKEfghTBfyncvX42mTh5SiXja1g_4oMb/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
+        "title": "DSC08479_v03.png",
+        "id": "1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W",
+        "mime_type": "image/png",
+        "size": "18093418",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:27.457Z",
+        "updated_at": "2026-11-04T12:36:27.457Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08479_v03.png",
+        "display_url": "https://drive.google.com/file/d/1FUUhlsh2etwMAbBNak91-ZMIhFy7iI0W/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
+        "title": "DSC08471_v03.png",
+        "id": "1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-",
+        "mime_type": "image/png",
+        "size": "16250223",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:21.796Z",
+        "updated_at": "2026-11-04T12:36:21.796Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC08471_v03.png",
+        "display_url": "https://drive.google.com/file/d/1YACh7hbHQ6bM8N87niD6TpuYlwvtYAH-/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
+        "title": "DSC07724_v03.png",
+        "id": "1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE",
+        "mime_type": "image/png",
+        "size": "14928083",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:15.553Z",
+        "updated_at": "2026-11-04T12:36:15.553Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07724_v03.png",
+        "display_url": "https://drive.google.com/file/d/1tKBboWnkj1nWZ2y-HLCRX-Z8lxucJ4pE/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
+        "title": "DSC07706_v03.png",
+        "id": "18iNEKqy0yLUi4BXrg_ja46booBRv4iFl",
+        "mime_type": "image/png",
+        "size": "16938051",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:10.075Z",
+        "updated_at": "2026-11-04T12:36:10.075Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07706_v03.png",
+        "display_url": "https://drive.google.com/file/d/18iNEKqy0yLUi4BXrg_ja46booBRv4iFl/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
+        "title": "DSC07731_v03.png",
+        "id": "1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ",
+        "mime_type": "image/png",
+        "size": "14275062",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:36:03.732Z",
+        "updated_at": "2026-11-04T12:36:03.732Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07731_v03.png",
+        "display_url": "https://drive.google.com/file/d/1GyploJmaYbu-GbVFFmq7yW1FBbyqDmJQ/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
+        "title": "DSC07732_v03.png",
+        "id": "1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr",
+        "mime_type": "image/png",
+        "size": "14592161",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T12:35:58.170Z",
+        "updated_at": "2026-11-04T12:35:58.170Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07732_v03.png",
+        "display_url": "https://drive.google.com/file/d/1--vqyZvFbSu5uqtbWzicPr-UesqhuNMr/view?usp=drivesdk",
+        "parent_ids": [
+          "1feM0EJjojDZYQcUbBICKGJrPg65Cou4c"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  }
+}
