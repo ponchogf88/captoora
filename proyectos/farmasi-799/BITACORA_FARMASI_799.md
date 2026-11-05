@@ -32,3 +32,6 @@ Actualizacion de acceso: el chat compartido SI fue leido en Chrome con sesion ex
 
 ## Correccion de las diez lila: v02 rechazada, v03 en revision
 Usuario rechazo costuras laterales de fondo; acepto rostro,cuerpo e iluminacion y pidio precision de etiquetas. Diez v03 corregidas y verificadas en Drive: https://drive.google.com/drive/folders/1-Z6byAycQ51QPPq1rpAMVcmbwbLCBk-V . No aprobadas. Fondo entero continuo, detalle autentico de modelo y envases, revision individual y guardas faciales de PNG; fuentes intactas. Receta local ejecutada y auditorias archivadas en historial/modelo_lila_cabello_largo/correccion_v03. Cero nuevas generaciones;150prompts historicos sin cambios. V02 renombrada como historico rechazado, excluida de revision vigente. Pendientes previos/modelo y posterior montaje madre-bebe conservados.
+
+## Tres variantes de textura de pared para DSC07738
+Usuario acepta parte inferior pero pide recuperar relieve de fondo original sin apariencia de tela evidente. Se entregan A/B/C comparables, manteniendo misma foto, sin cambiar modelo/productos/piso. Tres JPG Drive leidos de vuelta, PNG/JPG locales conhashes,receta local reproducible,150prompts historicos sin nuevas generaciones. Pendientes de eleccion; no aplicadas a las otras nueve.
