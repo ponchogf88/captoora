@@ -8,7 +8,7 @@ Este paquete permite entender y continuar el trabajo, no convierte un prompt en 
 
 - 799 fuentes JPG inventariadas con ID y enlace de Drive.
 - 144 JPG aprobados y verificados en Drive.
-- 9 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
+- 15 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
 - 150 prompts exactos recuperados; incluyen intentos bloqueados sin imagen cuando están identificados así.
 - 193 originales inspeccionados con SHA-256; no afirmar que los 799 tengan hash comprobado.
 - 3 fuentes bloqueadas por herramienta; no cuentan como producción.
