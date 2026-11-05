@@ -135,3 +135,24 @@ El usuario pidió que Antigravity pudiera continuar desde GitHub. Se comprobó q
 - Prompts históricos no equivalen a un motor masivo ni a fidelidad garantizada en otro modelo. Acceso a Drive y protección real del sujeto siguen siendo requisitos; no instalar/comprar ni usar APIs con cargo sin autorización.
 
 Verificación: ejecutar ambos validadores del paquete y comprobar el commit de main remoto. La publicación de documentación no es producción ni entrega de nuevas fotos.
+
+---
+
+## Actualización 5 nov 2026 — Hito Comercial: Dominio Oficial `captoora.studio`, Ecosistema Pixieset & Airbnb Stock
+
+Se consolidan avances críticos de infraestructura, presencia de marca y estrategia comercial:
+
+1. **Dominio Oficial Adquirido:**
+   * Registro completado de `captoora.studio` en Porkbun con privacidad WHOIS de por vida y protección de datos.
+   * Configuración de subdominio `galeria.captoora.studio` vinculado a Pixieset.
+   * Exportación de logotipo oficial de marca de agua (`CAPTOORA_SIGNATURE_LOGO.png`) y favicon reglamentario de 32x32 px (`CAPTOORA_FAVICON_32x32.png`).
+2. **Reemplazo 100% Comercial en Airbnb:**
+   * Retiradas permanentemente todas las fotos no autorizadas de clientas de los anuncios de Airbnb.
+   * Sustituidas por 8 fotos comerciales de stock (locaciones icónicas de Monterrey y sesiones fotográficas profesionales libres de derechos). Estado verificado: *Enviado* en ambos listados.
+3. **Ecosistema de Ventas Pixieset (Client Gallery, Studio Manager & Email Marketing):**
+   * Límite de 4-5 fotos de cortesía por sesión con tienda de autoservicio (individuales y paquete de 30 fotos).
+   * Dinámica de cupones VIP con captura de leads vía WhatsApp Inbound (respetando políticas de Meta).
+   * Activación de Contratos y Liberación de Imagen (Model Releases) con firma digital desde el móvil.
+   * Estrategia de captura de correos (Email Registration) para eventos escolares y festivales navideños con campañas de carritos abandonados y urgencia.
+   * Blueprint detallado guardado en `docs/BLUEPRINT_CAPTOORA_DOMINIO_PIXIESET_2026.md`.
+
