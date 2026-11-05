@@ -1,0 +1,158 @@
+[
+  {
+    "source_name": "DSC08318.JPG",
+    "file": "DSC08318_cobrizo_sola_v02.jpg",
+    "png": "DSC08318_cobrizo_sola_v02.png",
+    "bytes": 4086905,
+    "sha256": "0371b1a7cfa36b0e4b47c56e40bf66a6a57ec84ba98499112e55f21eeb5a4e60",
+    "original_sha256": "acb2ea1eecd383d40f3b95e3b0740fc708a33f5030c4c30f0c00cae5b0564b62",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.25,
+    "matches": 206,
+    "inliers": 182,
+    "background_alignment": [
+      [
+        0.9998469830298906,
+        0.00020098096834978945,
+        0.08984168796087658
+      ],
+      [
+        -0.00020098096834978945,
+        0.9998469830298906,
+        0.714261170201641
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  },
+  {
+    "source_name": "DSC08500.JPG",
+    "file": "DSC08500_cobrizo_sola_v02.jpg",
+    "png": "DSC08500_cobrizo_sola_v02.png",
+    "bytes": 3863919,
+    "sha256": "e17ba0d1c6f7c436abcc797ecdc3f49c362b0d82ad5e10c6dc097cf7bac60838",
+    "original_sha256": "37caba0e1932e945cd0458606c11216879aa8dd87bafa4d33e5e00cdf686ad63",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.0,
+    "matches": 147,
+    "inliers": 127,
+    "background_alignment": [
+      [
+        1.0000817701455047,
+        -0.00015959511443367627,
+        -0.3151874582739171
+      ],
+      [
+        0.00015959511443367627,
+        1.0000817701455047,
+        0.10304267165819413
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  },
+  {
+    "source_name": "DSC08504.JPG",
+    "file": "DSC08504_cobrizo_sola_v02.jpg",
+    "png": "DSC08504_cobrizo_sola_v02.png",
+    "bytes": 4045929,
+    "sha256": "5a4673dd0f1ffb7f5490ef6c1cddcc6258ed5e6abcccd60c0184a26d612b8cc1",
+    "original_sha256": "3df6d2d3b9033a11d7e534495eaa0d62f0a220d58476bbc8a318daaa494c4509",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.0,
+    "matches": 136,
+    "inliers": 115,
+    "background_alignment": [
+      [
+        1.005961919355408,
+        0.0007055074745135285,
+        -2.8091685001399624
+      ],
+      [
+        -0.0007055074745135285,
+        1.005961919355408,
+        -2.4297207223790336
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  },
+  {
+    "source_name": "DSC08536.JPG",
+    "file": "DSC08536_cobrizo_sola_v02.jpg",
+    "png": "DSC08536_cobrizo_sola_v02.png",
+    "bytes": 3755556,
+    "sha256": "c4c4edaa2539b93be38b68001cfaf629ffeef62a822687310dee2eb0eb329ed7",
+    "original_sha256": "ee1202de2cb2fe0eaf586aadfe1278db4fee8194c4681b32ae9568df458c2e5b",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.0,
+    "matches": 159,
+    "inliers": 147,
+    "background_alignment": [
+      [
+        1.0009533864711713,
+        0.0003612837603284817,
+        -0.7127178223278647
+      ],
+      [
+        -0.0003612837603284817,
+        1.0009533864711713,
+        -0.7057794536948405
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  },
+  {
+    "source_name": "DSC08540.JPG",
+    "file": "DSC08540_cobrizo_sola_v02.jpg",
+    "png": "DSC08540_cobrizo_sola_v02.png",
+    "bytes": 3691207,
+    "sha256": "d26cd1ba7c2a0b4cbcb268e8f1d2713906a8f78998103a6da8baeee5087d2a63",
+    "original_sha256": "ed39894e02275af383b06f6d656161809d89991bf8feb5d152bf175d447552b5",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.0,
+    "matches": 147,
+    "inliers": 138,
+    "background_alignment": [
+      [
+        0.9996890700325554,
+        -0.0003288779983329693,
+        0.17896961887356383
+      ],
+      [
+        0.0003288779983329693,
+        0.9996890700325554,
+        0.27326100148409754
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  },
+  {
+    "source_name": "DSC08554.JPG",
+    "file": "DSC08554_cobrizo_sola_v02.jpg",
+    "png": "DSC08554_cobrizo_sola_v02.png",
+    "bytes": 3886788,
+    "sha256": "c98dd5328a7fee4b423dee4fe03fddcfb3f2495a234c85096f83782cec88be47",
+    "original_sha256": "b42cc23751fbf5ba0393e303b37709012dc75ad16a3058e758727af3bd8f26aa",
+    "original_protected_pixels_changed_before_exposure": 0,
+    "exposure_gain": 1.0,
+    "matches": 201,
+    "inliers": 186,
+    "background_alignment": [
+      [
+        1.0013755319654076,
+        0.00043682550086514906,
+        -0.4261504068470992
+      ],
+      [
+        -0.00043682550086514906,
+        1.0013755319654076,
+        0.06781385479147493
+      ]
+    ],
+    "status": "en_revision",
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+  }
+]

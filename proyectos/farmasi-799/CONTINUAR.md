@@ -36,3 +36,6 @@ La programación nocturna del 4 noviembre era una autorización acotada hasta la
 
 ## Actualizacion prioritaria
 Leer ESTADO_MODELO_D_TODAS.md antes de continuar.29 nuevos D en revision;75 cobrizo pendientes y4 incidencias lila. ReferenciaDaprobada.
+
+### Cobrizo SOLA:6 nuevas
+6 individuales entregadas en revision;69 cobrizo restantes. Fuentes8318,8500,8504,8536,8540,8554. Dos individuales adicionales NO localizadas; no contar recortes grupales.6generaciones nativas intermedias, sujeto recompuesto desde originales; PNGconserva pixeles protegidos (8318 ganancia1.25),JPGcompresion. Prompts exactos y metodo en historial/cobrizo_sola_6. No aprobacion automatica. Drive:https://drive.google.com/drive/folders/1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv
