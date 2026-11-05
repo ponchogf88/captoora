@@ -1,16 +1,16 @@
 # Continuar FARMASI 799 — instrucciones vigentes
 
-Actualizado 4 noviembre 2026. Este documento sustituye la antigua guía nocturna. La entrada canónica estará en `main`: `FARMASI_799_CONTINUAR_AQUI.md`. La rama `farmasi/continuidad-edicion-799` conserva el respaldo de trabajo.
+Actualizado 5 noviembre 2026. Este documento sustituye la antigua guía nocturna. La entrada canónica estará en `main`: `FARMASI_799_CONTINUAR_AQUI.md`. La rama `farmasi/continuidad-edicion-799` conserva el respaldo de trabajo.
 
 ## Antes de editar
 1. Leer `ESTADO_ACTUAL.md`, `registros/fuentes_799.json`, `DIRECCION_Y_CALIDAD.md`, `prompts/RECETAS_VIGENTES.md` y `BITACORA_FARMASI_799.md`.
 2. Confirmar acceso a Drive. Los JPG/PNG NO están en GitHub. Usar `source_id/source_url`, nunca reconstruir una fotografía de memoria. No descargar el rollo completo por comodidad.
 3. Consultar `estado` y `version_actual`: una aprobación histórica o el nombre de una carpeta no sustituye el registro actual. No repetir fuentes aprobadas ni trabajos reservados.
-4. La prioridad actual es el bebé: tres pruebas aceptadas (DSC08258, DSC08290 2, DSC08295). Once fuentes confirmadas y diecinueve tomas inspeccionadas en la secuencia; el resto no está editado. Ver `historial/bebe/`.
+4. La prioridad actual es la modelo del conjunto lila y cabello negro largo, referencia DSC07706 v04. Diez nuevas individuales estan en revision, no aprobadas. No repetirlas ni las diez previamente aprobadas. 7752/7753/7756 tienen productos ocluidos por dedos del fotografo; 7759 es JPEG fuente corrupto confirmado dos veces. Ver historial/modelo_lila_cabello_largo/ESTADO.json. Hay 24 candidatas de vestido cobrizo inspeccionadas sin editar, y grupos posteriores aun no inventariados exhaustivamente. El bebe queda como pendiente anterior, no cancelado. El usuario solicita considerar el chat compartido 6aec4bd5-9504-83e8-81b4-132778368d8b al finalizar: acceso bloqueado por login, contenido no leido; pedir texto o exportacion, no asumir instrucciones.
 5. La petición anterior de veinte fotos diversas sigue sin completar: las pruebas de relleno poligonal de lote16 fueron rechazadas internamente, no entregadas ni aprobadas. No usarlas. Las fuentes deben revalidarse contra el registro antes de continuar.
 
 ## Qué usar para producir
-- `prompts/ejecutados_exactos.json`: 148 prompts enviados realmente; no modificarlos ni confundirlos con una receta vigente. Su versión legible está en `prompts/EJECUTADOS_EXACTOS.md`.
+- `prompts/ejecutados_exactos.json`: 150 prompts enviados realmente; no modificarlos ni confundirlos con una receta vigente. Su versión legible está en `prompts/EJECUTADOS_EXACTOS.md`.
 - `prompts/RECETAS_VIGENTES.md`: requisitos actuales, plantillas NO ejecutadas, referencias aprobadas y métodos locales reales.
 - Las últimas correcciones de cara, etiqueta, cabello y bebé NO se generaron con un prompt de imagen. Fueron edición local desde originales. Reproducir el script y los parámetros correspondientes, no regenerar al sujeto.
 - Los scripts de `scripts/` son verificadores, registradores y recetas específicas. No existe un motor universal de generación masiva listo para ejecutar con una API. Los scripts copiados de correcciones puntuales pueden requerir preparar las rutas/archivos fuente según sus manifiestos; no ejecutarlos a ciegas desde la raíz.

@@ -24,3 +24,6 @@ El estado de esta publicación se verifica por commit remoto, no por esta narrac
 
 ## Comprobacion remota completada
 Main85618cf y respaldo32804ce leidos desde refs remotas tras fetch:148prompts exactos,143aprobadas y paquetes textuales identicos. Validadores y enlaces de entrada pasan; el paquete ya existe en main, no solo localmente. Evidencia en VERIFICACION_RELEVO_2026-11-04.json.
+
+## 5 noviembre: prioridad modelo lila
+10 nuevas JPG verificadas en Drive, estado en_revision;143 aprobadas se conservan sin duplicados. 14 fuentes pendientes encontradas:10 editadas,3 oclusion de productos,1 JPEG no decodificable. Fondo vacio nativo + originales tonales, sin regenerar sujetos ni texto.150prompts exactos historicos.24candidatas cobrizo inspeccionadas,no editadas. Chat compartido adicional bloqueado por login; contenido no aplicado. Carpeta revision: https://drive.google.com/drive/folders/1qr41rfw0mHH-fWut7qkS2biTm5b0iH0F . Detalles/hashes/metodo en historial/modelo_lila_cabello_largo.

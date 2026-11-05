@@ -1182,5 +1182,21 @@
     "provenance": "exact_execution_store",
     "status": "awaiting_user_approval",
     "model": "integrated_image_gen_model_not_exposed"
+  },
+  {
+    "id": "modelo_lila_cabello_largo_native_1",
+    "source": "DSC07747.JPG",
+    "prompt": "Edit DSC07747 product-model photograph. Change ONLY the home studio background: remove mirror, black acoustic foam, visible wall/ceiling and backdrop clamps, extend the existing white photographic backdrop seamlessly into a softly shaded off-white professional studio with subtle warm grey corner depth. Extend the real white short plush rug across the visible floor preserving natural shadows and realistic fine fibers, restrained dreamy edge softness. Keep original framing and exact position, scale, expression, face, natural straight long black hair with real strands and gentle movement, body, hands, lilac outfit, shoes, stacked product containers and their actual labels, and dumbbells unchanged. No beautification, face repainting, smoothing, reconstructed lettering, extra objects, LEDs, cropping or pose changes. This is commercial photography: preserve authentic people and products; remove only the home set outside the paper. Keep photographic texture.",
+    "provenance": "exact_execution_store",
+    "status": "internal_background_trial_not_delivered",
+    "model": "integrated_image_gen_model_not_exposed"
+  },
+  {
+    "id": "modelo_lila_cabello_largo_native_2",
+    "source": null,
+    "prompt": "Create an EMPTY photographic background plate based on this studio photograph, same 2:3 portrait canvas. Remove the woman and ALL products and objects. Only an empty seamless very light neutral white studio cyclorama wall and real subtle short white plush rug floor across bottom 25 percent; fine realistic fibers, delicate grey depth at extreme corners, soft natural studio lighting. Background color nearly white RGB approximately 240 241 241 at center, 226 229 229 at outer corners. Restrained elegant dreamy edge softness, not fog, no strong vignette, no fabric wrinkles, no wall seams, no equipment, no people, no text, no objects. Keep continuous floor to wall transition at same height. This will be a compositing plate behind authentic untouched original subjects.",
+    "provenance": "exact_execution_store",
+    "status": "empty_background_plate_used_for_local_compositing",
+    "model": "integrated_image_gen_model_not_exposed"
   }
 ]
