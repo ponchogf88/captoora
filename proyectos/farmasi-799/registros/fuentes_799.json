@@ -4267,7 +4267,13 @@
     "version_actual": "v04",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1YEBN_0ktihRb3MYl1ZZfYQ9vPjNyDEwY/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/19SJhqwJrlwYweF4u82Jw_FELD0R_HTQ3/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07720.JPG",
@@ -4278,7 +4284,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1qodzPDKb0OZMxU5ndkjoC1YL3z_WdUek/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07721.JPG",
@@ -4289,7 +4301,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1tm2VmG5AM0qt8hvPvRoXDpqWgH3Fd7Dy/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07722.JPG",
@@ -4300,7 +4318,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1aZbaoLdOwOnsQqlp-JtkxNVb6FhIS6w_/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07724.JPG",
@@ -4311,7 +4335,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1_hRuTcnc6X5elGGv-ng1uKIbt3kj2ooA/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07726.JPG",
@@ -4322,7 +4352,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1q7QnVRfrZhyqbJga2kKYbGWCI4FLpZlf/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07731.JPG",
@@ -4333,7 +4369,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1j1qf7PRcbPOxWEthWH3hjjLFtrgYkXKG/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07732.JPG",
@@ -4344,7 +4386,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1X7ZrL-qwwMtZine1p3dqkipbIdXUq8WB/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07733.JPG",
@@ -4355,7 +4403,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1I9kfozV5waH6ShgmXvRDpEL3J6Pr52Q0/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07734.JPG",
@@ -4366,27 +4420,34 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1lTfaVCijZEHsUbli4OR_vUXqb5oC9LE4/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC07736.JPG",
     "source_id": "18XdO91ptN0rsiqbuWdgj8hpK7lOscYYN",
     "source_url": "https://drive.google.com/file/d/18XdO91ptN0rsiqbuWdgj8hpK7lOscYYN/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/14ELEUllMqYNg-NQJy1aFoicr9J5xQisn/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1TIsl4pP7xqQxLTwXua9z91yXZrHqZz-Y/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
     "source_name": "DSC07738.JPG",
     "source_id": "1nUFTGeSwpW82ELbE7njQ2tfzib8AaQpX",
     "source_url": "https://drive.google.com/file/d/1nUFTGeSwpW82ELbE7njQ2tfzib8AaQpX/view?usp=drivesdk",
-    "estado": "en_revision",
+    "estado": "aprobada",
     "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
-    "decision_usuario_actual": "pendiente_de_aprobacion",
+    "version_actual": "pared_D_sombra_v05",
+    "decision_usuario_actual": "aprobada",
+    "approved_jpg_drive": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
     "revision_drive_url": "https://drive.google.com/file/d/1y3KUbvjxdOoPxEsHsNgOKzEHAQRFDJGI/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
@@ -4395,10 +4456,10 @@
     "source_id": "1-cNGR9rokBo6ezh_dbEuh_21cbnDhXCO",
     "source_url": "https://drive.google.com/file/d/1-cNGR9rokBo6ezh_dbEuh_21cbnDhXCO/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1L0jTH3o17DWbH4Ac8zan8xGCYoDqEr9X/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1PqyRGdNHWRTeSHxstg9JknoSX8FeQUuW/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4406,10 +4467,10 @@
     "source_id": "1m3c6y9lKe04yvXNP71SHUqMRXN2HUx6i",
     "source_url": "https://drive.google.com/file/d/1m3c6y9lKe04yvXNP71SHUqMRXN2HUx6i/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1Ih3aZr3SBGkBVDIwRlcwq48Kt91DIFXg/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1QyPmcVkO03zoCqIPWpH7dAMLVo9u4ntM/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4417,10 +4478,10 @@
     "source_id": "19lgXPt4G6ITfRionMKOIqo2WpLI1ewiU",
     "source_url": "https://drive.google.com/file/d/19lgXPt4G6ITfRionMKOIqo2WpLI1ewiU/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1KwPBgZQDcSr2fQd8ngWs3-6AdWs0rVAi/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1h_dx6k99J46jiRSK4PhJJU4PJkrbTzB3/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4452,10 +4513,10 @@
     "source_id": "1MARQq4Fsqz4ERy-jIbJebMGRo3W35JML",
     "source_url": "https://drive.google.com/file/d/1MARQq4Fsqz4ERy-jIbJebMGRo3W35JML/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1dcPOlROpCMk8fAtYembmn6KGposq4qQr/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1SuZKT5GVCYWKktYyymV3a8sBEseKHpL-/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4463,10 +4524,10 @@
     "source_id": "1H1GUiXhBkBfokE7RnEDDbEX-mMLIZ1I-",
     "source_url": "https://drive.google.com/file/d/1H1GUiXhBkBfokE7RnEDDbEX-mMLIZ1I-/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1WGLUvfjR0DQq_SX3lgvLlKyIjYkJKWTv/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1X4Tynnbx-udMkPf-gB5-GDsPX2-O1J9p/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4474,10 +4535,10 @@
     "source_id": "1tcFD8qcIhb353ob-uwYATWkhcUhWrECt",
     "source_url": "https://drive.google.com/file/d/1tcFD8qcIhb353ob-uwYATWkhcUhWrECt/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1vfj6XT9Fva2cvThZixlt9Vxp-SL4z_v9/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1uizzew_AG7NTK5Pam73OhjkBFWBlyOPW/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4485,10 +4546,10 @@
     "source_id": "1VlGBMqV-LYwxErAJlDObVSK-YsNFMSvv",
     "source_url": "https://drive.google.com/file/d/1VlGBMqV-LYwxErAJlDObVSK-YsNFMSvv/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/14jei0E3lXSwCZq8Km6zkUMj7P9ngwNQp/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1URTagUfStZl3WJwaEMK4KPUsG2TW4YVZ/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4496,10 +4557,10 @@
     "source_id": "15hXEKpB3uj8dEme4XUqorT5YpoErBi3u",
     "source_url": "https://drive.google.com/file/d/15hXEKpB3uj8dEme4XUqorT5YpoErBi3u/view?usp=drivesdk",
     "estado": "en_revision",
-    "lote_actual": "modelo_lila_cabello_largo",
-    "version_actual": "lila_v03",
+    "lote_actual": "modelo_lila_cobrizo_D_29",
+    "version_actual": "D_v06",
     "decision_usuario_actual": "pendiente_de_aprobacion",
-    "revision_drive_url": "https://drive.google.com/file/d/1IOAGnLXby_yrTSsNMhZEExWoKlQY_2ZK/view?usp=drivesdk",
+    "revision_drive_url": "https://drive.google.com/file/d/1VTBwGq3XIhFkaBhM6vwy5WN6fWAQxK8V/view?usp=drivesdk",
     "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
   },
   {
@@ -4760,7 +4821,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1Gqw-HWv7OZtkyBDNrtq4itPLwBj46zK8/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08456.JPG",
@@ -4771,7 +4838,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1shTs411GIwjoYxhQj9aOtPYC3isIFboQ/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08457.JPG",
@@ -4782,7 +4855,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1PZU1ibvUOCP0vBjKxWNLnREQG7WwiXtF/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08459.JPG",
@@ -4793,7 +4872,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/12FV2grtGN0zHjr-u_3UYdAxGDkOlLRLm/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08466.JPG",
@@ -4804,7 +4889,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1ePYEqXyk1jF1xaIQeXpXh-wJZJ3KvUgy/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08471.JPG",
@@ -4815,7 +4906,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1Uk2ZXW8X6J6QDdHJEsKYqCxYcNwIioVX/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08477.JPG",
@@ -4826,7 +4923,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/133DCqJZHogOeHZ4ioRCCJvTuX05btzcn/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/133DCqJZHogOeHZ4ioRCCJvTuX05btzcn/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/133DCqJZHogOeHZ4ioRCCJvTuX05btzcn/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1zL8toV-5NaaVgZ6EC4rog5ss1rKP2FG6/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08479.JPG",
@@ -4837,7 +4940,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1dM0Q2SZAv4GkzAIN-RrMpYs1-6612SeB/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08481.JPG",
@@ -4848,7 +4957,13 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1X5qBEt9LXqQUX72urcgD1kDE4iljhfid/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08484.JPG",
@@ -4859,7 +4974,13 @@
     "version_actual": "v03",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+    "reemplazo_en_revision": {
+      "version": "D_v06",
+      "url": "https://drive.google.com/file/d/1KnFztuJutyLejjN_0FLoSSPx7o3FDfYZ/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
+    }
   },
   {
     "source_name": "DSC08485.JPG",
