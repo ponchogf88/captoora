@@ -21,3 +21,6 @@ Se confirmaron once nombres en Drive y se inspeccionaron diecinueve tomas en una
 ## 4noviembre: corrección del relevo a Antigravity
 Se comprobó que main no contenía `proyectos/farmasi-799`, aunque la rama de continuidad sí contenía148 prompts. CONTINUAR y README mezclaban datos nocturnos obsoletos con reglas posteriores. Se reescribieron las entradas vigentes, se exportaron prompts completos a Markdown legible, se documentaron recetas locales reales y plantillas nuevas separadas, y se preparó publicación textual en main con índice raíz y enlaces desde AGENTS/START_HERE/bitácora principal.
 El estado de esta publicación se verifica por commit remoto, no por esta narración. El registro estructurado actualizado es `registros/estado_799.json` y la evidencia de cada entrega está en `historial/`.
+
+## Comprobacion remota completada
+Main85618cf y respaldo32804ce leidos desde refs remotas tras fetch:148prompts exactos,143aprobadas y paquetes textuales identicos. Validadores y enlaces de entrada pasan; el paquete ya existe en main, no solo localmente. Evidencia en VERIFICACION_RELEVO_2026-11-04.json.

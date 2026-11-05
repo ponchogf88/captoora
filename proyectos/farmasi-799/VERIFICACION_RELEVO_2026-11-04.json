@@ -1,0 +1,23 @@
+{
+  "fecha_local": "2026-11-04",
+  "repositorio": "ponchogf88/captoora",
+  "rama_canonica": "main",
+  "main_verificado": "85618cfbe13a59fbb0d63f4adee834264fc187dd",
+  "respaldo_verificado": "32804cee115f76d4d951ca3010d838870262c910",
+  "prompts_historicos_exactos": 148,
+  "paquetes_identicos_verificados": true,
+  "fuentes": 799,
+  "aprobadas": 143,
+  "en_revision": 0,
+  "pendientes": 641,
+  "rechazadas": 12,
+  "bloqueadas": 3,
+  "verificaciones": [
+    "lectura de blobs remotos tras fetch",
+    "148 prompts coinciden con JSON de ejecucion",
+    "cada prompt completo aparece en Markdown",
+    "rutas de entrada existen en main",
+    "validadores de registros y relevo pasan",
+    "solo documentos y scripts; sin fotos ni secretos"
+  ]
+}
