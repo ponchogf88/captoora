@@ -4,7 +4,7 @@
     "original_sha256": "bf6534a408114e8874a6500c81dfa65aa81b77d43b326c8ea77223764b8820c1",
     "png_sha256": "a0b297a4a698dd81edfe7a7461f296ef866ea4541dc5035b93fe815d0ad4e7cd",
     "jpg_sha256": "5e98208edbfa48b5e39d65c19a044dcdf46dfe292cfeef2091daeaaca7aaf1c0",
-    "estado": "en_revision",
+    "estado": "aprobada",
     "version": "bebe_v01",
     "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
     "rotate_ccw": 90,
@@ -36,14 +36,15 @@
     "source_id": "1I5Hb64hGn0RvOXJ2VeWtYyW31egvvZl5",
     "source_url": "https://drive.google.com/file/d/1I5Hb64hGn0RvOXJ2VeWtYyW31egvvZl5/view?usp=drivesdk",
     "jpg_drive": "https://drive.google.com/file/d/1J0vOE6mpTtSHL9omVvJ8sbc7ZKMZxWGY/view?usp=drivesdk",
-    "png_drive": "https://drive.google.com/file/d/1vkU2MaBKM8GFMJA9iq9U3h69ywNRcTTd/view?usp=drivesdk"
+    "png_drive": "https://drive.google.com/file/d/1vkU2MaBKM8GFMJA9iq9U3h69ywNRcTTd/view?usp=drivesdk",
+    "aprobacion_usuario": "Las ame, me encantaron. 2026-11-04"
   },
   {
     "source_name": "DSC08290 2.JPG",
     "original_sha256": "164043d029173bedb5d1a47397473fd9a01f63cbfdd60e6ecff5496078a178e2",
     "png_sha256": "c88dd46837b19e482505c7aae1594a7ef97def22d4ad268b2d933f1cd7613b2c",
     "jpg_sha256": "3b119809d04abdf79633202b727840537f601d44d9bbb99707a62a089e79f29f",
-    "estado": "en_revision",
+    "estado": "aprobada",
     "version": "bebe_v01",
     "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
     "rotate_ccw": 90,
@@ -75,14 +76,15 @@
     "source_id": "1TTwa6ETNbS1EMyrhPavhN25kieu9NXnF",
     "source_url": "https://drive.google.com/file/d/1TTwa6ETNbS1EMyrhPavhN25kieu9NXnF/view?usp=drivesdk",
     "jpg_drive": "https://drive.google.com/file/d/1blwwWSLV1pdU5UpClxnWMPlEfZOVJ0yY/view?usp=drivesdk",
-    "png_drive": "https://drive.google.com/file/d/1Ml9y9gkpNHcATNyBp8qs7W0gkbOECSa7/view?usp=drivesdk"
+    "png_drive": "https://drive.google.com/file/d/1Ml9y9gkpNHcATNyBp8qs7W0gkbOECSa7/view?usp=drivesdk",
+    "aprobacion_usuario": "Las ame, me encantaron. 2026-11-04"
   },
   {
     "source_name": "DSC08295.JPG",
     "original_sha256": "7b0e59e85783eaa10966c75ad0ead58ac2b7f4caa5a733b74f45e73213c6640a",
     "png_sha256": "da11760104969eac3a055520971b1cd5a689c2af3c022661f2c3992803a13297",
     "jpg_sha256": "4f7de35fda9cabad85ba00a15e42dcb911f91f9ed198960920afe7ef1280fd95",
-    "estado": "en_revision",
+    "estado": "aprobada",
     "version": "bebe_v01",
     "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
     "rotate_ccw": 90,
@@ -114,6 +116,7 @@
     "source_id": "1mVSALPROjUUfBaYXOP23apS49c8vvmBo",
     "source_url": "https://drive.google.com/file/d/1mVSALPROjUUfBaYXOP23apS49c8vvmBo/view?usp=drivesdk",
     "jpg_drive": "https://drive.google.com/file/d/143d19vyCBMVVFFqtWMX3-GLslt-MxGnT/view?usp=drivesdk",
-    "png_drive": "https://drive.google.com/file/d/1Q75TBY_sjmryowtu8umNXEsKUiyVunUv/view?usp=drivesdk"
+    "png_drive": "https://drive.google.com/file/d/1Q75TBY_sjmryowtu8umNXEsKUiyVunUv/view?usp=drivesdk",
+    "aprobacion_usuario": "Las ame, me encantaron. 2026-11-04"
   }
 ]

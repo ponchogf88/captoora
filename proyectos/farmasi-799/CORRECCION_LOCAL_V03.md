@@ -15,4 +15,4 @@ Prompts generativos historicos se conservan como evidencia, no como recomendacio
 
 Entrega autorizada para revision: correcciones_rostros_textos_v03/entrega_final. El script restaurar_originales_v03.py contiene pruebas internas; no es una receta general validada. finalizar_correcciones_marcadas.py restringe la entrega a las zonas de las capturas. Las mascaras numericas prueban alcance, no que un detalle ausente en fuente sea recuperable. La fidelidad general de lotes anteriores sigue pendiente; el usuario revisa las versiones concretas primero.
 
-Lectura Drive confirma8JPG y8PNG maestros de entrega. Las13pruebas internas no son una entrega ni cuentan como nuevas. Registro799 conserva29aprobadas/110enrevision; contador nocturno100 sin incremento por estas versiones. Las comparativas visuales estan en Drive/local, no en git.
+Actualización vigente: las ocho correcciones v03 fueron aceptadas, y DSC07706 tiene v04 posterior aprobada. Las versiones reemplazadas están archivadas fuera de aprobadas. El estado general y la prioridad bebé se consultan en ESTADO_ACTUAL y CONTINUAR; los conteos nocturnos son históricos, no una orden vigente.

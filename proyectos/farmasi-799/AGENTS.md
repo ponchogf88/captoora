@@ -1,14 +1,6 @@
-# Reglas de continuidad FARMASI
+# Reglas actuales FARMASI799
 
-- Leer README, CONTINUAR, DIRECCION_Y_CALIDAD y requisitos antes de editar.
-- No perder estado acumulativo: fuentes originales, rechazadas, pruebas, en revisión y aprobadas son distintos.
-- No subir JPG/PNG/RAW a git ni descargar lotes completos por comodidad; fotos de sesión en Drive y custodia del repositorio.
-- No generar, instalar, comprar ni consumir API por ejecutar los scripts del respaldo.
-- No afirmar modelo GPT Image 2 si la herramienta no lo expone.
-- No usar máscara Vision rechazada como método de producción. No redefinir prompt reconstruido como prompt histórico exacto.
-- Después de cada lote o aprobación, actualizar registros y prompts, verificar Drive y subir un commit de esta carpeta. No crear automatizaciones nuevas ni reactivar antiguas. Excepcion posterior expresamente autorizada: produccion nocturna exclusiva4nov2026 hasta200 o10:00, segun operacion_nocturna/PLAN_NOCTURNO.json y PROTOCOLO_AUTOMATIZACION.md.
-- No declarar identidad intacta, producto exacto, subida, aprobación o sincronización sin la evidencia correspondiente.
-- Mantener orden por nombre dentro de la selección; dejar los saltos pendientes explícitos.
-
-
-Actualizacion posterior obligatoria: leer CORRECCION_LOCAL_V03.md. No continuar con generacion integral de caras o letras. Restauracion local desde originales expresamente autorizada; originales y versiones previas intactos, regiones y auditoria requeridas. No confundir aprobacion estetica previa con auditoria global de fidelidad de textos.
+Leer README, CONTINUAR, prompts/RECETAS_VIGENTES, BITACORA_FARMASI_799 y registros/fuentes_799 antes de editar. No usar instrucciones nocturnas vencidas como tarea vigente. Main es la entrada canónica; mantenerla sincronizada tras cada entrega.
+No perder originales, estados o aprobaciones. No subir fotos a Git. No generar, instalar, comprar o consumir API al ejecutar validadores. No atribuir un modelo no expuesto. No reutilizar máscaras Vision, rellenos poligonales o ensayos internos rechazados.
+No regenerar caras ni letras; usar detalle original y proteger los sujetos. Prompts históricos exactos no son recetas vigentes por sí solos. Textos/rostros irrecuperables se declaran, no se inventan. Bebé: no mezclar expresiones entre tomas.
+Una sola última aprobada por fuente y formato dentro de aprobadas; anteriores fuera, en historial. Una aprobación global pasada no aprueba nuevas imágenes futuras. Mantener orden y selecciones explícitas. Verificar Drive, registros, bytes/hashes y commit remoto antes de declarar entrega o sincronización.

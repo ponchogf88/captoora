@@ -60,7 +60,7 @@ def main():
         f'- {len(hashes)} originales inspeccionados con SHA-256; no afirmar que los 799 tengan hash comprobado.\n'
         f'- {counts.get("bloqueada_herramienta", 0)} fuentes bloqueadas por herramienta; no cuentan como producción.\n'
         '- Lote01 de veinte: rechazado por cabello y contornos. No reutilizar sus máscaras.\n'
-        '- Ver `operacion_nocturna/PLAN_NOCTURNO.json` para el contador de hasta200 nuevas, calendario y reservas activas.\n')
+        '- Prioridad e instrucciones actuales en CONTINUAR.md; el calendario nocturno del4nov es historico y no autoriza nuevas activaciones.\n')
     readme = dest / 'README.md'
     if readme.exists():
         readme.write_text(re.sub(r'## Estado comprobado\n.*?(?=\nEl registro distingue)', summary, readme.read_text(), flags=re.S))

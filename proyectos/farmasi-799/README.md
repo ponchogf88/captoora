@@ -1,46 +1,36 @@
-# FARMASI · continuidad de edición de 799 fotografías
+# FARMASI 799 — paquete de continuidad para Antigravity y otros editores
 
-Respaldo privado del proyecto de sesión del 31 de octubre. Fecha de corte de este paquete: 4 de noviembre de 2026, hora Ciudad de México. No es publicación ni entrega al cliente.
+**Entrada:** [CONTINUAR.md](CONTINUAR.md). **Prompts reales:** [148 ejecuciones legibles](prompts/EJECUTADOS_EXACTOS.md) y [JSON exacto](prompts/ejecutados_exactos.json). **Métodos actuales:** [RECETAS_VIGENTES.md](prompts/RECETAS_VIGENTES.md).
 
-## Empezar aquí
-
-1. Leer [CONTINUAR.md](CONTINUAR.md), [DIRECCION_Y_CALIDAD.md](DIRECCION_Y_CALIDAD.md) y el registro de requisitos.
-2. Consultar `registros/fuentes_799.json`, `registros/artefactos.json` y `prompts/ejecutados_exactos.json`.
-3. Abrir las referencias aceptadas en Drive antes de editar. El prompt solo no sustituye la referencia visual.
+Este paquete permite entender y continuar el trabajo, no convierte un prompt en un editor ni transfiere permisos de Drive o cuota entre proveedores. Las fotografías quedan en Drive; GitHub contiene texto, scripts, enlaces estables, estados y hashes.
 
 ## Estado comprobado
 
 - 799 fuentes JPG inventariadas con ID y enlace de Drive.
-- 140 JPG aprobados y verificados en Drive.
-- 3 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
+- 143 JPG aprobados y verificados en Drive.
+- 0 JPG nuevos o anteriores en revisión; no aprobados automáticamente.
 - 148 prompts exactos recuperados; incluyen intentos bloqueados sin imagen cuando están identificados así.
 - 185 originales inspeccionados con SHA-256; no afirmar que los 799 tengan hash comprobado.
 - 3 fuentes bloqueadas por herramienta; no cuentan como producción.
 - Lote01 de veinte: rechazado por cabello y contornos. No reutilizar sus máscaras.
-- Ver `operacion_nocturna/PLAN_NOCTURNO.json` para el contador de hasta200 nuevas, calendario y reservas activas.
+- Prioridad e instrucciones actuales en CONTINUAR.md; el calendario nocturno del4nov es historico y no autoriza nuevas activaciones.
 
-El registro distingue fuente, versión, aceptación y archivo verificado. Los campos históricos de rechazo no invalidan una versión posterior aprobada. `historial/` conserva fotografías documentales de registros anteriores; no es la cola vigente.
+El registro distingue originales, aprobadas, pendientes, bloqueadas y rechazadas. Una versión histórica no cuenta como otra fotografía.
 
-## Archivos fotográficos en la nube
+## Leer en este orden
+1. [CONTINUAR.md](CONTINUAR.md): cola y reglas de ejecución vigentes.
+2. [ESTADO_ACTUAL.md](ESTADO_ACTUAL.md) y [fuentes_799.json](registros/fuentes_799.json): qué existe y qué falta.
+3. [RECETAS_VIGENTES.md](prompts/RECETAS_VIGENTES.md): cómo reproducir métodos aprobados sin inventar rostros o letras.
+4. [EJECUTADOS_EXACTOS.md](prompts/EJECUTADOS_EXACTOS.md): prompts históricos completos, identificados por fuente/ejecución.
+5. [BITACORA_FARMASI_799.md](BITACORA_FARMASI_799.md): decisiones, fallos, aprobaciones y cambios de método.
+6. [DIRECCION_Y_CALIDAD.md](DIRECCION_Y_CALIDAD.md): referencias, sujetos, texturas y revisión.
 
-- [Originales 799](https://drive.google.com/drive/folders/1fnUJljKnCMEuGlozJg8wxVTEDnWAI9lv).
-- [Aprobadas JPG](https://drive.google.com/drive/folders/1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11).
-- [Aprobadas PNG / referencias](https://drive.google.com/drive/folders/1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-).
-- [Lote05: siete en revisión](https://drive.google.com/drive/folders/1hvuKsanvCMWXAG99H8-HSP1SI7OOqoEq).
-- [Diez grupales nocturnas en revisión](https://drive.google.com/drive/folders/1rcBPhUIC6Ha4QontlUBxk4r6dwlZ_hEl).
-- [Diez individuales nocturnas en revisión](https://drive.google.com/drive/folders/1VkBJUZkKarh55p0LZfI8I5JCirArnZsI).
-- [Lote04 en revisión](https://drive.google.com/drive/folders/1RmnlaNjOJt8HFcZ0sSvx1ca-eprV-T66).
+Las correcciones locales v03/v04 y las pruebas del bebé no tienen un nuevo prompt generativo: sus recetas y manifiestos describen las operaciones realmente aplicadas. No atribuir GPT Image2 a llamadas cuyo modelo no fue expuesto. No atribuir detalle de sensor a un fondo ampliado.
 
-GitHub respalda instrucciones, recetas, enlaces, hashes y decisiones. No contiene los JPG/PNG ni los 799 originales, conforme a la custodia del repositorio. Drive requiere acceso a la cuenta autorizada. No contiene claves ni enlaces temporales de descarga. No hay entrega Pixieset verificada para este proyecto.
+## Carpetas verificadas
+- [Originales de la selección](https://drive.google.com/drive/folders/1fnUJljKnCMEuGlozJg8wxVTEDnWAI9lv).
+- [Última aprobada JPG](https://drive.google.com/drive/folders/1O70rKDMLZfC9d_eY-0Ugh7MAl-iZuw11).
+- [Última aprobada PNG](https://drive.google.com/drive/folders/1nHp9UEYFBFMngGT6QRldBGlsxKqRzAG-).
+- [Historial fuera de entrega](https://drive.google.com/drive/folders/1PyB8uIJMFq0_cP1kLV15EC_ch5ax6PzD).
 
-## Qué produce la calidad
-
-Edición sobre la foto exacta; bloqueo de identidad, pose y escala; instrucciones locales de limpieza; profundidad y sombras conservadas; contraluz natural en el cabello; elección visual del usuario; revisión contra la fuente y control de versiones. No existe un ajuste secreto ni una garantía de reproducción idéntica.
-
-Las llamadas actuales usan `image_gen` integrado. El identificador del modelo no se expone: no se atribuye GPT Image 2 a estas salidas. No hay seed, máscara generativa ni parámetros de fidelidad registrados que puedan inventarse. Las salidas recientes son de resolución generada, frecuentemente 1024×1536; no equivalen al archivo de sensor de 24 MP. Otro proveedor puede producir cambios de identidad o microtexto incluso con el mismo prompt.
-
-## Actualización
-
-Después de cada lote o aprobación, actualizar manifiestos, prompts exactos y lectura de Drive; ejecutar el validador y crear un nuevo commit. No hay programación automática ni llamadas de generación al abrir este paquete. El usuario canceló las automatizaciones para ahorrar cuota.
-
-`scripts/preparar_respaldo.py --source /ruta/FARMASI_799 --dest /ruta/de/este/paquete` reconstruye los registros desde el expediente operativo; no edita imágenes, no cobra y no sube archivos. La sincronización git es una acción separada y verificable. Ver [CONTINUAR.md](CONTINUAR.md).
+No hay entrega Pixieset verificada. Ver [SINCRONIZAR_GITHUB.md](SINCRONIZAR_GITHUB.md) para mantener visible la información en la rama principal.

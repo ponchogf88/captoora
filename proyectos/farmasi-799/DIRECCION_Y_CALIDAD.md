@@ -16,14 +16,8 @@ Conservar rostro, facciones, expresión, mirada, piel real, cabello completo, po
 
 Mantener textura y sombras originales, incluso leves tonos cálidos y esquinas ligeramente oscuras; no producir un recorte blanco plano de catálogo. Suelo de peluche blanco continuo; extenderlo donde termina el set y difuminarlo suavemente hacia esquinas lejanas. No tapar sombras de apoyo ni convertir toda la escena en beige intenso. Dreamy pertenece al fondo y a la textura, no a borrar piel, caras o productos.
 
-## Flujo real
-
-1. Inventario Drive y fuente exacta por ID; orientar visualmente. EXIF puede no indicar giro: comprobar ojos/cabeza arriba. DSC01909 es horizontal y debe seguir horizontal.
-2. Cargar la fuente y verla antes de editar. Usar una llamada de editor por imagen, no una generación de collage para diez fotos.
-3. Prompt: alcance local del cambio + invariantes + fondo + textura/luz + objetos que deben permanecer + prohibiciones. Los prompts enviados se guardan completos en inglés en `prompts/ejecutados_exactos.json`.
-4. Guardar PNG de salida y exportar JPG de calidad 97 sin submuestreo cromático cuando se usa Pillow. Esa conversión cambia formato, no demuestra aumento de resolución ni mejora la fuente.
-5. Revisar cada salida contra original, además de la hoja de contacto. Numerar con nombre fuente. Guardar JPG en revisión y leer la carpeta para verificar existencia.
-6. Solo la aprobación expresa mueve una versión a aprobadas; la aprobación del concepto no aprueba todas las fotos futuras. Guardar fecha/decisión/enlace y actualizar GitHub.
+## Flujo vigente
+Leer CONTINUAR y prompts/RECETAS_VIGENTES. Primero localizar, abrir y orientar el original. Para edición local usar el método real registrado, no generación. Si un editor modifica el fondo, debe proteger efectivamente sujetos/etiquetas; el prompt solo no basta. Verificar cada salida ampliada, guardar original y versión, subir a revisión con lectura de Drive y mover únicamente tras aprobación expresa. Aprobadas contiene solo la última aprobada por fuente/formato; historial siempre fuera. No reactivar horarios nocturnos pasados.
 
 ## Revisión ampliada obligatoria
 

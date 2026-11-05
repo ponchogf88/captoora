@@ -1,48 +1,30 @@
-# Relevo a otro modelo
+# Continuar FARMASI 799 — instrucciones vigentes
 
-## Contrato de continuidad
+Actualizado 4 noviembre 2026. Este documento sustituye la antigua guía nocturna. La entrada canónica estará en `main`: `FARMASI_799_CONTINUAR_AQUI.md`. La rama `farmasi/continuidad-edicion-799` conserva el respaldo de trabajo.
 
-No recrear las 799 fotos ni empezar desde cero. Leer primero la cola y las aprobaciones; preservar originales. No preguntar de nuevo por decisiones que ya están documentadas. La instrucción activa es la producción nocturna autorizada hasta200nuevas del4noviembre; leer operacion_nocturna/PLAN_NOCTURNO.json antes de elegir fuentes. Lote04 aún no aprobado. Las siete salidas de lote05 ya se aprobaron; las tres bloqueadas siguen pendientes.
+## Antes de editar
+1. Leer `ESTADO_ACTUAL.md`, `registros/fuentes_799.json`, `DIRECCION_Y_CALIDAD.md`, `prompts/RECETAS_VIGENTES.md` y `BITACORA_FARMASI_799.md`.
+2. Confirmar acceso a Drive. Los JPG/PNG NO están en GitHub. Usar `source_id/source_url`, nunca reconstruir una fotografía de memoria. No descargar el rollo completo por comodidad.
+3. Consultar `estado` y `version_actual`: una aprobación histórica o el nombre de una carpeta no sustituye el registro actual. No repetir fuentes aprobadas ni trabajos reservados.
+4. La prioridad actual es el bebé: tres pruebas aceptadas (DSC08258, DSC08290 2, DSC08295). Once fuentes confirmadas y diecinueve tomas inspeccionadas en la secuencia; el resto no está editado. Ver `historial/bebe/`.
+5. La petición anterior de veinte fotos diversas sigue sin completar: las pruebas de relleno poligonal de lote16 fueron rechazadas internamente, no entregadas ni aprobadas. No usarlas. Las fuentes deben revalidarse contra el registro antes de continuar.
 
-## Reanudar
+## Qué usar para producir
+- `prompts/ejecutados_exactos.json`: 148 prompts enviados realmente; no modificarlos ni confundirlos con una receta vigente. Su versión legible está en `prompts/EJECUTADOS_EXACTOS.md`.
+- `prompts/RECETAS_VIGENTES.md`: requisitos actuales, plantillas NO ejecutadas, referencias aprobadas y métodos locales reales.
+- Las últimas correcciones de cara, etiqueta, cabello y bebé NO se generaron con un prompt de imagen. Fueron edición local desde originales. Reproducir el script y los parámetros correspondientes, no regenerar al sujeto.
+- Los scripts de `scripts/` son verificadores, registradores y recetas específicas. No existe un motor universal de generación masiva listo para ejecutar con una API. Los scripts copiados de correcciones puntuales pueden requerir preparar las rutas/archivos fuente según sus manifiestos; no ejecutarlos a ciegas desde la raíz.
 
-1. Verificar acceso autenticado a las carpetas de Drive. Descargar/materializar únicamente la fuente que se editará si la herramienta lo requiere; respetar custodia de nube del repositorio.
-2. Seleccionar archivos por nombre dentro de la persona/categoría elegida. Registrar los saltos como pendientes. No cambiar los nombres de las fuentes ni perder el orden maestro.
-3. Usar el original como objetivo y una referencia aprobada como guía estética. Una prueba generada que cambió escala no sustituye al original de identidad.
-4. Leer el prompt exacto de una toma comparable. Registrar el prompt adaptado realmente enviado, proveedor/modelo que el sistema sí exponga, fuente, referencias, fecha, salida y decisión. No etiquetar una plantilla reconstruida como ejecución histórica.
-5. Editar una prueba y revisar cabello, cara, manos, productos, sombras y geometría a escala completa. Solo extender la producción cuando no haya fallos detectados; no pedir aprobación extra para pasos ya autorizados.
-6. Producir el tamaño de lote autorizado; ahora diez. Mostrar salidas numeradas. Mantener `en_revision` hasta aceptación del usuario. Guardar en `aprobadas/JPG` solo después de aceptación expresa y verificar por lectura de Drive.
-7. Actualizar este respaldo y comprobar el commit remoto. Un archivo local o un push iniciado no demuestra respaldo remoto.
+## Puerta de calidad obligatoria
+Preservar rasgos, expresión, pose, pelo, manos y productos. No regenerar caras ni textos; no inventar detalle borroso o quemado. Para cambiar un fondo, el editor debe proteger de verdad al sujeto y los envases. Si el motor no admite esa protección, detener ese método y registrar la limitación: un prompt por sí solo no garantiza identidad.
+Comparar cada fuente y salida a resolución suficiente. No usar recorte Vision rechazado ni rellenos poligonales que invadan al sujeto. No mezclar expresiones de bebé entre fotos. Las zonas del set que no puedan limpiarse con fidelidad quedan pendientes; no resolverlas pintando sobre personas.
 
-## Cambiar de motor sin gastar a ciegas
+## Lotes, aprobación y versiones
+Trabajar en los lotes autorizados por el usuario. Mostrar pruebas antes de extender un método que cambie. Una salida nueva va a revisión: las aprobaciones globales anteriores no aprueban imágenes futuras.
+`aprobadas/JPG` y `aprobadas` (PNG) contienen UNA sola última versión expresamente aprobada por fuente y formato. Las versiones anteriores se mueven al historial FUERA de aprobadas; no borrarlas ni exhibirlas como entregas duplicadas. DSC07706 vigente: v04.
+Después de una entrega/aprobación: verificar nombres, ID, padre y bytes en Drive; registrar archivo, fuente, referencia, método/prompt exacto, versión, hashes y estado. No confundir exportar, subir y aprobar.
 
-Las suscripciones de ChatGPT, API y otros proveedores no son una cuota intercambiable. Este paquete no instala nada, no compra créditos, no activa API ni configura cargos. Elegir una herramienta disponible en la cuenta del usuario, leer su costo y límites reales y solicitar aprobación si exige un cargo. No transferir fotos a otro servicio sin autorización aplicable.
-
-Capacidades necesarias: edición con imagen de entrada, conservación de sujeto y encuadre, idealmente máscara del fondo/protección del sujeto. Si se requieren píxeles idénticos de la persona, una generación libre no lo garantiza: usar un editor con selección protegida y verificarlo, sin volver al recorte automático defectuoso del lote01.
-
-Hacer comparación fuente/salida alineada: rostro, proporciones, pose y pelo completos. Revisar frascos y letras legibles. Si el modelo altera identidad, cambiar la edición o declarar el bloqueo; nunca presentar variaciones como identidad preservada al 100%.
-
-## Actualizar el respaldo
-
-```sh
-python3 scripts/preparar_respaldo.py --source /ruta/FARMASI_799 --dest .
-python3 scripts/validar.py
-```
-
-El expediente fuente debe tener `produccion/REGISTRO_EDICION.json`, lectura de Drive actual y `PROMPTS_EJECUTADOS_RECUPERADOS.json`. Registrar primero los nuevos prompts; el script no los obtiene mágicamente de otra conversación. No conserva credenciales ni cuotas en caché. Confirmar diff y publicar solo la carpeta de este proyecto en la rama `farmasi/continuidad-edicion-799`; no modificar la web ni fusionar cambios ajenos.
-
-Para ver las fuentes y descargar fotografías se requieren permisos de Drive, aunque el código se pueda leer. Un relevo sin acceso a los archivos está bloqueado: no reconstruir fotografías de memoria.
-
-## Peticion activa del 4 de noviembre
-Se localizaron tomas de la candidata de cabello largo negro y vestido blanco: DSC01532, DSC01536, DSC01539, DSC01540, DSC01542, DSC01543, DSC01550, DSC01551, DSC01556 y DSC01557. Seleccion visual de trabajo acorde con descripcion; no es identificacion personal por nombre ni confirmacion expresa del usuario. Lote05: siete salidas aprobadas y tres bloqueadas sin salida. Lote04 anterior sigue en revision.
-
-Estado final de lote05: siete salidas en Drive, aceptadas expresamente y movidas a aprobadas/JPG. Tres bloqueadas por filtro de salida de la herramienta; el error y prompt enviados estan en historial/lote_05_cabello_negro/procedencia_verificacion.json. No repetir ni modificar instrucciones para eludir el filtro. No hay diez salidas del lote05; lote04 sigue sin aprobacion.
-
-## Operacion nocturna vigente
-Automatizacion farmasi-producci-n-nocturna-hasta-200-4-nov activa solo4nov:01/03/05/07/09produccion,10cierre. Objetivos40/80/120/160/200 nuevas verificadas. Actualmente20nuevas verificadas(lotes06y07),restan180; la activacion01solo completa20mas para alcanzar40. Las29anteriores aprobadas no se cuentan. Ver protocolo y reserva antes de generar; no duplicar trabajo. Persistir prompt/resultado inmediatamente al recibir cada salida, no depender de variables de una celda que aun corre.
-
-## Registro portable del turno01:00
-Scripts guardar_resultado_nativo.py y registrar_lote_nocturno.py preservan el prompt exacto y registran solo salidas revisadas y verificadas en nube. Admiten --production /ruta/FARMASI_799/produccion cuando se ejecutan desde este respaldo. No generan imagenes, no suben archivos, no tienen claves y no marcan aprobacion de cliente. Registrar requiere lectura fresca de Drive y lista explicita --reviewed de fotos inspeccionadas. El contador usa fuente unica para evitar duplicacion.
-
-
-Actualizacion posterior obligatoria: leer CORRECCION_LOCAL_V03.md. No continuar con generacion integral de caras o letras. Restauracion local desde originales expresamente autorizada; originales y versiones previas intactos, regiones y auditoria requeridas. No confundir aprobacion estetica previa con auditoria global de fidelidad de textos.
+## Revisión y respaldo
+Ejecutar `python3 scripts/validar.py` y `python3 scripts/revisar_relevo.py` desde este paquete: no editan fotos ni consumen API.
+`preparar_respaldo.py` reconstruye registros desde un expediente operativo existente; no descarga fuentes ni genera fotos. La réplica de Git debe incluir la documentación actual en `main`, no quedarse solo en la rama de continuidad. Ver `SINCRONIZAR_GITHUB.md`.
+La programación nocturna del 4 noviembre era una autorización acotada hasta las10:00, no una orden vigente para reactivar horarios pasados. No crear/reactivar automatizaciones, comprar, instalar, cambiar proveedor con coste ni usar API de pago sin autorización aplicable.
