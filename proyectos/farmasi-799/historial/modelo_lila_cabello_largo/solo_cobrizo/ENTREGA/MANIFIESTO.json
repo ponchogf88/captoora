@@ -23,7 +23,8 @@
       ]
     ],
     "status": "en_revision",
-    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original.",
+    "correccion_pendiente": "Rostro desde original, igualar exposicion y color con otras"
   },
   {
     "source_name": "DSC08500.JPG",
@@ -49,7 +50,8 @@
       ]
     ],
     "status": "en_revision",
-    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original.",
+    "correccion_pendiente": "Revisar rostro desde original sin alterar facciones"
   },
   {
     "source_name": "DSC08504.JPG",
@@ -74,7 +76,7 @@
         -2.4297207223790336
       ]
     ],
-    "status": "en_revision",
+    "status": "aprobada",
     "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
   },
   {
@@ -101,7 +103,8 @@
       ]
     ],
     "status": "en_revision",
-    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original.",
+    "correccion_pendiente": "Solo velo: ondas naturales de viento, sin pico sostenido"
   },
   {
     "source_name": "DSC08540.JPG",
@@ -127,7 +130,8 @@
       ]
     ],
     "status": "en_revision",
-    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
+    "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original.",
+    "correccion_pendiente": "Solo velo: vuelo natural, corregir borrosidad artificial"
   },
   {
     "source_name": "DSC08554.JPG",
@@ -152,7 +156,7 @@
         0.06781385479147493
       ]
     ],
-    "status": "en_revision",
+    "status": "aprobada",
     "method": "Fondo nativo editado, alineado al original; sujeto restaurado por composicion de pixeles originales opacos. Sin regeneracion final de rostro/cuerpo. No cambia resolucion original ni deforma original."
   }
 ]

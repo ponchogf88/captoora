@@ -220,3 +220,13 @@ Usuario aprueba acabadoD (textura y sombra suave) y autoriza expresamente TODAS:
 - Pendiente de evidencia: otras dos fuentes individuales distintas; no afirmar ocho si solo seis verificadas.
 
 - Implementado:6 individuales cobrizo nuevas en revision Drive; originales sujetos restaurados sobre limpieza nativa alineada.6 subidas y bytes/padres verificados. Solicitud8: faltan2 fuentes individuales distintas por localizar.69 cobrizo restantes del inventario previo. No aprobadas automaticamente.
+
+### Aprobacion parcial cobrizo sola
+- Usuario solicita pasar otras a aprobadas y mantener solo cuatro correcciones de este lote pendientes.
+- Aprobadas:DSC08504,DSC08554. Pendientes:DSC08318 rostro y equiparar iluminacion/color;DSC08500 rostro;DSC08536 yDSC08540 velo con efecto aire. No aplicar aprobacion a otros lotes por inferencia.
+
+### Correccion inmediata de blancos, solo cuatro imagenes senaladas
+- Solicitado: corregir unicamente transiciones/halo de blancos en DSC08500,DSC08504,DSC08536,DSC08554; conservar rostro,cabello,cuerpo,vestido y textura/sombras. Otras correcciones de rostros/velo conservan su estado pendiente; no mezclarlas con este ajuste.
+- No sustituir aprobadas con nuevas versiones sin aprobacion; mantener historial, nuevas correcciones a revision.
+
+- Verificado:4 JPG blancos_v03 actualizados conservando mismos IDs Drive (sin duplicados) y movidos a revision conjunta. Las dos antiguas aprobadas retiradas de aprobadas por correccion solicitada; PNG v02 conservados en historial. Pixeles protegidos sin cambios respecto v02 en PNG. No incluye reparacion rostros ni nuevo movimiento del velo.

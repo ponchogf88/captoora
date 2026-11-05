@@ -39,3 +39,6 @@ Leer ESTADO_MODELO_D_TODAS.md antes de continuar.29 nuevos D en revision;75 cobr
 
 ### Cobrizo SOLA:6 nuevas
 6 individuales entregadas en revision;69 cobrizo restantes. Fuentes8318,8500,8504,8536,8540,8554. Dos individuales adicionales NO localizadas; no contar recortes grupales.6generaciones nativas intermedias, sujeto recompuesto desde originales; PNGconserva pixeles protegidos (8318 ganancia1.25),JPGcompresion. Prompts exactos y metodo en historial/cobrizo_sola_6. No aprobacion automatica. Drive:https://drive.google.com/drive/folders/1Y7-si0Zkhxiqi0vf8f-u98B7XPohWWwv
+
+### Correccion de blancos solicitada:solo4
+DSC08500/8504/8536/8554:blancos_v03,solo fondo neutro,misma pose/rostro/vestido.4 JPG actualizados sin duplicar IDs y movidos a revision conjunta:https://drive.google.com/drive/folders/13vIl4Xt_R3YIIxkXbqgiSIia1ZL9cjsb. Las dos aprobadas v02 afectadas se retiraron de aprobadas;PNG historicos fuera de entrega.146 previas vuelven a144 aprobadas por correccion solicitada. No nuevas generaciones. Rostros/velo anteriores siguen pendientes;ultima instruccion pide exclusivamente blancos antes de siguiente tarea. Receta/auditoria en historial/correccion_blancos_v03.
