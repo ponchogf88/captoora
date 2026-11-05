@@ -1,5 +1,11 @@
 # REGLAS MAESTRAS DE TRABAJO - AMDA AGENTIC ENGINE
 
+## 🚀 PROTOCOLO VIGENTE (NOVIEMBRE 2026): SESIÓN 31 OCTUBRE, EMBAJADORAS FARMASI Y CAMPAÑA UNBOXING NAVIDEÑO
+Cualquier agente que trabaje en Captoora debe consultar obligatoriamente:
+1. **[ESTRATEGIA_VIRAL_UNBOXING_NAVIDENO_CAPTOORA.md](ESTRATEGIA_VIRAL_UNBOXING_NAVIDENO_CAPTOORA.md)**: El modelo de negocio y flywheel de fin de año. Se entregan las galerías digitales con opción de 1 foto gratis por mención en historias de Instagram (`@captoora.studio` y `@ponchogf88`) y venta de paquetes completos vía Stripe. El 25-30% de los ingresos se aparta para producir los cuadros Fine-Art de Montse ("La China") y las embajadoras destacadas, enviándolos a finales de noviembre para que hagan unboxing en Instagram Stories a principios de diciembre y detonen las reservaciones navideñas del estudio.
+2. **[PLANTILLAS_MENSAJES_INFLUENCERS_CAPTOORA.md](PLANTILLAS_MENSAJES_INFLUENCERS_CAPTOORA.md)**: Textos aprobados por Poncho con el lente, estrellitas y corazón (`📸✨🤍`), arroba oficial `@captoora.studio`, la frase insignia *"nunca vamos a volver a ser tan jóvenes como en este instante"*, las invitaciones gratuitas al piloto de **Captoora Biométricos**, Gift Cards y los 2 mensajes personalizados exclusivos para Montse "La China" destacando su chispa, las marometas y a su bebé como embajador oficial para capturar su crecimiento junto a su familia.
+3. **[GALERIA_CLIENTES_FARMASI.html](GALERIA_CLIENTES_FARMASI.html)**: Interfaz de galería interactiva con validador de Instagram Story y pasarela Stripe.
+
 1. **CERO PASOS INTERMEDIOS PARA EL HUMANO:** Nunca le pidas al usuario ejecutar "paso 3 de 7" ni seguir tutoriales paso a paso. Mientras el usuario suelta ideas a velocidad luz, la IA debe absorber, procesar y construir de principio a fin los entregables.
 2. **PROTOCOLO DE DESCARGA LIBRE DE IDEAS:** Cuando el usuario envíe ideas en ráfaga, la IA debe capturarlas inmediatamente, registrarlas en el Banco de Ideas, y delegarlas a los agentes correspondientes sin frenar la conversación.
 3. **EJECUCIÓN AUTÓNOMA DE EXTREMO A EXTREMO:** La IA debe encargarse de la generación de código, archivos, guiones, tablas CSV, PDFs y prompts de video de forma autónoma.

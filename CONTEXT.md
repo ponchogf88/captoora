@@ -1,6 +1,34 @@
 > Actualización del titular · 26 octubre 2026: TikTok oficial **@captoora.studio**, con doble O en CAPTOORA, tomando “punto estudio” del dictado como Studio de la marca. Sustituye captoora.studiomty y la conexión antigua captoora.mty. Cambio documental solicitado; perfil público no verificado en esta sesión. Metricool conserva conexión antigua hasta reautorizar la cuenta correcta.
 
-# Captoora — Contexto conciliado (18 oct 2026)
+# Captoora — Contexto Operativo y Estratégico (Actualizado 4 Noviembre 2026)
+
+## 📌 ESTRATEGIA ACTIVA Y FUENTE DE VERDAD
+1. **Estrategia Viral Unboxing Navideño**: [ESTRATEGIA_VIRAL_UNBOXING_NAVIDENO_CAPTOORA.md](ESTRATEGIA_VIRAL_UNBOXING_NAVIDENO_CAPTOORA.md)
+2. **Plantillas Oficiales de Mensajes para Embajadoras (31 Octubre)**: [PLANTILLAS_MENSAJES_INFLUENCERS_CAPTOORA.md](PLANTILLAS_MENSAJES_INFLUENCERS_CAPTOORA.md)
+3. **Galería Web con Gatekeeper Instagram + Stripe**: [GALERIA_CLIENTES_FARMASI.html](GALERIA_CLIENTES_FARMASI.html)
+
+## 📸 SESIÓN ESPECIAL 31 DE OCTUBRE (FARMASI & MONTSE "LA CHINA")
+- Participaron **31 influencers y líderes**.
+- Montse ("La China", 280k seguidores) asistió con su bebé. Se rescataron 77 fotos completas del bebé y se calibraron las 52 fotos maestras curadas por Poncho (`52_FOTOS_ORO_PURO_BEBE_NANO_BANANA_PRO`).
+- Se generaron 3 versiones estelares publicitarias del bebé solo en peluche blanco con la línea Nutriplus Farmasi, removiendo por completo a la persona y cuidando al 100% el rostro del bebé.
+
+## 🎁 FLYWHEEL VIRAL DE FIN DE AÑO: DE LO DIGITAL AL UNBOXING FÍSICO
+1. **Entrega Digital (Noviembre)**: Se envían mensajes por WhatsApp con links individuales de galería a cada una de las 31 chicas.
+   - 1 descarga gratis en alta resolución al etiquetar a **@captoora.studio** y **@ponchogf88** en historias de Instagram.
+   - Venta del paquete completo en alta resolución vía Stripe.
+2. **Autofinanciamiento de Cuadros VIP (Fondo 25-30%)**: Un porcentaje de cada paquete digital vendido se destina a producir marcos de lujo e impresiones Fine-Art.
+3. **Envío Sorpresa (Finales de Noviembre)**: Se envían cajas rígidas de lujo (*PR Boxes*) con el cuadro enmarcado del bebé de Montse y de las embajadoras destacadas, con aroma de estudio y tarjeta manuscrita.
+4. **Campaña Viral de Unboxing (Principios de Diciembre)**: Montse y las embajadoras comparten historias en Instagram mostrando el cuadro de su bebé. La emoción genuina y la frase insignia *"nunca vamos a volver a ser tan jóvenes como en este instante"* detonan la captación de reservas navideñas para el estudio.
+5. **Incentivos Permanentes de Embajadoras**:
+   - Acceso 100% GRATIS al programa piloto de **Captoora Biométricos**.
+   - Gift Cards de todas las marcas de Captoora.
+   - Puertas abiertas permanentes para ellas y sus familias para seguir capturando el crecimiento de sus hijos y nuevos proyectos.
+
+## 📱 CANALES Y HANDLES OFICIALES
+- **Instagram**: `@captoora.studio` 📸✨🤍
+- **TikTok**: `@captoora.studio`
+- **WhatsApp**: 81 4005 0088
+- **Estudio**: Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.
 
 Leer primero [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md): cronología, oferta publicada, sesiones, versiones, pendientes P01–P28 y límites de evidencia. [Fuentes y 48 turnos de ocho chats](docs/REGISTRO_FUENTES_CAPTOORA_2026-10-18.md). La bitácora técnica de septiembre y la crónica del fundador son antecedentes conservados.
 
