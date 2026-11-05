@@ -1,0 +1,202 @@
+[
+  {
+    "source_name": "DSC07736.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "1240375183f6fff689af46472e8372ad1361b1eb33df17a5eb1ee59a9f69e59e",
+    "png_sha256": "9adee049c08961126a34f36d8d3290118fd58b74724b8a4d64e540ceb337b2f2",
+    "jpg_sha256": "6b38e22fbd4efab194b8ffd7b0feae47551255244a54ee6213d84e464b1297c2",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.035,
+      0.81,
+      0.66,
+      0
+    ]
+  },
+  {
+    "source_name": "DSC07738.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "ee22d83441ccd58a5d17a9c67478a5bb873be7717fa09f70e1e049c9fea4dda9",
+    "png_sha256": "973e94f008b0a890e2ad829a62803b45218cd73d2f77a28202e81e0c6a45e704",
+    "jpg_sha256": "65bcecd159497e9fdcdfb0b934be5817bbdcf095cff96a22b911636bbaa80b06",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.09,
+      0.845,
+      0.7,
+      0
+    ]
+  },
+  {
+    "source_name": "DSC07739.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "9b1b1f77148faa5de1c4c060fa77f23259203e89ddb90747cc6c68a7bd5bedc9",
+    "png_sha256": "203386823ace46953a6d3df7b59b93af2208ed76c3449dd645aff8c0d76eff99",
+    "jpg_sha256": "9fa9341a2ee5a8ab1311e6ffa1edcbf5486d319bfea71eca0ae4a1274fea566e",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.075,
+      0.81,
+      0.7,
+      0
+    ]
+  },
+  {
+    "source_name": "DSC07743.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "942e84157eb74644e8e5e10b7c610e3d1d67d464d4d7a155e7c63e502352044d",
+    "png_sha256": "310f59dfbadb499ae5ac61c946588e13dec0bff60662ff54c5d78fec49c47a3f",
+    "jpg_sha256": "939c99660446ee69b5a6b024bc9064425e4826037c4b0e8a7cdccb9f5c48e3c6",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.205,
+      0.88,
+      0.84,
+      0.22
+    ]
+  },
+  {
+    "source_name": "DSC07747.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "4974d5d09b5a674d3b2085f3e9e0d45de507f539bc1ef6865089d984b750e8a4",
+    "png_sha256": "6de18a0dd9154906bc7302cbd27f8988d773ed1ef3ae93a938c0f4afc66e78d0",
+    "jpg_sha256": "04a4ca07bf1ab997f4a01343c5adcf05a04aa85460d62c5f311920056e4c4166",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.3,
+      0.96,
+      0.86,
+      0.23
+    ]
+  },
+  {
+    "source_name": "DSC07762.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "d8559c80cf56e5487d2e0bcecc981468c961bc54373deaa49659ce8cfc130b43",
+    "png_sha256": "641af919eb9998bf9e2b45713e33b129ed3b11adb51a26da3e7a18e97402447e",
+    "jpg_sha256": "369635f5fb24157d56a590abf4560f6e3d9288a941c92e947a72b79537730fb7",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.215,
+      0.84,
+      0.9,
+      0.13
+    ]
+  },
+  {
+    "source_name": "DSC07767.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "6d684a0d78e63b8ef5a1e773aad7129386bd0a5bf157d7abe247e4c0d4aedf1a",
+    "png_sha256": "96a7a21642eed50a4c90a14a7e1905169b0cf599f63388b4c746dd8df1979496",
+    "jpg_sha256": "f003445266de26149e3cba5f2aceab978d36b359a1b625f82d77cb5fe2dc1bda",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.05,
+      1,
+      0.8,
+      0
+    ]
+  },
+  {
+    "source_name": "DSC07768.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "5fec4be61e39e9977a8a68bcfe50d72fcec1491626569168a77e05a758bc24c6",
+    "png_sha256": "e0effbb01fb191e652d80ecbeb63f1a901be7b987d5a0981bc6b8b13b148c1ec",
+    "jpg_sha256": "9b27f9741ec013112489b695a458b5fece85b47c497c5e67481fd82c17b3bab4",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.05,
+      1,
+      0.8,
+      0
+    ]
+  },
+  {
+    "source_name": "DSC07772.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "6ed44bad38ac4d14435fda5bf7097ec6dd6e07bb60c1919e2b9732a89f0cc36b",
+    "png_sha256": "f01dfdee247bc2cf64c5f1b1520a1fcb97450b4d93010cdaecf4f6b6d6590135",
+    "jpg_sha256": "268c23eb884a9abeb7ba0e87c14a7c53fe9f0b97184c0e77bb433ccaea60cab3",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.14,
+      0.9,
+      0.89,
+      0.07
+    ]
+  },
+  {
+    "source_name": "DSC07774.JPG",
+    "estado": "revision_tecnica_interna",
+    "method": "Fondo vacio nativo compuesto solo sobre cuarto; persona,productos y alfombra originales con curva tonal monotona. Sin generacion de sujetos.",
+    "source_sha256": "aa7972a289e07014952edd5cdaba1b1e38af1ba34345eaa7975c8603020967ed",
+    "png_sha256": "d54397b5270f20fde0a9b93c949a3813cdfce3a180b4753e0ebabfcb85b92dc4",
+    "jpg_sha256": "0aaa1b27e50ea6b98fb82b604fdb298ea253ea111ce00f1cdc29d8d884298f0b",
+    "outside_background_mask_changed_pixels": 0,
+    "rotation_ccw": 90,
+    "size": [
+      4128,
+      6192
+    ],
+    "background_parameters": [
+      0.185,
+      0.87,
+      0.89,
+      0.15
+    ]
+  }
+]

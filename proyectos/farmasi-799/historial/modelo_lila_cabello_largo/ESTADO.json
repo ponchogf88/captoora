@@ -1,0 +1,23 @@
+{
+  "alias": "modelo_lila_cabello_negro_largo",
+  "individuales_pendientes_iniciales": 14,
+  "nuevas_en_revision": 10,
+  "aprobadas_preexistentes_no_repetidas": 10,
+  "incidencias_fuente": [
+    "DSC07752.JPG",
+    "DSC07753.JPG",
+    "DSC07756.JPG",
+    "DSC07759.JPG"
+  ],
+  "otras_secuencias_cobrizo": "24 candidatas inspeccionadas, no editadas; inventario de grupos posteriores no exhaustivo",
+  "conversacion_compartida": {
+    "url": "https://chatgpt.com/share/6aec4bd5-9504-83e8-81b4-132778368d8b",
+    "estado": "bloqueada_acceso",
+    "evidencia": "Web cache miss; navegador redirige a auth/login. No se leyo ni se aplicaron instrucciones desconocidas."
+  },
+  "ensayos_descartados": [
+    "lote_individual_v01 interpolacion y rellenos defectuosos: NO USAR",
+    "DSC07747 generacion completa: solo ensayo; NO entregada. Se usa unicamente fondo VACIO nativo con composicion original en v02."
+  ],
+  "limites": "No se recupera detalle de etiquetas quemado por flash ni zonas ocultas. Personas, pelo, productos y poses no se generan. Resto de la tarea sigue abierto."
+}
