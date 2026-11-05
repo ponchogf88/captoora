@@ -1,0 +1,317 @@
+[
+  {
+    "source_name": "DSC08224.JPG",
+    "original_sha256": "af0075a74e70840882049d3f51897555345ec1d5e43868389a8d85cb4c8fc6db",
+    "png_sha256": "c9c9fcac993e3c8f5b9fc062614199fd6a41f08d637a506e156f4be0e47fc4ce",
+    "jpg_sha256": "913cc3dc25c2ef8654849644c21be5fe329f1ad3193f0b76f7b3382c9269075a",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08230.JPG",
+    "original_sha256": "f6dd2671a9b58798dfa5bfb68bbbb289788579daea99caf86a0d89a16c02686c",
+    "png_sha256": "3c3dfb95626e884685b40d65af4abb4c48db507b5aef84749a64911b981c90cf",
+    "jpg_sha256": "ac628b3b6dcd84306f2d211e61ed45ddd34b33e510b18386c1c8ca85f717c3a5",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08233.JPG",
+    "original_sha256": "53ea05d37df64ad665eb49f3b5f0a11f4bb98c969411f8f0abdbb194897502ed",
+    "png_sha256": "18d28274d1bb1371aa11ae2c3cfd148c2e106c847bfbcfc02d416156b0012630",
+    "jpg_sha256": "8261c5f2163652e11ee606e5c0780a18dcacd389f6ce98a1a6e5ff5c23662ab1",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08235.JPG",
+    "original_sha256": "5a8074005e5214b631c0b1a5131f95d24dfa3832708cf8aedf68b3373ed46a43",
+    "png_sha256": "4b7134cad1a5e2b420ff9fa03fbba4832ffedd415bc77c490517198d544cbe52",
+    "jpg_sha256": "37b2a31ccee247f4d109576af77c81960effcfd18dc209eb619e4a3d7731fa40",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08246.JPG",
+    "original_sha256": "45e8662c982ce3bd5ef76cdf6f05b18dc129a2095554b38ca049cd7ac97641ce",
+    "png_sha256": "20f42758b476b9b474244620f59e1d1be06dae93e74030077ec6e27a77551f43",
+    "jpg_sha256": "40cdebbcb0b924b2cc34864df06d0dacc8e8dac14870cb9c68227c355e126a73",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08276 2.JPG",
+    "original_sha256": "69496f5ab34d88cdc452758458a5242e2d77d85676a64d010737711dc451262c",
+    "png_sha256": "c7b32cc4d2f838aab67fa24d69470e27ca96aa5ab79639a91f7e8ecae82bed14",
+    "jpg_sha256": "89bf699aeb181128b02184b22ebd1b161169c74bec7b7eca3c9409671dc8e066",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08282 2.JPG",
+    "original_sha256": "84c0bd70629d3b12064ffd45032ebbabcc42275484ac96214aa2138691eaa73f",
+    "png_sha256": "e6a417d6c2ea9714ed3fc0756c910a19efc19c280c037defc867f8d7f7a3a4ac",
+    "jpg_sha256": "5a1176742d8a05453a85494d08be125c9c7c2d49e493efd5f4674cdd4a0b66c9",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08283 2.JPG",
+    "original_sha256": "95ebbe7441c8748332b8329ad19e5591ea0265c67d65aa5a0ebab9ccca6689a9",
+    "png_sha256": "80fda63550ee2e7dae95af7d08791e0f5aa1ecefe63cf476250c39a5ee863cb7",
+    "jpg_sha256": "80d65d7a9e0d4dc2b263bc5bf34f0148449f80cb7c4f5b8fd203b00f48eb632b",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  },
+  {
+    "source_name": "DSC08294 2.JPG",
+    "original_sha256": "13828f45f65fbc93296e397421cc671f3665cc19e83c31f6f009c2d739f0fa44",
+    "png_sha256": "9e8524174f0e7a182d5a34e14419b77e74fef7d244d138129eb5269a697a3a03",
+    "jpg_sha256": "acea7e28278be990865f08597c7efc54fbc9e07347f9afe3fc1be2d90865d4c5",
+    "estado": "en_revision",
+    "version": "bebe_v02",
+    "method": "Curvas locales de color y luz desde pixeles originales, sin generacion",
+    "rotate_ccw": 90,
+    "crop_box": [
+      0,
+      0,
+      4037,
+      6192
+    ],
+    "white_balance_gains": [
+      1.034999966621399,
+      1.0,
+      0.9739999771118164
+    ],
+    "highlight_reduction_at_white": 8,
+    "original_size_upright": [
+      4128,
+      6192
+    ],
+    "output_size": [
+      4037,
+      6192
+    ],
+    "face_geometry_changed": false,
+    "face_regenerated": false,
+    "cross_frame_composite": false,
+    "sharpen_or_denoise": false,
+    "limitations": "Movimiento y luces recortadas de captura no se reconstruyen ni inventan; se seleccionan fuentes con detalle real."
+  }
+]
