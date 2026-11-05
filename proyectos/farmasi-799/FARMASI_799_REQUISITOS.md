@@ -199,3 +199,9 @@ Usuario acepta suelo y sombras inferiores de v03 pero considera pared superior d
 
 ### Tres variantes de pared entregadas para eleccion
 Implementadas A textura tenue,B sombras suaves mas presentes,C relieve con calidez discreta sobre la MISMA DSC07738. Se recupera relieve de zonas limpias del fondo fuente y se integra solo en pared superior; sin nueva generacion. MaestrosPNG:0pixeles modificados en sujeto protegido y en toda zona inferior desde y500/900. Tres JPG verificados por nombre,padre ybytes en https://drive.google.com/drive/folders/1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU. Tres variantes,no tres fotos nuevas; siguen en revision,no aprobadas. No aplicar al lote sin eleccion del usuario. Receta,hashes y auditoria en produccion/modelo_lila_cabello_largo/pruebas_textura_pared.
+
+## Version adicional D: sombra de la modelo sobre el fondo
+Usuario solicita una version mas con un poco mas de sombra de ella en fondo, aspecto de luces de estudio adicionales. Sobre DSC07738 versionB conservar textura de pared,modelo,piso,productos e iluminacion aceptada; proyectar sombra suave de su silueta, sin manos/equipos/nuevos objetos. Solo una varianteD adicional, sin aplicarla al lote ni aprobarla automaticamente. Estado solicitado.
+
+### Version D implementada y verificada
+Una variante adicional sobreB con sombra suave proyectada de la silueta autentica de la modelo sobre pared; textura conservada. Dos contribuciones de sombra de baja intensidad para sensacion de luces de estudio; interpretacion creativa local,no nueva captura. PNG:0pixeles modificados del sujeto protegido y de toda zona inferior desde y500/900; no cambios de texto/productos. JPG verificado por nombre,padre ybytes en https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk. En revision,no aprobada ni aplicada al lote; A/B/C siguen disponibles. Receta yhashes en MANIFIESTO_VERSION_D.json ycrear_version_D_sombra.py. Cero nuevasgeneraciones/prompts.

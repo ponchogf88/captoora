@@ -35,3 +35,6 @@ Usuario rechazo costuras laterales de fondo; acepto rostro,cuerpo e iluminacion 
 
 ## Tres variantes de textura de pared para DSC07738
 Usuario acepta parte inferior pero pide recuperar relieve de fondo original sin apariencia de tela evidente. Se entregan A/B/C comparables, manteniendo misma foto, sin cambiar modelo/productos/piso. Tres JPG Drive leidos de vuelta, PNG/JPG locales conhashes,receta local reproducible,150prompts historicos sin nuevas generaciones. Pendientes de eleccion; no aplicadas a las otras nueve.
+
+## D: sombra de ella en la pared
+Usuario solicita un poco mas de sombra de la modelo, como luces de estudio adicionales. Una D sobreB, textura conservada, silueta autentica desenfocada sobre fondo; modelo/piso/productos protegidos. JPGDrive verificado,PNG/JPG localesauditados. A/B/C preservadas,cuatrovariantes deuna fuente,todas enrevision. No produccion masiva hasta eleccion.

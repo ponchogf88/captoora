@@ -77,3 +77,6 @@ Diez nuevas correcciones en revision, ninguna aprobada automaticamente. Se reuti
 
 ## Tres variantes de pared DSC07738: eleccion pendiente
 Restitucion local de relieve real del fondo fuente: regiones vacias600x900 [47,12,505,232] y[47,35,115,530], eliminacion de plano de exposicion, suavizado y amplitudes A3.1/1.6,B3.2/3.8,C2.5/2.7 con calidezRGB1.1,.45,-.45. Solo pared: peso(1-mascara)^3,fade400..500/900; sujeto protegido ytodo y>=500/900 sin cambiosPNG. Piso,productos yrostros intactos. Tres variantes,no nuevasfuentes ni aprobaciones. Sin nueva generacion ni prompt nuevo. Receta exacta/hashes yDrive en historial/modelo_lila_cabello_largo/pruebas_textura_pared. No extender al lote sin eleccion.
+
+## Variante D adicional: sombra suave de la modelo
+SobreB_v04, proyectar silueta real protegida, no una persona generada. Coordenadas600x900: sombra principal desplazamiento58,8 sigma11 opacidad.075; secundaria-28,10 sigma19 opacidad.022; peso(1-mascara)^2 yfade435..500/900. Toda parteinferior ymodelo protegidos intactosPNG. No cambia productos/etiquetas ni agrega equipos. Sin generacion ni prompt nuevo;150prompts historicos. Receta exacta en historial/modelo_lila_cabello_largo/pruebas_textura_pared/crear_version_D_sombra.py. Una variante adicional,no nueva fuente ni aprobacion.

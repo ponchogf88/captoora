@@ -1,0 +1,102 @@
+{
+  "uploaded": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ",
+    "title": "DSC07738_pared_D_sombra_v05.jpg",
+    "file_name": "DSC07738_pared_D_sombra_v05.jpg",
+    "mime_type": "image/jpeg",
+    "url": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
+    "parent_id": "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU",
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ",
+      "title": "DSC07738_pared_D_sombra_v05.jpg",
+      "file_name": "DSC07738_pared_D_sombra_v05.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
+      "parent_id": "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU"
+    }
+  },
+  "readback": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
+        "title": "DSC07738_pared_D_sombra_v05.jpg",
+        "id": "1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ",
+        "mime_type": "image/jpeg",
+        "size": "4664341",
+        "file_or_folder": "file",
+        "created_at": "2026-11-05T12:26:01.184Z",
+        "updated_at": "2026-11-05T12:26:01.184Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07738_pared_D_sombra_v05.jpg",
+        "display_url": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Nmb6Ni0dZRp0YQ8DpCHH22GFttkflW5Q/view?usp=drivesdk",
+        "title": "DSC07738_pared_C_v04.jpg",
+        "id": "1Nmb6Ni0dZRp0YQ8DpCHH22GFttkflW5Q",
+        "mime_type": "image/jpeg",
+        "size": "4793682",
+        "file_or_folder": "file",
+        "created_at": "2026-11-05T11:21:58.595Z",
+        "updated_at": "2026-11-05T11:21:58.595Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC07738_pared_C_v04.jpg",
+        "display_url": "https://drive.google.com/file/d/1Nmb6Ni0dZRp0YQ8DpCHH22GFttkflW5Q/view?usp=drivesdk",
+        "parent_ids": [
+          "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1camePISeIuHiGkrfLhRmcA7F8Qj-ntUt/view?usp=drivesdk",
+        "title": "DSC07738_pared_B_v04.jpg",
+        "id": "1camePISeIuHiGkrfLhRmcA7F8Qj-ntUt",
+        "mime_type": "image/jpeg",
+        "size": "4656144",
+        "file_or_folder": "file",
+        "created_at": "2026-11-05T11:21:55.794Z",
+        "updated_at": "2026-11-05T11:21:55.794Z",
+        "viewedByMeTime": "2026-11-05T12:22:08.582Z",
+        "display_title": "DSC07738_pared_B_v04.jpg",
+        "display_url": "https://drive.google.com/file/d/1camePISeIuHiGkrfLhRmcA7F8Qj-ntUt/view?usp=drivesdk",
+        "parent_ids": [
+          "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1_liOGqGwPVUgahJ4vNdnEsRh96Lq25Rz/view?usp=drivesdk",
+        "title": "DSC07738_pared_A_v04.jpg",
+        "id": "1_liOGqGwPVUgahJ4vNdnEsRh96Lq25Rz",
+        "mime_type": "image/jpeg",
+        "size": "4654467",
+        "file_or_folder": "file",
+        "created_at": "2026-11-05T11:21:52.735Z",
+        "updated_at": "2026-11-05T11:21:52.735Z",
+        "viewedByMeTime": "2026-11-05T12:21:48.490Z",
+        "display_title": "DSC07738_pared_A_v04.jpg",
+        "display_url": "https://drive.google.com/file/d/1_liOGqGwPVUgahJ4vNdnEsRh96Lq25Rz/view?usp=drivesdk",
+        "parent_ids": [
+          "1W-0oV8CK0NS5g4FY4EznLcDZIsqNwYtU"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  }
+}
