@@ -5015,8 +5015,10 @@
     "source_url": "https://drive.google.com/file/d/1taW4FENa9uEXUO8WQc4Gb-_YAfwSgl8q/view?usp=drivesdk",
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
-    "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk"
+    "version_actual": "blancos_v03",
+    "decision_usuario_actual": "correccion_solicitada_pendiente_revision",
+    "revision_drive_url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk",
+    "correccion_en_revision": "Transicion de blancos unificada;solo fondo. Rostros/velo previos siguen pendientes si corresponde."
   },
   {
     "source_name": "DSC08504.JPG",
@@ -5024,8 +5026,10 @@
     "source_url": "https://drive.google.com/file/d/17oSzys3v8OviJPYpwfEf4ir0ZCmyPKSy/view?usp=drivesdk",
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
-    "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1LchpBIjpSKLpiXFdMFHYo4XciCnxTQPr/view?usp=drivesdk"
+    "version_actual": "blancos_v03",
+    "decision_usuario_actual": "correccion_solicitada_pendiente_revision",
+    "revision_drive_url": "https://drive.google.com/file/d/1LchpBIjpSKLpiXFdMFHYo4XciCnxTQPr/view?usp=drivesdk",
+    "correccion_en_revision": "Transicion de blancos unificada;solo fondo. Rostros/velo previos siguen pendientes si corresponde."
   },
   {
     "source_name": "DSC08536.JPG",
@@ -5033,8 +5037,10 @@
     "source_url": "https://drive.google.com/file/d/1k2f6EQ91unXENObVXXGOasyNAV0PkLq4/view?usp=drivesdk",
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
-    "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk"
+    "version_actual": "blancos_v03",
+    "decision_usuario_actual": "correccion_solicitada_pendiente_revision",
+    "revision_drive_url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk",
+    "correccion_en_revision": "Transicion de blancos unificada;solo fondo. Rostros/velo previos siguen pendientes si corresponde."
   },
   {
     "source_name": "DSC08540.JPG",
@@ -5051,8 +5057,10 @@
     "source_url": "https://drive.google.com/file/d/18xsKCIuDM7xPUgGZhzw6nmoBS8LvwoKF/view?usp=drivesdk",
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
-    "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1Y7ehMUfjR2TI6yBXUjudD0cQ1-tgGtHf/view?usp=drivesdk"
+    "version_actual": "blancos_v03",
+    "decision_usuario_actual": "correccion_solicitada_pendiente_revision",
+    "revision_drive_url": "https://drive.google.com/file/d/1Y7ehMUfjR2TI6yBXUjudD0cQ1-tgGtHf/view?usp=drivesdk",
+    "correccion_en_revision": "Transicion de blancos unificada;solo fondo. Rostros/velo previos siguen pendientes si corresponde."
   },
   {
     "source_name": "DSC08557.JPG",
