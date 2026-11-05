@@ -12,8 +12,9 @@
   "otras_secuencias_cobrizo": "24 candidatas inspeccionadas, no editadas; inventario de grupos posteriores no exhaustivo",
   "conversacion_compartida": {
     "url": "https://chatgpt.com/share/6aec4bd5-9504-83e8-81b4-132778368d8b",
-    "estado": "bloqueada_acceso",
-    "evidencia": "Web cache miss; navegador redirige a auth/login. No se leyo ni se aplicaron instrucciones desconocidas."
+    "estado": "mensajes_usuario_leidos",
+    "evidencia": "Sesion Chrome existente permitio lectura; respuestas asistente muestran No se pudo cargar esta respuesta.16 enlaces de Drive recuperados.",
+    "next_requirement": "bebe/MONTAJES_MADRE_BEBE_REQUISITOS.json"
   },
   "ensayos_descartados": [
     "lote_individual_v01 interpolacion y rellenos defectuosos: NO USAR",
