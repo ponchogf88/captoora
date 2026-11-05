@@ -32,3 +32,7 @@ Después de una entrega/aprobación: verificar nombres, ID, padre y bytes en Dri
 Ejecutar `python3 scripts/validar.py` y `python3 scripts/revisar_relevo.py` desde este paquete: no editan fotos ni consumen API.
 `preparar_respaldo.py` reconstruye registros desde un expediente operativo existente; no descarga fuentes ni genera fotos. La réplica de Git debe incluir la documentación actual en `main`, no quedarse solo en la rama de continuidad. Ver `SINCRONIZAR_GITHUB.md`.
 La programación nocturna del 4 noviembre era una autorización acotada hasta las10:00, no una orden vigente para reactivar horarios pasados. No crear/reactivar automatizaciones, comprar, instalar, cambiar proveedor con coste ni usar API de pago sin autorización aplicable.
+
+
+## Actualizacion prioritaria
+Leer ESTADO_MODELO_D_TODAS.md antes de continuar.29 nuevos D en revision;75 cobrizo pendientes y4 incidencias lila. ReferenciaDaprobada.

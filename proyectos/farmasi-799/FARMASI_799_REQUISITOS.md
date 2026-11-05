@@ -205,3 +205,11 @@ Usuario solicita una version mas con un poco mas de sombra de ella en fondo, asp
 
 ### Version D implementada y verificada
 Una variante adicional sobreB con sombra suave proyectada de la silueta autentica de la modelo sobre pared; textura conservada. Dos contribuciones de sombra de baja intensidad para sensacion de luces de estudio; interpretacion creativa local,no nueva captura. PNG:0pixeles modificados del sujeto protegido y de toda zona inferior desde y500/900; no cambios de texto/productos. JPG verificado por nombre,padre ybytes en https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk. En revision,no aprobada ni aplicada al lote; A/B/C siguen disponibles. Receta yhashes en MANIFIESTO_VERSION_D.json ycrear_version_D_sombra.py. Cero nuevasgeneraciones/prompts.
+
+## Produccion completa modelo lila/cobrizo con acabado D
+Usuario aprueba acabadoD (textura y sombra suave) y autoriza expresamente TODAS: pendientes lila,vestido cobrizo e imagenes previamente aprobadas. No reemplazar la ultima aprobada hasta aceptar la nueva version; nuevas a revision. Preservar rostro,cabello,cuerpo,pose,productos,etiquetas y piso; adaptar mascara/sombra por toma. D7738 queda como referencia aprobada. Incluir grupos donde participa por referencia de vestuario confirmada por usuario (DSC08454),sin reconocimiento facial automatico. Mantener bloqueo fuente7759 yoclusiones7752/53/56 sin inventar. Montajes madre+bebe despues de esta produccion, sin cancelar. Estado solicitado; inventario y produccion en curso.
+
+### Verificacion de entrega parcial D
+- Implementado y verificado:29 JPG nuevos en Drive con bytes y padre comprobados;19 lila y10 grupales cobrizo.20 son reemplazos en revision de aprobadas previas;9 eran pendientes.
+- ReferenciaDSC07738 D aprobada: JPG movido a aprobadas/JPG y PNG subido a aprobadas; original intacto.
+- Pendiente:75 fuentes cobrizo y4 incidencias lila. Los4 ensayos de limpieza cobrizo fallan control visual y NO se entregan. Tarea abierta, no declarar todas completadas.
