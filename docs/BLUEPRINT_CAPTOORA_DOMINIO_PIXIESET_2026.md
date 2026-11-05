@@ -141,3 +141,24 @@ Para festivales navideños escolares, obras de teatro y eventos infantiles:
 - [ ] Creación de los 3 cupones de Instagram en la tienda de Pixieset.
 - [ ] Activación de la plantilla de Contrato / Model Release en Pixieset Studio Manager.
 - [ ] Actualización de la URL oficial en Google Business Profile a `https://captoora.studio`.
+
+---
+
+## 8. Catálogo Estratégico de Submarcas: Campaña Invierno & Año Nuevo 2027
+
+### A. CAPTOORA SIGNATURE · Edición Gala Año Nuevo 2027 & Fiestas VIP
+* **Concepto:** *Quiet Luxury*, vestidos de gala, lentejuelas, satín, esmoquin, copas de champagne y globos metálicos gigantes "2027" con iluminación cinematográfica.
+* **Modalidad 1 (Estudio Pre-Fiesta):** Sesiones del 28 al 31 de Diciembre a mediodía. Las parejas y familias acuden ya peinadas y producidas para su retrato de revista antes de irse a su cena.
+  * Inversión: **$4,500 MXN** *(Aparta con $2,000 MXN)*.
+* **Modalidad 2 (Cobertura de Fiestas Privadas de Nochevieja - 31 Dic):** Servicio exclusivo de cobertura presencial para fiestas de fin de año en residencias (San Pedro, San Jerónimo, Carretera Nacional). Tarifa especial de alta gama con entrega express el 1 de enero para redes sociales.
+  * Inversión: **$8,500 - $14,000 MXN** *(Cupo estrictamente limitado a 2 eventos por noche)*.
+
+### B. CAPTOORA PETS · Retratos Navideños & Año Nuevo Peludo 🐾
+* **Concepto:** Estudio 100% pet-friendly con protocolo anti-estrés, luces suaves y premios hipoalergénicos.
+* **Accesorios en set:** Gorritos navideños, bufandas de punto, cuernos de reno suaves y mantas nórdicas.
+* **Inversión:** **$3,500 MXN** *(Aparta con $1,500 MXN)*. Hasta 2 mascotas + dueños incluidos, 1 hora completa.
+
+### C. CAPTOORA BIOMETRICS · "Baseline 2027 / Tu Prime en Alta Definición" ⚡
+* **Concepto:** La respuesta comercial al pico de Enero y Febrero (transformaciones, propósitos de año nuevo, atletas y gym).
+* **Iluminación:** Rim-light quirúrgico lateral y contraluz de alto contraste sin distorsión anatómica sobre ciclorama negro.
+* **Preventa Navideña (Aparta en Diciembre, tómala en Enero/Febrero):** Inversión **$3,500 MXN** *(Aparta con $1,500 MXN asegurando tarifa 2026)*.
