@@ -3,6 +3,9 @@
    Cambia aquí el evento, precios y contacto. Nada más.
    ========================================================= */
 window.CAPTOORA = {
+  domain: "captoora.studio",
+  siteUrl: "https://captoora.studio",
+  galleryUrl: "https://galeria.captoora.studio",
   whatsapp: "528140050088",          // sin + ni espacios
   whatsappLabel: "81 4005 0088",
 
