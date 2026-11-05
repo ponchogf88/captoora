@@ -1,0 +1,167 @@
+[
+  {
+    "source_name": "DSC07738.JPG",
+    "variant": "A",
+    "label": "Textura tenue",
+    "status": "en_revision_no_aprobada",
+    "baseline_sha256": "6ab71e5f5ebe9bbfc81346e33edd7e1096f7f3eb54a5523d6f68c49699488103",
+    "original_sha256": "ee22d83441ccd58a5d17a9c67478a5bb873be7717fa09f70e1e049c9fea4dda9",
+    "method": "Relieve luminico de zonas vacias del fondo ORIGINAL, eliminacion de plano de exposicion, suavizado y restitucion solo en pared; sin generacion. No recorta ni regenera modelo ni texto.",
+    "paper_regions_600x900": [
+      [
+        47,
+        12,
+        505,
+        232
+      ],
+      [
+        47,
+        35,
+        115,
+        530
+      ]
+    ],
+    "texture_standard_deviations": [
+      1.7529712915420532,
+      7.707452774047852
+    ],
+    "amplitudes": [
+      3.1,
+      1.6
+    ],
+    "warm_offset_rgb": [
+      0,
+      0,
+      0
+    ],
+    "max_texture_change": 12,
+    "wall_fade_600x900": [
+      400,
+      500
+    ],
+    "protected_subject_pixels_changed": 0,
+    "floor_and_all_pixels_below_500_changed": 0,
+    "png_sha256": "d6d0bcd9d85e1260d14bf552ff8fb7fddb7bf4609045abb109383c294b88b6c2",
+    "jpg_sha256": "04690c77f9ed4bb71ab4ef7b0c6a066470eca0e62712538d88a8e0cfdd0214ec",
+    "png_bytes": 10125427,
+    "jpg_bytes": 4654467,
+    "size": [
+      4128,
+      6192
+    ],
+    "files": {
+      "png": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_A_v04.png",
+      "jpg": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_A_v04.jpg"
+    }
+  },
+  {
+    "source_name": "DSC07738.JPG",
+    "variant": "B",
+    "label": "Sombras de fondo suaves",
+    "status": "en_revision_no_aprobada",
+    "baseline_sha256": "6ab71e5f5ebe9bbfc81346e33edd7e1096f7f3eb54a5523d6f68c49699488103",
+    "original_sha256": "ee22d83441ccd58a5d17a9c67478a5bb873be7717fa09f70e1e049c9fea4dda9",
+    "method": "Relieve luminico de zonas vacias del fondo ORIGINAL, eliminacion de plano de exposicion, suavizado y restitucion solo en pared; sin generacion. No recorta ni regenera modelo ni texto.",
+    "paper_regions_600x900": [
+      [
+        47,
+        12,
+        505,
+        232
+      ],
+      [
+        47,
+        35,
+        115,
+        530
+      ]
+    ],
+    "texture_standard_deviations": [
+      1.7529712915420532,
+      7.707452774047852
+    ],
+    "amplitudes": [
+      3.2,
+      3.8
+    ],
+    "warm_offset_rgb": [
+      0,
+      0,
+      0
+    ],
+    "max_texture_change": 12,
+    "wall_fade_600x900": [
+      400,
+      500
+    ],
+    "protected_subject_pixels_changed": 0,
+    "floor_and_all_pixels_below_500_changed": 0,
+    "png_sha256": "6ed5f377509763a0be0422fffe895f24a693a68e7d1e71d4bcb6ef27e3ada092",
+    "jpg_sha256": "21c21b618ad94a17d2c426e160cd68814e42c065887052dd877e1f80260dc52c",
+    "png_bytes": 10143574,
+    "jpg_bytes": 4656144,
+    "size": [
+      4128,
+      6192
+    ],
+    "files": {
+      "png": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_B_v04.png",
+      "jpg": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_B_v04.jpg"
+    }
+  },
+  {
+    "source_name": "DSC07738.JPG",
+    "variant": "C",
+    "label": "Relieve calido discreto",
+    "status": "en_revision_no_aprobada",
+    "baseline_sha256": "6ab71e5f5ebe9bbfc81346e33edd7e1096f7f3eb54a5523d6f68c49699488103",
+    "original_sha256": "ee22d83441ccd58a5d17a9c67478a5bb873be7717fa09f70e1e049c9fea4dda9",
+    "method": "Relieve luminico de zonas vacias del fondo ORIGINAL, eliminacion de plano de exposicion, suavizado y restitucion solo en pared; sin generacion. No recorta ni regenera modelo ni texto.",
+    "paper_regions_600x900": [
+      [
+        47,
+        12,
+        505,
+        232
+      ],
+      [
+        47,
+        35,
+        115,
+        530
+      ]
+    ],
+    "texture_standard_deviations": [
+      1.7529712915420532,
+      7.707452774047852
+    ],
+    "amplitudes": [
+      2.5,
+      2.7
+    ],
+    "warm_offset_rgb": [
+      1.1,
+      0.45,
+      -0.45
+    ],
+    "max_texture_change": 12,
+    "wall_fade_600x900": [
+      400,
+      500
+    ],
+    "protected_subject_pixels_changed": 0,
+    "floor_and_all_pixels_below_500_changed": 0,
+    "png_sha256": "494c4c5ab583d998f96245bda1ae69ee92f4b4ceaaa5ed52812db45a972c9e84",
+    "jpg_sha256": "5df7337e3e5f5ab57085f4930faad3baf483c0385086acdd9fd806e27540f88e",
+    "png_bytes": 10200134,
+    "jpg_bytes": 4793682,
+    "size": [
+      4128,
+      6192
+    ],
+    "files": {
+      "png": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_C_v04.png",
+      "jpg": "/Users/user/.codex/.chatgpt-projects/g-p-6a8f06ff9ee0819198489b1105ec7223/entregables/FARMASI_799/produccion/modelo_lila_cabello_largo/pruebas_textura_pared/DSC07738_pared_C_v04.jpg"
+    }
+  }
+]
