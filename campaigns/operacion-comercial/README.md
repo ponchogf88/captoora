@@ -14,6 +14,8 @@ Carpeta especializada solicitada por el usuario el 25 octubre 2026.
 ## Continuidad y vigencia
 Leer primero [continuidad del proyecto](../continuidad-2026-10-25/README.md), [instrucciones de agentes](../../AGENTS.md) y [operación de contenido](../operacion-contenido/README.md). Se reutiliza el calendario existente; esta carpeta no crea otra campaña editorial independiente.
 
+Agenda Calendly del estudio: [docs/CALENDLY_CAPTOORA.md](../../docs/CALENDLY_CAPTOORA.md). Jesús Gutiérrez lo confirmó el 6 de noviembre de 2026: cuenta propia `alfonsogf.88@gmail.com`, enlace https://calendly.com/captoora/gift-card. La conexión que devuelve `ggconsultores` / `l.jagf87@gmail.com` es el despacho; no leerla como agenda de Captoora.
+
 OPERACION_7_DIAS conserva el corte de la auditoría inicial. El expediente de continuidad incorporado después documenta una consulta de Instagram (bio sin enlace visible) y URL Pages 404, y una prueba CAL-004 en producción. Son evidencias documentadas por ese expediente, no verificaciones directas nuevas de esta sesión. Su autorización reciente de publicación debe revisarse en alcance y cuenta antes de ejecutar. No reactivar bloqueos históricos superados ni declarar acceso a cuentas por un enlace.
 
 Los precios, condiciones y accesos se verifican de nuevo antes de anunciar. No se modificaron sitio, precios ni condiciones al subir estos documentos. El presupuesto publicitario es una propuesta y no se ejecutó gasto.
