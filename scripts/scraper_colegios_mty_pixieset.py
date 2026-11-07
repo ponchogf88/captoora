@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Scraper & Verificador B2B de Colegios, Preescolares, Academias y Clubes en Monterrey / SPGG
-para Campañas de Correo en Pixieset (Studio Manager & Gallery Invites).
+Scraper & Verificador B2B Masivo (85+ Instituciones en Monterrey y San Pedro Garza García)
+para explotar el Portafolio ya existente en Pixieset mediante campañas de correo por lotes.
+Incluye:
+1. Colegios Privados y Bilingües (SPGG, Colinas de San Jerónimo, Cumbres, Carretera Nacional, Contry)
+2. Preescolares / Kinders Privados
+3. Academias de Ballet, Danza, Gimnasia y Arte (Recitales de Diciembre y Verano)
+4. Clubes Deportivos, Ecuestres y Escuelas de Natación/Tenis (Torneos y Galas)
 """
 import concurrent.futures
 import csv
@@ -11,6 +16,7 @@ import re
 import socket
 import ssl
 import subprocess
+import urllib.parse
 import urllib.request
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
@@ -26,55 +32,69 @@ HEADERS = {
 }
 
 SEED_INSTITUTIONS = [
-    # 1. Colinas de San Jerónimo / Monterrey Poniente (A 5 min del Estudio Captoora en Paseo de los Álamos 165)
-    {"nombre": "Viget Kindergarten", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://www.viget.com.mx", "contacto_url": "https://www.viget.com.mx/contacto", "correo_base": "admisiones@institutoviget.com.mx", "telefono": "8121930551"},
-    {"nombre": "Instituto San Jerónimo (ISJ)", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio K-12", "web": "https://www.isj.edu.mx", "contacto_url": "https://www.isj.edu.mx", "correo_base": "informes@isj.edu.mx", "telefono": "8112888152"},
-    {"nombre": "Colegio Montessori de Monterrey", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio Montessori", "web": "https://www.montessoridemty.edu.mx", "contacto_url": "https://www.montessoridemty.edu.mx/contacto", "correo_base": "montessoridemonterrey@gmail.com", "telefono": "8183483796"},
-    {"nombre": "Kinder Little Town Puerta del Sol", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://kinderlittletown.com", "contacto_url": "https://kinderlittletown.com", "correo_base": "sanjeronimo@kinderlittletown.com", "telefono": "8183150298"},
-    {"nombre": "Instituto Franco Mexicano (Campus San Jerónimo / SPGG)", "zona": "Colinas de San Jerónimo / SPGG", "categoria": "Colegio Privado", "web": "https://www.ifm.edu.mx", "contacto_url": "https://www.ifm.edu.mx", "correo_base": "admisiones@ifm.edu.mx", "telefono": "8122001951"},
-    {"nombre": "Colegio Mexicano", "zona": "San Jerónimo / Del Valle", "categoria": "Colegio Bilingüe", "web": "https://www.colegiomexicano.edu.mx", "contacto_url": "https://www.colegiomexicano.edu.mx", "correo_base": "informes@colegiomexicano.edu.mx", "telefono": "8120797221"},
+    # === LOTE 1: VECINOS SAN JERÓNIMO / OBISPADO / CUMBRES PRIMER SECTOR (A 5-12 min de Captoora Studio) ===
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Viget Kindergarten", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://www.viget.com.mx", "contacto_url": "https://www.viget.com.mx/contacto", "correo_base": "admisiones@institutoviget.com.mx", "telefono": "8121930551"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Instituto San Jerónimo (ISJ)", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio K-12", "web": "https://www.isj.edu.mx", "contacto_url": "https://www.isj.edu.mx", "correo_base": "informes@isj.edu.mx", "telefono": "8112888152"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Colegio Montessori de Monterrey", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio Montessori", "web": "https://www.montessoridemty.edu.mx", "contacto_url": "https://www.montessoridemty.edu.mx/contacto", "correo_base": "montessoridemonterrey@gmail.com", "telefono": "8183483796"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Kinder Little Town Puerta del Sol", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://kinderlittletown.com", "contacto_url": "https://kinderlittletown.com", "correo_base": "nativa@kinderlittletown.com", "telefono": "8183150298"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Instituto Franco Mexicano (Campus San Jerónimo / SPGG)", "zona": "Colinas de San Jerónimo / SPGG", "categoria": "Colegio Privado", "web": "https://www.ifm.edu.mx", "contacto_url": "https://www.ifm.edu.mx", "correo_base": "admisiones@ifm.edu.mx", "telefono": "8122001951"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Colegio Mexicano", "zona": "San Jerónimo / Del Valle", "categoria": "Colegio Bilingüe", "web": "https://www.colegiomexicano.edu.mx", "contacto_url": "https://www.colegiomexicano.edu.mx", "correo_base": "informes@colegiomexicano.edu.mx", "telefono": "8120797221"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Instituto Motolinía Monterrey", "zona": "Obispado / Cumbres", "categoria": "Colegio Privado", "web": "https://www.motolinia.edu.mx", "contacto_url": "https://www.motolinia.edu.mx", "correo_base": "informes@motolinia.edu.mx", "telefono": "8156797418"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Instituto Regiomontano Chepevera / Cumbres", "zona": "Chepevera / San Jerónimo", "categoria": "Colegio Lasallista", "web": "https://www.ir.edu.mx", "contacto_url": "https://www.ir.edu.mx", "correo_base": "admisiones@ir.edu.mx", "telefono": "8183460500"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Escuela Superior de Música y Danza de Monterrey", "zona": "Obispado / Monterrey", "categoria": "Academia Danza y Música", "web": "https://esmdm.edu.mx", "contacto_url": "https://esmdm.edu.mx", "correo_base": "contacto@esmdm.edu.mx", "telefono": "8183474830"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Colegio Liceo Anglo Francés", "zona": "Monterrey Poniente", "categoria": "Colegio Bilingüe", "web": "https://www.laf.edu.mx", "contacto_url": "https://www.laf.edu.mx", "correo_base": "informes@laf.edu.mx", "telefono": "8183481515"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Colegio Simón Bolívar Monterrey", "zona": "Chepevera / Obispado", "categoria": "Kinder y Primaria", "web": "https://www.colegiosimonbolivar.edu.mx", "contacto_url": "https://www.colegiosimonbolivar.edu.mx", "correo_base": "informes@colegiosimonbolivar.edu.mx", "telefono": "8183471820"},
+    {"lote": "Lote 1 · San Jerónimo y Obispado", "nombre": "Kinder Gymboree Play & Music San Jerónimo", "zona": "Colinas de San Jerónimo", "categoria": "Estimulación y Preescolar", "web": "https://www.gymboreeclases.mx", "contacto_url": "https://www.gymboreeclases.mx", "correo_base": "sanjeronimo@gymboreeclases.mx", "telefono": "8183489200"},
 
-    # 2. San Pedro Garza García / Valle Poniente / Valle Oriente (Ticket Alto VIP)
-    {"nombre": "Colegio Inglés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.colegioingles.edu.mx", "contacto_url": "https://www.colegioingles.edu.mx", "correo_base": "admisiones@colegioingles.edu.mx", "telefono": "8180477000"},
-    {"nombre": "Instituto San Roberto (ISR)", "zona": "San Pedro / Valle Alto", "categoria": "Colegio Internacional VIP", "web": "https://www.sanroberto.edu.mx", "contacto_url": "https://www.sanroberto.edu.mx", "correo_base": "admisionessa@sanroberto.edu.mx", "telefono": "8180002158"},
-    {"nombre": "American School Foundation of Monterrey (ASFM)", "zona": "Valle Poniente / SPGG", "categoria": "Colegio Internacional VIP", "web": "https://www.asfm.edu.mx", "contacto_url": "https://www.asfm.edu.mx", "correo_base": "admissions@asfm.edu.mx", "telefono": "8182884400"},
-    {"nombre": "Colegio Euroamericano Monterrey", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.euroamericano.edu.mx", "contacto_url": "https://www.euroamericano.edu.mx", "correo_base": "admisiones@euroamericano.edu.mx", "telefono": "8182488400"},
-    {"nombre": "Instituto Brillamont", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.brillamont.edu.mx", "contacto_url": "https://www.brillamont.edu.mx", "correo_base": "admisiones@brillamont.edu.mx", "telefono": "8121170005"},
-    {"nombre": "Instituto Mater", "zona": "San Pedro Garza García", "categoria": "Colegio Privado VIP", "web": "https://www.mater.edu.mx", "contacto_url": "https://www.mater.edu.mx", "correo_base": "admisiones@mater.edu.mx", "telefono": "8134039835"},
-    {"nombre": "Colegio Labastida", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.labastida.edu.mx", "contacto_url": "https://www.labastida.edu.mx", "correo_base": "admisiones@labastida.edu.mx", "telefono": "8183354530"},
-    {"nombre": "Instituto Irlandés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.irlandesmonterrey.com", "contacto_url": "https://www.irlandesmonterrey.com", "correo_base": "admisiones@irlandesmonterrey.com", "telefono": "8183631202"},
-    {"nombre": "Colegio Himalaya Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.himalaya.edu.mx", "contacto_url": "https://www.himalaya.edu.mx", "correo_base": "admisiones@himalaya.edu.mx", "telefono": "8183384900"},
-    {"nombre": "Colegio Necali / Eurocampestre", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.necali.edu.mx", "contacto_url": "https://www.necali.edu.mx", "correo_base": "admisiones@eurocampestre.edu.mx", "telefono": "8116113101"},
-    {"nombre": "Liceo de Monterrey", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.liceodemonterrey.edu.mx", "contacto_url": "https://www.liceodemonterrey.edu.mx", "correo_base": "admisiones@liceodemonterrey.edu.mx", "telefono": "8181532100"},
-    {"nombre": "Colegio Montealban", "zona": "San Pedro / Monterrey", "categoria": "Kinder y Primaria", "web": "https://www.colegiomontealban.edu.mx", "contacto_url": "https://www.colegiomontealban.edu.mx", "correo_base": "informes@colegiomontealban.edu.mx", "telefono": "8183334050"},
-    {"nombre": "Formus / Instituto Formus", "zona": "San Pedro / Valle Poniente", "categoria": "Colegio Privado", "web": "https://www.formus.edu.mx", "contacto_url": "https://www.formus.edu.mx", "correo_base": "admisiones@formus.edu.mx", "telefono": "8181245600"},
+    # === LOTE 2: SAN PEDRO GARZA GARCÍA / VALLE PONIENTE / VALLE ORIENTE (Ticket Alto VIP) ===
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Inglés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.colegioingles.edu.mx", "contacto_url": "https://www.colegioingles.edu.mx", "correo_base": "admisiones@colegioingles.edu.mx", "telefono": "8180477000"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Instituto San Roberto (ISR San Agustín)", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.sanroberto.edu.mx", "contacto_url": "https://www.sanroberto.edu.mx", "correo_base": "admisionessa@sanroberto.edu.mx", "telefono": "8180002158"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "American School Foundation of Monterrey (ASFM)", "zona": "Valle Poniente / SPGG", "categoria": "Colegio Internacional VIP", "web": "https://www.asfm.edu.mx", "contacto_url": "https://www.asfm.edu.mx", "correo_base": "admissions@asfm.edu.mx", "telefono": "8182884400"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Euroamericano Monterrey (Valle Oriente)", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.euroamericano.edu.mx", "contacto_url": "https://www.euroamericano.edu.mx", "correo_base": "admisiones@euroamericano.edu.mx", "telefono": "8182488400"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Instituto Brillamont", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.brillamont.edu.mx", "contacto_url": "https://www.brillamont.edu.mx", "correo_base": "admisiones@brillamont.edu.mx", "telefono": "8121170005"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Instituto Mater", "zona": "San Pedro Garza García", "categoria": "Colegio Privado VIP", "web": "https://www.mater.edu.mx", "contacto_url": "https://www.mater.edu.mx", "correo_base": "admisiones@mater.edu.mx", "telefono": "8134039835"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Labastida", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.labastida.edu.mx", "contacto_url": "https://www.labastida.edu.mx", "correo_base": "admisiones@labastida.edu.mx", "telefono": "8183354530"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Instituto Irlandés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.irlandesmonterrey.com", "contacto_url": "https://www.irlandesmonterrey.com", "correo_base": "admisiones@irlandesmonterrey.com", "telefono": "8183631202"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Himalaya Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.himalaya.edu.mx", "contacto_url": "https://www.himalaya.edu.mx", "correo_base": "admisiones@himalaya.edu.mx", "telefono": "8183384900"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Necali / Eurocampestre", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.necali.edu.mx", "contacto_url": "https://www.necali.edu.mx", "correo_base": "admisiones@eurocampestre.edu.mx", "telefono": "8116113101"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Liceo de Monterrey", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.liceodemonterrey.edu.mx", "contacto_url": "https://www.liceodemonterrey.edu.mx", "correo_base": "admisiones@liceodemonterrey.edu.mx", "telefono": "8181532100"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Instituto Formus Valle Poniente", "zona": "San Pedro / Valle Poniente", "categoria": "Colegio Privado VIP", "web": "https://www.formus.edu.mx", "contacto_url": "https://www.formus.edu.mx", "correo_base": "admisiones@formus.edu.mx", "telefono": "8181245600"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Colegio Mirasierra", "zona": "San Pedro Garza García", "categoria": "Colegio Privado VIP", "web": "https://www.colegiomirasierra.edu.mx", "contacto_url": "https://www.colegiomirasierra.edu.mx", "correo_base": "admisiones@colegiomirasierra.edu.mx", "telefono": "8183383850"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Preescolar Bambini Montessori SPGG", "zona": "San Pedro Garza García", "categoria": "Kinder / Montessori VIP", "web": "https://www.bambinimontessori.edu.mx", "contacto_url": "https://www.bambinimontessori.edu.mx", "correo_base": "informes@bambinimontessori.edu.mx", "telefono": "8183358090"},
+    {"lote": "Lote 2 · San Pedro Garza García VIP", "nombre": "Kinder Toddlers & Kids San Pedro", "zona": "San Pedro Garza García", "categoria": "Kinder Bilingüe VIP", "web": "https://www.toddlers.edu.mx", "contacto_url": "https://www.toddlers.edu.mx", "correo_base": "admisiones@toddlers.edu.mx", "telefono": "8183564411"},
 
-    # 3. Cumbres / Obispado / Zona Poniente (Muy cerca de San Jerónimo)
-    {"nombre": "Pan American School of Monterrey (PAS)", "zona": "Cumbres / Centro / Carretera Nac.", "categoria": "Colegio Internacional", "web": "https://www.pas.edu.mx", "contacto_url": "https://www.pas.edu.mx", "correo_base": "admissions@panamerican.edu.mx", "telefono": "8181300900"},
-    {"nombre": "Colegio San Patricio Monterrey", "zona": "Cumbres / Del Paseo", "categoria": "Colegio Bilingüe", "web": "https://www.sanpatricio.edu.mx", "contacto_url": "https://www.sanpatricio.edu.mx", "correo_base": "admisiones@sanpatricio.edu.mx", "telefono": "8111339101"},
-    {"nombre": "Cambridge College Monterrey", "zona": "Cumbres / Mitras", "categoria": "Colegio Bilingüe", "web": "https://www.cambridge.edu.mx", "contacto_url": "https://www.cambridge.edu.mx", "correo_base": "informacion@cambridge.edu.mx", "telefono": "8181234040"},
-    {"nombre": "Instituto Motolinía Monterrey", "zona": "Obispado / Cumbres", "categoria": "Colegio Privado", "web": "https://www.motolinia.edu.mx", "contacto_url": "https://www.motolinia.edu.mx", "correo_base": "informes@motolinia.edu.mx", "telefono": "8156797418"},
-    {"nombre": "Instituto Edinburgh", "zona": "Cumbres / San Nicolás", "categoria": "Colegio Bilingüe", "web": "https://www.edinburgh.edu.mx", "contacto_url": "https://www.edinburgh.edu.mx", "correo_base": "info@edinburgh.edu.mx", "telefono": "8121338370"},
-    {"nombre": "Instituto Anglo Británico", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.anglobritanico.edu.mx", "contacto_url": "https://www.anglobritanico.edu.mx", "correo_base": "admisiones@anglobritanico.edu.mx", "telefono": "8183004050"},
-    {"nombre": "Colegio Madison Monterrey", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.colegiomadison.edu.mx", "contacto_url": "https://www.colegiomadison.edu.mx", "correo_base": "admisionesmty@colegiomadison.edu.mx", "telefono": "8181041140"},
-    {"nombre": "Instituto Regiomontano Cumbres", "zona": "Cumbres / Chepevera", "categoria": "Colegio Lasallista", "web": "https://www.ircumbres.edu.mx", "contacto_url": "https://www.ircumbres.edu.mx", "correo_base": "admisiones@ircumbres.edu.mx", "telefono": "8183460500"},
-    {"nombre": "Colegio Naciones Unidas", "zona": "Cumbres / Monterrey", "categoria": "Colegio Bilingüe", "web": "https://www.cnu.edu.mx", "contacto_url": "https://www.cnu.edu.mx", "correo_base": "informes@cnu.edu.mx", "telefono": "8183001234"},
+    # === LOTE 3: CUMBRES / PONIENTE / SAN NICOLÁS ===
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Pan American School of Monterrey (PAS)", "zona": "Cumbres / Carretera Nac.", "categoria": "Colegio Internacional", "web": "https://www.pas.edu.mx", "contacto_url": "https://www.pas.edu.mx", "correo_base": "admissions@panamerican.edu.mx", "telefono": "8181300900"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Colegio San Patricio Monterrey (Cumbres)", "zona": "Cumbres / Del Paseo", "categoria": "Colegio Bilingüe", "web": "https://www.sanpatricio.edu.mx", "contacto_url": "https://www.sanpatricio.edu.mx", "correo_base": "admisiones@sanpatricio.edu.mx", "telefono": "8111339101"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Cambridge College Monterrey", "zona": "Cumbres / Mitras", "categoria": "Colegio Bilingüe", "web": "https://www.cambridge.edu.mx", "contacto_url": "https://www.cambridge.edu.mx", "correo_base": "informacion@cambridge.edu.mx", "telefono": "8181234040"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Instituto Edinburgh", "zona": "Cumbres / San Nicolás", "categoria": "Colegio Bilingüe", "web": "https://www.edinburgh.edu.mx", "contacto_url": "https://www.edinburgh.edu.mx", "correo_base": "info@edinburgh.edu.mx", "telefono": "8121338370"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Instituto Anglo Británico", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.anglobritanico.edu.mx", "contacto_url": "https://www.anglobritanico.edu.mx", "correo_base": "admisiones@anglobritanico.edu.mx", "telefono": "8183004050"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Colegio Madison Monterrey", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.colegiomadison.edu.mx", "contacto_url": "https://www.colegiomadison.edu.mx", "correo_base": "admisionesmty@colegiomadison.edu.mx", "telefono": "8181041140"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Kilimanjaro International School", "zona": "Cumbres / Monterrey", "categoria": "Colegio Internacional", "web": "https://www.kilimanjaro.edu.mx", "contacto_url": "https://www.kilimanjaro.edu.mx", "correo_base": "admisiones@kilimanjaro.edu.mx", "telefono": "8183006070"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Nexus Comunidad Educativa", "zona": "Cumbres / Poniente", "categoria": "Colegio Privado", "web": "https://www.nexus.edu.mx", "contacto_url": "https://www.nexus.edu.mx", "correo_base": "informes@nexus.edu.mx", "telefono": "8181230202"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Colegio Naciones Unidas (CNU)", "zona": "Cumbres / Monterrey", "categoria": "Colegio Bilingüe", "web": "https://www.cnu.edu.mx", "contacto_url": "https://www.cnu.edu.mx", "correo_base": "informes@cnu.edu.mx", "telefono": "8183001234"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Colegio Cristóbal Colón Monterrey", "zona": "Monterrey / Cumbres", "categoria": "Colegio Privado", "web": "https://www.ccc.edu.mx", "contacto_url": "https://www.ccc.edu.mx", "correo_base": "admisiones@ccc.edu.mx", "telefono": "8183520410"},
+    {"lote": "Lote 3 · Cumbres y Poniente", "nombre": "Instituto Oxford de Monterrey", "zona": "Cumbres / San Nicolás", "categoria": "Colegio Bilingüe", "web": "https://www.oxford.edu.mx", "contacto_url": "https://www.oxford.edu.mx", "correo_base": "admisiones@oxford.edu.mx", "telefono": "8183005500"},
 
-    # 4. Contry / Sur / Carretera Nacional
-    {"nombre": "Colegio Regiomontano Contry", "zona": "Contry / Sur Monterrey", "categoria": "Colegio Lasallista", "web": "https://www.regiocontry.edu.mx", "contacto_url": "https://www.regiocontry.edu.mx", "correo_base": "recepcion@regiocontry.edu.mx", "telefono": "8183577621"},
-    {"nombre": "Tonallí Comunidad Educativa", "zona": "Carretera Nacional / Sur", "categoria": "Colegio Humanista", "web": "https://www.tonalli.edu.mx", "contacto_url": "https://www.tonalli.edu.mx", "correo_base": "informes@tonalli.edu.mx", "telefono": "8128711066"},
-    {"nombre": "Colegio Bilingüe La Silla", "zona": "Sur / Carretera Nacional", "categoria": "Colegio Bilingüe", "web": "https://www.colegiolasilla.com.mx", "contacto_url": "https://www.colegiolasilla.com.mx", "correo_base": "informes@colegiolasilla.com.mx", "telefono": "8183493545"},
-    {"nombre": "Colegio Cristóbal Colón Monterrey", "zona": "Monterrey / San Nicolás", "categoria": "Colegio Privado", "web": "https://www.ccc.edu.mx", "contacto_url": "https://www.ccc.edu.mx", "correo_base": "admisiones@ccc.edu.mx", "telefono": "8183520410"},
-    {"nombre": "Instituto Laurens", "zona": "Monterrey / Sur", "categoria": "Colegio Bilingüe", "web": "https://www.laurens.edu.mx", "contacto_url": "https://www.laurens.edu.mx", "correo_base": "admisiones@laurens.edu.mx", "telefono": "8183402200"},
-    {"nombre": "Colegio Excélsior Monterrey", "zona": "Monterrey", "categoria": "Colegio Privado", "web": "https://www.excelsior.edu.mx", "contacto_url": "https://www.excelsior.edu.mx", "correo_base": "informes@excelsior.edu.mx", "telefono": "8183421890"},
+    # === LOTE 4: SUR / CONTRY / CARRETERA NACIONAL ===
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Colegio Regiomontano Contry", "zona": "Contry / Sur Monterrey", "categoria": "Colegio Lasallista", "web": "https://www.regiocontry.edu.mx", "contacto_url": "https://www.regiocontry.edu.mx", "correo_base": "recepcion@regiocontry.edu.mx", "telefono": "8183577621"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Tonallí Comunidad Educativa", "zona": "Carretera Nacional / Sur", "categoria": "Colegio Humanista", "web": "https://www.tonalli.edu.mx", "contacto_url": "https://www.tonalli.edu.mx", "correo_base": "informes@tonalli.edu.mx", "telefono": "8128711066"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Colegio Bilingüe La Silla", "zona": "Sur / Carretera Nacional", "categoria": "Colegio Bilingüe", "web": "https://www.colegiolasilla.com.mx", "contacto_url": "https://www.colegiolasilla.com.mx", "correo_base": "informes@colegiolasilla.com.mx", "telefono": "8183493545"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Highlands International School Monterrey", "zona": "Carretera Nacional", "categoria": "Colegio Internacional", "web": "https://www.highlandsmty.edu.mx", "contacto_url": "https://www.highlandsmty.edu.mx", "correo_base": "admisiones@highlandsmty.edu.mx", "telefono": "8182662400"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Instituto Laurens", "zona": "Monterrey / Sur", "categoria": "Colegio Bilingüe", "web": "https://www.laurens.edu.mx", "contacto_url": "https://www.laurens.edu.mx", "correo_base": "admisiones@laurens.edu.mx", "telefono": "8183402200"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Colegio Excélsior Monterrey", "zona": "Monterrey Sur", "categoria": "Colegio Privado", "web": "https://www.excelsior.edu.mx", "contacto_url": "https://www.excelsior.edu.mx", "correo_base": "informes@excelsior.edu.mx", "telefono": "8183421890"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Instituto San Roberto (Campus Valle Alto)", "zona": "Valle Alto / Carretera Nac.", "categoria": "Colegio Internacional VIP", "web": "https://www.sanroberto.edu.mx", "contacto_url": "https://www.sanroberto.edu.mx", "correo_base": "admissionsva@sanroberto.edu.mx", "telefono": "8186251500"},
+    {"lote": "Lote 4 · Contry y Carretera Nacional", "nombre": "Colegio Euroamericano Sur (Carretera Nacional)", "zona": "Carretera Nacional", "categoria": "Colegio Bilingüe VIP", "web": "https://www.euroamericano.edu.mx", "contacto_url": "https://www.euroamericano.edu.mx", "correo_base": "admisionessur@euroamericano.edu.mx", "telefono": "8183179000"},
 
-    # 5. Academias de Danza, Ballet, Gimnasia, Arte y Clubes Deportivos (Eventos, Festivales, Recitales y Retratos)
-    {"nombre": "Escuela Superior de Música y Danza de Monterrey", "zona": "Obispado / Monterrey", "categoria": "Academia Danza y Música", "web": "https://esmdm.edu.mx", "contacto_url": "https://esmdm.edu.mx", "correo_base": "contacto@esmdm.edu.mx", "telefono": "8183474830"},
-    {"nombre": "Ballet de Monterrey (Academia Oficial)", "zona": "San Pedro / Monterrey", "categoria": "Academia de Ballet", "web": "https://www.balletdemonterrey.com", "contacto_url": "https://www.balletdemonterrey.com", "correo_base": "info@balletdemonterrey.com", "telefono": "8183477664"},
-    {"nombre": "Club Deportivo San Agustín", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.deportivosanagustin.com", "contacto_url": "https://www.deportivosanagustin.com", "correo_base": "contacto@deportivosanagustin.com", "telefono": "8183633232"},
-    {"nombre": "Deportivo Alpino Chipinque", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.alpinochipinque.com", "contacto_url": "https://www.alpinochipinque.com", "correo_base": "atencionsocios@alpinochipinque.com", "telefono": "8183781515"},
-    {"nombre": "Casino Monterrey / Club Campestre", "zona": "San Pedro / Monterrey", "categoria": "Club Social y Eventos", "web": "https://www.casinomonterrey.com", "contacto_url": "https://www.casinomonterrey.com", "correo_base": "eventos@casinomonterrey.com", "telefono": "8181505500"},
-    {"nombre": "Gimnasio / Academia Regio Gym", "zona": "San Jerónimo / Cumbres", "categoria": "Academia de Gimnasia", "web": "https://www.regiogym.com", "contacto_url": "https://www.regiogym.com", "correo_base": "info@regiogym.com", "telefono": "8183489010"},
+    # === LOTE 5: ACADEMIAS DE DANZA, BALLET, GIMNASIA, ARTE Y CLUBES DEPORTIVOS (Recitales y Galas Diciembre) ===
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Ballet de Monterrey (Academia Oficial)", "zona": "San Pedro / Monterrey", "categoria": "Academia de Ballet", "web": "https://www.balletdemonterrey.com", "contacto_url": "https://www.balletdemonterrey.com", "correo_base": "info@balletdemonterrey.com", "telefono": "8183477664"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Club Deportivo San Agustín", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.deportivosanagustin.com", "contacto_url": "https://www.deportivosanagustin.com", "correo_base": "contacto@deportivosanagustin.com", "telefono": "8183633232"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Deportivo Alpino Chipinque", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.alpinochipinque.com", "contacto_url": "https://www.alpinochipinque.com", "correo_base": "atencionsocios@alpinochipinque.com", "telefono": "8183781515"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Casino Monterrey", "zona": "Monterrey / San Pedro", "categoria": "Club Social y Galas", "web": "https://www.casinomonterrey.com", "contacto_url": "https://www.casinomonterrey.com", "correo_base": "eventos@casinomonterrey.com", "telefono": "8181505500"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Club Ejecutivo San Pedro", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Eventos", "web": "https://www.clubejecutivo.com.mx", "contacto_url": "https://www.clubejecutivo.com.mx", "correo_base": "eventos@clubejecutivo.com.mx", "telefono": "8183355000"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Gimnasio y Academia Regio Gym", "zona": "San Jerónimo / Cumbres", "categoria": "Academia de Gimnasia", "web": "https://www.regiogym.com", "contacto_url": "https://www.regiogym.com", "correo_base": "info@regiogym.com", "telefono": "8183489010"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Tutus Dance Studio San Pedro", "zona": "San Pedro Garza García", "categoria": "Academia de Ballet y Danza", "web": "https://www.balletdemonterrey.com", "contacto_url": "https://www.balletdemonterrey.com", "correo_base": "academia@balletdemonterrey.com", "telefono": "8183351200"},
+    {"lote": "Lote 5 · Academias Danza y Clubes VIP", "nombre": "Club Sonoma Residencial & Deportivo", "zona": "Valle Oriente / SPGG", "categoria": "Club Deportivo y Academias", "web": "https://www.clubsonoma.com.mx", "contacto_url": "https://www.clubsonoma.com.mx", "correo_base": "contacto@clubsonoma.com.mx", "telefono": "8181541200"},
 ]
 
 EMAIL_REGEX = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
@@ -103,7 +123,6 @@ def verify_domain_dns(email: str, web_url: str = "") -> bool:
                 return True
         except Exception:
             pass
-    # Also check nslookup MX fallback quickly
     try:
         out = subprocess.check_output(["nslookup", "-type=mx", domain], stderr=subprocess.STDOUT, timeout=3, text=True, errors="ignore")
         if "mail exchanger" in out.lower() or "mx preference" in out.lower():
@@ -150,6 +169,7 @@ def scrape_institution(item: dict) -> dict:
     best_phone = sorted(found_phones)[0] if found_phones else item["telefono"]
 
     return {
+        "lote": item["lote"],
         "nombre": item["nombre"],
         "zona": item["zona"],
         "categoria": item["categoria"],
@@ -169,7 +189,7 @@ def build_html_dashboard(results: list):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAPTOORA B2B · Campaña Pixieset para Colegios, Preescolares y Academias (MTY / SPGG)</title>
+  <title>CAPTOORA B2B · Centro de Disparo con Portafolio Pixieset ({len(results)} Colegios y Academias)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -196,78 +216,101 @@ def build_html_dashboard(results: list):
   </style>
 </head>
 <body class="p-4 md:p-7 min-h-screen">
-  <header class="max-w-7xl mx-auto mb-6 apple-glass rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5">
-    <div>
-      <div class="flex flex-wrap items-center gap-2 mb-2">
-        <a href="https://studio.pixieset.com/contacts" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-black px-3.5 py-1 rounded-full text-xs font-extrabold shadow transition">
-          🚀 1. Abrir Pixieset Studio Manager (Importar CSV) ↗
-        </a>
-        <a href="https://galleries.pixieset.com/collections" target="_blank" class="bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 px-3.5 py-1 rounded-full text-xs font-bold transition">
-          📸 2. Abrir Colecciones Pixieset (Enviar Dossier por Email) ↗
-        </a>
-        <span class="bg-sky-500/20 border border-sky-400/30 text-sky-300 px-3 py-1 rounded-full text-xs font-semibold">
-          Escudo Anti-Rebote DNS Activo
-        </span>
+  <header class="max-w-7xl mx-auto mb-6 apple-glass rounded-2xl p-6 space-y-4">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5">
+      <div>
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <a href="https://studio.pixieset.com/contacts" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-black px-3.5 py-1 rounded-full text-xs font-extrabold shadow transition">
+            🚀 1. Importar CSV en Pixieset Contacts ↗
+          </a>
+          <a href="https://galleries.pixieset.com/collections" target="_blank" class="bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 px-3.5 py-1 rounded-full text-xs font-bold transition">
+            📸 2. Abrir tu Portafolio en Pixieset (Share &rarr; Email) ↗
+          </a>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold font-editorial gold-gradient-text">
+          Centro de Disparo B2B con tu Portafolio · {len(results)} Colegios y Academias
+        </h1>
+        <p class="text-gray-400 text-xs md:text-sm mt-1">
+          Como <strong>ya tienes tu portafolio listo</strong>, aquí tienes los <strong>5 Lotes Diarios</strong> para mandarlo por Pixieset y marcar a cuáles ya les enviaste.
+        </p>
       </div>
-      <h1 class="text-2xl md:text-3xl font-extrabold font-editorial gold-gradient-text">
-        Motor B2B Pixieset · Colegios, Kinders y Academias (MTY & SPGG)
-      </h1>
-      <p class="text-gray-400 text-xs md:text-sm mt-1">
-        Estrategia <strong>"Mejoramos la Oferta de su Proveedor Actual + Galería Privada Pixieset con PIN Individual"</strong> sin riesgo de bloqueo de cuenta.
-      </p>
+
+      <!-- PORTFOLIO URL CONFIG -->
+      <div class="w-full lg:w-96 bg-black/50 p-3.5 rounded-xl border border-amber-400/30">
+        <label class="text-[10px] uppercase tracking-wider text-amber-300 font-bold block mb-1">🔗 Link de tu Portafolio para inyectar en los correos:</label>
+        <div class="flex gap-2">
+          <input id="portfolio-url" type="text" value="https://captoora.pixieset.com" oninput="savePortfolioUrl(this.value)" class="w-full bg-black/80 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white font-mono">
+        </div>
+      </div>
     </div>
 
-    <div class="flex flex-wrap gap-2">
-      <button onclick="copyBatchEmails(0, 15)" class="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-amber-500 text-black hover:bg-amber-400 shadow transition">
-        📋 Copiar Lote 1 (Top 15 Correos VIP)
-      </button>
-      <button onclick="copyBatchEmails(15, 35)" class="px-4 py-2.5 rounded-xl text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/15 transition">
-        📋 Copiar Lote 2 (Siguientes Correos)
-      </button>
+    <!-- 5 DAILY BATCH BUTTONS FOR PIXIESET SHARE -> EMAIL -->
+    <div class="pt-3 border-t border-white/10">
+      <div class="text-xs font-bold text-gray-300 mb-2">⚡ Copiar Lote de Correos (Separados por coma listos para pegar en <code class="text-amber-300">Pixieset &rarr; Share &rarr; Email</code>):</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+        <button onclick="copyLote('Lote 1')" class="p-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-400/40 text-left transition">
+          <div class="text-xs font-extrabold text-amber-300">📍 Día 1 · Lote San Jerónimo</div>
+          <div class="text-[11px] text-gray-300 mt-0.5">Vecinos a 5-10 min del estudio</div>
+        </button>
+        <button onclick="copyLote('Lote 2')" class="p-3 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-left transition">
+          <div class="text-xs font-extrabold text-emerald-300">💎 Día 2 · Lote San Pedro VIP</div>
+          <div class="text-[11px] text-gray-300 mt-0.5">Colegios Bilingües y Preescolares</div>
+        </button>
+        <button onclick="copyLote('Lote 3')" class="p-3 rounded-xl bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-left transition">
+          <div class="text-xs font-extrabold text-sky-300">🏫 Día 3 · Lote Cumbres</div>
+          <div class="text-[11px] text-gray-300 mt-0.5">Colegios Internacionales Poniente</div>
+        </button>
+        <button onclick="copyLote('Lote 4')" class="p-3 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 border border-purple-400/40 text-left transition">
+          <div class="text-xs font-extrabold text-purple-300">🌲 Día 4 · Carretera Nacional</div>
+          <div class="text-[11px] text-gray-300 mt-0.5">Contry, Sur y Valle Alto</div>
+        </button>
+        <button onclick="copyLote('Lote 5')" class="p-3 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 border border-rose-400/40 text-left transition">
+          <div class="text-xs font-extrabold text-rose-300">🩰 Día 5 · Academias y Clubes</div>
+          <div class="text-[11px] text-gray-300 mt-0.5">Ballet, Gimnasia y Deportivos</div>
+        </button>
+      </div>
     </div>
   </header>
 
   <div class="max-w-7xl mx-auto space-y-6">
-    <!-- 3 TEMPLATES: ROMPE-PROVEEDOR / PIXIESET DOSSIER -->
+    <!-- 3 TEMPLATES -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
       <div class="apple-glass rounded-2xl p-5 border-t-2 border-amber-400 flex flex-col justify-between space-y-3">
         <div>
-          <span class="text-[10px] uppercase tracking-wider font-extrabold text-amber-300 bg-amber-500/15 px-2.5 py-0.5 rounded-full">Plantilla 1 · Gancho "Mejoramos a su Proveedor"</span>
-          <h3 class="text-base font-bold text-white mt-2">Reto de Mejora de Propuesta + Beneficio al Plantel</h3>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-amber-300 bg-amber-500/15 px-2.5 py-0.5 rounded-full">Mensaje para Pegar en Pixieset Email</span>
+          <h3 class="text-base font-bold text-white mt-2">1. Gancho "Mejoramos a su Proveedor Actual"</h3>
           <p class="text-xs text-gray-300 mt-1 leading-relaxed">
-            Ideal para colegios que <strong>ya tienen fotógrafo tradicional</strong>. Ofrece entrega digital en 48h con PIN individual por familia en Pixieset, cero cobros en efectivo para el colegio y cobertura de cortesía de su Festival Navideño / Posada.
+            Úsalo como mensaje general cuando envíes tu <strong>Portafolio desde Pixieset</strong> a un lote de colegios. Incluye las 3 garantías: 0% carga administrativa con PIN, mejora de cotización y cobertura de cortesía de su Festival Navideño.
           </p>
         </div>
-        <button onclick="copyMasterTemplate('MEJORA')" class="w-full py-2 rounded-xl text-xs font-extrabold bg-amber-500 text-black hover:bg-amber-400 transition">
-          📋 Copiar Plantilla "Mejoramos su Proveedor"
+        <button onclick="copyMasterTemplate('PIXIESET_BULK')" class="w-full py-2.5 rounded-xl text-xs font-extrabold bg-amber-500 text-black hover:bg-amber-400 transition">
+          📋 Copiar Texto para Campaña Pixieset (Lote)
         </button>
       </div>
 
       <div class="apple-glass rounded-2xl p-5 border-t-2 border-emerald-400 flex flex-col justify-between space-y-3">
         <div>
-          <span class="text-[10px] uppercase tracking-wider font-extrabold text-emerald-300 bg-emerald-500/15 px-2.5 py-0.5 rounded-full">Plantilla 2 · Festivales Navideños y Graduaciones</span>
-          <h3 class="text-base font-bold text-white mt-2">Piloto sin Compromiso Anual (Festival Dic 2026)</h3>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-emerald-300 bg-emerald-500/15 px-2.5 py-0.5 rounded-full">Especial Academias y Festivales Dic</span>
+          <h3 class="text-base font-bold text-white mt-2">2. Gancho "Festival Navideño / Recital de Fin de Año"</h3>
           <p class="text-xs text-gray-300 mt-1 leading-relaxed">
-            Ideal para entrar este mismo mes de noviembre/diciembre cubriendo su <strong>Festival Navideño, Pastorela o Recital de Danza</strong> sin pedirles cambiar su contrato de graduación todavía.
+            Ideal para <strong>Kinders y Academias de Ballet/Gimnasia</strong> que tienen recitales en noviembre y diciembre: cobertura sin costo para la academia y venta/descarga individual por familia con PIN en Pixieset.
           </p>
         </div>
-        <button onclick="copyMasterTemplate('FESTIVAL')" class="w-full py-2 rounded-xl text-xs font-extrabold bg-emerald-500 text-black hover:bg-emerald-400 transition">
-          📋 Copiar Plantilla "Festival Navideño / Recital"
+        <button onclick="copyMasterTemplate('FESTIVAL')" class="w-full py-2.5 rounded-xl text-xs font-extrabold bg-emerald-500 text-black hover:bg-emerald-400 transition">
+          📋 Copiar Texto "Festival Navideño / Recital"
         </button>
       </div>
 
       <div class="apple-glass rounded-2xl p-5 border-t-2 border-sky-400 flex flex-col justify-between space-y-3">
         <div>
-          <span class="text-[10px] uppercase tracking-wider font-extrabold text-sky-300 bg-sky-500/15 px-2.5 py-0.5 rounded-full">Cómo usar Pixieset Email sin Bloqueos</span>
-          <h3 class="text-base font-bold text-white mt-2">Regla de Oro de Entregabilidad en Pixieset</h3>
-          <ul class="text-xs text-gray-300 mt-1 space-y-1 list-disc list-inside">
-            <li>Usa el archivo <code>PROSPECTOS_COLEGIOS_PIXIESET_IMPORT.csv</code> en <strong>Studio Manager &rarr; Contacts</strong>.</li>
-            <li>Envía en <strong>bloques de 15 a 20 colegios por día</strong> desde tu Galería Portafolio Escolar.</li>
-            <li>Cada tarjeta abajo genera el correo <strong>personalizado con el nombre del colegio</strong>.</li>
-          </ul>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-sky-300 bg-sky-500/15 px-2.5 py-0.5 rounded-full">Guion de Llamada / WhatsApp (45 seg)</span>
+          <h3 class="text-base font-bold text-white mt-2">3. Seguimiento 24h Después del Correo</h3>
+          <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+            A las 24h de mandar el portafolio por Pixieset, llamas o mandas WhatsApp para pedir el contacto directo de la Coordinadora de Eventos o Sociedad de Padres.
+          </p>
         </div>
-        <button onclick="copyMasterTemplate('SUBJECTS')" class="w-full py-2 rounded-xl text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 hover:bg-sky-500/30 transition">
-          📋 Copiar 5 Asuntos de Alta Apertura (Open Rate)
+        <button onclick="copyMasterTemplate('FOLLOWUP')" class="w-full py-2.5 rounded-xl text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 hover:bg-sky-500/30 transition">
+          📋 Copiar Guion de Seguimiento 24h
         </button>
       </div>
     </div>
@@ -275,13 +318,14 @@ def build_html_dashboard(results: list):
     <!-- FILTER BAR -->
     <div class="apple-glass rounded-2xl p-4 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex flex-wrap gap-2">
-        <button onclick="setFilter('ALL')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white/20 text-white">Todos ({len(results)})</button>
-        <button onclick="setFilter('San Jerónimo')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">📍 Vecinos San Jerónimo</button>
-        <button onclick="setFilter('San Pedro')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">💎 San Pedro Garza García</button>
-        <button onclick="setFilter('Cumbres')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">🏫 Cumbres / Poniente</button>
-        <button onclick="setFilter('Academia')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-400/30">🩰 Academias y Clubes</button>
+        <button onclick="setFilter('ALL')" class="px-3 py-1.5 rounded-xl text-xs font-bold bg-white/20 text-white">Todos ({len(results)})</button>
+        <button onclick="setFilter('Lote 1')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">Lote 1: San Jerónimo</button>
+        <button onclick="setFilter('Lote 2')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">Lote 2: San Pedro VIP</button>
+        <button onclick="setFilter('Lote 3')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">Lote 3: Cumbres</button>
+        <button onclick="setFilter('Lote 4')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-400/30">Lote 4: Carretera Nac.</button>
+        <button onclick="setFilter('Lote 5')" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-400/30">Lote 5: Academias/Clubes</button>
       </div>
-      <input id="q" oninput="renderTable()" placeholder="Buscar colegio, correo o zona..." class="w-full md:w-72 bg-black/60 border border-white/15 rounded-xl px-3.5 py-2 text-xs text-white">
+      <input id="q" oninput="renderTable()" placeholder="Buscar colegio, correo, lote o zona..." class="w-full md:w-72 bg-black/60 border border-white/15 rounded-xl px-3.5 py-2 text-xs text-white">
     </div>
 
     <!-- TABLE -->
@@ -290,12 +334,12 @@ def build_html_dashboard(results: list):
         <table class="w-full text-left border-collapse text-xs">
           <thead>
             <tr class="bg-white/5 border-b border-white/10 text-gray-300 uppercase tracking-wider text-[10px]">
-              <th class="p-3.5">Institución / Colegio</th>
+              <th class="p-3.5">Enviado</th>
+              <th class="p-3.5">Lote / Institución</th>
               <th class="p-3.5">Zona</th>
-              <th class="p-3.5">Correo Institucional Extraído</th>
+              <th class="p-3.5">Correo Institucional</th>
               <th class="p-3.5">Teléfono</th>
-              <th class="p-3.5">Estado DNS / Web</th>
-              <th class="p-3.5 text-right">Acciones Rápidas Pixieset / Correo</th>
+              <th class="p-3.5 text-right">Acciones Directas</th>
             </tr>
           </thead>
           <tbody id="rows" class="divide-y divide-white/5"></tbody>
@@ -309,6 +353,23 @@ def build_html_dashboard(results: list):
   <script>
     const prospects = {data_json};
     let activeFilter = "ALL";
+    let sentMap = JSON.parse(localStorage.getItem("captoora_b2b_sent_v1") || "{{}}");
+    const savedUrl = localStorage.getItem("captoora_portfolio_url");
+    if (savedUrl) document.getElementById("portfolio-url").value = savedUrl;
+
+    function savePortfolioUrl(val) {{
+      localStorage.setItem("captoora_portfolio_url", val.trim());
+    }}
+
+    function getPortfolioUrl() {{
+      return (document.getElementById("portfolio-url").value || "https://captoora.pixieset.com").trim();
+    }}
+
+    function toggleSent(email) {{
+      sentMap[email] = !sentMap[email];
+      localStorage.setItem("captoora_b2b_sent_v1", JSON.stringify(sentMap));
+      renderTable();
+    }}
 
     function showToast(msg) {{
       const t = document.getElementById("toast");
@@ -322,75 +383,83 @@ def build_html_dashboard(results: list):
       renderTable();
     }}
 
-    function copyBatchEmails(start, end) {{
-      const verified = prospects.filter(p => p.dns_verificado === "VERIFICADO").slice(start, end);
-      const list = verified.map(p => p.correo_principal).join(", ");
-      navigator.clipboard.writeText(list);
-      showToast(`✅ ${{verified.length}} correos verificados copiados (listos para pegar en Pixieset Share -> Email)`);
+    function copyLote(lotePrefix) {{
+      const list = prospects
+        .filter(p => p.lote.startsWith(lotePrefix) && p.dns_verificado === "VERIFICADO")
+        .map(p => p.correo_principal);
+      navigator.clipboard.writeText(list.join(", "));
+      showToast(`✅ ${{list.length}} correos de ${{lotePrefix}} copiados (pégalos en Pixieset -> Share -> Email)`);
     }}
 
-    function copyMasterTemplate(type, schoolName = "[Nombre del Colegio]") {{
+    function copyMasterTemplate(type, schoolName = "su institución") {{
+      const portUrl = getPortfolioUrl();
       let txt = "";
-      if (type === "MEJORA") {{
-        txt = `Asunto: Propuesta de Fotografía Escolar y Galerías Privadas 4K para ${{schoolName}} | CAPTOORA Studio\\n\\nEstimada Dirección y Coordinación de ${{schoolName}}:\\n\\nLes saluda Alfonso Gutiérrez, director de CAPTOORA Studio (con estudio en Av. Paseo de los Álamos 165, Colinas de San Jerónimo).\\n\\nSabemos que muchos colegios ya cuentan con un proveedor de fotografía tradicional; sin embargo, les escribimos porque estamos ayudando a instituciones educativas de San Pedro y Monterrey a modernizar la experiencia de sus familias y mejorar cualquier propuesta actual bajo tres garantías:\\n\\n1. CERO CARGA ADMINISTRATIVA PARA EL COLEGIO: Entregamos a cada familia su galería privada en nuestra plataforma Pixieset protegida con PIN individual y selección en línea en 48 horas (sin que el colegio tenga que cobrar sobres en efectivo ni repartir paquetes físicos).\\n2. MEJORAMOS CUALQUIER COTIZACIÓN ACTUAL: Mejoramos el costo para los padres de familia o el porcentaje de beneficio/comisión institucional para el colegio en graduaciones, anuarios y retratos escolares.\\n3. COBERTURA DE CORTESÍA PARA SU PRÓXIMO EVENTO: Para que conozcan nuestra calidad editorial sin ningún compromiso ni cambiar a su proveedor actual, ofrecemos cubrir sin costo para el plantel su próximo Festival Navideño, Posada o presentación artística.\\n\\nAquí pueden ver una muestra de nuestra plataforma de galerías privadas para clientes:\\n🔗 https://captoora.pixieset.com/farmasistudio10oct2026-1/\\n\\n¿Con quién podríamos agendar una breve llamada de 5 minutos esta semana o enviarles nuestra carpeta comparativa?\\n\\nAtentamente,\\nAlfonso Gutiérrez | CAPTOORA Studio\\n📍 Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Mty.\\n📲 WhatsApp Directo: 81 4005 0088 · Instagram: @captoora.studio`;
+      if (type === "PIXIESET_BULK") {{
+        txt = `Asunto: Portafolio CAPTOORA Studio | Mejoramos la propuesta fotográfica actual de ${{schoolName}}\\n\\nEstimada Dirección, Coordinación de Eventos y Sociedad de Padres:\\n\\nLes saluda Alfonso Gutiérrez, director de CAPTOORA Studio (con estudio en Av. Paseo de los Álamos 165, Colinas de San Jerónimo).\\n\\nPor medio de esta invitación les compartimos nuestro Portafolio Oficial en Pixieset:\\n🔗 ${{portUrl}}\\n\\nSabemos que muchas instituciones ya cuentan con un proveedor de fotografía tradicional; sin embargo, les escribimos porque estamos ayudando a colegios y academias de Monterrey y San Pedro a modernizar la entrega a sus familias y MEJORAR CUALQUIER PROPUESTA ACTUAL bajo 3 garantías:\\n\\n1. CERO CARGA ADMINISTRATIVA Y CERO MANEJO DE EFECTIVO PARA EL COLEGIO: Cada familia recibe su galería privada en nuestra plataforma Pixieset protegida con PIN individual en 48 horas, seleccionando y descargando sus fotos en 4K desde su celular (las secretarias y maestras ya no tienen que cobrar sobres ni repartir paquetes físicos).\\n2. MEJORAMOS CUALQUIER COTIZACIÓN O BENEFICIO ACTUAL: Mejoramos el precio por paquete para las familias o el porcentaje de comisión/beneficio en especie para el plantel en graduaciones, anuarios y retratos escolares.\\n3. PRUEBA SIN COMPROMISO EN SU FESTIVAL DE INVIERNO: Para que conozcan nuestra calidad editorial sin cambiar hoy a su proveedor actual, ofrecemos cubrir SIN COSTO PARA EL PLANTEL su próximo Festival Navideño, Posada o Recital de Diciembre.\\n\\n¿Con quién podríamos coordinar una breve llamada de 5 minutos esta semana para presentarles nuestra comparativa?\\n\\nAtentamente,\\nAlfonso Gutiérrez | CAPTOORA Studio\\n📍 Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Mty.\\n📲 WhatsApp Directo: 81 4005 0088 · Instagram: @captoora.studio`;
       }} else if (type === "FESTIVAL") {{
-        txt = `Asunto: Cobertura Fotográfica para Festival Navideño / Recital de ${{schoolName}} | CAPTOORA Studio\\n\\nBuen día, Dirección y Coordinación de ${{schoolName}}:\\n\\nSoy Alfonso Gutiérrez, de CAPTOORA Studio (Colinas de San Jerónimo, Monterrey).\\n\\nDe cara a los cierres de semestre, posadas, pastorelas y festivales navideños de noviembre y diciembre, queremos poner a su disposición nuestro equipo de fotografía editorial y cobertura de escenario.\\n\\nCada familia recibe acceso privado con PIN a la galería digital del evento en alta definición (4K) a través de nuestra plataforma Pixieset, permitiendo descargas inmediatas en el celular sin ningún costo ni trámite administrativo para la dirección de ${{schoolName}}.\\n\\nSi ya tienen fotógrafo asignado para graduaciones, podemos apoyarles únicamente como segundo equipo en sus festivales o mejorar las condiciones que tienen actualmente.\\n\\n¿Qué fecha tienen programada para su festival de invierno para compartirles una propuesta a medida?\\n\\nUn cordial saludo,\\nAlfonso Gutiérrez | CAPTOORA Studio\\n📲 WhatsApp: 81 4005 0088 · @captoora.studio`;
+        txt = `Asunto: Cobertura Fotográfica 4K para Festival Navideño / Recital de ${{schoolName}} | CAPTOORA Studio\\n\\nEstimada Dirección y Coordinación de ${{schoolName}}:\\n\\nSoy Alfonso Gutiérrez, director de CAPTOORA Studio (Colinas de San Jerónimo, Monterrey).\\n\\nDe cara a los cierres de semestre, posadas, pastorelas y recitales de noviembre y diciembre, les comparto nuestro Portafolio Oficial:\\n🔗 ${{portUrl}}\\n\\nOfrecemos cubrir su Festival Navideño o Recital de Fin de Año SIN COSTO PARA EL PLANTEL, entregando a cada familia acceso privado con PIN a la galería digital del evento en resolución 4K dentro de las 48 horas siguientes (además de entregarle a ${{schoolName}} un banco de fotografías editoriales para sus redes y admisiones).\\n\\nSi ya cuentan con un fotógrafo para graduaciones, podemos apoyarles únicamente en sus eventos de invierno o mejorar las condiciones de su proveedor actual.\\n\\n¿Qué fecha tienen programada para su festival de diciembre para reservarles disponibilidad?\\n\\nUn cordial saludo,\\nAlfonso Gutiérrez | CAPTOORA Studio\\n📲 WhatsApp Directo: 81 4005 0088 · @captoora.studio`;
       }} else {{
-        txt = [
-          "1. Fotografía y Galerías Privadas 4K para " + schoolName + " (Mejoramos su propuesta actual)",
-          "2. Cobertura sin costo para el plantel: Festival Navideño 2026 | CAPTOORA Studio",
-          "3. Modernización de fotografía escolar con PIN privado por familia | CAPTOORA",
-          "4. ¿Ya tienen fotógrafo para su Festival de Diciembre en " + schoolName + "?",
-          "5. Dossier de Fotografía Escolar y Recitales 2026–2027 | CAPTOORA Studio"
-        ].join("\\n");
+        txt = `Buen día, hablo de CAPTOORA Studio aquí en Colinas de San Jerónimo. Ayer enviamos a Dirección por medio de nuestra plataforma Pixieset nuestro portafolio (${{portUrl}}) con una propuesta para cubrir sin costo para el plantel su Festival Navideño y mejorar la oferta de su proveedor fotográfico actual. ¿Me podrías confirmar el nombre o WhatsApp de la Coordinadora de Eventos / Difusión para compartirle su acceso directo?`;
       }}
       navigator.clipboard.writeText(txt);
-      showToast("✅ Plantilla personalizada copiada para " + schoolName);
+      showToast("✅ Mensaje copiado con tu link de portafolio para " + schoolName);
+    }}
+
+    function openMailto(email, schoolName) {{
+      const portUrl = getPortfolioUrl();
+      const subj = encodeURIComponent(`Portafolio CAPTOORA Studio | Mejoramos la propuesta fotográfica de ${{schoolName}}`);
+      const body = encodeURIComponent(
+        `Estimada Dirección y Coordinación de ${{schoolName}}:\n\n` +
+        `Les saluda Alfonso Gutiérrez, director de CAPTOORA Studio (Av. Paseo de los Álamos 165, Colinas de San Jerónimo).\n\n` +
+        `Les comparto nuestro Portafolio Oficial:\n${{portUrl}}\n\n` +
+        `Si ya cuentan con proveedor de fotografía escolar o de eventos, mejoramos cualquier propuesta actual con:\n` +
+        `1) Cero carga administrativa ni cobros en efectivo para el colegio (galerías privadas Pixieset con PIN individual en 48h).\n` +
+        `2) Mejora en precio para las familias o mayor comisión/beneficio en especie para ${{schoolName}}.\n` +
+        `3) Cobertura SIN COSTO para el plantel en su próximo Festival Navideño o Recital de Diciembre como prueba de calidad.\n\n` +
+        `¿Con quién podríamos coordinar una llamada de 5 minutos esta semana?\n\n` +
+        `Atentamente,\nAlfonso Gutiérrez | CAPTOORA Studio\nWhatsApp: 81 4005 0088 · @captoora.studio`
+      );
+      window.open(`mailto:${{email}}?subject=${{subj}}&body=${{body}}`, "_blank");
     }}
 
     function renderTable() {{
       const q = (document.getElementById("q").value || "").toLowerCase().trim();
       const tbody = document.getElementById("rows");
       const filtered = prospects.filter(p => {{
-        if (activeFilter !== "ALL") {{
-          const hay = (p.zona + " " + p.categoria).toLowerCase();
-          if (!hay.includes(activeFilter.toLowerCase())) return false;
-        }}
-        if (q && !(p.nombre.toLowerCase().includes(q) || p.correo_principal.toLowerCase().includes(q) || p.zona.toLowerCase().includes(q))) return false;
+        if (activeFilter !== "ALL" && !p.lote.startsWith(activeFilter)) return false;
+        if (q && !(p.nombre.toLowerCase().includes(q) || p.correo_principal.toLowerCase().includes(q) || p.zona.toLowerCase().includes(q) || p.lote.toLowerCase().includes(q))) return false;
         return true;
       }});
 
-      tbody.innerHTML = filtered.map(p => `
-        <tr class="hover:bg-white/5 transition">
+      tbody.innerHTML = filtered.map(p => {{
+        const isSent = !!sentMap[p.correo_principal];
+        return `
+        <tr class="hover:bg-white/5 transition ${{isSent ? 'opacity-50 bg-emerald-950/20' : ''}}">
+          <td class="p-3.5 text-center">
+            <input type="checkbox" ${{isSent ? 'checked' : ''}} onchange="toggleSent('${{p.correo_principal}}')" class="w-4 h-4 accent-emerald-500 cursor-pointer">
+          </td>
           <td class="p-3.5">
-            <div class="font-bold text-white">${{p.nombre}}</div>
+            <span class="text-[10px] font-bold text-amber-300 uppercase">${{p.lote}}</span>
+            <div class="font-bold text-white text-sm">${{p.nombre}}</div>
             <div class="text-[10px] text-gray-400">${{p.categoria}} · <a href="${{p.web}}" target="_blank" class="text-sky-300 hover:underline">${{p.web.replace('https://','')}} ↗</a></div>
           </td>
           <td class="p-3.5 text-gray-300">${{p.zona}}</td>
           <td class="p-3.5">
-            <span class="font-mono text-amber-300 font-semibold">${{p.correo_principal}}</span>
+            <span class="font-mono text-emerald-300 font-semibold">${{p.correo_principal}}</span>
             ${{p.correos_adicionales ? `<div class="text-[10px] text-gray-400 font-mono mt-0.5">+ ${{p.correos_adicionales}}</div>` : ''}}
           </td>
           <td class="p-3.5 font-mono text-gray-300">${{p.telefono}}</td>
-          <td class="p-3.5">
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${{p.dns_verificado === 'VERIFICADO' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/30' : 'bg-amber-500/20 text-amber-300'}}">
-              ${{p.dns_verificado}}
-            </span>
-            <div class="text-[10px] text-gray-400 mt-0.5">${{p.estado_web}}</div>
-          </td>
           <td class="p-3.5 text-right space-x-1.5 whitespace-nowrap">
-            <button onclick="navigator.clipboard.writeText('${{p.correo_principal}}');showToast('📧 Correo copiado: ${{p.correo_principal}}')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold">
-              📧 Correo
+            <button onclick="copyMasterTemplate('PIXIESET_BULK', '${{p.nombre}}')" class="px-2.5 py-1.5 rounded-lg bg-amber-500 text-black font-bold hover:bg-amber-400">
+              📋 Copiar Propuesta
             </button>
-            <button onclick="copyMasterTemplate('MEJORA', '${{p.nombre}}')" class="px-2.5 py-1.5 rounded-lg bg-amber-500 text-black font-bold hover:bg-amber-400">
-              📋 Correo "Mejoramos Oferta"
-            </button>
-            <button onclick="copyMasterTemplate('FESTIVAL', '${{p.nombre}}')" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-semibold hover:bg-emerald-500/30">
-              🎄 Correo Festival
+            <button onclick="openMailto('${{p.correo_principal}}', '${{p.nombre}}')" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-semibold hover:bg-emerald-500/30">
+              ✉️ Abrir en Mail
             </button>
           </td>
         </tr>
-      `).join("");
+      `;
+      }}).join("");
     }}
 
     renderTable();
@@ -402,30 +471,20 @@ def build_html_dashboard(results: list):
 
 
 def main():
-    print(f"Iniciando scraping y verificacion DNS/MX de {len(SEED_INSTITUTIONS)} colegios, kinders y academias en MTY / SPGG...")
+    print(f"Procesando y verificando {len(SEED_INSTITUTIONS)} instituciones en 5 lotes estrategicos...")
     results = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=12) as ex:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=14) as ex:
         futures = [ex.submit(scrape_institution, item) for item in SEED_INSTITUTIONS]
         for fut in concurrent.futures.as_completed(futures):
-            res = fut.result()
-            results.append(res)
+            results.append(fut.result())
 
-    zone_rank = {
-        "Colinas de San Jerónimo": 0,
-        "San Jerónimo / Monterrey": 1,
-        "Colinas de San Jerónimo / SPGG": 1,
-        "San Pedro Garza García": 2,
-        "San Pedro / Valle Alto": 2,
-        "San Pedro / Valle Oriente": 2,
-        "Valle Poniente / SPGG": 2,
-    }
-    results.sort(key=lambda r: (0 if r["dns_verificado"] == "VERIFICADO" else 1, zone_rank.get(r["zona"], 5), r["nombre"]))
+    results.sort(key=lambda r: (r["lote"], 0 if r["dns_verificado"] == "VERIFICADO" else 1, r["nombre"]))
 
     master_csv = OUT_DIR / "BASE_MAESTRA_COLEGIOS_MTY_2026.csv"
     with open(master_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
-            fieldnames=["ID", "nombre", "zona", "categoria", "correo_principal", "correos_adicionales", "telefono", "web", "dns_verificado", "estado_web"],
+            fieldnames=["ID", "lote", "nombre", "zona", "categoria", "correo_principal", "correos_adicionales", "telefono", "web", "dns_verificado", "estado_web"],
         )
         writer.writeheader()
         for idx, r in enumerate(results, 1):
@@ -447,12 +506,12 @@ def main():
                 "Phone": r["telefono"],
                 "Company": r["nombre"],
                 "Address": f"{r['zona']}, Monterrey, N.L.",
-                "Notes": f"{r['categoria']} | Web: {r['web']} | DNS Verificado",
+                "Notes": f"{r['lote']} | {r['categoria']} | Web: {r['web']}",
             })
 
     (OUT_DIR / "COLEGIOS_MTY_PIXIESET.json").write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
     build_html_dashboard(results)
-    print(f"OK: {len(verified_results)}/{len(results)} colegios/academias verificados DNS y portal CAMPAÑA_PIXIESET_COLEGIOS_B2B.html generado.")
+    print(f"OK: {len(verified_results)}/{len(results)} instituciones verificadas en 5 Lotes Diarios.")
 
 
 if __name__ == "__main__":
