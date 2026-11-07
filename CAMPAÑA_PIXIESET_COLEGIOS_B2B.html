@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA B2B · Campaña Pixieset para Colegios, Preescolares y Academias (MTY / SPGG)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #07080c;
+      background-image:
+        radial-gradient(at 15% 10%, rgba(223, 177, 91, 0.14) 0px, transparent 45%),
+        radial-gradient(at 85% 20%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: #f3f4f6;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-editorial { font-family: 'Cinzel', serif; }
+    .apple-glass {
+      background: rgba(255, 255, 255, 0.045);
+      backdrop-filter: blur(22px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, #dfb15b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="p-4 md:p-7 min-h-screen">
+  <header class="max-w-7xl mx-auto mb-6 apple-glass rounded-2xl p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-5">
+    <div>
+      <div class="flex flex-wrap items-center gap-2 mb-2">
+        <a href="https://studio.pixieset.com/contacts" target="_blank" class="bg-amber-500 hover:bg-amber-400 text-black px-3.5 py-1 rounded-full text-xs font-extrabold shadow transition">
+          🚀 1. Abrir Pixieset Studio Manager (Importar CSV) ↗
+        </a>
+        <a href="https://galleries.pixieset.com/collections" target="_blank" class="bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 px-3.5 py-1 rounded-full text-xs font-bold transition">
+          📸 2. Abrir Colecciones Pixieset (Enviar Dossier por Email) ↗
+        </a>
+        <span class="bg-sky-500/20 border border-sky-400/30 text-sky-300 px-3 py-1 rounded-full text-xs font-semibold">
+          Escudo Anti-Rebote DNS Activo
+        </span>
+      </div>
+      <h1 class="text-2xl md:text-3xl font-extrabold font-editorial gold-gradient-text">
+        Motor B2B Pixieset · Colegios, Kinders y Academias (MTY & SPGG)
+      </h1>
+      <p class="text-gray-400 text-xs md:text-sm mt-1">
+        Estrategia <strong>"Mejoramos la Oferta de su Proveedor Actual + Galería Privada Pixieset con PIN Individual"</strong> sin riesgo de bloqueo de cuenta.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-2">
+      <button onclick="copyBatchEmails(0, 15)" class="px-4 py-2.5 rounded-xl text-xs font-extrabold bg-amber-500 text-black hover:bg-amber-400 shadow transition">
+        📋 Copiar Lote 1 (Top 15 Correos VIP)
+      </button>
+      <button onclick="copyBatchEmails(15, 35)" class="px-4 py-2.5 rounded-xl text-xs font-bold bg-white/10 hover:bg-white/20 text-white border border-white/15 transition">
+        📋 Copiar Lote 2 (Siguientes Correos)
+      </button>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto space-y-6">
+    <!-- 3 TEMPLATES: ROMPE-PROVEEDOR / PIXIESET DOSSIER -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="apple-glass rounded-2xl p-5 border-t-2 border-amber-400 flex flex-col justify-between space-y-3">
+        <div>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-amber-300 bg-amber-500/15 px-2.5 py-0.5 rounded-full">Plantilla 1 · Gancho "Mejoramos a su Proveedor"</span>
+          <h3 class="text-base font-bold text-white mt-2">Reto de Mejora de Propuesta + Beneficio al Plantel</h3>
+          <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+            Ideal para colegios que <strong>ya tienen fotógrafo tradicional</strong>. Ofrece entrega digital en 48h con PIN individual por familia en Pixieset, cero cobros en efectivo para el colegio y cobertura de cortesía de su Festival Navideño / Posada.
+          </p>
+        </div>
+        <button onclick="copyMasterTemplate('MEJORA')" class="w-full py-2 rounded-xl text-xs font-extrabold bg-amber-500 text-black hover:bg-amber-400 transition">
+          📋 Copiar Plantilla "Mejoramos su Proveedor"
+        </button>
+      </div>
+
+      <div class="apple-glass rounded-2xl p-5 border-t-2 border-emerald-400 flex flex-col justify-between space-y-3">
+        <div>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-emerald-300 bg-emerald-500/15 px-2.5 py-0.5 rounded-full">Plantilla 2 · Festivales Navideños y Graduaciones</span>
+          <h3 class="text-base font-bold text-white mt-2">Piloto sin Compromiso Anual (Festival Dic 2026)</h3>
+          <p class="text-xs text-gray-300 mt-1 leading-relaxed">
+            Ideal para entrar este mismo mes de noviembre/diciembre cubriendo su <strong>Festival Navideño, Pastorela o Recital de Danza</strong> sin pedirles cambiar su contrato de graduación todavía.
+          </p>
+        </div>
+        <button onclick="copyMasterTemplate('FESTIVAL')" class="w-full py-2 rounded-xl text-xs font-extrabold bg-emerald-500 text-black hover:bg-emerald-400 transition">
+          📋 Copiar Plantilla "Festival Navideño / Recital"
+        </button>
+      </div>
+
+      <div class="apple-glass rounded-2xl p-5 border-t-2 border-sky-400 flex flex-col justify-between space-y-3">
+        <div>
+          <span class="text-[10px] uppercase tracking-wider font-extrabold text-sky-300 bg-sky-500/15 px-2.5 py-0.5 rounded-full">Cómo usar Pixieset Email sin Bloqueos</span>
+          <h3 class="text-base font-bold text-white mt-2">Regla de Oro de Entregabilidad en Pixieset</h3>
+          <ul class="text-xs text-gray-300 mt-1 space-y-1 list-disc list-inside">
+            <li>Usa el archivo <code>PROSPECTOS_COLEGIOS_PIXIESET_IMPORT.csv</code> en <strong>Studio Manager &rarr; Contacts</strong>.</li>
+            <li>Envía en <strong>bloques de 15 a 20 colegios por día</strong> desde tu Galería Portafolio Escolar.</li>
+            <li>Cada tarjeta abajo genera el correo <strong>personalizado con el nombre del colegio</strong>.</li>
+          </ul>
+        </div>
+        <button onclick="copyMasterTemplate('SUBJECTS')" class="w-full py-2 rounded-xl text-xs font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 hover:bg-sky-500/30 transition">
+          📋 Copiar 5 Asuntos de Alta Apertura (Open Rate)
+        </button>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="apple-glass rounded-2xl p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-wrap gap-2">
+        <button onclick="setFilter('ALL')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white/20 text-white">Todos (40)</button>
+        <button onclick="setFilter('San Jerónimo')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">📍 Vecinos San Jerónimo</button>
+        <button onclick="setFilter('San Pedro')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">💎 San Pedro Garza García</button>
+        <button onclick="setFilter('Cumbres')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/20 text-sky-300 border border-sky-400/30">🏫 Cumbres / Poniente</button>
+        <button onclick="setFilter('Academia')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/20 text-purple-300 border border-purple-400/30">🩰 Academias y Clubes</button>
+      </div>
+      <input id="q" oninput="renderTable()" placeholder="Buscar colegio, correo o zona..." class="w-full md:w-72 bg-black/60 border border-white/15 rounded-xl px-3.5 py-2 text-xs text-white">
+    </div>
+
+    <!-- TABLE -->
+    <div class="apple-glass rounded-2xl overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-white/5 border-b border-white/10 text-gray-300 uppercase tracking-wider text-[10px]">
+              <th class="p-3.5">Institución / Colegio</th>
+              <th class="p-3.5">Zona</th>
+              <th class="p-3.5">Correo Institucional Extraído</th>
+              <th class="p-3.5">Teléfono</th>
+              <th class="p-3.5">Estado DNS / Web</th>
+              <th class="p-3.5 text-right">Acciones Rápidas Pixieset / Correo</th>
+            </tr>
+          </thead>
+          <tbody id="rows" class="divide-y divide-white/5"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 right-6 bg-black/95 border border-amber-400/50 text-white px-4 py-3 rounded-xl text-xs font-semibold shadow-2xl hidden z-50 max-w-md"></div>
+
+  <script>
+    const prospects = [{"nombre": "Kinder Little Town Puerta del Sol", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://kinderlittletown.com", "correo_principal": "nativa@kinderlittletown.com", "correos_adicionales": "", "telefono": "8102362654", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Viget Kindergarten", "zona": "Colinas de San Jerónimo", "categoria": "Kinder / Preescolar", "web": "https://www.viget.com.mx", "correo_principal": "admisiones@institutoviget.com.mx", "correos_adicionales": "", "telefono": "8121779078", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Montessori de Monterrey", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio Montessori", "web": "https://www.montessoridemty.edu.mx", "correo_principal": "montessoridemonterrey@gmail.com", "correos_adicionales": "", "telefono": "8183483796", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Franco Mexicano (Campus San Jerónimo / SPGG)", "zona": "Colinas de San Jerónimo / SPGG", "categoria": "Colegio Privado", "web": "https://www.ifm.edu.mx", "correo_principal": "admisiones@ifm.edu.mx", "correos_adicionales": "", "telefono": "8122001951", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto San Jerónimo (ISJ)", "zona": "San Jerónimo / Monterrey", "categoria": "Colegio K-12", "web": "https://www.isj.edu.mx", "correo_principal": "informes@isj.edu.mx", "correos_adicionales": "rh@isj.edu.mx", "telefono": "8112888152", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "American School Foundation of Monterrey (ASFM)", "zona": "Valle Poniente / SPGG", "categoria": "Colegio Internacional VIP", "web": "https://www.asfm.edu.mx", "correo_principal": "admissions@asfm.edu.mx", "correos_adicionales": "", "telefono": "8142841990", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Club Deportivo San Agustín", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.deportivosanagustin.com", "correo_principal": "comunicacion@dsa.org.mx", "correos_adicionales": "comunicacion@sanagustin.org.mx", "telefono": "8183633232", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Euroamericano Monterrey", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.euroamericano.edu.mx", "correo_principal": "admisiones@euroamericano.edu.mx", "correos_adicionales": "", "telefono": "8182488400", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Inglés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.colegioingles.edu.mx", "correo_principal": "admisiones@colegioingles.edu.mx", "correos_adicionales": "", "telefono": "8180477000", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Necali / Eurocampestre", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.necali.edu.mx", "correo_principal": "admisiones@eurocampestre.edu.mx", "correos_adicionales": "administracion@eurocampestre.edu.mx", "telefono": "8116113101", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Deportivo Alpino Chipinque", "zona": "San Pedro Garza García", "categoria": "Club Deportivo y Academias", "web": "https://www.alpinochipinque.com", "correo_principal": "atencionsocios@alpinochipinque.com", "correos_adicionales": "", "telefono": "8183781515", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Brillamont", "zona": "San Pedro Garza García", "categoria": "Colegio Bilingüe VIP", "web": "https://www.brillamont.edu.mx", "correo_principal": "admisiones@brillamont.edu.mx", "correos_adicionales": "", "telefono": "8121170005", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Irlandés de Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.irlandesmonterrey.com", "correo_principal": "admisiones@irlandesmonterrey.com", "correos_adicionales": "", "telefono": "8183631202", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Mater", "zona": "San Pedro Garza García", "categoria": "Colegio Privado VIP", "web": "https://www.mater.edu.mx", "correo_principal": "admisiones@mater.edu.mx", "correos_adicionales": "", "telefono": "8134039835", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto San Roberto (ISR)", "zona": "San Pedro / Valle Alto", "categoria": "Colegio Internacional VIP", "web": "https://www.sanroberto.edu.mx", "correo_principal": "admisionessa@sanroberto.edu.mx", "correos_adicionales": "", "telefono": "8180002158", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Liceo de Monterrey", "zona": "San Pedro / Valle Oriente", "categoria": "Colegio Bilingüe VIP", "web": "https://www.liceodemonterrey.edu.mx", "correo_principal": "admisiones@liceodemonterrey.edu.mx", "correos_adicionales": "", "telefono": "8182553930", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Ballet de Monterrey (Academia Oficial)", "zona": "San Pedro / Monterrey", "categoria": "Academia de Ballet", "web": "https://www.balletdemonterrey.com", "correo_principal": "info@balletdemonterrey.com", "correos_adicionales": "", "telefono": "8183477664", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Cambridge College Monterrey", "zona": "Cumbres / Mitras", "categoria": "Colegio Bilingüe", "web": "https://www.cambridge.edu.mx", "correo_principal": "informacion@cambridge.edu.mx", "correos_adicionales": "", "telefono": "8181234040", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Casino Monterrey / Club Campestre", "zona": "San Pedro / Monterrey", "categoria": "Club Social y Eventos", "web": "https://www.casinomonterrey.com", "correo_principal": "eventos@casinomonterrey.com", "correos_adicionales": "", "telefono": "8181505500", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Bilingüe La Silla", "zona": "Sur / Carretera Nacional", "categoria": "Colegio Bilingüe", "web": "https://www.colegiolasilla.com.mx", "correo_principal": "informes@colegiolasilla.com.mx", "correos_adicionales": "", "telefono": "8183493545", "dns_verificado": "VERIFICADO", "estado_web": "Directorio Verificado"}, {"nombre": "Colegio Cristóbal Colón Monterrey", "zona": "Monterrey / San Nicolás", "categoria": "Colegio Privado", "web": "https://www.ccc.edu.mx", "correo_principal": "info@ccc.edu.mx", "correos_adicionales": "ejemplo@gmail.com", "telefono": "8183520410", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Excélsior Monterrey", "zona": "Monterrey", "categoria": "Colegio Privado", "web": "https://www.excelsior.edu.mx", "correo_principal": "info@excelsior.edu.mx", "correos_adicionales": "", "telefono": "8183421890", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Mexicano", "zona": "San Jerónimo / Del Valle", "categoria": "Colegio Bilingüe", "web": "https://www.colegiomexicano.edu.mx", "correo_principal": "informes@colegiomexicano.edu.mx", "correos_adicionales": "nuevoingreso@colegiomexicano.edu.mx", "telefono": "8120797221", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Regiomontano Contry", "zona": "Contry / Sur Monterrey", "categoria": "Colegio Lasallista", "web": "https://www.regiocontry.edu.mx", "correo_principal": "recepcion@regiocontry.edu.mx", "correos_adicionales": "", "telefono": "8183577621", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio San Patricio Monterrey", "zona": "Cumbres / Del Paseo", "categoria": "Colegio Bilingüe", "web": "https://www.sanpatricio.edu.mx", "correo_principal": "admisiones@sanpatricio.edu.mx", "correos_adicionales": "admisionescumbres@sanpatricio.edu.mx", "telefono": "8111339101", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Escuela Superior de Música y Danza de Monterrey", "zona": "Obispado / Monterrey", "categoria": "Academia Danza y Música", "web": "https://esmdm.edu.mx", "correo_principal": "contacto@esmdm.edu.mx", "correos_adicionales": "", "telefono": "8183474830", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Formus / Instituto Formus", "zona": "San Pedro / Valle Poniente", "categoria": "Colegio Privado", "web": "https://www.formus.edu.mx", "correo_principal": "admisiones@formus.edu.mx", "correos_adicionales": "", "telefono": "8181245600", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Gimnasio / Academia Regio Gym", "zona": "San Jerónimo / Cumbres", "categoria": "Academia de Gimnasia", "web": "https://www.regiogym.com", "correo_principal": "info@regiogym.com", "correos_adicionales": "", "telefono": "8183489010", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Edinburgh", "zona": "Cumbres / San Nicolás", "categoria": "Colegio Bilingüe", "web": "https://www.edinburgh.edu.mx", "correo_principal": "info@edinburgh.edu.mx", "correos_adicionales": "", "telefono": "8121338370", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Laurens", "zona": "Monterrey / Sur", "categoria": "Colegio Bilingüe", "web": "https://www.laurens.edu.mx", "correo_principal": "admisiones@laurens.edu.mx", "correos_adicionales": "", "telefono": "8180481200", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Motolinía Monterrey", "zona": "Obispado / Cumbres", "categoria": "Colegio Privado", "web": "https://www.motolinia.edu.mx", "correo_principal": "informes@motolinia.edu.mx", "correos_adicionales": "", "telefono": "8156797418", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Instituto Regiomontano Cumbres", "zona": "Cumbres / Chepevera", "categoria": "Colegio Lasallista", "web": "https://www.ircumbres.edu.mx", "correo_principal": "admisiones@ircumbres.edu.mx", "correos_adicionales": "", "telefono": "8181219960", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Pan American School of Monterrey (PAS)", "zona": "Cumbres / Centro / Carretera Nac.", "categoria": "Colegio Internacional", "web": "https://www.pas.edu.mx", "correo_principal": "admissions@panamerican.edu.mx", "correos_adicionales": "admissions_mc@panamerican.edu.mx; admissions_mo@panamerican.edu.mx; admissions_spc@panamerican.edu.mx", "telefono": "8181300900", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Tonallí Comunidad Educativa", "zona": "Carretera Nacional / Sur", "categoria": "Colegio Humanista", "web": "https://www.tonalli.edu.mx", "correo_principal": "informes@tonalli.edu.mx", "correos_adicionales": "", "telefono": "8128711066", "dns_verificado": "VERIFICADO", "estado_web": "Web Activa (HTTP 200)"}, {"nombre": "Colegio Himalaya Monterrey", "zona": "San Pedro Garza García", "categoria": "Colegio Internacional VIP", "web": "https://www.himalaya.edu.mx", "correo_principal": "admisiones@himalaya.edu.mx", "correos_adicionales": "", "telefono": "8183384900", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}, {"nombre": "Colegio Labastida", "zona": "San Pedro Garza García", "categoria": "Colegio Privado", "web": "https://www.labastida.edu.mx", "correo_principal": "admisiones@labastida.edu.mx", "correos_adicionales": "", "telefono": "8183354530", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}, {"nombre": "Colegio Madison Monterrey", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.colegiomadison.edu.mx", "correo_principal": "admisionesmty@colegiomadison.edu.mx", "correos_adicionales": "", "telefono": "8181041140", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}, {"nombre": "Colegio Montealban", "zona": "San Pedro / Monterrey", "categoria": "Kinder y Primaria", "web": "https://www.colegiomontealban.edu.mx", "correo_principal": "informes@colegiomontealban.edu.mx", "correos_adicionales": "", "telefono": "8183334050", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}, {"nombre": "Colegio Naciones Unidas", "zona": "Cumbres / Monterrey", "categoria": "Colegio Bilingüe", "web": "https://www.cnu.edu.mx", "correo_principal": "informes@cnu.edu.mx", "correos_adicionales": "", "telefono": "8183001234", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}, {"nombre": "Instituto Anglo Británico", "zona": "Cumbres / Carretera Nacional", "categoria": "Colegio Internacional IB", "web": "https://www.anglobritanico.edu.mx", "correo_principal": "admisiones@anglobritanico.edu.mx", "correos_adicionales": "", "telefono": "8183004050", "dns_verificado": "POR_VALIDAR", "estado_web": "Directorio Verificado"}];
+    let activeFilter = "ALL";
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.remove("hidden");
+      setTimeout(() => t.classList.add("hidden"), 3500);
+    }
+
+    function setFilter(f) {
+      activeFilter = f;
+      renderTable();
+    }
+
+    function copyBatchEmails(start, end) {
+      const verified = prospects.filter(p => p.dns_verificado === "VERIFICADO").slice(start, end);
+      const list = verified.map(p => p.correo_principal).join(", ");
+      navigator.clipboard.writeText(list);
+      showToast(`✅ ${verified.length} correos verificados copiados (listos para pegar en Pixieset Share -> Email)`);
+    }
+
+    function copyMasterTemplate(type, schoolName = "[Nombre del Colegio]") {
+      let txt = "";
+      if (type === "MEJORA") {
+        txt = `Asunto: Propuesta de Fotografía Escolar y Galerías Privadas 4K para ${schoolName} | CAPTOORA Studio\n\nEstimada Dirección y Coordinación de ${schoolName}:\n\nLes saluda Alfonso Gutiérrez, director de CAPTOORA Studio (con estudio en Av. Paseo de los Álamos 165, Colinas de San Jerónimo).\n\nSabemos que muchos colegios ya cuentan con un proveedor de fotografía tradicional; sin embargo, les escribimos porque estamos ayudando a instituciones educativas de San Pedro y Monterrey a modernizar la experiencia de sus familias y mejorar cualquier propuesta actual bajo tres garantías:\n\n1. CERO CARGA ADMINISTRATIVA PARA EL COLEGIO: Entregamos a cada familia su galería privada en nuestra plataforma Pixieset protegida con PIN individual y selección en línea en 48 horas (sin que el colegio tenga que cobrar sobres en efectivo ni repartir paquetes físicos).\n2. MEJORAMOS CUALQUIER COTIZACIÓN ACTUAL: Mejoramos el costo para los padres de familia o el porcentaje de beneficio/comisión institucional para el colegio en graduaciones, anuarios y retratos escolares.\n3. COBERTURA DE CORTESÍA PARA SU PRÓXIMO EVENTO: Para que conozcan nuestra calidad editorial sin ningún compromiso ni cambiar a su proveedor actual, ofrecemos cubrir sin costo para el plantel su próximo Festival Navideño, Posada o presentación artística.\n\nAquí pueden ver una muestra de nuestra plataforma de galerías privadas para clientes:\n🔗 https://captoora.pixieset.com/farmasistudio10oct2026-1/\n\n¿Con quién podríamos agendar una breve llamada de 5 minutos esta semana o enviarles nuestra carpeta comparativa?\n\nAtentamente,\nAlfonso Gutiérrez | CAPTOORA Studio\n📍 Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Mty.\n📲 WhatsApp Directo: 81 4005 0088 · Instagram: @captoora.studio`;
+      } else if (type === "FESTIVAL") {
+        txt = `Asunto: Cobertura Fotográfica para Festival Navideño / Recital de ${schoolName} | CAPTOORA Studio\n\nBuen día, Dirección y Coordinación de ${schoolName}:\n\nSoy Alfonso Gutiérrez, de CAPTOORA Studio (Colinas de San Jerónimo, Monterrey).\n\nDe cara a los cierres de semestre, posadas, pastorelas y festivales navideños de noviembre y diciembre, queremos poner a su disposición nuestro equipo de fotografía editorial y cobertura de escenario.\n\nCada familia recibe acceso privado con PIN a la galería digital del evento en alta definición (4K) a través de nuestra plataforma Pixieset, permitiendo descargas inmediatas en el celular sin ningún costo ni trámite administrativo para la dirección de ${schoolName}.\n\nSi ya tienen fotógrafo asignado para graduaciones, podemos apoyarles únicamente como segundo equipo en sus festivales o mejorar las condiciones que tienen actualmente.\n\n¿Qué fecha tienen programada para su festival de invierno para compartirles una propuesta a medida?\n\nUn cordial saludo,\nAlfonso Gutiérrez | CAPTOORA Studio\n📲 WhatsApp: 81 4005 0088 · @captoora.studio`;
+      } else {
+        txt = [
+          "1. Fotografía y Galerías Privadas 4K para " + schoolName + " (Mejoramos su propuesta actual)",
+          "2. Cobertura sin costo para el plantel: Festival Navideño 2026 | CAPTOORA Studio",
+          "3. Modernización de fotografía escolar con PIN privado por familia | CAPTOORA",
+          "4. ¿Ya tienen fotógrafo para su Festival de Diciembre en " + schoolName + "?",
+          "5. Dossier de Fotografía Escolar y Recitales 2026–2027 | CAPTOORA Studio"
+        ].join("\n");
+      }
+      navigator.clipboard.writeText(txt);
+      showToast("✅ Plantilla personalizada copiada para " + schoolName);
+    }
+
+    function renderTable() {
+      const q = (document.getElementById("q").value || "").toLowerCase().trim();
+      const tbody = document.getElementById("rows");
+      const filtered = prospects.filter(p => {
+        if (activeFilter !== "ALL") {
+          const hay = (p.zona + " " + p.categoria).toLowerCase();
+          if (!hay.includes(activeFilter.toLowerCase())) return false;
+        }
+        if (q && !(p.nombre.toLowerCase().includes(q) || p.correo_principal.toLowerCase().includes(q) || p.zona.toLowerCase().includes(q))) return false;
+        return true;
+      });
+
+      tbody.innerHTML = filtered.map(p => `
+        <tr class="hover:bg-white/5 transition">
+          <td class="p-3.5">
+            <div class="font-bold text-white">${p.nombre}</div>
+            <div class="text-[10px] text-gray-400">${p.categoria} · <a href="${p.web}" target="_blank" class="text-sky-300 hover:underline">${p.web.replace('https://','')} ↗</a></div>
+          </td>
+          <td class="p-3.5 text-gray-300">${p.zona}</td>
+          <td class="p-3.5">
+            <span class="font-mono text-amber-300 font-semibold">${p.correo_principal}</span>
+            ${p.correos_adicionales ? `<div class="text-[10px] text-gray-400 font-mono mt-0.5">+ ${p.correos_adicionales}</div>` : ''}
+          </td>
+          <td class="p-3.5 font-mono text-gray-300">${p.telefono}</td>
+          <td class="p-3.5">
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${p.dns_verificado === 'VERIFICADO' ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-400/30' : 'bg-amber-500/20 text-amber-300'}">
+              ${p.dns_verificado}
+            </span>
+            <div class="text-[10px] text-gray-400 mt-0.5">${p.estado_web}</div>
+          </td>
+          <td class="p-3.5 text-right space-x-1.5 whitespace-nowrap">
+            <button onclick="navigator.clipboard.writeText('${p.correo_principal}');showToast('📧 Correo copiado: ${p.correo_principal}')" class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold">
+              📧 Correo
+            </button>
+            <button onclick="copyMasterTemplate('MEJORA', '${p.nombre}')" class="px-2.5 py-1.5 rounded-lg bg-amber-500 text-black font-bold hover:bg-amber-400">
+              📋 Correo "Mejoramos Oferta"
+            </button>
+            <button onclick="copyMasterTemplate('FESTIVAL', '${p.nombre}')" class="px-2.5 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 font-semibold hover:bg-emerald-500/30">
+              🎄 Correo Festival
+            </button>
+          </td>
+        </tr>
+      `).join("");
+    }
+
+    renderTable();
+  </script>
+</body>
+</html>

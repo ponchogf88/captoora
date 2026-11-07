@@ -1,0 +1,41 @@
+ID,nombre,zona,categoria,correo_principal,correos_adicionales,telefono,web,dns_verificado,estado_web
+COL-001,Kinder Little Town Puerta del Sol,Colinas de San Jerónimo,Kinder / Preescolar,nativa@kinderlittletown.com,,8102362654,https://kinderlittletown.com,VERIFICADO,Web Activa (HTTP 200)
+COL-002,Viget Kindergarten,Colinas de San Jerónimo,Kinder / Preescolar,admisiones@institutoviget.com.mx,,8121779078,https://www.viget.com.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-003,Colegio Montessori de Monterrey,San Jerónimo / Monterrey,Colegio Montessori,montessoridemonterrey@gmail.com,,8183483796,https://www.montessoridemty.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-004,Instituto Franco Mexicano (Campus San Jerónimo / SPGG),Colinas de San Jerónimo / SPGG,Colegio Privado,admisiones@ifm.edu.mx,,8122001951,https://www.ifm.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-005,Instituto San Jerónimo (ISJ),San Jerónimo / Monterrey,Colegio K-12,informes@isj.edu.mx,rh@isj.edu.mx,8112888152,https://www.isj.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-006,American School Foundation of Monterrey (ASFM),Valle Poniente / SPGG,Colegio Internacional VIP,admissions@asfm.edu.mx,,8142841990,https://www.asfm.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-007,Club Deportivo San Agustín,San Pedro Garza García,Club Deportivo y Academias,comunicacion@dsa.org.mx,comunicacion@sanagustin.org.mx,8183633232,https://www.deportivosanagustin.com,VERIFICADO,Web Activa (HTTP 200)
+COL-008,Colegio Euroamericano Monterrey,San Pedro / Valle Oriente,Colegio Bilingüe VIP,admisiones@euroamericano.edu.mx,,8182488400,https://www.euroamericano.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-009,Colegio Inglés de Monterrey,San Pedro Garza García,Colegio Bilingüe VIP,admisiones@colegioingles.edu.mx,,8180477000,https://www.colegioingles.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-010,Colegio Necali / Eurocampestre,San Pedro Garza García,Colegio Privado,admisiones@eurocampestre.edu.mx,administracion@eurocampestre.edu.mx,8116113101,https://www.necali.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-011,Deportivo Alpino Chipinque,San Pedro Garza García,Club Deportivo y Academias,atencionsocios@alpinochipinque.com,,8183781515,https://www.alpinochipinque.com,VERIFICADO,Web Activa (HTTP 200)
+COL-012,Instituto Brillamont,San Pedro Garza García,Colegio Bilingüe VIP,admisiones@brillamont.edu.mx,,8121170005,https://www.brillamont.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-013,Instituto Irlandés de Monterrey,San Pedro Garza García,Colegio Internacional VIP,admisiones@irlandesmonterrey.com,,8183631202,https://www.irlandesmonterrey.com,VERIFICADO,Web Activa (HTTP 200)
+COL-014,Instituto Mater,San Pedro Garza García,Colegio Privado VIP,admisiones@mater.edu.mx,,8134039835,https://www.mater.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-015,Instituto San Roberto (ISR),San Pedro / Valle Alto,Colegio Internacional VIP,admisionessa@sanroberto.edu.mx,,8180002158,https://www.sanroberto.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-016,Liceo de Monterrey,San Pedro / Valle Oriente,Colegio Bilingüe VIP,admisiones@liceodemonterrey.edu.mx,,8182553930,https://www.liceodemonterrey.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-017,Ballet de Monterrey (Academia Oficial),San Pedro / Monterrey,Academia de Ballet,info@balletdemonterrey.com,,8183477664,https://www.balletdemonterrey.com,VERIFICADO,Web Activa (HTTP 200)
+COL-018,Cambridge College Monterrey,Cumbres / Mitras,Colegio Bilingüe,informacion@cambridge.edu.mx,,8181234040,https://www.cambridge.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-019,Casino Monterrey / Club Campestre,San Pedro / Monterrey,Club Social y Eventos,eventos@casinomonterrey.com,,8181505500,https://www.casinomonterrey.com,VERIFICADO,Web Activa (HTTP 200)
+COL-020,Colegio Bilingüe La Silla,Sur / Carretera Nacional,Colegio Bilingüe,informes@colegiolasilla.com.mx,,8183493545,https://www.colegiolasilla.com.mx,VERIFICADO,Directorio Verificado
+COL-021,Colegio Cristóbal Colón Monterrey,Monterrey / San Nicolás,Colegio Privado,info@ccc.edu.mx,ejemplo@gmail.com,8183520410,https://www.ccc.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-022,Colegio Excélsior Monterrey,Monterrey,Colegio Privado,info@excelsior.edu.mx,,8183421890,https://www.excelsior.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-023,Colegio Mexicano,San Jerónimo / Del Valle,Colegio Bilingüe,informes@colegiomexicano.edu.mx,nuevoingreso@colegiomexicano.edu.mx,8120797221,https://www.colegiomexicano.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-024,Colegio Regiomontano Contry,Contry / Sur Monterrey,Colegio Lasallista,recepcion@regiocontry.edu.mx,,8183577621,https://www.regiocontry.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-025,Colegio San Patricio Monterrey,Cumbres / Del Paseo,Colegio Bilingüe,admisiones@sanpatricio.edu.mx,admisionescumbres@sanpatricio.edu.mx,8111339101,https://www.sanpatricio.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-026,Escuela Superior de Música y Danza de Monterrey,Obispado / Monterrey,Academia Danza y Música,contacto@esmdm.edu.mx,,8183474830,https://esmdm.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-027,Formus / Instituto Formus,San Pedro / Valle Poniente,Colegio Privado,admisiones@formus.edu.mx,,8181245600,https://www.formus.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-028,Gimnasio / Academia Regio Gym,San Jerónimo / Cumbres,Academia de Gimnasia,info@regiogym.com,,8183489010,https://www.regiogym.com,VERIFICADO,Web Activa (HTTP 200)
+COL-029,Instituto Edinburgh,Cumbres / San Nicolás,Colegio Bilingüe,info@edinburgh.edu.mx,,8121338370,https://www.edinburgh.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-030,Instituto Laurens,Monterrey / Sur,Colegio Bilingüe,admisiones@laurens.edu.mx,,8180481200,https://www.laurens.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-031,Instituto Motolinía Monterrey,Obispado / Cumbres,Colegio Privado,informes@motolinia.edu.mx,,8156797418,https://www.motolinia.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-032,Instituto Regiomontano Cumbres,Cumbres / Chepevera,Colegio Lasallista,admisiones@ircumbres.edu.mx,,8181219960,https://www.ircumbres.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-033,Pan American School of Monterrey (PAS),Cumbres / Centro / Carretera Nac.,Colegio Internacional,admissions@panamerican.edu.mx,admissions_mc@panamerican.edu.mx; admissions_mo@panamerican.edu.mx; admissions_spc@panamerican.edu.mx,8181300900,https://www.pas.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-034,Tonallí Comunidad Educativa,Carretera Nacional / Sur,Colegio Humanista,informes@tonalli.edu.mx,,8128711066,https://www.tonalli.edu.mx,VERIFICADO,Web Activa (HTTP 200)
+COL-035,Colegio Himalaya Monterrey,San Pedro Garza García,Colegio Internacional VIP,admisiones@himalaya.edu.mx,,8183384900,https://www.himalaya.edu.mx,POR_VALIDAR,Directorio Verificado
+COL-036,Colegio Labastida,San Pedro Garza García,Colegio Privado,admisiones@labastida.edu.mx,,8183354530,https://www.labastida.edu.mx,POR_VALIDAR,Directorio Verificado
+COL-037,Colegio Madison Monterrey,Cumbres / Carretera Nacional,Colegio Internacional IB,admisionesmty@colegiomadison.edu.mx,,8181041140,https://www.colegiomadison.edu.mx,POR_VALIDAR,Directorio Verificado
+COL-038,Colegio Montealban,San Pedro / Monterrey,Kinder y Primaria,informes@colegiomontealban.edu.mx,,8183334050,https://www.colegiomontealban.edu.mx,POR_VALIDAR,Directorio Verificado
+COL-039,Colegio Naciones Unidas,Cumbres / Monterrey,Colegio Bilingüe,informes@cnu.edu.mx,,8183001234,https://www.cnu.edu.mx,POR_VALIDAR,Directorio Verificado
+COL-040,Instituto Anglo Británico,Cumbres / Carretera Nacional,Colegio Internacional IB,admisiones@anglobritanico.edu.mx,,8183004050,https://www.anglobritanico.edu.mx,POR_VALIDAR,Directorio Verificado
