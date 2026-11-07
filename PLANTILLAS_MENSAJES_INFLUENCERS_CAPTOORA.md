@@ -91,5 +91,32 @@
 >
 > Disfruta mucho tus fotos, ¡nos encantará verte brillar cuando las compartas! Etiquétanos en **@captoora.studio** para celebrarte como te mereces.
 >
-> Con todo nuestro cariño y admiración,  
+Con todo nuestro cariño y admiración,  
 > **El equipo de Captoora** 📸✨🤍
+
+---
+
+# 🚀 MENSAJE OFICIAL DE LANZAMIENTO — ENTREGA 1 DE 3 ("LAS PAMPAS" · CADA 3 DÍAS)
+*Para enviar junto con el Explainer Video y el link de la Entrega 1 hoy mismo:*
+
+> **¡Hola hermosas! Ya está aquí el PRIMER LOTE (Entrega 1 de 3) de nuestra sesión del 31 de Octubre 📸✨🤍**
+>
+> Queremos agradecerles de todo corazón la energía tan brutal que vivimos en el estudio. Para **Captoora Studio**, esta sesión representó un reto enorme que abordamos con muchísimo gusto y orgullo: ¡fue una producción con muchísimas personas en escena, muchísimo movimiento, risas y **más de 11,000 fotografías capturadas** en un solo día! 🔥💃
+>
+> De esas más de 11,000 tomas, hicimos una curaduría minuciosa donde se seleccionaron **casi 1,000 fotografías finales**, y cada una lleva un proceso artesanal de edición de alta gama para que luzcan espectaculares.
+>
+> **Para no demorar más su material** y que desde hoy ya puedan empezar a disfrutar y presumir sus fotos, dividimos la colección completa en **3 ENTREGAS (un lote nuevo cada 3 días)**:
+>
+> 📦 **ENTREGA 1 (Disponible HOY):**  
+> 🔗 **[Pega aquí el enlace a la Galería — Entrega 1]**  
+> *(Incluye el primer gran bloque de fotografías ya editadas y aprobadas listas para descargar. Si notas que aún no aparece alguna pose o grupo tuyo, ¡no te preocupes! Viene en camino en el Segundo Lote).*
+>
+> 🔓 **¿CÓMO DESBLOQUEAR EL SEGUNDO LOTE (EN 3 DÍAS) Y EL TERCER LOTE?**  
+> ¡Es súper fácil! Para liberar el **Segundo Lote dentro de 3 días**, solo tienen que **subir sus fotos favoritas de esta Primera Entrega a sus Historias de Instagram etiquetando a:**  
+> 👉 **`@captoora.studio`** y **`@ponchogf88`** 📸✨
+>
+> Como siempre decimos en casa: *nunca vamos a volver a ser tan jóvenes como en este preciso instante*, así que a brillar y a compartir esta magia. ¡Esperamos sus historias para soltar el Segundo Lote en 3 días!
+>
+> Con todo el cariño,  
+> **Poncho y tu familia de Captoora Studio** 📸✨🤍
+

@@ -26,3 +26,6 @@ docs/capturas_escritorio/
 assets/screen_recordings_referencia/
 *.mov
 .taste-skill/
+notebooklm-py/
+*.icloud
+.*.icloud
