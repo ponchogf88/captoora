@@ -1,18 +1,7 @@
 [
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
-    "nombre": "Colegio Liceo Anglo Francés",
-    "zona": "Monterrey Poniente",
-    "categoria": "Colegio Bilingüe",
-    "web": "https://www.laf.edu.mx",
-    "correo_principal": "informes@laf.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8115832906",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Colegio Mexicano",
     "zona": "San Jerónimo / Del Valle",
     "categoria": "Colegio Bilingüe",
@@ -24,7 +13,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Colegio Montessori de Monterrey",
     "zona": "San Jerónimo / Monterrey",
     "categoria": "Colegio Montessori",
@@ -36,7 +26,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Colegio Simón Bolívar Monterrey",
     "zona": "Chepevera / Obispado",
     "categoria": "Kinder y Primaria",
@@ -48,19 +39,21 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
-    "nombre": "Escuela Superior de Música y Danza de Monterrey",
-    "zona": "Obispado / Monterrey",
-    "categoria": "Academia Danza y Música",
-    "web": "https://esmdm.edu.mx",
-    "correo_principal": "contacto@esmdm.edu.mx",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
+    "nombre": "Gymboree Play & Music San Jerónimo",
+    "zona": "Colinas de San Jerónimo",
+    "categoria": "Estimulación y Preescolar",
+    "web": "https://www.gymboreeclases.mx",
+    "correo_principal": "angel.mayorga@gymbo.edu.mx",
     "correos_adicionales": "",
-    "telefono": "8183474830",
+    "telefono": "8183489200",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Instituto Franco Mexicano (Campus San Jerónimo / SPGG)",
     "zona": "Colinas de San Jerónimo / SPGG",
     "categoria": "Colegio Privado",
@@ -72,7 +65,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Instituto Motolinía Monterrey",
     "zona": "Obispado / Cumbres",
     "categoria": "Colegio Privado",
@@ -84,7 +78,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Instituto Regiomontano Chepevera / Cumbres",
     "zona": "Chepevera / San Jerónimo",
     "categoria": "Colegio Lasallista",
@@ -96,7 +91,8 @@
     "estado_web": "Directorio Verificado"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Instituto San Jerónimo (ISJ)",
     "zona": "San Jerónimo / Monterrey",
     "categoria": "Colegio K-12",
@@ -108,19 +104,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
-    "nombre": "Kinder Gymboree Play & Music San Jerónimo",
-    "zona": "Colinas de San Jerónimo",
-    "categoria": "Estimulación y Preescolar",
-    "web": "https://www.gymboreeclases.mx",
-    "correo_principal": "angel.mayorga@gymbo.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183489200",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Kinder Little Town Puerta del Sol",
     "zona": "Colinas de San Jerónimo",
     "categoria": "Kinder / Preescolar",
@@ -132,7 +117,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 1 · San Jerónimo y Obispado",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 1 · Colegios San Jerónimo y Obispado",
     "nombre": "Viget Kindergarten",
     "zona": "Colinas de San Jerónimo",
     "categoria": "Kinder / Preescolar",
@@ -144,7 +130,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "American School Foundation of Monterrey (ASFM)",
     "zona": "Valle Poniente / SPGG",
     "categoria": "Colegio Internacional VIP",
@@ -156,7 +143,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Colegio Euroamericano Monterrey (Valle Oriente)",
     "zona": "San Pedro / Valle Oriente",
     "categoria": "Colegio Bilingüe VIP",
@@ -168,7 +156,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Colegio Inglés de Monterrey",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Bilingüe VIP",
@@ -180,7 +169,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Colegio Necali / Eurocampestre",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Privado",
@@ -192,7 +182,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Instituto Brillamont",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Bilingüe VIP",
@@ -204,7 +195,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Instituto Formus Valle Poniente",
     "zona": "San Pedro / Valle Poniente",
     "categoria": "Colegio Privado VIP",
@@ -216,7 +208,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Instituto Irlandés de Monterrey",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Internacional VIP",
@@ -228,7 +221,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Instituto Mater",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Privado VIP",
@@ -240,7 +234,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Instituto San Roberto (ISR San Agustín)",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Internacional VIP",
@@ -252,7 +247,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Liceo de Monterrey",
     "zona": "San Pedro / Valle Oriente",
     "categoria": "Colegio Bilingüe VIP",
@@ -264,19 +260,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
-    "nombre": "Preescolar Bambini Montessori SPGG",
-    "zona": "San Pedro Garza García",
-    "categoria": "Kinder / Montessori VIP",
-    "web": "https://www.bambinimontessori.edu.mx",
-    "correo_principal": "informes@bambinimontessori.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183358090",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Colegio Himalaya Monterrey",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Internacional VIP",
@@ -288,7 +273,8 @@
     "estado_web": "Directorio Verificado"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 2 · Colegios San Pedro VIP",
     "nombre": "Colegio Labastida",
     "zona": "San Pedro Garza García",
     "categoria": "Colegio Privado",
@@ -300,31 +286,8 @@
     "estado_web": "Directorio Verificado"
   },
   {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
-    "nombre": "Colegio Mirasierra",
-    "zona": "San Pedro Garza García",
-    "categoria": "Colegio Privado VIP",
-    "web": "https://www.colegiomirasierra.edu.mx",
-    "correo_principal": "admisiones@colegiomirasierra.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183383850",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 2 · San Pedro Garza García VIP",
-    "nombre": "Kinder Toddlers & Kids San Pedro",
-    "zona": "San Pedro Garza García",
-    "categoria": "Kinder Bilingüe VIP",
-    "web": "https://www.toddlers.edu.mx",
-    "correo_principal": "admisiones@toddlers.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183564411",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Cambridge College Monterrey",
     "zona": "Cumbres / Mitras",
     "categoria": "Colegio Bilingüe",
@@ -336,127 +299,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Colegio Cristóbal Colón Monterrey",
-    "zona": "Monterrey / Cumbres",
-    "categoria": "Colegio Privado",
-    "web": "https://www.ccc.edu.mx",
-    "correo_principal": "info@ccc.edu.mx",
-    "correos_adicionales": "ejemplo@gmail.com",
-    "telefono": "8183520410",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Colegio San Patricio Monterrey (Cumbres)",
-    "zona": "Cumbres / Del Paseo",
-    "categoria": "Colegio Bilingüe",
-    "web": "https://www.sanpatricio.edu.mx",
-    "correo_principal": "admisiones@sanpatricio.edu.mx",
-    "correos_adicionales": "admisionescumbres@sanpatricio.edu.mx",
-    "telefono": "8111339101",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Instituto Edinburgh",
-    "zona": "Cumbres / San Nicolás",
-    "categoria": "Colegio Bilingüe",
-    "web": "https://www.edinburgh.edu.mx",
-    "correo_principal": "info@edinburgh.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8121338370",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Pan American School of Monterrey (PAS)",
-    "zona": "Cumbres / Carretera Nac.",
-    "categoria": "Colegio Internacional",
-    "web": "https://www.pas.edu.mx",
-    "correo_principal": "admissions@panamerican.edu.mx",
-    "correos_adicionales": "admissions_mc@panamerican.edu.mx; admissions_mo@panamerican.edu.mx; admissions_spc@panamerican.edu.mx",
-    "telefono": "8181300900",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Colegio Madison Monterrey",
-    "zona": "Cumbres / Carretera Nacional",
-    "categoria": "Colegio Internacional IB",
-    "web": "https://www.colegiomadison.edu.mx",
-    "correo_principal": "admisionesmty@colegiomadison.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8181041140",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Colegio Naciones Unidas (CNU)",
-    "zona": "Cumbres / Monterrey",
-    "categoria": "Colegio Bilingüe",
-    "web": "https://www.cnu.edu.mx",
-    "correo_principal": "informes@cnu.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183001234",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Instituto Anglo Británico",
-    "zona": "Cumbres / Carretera Nacional",
-    "categoria": "Colegio Internacional IB",
-    "web": "https://www.anglobritanico.edu.mx",
-    "correo_principal": "admisiones@anglobritanico.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183004050",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Instituto Oxford de Monterrey",
-    "zona": "Cumbres / San Nicolás",
-    "categoria": "Colegio Bilingüe",
-    "web": "https://www.oxford.edu.mx",
-    "correo_principal": "admisiones@oxford.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183005500",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Kilimanjaro International School",
-    "zona": "Cumbres / Monterrey",
-    "categoria": "Colegio Internacional",
-    "web": "https://www.kilimanjaro.edu.mx",
-    "correo_principal": "admisiones@kilimanjaro.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8183006070",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 3 · Cumbres y Poniente",
-    "nombre": "Nexus Comunidad Educativa",
-    "zona": "Cumbres / Poniente",
-    "categoria": "Colegio Privado",
-    "web": "https://www.nexus.edu.mx",
-    "correo_principal": "informes@nexus.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8181230202",
-    "dns_verificado": "POR_VALIDAR",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Colegio Bilingüe La Silla",
     "zona": "Sur / Carretera Nacional",
     "categoria": "Colegio Bilingüe",
@@ -468,19 +312,21 @@
     "estado_web": "Directorio Verificado"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
-    "nombre": "Colegio Euroamericano Sur (Carretera Nacional)",
-    "zona": "Carretera Nacional",
-    "categoria": "Colegio Bilingüe VIP",
-    "web": "https://www.euroamericano.edu.mx",
-    "correo_principal": "admisionessur@euroamericano.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8182488400",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Colegio Cristóbal Colón Monterrey",
+    "zona": "Monterrey / Cumbres",
+    "categoria": "Colegio Privado",
+    "web": "https://www.ccc.edu.mx",
+    "correo_principal": "info@ccc.edu.mx",
+    "correos_adicionales": "ejemplo@gmail.com",
+    "telefono": "8183520410",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Colegio Excélsior Monterrey",
     "zona": "Monterrey Sur",
     "categoria": "Colegio Privado",
@@ -492,7 +338,8 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Colegio Regiomontano Contry",
     "zona": "Contry / Sur Monterrey",
     "categoria": "Colegio Lasallista",
@@ -504,7 +351,34 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Colegio San Patricio Monterrey",
+    "zona": "Cumbres / Del Paseo",
+    "categoria": "Colegio Bilingüe",
+    "web": "https://www.sanpatricio.edu.mx",
+    "correo_principal": "admisiones@sanpatricio.edu.mx",
+    "correos_adicionales": "admisionescumbres@sanpatricio.edu.mx",
+    "telefono": "8111339101",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Instituto Edinburgh",
+    "zona": "Cumbres / San Nicolás",
+    "categoria": "Colegio Bilingüe",
+    "web": "https://www.edinburgh.edu.mx",
+    "correo_principal": "info@edinburgh.edu.mx",
+    "correos_adicionales": "",
+    "telefono": "8121338370",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Instituto Laurens",
     "zona": "Monterrey / Sur",
     "categoria": "Colegio Bilingüe",
@@ -516,19 +390,21 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
-    "nombre": "Instituto San Roberto (Campus Valle Alto)",
-    "zona": "Valle Alto / Carretera Nac.",
-    "categoria": "Colegio Internacional VIP",
-    "web": "https://www.sanroberto.edu.mx",
-    "correo_principal": "admisionessa@sanroberto.edu.mx",
-    "correos_adicionales": "",
-    "telefono": "8180002158",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Pan American School of Monterrey (PAS)",
+    "zona": "Cumbres / Carretera Nac.",
+    "categoria": "Colegio Internacional",
+    "web": "https://www.pas.edu.mx",
+    "correo_principal": "admissions@panamerican.edu.mx",
+    "correos_adicionales": "admissions_mc@panamerican.edu.mx; admissions_mo@panamerican.edu.mx; admissions_spc@panamerican.edu.mx",
+    "telefono": "8181300900",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
     "nombre": "Tonallí Comunidad Educativa",
     "zona": "Carretera Nacional / Sur",
     "categoria": "Colegio Humanista",
@@ -540,19 +416,164 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 4 · Contry y Carretera Nacional",
-    "nombre": "Highlands International School Monterrey",
-    "zona": "Carretera Nacional",
-    "categoria": "Colegio Internacional",
-    "web": "https://www.highlandsmty.edu.mx",
-    "correo_principal": "admisiones@highlandsmty.edu.mx",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Colegio Madison Monterrey",
+    "zona": "Cumbres / Carretera Nacional",
+    "categoria": "Colegio Internacional IB",
+    "web": "https://www.colegiomadison.edu.mx",
+    "correo_principal": "admisionesmty@colegiomadison.edu.mx",
     "correos_adicionales": "",
-    "telefono": "8182662400",
+    "telefono": "8181041140",
     "dns_verificado": "POR_VALIDAR",
     "estado_web": "Directorio Verificado"
   },
   {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
+    "submarca": "Signature / Studio",
+    "lote": "Lote 3 · Colegios Cumbres y Carretera Nac.",
+    "nombre": "Instituto Anglo Británico",
+    "zona": "Cumbres / Carretera Nacional",
+    "categoria": "Colegio Internacional IB",
+    "web": "https://www.anglobritanico.edu.mx",
+    "correo_principal": "admisiones@anglobritanico.edu.mx",
+    "correos_adicionales": "",
+    "telefono": "8183004050",
+    "dns_verificado": "POR_VALIDAR",
+    "estado_web": "Directorio Verificado"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "CANACO Monterrey (Comercio y Eventos)",
+    "zona": "Monterrey",
+    "categoria": "Cámara Empresarial y Posadas",
+    "web": "https://www.canaco.net",
+    "correo_principal": "contacto@canaco.net",
+    "correos_adicionales": "",
+    "telefono": "8110337324",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "COPARMEX Nuevo León (Eventos Empresariales)",
+    "zona": "Monterrey / SPGG",
+    "categoria": "Cámara Empresarial / Corporativos",
+    "web": "https://coparmexnl.org.mx",
+    "correo_principal": "eventos@coparmexnl.org.mx",
+    "correos_adicionales": "%20resparza@coparmexnl.org.mx; eventosyvinculacion@coparmexnl.org.mx; gmartinez@coparmexnl.mx; igonzalez@coparmexnl.mx; jsoto@coparmexnl.mx;",
+    "telefono": "8110318325",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Casino Monterrey (Eventos y Posadas)",
+    "zona": "Monterrey / San Pedro",
+    "categoria": "Club Social y Posadas VIP",
+    "web": "https://www.casinomonterrey.com",
+    "correo_principal": "eventos@casinomonterrey.com",
+    "correos_adicionales": "",
+    "telefono": "8181505500",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Cintermex (Coordinación de Eventos y Posadas)",
+    "zona": "Fundidora / Monterrey",
+    "categoria": "Recinto Corporativo y Posadas",
+    "web": "https://www.cintermex.com.mx",
+    "correo_principal": "info@cintermex.com",
+    "correos_adicionales": "",
+    "telefono": "8183696969",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Directorio Verificado"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Club Ejecutivo San Pedro",
+    "zona": "San Pedro Garza García",
+    "categoria": "Club Empresarial y Posadas",
+    "web": "https://www.clubejecutivo.com.mx",
+    "correo_principal": "eventos@clubejecutivo.com.mx",
+    "correos_adicionales": "",
+    "telefono": "8183355000",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Directorio Verificado"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "ERIAC Capital Humano (Directores de RRHH MTY)",
+    "zona": "San Pedro Garza García",
+    "categoria": "Red de Recursos Humanos (Posadas)",
+    "web": "https://www.eriac.com.mx",
+    "correo_principal": "contacto@eriac.com.mx",
+    "correos_adicionales": "",
+    "telefono": "8123213517",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "IOS Offices (Comunidad Corporativa San Pedro / MTY)",
+    "zona": "San Pedro Garza García",
+    "categoria": "Coworking & Corporativos",
+    "web": "https://www.iosoffices.com",
+    "correo_principal": "info@iosoffices.com",
+    "correos_adicionales": "rh@iosoffices.com; usuario@dominio.com",
+    "telefono": "8112656414",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Pabellón M (Eventos Corporativos)",
+    "zona": "Centro / Monterrey",
+    "categoria": "Centro de Convenciones y Galas",
+    "web": "https://www.pabellonm.com",
+    "correo_principal": "contacto@pabellonm.com",
+    "correos_adicionales": "",
+    "telefono": "8120908800",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Showcenter Complex San Pedro (Eventos Privados)",
+    "zona": "San Pedro / Valle Oriente",
+    "categoria": "Recinto de Galas y Posadas Corp",
+    "web": "https://www.showcenter.com.mx",
+    "correo_principal": "nombre@correo.com",
+    "correos_adicionales": "prensa@showcenter.com.mx; publicidad@showcenter.com.mx",
+    "telefono": "8100000000",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Corp + Posadas",
+    "lote": "Lote 4 · Corporativos y Posadas Empresariales",
+    "nombre": "Las Pampas Eventos (Salones y Posadas)",
+    "zona": "Contry / Monterrey",
+    "categoria": "Salón de Eventos y Posadas",
+    "web": "https://www.laspampaseventos.com",
+    "correo_principal": "info@laspampaseventos.com",
+    "correos_adicionales": "",
+    "telefono": "8183578000",
+    "dns_verificado": "POR_VALIDAR",
+    "estado_web": "Directorio Verificado"
+  },
+  {
+    "submarca": "Captoora Pop! ⚡",
+    "lote": "Lote 5 · Academias Danza, Arte y Gimnasia",
     "nombre": "Ballet de Monterrey (Academia Oficial)",
     "zona": "San Pedro / Monterrey",
     "categoria": "Academia de Ballet",
@@ -564,67 +585,34 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Casino Monterrey",
-    "zona": "Monterrey / San Pedro",
-    "categoria": "Club Social y Galas",
-    "web": "https://www.casinomonterrey.com",
-    "correo_principal": "eventos@casinomonterrey.com",
+    "submarca": "Captoora Pop! ⚡",
+    "lote": "Lote 5 · Academias Danza, Arte y Gimnasia",
+    "nombre": "BroadWay / Academia de Teatro Musical Monterrey",
+    "zona": "San Pedro Garza García",
+    "categoria": "Academia Teatro y Danza",
+    "web": "https://www.balletdemonterrey.com",
+    "correo_principal": "info@balletdemonterrey.com",
     "correos_adicionales": "",
-    "telefono": "8181505500",
+    "telefono": "8183477664",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Club Deportivo San Agustín",
-    "zona": "San Pedro Garza García",
-    "categoria": "Club Deportivo y Academias",
-    "web": "https://www.deportivosanagustin.com",
-    "correo_principal": "comunicacion@dsa.org.mx",
-    "correos_adicionales": "comunicacion@sanagustin.org.mx",
-    "telefono": "8183633232",
+    "submarca": "Captoora Pop! ⚡",
+    "lote": "Lote 5 · Academias Danza, Arte y Gimnasia",
+    "nombre": "Escuela Superior de Música y Danza de Monterrey",
+    "zona": "Obispado / Monterrey",
+    "categoria": "Academia Danza y Música",
+    "web": "https://esmdm.edu.mx",
+    "correo_principal": "contacto@esmdm.edu.mx",
+    "correos_adicionales": "",
+    "telefono": "8183474830",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Club Ejecutivo San Pedro",
-    "zona": "San Pedro Garza García",
-    "categoria": "Club Deportivo y Eventos",
-    "web": "https://www.clubejecutivo.com.mx",
-    "correo_principal": "eventos@clubejecutivo.com.mx",
-    "correos_adicionales": "",
-    "telefono": "8183355000",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Club Sonoma Residencial & Deportivo",
-    "zona": "Valle Oriente / SPGG",
-    "categoria": "Club Deportivo y Academias",
-    "web": "https://www.clubsonoma.com.mx",
-    "correo_principal": "contacto@clubsonoma.com.mx",
-    "correos_adicionales": "",
-    "telefono": "8181541200",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Directorio Verificado"
-  },
-  {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Deportivo Alpino Chipinque",
-    "zona": "San Pedro Garza García",
-    "categoria": "Club Deportivo y Academias",
-    "web": "https://www.alpinochipinque.com",
-    "correo_principal": "atencionsocios@alpinochipinque.com",
-    "correos_adicionales": "",
-    "telefono": "8183781515",
-    "dns_verificado": "VERIFICADO",
-    "estado_web": "Web Activa (HTTP 200)"
-  },
-  {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
+    "submarca": "Captoora Pop! ⚡",
+    "lote": "Lote 5 · Academias Danza, Arte y Gimnasia",
     "nombre": "Gimnasio y Academia Regio Gym",
     "zona": "San Jerónimo / Cumbres",
     "categoria": "Academia de Gimnasia",
@@ -636,14 +624,54 @@
     "estado_web": "Web Activa (HTTP 200)"
   },
   {
-    "lote": "Lote 5 · Academias Danza y Clubes VIP",
-    "nombre": "Tutus Dance Studio San Pedro",
+    "submarca": "Captoora Biometrics",
+    "lote": "Lote 6 · Clubes Deportivos y Fitness (Biometrics)",
+    "nombre": "Club Deportivo San Agustín",
     "zona": "San Pedro Garza García",
-    "categoria": "Academia de Ballet y Danza",
-    "web": "https://www.balletdemonterrey.com",
-    "correo_principal": "info@balletdemonterrey.com",
+    "categoria": "Club Deportivo y Fitness VIP",
+    "web": "https://www.deportivosanagustin.com",
+    "correo_principal": "comunicacion@dsa.org.mx",
+    "correos_adicionales": "comunicacion@sanagustin.org.mx",
+    "telefono": "8183633232",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Biometrics",
+    "lote": "Lote 6 · Clubes Deportivos y Fitness (Biometrics)",
+    "nombre": "Club Sonoma Residencial & Deportivo",
+    "zona": "Valle Oriente / SPGG",
+    "categoria": "Club Deportivo y Wellness",
+    "web": "https://www.clubsonoma.com.mx",
+    "correo_principal": "contacto@clubsonoma.com.mx",
     "correos_adicionales": "",
-    "telefono": "8183477664",
+    "telefono": "8181541200",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Directorio Verificado"
+  },
+  {
+    "submarca": "Captoora Biometrics",
+    "lote": "Lote 6 · Clubes Deportivos y Fitness (Biometrics)",
+    "nombre": "Deportivo Alpino Chipinque",
+    "zona": "San Pedro Garza García",
+    "categoria": "Club Deportivo y Tenis VIP",
+    "web": "https://www.alpinochipinque.com",
+    "correo_principal": "atencionsocios@alpinochipinque.com",
+    "correos_adicionales": "",
+    "telefono": "8183781515",
+    "dns_verificado": "VERIFICADO",
+    "estado_web": "Web Activa (HTTP 200)"
+  },
+  {
+    "submarca": "Captoora Biometrics",
+    "lote": "Lote 6 · Clubes Deportivos y Fitness (Biometrics)",
+    "nombre": "Sports World Monterrey (San Pedro / San Jerónimo)",
+    "zona": "San Jerónimo / San Pedro",
+    "categoria": "Club Fitness y Wellness",
+    "web": "https://www.sportsworld.com.mx",
+    "correo_principal": "servicioalcliente@sportsworld.com.mx",
+    "correos_adicionales": "",
+    "telefono": "8183638000",
     "dns_verificado": "VERIFICADO",
     "estado_web": "Web Activa (HTTP 200)"
   }
