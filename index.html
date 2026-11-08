@@ -186,13 +186,27 @@
     }
 
     /* ==========================================================================
+       GLOBAL ANTIGRAVITY 2.0 INTERACTIVE PARTICLE RING FIELD (FULL PAGE)
+       ========================================================================== */
+    #agy-global-particles-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      pointer-events: none;
+      display: block;
+    }
+
+    /* ==========================================================================
        5-ACT SCROLL CONTAINER (#story-stage)
        Pins the 3D scene across 500vh of smooth scroll
        ========================================================================== */
     #story-stage {
       position: relative;
       height: 520vh;
-      background: #000000;
+      background: transparent;
+      z-index: 2;
     }
 
     #webgl-container {
@@ -205,7 +219,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #000000;
+      background: transparent;
     }
 
     #webgl-canvas {
@@ -683,7 +697,8 @@
        ========================================================================== */
     #inside-camera-stage {
       position: relative;
-      background: radial-gradient(circle at 50% 20%, #060910 0%, #000000 70%);
+      z-index: 2;
+      background: radial-gradient(circle at 50% 20%, rgba(6, 9, 16, 0.72) 0%, rgba(0, 0, 0, 0.78) 70%);
       padding: 100px 32px 140px;
       border-top: 1px solid rgba(255, 255, 255, 0.12);
       overflow: hidden;
@@ -1067,51 +1082,223 @@
     }
 
     /* ==========================================================================
-       SECTION: PAQUETES DE ESTUDIO (FLOATING BLACK GLASS CARDS)
+       SECTION: PAQUETES DE ESTUDIO (ANTIGRAVITY INTERACTIVE CANVAS CARDS)
        ========================================================================== */
     .packages-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
       gap: 28px;
       margin-bottom: 110px;
     }
 
     .pkg-glass-card {
-      background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.05) 0%, rgba(10, 12, 17, 0.95) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 24px;
-      padding: 34px 28px;
+      --mouse-x: 50%;
+      --mouse-y: 32%;
+      --dx: 0;
+      --dy: 0;
+      --rx: 0deg;
+      --ry: 0deg;
+      --hover-alpha: 0;
+      --card-bg-start: #06131a;
+      --card-bg-end: #0f2530;
+      --card-accent: #2dd4bf;
+      --card-spotlight-color: rgba(45, 212, 191, 0.28);
+      --card-border-base: rgba(94, 234, 212, 0.22);
+      --card-badge-bg: rgba(13, 42, 52, 0.78);
+      --card-badge-border: rgba(94, 234, 212, 0.42);
+      --card-icon-color: #99f6e4;
+
+      box-sizing: border-box;
+      isolation: isolate;
+      min-height: 460px;
+      transform: perspective(1100px) rotateX(var(--rx)) rotateY(var(--ry)) translateZ(0);
+      will-change: transform;
+      border: 1px solid var(--card-border-base);
+      background: linear-gradient(160deg, var(--card-bg-start) 0%, var(--card-bg-end) 100%);
+      border-radius: 28px;
+      padding: 32px 28px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       position: relative;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
-      transition: all 0.3s ease;
+      overflow: hidden;
+      box-shadow: rgba(6, 10, 22, 0.72) 0px 24px 52px -16px, rgba(255, 255, 255, 0.08) 0px 1px inset;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s;
     }
     .pkg-glass-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 255, 255, 0.35);
-      box-shadow: 0 30px 70px rgba(0, 0, 0, 1), 0 0 35px rgba(255, 255, 255, 0.08);
+      --hover-alpha: 1;
+      box-shadow: 0 32px 72px rgba(0, 0, 0, 0.92), 0 0 38px var(--card-spotlight-color);
     }
-    .pkg-glass-card.featured {
-      border-color: var(--lime);
-      background: radial-gradient(circle at top right, rgba(204, 255, 0, 0.12) 0%, rgba(10, 12, 17, 0.95) 75%);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(204, 255, 0, 0.2);
+
+    /* Variantes de color e interacción estilo Google Antigravity */
+    .pkg-glass-card[data-bg-variant="aurora-ribbons"] {
+      --card-bg-start: #06131a;
+      --card-bg-end: #0f2530;
+      --card-accent: #2dd4bf;
+      --card-spotlight-color: rgba(45, 212, 191, 0.3);
+      --card-border-base: rgba(94, 234, 212, 0.25);
+      --card-badge-bg: rgba(13, 42, 52, 0.78);
+      --card-badge-border: rgba(94, 234, 212, 0.45);
+      --card-icon-color: #99f6e4;
+    }
+    .pkg-glass-card[data-bg-variant="flocking-boids"] {
+      --card-bg-start: #12091d;
+      --card-bg-end: #221135;
+      --card-accent: #c084fc;
+      --card-spotlight-color: rgba(192, 132, 252, 0.3);
+      --card-border-base: rgba(216, 180, 254, 0.22);
+      --card-badge-bg: rgba(40, 20, 62, 0.78);
+      --card-badge-border: rgba(216, 180, 254, 0.42);
+      --card-icon-color: #e9d5ff;
+    }
+    .pkg-glass-card[data-bg-variant="pendulum-harmonograph"] {
+      --card-bg-start: #160d0a;
+      --card-bg-end: #281812;
+      --card-accent: #fb923c;
+      --card-spotlight-color: rgba(251, 146, 60, 0.3);
+      --card-border-base: rgba(253, 186, 116, 0.22);
+      --card-badge-bg: rgba(50, 28, 20, 0.78);
+      --card-badge-border: rgba(253, 186, 116, 0.42);
+      --card-icon-color: #fed7aa;
+    }
+    .pkg-glass-card[data-bg-variant="orbital-radar"] {
+      --card-bg-start: #140f0a;
+      --card-bg-end: #241910;
+      --card-accent: #f59e0b;
+      --card-spotlight-color: rgba(245, 158, 11, 0.3);
+      --card-border-base: rgba(251, 191, 36, 0.25);
+      --card-badge-bg: rgba(46, 30, 16, 0.78);
+      --card-badge-border: rgba(251, 191, 36, 0.45);
+      --card-icon-color: #fcd34d;
+    }
+    .pkg-glass-card[data-bg-variant="dna-helix"] {
+      --card-bg-start: #071220;
+      --card-bg-end: #0f243c;
+      --card-accent: #38bdf8;
+      --card-spotlight-color: rgba(56, 189, 248, 0.3);
+      --card-border-base: rgba(125, 211, 252, 0.25);
+      --card-badge-bg: rgba(16, 40, 68, 0.78);
+      --card-badge-border: rgba(125, 211, 252, 0.45);
+      --card-icon-color: #bae6fd;
+    }
+
+    .feature-card-backdrop {
+      z-index: 0;
+      pointer-events: none;
+      position: absolute;
+      inset: 0px;
+      overflow: hidden;
+    }
+    .feature-card-canvas {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      inset: 0px;
+    }
+    .feature-card-spotlight {
+      z-index: 2;
+      background: radial-gradient(360px circle at var(--mouse-x) var(--mouse-y), var(--card-spotlight-color), transparent 70%);
+      opacity: calc(0.55 + var(--hover-alpha) * 0.45);
+      transition: opacity 0.3s;
+      position: absolute;
+      inset: 0px;
+    }
+    .feature-card-scrim {
+      z-index: 3;
+      background: linear-gradient(rgba(6, 9, 18, 0.04) 0%, rgba(6, 9, 18, 0.38) 42%, rgba(6, 9, 18, 0.88) 76%, rgba(6, 9, 18, 0.96) 100%);
+      position: absolute;
+      inset: 0px;
+    }
+    .feature-card-border-glow {
+      border-radius: inherit;
+      background: radial-gradient(280px circle at var(--mouse-x) var(--mouse-y), var(--card-accent), transparent 70%);
+      opacity: calc(0.28 + var(--hover-alpha) * 0.72);
+      pointer-events: none;
+      z-index: 4;
+      padding: 1.5px;
+      transition: opacity 0.3s;
+      position: absolute;
+      inset: 0px;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+    }
+    .feature-card-visual-stage {
+      z-index: 5;
+      pointer-events: none;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      min-height: 120px;
+      display: flex;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    .feature-card-icon-badge {
+      background: var(--card-badge-bg);
+      border: 1px solid var(--card-badge-border);
+      width: 62px;
+      height: 62px;
+      color: var(--card-icon-color);
+      transform: translate3d(calc(var(--dx) * 10px), calc(var(--dy) * 10px), 0);
+      border-radius: 18px;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s, box-shadow 0.25s;
+      display: inline-flex;
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 12px 28px -8px, rgba(255, 255, 255, 0.18) 0px 1px inset;
+    }
+    .pkg-glass-card:hover .feature-card-icon-badge {
+      border-color: var(--card-accent);
+      box-shadow: 0 14px 32px -6px rgba(0, 0, 0, 0.65), 0 0 24px -4px var(--card-spotlight-color), inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
+    }
+    .feature-card-icon-badge .icon-badge-ring {
+      border: 1px dashed var(--card-badge-border);
+      opacity: calc(0.3 + var(--hover-alpha) * 0.55);
+      border-radius: 22px;
+      transition: opacity 0.3s, transform 0.5s;
+      position: absolute;
+      inset: -5px;
+    }
+    .pkg-glass-card:hover .feature-card-icon-badge .icon-badge-ring {
+      transform: scale(1.05);
+    }
+    .feature-card-watermark {
+      color: var(--card-icon-color);
+      opacity: 0.08;
+      transform: translate3d(calc(var(--dx) * -18px), calc(var(--dy) * -18px), 0) rotate(calc(var(--dx) * 8deg));
+      filter: blur(0.5px);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s;
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+    .pkg-glass-card:hover .feature-card-watermark {
+      opacity: 0.17;
+    }
+    .pkg-card-content, .pkg-action-btn {
+      position: relative;
+      z-index: 5;
     }
 
     .pkg-pill-badge {
       position: absolute;
-      top: -12px;
-      right: 24px;
-      background: var(--lime);
-      color: #000;
+      top: 18px;
+      right: 20px;
+      z-index: 6;
+      background: var(--card-accent);
+      color: #04070d;
       font-family: var(--font-mono);
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
-      padding: 4px 14px;
+      padding: 5px 14px;
       border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
     }
     .pkg-title {
       font-size: 22px;
@@ -1580,6 +1767,9 @@
   </style>
 </head>
 <body>
+
+  <!-- GLOBAL ANTIGRAVITY 2.0 INTERACTIVE PARTICLE RING FIELD -->
+  <canvas id="agy-global-particles-canvas" aria-hidden="true"></canvas>
 
   <!-- STROBE FLASH BURST LAYER (ACT 3 - 150ms PURE WHITE FLASH) -->
   <div id="flash-screen"></div>
@@ -2149,10 +2339,29 @@
       </div>
 
       <div class="packages-grid">
-        <!-- 1. Combo Studio + Clips -->
-        <div class="pkg-glass-card featured">
+        <!-- 1. Combo Studio + Clips (Aurora Ribbons - Teal/Cyan) -->
+        <div class="pkg-glass-card featured" data-feature-interactive-card data-bg-variant="aurora-ribbons">
+          <div class="feature-card-backdrop" aria-hidden="true">
+            <canvas class="feature-card-canvas" data-feature-canvas></canvas>
+            <div class="feature-card-spotlight"></div>
+            <div class="feature-card-scrim"></div>
+          </div>
+          <div class="feature-card-border-glow" aria-hidden="true"></div>
           <div class="pkg-pill-badge">Más Recomendado</div>
-          <div>
+          <div class="feature-card-visual-stage">
+            <div class="feature-card-icon-badge">
+              <span class="icon-badge-ring" aria-hidden="true"></span>
+              <svg viewBox="0 -960 960 960" width="32px" height="32px" fill="currentColor" aria-hidden="true">
+                <path d="M225.39-185.39h40.92L734.85-653.31l-40.92-40.92L225.39-226.31v40.92ZM180-140V-244.54L741.92-806.61q5.69-5.69 14.37-9.23t18.01-3.54q8.79,0 16.85,3.54t15.15,9.23l40.92,40.92q6.69,6.69 9.73,15.19T860-733.69q0,8.69-3.54,17.69t-9.23,14.69L284.54-140H180Zm55.67-430.62q-5.61,0-7.54-5.73q-14.69-56.37-55.4-97.07t-97-55.4Q70-730.73 70-736.46q0-6 6-8q56.31-14.7 97.05-55.42t55.44-97.01q1.93-5.8 7.74-5.8q5.62,0 8,6.07q15.03,56.07 55.36,96.77t96.49,55.39q6,2 6,8.28q0,5.72-5.79,7.62q-56.17,14.47-96.78,55.11t-55.27,96.83q-2.4,6-8.56,6Z"/>
+              </svg>
+            </div>
+            <div class="feature-card-watermark" aria-hidden="true">
+              <svg viewBox="0 -960 960 960" width="136px" height="136px" fill="currentColor" aria-hidden="true">
+                <path d="M225.39-185.39h40.92L734.85-653.31l-40.92-40.92L225.39-226.31v40.92ZM180-140V-244.54L741.92-806.61q5.69-5.69 14.37-9.23t18.01-3.54q8.79,0 16.85,3.54t15.15,9.23l40.92,40.92q6.69,6.69 9.73,15.19T860-733.69q0,8.69-3.54,17.69t-9.23,14.69L284.54-140H180Zm55.67-430.62q-5.61,0-7.54-5.73q-14.69-56.37-55.4-97.07t-97-55.4Q70-730.73 70-736.46q0-6 6-8q56.31-14.7 97.05-55.42t55.44-97.01q1.93-5.8 7.74-5.8q5.62,0 8,6.07q15.03,56.07 55.36,96.77t96.49,55.39q6,2 6,8.28q0,5.72-5.79,7.62q-56.17,14.47-96.78,55.11t-55.27,96.83q-2.4,6-8.56,6Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pkg-card-content">
             <div class="pkg-title">Combo Studio + Clips</div>
             <div class="pkg-cost">$1,600 <span>/ 2 horas</span></div>
             <ul class="pkg-features">
@@ -2167,11 +2376,30 @@
           </a>
         </div>
 
-        <!-- 2. Renta de Estudio -->
-        <div class="pkg-glass-card">
-          <div>
+        <!-- 2. Renta de Estudio (Flocking Boids - Violet/Purple) -->
+        <div class="pkg-glass-card" data-feature-interactive-card data-bg-variant="flocking-boids">
+          <div class="feature-card-backdrop" aria-hidden="true">
+            <canvas class="feature-card-canvas" data-feature-canvas></canvas>
+            <div class="feature-card-spotlight"></div>
+            <div class="feature-card-scrim"></div>
+          </div>
+          <div class="feature-card-border-glow" aria-hidden="true"></div>
+          <div class="feature-card-visual-stage">
+            <div class="feature-card-icon-badge">
+              <span class="icon-badge-ring" aria-hidden="true"></span>
+              <svg viewBox="0 -960 960 960" width="32px" height="32px" fill="currentColor" aria-hidden="true">
+                <path d="M182.56-332.31q-34.79,0-58.67-24.02T100-415.14t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67t-58.81,23.88ZM312.35-164.02q-23.88-24.02-23.88-58.81t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67T371.02-140t-58.67-24.02Zm0-384.61q-23.88-24.02-23.88-58.81t24.02-58.67T371.29-690t58.67,24.02t23.88,58.81T429.83-548.5t-58.81,23.88t-58.67-24.02ZM504.65-356.33q-23.88-24.02-23.88-58.81t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67t-58.81,23.88t-58.67-24.02ZM736.54-570.62q-5.81,0-7.72-5.8q-14.52-56.3-55.3-97t-97.16-55.4q-5.73-1.94-5.73-7.74q0-6.77 5.73-7.74q56.37-14.71 97.07-55.5t55.4-97.16q1.91-5.73 7.64-5.73q6.69,0 7.66,5.81q15.32,56.35 55.9,97.15t96.85,55.46q5.81,0.97 5.81,7.74q0,5.81-5.73,7.72q-56.38,14.7-97.16,55.41t-55.51,96.99q-0.97,5.8-7.75,5.8Z"/>
+              </svg>
+            </div>
+            <div class="feature-card-watermark" aria-hidden="true">
+              <svg viewBox="0 -960 960 960" width="136px" height="136px" fill="currentColor" aria-hidden="true">
+                <path d="M182.56-332.31q-34.79,0-58.67-24.02T100-415.14t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67t-58.81,23.88ZM312.35-164.02q-23.88-24.02-23.88-58.81t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67T371.02-140t-58.67-24.02Zm0-384.61q-23.88-24.02-23.88-58.81t24.02-58.67T371.29-690t58.67,24.02t23.88,58.81T429.83-548.5t-58.81,23.88t-58.67-24.02ZM504.65-356.33q-23.88-24.02-23.88-58.81t24.02-58.67t58.81-23.88t58.67,24.02t23.88,58.81t-24.02,58.67t-58.81,23.88t-58.67-24.02ZM736.54-570.62q-5.81,0-7.72-5.8q-14.52-56.3-55.3-97t-97.16-55.4q-5.73-1.94-5.73-7.74q0-6.77 5.73-7.74q56.37-14.71 97.07-55.5t55.4-97.16q1.91-5.73 7.64-5.73q6.69,0 7.66,5.81q15.32,56.35 55.9,97.15t96.85,55.46q5.81,0.97 5.81,7.74q0,5.81-5.73,7.72q-56.38,14.7-97.16,55.41t-55.51,96.99q-0.97,5.8-7.75,5.8Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pkg-card-content">
             <div class="pkg-title">Renta de Estudio</div>
-            <div class="pkg-cost">$350 <span>/ hora (Promo Octubre)</span></div>
+            <div class="pkg-cost">$350 <span>/ hora (Promo)</span></div>
             <ul class="pkg-features">
               <li>Tres escenarios: ciclorama blanco, negro y textura</li>
               <li>Softbox, luces continuas Godox y tripiés C-Stand</li>
@@ -2184,9 +2412,28 @@
           </a>
         </div>
 
-        <!-- 3. Sesión Básica -->
-        <div class="pkg-glass-card">
-          <div>
+        <!-- 3. Sesión Básica (Pendulum Harmonograph - Warm Amber) -->
+        <div class="pkg-glass-card" data-feature-interactive-card data-bg-variant="pendulum-harmonograph">
+          <div class="feature-card-backdrop" aria-hidden="true">
+            <canvas class="feature-card-canvas" data-feature-canvas></canvas>
+            <div class="feature-card-spotlight"></div>
+            <div class="feature-card-scrim"></div>
+          </div>
+          <div class="feature-card-border-glow" aria-hidden="true"></div>
+          <div class="feature-card-visual-stage">
+            <div class="feature-card-icon-badge">
+              <span class="icon-badge-ring" aria-hidden="true"></span>
+              <svg viewBox="0 -960 960 960" width="32px" height="32px" fill="currentColor" aria-hidden="true">
+                <path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/>
+              </svg>
+            </div>
+            <div class="feature-card-watermark" aria-hidden="true">
+              <svg viewBox="0 -960 960 960" width="136px" height="136px" fill="currentColor" aria-hidden="true">
+                <path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pkg-card-content">
             <div class="pkg-title">Sesión Básica</div>
             <div class="pkg-cost">$1,000 <span>/ 1 hora</span></div>
             <ul class="pkg-features">
@@ -2201,10 +2448,29 @@
           </a>
         </div>
 
-        <!-- 4. Clase de Cámara -->
-        <div class="pkg-glass-card" style="border-color: rgba(245, 158, 11, 0.45);">
-          <div class="pkg-pill-badge" style="background: var(--amber); color: #000;">Promo Octubre</div>
-          <div>
+        <!-- 4. Clase de Cámara (Orbital Radar - Golden Aperture) -->
+        <div class="pkg-glass-card" data-feature-interactive-card data-bg-variant="orbital-radar">
+          <div class="feature-card-backdrop" aria-hidden="true">
+            <canvas class="feature-card-canvas" data-feature-canvas></canvas>
+            <div class="feature-card-spotlight"></div>
+            <div class="feature-card-scrim"></div>
+          </div>
+          <div class="feature-card-border-glow" aria-hidden="true"></div>
+          <div class="pkg-pill-badge">Mentoría 1 a 1</div>
+          <div class="feature-card-visual-stage">
+            <div class="feature-card-icon-badge">
+              <span class="icon-badge-ring" aria-hidden="true"></span>
+              <svg viewBox="0 -960 960 960" width="32px" height="32px" fill="currentColor" aria-hidden="true">
+                <path d="M480-260q75 0 127.5-52.5T660-440q0-75-52.5-127.5T480-620q-75 0-127.5 52.5T300-440q0 75 52.5 127.5T480-260Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-120q-33 0-56.5-23.5T80-200v-480q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v480q0 33-23.5 56.5T800-120H160Z"/>
+              </svg>
+            </div>
+            <div class="feature-card-watermark" aria-hidden="true">
+              <svg viewBox="0 -960 960 960" width="136px" height="136px" fill="currentColor" aria-hidden="true">
+                <path d="M480-260q75 0 127.5-52.5T660-440q0-75-52.5-127.5T480-620q-75 0-127.5 52.5T300-440q0 75 52.5 127.5T480-260Zm0-80q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM160-120q-33 0-56.5-23.5T80-200v-480q0-33 23.5-56.5T160-760h126l74-80h240l74 80h126q33 0 56.5 23.5T880-680v480q0 33-23.5 56.5T800-120H160Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pkg-card-content">
             <div class="pkg-title">Clase de Cámara</div>
             <div style="font-family: var(--font-mono); font-size: 0.85rem; font-style: italic; color: var(--amber); margin-bottom: 12px; line-height: 1.45;">
               "Para dominar la luz, primero tienes que aprender a controlar la oscuridad."
@@ -2222,10 +2488,29 @@
           </a>
         </div>
 
-        <!-- 5. Captoora Biometrics -->
-        <div class="pkg-glass-card" style="border-color: rgba(0, 240, 255, 0.45); box-shadow: 0 0 30px rgba(0, 240, 255, 0.15);">
-          <div class="pkg-pill-badge" style="background: var(--cyan); color: #000; font-weight: 800;">Experiencia Interactiva</div>
-          <div>
+        <!-- 5. Captoora Biometrics (DNA Helix - Cyan Biometrics) -->
+        <div class="pkg-glass-card" data-feature-interactive-card data-bg-variant="dna-helix">
+          <div class="feature-card-backdrop" aria-hidden="true">
+            <canvas class="feature-card-canvas" data-feature-canvas></canvas>
+            <div class="feature-card-spotlight"></div>
+            <div class="feature-card-scrim"></div>
+          </div>
+          <div class="feature-card-border-glow" aria-hidden="true"></div>
+          <div class="pkg-pill-badge">Experiencia Interactiva</div>
+          <div class="feature-card-visual-stage">
+            <div class="feature-card-icon-badge">
+              <span class="icon-badge-ring" aria-hidden="true"></span>
+              <svg viewBox="0 -960 960 960" width="32px" height="32px" fill="currentColor" aria-hidden="true">
+                <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-240q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Z"/>
+              </svg>
+            </div>
+            <div class="feature-card-watermark" aria-hidden="true">
+              <svg viewBox="0 -960 960 960" width="136px" height="136px" fill="currentColor" aria-hidden="true">
+                <path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-240q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="pkg-card-content">
             <div class="pkg-title" style="color: var(--cyan);">Captoora Biometrics</div>
             <div class="pkg-cost">$1,850 <span>/ Diagnóstico</span></div>
             <ul class="pkg-features">
@@ -2340,10 +2625,10 @@
         cat: 'familia'
       },
       {
-        src: 'assets/media_jpg/IG_CPT_0550_4x5.jpg',
-        title: 'Biometría con Alma',
-        badge: 'BIOMETRÍA // RECOMPOSICIÓN',
-        cat: 'biometrics'
+        src: 'assets/media_jpg/FARMASI_CPT_0742_TANYA_ESTUDIO_PRO.jpg',
+        title: 'Tanya V. · Editorial en Estudio',
+        badge: 'EDITORIAL // SET 03',
+        cat: 'editorial'
       },
       {
         src: 'assets/referencias_generadas/ref_park_autumn_3x4.jpg',
@@ -2370,10 +2655,10 @@
         cat: 'editorial'
       },
       {
-        src: 'assets/media_jpg/IG_CPT_0700_4x5.jpg',
-        title: 'Clon 3D Volumétrico',
-        badge: 'BIOMETRÍA // 3D',
-        cat: 'biometrics'
+        src: 'assets/media_jpg/FARMASI_CPT_0624_KARLA_ESTUDIO_PRO.jpg',
+        title: 'Karla P. · Fitness & Marca',
+        badge: 'FITNESS // SET 06',
+        cat: 'editorial'
       },
       {
         src: 'assets/media_jpg/pf-chipinque-02.jpg',
@@ -2702,8 +2987,498 @@
       }
     }
 
-    // Initialize 3D Vortex, Coverflow, and Parallax on load
+    // =========================================================================
+    // 1. ANTIGRAVITY 2.0 GLOBAL INTERACTIVE PARTICLE RING FIELD (FULL PAGE)
+    // =========================================================================
+    function initAntigravityGlobalParticleField() {
+      const canvas = document.getElementById('agy-global-particles-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let dpr = Math.min(window.devicePixelRatio || 1, 2);
+      let time = 0;
+
+      // Cursor & Ring tracking (smooth inertia like Antigravity 2.0)
+      let targetX = width * 0.52;
+      let targetY = height * 0.45;
+      let ringX = targetX;
+      let ringY = targetY;
+      let pointerActive = false;
+
+      const colors = ['#7189ff', '#3074f9', '#4f8bff', '#8da2ff'];
+      let particles = [];
+
+      function seededRand(seed) {
+        const x = Math.sin(seed * 12.9898 + 78.233) * 43758.5453;
+        return x - Math.floor(x);
+      }
+
+      function buildParticles() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.round(width * dpr);
+        canvas.height = Math.round(height * dpr);
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        particles = [];
+        const cols = width < 768 ? 18 : 30;
+        const rows = width < 768 ? 16 : 22;
+        const cellW = width / cols;
+        const cellH = height / rows;
+
+        for (let r = 0; r < rows; r++) {
+          for (let c = 0; c < cols; c++) {
+            const idx = r * cols + c + 1;
+            const jitterX = (seededRand(idx * 3.1) - 0.5) * cellW * 0.85;
+            const jitterY = (seededRand(idx * 7.7) - 0.5) * cellH * 0.85;
+            particles.push({
+              baseX: (c + 0.5) * cellW + jitterX,
+              baseY: (r + 0.5) * cellH + jitterY,
+              size: 2.1 + seededRand(idx * 5.3) * 2.4,
+              seed: seededRand(idx * 19.9),
+              color: colors[idx % colors.length],
+              scale: 0.35
+            });
+          }
+        }
+      }
+
+      buildParticles();
+      window.addEventListener('resize', buildParticles, { passive: true });
+
+      window.addEventListener('mousemove', (e) => {
+        pointerActive = true;
+        targetX = e.clientX;
+        targetY = e.clientY;
+      }, { passive: true });
+
+      window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          pointerActive = true;
+          targetX = e.touches[0].clientX;
+          targetY = e.touches[0].clientY;
+        }
+      }, { passive: true });
+
+      function renderGlobalField() {
+        time += 0.016;
+
+        if (!pointerActive) {
+          targetX = width * 0.5 + Math.cos(time * 0.45) * (width * 0.25);
+          targetY = height * 0.48 + Math.sin(time * 0.6) * (height * 0.2);
+        }
+
+        ringX += (targetX - ringX) * 0.065;
+        ringY += (targetY - ringY) * 0.065;
+
+        ctx.clearRect(0, 0, width, height);
+
+        const ringRadius = Math.min(width, height) * (0.22 + Math.sin(time * 1.1) * 0.03 + Math.cos(time * 2.7) * 0.018);
+        const ringBand = Math.min(width, height) * 0.14;
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          const waveX = Math.sin(p.baseY * 0.018 + time * 1.3 + p.seed * 6) * 6.5;
+          const waveY = Math.cos(p.baseX * 0.018 + time * 1.05 + p.seed * 6) * 6.5;
+          const curX = p.baseX + waveX;
+          const curY = p.baseY + waveY;
+
+          const dx = curX - ringX;
+          const dy = curY - ringY;
+          const dist = Math.hypot(dx, dy) || 0.001;
+
+          const ringDelta = Math.abs(dist - ringRadius);
+          const ringBoost = Math.max(0, 1 - ringDelta / ringBand);
+          const innerBoost = Math.max(0, 1 - dist / (ringRadius * 1.45));
+          const ambientNoise = (Math.sin(curX * 0.01 + curY * 0.01 + time * 0.8 + p.seed * 10) + 1) * 0.22;
+
+          const targetScale = 0.28 + ringBoost * ringBoost * 1.65 + innerBoost * 0.35 + ambientNoise * 0.35;
+          p.scale += (targetScale - p.scale) * 0.18;
+
+          const push = ringBoost * ringBoost * 24;
+          const drawX = curX + (dx / dist) * push;
+          const drawY = curY + (dy / dist) * push;
+
+          const angle = Math.atan2(dy, dx) + Math.sin(time * 0.85 + p.seed * 8) * 0.28;
+          const pillW = p.size * (1.25 + p.scale * 2.1);
+          const pillH = Math.max(1.5, p.size * (0.48 + p.scale * 0.38));
+          const alpha = Math.min(0.92, 0.16 + p.scale * 0.55);
+
+          ctx.save();
+          ctx.translate(drawX, drawY);
+          ctx.rotate(angle);
+          ctx.fillStyle = p.color;
+          ctx.globalAlpha = alpha;
+          ctx.beginPath();
+          if (ctx.roundRect) {
+            ctx.roundRect(-pillW * 0.5, -pillH * 0.5, pillW, pillH, pillH * 0.5);
+          } else {
+            ctx.rect(-pillW * 0.5, -pillH * 0.5, pillW, pillH);
+          }
+          ctx.fill();
+          ctx.restore();
+        }
+
+        requestAnimationFrame(renderGlobalField);
+      }
+
+      renderGlobalField();
+    }
+
+    // =========================================================================
+    // 2. ANTIGRAVITY MARKETER INTERACTIVE CARDS (3D TILT + CURSOR CANVAS)
+    // =========================================================================
+    function initAntigravityInteractiveCards() {
+      const cards = document.querySelectorAll('[data-feature-interactive-card]');
+      if (!cards.length) return;
+
+      cards.forEach((card, cardIdx) => {
+        if (card.dataset.cardInteractiveInit === 'true') return;
+        card.dataset.cardInteractiveInit = 'true';
+
+        const canvas = card.querySelector('[data-feature-canvas]');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        const variant = card.dataset.bgVariant || 'aurora-ribbons';
+        let w = card.clientWidth || 360;
+        let h = card.clientHeight || 460;
+        let dpr = Math.min(window.devicePixelRatio || 1, 2);
+        let hovered = false;
+        let targetX = w * 0.58;
+        let targetY = h * 0.32;
+        let curX = targetX;
+        let curY = targetY;
+        let time = cardIdx * 11.7 + 3.5;
+        let boids = [];
+
+        function rand(seed) {
+          const v = Math.sin(seed * 12.9898 + cardIdx * 78.233) * 43758.5453;
+          return v - Math.floor(v);
+        }
+
+        function seedEntities() {
+          boids = [];
+          const stageH = h * 0.78;
+          if (variant === 'flocking-boids') {
+            const cellW = w / 6;
+            const cellH = stageH / 4;
+            for (let r = 0; r < 4; r++) {
+              for (let c = 0; c < 6; c++) {
+                const id = r * 6 + c + 1;
+                const ang = rand(id * 31.7) * Math.PI * 2;
+                boids.push({
+                  x: (c + 0.5) * cellW + (rand(id * 4.3) - 0.5) * cellW * 0.65,
+                  y: (r + 0.5) * cellH + (rand(id * 9.1) - 0.5) * cellH * 0.65,
+                  angle: ang,
+                  seed: rand(id * 41.9),
+                  colorIdx: id % 3
+                });
+              }
+            }
+          }
+        }
+
+        function resizeCardCanvas() {
+          const rect = card.getBoundingClientRect();
+          w = Math.max(rect.width, 260);
+          h = Math.max(rect.height, 340);
+          dpr = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = Math.round(w * dpr);
+          canvas.height = Math.round(h * dpr);
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          if (!hovered) {
+            targetX = w * 0.58;
+            targetY = h * 0.32;
+          }
+          seedEntities();
+        }
+
+        resizeCardCanvas();
+        new ResizeObserver(resizeCardCanvas).observe(card);
+
+        function updatePointer(clientX, clientY) {
+          const rect = card.getBoundingClientRect();
+          const x = Math.max(0, Math.min(rect.width, clientX - rect.left));
+          const y = Math.max(0, Math.min(rect.height, clientY - rect.top));
+          targetX = x;
+          targetY = y;
+          const dx = (x / rect.width - 0.5) * 2;
+          const dy = (y / rect.height - 0.5) * 2;
+          card.style.setProperty('--mouse-x', `${x.toFixed(1)}px`);
+          card.style.setProperty('--mouse-y', `${y.toFixed(1)}px`);
+          card.style.setProperty('--dx', dx.toFixed(3));
+          card.style.setProperty('--dy', dy.toFixed(3));
+          card.style.setProperty('--rx', `${(-dy * 3.4).toFixed(2)}deg`);
+          card.style.setProperty('--ry', `${(dx * 4.0).toFixed(2)}deg`);
+        }
+
+        card.addEventListener('mouseenter', (e) => { hovered = true; updatePointer(e.clientX, e.clientY); });
+        card.addEventListener('mousemove', (e) => { hovered = true; updatePointer(e.clientX, e.clientY); });
+        card.addEventListener('mouseleave', () => {
+          hovered = false;
+          card.style.setProperty('--dx', '0');
+          card.style.setProperty('--dy', '0');
+          card.style.setProperty('--rx', '0deg');
+          card.style.setProperty('--ry', '0deg');
+        });
+        card.addEventListener('touchmove', (e) => {
+          if (e.touches.length > 0) {
+            hovered = true;
+            updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+          }
+        }, { passive: true });
+        card.addEventListener('touchend', () => { hovered = false; });
+
+        function drawAuroraRibbons() {
+          const palette = ['#2dd4bf', '#38bdf8', '#818cf8', '#34d399', '#60a5fa', '#a78bfa', '#5eead4'];
+          for (let r = 0; r < 7; r++) {
+            const baseY = h * (0.12 + r * 0.08);
+            ctx.beginPath();
+            for (let x = 0; x <= w; x += 8) {
+              const dx = x - curX;
+              const dy = baseY - curY;
+              const pull = Math.max(0, 1 - Math.hypot(dx, dy) / 170);
+              const wave1 = Math.sin(x * 0.015 + time * (1.2 + r * 0.15) + r) * 18;
+              const wave2 = Math.cos(x * 0.032 - time * 0.9 + r * 2.1) * 9;
+              const bend = (curY - baseY) * pull * 0.48 + Math.sin(x * 0.06 - time * 3) * pull * 12;
+              const y = baseY + wave1 + wave2 + bend;
+              if (x === 0) ctx.moveTo(x, y);
+              else ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = palette[r % palette.length];
+            ctx.lineWidth = 1.8;
+            ctx.globalAlpha = 0.32 + (hovered ? 0.26 : 0.08);
+            ctx.stroke();
+
+            const dotX = (curX + r * 42 + time * 35) % (w - 20) + 10;
+            const boost = Math.max(0, 1 - Math.abs(dotX - curX) / 140);
+            const dotY = baseY + Math.sin(dotX * 0.015 + time * (1.2 + r * 0.15) + r) * 18 + Math.cos(dotX * 0.032 - time * 0.9 + r * 2.1) * 9 + (curY - baseY) * boost * 0.48;
+            ctx.fillStyle = '#ccfbf1';
+            ctx.globalAlpha = 0.48 + boost * 0.52;
+            ctx.beginPath();
+            ctx.arc(dotX, dotY, 2.2 + boost * 2, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function drawFlockingBoids() {
+          const stageH = h * 0.78;
+          const colors = ['#c084fc', '#fb7185', '#38bdf8'];
+          for (let i = 0; i < boids.length; i++) {
+            const b = boids[i];
+            let sepX = 0, sepY = 0, alignSin = 0, alignCos = 0, neighbors = 0;
+            for (let j = 0; j < boids.length; j++) {
+              if (i === j) continue;
+              const o = boids[j];
+              let dx = b.x - o.x;
+              let dy = b.y - o.y;
+              const dist = Math.hypot(dx, dy) || 0.001;
+              if (dist < 74) {
+                const f = (74 - dist) / 74;
+                sepX += (dx / dist) * f * 2.4;
+                sepY += (dy / dist) * f * 2.4;
+              } else if (dist < 125) {
+                alignCos += Math.cos(o.angle);
+                alignSin += Math.sin(o.angle);
+                neighbors++;
+              }
+            }
+            const flow = Math.sin(b.x * 0.01 + time * 0.45 + b.seed * 4) * Math.cos(b.y * 0.012 + time * 0.35) * Math.PI;
+            let vx = Math.cos(b.angle) * 1.2 + Math.cos(flow) * 0.35 + sepX;
+            let vy = Math.sin(b.angle) * 1.2 + Math.sin(flow) * 0.35 + sepY;
+            if (neighbors > 0) {
+              vx += (alignCos / neighbors) * 0.25;
+              vy += (alignSin / neighbors) * 0.25;
+            }
+            const toCurX = curX - b.x;
+            const toCurY = curY - b.y;
+            const distCur = Math.hypot(toCurX, toCurY) || 1;
+            if (distCur < 155) {
+              const orbitAng = Math.atan2(toCurY, toCurX) + Math.PI * 0.58;
+              const repel = distCur < 78 ? -((78 - distCur) / 78) * 1.6 : 0;
+              const swirl = (1 - distCur / 155) * 0.95;
+              vx += Math.cos(orbitAng) * swirl + (toCurX / distCur) * repel;
+              vy += Math.sin(orbitAng) * swirl + (toCurY / distCur) * repel;
+            }
+            let diff = Math.atan2(vy, vx) - b.angle;
+            while (diff > Math.PI) diff -= Math.PI * 2;
+            while (diff < -Math.PI) diff += Math.PI * 2;
+            b.angle += diff * 0.08;
+            const speed = 1.05 + Math.max(0, 1 - distCur / 160) * 0.65;
+            b.x += Math.cos(b.angle) * speed;
+            b.y += Math.sin(b.angle) * speed;
+            if (b.x < -16) b.x = w + 16;
+            if (b.x > w + 16) b.x = -16;
+            if (b.y < -16) b.y = stageH + 16;
+            if (b.y > stageH + 16) b.y = -16;
+
+            const boost = Math.max(0, 1 - distCur / 165);
+            const sz = 4.4 + boost * 2.2;
+            ctx.save();
+            ctx.translate(b.x, b.y);
+            ctx.rotate(b.angle);
+            ctx.strokeStyle = colors[b.colorIdx];
+            ctx.lineWidth = 1.4;
+            ctx.globalAlpha = 0.22 + boost * 0.45;
+            ctx.beginPath();
+            ctx.moveTo(-sz * 3.1, 0);
+            ctx.lineTo(-sz, 0);
+            ctx.stroke();
+            ctx.fillStyle = boost > 0.45 ? '#f3e8ff' : colors[b.colorIdx];
+            ctx.globalAlpha = 0.48 + boost * 0.52;
+            ctx.beginPath();
+            ctx.moveTo(sz * 1.3, 0);
+            ctx.lineTo(-sz, -sz * 0.72);
+            ctx.lineTo(-sz * 0.55, 0);
+            ctx.lineTo(-sz, sz * 0.72);
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+          }
+        }
+
+        function drawPendulumHarmonograph() {
+          const cx = w * 0.56 + (curX - w * 0.56) * 0.28;
+          const cy = h * 0.30 + (curY - h * 0.30) * 0.28;
+          const rx = w * 0.36;
+          const ry = h * 0.22;
+          const freqX = 2 + (curX / w) * 1.5;
+          const freqY = 3 + (curY / h) * 1.5;
+          const cols = ['#fb923c', '#fbbf24', '#f87171'];
+          for (let s = 0; s < 3; s++) {
+            ctx.beginPath();
+            const scale = 1 - s * 0.16;
+            for (let step = 0; step <= 150; step++) {
+              const t = (step / 150) * Math.PI * 2;
+              const px = cx + Math.sin(t * freqX + time * 0.7 + s * 0.5) * rx * scale;
+              const py = cy + Math.cos(t * freqY - time * 0.5 + s * 0.8) * ry * scale;
+              if (step === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+            ctx.strokeStyle = cols[s];
+            ctx.lineWidth = s === 0 ? 1.8 : 1.2;
+            ctx.globalAlpha = 0.28 + (2 - s) * 0.12 + (hovered ? 0.18 : 0);
+            ctx.stroke();
+
+            const nodeT = time * 1.1 + s * 2.1;
+            const nx = cx + Math.sin(nodeT * freqX + time * 0.7 + s * 0.5) * rx * scale;
+            const ny = cy + Math.cos(nodeT * freqY - time * 0.5 + s * 0.8) * ry * scale;
+            ctx.fillStyle = '#ffedd5';
+            ctx.globalAlpha = 0.9;
+            ctx.beginPath();
+            ctx.arc(nx, ny, 3.1, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function drawOrbitalRadar() {
+          const baseX = w * 0.62;
+          const baseY = h * 0.30;
+          const cx = baseX + (curX - baseX) * 0.42;
+          const cy = baseY + (curY - baseY) * 0.42;
+          const radii = [44, 82, 122, 162];
+          const aim = Math.atan2(curY - cy, curX - cx) + time * 0.55;
+          radii.forEach((rad, idx) => {
+            const f = (idx + 1) * 0.08;
+            const rx = cx + (curX - cx) * f;
+            const ry = cy + (curY - cy) * f;
+            ctx.save();
+            ctx.translate(rx, ry);
+            ctx.rotate(time * (idx % 2 === 0 ? 0.22 : -0.18));
+            ctx.strokeStyle = idx % 2 === 0 ? '#f59e0b' : '#fb923c';
+            ctx.lineWidth = idx === 1 ? 1.5 : 1;
+            ctx.globalAlpha = 0.2 + (hovered ? 0.16 : 0.05);
+            if (idx % 2 === 1) ctx.setLineDash([6, 8]);
+            ctx.beginPath();
+            ctx.arc(0, 0, rad, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.strokeStyle = '#fcd34d';
+            ctx.lineWidth = 2.2;
+            ctx.globalAlpha = 0.45 + (hovered ? 0.35 : 0.1);
+            ctx.beginPath();
+            ctx.arc(0, 0, rad, aim + idx * 0.7, aim + idx * 0.7 + 0.85);
+            ctx.stroke();
+            const orbAng = aim * (1.2 - idx * 0.2) + idx * 1.9;
+            ctx.fillStyle = '#fde68a';
+            ctx.globalAlpha = 0.88;
+            ctx.beginPath();
+            ctx.arc(Math.cos(orbAng) * rad, Math.sin(orbAng) * rad, 3.2, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.restore();
+          });
+        }
+
+        function drawDnaHelix() {
+          const maxX = w - 24;
+          const cy = h * 0.28 + (curY - h * 0.28) * 0.28;
+          for (let n = 0; n < 18; n++) {
+            const ratio = n / 17;
+            const x = 24 + ratio * (maxX - 24);
+            const boost = Math.max(0, 1 - Math.abs(x - curX) / 140);
+            const phase = ratio * Math.PI * 3.2 + time * 1.8 + boost * 0.9;
+            const amp = 34 + boost * 22;
+            const y1 = cy + Math.sin(phase) * amp;
+            const y2 = cy - Math.sin(phase) * amp;
+            const depth = Math.cos(phase);
+            ctx.strokeStyle = boost > 0.3 ? '#34d399' : '#38bdf8';
+            ctx.lineWidth = 1.2 + boost;
+            ctx.globalAlpha = 0.24 + boost * 0.45;
+            ctx.beginPath();
+            ctx.moveTo(x, y1);
+            ctx.lineTo(x, y2);
+            ctx.stroke();
+
+            ctx.fillStyle = '#38bdf8';
+            ctx.globalAlpha = 0.45 + (depth + 1) * 0.25 + boost * 0.25;
+            ctx.beginPath();
+            ctx.arc(x, y1, 2.6 + (depth + 1) * 1.1 + boost * 1.5, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.fillStyle = '#a78bfa';
+            ctx.globalAlpha = 0.45 + (-depth + 1) * 0.25 + boost * 0.25;
+            ctx.beginPath();
+            ctx.arc(x, y2, 2.6 + (-depth + 1) * 1.1 + boost * 1.5, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        function tickCard() {
+          time += 0.016;
+          if (!hovered) {
+            targetX = w * 0.54 + Math.cos(time * 0.65 + cardIdx) * (w * 0.22);
+            targetY = h * 0.28 + Math.sin(time * 0.9 + cardIdx * 1.7) * (h * 0.14);
+            card.style.setProperty('--mouse-x', `${targetX.toFixed(1)}px`);
+            card.style.setProperty('--mouse-y', `${targetY.toFixed(1)}px`);
+          }
+          curX += (targetX - curX) * (hovered ? 0.16 : 0.06);
+          curY += (targetY - curY) * (hovered ? 0.16 : 0.06);
+
+          ctx.clearRect(0, 0, w, h);
+          if (variant === 'aurora-ribbons') drawAuroraRibbons();
+          else if (variant === 'flocking-boids') drawFlockingBoids();
+          else if (variant === 'pendulum-harmonograph') drawPendulumHarmonograph();
+          else if (variant === 'orbital-radar') drawOrbitalRadar();
+          else if (variant === 'dna-helix') drawDnaHelix();
+          else drawAuroraRibbons();
+
+          requestAnimationFrame(tickCard);
+        }
+
+        tickCard();
+      });
+    }
+
+    // Initialize 3D Vortex, Coverflow, Parallax, and Antigravity Effects on load
     document.addEventListener('DOMContentLoaded', () => {
+      initAntigravityGlobalParticleField();
+      initAntigravityInteractiveCards();
       build3DVortex();
       updateVortex();
       initIndexReelSlider();
