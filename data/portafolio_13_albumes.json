@@ -1,6 +1,6 @@
 {
   "domain": "https://captoora.studio",
-  "updated_at": "2026-11-07",
+  "updated_at": "2026-11-08",
   "total_albums": 13,
   "total_curated_photos": 41,
   "categories": [
@@ -101,10 +101,10 @@
       "category_label": "Familia & Niños",
       "location": "Monterrey, N.L.",
       "gear": "Retrato Espontáneo · Luz Natural",
-      "cover": "assets/media_jpg/pf-0032.jpg",
+      "cover": "assets/media_jpg/pf-peloni7-01.jpg",
       "photos": [
-        "assets/media_jpg/pf-0032.jpg",
-        "assets/media_jpg/pf-0041.jpg"
+        "assets/media_jpg/pf-peloni7-01.jpg",
+        "assets/media_jpg/pf-peloni7-02.jpg"
       ]
     },
     {
@@ -146,10 +146,10 @@
       "category_label": "Familia & Niños",
       "location": "Monterrey, N.L.",
       "gear": "Óptica de Retrato · Piel Real",
-      "cover": "assets/media_jpg/pf-0867.jpg",
+      "cover": "assets/media_jpg/pf-peloni8-01.jpg",
       "photos": [
-        "assets/media_jpg/pf-0867.jpg",
-        "assets/media_jpg/pf-0912.jpg"
+        "assets/media_jpg/pf-peloni8-01.jpg",
+        "assets/media_jpg/pf-peloni8-02.jpg"
       ]
     },
     {
@@ -161,11 +161,10 @@
       "category_label": "Eventos & Celebraciones",
       "location": "Monterrey, N.L.",
       "gear": "Iluminación Cálida · Retrato Familiar",
-      "cover": "assets/media_jpg/pf-1027.jpg",
+      "cover": "assets/media_jpg/pf-mama64-01.jpg",
       "photos": [
-        "assets/media_jpg/pf-1027.jpg",
-        "assets/media_jpg/pf-1042.jpg",
-        "assets/media_jpg/pf-1062.jpg"
+        "assets/media_jpg/pf-mama64-01.jpg",
+        "assets/media_jpg/pf-mama64-02.jpg"
       ]
     },
     {
