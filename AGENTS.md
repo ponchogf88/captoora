@@ -25,6 +25,12 @@ Cualquier agente que trabaje en Captoora debe consultar obligatoriamente:
    - Si una copia cae en un disco local, se borra cuando el peso en la nube coincida.
    - Solo se conservan dos archivos, ambos en la nube: la original cruda en Drive (`lic.jagf87@gmail.com`) y la edición final en Pixieset.
    - No instalar Google Drive de escritorio: replica otra vez los archivos en la computadora.
+9. **POLÍTICA INQUEBRANTABLE DE CERO ELIMINACIÓN (`ZERO DELETE POLICY`):**
+   - **Jamás borrar ni eliminar archivos del proyecto.** Si cualquier script, reporte, CSV, prototipo o activo se retira para limpiar u ordenar el repositorio o la nube, se debe mover íntegro a **`historico_y_archivos/`** y registrarse en `historico_y_archivos/INDICE_ARCHIVO_HISTORICO.md`.
+10. **ARQUITECTURA MULTI-EQUIPO (`MacBook Pro 256GB` ↔ `iMac 2015`):**
+   - **MacBook Pro (`/Users/user` · 256 GB):** Consola ligera y web (`captoora.studio`).
+   - **iMac 2015 (`/Users/imac` · SSD Externo + HDD Interno):** Estación de carga pesada + extracción diaria de video vía ADB (`Xiaomi Redmi Note 8` `160305c5` + Artemis + Cámara **Eufy S350** 24/7).
+   - Todos los scripts deben usar `scripts/captoora_paths.py` (nunca rutas fijas a `/Users/user` ni `/Users/imac`).
 
 ---
 

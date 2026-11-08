@@ -12,12 +12,14 @@ import glob
 import zipfile
 import subprocess
 
+HOME_DIR = os.path.expanduser("~")
 WATCH_DIRS = [
-    "/Users/imac/Downloads",
-    "/Users/imac/Desktop/Projects/PHOTOGRAFY - PHOTOOKIS APP"
+    os.path.join(HOME_DIR, "Downloads"),
+    os.path.join(HOME_DIR, "Desktop/Projects/CAPTOORA.STUDIO"),
+    os.path.join(HOME_DIR, "Desktop/Projects/PHOTOGRAFY - PHOTOOKIS APP")
 ]
 
-WORKSPACE = "/Users/imac/Desktop/Projects/PHOTOGRAFY - PHOTOOKIS APP"
+WORKSPACE = os.path.join(HOME_DIR, "Desktop/Projects/CAPTOORA.STUDIO")
 OUTPUT_DIR = os.path.join(WORKSPACE, "Entrega_Pharmacy_Event_130926")
 
 def check_for_event_files():
