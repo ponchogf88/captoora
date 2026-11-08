@@ -1082,8 +1082,325 @@
     }
 
     /* ==========================================================================
-       SECTION: PAQUETES DE ESTUDIO (ANTIGRAVITY INTERACTIVE CANVAS CARDS)
+       SECTION: SISTEMA PLANETARIO DE 6 SUBMARCAS (GROK / PERPLEXITY CRYSTAL ORBS)
        ========================================================================== */
+    .constellation-section {
+      position: relative;
+      margin: 40px 0 130px;
+      padding: 64px 36px;
+      border-radius: 36px;
+      background: radial-gradient(ellipse at 50% 45%, rgba(16, 24, 48, 0.55) 0%, rgba(5, 7, 14, 0.88) 72%, rgba(2, 3, 7, 0.96) 100%);
+      border: 1px solid rgba(113, 137, 255, 0.22);
+      box-shadow: 0 35px 90px rgba(0, 0, 0, 0.92), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .constellation-header {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 36px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .constellation-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .orb-ctrl-pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .orb-ctrl-pill:hover, .orb-ctrl-pill.active {
+      background: rgba(113, 137, 255, 0.18);
+      border-color: #7189ff;
+      color: #fff;
+    }
+
+    .constellation-layout {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      z-index: 5;
+    }
+
+    @media (max-width: 1100px) {
+      .constellation-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ESCENARIO ORBITAL ASTROLABIO */
+    .orbital-astrolabe-stage {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .astrolabe-svg-rings {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* ESFERA DE CRISTAL (GROK VOICE ORB + PERPLEXITY TITANIUM CORE) */
+    .crystal-orb-node {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 6;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), filter 0.35s;
+      text-decoration: none;
+    }
+
+    .crystal-orb-node:hover,
+    .crystal-orb-node.active-planet {
+      z-index: 12;
+    }
+
+    .crystal-orb-sphere {
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.18) 0%, rgba(8, 12, 24, 0.88) 55%, #020308 100%);
+      box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.9),
+        0 0 32px var(--orb-glow, rgba(113, 137, 255, 0.45)),
+        inset 0 2px 6px rgba(255, 255, 255, 0.55),
+        inset 0 -10px 24px var(--orb-inner, rgba(113, 137, 255, 0.45));
+      border: 1.5px solid rgba(255, 255, 255, 0.28);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s, border-color 0.35s;
+    }
+
+    .crystal-orb-node.sun-node .crystal-orb-sphere {
+      width: 148px;
+      height: 148px;
+      --orb-glow: rgba(204, 255, 0, 0.42);
+      --orb-inner: rgba(0, 212, 255, 0.45);
+      border-color: rgba(255, 255, 255, 0.48);
+    }
+
+    .crystal-orb-node.planet-node .crystal-orb-sphere {
+      width: 98px;
+      height: 98px;
+    }
+
+    .crystal-orb-node:hover .crystal-orb-sphere,
+    .crystal-orb-node.active-planet .crystal-orb-sphere {
+      transform: scale(1.14);
+      border-color: #ffffff;
+      box-shadow:
+        0 22px 55px rgba(0, 0, 0, 0.95),
+        0 0 52px var(--orb-glow, rgba(113, 137, 255, 0.85)),
+        inset 0 3px 10px rgba(255, 255, 255, 0.85),
+        inset 0 -12px 28px var(--orb-inner, rgba(113, 137, 255, 0.75));
+    }
+
+    /* Nebulosa / Galaxia viva dentro del cristal */
+    .orb-galaxy-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 50%;
+    }
+
+    /* Refracción especular de esfera de cristal líquido */
+    .orb-glass-refraction {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      background:
+        radial-gradient(ellipse 68% 42% at 32% 20%, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.08) 48%, transparent 75%),
+        radial-gradient(circle at 72% 80%, var(--orb-inner, rgba(113, 137, 255, 0.4)) 0%, transparent 55%);
+      box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.22);
+    }
+
+    /* Vector de Titanio cepillado flotando en el núcleo del cristal */
+    .orb-titanium-vector {
+      position: relative;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.35));
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .crystal-orb-node:hover .orb-titanium-vector,
+    .crystal-orb-node.active-planet .orb-titanium-vector {
+      transform: scale(1.1) rotate(-4deg);
+    }
+
+    .orb-label-tag {
+      margin-top: 10px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(5, 8, 16, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(10px);
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #f8fafc;
+      white-space: nowrap;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.75);
+      transition: border-color 0.25s, color 0.25s, transform 0.25s;
+    }
+
+    .crystal-orb-node:hover .orb-label-tag,
+    .crystal-orb-node.active-planet .orb-label-tag {
+      border-color: var(--orb-accent, #7189ff);
+      color: #ffffff;
+      transform: translateY(2px);
+    }
+
+    /* PANEL INSPECTOR DE PLANETA / SUBMARCA SELECCIONADA */
+    .planet-hud-inspector {
+      background: linear-gradient(160deg, rgba(12, 17, 32, 0.92) 0%, rgba(6, 9, 18, 0.96) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      padding: 34px 30px;
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.88), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .planet-hud-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .planet-hud-title {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .planet-hud-desc {
+      font-size: 15px;
+      line-height: 1.68;
+      color: #cbd5e1;
+    }
+
+    .planet-hud-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 16px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .planet-metric-box span {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .planet-metric-box strong {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      color: #fff;
+    }
+
+    .planet-hud-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .planet-hud-bullets li {
+      font-size: 13px;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .planet-hud-cta {
+      margin-top: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 14px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #030712;
+      background: var(--lime);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      transition: transform 0.2s, filter 0.2s;
+    }
+    .planet-hud-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.1);
+    }
+
+    @media (max-width: 768px) {
+      .constellation-section { padding: 36px 16px; }
+      .crystal-orb-node.sun-node .crystal-orb-sphere { width: 104px; height: 104px; }
+      .crystal-orb-node.planet-node .crystal-orb-sphere { width: 70px; height: 70px; }
+      .orb-label-tag { font-size: 9px; padding: 3px 8px; }
+    }
     .packages-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
@@ -1784,6 +2101,11 @@
     </div>
 
     <div class="nav-actions">
+      <!-- SISTEMA PLANETARIO DE 6 SUBMARCAS -->
+      <a href="#constelacion-submarcas" class="nav-pill-btn" style="background: rgba(113, 137, 255, 0.14); color: #a5b4fc; border: 1px solid rgba(113, 137, 255, 0.48); box-shadow: 0 0 16px rgba(113, 137, 255, 0.25);" title="Explorar las 6 submarcas de Captoora como planetas de cristal">
+        <span>🪐 6 SUBMARCAS</span>
+      </a>
+
       <!-- CAPTOORA BIOMETRICS LAB LINK -->
       <a href="captoora_biometrics.html" class="nav-pill-btn" style="background: rgba(0, 240, 255, 0.12); color: var(--cyan); border: 1px solid rgba(0, 240, 255, 0.45); box-shadow: 0 0 16px rgba(0, 240, 255, 0.25);" title="Ver experiencia interactiva Captoora Biometrics">
         <span>✦ BIOMETRICS</span>
@@ -2329,6 +2651,221 @@
           </div>
         </div>
       </div>
+
+      <!-- ====================================================================
+           SISTEMA PLANETARIO DE 6 SUBMARCAS (ORBES DE CRISTAL & TITANIO)
+           ==================================================================== -->
+      <section class="constellation-section" id="constelacion-submarcas">
+        <!-- SVG Defs para el acabado de Titanio Cepillado 3D -->
+        <svg width="0" height="0" style="position:absolute; pointer-events:none;" aria-hidden="true">
+          <defs>
+            <linearGradient id="titanium-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="28%" stop-color="#e2e8f0"/>
+              <stop offset="52%" stop-color="#64748b"/>
+              <stop offset="78%" stop-color="#f8fafc"/>
+              <stop offset="100%" stop-color="#94a3b8"/>
+            </linearGradient>
+            <linearGradient id="titanium-rim" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#475569"/>
+              <stop offset="50%" stop-color="#ffffff"/>
+              <stop offset="100%" stop-color="#94a3b8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <div class="constellation-header">
+          <div class="sec-kicker">Constelación Oficial // Orbes de Cristal &amp; Vector de Titanio</div>
+          <h3 class="sec-title">El Universo Captoora: 6 Submarcas en Órbita</h3>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.65; margin-top: 10px;">
+            Captoora es el Sol central y alrededor orbitan en simetría armónica nuestras 6 identidades especializadas. Pasa el cursor o toca cualquier orbe de cristal para inspeccionar su núcleo de titanio, o haz doble clic para viajar directo a su página.
+          </p>
+          <div class="constellation-controls">
+            <button type="button" class="orb-ctrl-pill active" id="btn-toggle-orbit" onclick="toggleConstellationOrbit()">
+              ⟳ Órbita Armónica: Activa
+            </button>
+            <a href="captoora_hub.html" class="orb-ctrl-pill">
+              ⊞ Ver Vista Command Hub →
+            </a>
+          </div>
+        </div>
+
+        <div class="constellation-layout">
+          <!-- ASTROLABIO INTERACTIVO CON SOL + 6 ORBES DE CRISTAL -->
+          <div class="orbital-astrolabe-stage" id="orbital-astrolabe-stage">
+            <svg class="astrolabe-svg-rings" viewBox="0 0 680 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Anillos de precisión estética -->
+              <circle cx="340" cy="340" r="118" stroke="rgba(113, 137, 255, 0.16)" stroke-width="1" stroke-dasharray="3 6"/>
+              <circle cx="340" cy="340" r="236" stroke="rgba(113, 137, 255, 0.28)" stroke-width="1.2"/>
+              <circle cx="340" cy="340" r="248" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" stroke-dasharray="2 10"/>
+              <!-- Ejes de simetría hexagonal -->
+              <line x1="340" y1="72" x2="340" y2="608" stroke="rgba(113, 137, 255, 0.08)" stroke-width="1"/>
+              <line x1="108" y1="206" x2="572" y2="474" stroke="rgba(113, 137, 255, 0.08)" stroke-width="1"/>
+              <line x1="108" y1="474" x2="572" y2="206" stroke="rgba(113, 137, 255, 0.08)" stroke-width="1"/>
+              <!-- Rayo de conexión activa entre el Sol y el Planeta seleccionado -->
+              <line id="active-orbital-beam" x1="340" y1="340" x2="340" y2="104" stroke="url(#titanium-grad)" stroke-width="1.8" stroke-dasharray="4 4" opacity="0.75"/>
+            </svg>
+
+            <!-- SOL CENTRAL: CAPTOORA MASTER CORE -->
+            <div class="crystal-orb-node sun-node" style="left: 50%; top: 50%; transform: translate(-50%, -50%);" onclick="selectPlanetOrb(0)" title="Sol Central: Captoora Master Studio">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="sun"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Lente Diafragma Captoora + Núcleo Estelar -->
+                  <svg width="68" height="68" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="42" stroke="url(#titanium-grad)" stroke-width="3.2"/>
+                    <circle cx="50" cy="50" r="31" stroke="url(#titanium-rim)" stroke-width="1.6" stroke-dasharray="5 3"/>
+                    <polygon points="50,18 61,39 82,50 61,61 50,82 39,61 18,50 39,39" fill="url(#titanium-grad)" opacity="0.22" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <circle cx="50" cy="50" r="14" stroke="url(#titanium-grad)" stroke-width="2.5" fill="rgba(4,8,18,0.65)"/>
+                    <circle cx="50" cy="50" r="4.5" fill="#CCFF00"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag" style="border-color: rgba(204, 255, 0, 0.55); color: var(--lime);">
+                ☀ CAPTOOR<span style="color:#fff;">A</span> CORE
+              </div>
+            </div>
+
+            <!-- PLANETA 01: CAPTOORA STUDIO 3D -->
+            <div class="crystal-orb-node planet-node active-planet" data-planet-idx="0" style="--orb-glow: rgba(245, 158, 11, 0.55); --orb-inner: rgba(245, 158, 11, 0.55); --orb-accent: #f59e0b;" onmouseenter="selectPlanetOrb(0)" onclick="handlePlanetClick(event, 0)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="amber"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Lente Prime 50mm f/1.2 -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <circle cx="32" cy="32" r="24" stroke="url(#titanium-grad)" stroke-width="2.6"/>
+                    <circle cx="32" cy="32" r="15" stroke="url(#titanium-rim)" stroke-width="2"/>
+                    <line x1="32" y1="8" x2="38" y2="20" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <line x1="53" y1="20" x2="43" y2="28" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <line x1="53" y1="44" x2="40" y2="41" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <line x1="32" y1="56" x2="26" y2="44" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <line x1="11" y1="44" x2="21" y2="36" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <line x1="11" y1="20" x2="24" y2="23" stroke="url(#titanium-grad)" stroke-width="1.8"/>
+                    <circle cx="32" cy="32" r="5" fill="url(#titanium-grad)"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">01 · STUDIO 3D</div>
+            </div>
+
+            <!-- PLANETA 02: CAPTOORA SIGNATURE -->
+            <div class="crystal-orb-node planet-node" data-planet-idx="1" style="--orb-glow: rgba(212, 175, 55, 0.55); --orb-inner: rgba(212, 175, 55, 0.55); --orb-accent: #d4af37;" onmouseenter="selectPlanetOrb(1)" onclick="handlePlanetClick(event, 1)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="gold"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Diamante / Estrella Haute Couture -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <polygon points="32,8 52,24 32,56 12,24" stroke="url(#titanium-grad)" stroke-width="2.5" fill="rgba(255,255,255,0.08)"/>
+                    <polyline points="12,24 32,30 52,24" stroke="url(#titanium-rim)" stroke-width="1.8"/>
+                    <line x1="32" y1="8" x2="32" y2="56" stroke="url(#titanium-grad)" stroke-width="1.6"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">02 · SIGNATURE</div>
+            </div>
+
+            <!-- PLANETA 03: CAPTOORA BIOMETRICS -->
+            <div class="crystal-orb-node planet-node" data-planet-idx="2" style="--orb-glow: rgba(0, 240, 255, 0.58); --orb-inner: rgba(0, 240, 255, 0.58); --orb-accent: #00f0ff;" onmouseenter="selectPlanetOrb(2)" onclick="handlePlanetClick(event, 2)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="cyan"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Escáner Volumétrico Biométrico -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <ellipse cx="32" cy="32" rx="24" ry="11" transform="rotate(30 32 32)" stroke="url(#titanium-grad)" stroke-width="2.2"/>
+                    <ellipse cx="32" cy="32" rx="24" ry="11" transform="rotate(-30 32 32)" stroke="url(#titanium-rim)" stroke-width="2.2"/>
+                    <circle cx="32" cy="32" r="6" fill="url(#titanium-grad)"/>
+                    <circle cx="32" cy="32" r="20" stroke="url(#titanium-grad)" stroke-width="1.2" stroke-dasharray="3 4"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">03 · BIOMETRICS</div>
+            </div>
+
+            <!-- PLANETA 04: CAPTOORA CORP -->
+            <div class="crystal-orb-node planet-node" data-planet-idx="3" style="--orb-glow: rgba(113, 137, 255, 0.58); --orb-inner: rgba(148, 163, 184, 0.55); --orb-accent: #7189ff;" onmouseenter="selectPlanetOrb(3)" onclick="handlePlanetClick(event, 3)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="titanium"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Cubo / Monolito Ejecutivo Aeroespacial -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <polygon points="32,10 52,21 52,43 32,54 12,43 12,21" stroke="url(#titanium-grad)" stroke-width="2.5" fill="rgba(255,255,255,0.07)"/>
+                    <polyline points="12,21 32,32 52,21" stroke="url(#titanium-rim)" stroke-width="2"/>
+                    <line x1="32" y1="32" x2="32" y2="54" stroke="url(#titanium-grad)" stroke-width="2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">04 · CORP</div>
+            </div>
+
+            <!-- PLANETA 05: CAPTOORA POP! -->
+            <div class="crystal-orb-node planet-node" data-planet-idx="4" style="--orb-glow: rgba(255, 0, 127, 0.58); --orb-inner: rgba(192, 132, 252, 0.55); --orb-accent: #ff007f;" onmouseenter="selectPlanetOrb(4)" onclick="handlePlanetClick(event, 4)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="magenta"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Pulso / Rayo Creador Pop -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <polygon points="36,8 16,35 31,35 27,56 48,28 33,28" stroke="url(#titanium-grad)" stroke-width="2.4" fill="url(#titanium-grad)" fill-opacity="0.25"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">05 · POP! ⚡</div>
+            </div>
+
+            <!-- PLANETA 06: CAPTOORA SEASONS & ACADEMY -->
+            <div class="crystal-orb-node planet-node" data-planet-idx="5" style="--orb-glow: rgba(16, 185, 129, 0.58); --orb-inner: rgba(204, 255, 0, 0.5); --orb-accent: #10b981;" onmouseenter="selectPlanetOrb(5)" onclick="handlePlanetClick(event, 5)">
+              <div class="crystal-orb-sphere">
+                <canvas class="orb-galaxy-canvas" data-orb-palette="emerald"></canvas>
+                <div class="orb-glass-refraction"></div>
+                <div class="orb-titanium-vector">
+                  <!-- Vector de Titanio: Estrella Polar / Brújula Óptica -->
+                  <svg width="44" height="44" viewBox="0 0 64 64" fill="none">
+                    <path d="M32 8 L37 27 L56 32 L37 37 L32 56 L27 37 L8 32 L27 27 Z" stroke="url(#titanium-grad)" stroke-width="2.4" fill="url(#titanium-grad)" fill-opacity="0.22"/>
+                    <circle cx="32" cy="32" r="5" fill="#ffffff"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="orb-label-tag">06 · SEASONS &amp; LAB</div>
+            </div>
+          </div>
+
+          <!-- PANEL INSPECTOR DERECHO: TELEMETRÍA Y PORTAL DIRECTO AL PLANETA -->
+          <div class="planet-hud-inspector" id="planet-hud-inspector">
+            <div class="planet-hud-kicker">
+              <span id="hud-planet-code">ÓRBITA 01 // 060° HEX</span>
+              <span id="hud-planet-status" style="color: var(--lime);">● ORBE ACTIVO</span>
+            </div>
+            <div class="planet-hud-title" id="hud-planet-title">Captoora Studio 3D</div>
+            <p class="planet-hud-desc" id="hud-planet-desc">
+              El corazón de producción en Colinas de San Jerónimo. Lente prime 3D interactivo con tres escenarios profesionales: Ciclorama Sinfín, Luz de Autor y Parque Privado Contiguo.
+            </p>
+            <div class="planet-hud-metrics">
+              <div class="planet-metric-box">
+                <span>Especialidad</span>
+                <strong id="hud-planet-spec">Editorial · Estudio · Renta</strong>
+              </div>
+              <div class="planet-metric-box">
+                <span>Núcleo de Cristal</span>
+                <strong id="hud-planet-core">Titanio Nikkor 50mm f/1.2</strong>
+              </div>
+            </div>
+            <ul class="planet-hud-bullets" id="hud-planet-bullets">
+              <li>✦ Sesiones guiadas de autor y Combo Studio + Clips 4K</li>
+              <li>✦ Renta de estudio por hora con luces Godox y C-Stands</li>
+              <li>✦ Entrega sin compresión bajo la Ley Visual Zero-Crop</li>
+            </ul>
+            <a href="captoora_studio.html" class="planet-hud-cta" id="hud-planet-cta">
+              <span id="hud-planet-cta-label">Entrar al Planeta Captoora Studio</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <!-- ====================================================================
            PAQUETES DE PRODUCCIÓN & RENTA (FLOATING BLACK GLASS)
@@ -3497,10 +4034,315 @@
       });
     }
 
+    // =========================================================================
+    // 3. CAPTOORA SOLAR SYSTEM & GROK/PERPLEXITY CRYSTAL-TITANIUM ORBS
+    // =========================================================================
+    const captooraPlanetsData = [
+      {
+        id: 0,
+        code: 'PLANETA 01 / 06 · ARQUITECTURA DE ESCENARIOS',
+        title: 'Captoora Studio 3D',
+        desc: 'Sets virtuales hiperrealistas, iluminación volumétrica dirigida y escenarios inmersivos construidos a la medida sin necesidad de locaciones físicas.',
+        spec: '16-BIT RAW · VOLUMETRIC 3D',
+        core: 'CUBO ISOMÉTRICO TITANIO',
+        color: '#2dd4bf',
+        url: 'captoora_studio.html',
+        bullets: [
+          'Scouting virtual 3D y dirección de iluminación de cine.',
+          'Integración de producto y retrato de autor en entornos imposibles.',
+          'Renderizado óptico con profundidad de campo f/1.2 real.'
+        ]
+      },
+      {
+        id: 1,
+        code: 'PLANETA 02 / 06 · RETRATO EDITORIAL & GALA',
+        title: 'Captoora Signature',
+        desc: 'Alta costura, bodas de autor, XV años y retrato editorial Fine-Art con óptica Sony GM, revelado de galería y estética cinematográfica atemporal.',
+        spec: 'FINE-ART · SONY 50MM F/1.2 GM',
+        core: 'DIAMANTE FACETADO TITANIO',
+        color: '#38bdf8',
+        url: 'captoora_signature.html',
+        bullets: [
+          'Cobertura cinematográfica 100% Full-Frame (Zero Crop).',
+          'Colorimetría de película y textura de piel orgánica sin filtros artificiales.',
+          'Entrega en galería privada encriptada + Photobook de lino italiano.'
+        ]
+      },
+      {
+        id: 2,
+        code: 'PLANETA 03 / 06 · PRECISIÓN OFICIAL & VISAS',
+        title: 'Captoora Biometrics',
+        desc: 'Fotografía biométrica de precisión milimétrica e iluminación clínica calibrada para Pasaportes, Visas Americanas, Títulos Profesionales y Cédulas.',
+        spec: 'ICAO / ISO-19794 CALIBRATED',
+        core: 'RETÍCULA BIOMÉTRICA TITANIO',
+        color: '#818cf8',
+        url: 'captoora_biometrics.html',
+        bullets: [
+          'Verificación geométrica de rostro y fondo blanco puro sin sombras.',
+          'Retoque sutil permitido por embajadas y colegios de profesionistas.',
+          'Entrega inmediata impresa en papel químico mate/brillante y archivo digital.'
+        ]
+      },
+      {
+        id: 3,
+        code: 'PLANETA 04 / 06 · PERSONAL BRANDING & B2B',
+        title: 'Captoora Corp',
+        desc: 'Imagen ejecutiva de alto nivel para directores, médicos especialistas, despachos legales, consejos de administración y campañas corporativas.',
+        spec: 'EXECUTIVE PORTRAITURE · B2B',
+        core: ' MONOLITO EJECUTIVO TITANIO',
+        color: '#f59e0b',
+        url: 'captoora_corp.html',
+        bullets: [
+          'Dirección de pose y lenguaje no verbal de liderazgo y autoridad.',
+          'Estudio móvil en tus oficinas o sesión privada en nuestro set.',
+          'Optimización para LinkedIn, prensa financiera, congresos y directorios.'
+        ]
+      },
+      {
+        id: 4,
+        code: 'PLANETA 05 / 06 · CREATIVE & VIRAL ENGINE',
+        title: 'Captoora Pop! ⚡',
+        desc: 'Laboratorio visual de alto voltaje cromático para creadores, músicos, lanzamientos de marca y campañas virales que detienen el scroll al instante.',
+        spec: 'HIGH-VOLTAGE · SOCIAL REELS',
+        core: 'PULSO ELÉCTRICO TITANIO',
+        color: '#c084fc',
+        url: 'captoora_pop.html',
+        bullets: [
+          'Dirección creativa disruptiva con geles ópticos y destellos estroboscópicos.',
+          'Formatos nativos 9:16 y 4:5 listos para pauta de alto impacto.',
+          'Estética editorial audaz diseñada para dominar feeds digitales.'
+        ]
+      },
+      {
+        id: 5,
+        code: 'PLANETA 06 / 06 · EDICIONES LIMITADAS & LAB',
+        title: 'Captoora Seasons & Lab',
+        desc: 'Sets temáticos de colección anual (Navidad Fine-Art, Día de las Madres, Graduaciones) y talleres de formación visual y dirección fotográfica.',
+        spec: 'SEASONAL DROPS · ACADEMY',
+        core: 'ESTRELLA POLAR TITANIO',
+        color: '#34d399',
+        url: 'campana_navidad_2026.html',
+        bullets: [
+          'Escenografías de autor por tiempo limitado con cupo exclusivo.',
+          'Reserva anticipada con prioridad para miembros del ecosistema Captoora.',
+          'Experiencias familiares e individuales listas para enmarcar.'
+        ]
+      }
+    ];
+
+    let activePlanetIdx = 0;
+    let constellationOrbitPlaying = true;
+    let constellationOrbitAngle = 0;
+
+    function selectPlanetOrb(idx) {
+      const data = captooraPlanetsData[idx];
+      if (!data) return;
+      activePlanetIdx = idx;
+
+      document.querySelectorAll('.planet-node').forEach((node, i) => {
+        node.classList.toggle('is-selected', i === idx);
+      });
+      document.querySelectorAll('.planet-pill-btn').forEach((pill, i) => {
+        pill.classList.toggle('active', i === idx);
+      });
+
+      const codeEl = document.getElementById('hud-planet-code');
+      const titleEl = document.getElementById('hud-planet-title');
+      const descEl = document.getElementById('hud-planet-desc');
+      const specEl = document.getElementById('hud-planet-spec');
+      const coreEl = document.getElementById('hud-planet-core');
+      const linkEl = document.getElementById('hud-planet-link');
+      const bulletsEl = document.getElementById('hud-planet-bullets');
+      const hudBox = document.getElementById('planet-hud-inspector');
+      const beamEl = document.getElementById('active-orbital-beam');
+
+      if (codeEl) {
+        codeEl.textContent = data.code;
+        codeEl.style.color = data.color;
+      }
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
+      if (specEl) specEl.textContent = data.spec;
+      if (coreEl) coreEl.textContent = data.core;
+      if (linkEl) {
+        linkEl.href = data.url;
+        linkEl.innerHTML = `Explorar ${data.title} <span>→</span>`;
+      }
+      if (bulletsEl) {
+        bulletsEl.innerHTML = data.bullets
+          .map(b => `<div class="planet-hud-bullet"><i style="background:${data.color}; box-shadow: 0 0 10px ${data.color};"></i><span>${b}</span></div>`)
+          .join('');
+      }
+      if (hudBox) {
+        hudBox.style.borderColor = `${data.color}55`;
+      }
+      if (beamEl) {
+        beamEl.setAttribute('stroke', data.color);
+      }
+    }
+
+    function handlePlanetClick(event, idx) {
+      // Si el usuario hace clic en un planeta que aún no estaba seleccionado en móvil/tablet, primero lo enfoca;
+      // si ya estaba enfocado o hace clic directo en escritorio, permite abrir su página o explorar.
+      if (activePlanetIdx !== idx) {
+        event.preventDefault();
+        selectPlanetOrb(idx);
+      }
+    }
+
+    function toggleConstellationOrbit() {
+      constellationOrbitPlaying = !constellationOrbitPlaying;
+      const btn = document.getElementById('orbit-pause-btn');
+      if (btn) {
+        btn.textContent = constellationOrbitPlaying ? '⏸ Pausar Rotación Orbital' : '▶ Reanudar Rotación Orbital';
+      }
+    }
+
+    function initCaptooraPlanetaryOrbs() {
+      const stage = document.getElementById('captoora-solar-stage');
+      if (!stage) return;
+
+      const planetNodes = Array.from(stage.querySelectorAll('.planet-node'));
+      const beamEl = document.getElementById('active-orbital-beam');
+
+      // 1. Inicializar los motores de galaxia/nebulosa de cristal dentro de cada Orbe (Sol + 6 Planetas)
+      const orbCanvases = Array.from(stage.querySelectorAll('.orb-galaxy-canvas'));
+      const orbEngines = orbCanvases.map((canvas, idx) => {
+        const ctx = canvas.getContext('2d');
+        const c1 = canvas.dataset.orbColor1 || '#38bdf8';
+        const c2 = canvas.dataset.orbColor2 || '#6366f1';
+        const c3 = canvas.dataset.orbColor3 || '#2dd4bf';
+        const w = canvas.width;
+        const h = canvas.height;
+        const stars = Array.from({ length: idx === 0 ? 34 : 22 }, (_, sIdx) => ({
+          angle: (sIdx / (idx === 0 ? 34 : 22)) * Math.PI * 2,
+          radius: (0.12 + ((sIdx * 17) % 100) / 100 * 0.36) * w,
+          speed: (0.008 + ((sIdx * 13) % 10) * 0.002) * (sIdx % 2 === 0 ? 1 : -0.8),
+          size: 0.7 + ((sIdx * 7) % 10) * 0.14,
+          phase: sIdx * 1.7
+        }));
+        return { canvas, ctx, c1, c2, c3, w, h, stars, phase: idx * 2.1 };
+      });
+
+      // Pausar rotación suavemente cuando el usuario coloca el cursor sobre un planeta para facilitar la lectura/clic
+      let hoverFreeze = false;
+      planetNodes.forEach((node) => {
+        node.addEventListener('mouseenter', () => { hoverFreeze = true; });
+        node.addEventListener('mouseleave', () => { hoverFreeze = false; });
+      });
+
+      function tickSolarSystem() {
+        // A) Actualizar rotación estética y simétrica de los 6 planetas alrededor del Sol Captoora
+        if (constellationOrbitPlaying && !hoverFreeze) {
+          constellationOrbitAngle += 0.0018;
+        }
+
+        const isMobile = window.innerWidth <= 860;
+        if (!isMobile) {
+          // Radio exactamente en el anillo áureo (250 / 720 = 34.72%)
+          const radiusPct = 34.72;
+          planetNodes.forEach((node, i) => {
+            const baseDeg = parseFloat(node.dataset.baseAngle || (i * 60));
+            const rad = (baseDeg * Math.PI) / 180 + constellationOrbitAngle;
+            const xPct = 50 + Math.cos(rad) * radiusPct;
+            const yPct = 50 + Math.sin(rad) * radiusPct;
+            node.style.left = `${xPct.toFixed(2)}%`;
+            node.style.top = `${yPct.toFixed(2)}%`;
+
+            if (i === activePlanetIdx && beamEl) {
+              const svgX = 360 + Math.cos(rad) * 250;
+              const svgY = 360 + Math.sin(rad) * 250;
+              beamEl.setAttribute('x2', svgX.toFixed(1));
+              beamEl.setAttribute('y2', svgY.toFixed(1));
+            }
+          });
+        } else {
+          planetNodes.forEach((node) => {
+            node.style.left = '';
+            node.style.top = '';
+          });
+        }
+
+        // B) Renderizar la galaxia líquida estilo Grok Voice / Perplexity Orb dentro de cada esfera de cristal
+        orbEngines.forEach((eng, idx) => {
+          const { ctx, c1, c2, c3, w, h, stars } = eng;
+          eng.phase += idx === 0 ? 0.024 : 0.019;
+          const t = eng.phase;
+          const cx = w * 0.5;
+          const cy = h * 0.5;
+
+          ctx.clearRect(0, 0, w, h);
+
+          // Nebulosa volumétrica en movimiento dentro del cristal
+          ctx.save();
+          ctx.globalCompositeOperation = 'screen';
+
+          const g1x = cx + Math.cos(t * 1.1) * (w * 0.18);
+          const g1y = cy + Math.sin(t * 0.9) * (h * 0.18);
+          const grad1 = ctx.createRadialGradient(g1x, g1y, 2, g1x, g1y, w * 0.48);
+          grad1.addColorStop(0, c1);
+          grad1.addColorStop(0.55, `${c2}66`);
+          grad1.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad1;
+          ctx.fillRect(0, 0, w, h);
+
+          const g2x = cx + Math.sin(-t * 1.35) * (w * 0.2);
+          const g2y = cy + Math.cos(-t * 1.05) * (h * 0.2);
+          const grad2 = ctx.createRadialGradient(g2x, g2y, 2, g2x, g2y, w * 0.44);
+          grad2.addColorStop(0, c3);
+          grad2.addColorStop(0.5, `${c1}55`);
+          grad2.addColorStop(1, 'transparent');
+          ctx.fillStyle = grad2;
+          ctx.fillRect(0, 0, w, h);
+
+          // Anillos de plasma acústico tipo X/Grok Voice Orb
+          for (let ring = 0; ring < 3; ring++) {
+            ctx.beginPath();
+            const baseR = w * (0.24 + ring * 0.085);
+            for (let a = 0; a <= Math.PI * 2 + 0.15; a += 0.18) {
+              const wave = Math.sin(a * (3 + ring) + t * (1.8 - ring * 0.3)) * (w * 0.032)
+                         + Math.cos(a * 2 - t * 1.4) * (w * 0.018);
+              const r = baseR + wave;
+              const px = cx + Math.cos(a) * r;
+              const py = cy + Math.sin(a) * r;
+              if (a === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.strokeStyle = ring === 0 ? c1 : ring === 1 ? c3 : c2;
+            ctx.lineWidth = idx === 0 ? 1.5 : 1.15;
+            ctx.globalAlpha = 0.38 - ring * 0.08;
+            ctx.stroke();
+          }
+
+          // Micro-constelación de polvo estelar girando alrededor del vector de titanio
+          stars.forEach((st) => {
+            st.angle += st.speed;
+            const pulse = (Math.sin(t * 2.2 + st.phase) + 1) * 0.5;
+            const sx = cx + Math.cos(st.angle) * st.radius;
+            const sy = cy + Math.sin(st.angle) * (st.radius * 0.88);
+            ctx.fillStyle = '#ffffff';
+            ctx.globalAlpha = 0.28 + pulse * 0.65;
+            ctx.beginPath();
+            ctx.arc(sx, sy, st.size * (0.7 + pulse * 0.6), 0, Math.PI * 2);
+            ctx.fill();
+          });
+
+          ctx.restore();
+        });
+
+        requestAnimationFrame(tickSolarSystem);
+      }
+
+      selectPlanetOrb(0);
+      tickSolarSystem();
+    }
+
     // Initialize 3D Vortex, Coverflow, Parallax, and Antigravity Effects on load
     document.addEventListener('DOMContentLoaded', () => {
       initAntigravityGlobalParticleField();
       initAntigravityInteractiveCards();
+      initCaptooraPlanetaryOrbs();
       build3DVortex();
       updateVortex();
       initIndexReelSlider();

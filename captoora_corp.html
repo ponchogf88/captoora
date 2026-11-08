@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA CORP · Executive & Enterprise Media Engine // SpaceX · Tesla · Grok Style</title>
+  <meta name="description" content="Captoora Corp. Producción fotográfica de escala corporativa e influencers. Infraestructura de alta velocidad en Monterrey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050608;
+      --card: #0b0d13;
+      --titanium: #e2e8f0;
+      --border: rgba(255, 255, 255, 0.12);
+      --amber-grok: #f59e0b;
+      --cyan-spacex: #00d2ff;
+      --red-tesla: #e82127;
+      --text: #f8fafc;
+      --muted: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* GLOBAL ECOSYSTEM DOCK */
+    .ecosystem-dock {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 6, 8, 0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .corp-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .corp-tag {
+      background: var(--amber-grok);
+      color: #000;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .dock-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dock-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--muted);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+    }
+
+    .dock-pill:hover, .dock-pill.active {
+      color: #000;
+      background: #fff;
+      border-color: #fff;
+      font-weight: 700;
+    }
+
+    /* MAIN CORP HERO */
+    .corp-hero {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 40px;
+      align-items: stretch;
+      min-height: calc(100vh - 70px);
+    }
+
+    /* LEFT: TELEMETRY & CONTRACT MATRIX */
+    .corp-panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .corp-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      color: var(--cyan-spacex);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .corp-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .corp-desc {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* KPI METRICS */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+      margin-bottom: 24px;
+    }
+
+    .kpi-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .kpi-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .kpi-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ENTERPRISE ACTION */
+    .btn-corp-contract {
+      background: #fff;
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-corp-contract:hover {
+      background: var(--amber-grok);
+      box-shadow: 0 0 35px rgba(245, 158, 11, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* RIGHT: CHASSIS DISPLAY (ZERO CROP) */
+    .corp-display-chassis {
+      background: #020305;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .corp-photo-frame {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .corp-photo-frame img {
+      width: 100%;
+      height: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      transition: all 0.3s ease;
+    }
+
+    .corp-telemetry-tag {
+      background: rgba(11, 13, 19, 0.9);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .corp-hero { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- GLOBAL ECOSYSTEM DOCK -->
+  <header class="ecosystem-dock">
+    <div class="corp-brand">
+      CAPTOORA <span class="corp-tag">CORP</span>
+    </div>
+
+    <nav class="dock-links">
+      <a href="index.html" class="dock-pill">✦ HUB GENERAL</a>
+      <a href="captoora_signature.html" class="dock-pill">01. SIGNATURE</a>
+      <a href="captoora_biometrics.html" class="dock-pill">02. BIOMETRICS</a>
+      <a href="captoora_corp.html" class="dock-pill active">03. CORP</a>
+      <a href="captoora_studio.html" class="dock-pill">04. STUDIO 3D</a>
+      <a href="captoora_pop.html" class="dock-pill">05. POP!</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CORP HERO -->
+  <main class="corp-hero">
+
+    <!-- PANEL EJECUTIVO -->
+    <section class="corp-panel">
+      <div>
+        <div class="corp-kicker">ENTERPRISE MEDIA INFRASTRUCTURE</div>
+        <h1 class="corp-title">Producción Masiva.<br>Velocidad Espacial.</h1>
+        <p class="corp-desc">
+          Infraestructura audiovisual para marcas, agencias y colectivos de creadoras de alto alcance. Pipeline automatizado de captura comercial, entrega en RAW 24MP en tiempo récord y facturación fiscal inmediata.
+        </p>
+
+        <!-- KPI METRICS -->
+        <div class="kpi-row">
+          <div class="kpi-item">
+            <span class="kpi-num">&lt; 24H</span>
+            <span class="kpi-label">ENTREGA DE SET</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-num">25 VIP</span>
+            <span class="kpi-label">CAPACIDAD SIMULTÁNEA</span>
+          </div>
+          <div class="kpi-item">
+            <span class="kpi-num">100%</span>
+            <span class="kpi-label">ZERO CROP FULL-FRAME</span>
+          </div>
+        </div>
+
+        <!-- SELECTOR DE CAMPAÑA -->
+        <div style="display:flex; gap:8px; margin-bottom:24px;">
+          <button class="dock-pill active" onclick="setCorpExhibit(0, this)" style="flex:1; text-align:center;">
+            CAMPAÑA FARMASI (0863)
+          </button>
+          <button class="dock-pill" onclick="setCorpExhibit(1, this)" style="flex:1; text-align:center;">
+            ESTELAR GLOWTOURS (0878)
+          </button>
+        </div>
+      </div>
+
+      <!-- CTA ENTERPRISE -->
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora,%20solicito%20cotizacion%20empresarial%20Captoora%20Corp" target="_blank" class="btn-corp-contract">
+        <span>⚡</span> CONTRATAR PRODUCCIÓN CORP
+      </a>
+    </section>
+
+    <!-- CHASIS DE EXHIBICIÓN -->
+    <div class="corp-display-chassis">
+      <div class="corp-photo-frame">
+        <img src="assets/media_jpg/pf-glow-cpt_0863.jpg" alt="Captoora Corp Enterprise Asset" id="corpPhoto">
+      </div>
+      <div class="corp-telemetry-tag">
+        <span>ESCENARIO: CICLORAMA COMERCIAL 5600K</span>
+        <span style="color:#fff;">AUDITORÍA VISUAL APROBADA</span>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const corpPhotos = [
+      'assets/media_jpg/pf-glow-cpt_0863.jpg',
+      'assets/media_jpg/pf-glow-cpt_0878.jpg'
+    ];
+
+    function setCorpExhibit(idx, btn) {
+      document.querySelectorAll('.corp-panel .dock-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const img = document.getElementById('corpPhoto');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = corpPhotos[idx];
+        img.style.opacity = '1';
+      }, 140);
+    }
+  </script>
+</body>
+</html>
