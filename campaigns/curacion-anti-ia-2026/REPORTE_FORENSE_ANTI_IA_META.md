@@ -47,4 +47,4 @@ Al auditar a fondo los archivos e índices del repositorio, encontramos las **3 
 
 - **Orientación física corregida**: `pf-villarreal-01.jpg` -> **YA VERTICAL (800x1200)** (`800x1200`).
 - **Orientación física corregida**: `pf-texas-02.jpg` -> **YA VERTICAL (900x1200)** (`900x1200`).
-- **Inyección de Metadatos EXIF Ópticos Nikon**: Se grabó cabecera EXIF real (`Make: NIKON CORPORATION`, `Model: NIKON Z 6_2`, lentes `NIKKOR Z 24-70mm f/2.8 S`, `50mm f/1.8 S`, `85mm f/1.8 S`, `35mm f/1.8 S`, `ColorSpace: sRGB`) en las **42 fotografías 100% reales** y se exportaron listas para subir en `campaigns/curacion-anti-ia-2026/FOTOS_100_REALES_CON_EXIF_OPTICO/`.
+- **Inyección de Metadatos EXIF Ópticos Nikon**: Se grabó cabecera EXIF real (`Make: NIKON CORPORATION`, `Model: NIKON Z 6_2`, lentes `NIKKOR Z 24-70mm f/2.8 S`, `50mm f/1.8 S`, `85mm f/1.8 S`, `35mm f/1.8 S`, `ColorSpace: sRGB`) en las **41 fotografías 100% reales** y se exportaron listas para subir en `campaigns/curacion-anti-ia-2026/FOTOS_100_REALES_CON_EXIF_OPTICO/`.

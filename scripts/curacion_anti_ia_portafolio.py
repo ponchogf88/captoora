@@ -514,25 +514,14 @@ REAL_OPTICAL_PHOTOS = [
     },
     {
         "file": "pf-cuba-01.jpg",
-        "album_num": 13,
-        "album_drive": "Autor & Fotografía de Calle (La Habana)",
+        "album_num": 12,
+        "album_drive": "12_Editorial_y_Viajes_Villarreal_Cuba_Texas",
         "drive_count": 310,
         "subbrand": "Captoora Signature",
-        "title": "Fotografía de Autor en La Habana — Mirada deAlfonso (Óptica Pura en Calle)",
+        "title": "Fotografía de Autor en Viaje — Mirada de Alfonso (Óptica Pura)",
         "lens": "NIKKOR Z 35mm f/1.8 S",
         "date_exif": "2025:03:14 16:18:45",
-        "export_name": "ALBUM13_AUTOR_12_HABANA_CALLE.jpg",
-    },
-    {
-        "file": "escenario-1.jpg",
-        "album_num": 13,
-        "album_drive": "Detrás de Cámaras — Captoora Studio San Jerónimo",
-        "drive_count": 310,
-        "subbrand": "Captoora Studio (Prueba Física Anti-IA)",
-        "title": "Nuestro Set Real en San Jerónimo — Flashes Godox, Octabox y Ciclorama Físico",
-        "lens": "NIKKOR Z 24-70mm f/2.8 S",
-        "date_exif": "2026:10:10 15:00:00",
-        "export_name": "ALBUM13_BTS_13_ESTUDIO_FISICO_SAN_JERONIMO.jpg",
+        "export_name": "ALBUM12_AUTOR_12_CUBA_VIAJE.jpg",
     },
 ]
 
@@ -654,20 +643,20 @@ def inject_optical_exif_and_export():
 CURATED_30_POSTS = [
     {
         "day": 1,
-        "format": "Carrusel 4:5 (Manifiesto Óptico + Detrás de Cámaras)",
+        "format": "Carrusel 4:5 (Manifiesto Óptico — 100% Portafolio Autorizado)",
         "subbrand": "Captoora Studio (Manifiesto Anti-IA)",
-        "album_ref": "Álbum 13 — Captoora Studio San Jerónimo + La Habana",
-        "files": ["escenario-1.jpg", "IG_CPT_0550_4x5.jpg", "pf-cuba-01.jpg"],
-        "hook": "Aquí no hay prompts ni piel de plástico. Hay flashes Godox reales, lentes NIKKOR y personas de verdad.",
+        "album_ref": "Álbumes 13, 03, 11 y 06 — Portafolio Autorizado en Google Drive",
+        "files": ["IG_CPT_0550_4x5.jpg", "pf-tamayo-01.jpg", "pf-chipinque-01.jpg", "pf-princis-01.jpg"],
+        "hook": "Aquí no hay prompts ni piel de plástico. Hay lentes NIKKOR, luz real y personas de verdad.",
         "caption": (
             "En una época donde la mitad de Instagram parece generada por computadora, en Captoora Studio tomamos una postura radical: volver a la física de la luz.\n\n"
-            "Desliza para ver nuestro ciclorama real en San Jerónimo, la caída natural de un octabox sobre la textura real de la piel y el grano auténtico de la calle. "
+            "Desliza para ver 4 capturas de nuestro Portafolio Autorizado: la caída natural de nuestro octabox sobre el telón físico en San Jerónimo, la hora dorada en Parque Rufino Tamayo, los pinos de Chipinque y el contraluz cálido en estudio. "
             "Cuando contratas una sesión para tu empresa, tu familia o tu marca personal, no buscas un avatar; buscas reconocerte con orgullo en cada retrato.\n\n"
-            "📍 Estudio físico en San Jerónimo y cobertura en locación en todo Monterrey y San Pedro.\n"
+            "📍 Estudio en Colinas de San Jerónimo y locaciones en todo Monterrey y San Pedro.\n"
             "📷 Disparado con Nikon Z · Óptica 50mm y 85mm f/1.8 · 0% IA.\n\n"
             "#CaptooraStudio #FotografiaReal #SinIA #FotografoMonterrey #SanPedroGarzaGarcia #RetratoEditorial #LuzReal"
         ),
-        "exif_badge": "Nikon Z 6II · 24-70mm f/2.8 S · ISO 100 · 1/160s · Flash Godox AD600",
+        "exif_badge": "Nikon Z 6II · 85mm & 50mm f/1.8 S · ISO 100 · Portafolio Autorizado",
     },
     {
         "day": 2,
@@ -1113,7 +1102,7 @@ CURATED_30_POSTS = [
             "pf-1042.jpg",
             "pf-barbie-01.jpg",
             "pf-mama65-01.jpg",
-            "escenario-1.jpg",
+            "pf-chipinque-01.jpg",
         ],
         "hook": "+2,080 fotografías reales en 13 álbumes documentados: conoce las 5 divisiones de Captoora Studio.",
         "caption": (
