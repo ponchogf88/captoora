@@ -476,10 +476,41 @@
         </div>
         <div class="voice-commands-list">
           <span class="cmd-chip">🗣️ <strong>"Toma la foto"</strong></span>
-          <span class="cmd-chip">🗣️ <strong>"Dispara ya"</strong></span>
           <span class="cmd-chip">🗣️ <strong>"Cuenta tres"</strong></span>
-          <span class="cmd-chip">🗣️ <strong>"¿Cómo salió?"</strong></span>
-          <span class="cmd-chip">🗣️ <strong>"Otra más"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Fondo borroso"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Salió oscura, arréglala"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Hay niños / acción"</strong></span>
+        </div>
+      </div>
+
+      <!-- NUEVO: PILOTO AUTOMÁTICO DE CÁMARA (CERO MENÚS: "MUÉVELE TÚ") -->
+      <div class="card" style="border-color: rgba(245, 197, 66, 0.35);">
+        <div class="card-title">
+          <span>🤖 Piloto Automático: "Muévele Tú" (Cero Menús)</span>
+          <span id="activeIntentBadge" style="color:var(--emerald); font-size:10px;">ESTUDIO FLASH</span>
+        </div>
+        <p style="font-size:12px; color:var(--muted); margin-bottom:10px;">
+          Olvídate de menús viejos de ISO, velocidad o diafragma. Dime por voz o toca qué quieres lograr y <strong>yo configuro la 7D Mark II por USB</strong>:
+        </p>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+          <button onclick="applyCameraPreset('FONDO_BORROSO')" style="font-size:12px; padding:9px 10px; justify-content:flex-start;">
+            🌸 Fondo Borroso (f/2.0)
+          </button>
+          <button onclick="applyCameraPreset('MOVIMIENTO_NINOS')" style="font-size:12px; padding:9px 10px; justify-content:flex-start;">
+            🏃‍♂️ Niños / Acción (1/800s)
+          </button>
+          <button onclick="applyCameraPreset('ESTUDIO_FLASH')" style="font-size:12px; padding:9px 10px; justify-content:flex-start;">
+            ⚡ Estudio Flash (ISO 100)
+          </button>
+          <button onclick="applyCameraPreset('POCA_LUZ')" style="font-size:12px; padding:9px 10px; justify-content:flex-start;">
+            🌙 Poca Luz / Noche
+          </button>
+          <button onclick="applyCameraPreset('MAS_LUZ_AUTO')" style="font-size:12px; padding:9px 10px; justify-content:flex-start; border-color:rgba(0,230,118,0.35);">
+            ☀️ "Salió oscura, súbele"
+          </button>
+          <button onclick="applyCameraPreset('MENOS_LUZ_AUTO')" style="font-size:12px; padding:9px 10px; justify-content:flex-start; border-color:rgba(255,42,95,0.35);">
+            🕶️ "Salió blanca, bájale"
+          </button>
         </div>
       </div>
 
@@ -495,7 +526,7 @@
           </div>
           <div class="metric-box">
             <div class="metric-label">Parámetros EXIF</div>
-            <div class="metric-val" id="metExif">ISO 200 · f/2.8 · 1/160s</div>
+            <div class="metric-val" id="metExif">ISO 100 · f/5.6 · 1/160s</div>
           </div>
           <div class="metric-box">
             <div class="metric-label">Estado de Exposición</div>
@@ -712,6 +743,26 @@
       refreshStatus();
     }
 
+    // Piloto Automático: Configura ISO, Apertura y Velocidad en la cámara sin tocar menús
+    async function applyCameraPreset(presetKey) {
+      try {
+        const res = await fetch("/api/preset", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ preset: presetKey })
+        });
+        const data = await res.json();
+        if (data.ok && data.camera_settings) {
+          const cs = data.camera_settings;
+          document.getElementById("activeIntentBadge").innerText = cs.human_intent.toUpperCase();
+          document.getElementById("metExif").innerText = `ISO ${cs.iso} · f/${cs.aperture} · ${cs.shutter}s`;
+          if (data.voice_confirm) {
+            speakFeedback(data.voice_confirm);
+          }
+        }
+      } catch (e) {}
+    }
+
     // Reconocimiento de voz continuo en español
     function toggleVoiceAssistant() {
       const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -738,10 +789,10 @@
       recognition.onstart = () => {
         voiceActive = true;
         document.getElementById("btnToggleVoice").classList.add("active");
-        document.getElementById("btnToggleVoice").innerText = "🎙️ ESCUCHANDO EN VIVO (Di: 'Toma la foto')";
+        document.getElementById("btnToggleVoice").innerText = "🎙️ ESCUCHANDO EN VIVO (Di: 'Toma la foto' o 'Fondo borroso')";
         document.getElementById("micDot").classList.add("mic-on");
         document.getElementById("micStatusText").innerText = "Micrófono: Escuchando en vivo";
-        speakFeedback("Micrófono activo en modo loba, Alfonso. Dime 'toma la foto' o 'cuenta tres' cuando estés en posición.");
+        speakFeedback("Micrófono activo en modo loba, Alfonso. Dime 'toma la foto', o dime cómo quieres la toma como 'quiero fondo borroso' o 'salió oscura' y yo le muevo a la cámara por ti.");
       };
 
       recognition.onresult = (event) => {
@@ -750,6 +801,47 @@
         document.getElementById("voiceTranscriptBox").innerHTML = `🗣️ Dijiste: <strong>"${transcript}"</strong>`;
 
         if (
+          transcript.includes("fondo borroso") ||
+          transcript.includes("retrato") ||
+          transcript.includes("bokeh")
+        ) {
+          applyCameraPreset("FONDO_BORROSO");
+        } else if (
+          transcript.includes("niños") ||
+          transcript.includes("ninos") ||
+          transcript.includes("movimiento") ||
+          transcript.includes("acción") ||
+          transcript.includes("accion") ||
+          transcript.includes("rápido")
+        ) {
+          applyCameraPreset("MOVIMIENTO_NINOS");
+        } else if (
+          transcript.includes("estudio") ||
+          transcript.includes("flash")
+        ) {
+          applyCameraPreset("ESTUDIO_FLASH");
+        } else if (
+          transcript.includes("poca luz") ||
+          transcript.includes("noche")
+        ) {
+          applyCameraPreset("POCA_LUZ");
+        } else if (
+          transcript.includes("oscura") ||
+          transcript.includes("más luz") ||
+          transcript.includes("mas luz") ||
+          transcript.includes("súbele") ||
+          transcript.includes("subele")
+        ) {
+          applyCameraPreset("MAS_LUZ_AUTO");
+        } else if (
+          transcript.includes("quemada") ||
+          transcript.includes("muy blanca") ||
+          transcript.includes("menos luz") ||
+          transcript.includes("bájale") ||
+          transcript.includes("bajale")
+        ) {
+          applyCameraPreset("MENOS_LUZ_AUTO");
+        } else if (
           transcript.includes("cuenta tres") ||
           transcript.includes("tres segundos") ||
           transcript.includes("en tres")

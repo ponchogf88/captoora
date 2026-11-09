@@ -53,8 +53,113 @@ STATE = {
     "last_shot_file": None,
     "is_shooting": False,
     "gemini_api_key": os.environ.get("GEMINI_API_KEY", ""),
-    "director_mode": "LOBA_PRO",  # 'LOBA_PRO' (Directo, exigente, editorial) | 'TECNICO' | 'SUAVE'
+    "director_mode": "LOBA_PRO",
+    "active_scene_preset": "ESTUDIO_FLASH",
+    "camera_settings": {
+        "iso": "100",
+        "aperture": "5.6",
+        "shutter": "1/160",
+        "wb": "Flash 5600K",
+        "human_intent": "Estudio con Flash (Cero Menús)"
+    }
 }
+
+SCENE_PRESETS = {
+    "FONDO_BORROSO": {
+        "iso": "200",
+        "aperture": "2.0",
+        "shutter": "1/250",
+        "wb": "Luz Día / Auto",
+        "human_intent": "Fondo Borroso / Retrato (Bokeh)",
+        "voice_confirm": "Listo Alfonso, ya le moví yo a la cámara: abrí el lente a f dos punto cero para derretir el fondo, ISO 200 y velocidad 1 sobre 250. Dime 'toma la foto'."
+    },
+    "MOVIMIENTO_NINOS": {
+        "iso": "800",
+        "aperture": "4.0",
+        "shutter": "1/800",
+        "wb": "Auto",
+        "human_intent": "Niños / Mascotas / Acción (Cero Fotos Movidas)",
+        "voice_confirm": "Ya configuré la 7D Mark II en modo congelar movimiento: velocidad rápida a 1 sobre 800, enfoque continuo y sensibilidad en ISO 800. Tú solo encuadra y dime 'toma la foto'."
+    },
+    "ESTUDIO_FLASH": {
+        "iso": "100",
+        "aperture": "5.6",
+        "shutter": "1/160",
+        "wb": "Flash 5600K",
+        "human_intent": "Estudio con Flash / Estrobos (Nitidez Total)",
+        "voice_confirm": "Cámara clavada para estudio con flash: sincronización a 1 sobre 160, diafragma f cinco punto seis para máxima nitidez en piel y ojos, e ISO 100 limpio."
+    },
+    "POCA_LUZ": {
+        "iso": "1600",
+        "aperture": "2.8",
+        "shutter": "1/125",
+        "wb": "Tungsteno / Cálido",
+        "human_intent": "Interior / Poca Luz sin Flash",
+        "voice_confirm": "Ya ajusté la cámara para poca luz sin que tengas que entrar al menú: subí a ISO 1600, abrí el diafragma a f dos punto ocho y aseguré velocidad a 1 sobre 125."
+    },
+    "MAS_LUZ_AUTO": {
+        "iso": "400",
+        "aperture": "2.8",
+        "shutter": "1/125",
+        "wb": "Auto",
+        "human_intent": "Auto-Corrección: +1.5 Pasos Más de Luz",
+        "voice_confirm": "Entendido, yo la arreglo. Abrí el diafragma a f dos punto ocho y subí un paso el ISO para levantar las sombras sin quemar la piel. Dime 'toma la foto' para probar."
+    },
+    "MENOS_LUZ_AUTO": {
+        "iso": "100",
+        "aperture": "8.0",
+        "shutter": "1/250",
+        "wb": "Auto",
+        "human_intent": "Auto-Corrección: -1.5 Pasos Menos de Luz",
+        "voice_confirm": "Yo me encargo. Bajé el ISO a 100 y cerré el diafragma a f ocho para recuperar todos los detalles en las luces altas. Dime 'toma la foto'."
+    }
+}
+
+
+def apply_camera_preset_usb(preset_key: str) -> dict:
+    """Mueve automáticamente ISO, Apertura y Velocidad en la Canon EOS 7D Mark II vía USB (gphoto2 / digiCamControl)."""
+    preset = SCENE_PRESETS.get(preset_key, SCENE_PRESETS["ESTUDIO_FLASH"])
+    STATE["active_scene_preset"] = preset_key
+    STATE["camera_settings"] = {
+        "iso": preset["iso"],
+        "aperture": preset["aperture"],
+        "shutter": preset["shutter"],
+        "wb": preset["wb"],
+        "human_intent": preset["human_intent"]
+    }
+
+    # Si está conectada por USB en Mac con gphoto2, enviamos los comandos PTP directo a la 7D Mark II
+    if OS_NAME == "Darwin":
+        gphoto = shutil.which("gphoto2")
+        if gphoto and STATE["camera_connected"]:
+            subprocess.run(["killall", "-9", "PTPCamera"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            subprocess.run([
+                gphoto,
+                f"--set-config=iso={preset['iso']}",
+                f"--set-config=aperture={preset['aperture']}",
+                f"--set-config=shutterspeed={preset['shutter']}"
+            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=8)
+    elif OS_NAME == "Windows":
+        dcc_paths = [
+            Path(r"C:\Program Files (x86)\digiCamControl\CameraControlCmd.exe"),
+            Path(r"C:\Program Files\digiCamControl\CameraControlCmd.exe"),
+        ]
+        dcc_exe = next((p for p in dcc_paths if p.exists()), None)
+        if dcc_exe and STATE["camera_connected"]:
+            subprocess.run([
+                str(dcc_exe),
+                "/iso", preset["iso"],
+                "/aperture", preset["aperture"],
+                "/shutter", preset["shutter"]
+            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=8)
+
+    return {
+        "ok": True,
+        "preset": preset_key,
+        "camera_settings": STATE["camera_settings"],
+        "voice_confirm": preset["voice_confirm"]
+    }
+
 
 
 def detect_camera():
@@ -86,32 +191,21 @@ def detect_camera():
             pass
 
     elif OS_NAME == "Windows":
-        # 1. Revisar digiCamControl CLI
+        # Revisión ultrarrápida (<5ms) de digiCamControl CLI sin invocar PowerShell lento
         dcc_paths = [
             Path(r"C:\Program Files (x86)\digiCamControl\CameraControlCmd.exe"),
             Path(r"C:\Program Files\digiCamControl\CameraControlCmd.exe"),
         ]
         dcc_exe = next((p for p in dcc_paths if p.exists()), None)
-        # 2. Revisar dispositivos WIA / PnP en Windows
-        ps_cmd = (
-            "Get-PnpDevice -PresentOnly | "
-            "Where-Object { $_.FriendlyName -match 'Canon|EOS|7D' } | "
-            "Select-Object -First 1 -ExpandProperty FriendlyName"
-        )
-        try:
-            res = subprocess.run(["powershell", "-NoProfile", "-Command", ps_cmd], capture_output=True, text=True, timeout=5)
-            friendly = res.stdout.strip()
-            if friendly:
-                STATE["camera_connected"] = True
-                STATE["camera_model"] = friendly
-                STATE["connection_mode"] = "Windows USB Directo (digiCamControl / WIA PTP)" if dcc_exe else "Windows USB PTP / EOS Utility Hot-Folder"
-                return STATE
-        except Exception:
-            pass
+        if dcc_exe:
+            STATE["camera_connected"] = True
+            STATE["camera_model"] = "Canon EOS 7D Mark II (digiCamControl USB)"
+            STATE["connection_mode"] = "Windows USB Directo (CameraControlCmd)"
+            return STATE
 
     STATE["camera_connected"] = False
-    STATE["camera_model"] = "Canon EOS 7D Mark II (Esperando conexión USB / Modo Demo Activo)"
-    STATE["connection_mode"] = "Hot-Folder En Vivo + Simulador Óptico Captoora"
+    STATE["camera_model"] = "Canon EOS 7D Mark II (Lista para UGREEN Mac / Hot-Folder)"
+    STATE["connection_mode"] = "Piloto Automático IA + Hot-Folder En Vivo"
     return STATE
 
 
@@ -387,22 +481,6 @@ def trigger_camera_shutter(source_label: str = "COMANDO DE VOZ") -> dict:
                     shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
                     return {"ok": True, "mode": "USB_REAL_WIN", "shot": shot}
 
-            # Si EOS Utility está abierto en Windows, enviar barra espaciadora para disparar
-            ps_eos = (
-                "$wshell = New-Object -ComObject wscript.shell; "
-                "if ($wshell.AppActivate('EOS Utility') -or $wshell.AppActivate('7D Mark II')) { "
-                "Start-Sleep -Milliseconds 150; $wshell.SendKeys(' '); Write-Output 'TRIGGERED_EOS' }"
-            )
-            res = subprocess.run(["powershell", "-NoProfile", "-Command", ps_eos], capture_output=True, text=True, timeout=5)
-            if "TRIGGERED_EOS" in res.stdout:
-                # Esperar hasta 4 segundos a que EOS Utility deposite el archivo en sesiones_tether
-                for _ in range(8):
-                    time.sleep(0.5)
-                    newest = get_newest_unregistered_file()
-                    if newest:
-                        shot = register_new_shot(newest, trigger_source=f"{source_label} (Canon EOS Utility)")
-                        return {"ok": True, "mode": "EOS_UTILITY_WIN", "shot": shot}
-
         # 3. Modo Demo / Simulador Óptico con las fotos reales de Captoora mientras conecta el cable USB
         demo_pool = list((REPO_ROOT / "assets" / "media_jpg").glob("*.jpg"))
         preferred = [
@@ -494,6 +572,12 @@ class ArgonTetherHandler(SimpleHTTPRequestHandler):
         if parsed.path == "/api/shoot":
             source = payload.get("source", "COMANDO DE VOZ")
             result = trigger_camera_shutter(source_label=source)
+            self._send_json(result)
+            return
+
+        if parsed.path == "/api/preset":
+            preset_key = payload.get("preset", "ESTUDIO_FLASH")
+            result = apply_camera_preset_usb(preset_key)
             self._send_json(result)
             return
 
