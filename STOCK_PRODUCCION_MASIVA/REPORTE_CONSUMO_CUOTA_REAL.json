@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-11-08T11:20:23.649865",
+  "timestamp": "2026-11-08T17:20:24.945284",
   "estado": "ACTIVO - CERO DESPERDICIO",
   "resumen_ejecutivo": "Tokens transformados en activos comerciales reales en disco duro local.",
   "archivos_creados": 16,
   "palabras_generadas": 4015,
   "tokens_consumidos_estimados": 5339,
-  "tiempo_ejecucion_segundos": 0.01,
+  "tiempo_ejecucion_segundos": 0.0,
   "desglose_por_modulo": {
     "01_SCRIPTS_LA_PEQUENA": {
       "total_guiones": 12,
