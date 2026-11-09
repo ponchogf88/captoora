@@ -17,6 +17,11 @@ Compatible con:
 
 import os
 import sys
+
+# Asegurar rutas estándar de homebrew para gphoto2 en macOS
+if "/opt/homebrew/bin" not in os.environ.get("PATH", ""):
+    os.environ["PATH"] = f"/opt/homebrew/bin:/usr/local/bin:{os.environ.get('PATH', '')}"
+
 import json
 import time
 import base64
@@ -41,26 +46,27 @@ BASE_DIR = Path(__file__).resolve().parent
 REPO_ROOT = BASE_DIR.parent
 TETHER_DIR = BASE_DIR / "sesiones_tether"
 TETHER_DIR.mkdir(parents=True, exist_ok=True)
+SERVER_START_TIME = time.time()
 
 OS_NAME = platform.system()  # 'Darwin' (macOS), 'Windows', 'Linux'
 
 STATE = {
     "camera_connected": False,
-    "camera_model": "Buscando Canon EOS 7D Mark II...",
-    "connection_mode": "Hot-Folder / Simulador Óptico",
+    "camera_model": "Desconectada",
+    "connection_mode": "Esperando cable USB",
     "os": "macOS" if OS_NAME == "Darwin" else OS_NAME,
     "shots": [],
     "last_shot_file": None,
     "is_shooting": False,
     "gemini_api_key": os.environ.get("GEMINI_API_KEY", ""),
-    "director_mode": "LOBA_PRO",
+    "director_mode": "ESTUDIO",
     "active_scene_preset": "ESTUDIO_FLASH",
     "camera_settings": {
         "iso": "100",
         "aperture": "5.6",
         "shutter": "1/160",
         "wb": "Flash 5600K",
-        "human_intent": "Estudio con Flash (Cero Menús)"
+        "human_intent": "Estudio con Flash"
     }
 }
 
@@ -171,21 +177,29 @@ def detect_camera():
         if gphoto:
             try:
                 res = subprocess.run([gphoto, "--auto-detect"], capture_output=True, text=True, timeout=5)
-                lines = [l.strip() for l in res.stdout.splitlines() if l.strip() and not l.startswith("Model") and not l.startswith("---")]
-                if lines:
+                camera_lines = [l.strip() for l in res.stdout.splitlines() if "usb:" in l]
+                if camera_lines:
                     STATE["camera_connected"] = True
-                    STATE["camera_model"] = lines[0].split("usb:")[0].strip()
-                    STATE["connection_mode"] = "macOS USB Directo (gphoto2 PTP)"
+                    parts = camera_lines[0].split("usb:")
+                    STATE["camera_model"] = parts[0].strip() or "Canon EOS 7D Mark II"
+                    STATE["connection_mode"] = f"macOS USB Directo (usb:{parts[1].strip() if len(parts) > 1 else ''})"
                     return STATE
             except Exception:
                 pass
-        # También revisamos system_profiler SPUSBDataType por si está conectada pero falta instalar gphoto2
+        # También revisamos system_profiler SPUSBHostDataType / SPUSBDataType por si está conectada
         try:
-            res = subprocess.run(["system_profiler", "SPUSBDataType"], capture_output=True, text=True, timeout=5)
-            if "Canon" in res.stdout or "7D" in res.stdout or "EOS" in res.stdout:
+            res = subprocess.run(["system_profiler", "SPUSBHostDataType"], capture_output=True, text=True, timeout=5)
+            if not res.stdout:
+                res = subprocess.run(["system_profiler", "SPUSBDataType"], capture_output=True, text=True, timeout=5)
+            if "Nikon" in res.stdout:
                 STATE["camera_connected"] = True
-                STATE["camera_model"] = "Canon EOS 7D Mark II (USB Detectado en Mac)"
-                STATE["connection_mode"] = "EOS Utility Hot-Folder / Instalar gphoto2 para Disparo Directo"
+                STATE["camera_model"] = "Nikon Digital Camera"
+                STATE["connection_mode"] = "macOS USB Directo (Nikon PTP)"
+                return STATE
+            elif "Canon" in res.stdout or "7D" in res.stdout or "EOS" in res.stdout:
+                STATE["camera_connected"] = True
+                STATE["camera_model"] = "Canon EOS 7D Mark II"
+                STATE["connection_mode"] = "macOS USB Directo"
                 return STATE
         except Exception:
             pass
@@ -204,8 +218,8 @@ def detect_camera():
             return STATE
 
     STATE["camera_connected"] = False
-    STATE["camera_model"] = "Canon EOS 7D Mark II (Lista para UGREEN Mac / Hot-Folder)"
-    STATE["connection_mode"] = "Piloto Automático IA + Hot-Folder En Vivo"
+    STATE["camera_model"] = "Desconectada"
+    STATE["connection_mode"] = "Conecta la Canon 7D Mark II vía USB"
     return STATE
 
 
@@ -439,78 +453,72 @@ def register_new_shot(img_path: Path, trigger_source: str = "VOZ / USB") -> dict
     return shot_record
 
 
-def trigger_camera_shutter(source_label: str = "COMANDO DE VOZ") -> dict:
+def trigger_camera_shutter(source_label: str = "DISPARADOR") -> dict:
     """
-    Dispara la Canon EOS 7D Mark II por USB (gphoto2 en Mac / digiCamControl o WIA en Windows).
-    Si la cámara aún no está conectada físicamente, toma una captura real del portafolio óptico
-    como simulación de estudio para probar todo el flujo de voz + análisis en vivo.
+    Dispara la Canon EOS 7D Mark II directamente por USB (gphoto2 en Mac / digiCamControl en Windows).
+    Si la cámara no está conectada físicamente por USB, reporta el estado real sin simulación.
     """
     STATE["is_shooting"] = True
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_file = TETHER_DIR / f"CAPTOORA_7DMKII_{timestamp_str}.jpg"
+    model_tag = "NIKON" if "Nikon" in STATE.get("camera_model", "") else ("CANON" if "Canon" in STATE.get("camera_model", "") else "CAM")
+    out_file = TETHER_DIR / f"CAPTOORA_{model_tag}_{timestamp_str}.jpg"
 
     try:
         detect_camera()
 
-        # 1. Intento real en macOS vía gphoto2
+        if not STATE["camera_connected"]:
+            return {
+                "ok": False,
+                "error": "Cámara no conectada por USB. Conecta la Canon o Nikon vía USB y enciéndela."
+            }
+
+        # 1. Disparo real en macOS vía gphoto2 PTP (Soporta Canon, Nikon, Sony, Fuji)
         if OS_NAME == "Darwin":
             subprocess.run(["killall", "-9", "PTPCamera"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             gphoto = shutil.which("gphoto2")
-            if gphoto and STATE["camera_connected"]:
+            if gphoto:
                 res = subprocess.run(
-                    [gphoto, "--capture-image-and-download", "--filename", str(out_file), "--force-overwrite"],
-                    capture_output=True, text=True, timeout=15
+                    [gphoto, "--capture-image-and-download", "--keep", "--filename", str(out_file), "--force-overwrite"],
+                    capture_output=True, text=True, timeout=20
                 )
                 if out_file.exists():
-                    shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
+                    shot = register_new_shot(out_file, trigger_source=f"{source_label} ({STATE['camera_model']} USB)")
                     return {"ok": True, "mode": "USB_REAL_MAC", "shot": shot}
+                else:
+                    return {
+                        "ok": False,
+                        "error": f"Fallo al capturar: {res.stderr or res.stdout or 'No se descargó imagen'}"
+                    }
 
-        # 2. Intento real en Windows vía digiCamControl CLI o EOS Utility
+        # 2. Disparo real en Windows vía digiCamControl CLI
         elif OS_NAME == "Windows":
             dcc_paths = [
                 Path(r"C:\Program Files (x86)\digiCamControl\CameraControlCmd.exe"),
                 Path(r"C:\Program Files\digiCamControl\CameraControlCmd.exe"),
             ]
             dcc_exe = next((p for p in dcc_paths if p.exists()), None)
-            if dcc_exe and STATE["camera_connected"]:
+            if dcc_exe:
                 res = subprocess.run(
                     [str(dcc_exe), "/filename", str(out_file), "/capture"],
-                    capture_output=True, text=True, timeout=15
+                    capture_output=True, text=True, timeout=20
                 )
                 if out_file.exists():
                     shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
                     return {"ok": True, "mode": "USB_REAL_WIN", "shot": shot}
+                else:
+                    return {"ok": False, "error": "Fallo al capturar con digiCamControl en Windows."}
 
-        # 3. Modo Simulador Óptico con fotos 100% reales del PORTAFOLIO AUTORIZADO
-        auth_pool_dir = BASE_DIR / "portafolio_autorizado"
-        auth_pool = list(auth_pool_dir.rglob("*.JPG")) + list(auth_pool_dir.rglob("*.jpg")) + list(auth_pool_dir.rglob("*.jpeg"))
-        
-        chosen = None
-        if auth_pool:
-            chosen = auth_pool[len(STATE["shots"]) % len(auth_pool)]
-        else:
-            # Respaldo directo a la carpeta en Desktop si existe
-            desktop_pool_dir = Path("/Users/imac/Desktop/PORTAFOLIO AUTORIZADO")
-            desktop_pool = list(desktop_pool_dir.rglob("*.JPG")) + list(desktop_pool_dir.rglob("*.jpg")) + list(desktop_pool_dir.rglob("*.jpeg"))
-            if desktop_pool:
-                chosen = desktop_pool[len(STATE["shots"]) % len(desktop_pool)]
-
-        if chosen and chosen.exists():
-            shutil.copy2(str(chosen), str(out_file))
-            shot = register_new_shot(out_file, trigger_source=f"{source_label} (Portafolio Autorizado — Conecta USB para 7D Mk II)")
-            return {"ok": True, "mode": "PORTAFOLIO_AUTORIZADO", "shot": shot}
-
-        return {"ok": False, "error": "No se encontró cámara USB conectada ni fotos en el portafolio autorizado."}
+        return {"ok": False, "error": "No se pudo disparar la cámara. Verifica conexión USB."}
     finally:
         STATE["is_shooting"] = False
 
 
 def get_newest_unregistered_file():
-    """Detecta si EOS Utility, Lightroom o Capture One acaba de guardar una foto nueva en sesiones_tether/."""
+    """Detecta si la cámara, EOS Utility o Lightroom acaba de guardar una foto NUEVA en sesiones_tether/."""
     known_names = {s["filename"] for s in STATE["shots"]}
     jpgs = sorted(TETHER_DIR.glob("*.jpg"), key=lambda p: p.stat().st_mtime, reverse=True)
     for j in jpgs:
-        if j.name not in known_names:
+        if j.name not in known_names and j.stat().st_mtime >= (SERVER_START_TIME - 2):
             return j
     return None
 
@@ -596,15 +604,52 @@ class ArgonTetherHandler(SimpleHTTPRequestHandler):
         self._send_json({"ok": False, "error": "Ruta no encontrada"}, status=404)
 
 
+def load_existing_session_shots():
+    """Carga las fotos reales de la sesión en sesiones_tether/ para preservarlas en refrescos."""
+    existing_jpgs = sorted(TETHER_DIR.glob("*.jpg"), key=lambda p: p.stat().st_mtime, reverse=True)
+    loaded = []
+    for f in existing_jpgs:
+        try:
+            telemetry = extract_optical_telemetry(f)
+            loaded.append({
+                "id": f"shot_{int(f.stat().st_mtime * 1000)}",
+                "filename": f.name,
+                "url": f"/sesiones_tether/{f.name}",
+                "trigger_source": "SESIÓN TETHER",
+                "telemetry": telemetry,
+                "voice_feedback": ""
+            })
+        except Exception:
+            pass
+    STATE["shots"] = loaded[:60]
+    if loaded:
+        STATE["last_shot_file"] = loaded[0]["filename"]
+
+
 def main():
-    port = int(os.environ.get("ARGON_PORT", "8765"))
+    port_env = os.environ.get("ARGON_PORT")
+    candidates = [int(port_env)] if port_env else [8766, 8765, 8767, 8768]
+    server = None
+    actual_port = None
+    for p in candidates:
+        try:
+            server = HTTPServer(("127.0.0.1", p), ArgonTetherHandler)
+            actual_port = p
+            break
+        except OSError:
+            continue
+
+    if not server:
+        server = HTTPServer(("127.0.0.1", 0), ArgonTetherHandler)
+        actual_port = server.server_port
+
     detect_camera()
+    load_existing_session_shots()
 
     watcher = threading.Thread(target=hot_folder_watcher_loop, daemon=True)
     watcher.start()
 
-    server = HTTPServer(("127.0.0.1", port), ArgonTetherHandler)
-    url = f"http://127.0.0.1:{port}/index.html"
+    url = f"http://127.0.0.1:{actual_port}/index.html"
     print("=" * 72)
     print("  ARGON LENS AI — ASISTENTE DE CÁMARA Y VOZ EN TIEMPO REAL")
     print(f"  Sistema Operativo : {STATE['os']}")
