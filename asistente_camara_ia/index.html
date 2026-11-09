@@ -555,24 +555,41 @@
         </div>
       </div>
 
-      <!-- NUEVO: TRADUCTOR HUMANO DE BOTONES FÍSICOS Y PANTALLITA (CANON 7D MARK II) -->
-      <div class="card" style="border-color: rgba(0, 210, 255, 0.35);">
+      <!-- ANTIMANUAL INTERACTIVO EN VIVO (ADIÓS AL INSTRUCTIVO EN BLANCO Y NEGRO) -->
+      <div class="card" style="border-color: rgba(0, 210, 255, 0.45); background: linear-gradient(160deg, #10131e 0%, #141b2d 100%);">
         <div class="card-title">
-          <span>🎛️ Traductor de Botones Físicos (Canon 7D Mk II)</span>
-          <span style="color:var(--cyan); font-size:10px;">TOCA PARA ESCUCHAR</span>
+          <span>📖 Antimanual Interactivo en Vivo (Con Ejemplo Real)</span>
+          <span style="color:var(--cyan); font-size:10px;">VE Y ESCUCHA EL CAMBIO</span>
         </div>
         <p style="font-size:12px; color:var(--muted); margin-bottom:10px;">
-          ¿Qué significan las letras raras de la pantallita de arriba y los switches del lente? Tócalos y te digo en español cómo dejarlos hoy:
+          Cero libros aburridos con letra chiquita. Toca cualquier botón y <strong>mira en la foto grande cómo cambia en vivo</strong> mientras te explico en 10 segundos:
         </p>
-        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:7px;">
+        <div id="liveExampleBanner" style="display:none; margin-bottom:10px; padding:9px 12px; border-radius:10px; background:rgba(245,197,66,0.14); border:1px solid rgba(245,197,66,0.45); font-size:12px; color:var(--gold); font-weight:700;">
+          👁️ Viendo ejemplo en vivo en el monitor principal
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:7px; margin-bottom:8px;">
+          <button onclick="explainPhysicalButton('F_BOKEH')" style="font-size:11px; padding:9px; justify-content:flex-start; border-color:rgba(245,197,66,0.4);">
+            🌸 <strong>¿Qué es el F?</strong> (Ver ejemplo)
+          </button>
+          <button onclick="explainPhysicalButton('PIEL_CANON')" style="font-size:11px; padding:9px; justify-content:flex-start; border-color:rgba(245,197,66,0.4);">
+            ✨ <strong>Piel Canon vs Nikon</strong> (Ver)
+          </button>
+          <button onclick="explainPhysicalButton('ISO_LUZ')" style="font-size:11px; padding:9px; justify-content:flex-start;">
+            ☀️ <strong>¿Qué es ISO?</strong> (Ver ejemplo)
+          </button>
+          <button onclick="explainPhysicalButton('VELOCIDAD')" style="font-size:11px; padding:9px; justify-content:flex-start;">
+            ⚡ <strong>Velocidad 1/800</strong> (Ver)
+          </button>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:6px;">
           <button onclick="explainPhysicalButton('WB')" style="font-size:11px; padding:8px; justify-content:center;">
-            🌡️ <strong>WB</strong> (Color)
+            🌡️ <strong>WB</strong>
           </button>
           <button onclick="explainPhysicalButton('DRIVE')" style="font-size:11px; padding:8px; justify-content:center;">
-            🔫 <strong>DRIVE</strong> (Ráfaga)
+            🔫 <strong>DRIVE</strong>
           </button>
           <button onclick="explainPhysicalButton('MFN')" style="font-size:11px; padding:8px; justify-content:center;">
-            🎯 <strong>M-Fn</strong> (Puntos)
+            🎯 <strong>M-Fn</strong>
           </button>
           <button onclick="explainPhysicalButton('STABILIZER')" style="font-size:11px; padding:8px; justify-content:center;">
             🫨 <strong>STABILIZER</strong>
@@ -580,8 +597,8 @@
           <button onclick="explainPhysicalButton('AFMF')" style="font-size:11px; padding:8px; justify-content:center;">
             👁️ <strong>AF / MF</strong>
           </button>
-          <button onclick="explainPhysicalButton('PIEL_CANON')" style="font-size:11px; padding:8px; justify-content:center; border-color:rgba(245,197,66,0.4);">
-            ✨ <strong>Piel Canon</strong>
+          <button onclick="explainPhysicalButton('BOTON_Q')" style="font-size:11px; padding:8px; justify-content:center;">
+            🧭 <strong>Botón Q</strong>
           </button>
         </div>
       </div>
@@ -795,15 +812,79 @@
     }
 
     function explainPhysicalButton(code) {
+      const img = document.getElementById("mainShotImage");
+      const banner = document.getElementById("liveExampleBanner");
+      img.style.transition = "filter 0.55s ease, transform 0.55s ease";
+      img.style.filter = "none";
+
       const guides = {
-        WB: "W B significa Balance de Blancos, es decir, qué tan cálida o fría sale la piel. En tu Canon 7D Mark II déjalo en A W B, que es automático, o en el ícono de rayito cuando uses flashes de estudio. Así los tonos de piel de Canon salen cremosos y perfectos sin que le muevas nada más.",
-        DRIVE: "El botón Drive controla cuántos disparos hace la cámara cuando dejas apretado el botón. Si ves un solo cuadrito en la pantallita, toma una foto por clic. Si ves varios cuadritos encimados con una H, está en modo metralleta de diez fotos por segundo.",
-        MFN: "El botón M F N que está pegadito al disparador sirve para cambiar qué cuadritos de enfoque están activos cuando miras por el visor. Si no te quieres complicar, ponlo en Zona Central para que siempre enfoque la cara que esté en medio.",
-        STABILIZER: "El switch Stabilizer en tu lente es un motorcito que quita el temblor de tus manos. Regla de oro: si tienes la cámara en la mano, déjalo siempre en ON. Si la pones en tripié fijo en el estudio, ponlo en OFF.",
-        AFMF: "El switch A F y M F del lente significa Enfoque Automático o Manual. Déjalo SIEMPRE en A F para que la cámara enfoque sola los ojos cuando presionas a la mitad el disparador. Si por accidente se mueve a M F, todas tus fotos saldrán borrosas.",
-        PIEL_CANON: "Lo que notaste hoy entre Canon y Nikon es famosísimo: la ciencia de color de Canon mete tonos cálidos rosados y durazno en la piel humana desde el sensor, por eso en retrato la piel se ve con vida y textura de revista sin siquiera editarla."
+        F_BOKEH: {
+          banner: "🌸 EJEMPLO EN VIVO: F bajo (f/1.8 - f/2.0) derrite el fondo y resalta al cliente. Ya ajusté tu cámara a f/2.0.",
+          speech: "Mira la pantalla: el número F es qué tanto se abre la pupila de tu lente. Un F chiquito como F uno punto ocho o dos punto cero derrite el fondo borroso para retrato de lujo. Un F grande como F ocho deja todo nítido para fotos de grupo. Ya puse tu cámara en F dos punto cero para retrato.",
+          filter: "contrast(1.06) saturate(1.08) drop-shadow(0 0 28px rgba(245,197,66,0.45))",
+          preset: "FONDO_BORROSO"
+        },
+        PIEL_CANON: {
+          banner: "✨ EJEMPLO EN VIVO: Ciencia de Color Retrato Canon (Tonos durazno/coral cálidos en piel vs tono frío).",
+          speech: "Mira cómo cambia el tono en pantalla: lo que descubriste hoy entre Canon y Nikon es la ciencia de color de Canon. Canon inyecta microtonos durazno y rosados en la piel humana desde el sensor, haciendo que el cliente se vea radiante sin editar. En tu 7D Mark II solo déjalo en Estilo de Imagen Retrato y Balance de Blancos A W B.",
+          filter: "sepia(0.12) saturate(1.18) brightness(1.04) contrast(1.03)"
+        },
+        ISO_LUZ: {
+          banner: "☀️ EJEMPLO EN VIVO: ISO controla la sensibilidad a la luz (ISO 100 = Piel limpia en estudio | ISO 1600 = Noche).",
+          speech: "Mira el brillo en pantalla: el ISO es el volumen de luz digital del sensor. En estudio con flashes siempre usamos ISO 100 para que la piel salga ultra limpia sin granito. Si estás en un lugar oscuro sin flash, dime 'poca luz' y yo lo subo a 1600 por ti.",
+          filter: "brightness(1.22) contrast(0.98)"
+        },
+        VELOCIDAD: {
+          banner: "⚡ EJEMPLO EN VIVO: Velocidad rápida (1/800s) congela cabellos, vestidos volando y niños sin salir movidos.",
+          speech: "La velocidad es qué tan rápido parpadea la cortina de la cámara. En uno sobre ochocientos congelas hasta el pelo volando en el aire o niños corriendo. En estudio con flash yo te la clavo automáticamente en uno sobre ciento sesenta.",
+          filter: "contrast(1.12) saturate(1.05)"
+        },
+        WB: {
+          banner: "🌡️ BOTÓN WB (Arriba junto a la pantallita): Balance de Blancos = Temperatura cálida o fría.",
+          speech: "W B significa Balance de Blancos, es decir, qué tan cálida o fría sale la piel. En tu Canon 7D Mark II déjalo en A W B en la pantallita, que es automático, o en el ícono de rayito cuando uses flashes de estudio.",
+          filter: "sepia(0.15) saturate(1.12)"
+        },
+        DRIVE: {
+          banner: "🔫 BOTÓN DRIVE (Arriba): 1 Cuadrito = 1 Foto por clic | Varios cuadritos con H = Metralleta 10 fotos/seg.",
+          speech: "El botón Drive controla cuántos disparos hace la cámara cuando dejas apretado el botón. Si ves un solo cuadrito en la pantallita, toma una foto por clic. Si ves varios cuadritos encimados con una H, está en modo metralleta de diez fotos por segundo.",
+          filter: "none"
+        },
+        MFN: {
+          banner: "🎯 BOTÓN M-Fn (Pegado al disparador): Cambia los cuadritos de enfoque dentro del visor.",
+          speech: "El botón M F N que está pegadito al disparador sirve para cambiar qué cuadritos de enfoque están activos cuando miras por el visor. Déjalo en Zona Central para que siempre enfoque la cara automáticamente.",
+          filter: "none"
+        },
+        STABILIZER: {
+          banner: "🫨 SWITCH STABILIZER (En el lente): En mano = SIEMPRE ON | En tripié fijo = OFF.",
+          speech: "El switch Stabilizer en tu lente es ungiroscopio que quita el temblor de tus manos. Regla de oro: si tienes la cámara en la mano, déjalo siempre en ON. Si la pones en tripié fijo en el estudio, ponlo en OFF.",
+          filter: "none"
+        },
+        AFMF: {
+          banner: "👁️ SWITCH AF / MF (En el lente): Déjalo SIEMPRE en AF para que enfoque solo los ojos.",
+          speech: "El switch A F y M F del lente significa Enfoque Automático o Manual. Déjalo SIEMPRE en A F. Si por accidente se mueve a M F al guardarla en la mochila, la cámara deja de enfocar sola.",
+          filter: "none"
+        },
+        BOTON_Q: {
+          banner: "🧭 BOTÓN Q (Atrás de la cámara): Tu salvavidas visual en la pantalla grande trasera.",
+          speech: "El botón con la letra Q atrás de tu Canon 7D Mark II significa Quick Control. Si lo presionas, la pantalla grande de atrás se prende y te muestra todo con dibujos grandes en lugar de usar la pantallita chiquita de arriba.",
+          filter: "none"
+        }
       };
-      speakFeedback(guides[code] || "");
+
+      const item = guides[code];
+      if (!item) return;
+
+      banner.style.display = "block";
+      banner.innerText = item.banner;
+      img.style.filter = item.filter || "none";
+      speakFeedback(item.speech);
+
+      if (item.preset) {
+        setTimeout(() => applyCameraPreset(item.preset), 400);
+      }
+      setTimeout(() => {
+        img.style.filter = "none";
+      }, 6500);
     }
 
     // Reconocimiento de voz continuo en español
