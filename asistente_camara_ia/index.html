@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARGON LENS AI — Asistente de Cámara & Director por Voz | Captoora Studio</title>
+  <style>
+    :root {
+      --bg: #07080c;
+      --panel: #10121a;
+      --panel-2: #161925;
+      --border: rgba(255, 255, 255, 0.09);
+      --gold: #f5c542;
+      --crimson: #ff2a5f;
+      --emerald: #00e676;
+      --cyan: #00d2ff;
+      --text: #f3f5fa;
+      --muted: #949ab1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top right, #171226 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    /* FLASH OVERLAY CUANDO DISPARA LA CÁMARA */
+    #shutterFlash {
+      position: fixed;
+      inset: 0;
+      background: #fff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.25s ease-out;
+    }
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      background: rgba(16, 18, 26, 0.9);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-badge {
+      background: linear-gradient(135deg, var(--crimson), #9b00e8);
+      color: #fff;
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      box-shadow: 0 0 18px rgba(255, 42, 95, 0.45);
+    }
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+    }
+    .brand h1 span {
+      color: var(--gold);
+    }
+    .status-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+    }
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px var(--gold);
+    }
+    .dot.live {
+      background: var(--emerald);
+      box-shadow: 0 0 12px var(--emerald);
+    }
+    .dot.mic-on {
+      background: var(--crimson);
+      box-shadow: 0 0 14px var(--crimson);
+      animation: pulse 1.1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+
+    /* MAIN STUDIO GRID */
+    .studio-grid {
+      display: grid;
+      grid-template-columns: 1fr 430px;
+      gap: 20px;
+      padding: 20px 24px;
+      flex: 1;
+    }
+    @media (max-width: 1100px) {
+      .studio-grid { grid-template-columns: 1fr; }
+    }
+
+    /* VIEWFINDER / MONITOR CENTRAL */
+    .monitor-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+    .monitor-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 18px;
+      background: var(--panel-2);
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    button {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: #1d2233;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 9px 16px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.18s ease;
+    }
+    button:hover {
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-1px);
+    }
+    .btn-shoot {
+      background: linear-gradient(135deg, var(--crimson), #d6004c);
+      border-color: transparent;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 20px;
+      box-shadow: 0 6px 20px rgba(255, 42, 95, 0.35);
+    }
+    .btn-voice.active {
+      background: linear-gradient(135deg, #00c853, #009624);
+      border-color: transparent;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0, 230, 118, 0.3);
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, #f5c542, #d49b15);
+      color: #090a0f;
+      border-color: transparent;
+    }
+
+    .viewport-stage {
+      position: relative;
+      flex: 1;
+      min-height: 540px;
+      background: #050609;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #mainShotImage, #liveWebcamVideo {
+      max-height: 70vh;
+      max-width: 96%;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.75);
+    }
+    #liveWebcamVideo {
+      display: none;
+    }
+    /* GUÍA ZERO-CROP 4:5 EN PANTALLA */
+    .crop-guide-4x5 {
+      position: absolute;
+      width: min(72%, 440px);
+      aspect-ratio: 4 / 5;
+      border: 2px dashed rgba(245, 197, 66, 0.55);
+      border-radius: 6px;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .countdown-overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 150px;
+      font-weight: 900;
+      color: var(--gold);
+      background: rgba(5, 6, 9, 0.55);
+      text-shadow: 0 0 40px rgba(245, 197, 66, 0.8);
+      z-index: 20;
+    }
+
+    /* TIRA DE DISPAROS RECIENTES */
+    .filmstrip {
+      display: flex;
+      gap: 10px;
+      padding: 12px 18px;
+      background: #0b0d14;
+      border-top: 1px solid var(--border);
+      overflow-x: auto;
+      min-height: 92px;
+      align-items: center;
+    }
+    .thumb-item {
+      width: 58px;
+      height: 72px;
+      border-radius: 6px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.65;
+      transition: all 0.15s ease;
+      flex-shrink: 0;
+    }
+    .thumb-item.active, .thumb-item:hover {
+      border-color: var(--gold);
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    /* PANEL LATERAL DERECHO: VOZ IA + TELEMETRÍA ÓPTICA */
+    .side-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .card-title {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* CAJA DE FEEDBACK HABLADO DE ARGON */
+    .argon-speech-box {
+      background: linear-gradient(145deg, rgba(255, 42, 95, 0.12), rgba(155, 0, 232, 0.08));
+      border: 1px solid rgba(255, 42, 95, 0.35);
+      border-radius: 14px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #fff;
+      font-weight: 500;
+      position: relative;
+    }
+    .voice-transcript {
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: var(--panel-2);
+      font-size: 12px;
+      color: var(--cyan);
+      border: 1px solid rgba(0, 210, 255, 0.2);
+    }
+    .voice-commands-list {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cmd-chip {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 5px 10px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .cmd-chip strong { color: var(--text); }
+
+    /* TELEMETRÍA EXIF Y LUZ */
+    .telemetry-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .metric-box {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .metric-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .metric-val {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .metric-val.good { color: var(--emerald); }
+    .metric-val.warn { color: var(--gold); }
+
+    /* MODAL DE CONEXIÓN UGREEN MAC / WINDOWS */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .modal-box {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      max-width: 680px;
+      width: 100%;
+      padding: 24px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-box h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+    .step-block {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      margin-bottom: 12px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    code {
+      background: #050609;
+      color: var(--emerald);
+      padding: 3px 7px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="shutterFlash"></div>
+
+  <header>
+    <div class="brand">
+      <span class="brand-badge">MODO LOBA PRO</span>
+      <h1>ARGON <span>LENS AI</span> — Canon EOS 7D Mark II Voice Director</h1>
+    </div>
+    <div class="status-bar">
+      <div class="pill">
+        <span class="dot" id="camDot"></span>
+        <span id="camStatusText">Detectando Canon EOS 7D Mark II...</span>
+      </div>
+      <div class="pill">
+        <span class="dot" id="micDot"></span>
+        <span id="micStatusText">Micrófono: En espera</span>
+      </div>
+      <button onclick="openSetupModal()" class="btn-gold">🔌 Guía UGREEN Mac & Windows</button>
+    </div>
+  </header>
+
+  <main class="studio-grid">
+    <!-- MONITOR CENTRAL -->
+    <section class="monitor-card">
+      <div class="monitor-toolbar">
+        <div class="btn-group">
+          <button id="btnToggleVoice" class="btn-voice" onclick="toggleVoiceAssistant()">
+            🎙️ Activar Voz en Tiempo Real ("Toma la foto")
+          </button>
+          <button class="btn-shoot" onclick="triggerShoot('BOTÓN ESTUDIO')">
+            📸 DISPARAR AHORA (Espacio)
+          </button>
+          <button onclick="startCountdownAndShoot(3)">
+            ⏱️ Conteo 3..2..1 + Disparo
+          </button>
+        </div>
+        <div class="btn-group">
+          <button id="btnLiveCam" onclick="toggleLiveWebcam()">
+            🎥 Espejo Live View / Webcam
+          </button>
+          <button onclick="toggleCropGuide()">
+            📐 Guía 4:5 Zero-Crop
+          </button>
+        </div>
+      </div>
+
+      <div class="viewport-stage">
+        <div id="countdownOverlay" class="countdown-overlay">3</div>
+        <img id="mainShotImage" src="../assets/media_jpg/IG_CPT_0550_4x5.jpg" alt="Última Toma en Estudio" />
+        <video id="liveWebcamVideo" autoplay playsinline muted></video>
+        <div id="cropGuide" class="crop-guide-4x5">
+          <span>▲ SAFE HEADROOM 4:5 INSTAGRAM</span>
+          <span>▼ ZERO-CROP CAPTOORA BOUNDARY</span>
+        </div>
+      </div>
+
+      <div class="filmstrip" id="filmstripContainer">
+        <!-- Miniaturas de las tomas en vivo -->
+      </div>
+    </section>
+
+    <!-- PANEL DERECHO: DIRECTOR IA + TELEMETRÍA -->
+    <aside class="side-panel">
+      <div class="card">
+        <div class="card-title">
+          <span>🔊 Dirección de Argon en Tiempo Real</span>
+          <button onclick="repeatLastVoiceFeedback()" style="padding:4px 10px; font-size:11px;">🔁 Repetir Voz</button>
+        </div>
+        <div class="argon-speech-box" id="argonSpeechText">
+          "Listo en el estudio, Alfonso. Activa el botón verde de micrófono arriba a la izquierda y dime <strong>'Argon, toma la foto'</strong> o <strong>'Cuenta tres'</strong>. En cuanto dispare la 7D Mark II, analizo luz, foco y postura y te canto los ajustes en voz alta."
+        </div>
+        <div class="voice-transcript" id="voiceTranscriptBox">
+          🎙️ Escuchando comandos: <em>Presiona "Activar Voz en Tiempo Real" para hablar conmigo manos libres.</em>
+        </div>
+        <div class="voice-commands-list">
+          <span class="cmd-chip">🗣️ <strong>"Toma la foto"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Dispara ya"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Cuenta tres"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"¿Cómo salió?"</strong></span>
+          <span class="cmd-chip">🗣️ <strong>"Otra más"</strong></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>📊 Telemetría Óptica Instantánea (7D Mark II)</span>
+          <span id="shotSourceBadge" style="color:var(--cyan); font-size:10px;">LISTO</span>
+        </div>
+        <div class="telemetry-grid">
+          <div class="metric-box">
+            <div class="metric-label">Cámara / Sensor</div>
+            <div class="metric-val" id="metCamera">Canon EOS 7D Mk II</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Parámetros EXIF</div>
+            <div class="metric-val" id="metExif">ISO 200 · f/2.8 · 1/160s</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Estado de Exposición</div>
+            <div class="metric-val good" id="metEv">CLAVADA (RANGO ÓPTIMO)</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Nitidez Óptica (Foco)</div>
+            <div class="metric-val good" id="metFocus">92% CLAVADO</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Contraste Key-to-Fill</div>
+            <div class="metric-val warn" id="metRatio">2.1:1 Editorial</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Dirección de Luz</div>
+            <div class="metric-val" id="metLightDir">Key Izquierda</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Altas Luces / Sombras</div>
+            <div class="metric-val" id="metClip">HL 0.4% · SH 1.2%</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Diagnóstico Encuadre</div>
+            <div class="metric-val good" id="metFraming">4:5 Zero-Crop OK</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>🧠 Visión IA Avanzada (Gemini 2.5 Flash Opcional)</span>
+        </div>
+        <p style="font-size:12px; color:var(--muted); margin-bottom:8px;">
+          El motor óptico local funciona al instante sin internet. Si agregas tu Gemini API Key, Argon además evalúa expresión facial, manos y vestuario en cada disparo:
+        </p>
+        <div style="display:flex; gap:8px;">
+          <input id="geminiKeyInput" type="password" placeholder="Pega tu GEMINI_API_KEY (opcional)..." style="flex:1; background:#0b0d14; border:1px solid var(--border); color:#fff; padding:8px 12px; border-radius:8px; font-size:12px;" />
+          <button onclick="saveGeminiKey()" style="padding:8px 12px; font-size:12px;">Guardar</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- MODAL DE CONEXIÓN UGREEN MAC & WINDOWS -->
+  <div class="modal-backdrop" id="setupModal">
+    <div class="modal-box">
+      <h2>🔌 Cómo conectar tu Canon EOS 7D Mark II (Mac UGREEN o Windows)</h2>
+      <div class="step-block">
+        <strong>🍎 Opción A: En tu Mac con el adaptador UGREEN (¡Súper recomendado!)</strong><br/>
+        1. Conecta el cable USB de la <strong>Canon 7D Mark II</strong> al puerto azul (USB 3.0) de tu adaptador <strong>UGREEN</strong> y enciende la cámara.<br/>
+        2. Para que Argon dispare el obturador directo por USB en Mac, abre Terminal una sola vez y corre:<br/>
+        <code>brew install gphoto2</code><br/>
+        3. Luego haz doble clic en <code>ABRIR_ASISTENTE_CAMARA_MAC.command</code>. ¡El script mata automáticamente la app "Fotos" de Mac para que no bloquee el UGREEN y toma control total de la 7D Mark II!
+      </div>
+      <div class="step-block">
+        <strong>🪟 Opción B: Aquí en Windows</strong><br/>
+        1. Conecta la <strong>Canon 7D Mark II</strong> a un puerto USB 3.0 azul.<br/>
+        2. Puedes usar <strong>Canon EOS Utility</strong> (apuntando su carpeta de descarga a <code>asistente_camara_ia/sesiones_tether</code>) o instalar <strong>digiCamControl</strong>.<br/>
+        3. Cada vez que digas <strong>"Toma la foto"</strong> o presiones el obturador físico de la cámara, Argon detecta el archivo en menos de 1 segundo, lo muestra en grande y te habla por las bocinas.
+      </div>
+      <div style="text-align:right; margin-top:14px;">
+        <button class="btn-shoot" onclick="closeSetupModal()">¡Entendido, vamos a disparar!</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let voiceActive = false;
+    let recognition = null;
+    let liveVideoStream = null;
+    let lastSpokenText = "";
+    let knownShotIds = new Set();
+    let isBusyShooting = false;
+
+    // Efecto de sonido de obturador réflex (Web Audio API sintético, cero archivos externos)
+    function playShutterSound() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(180, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(45, ctx.currentTime + 0.09);
+        gain.gain.setValueAtTime(0.6, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.09);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.09);
+      } catch (e) {}
+    }
+
+    function triggerFlashVisual() {
+      const fl = document.getElementById("shutterFlash");
+      fl.style.opacity = "0.85";
+      setTimeout(() => { fl.style.opacity = "0"; }, 180);
+    }
+
+    // Síntesis de voz en español (TTS)
+    function speakFeedback(text) {
+      if (!text) return;
+      lastSpokenText = text;
+      document.getElementById("argonSpeechText").innerHTML = `"${text}"`;
+      if (!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "es-MX";
+      utter.rate = 1.06;
+      utter.pitch = 1.0;
+      const voices = window.speechSynthesis.getVoices();
+      const esVoice = voices.find(v => v.lang.includes("es-MX") || v.lang.includes("es_MX"))
+                   || voices.find(v => v.lang.startsWith("es"));
+      if (esVoice) utter.voice = esVoice;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function repeatLastVoiceFeedback() {
+      if (lastSpokenText) speakFeedback(lastSpokenText);
+      else speakFeedback(document.getElementById("argonSpeechText").innerText);
+    }
+
+    // Conteo regresivo 3..2..1 hablado + disparo
+    function startCountdownAndShoot(seconds = 3) {
+      if (isBusyShooting) return;
+      isBusyShooting = true;
+      const overlay = document.getElementById("countdownOverlay");
+      overlay.style.display = "flex";
+      let current = seconds;
+      overlay.innerText = current;
+      speakFeedback("Tres, dos, uno...");
+
+      const timer = setInterval(() => {
+        current -= 1;
+        if (current > 0) {
+          overlay.innerText = current;
+        } else {
+          clearInterval(timer);
+          overlay.style.display = "none";
+          isBusyShooting = false;
+          triggerShoot("CONTEO DE VOZ 3-2-1");
+        }
+      }, 950);
+    }
+
+    // Disparar cámara (USB o Live Webcam si está encendida)
+    async function triggerShoot(source = "COMANDO DE VOZ") {
+      playShutterSound();
+      triggerFlashVisual();
+
+      const videoEl = document.getElementById("liveWebcamVideo");
+      if (liveVideoStream && videoEl.style.display !== "none" && videoEl.videoWidth > 0) {
+        // Capturar frame del Live View / Capturadora
+        const canvas = document.createElement("canvas");
+        canvas.width = videoEl.videoWidth;
+        canvas.height = videoEl.videoHeight;
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(videoEl, 0, 0);
+        const dataUrl = canvas.toDataURL("image/jpeg", 0.94);
+
+        try {
+          const res = await fetch("/api/webcam_shot", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ image_b64: dataUrl, source: source + " (LIVE VIEW)" })
+          });
+          const data = await res.json();
+          if (data.ok && data.shot) {
+            renderShot(data.shot, true);
+          }
+        } catch (err) {
+          console.error(err);
+        }
+        return;
+      }
+
+      // Disparo por servidor (USB Canon 7D Mark II / Simulador Óptico)
+      try {
+        const res = await fetch("/api/shoot", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ source })
+        });
+        const data = await res.json();
+        if (data.ok && data.shot) {
+          renderShot(data.shot, true);
+        }
+      } catch (err) {
+        speakFeedback("Alfonso, asegura que el servidor de Argon esté corriendo con el archivo ejecutable del asistente.");
+      }
+    }
+
+    function renderShot(shot, shouldSpeak = false) {
+      if (!shot) return;
+      knownShotIds.add(shot.id);
+      const img = document.getElementById("mainShotImage");
+      img.src = shot.url;
+
+      const t = shot.telemetry || {};
+      document.getElementById("shotSourceBadge").innerText = shot.trigger_source || "USB TETHER";
+      document.getElementById("metCamera").innerText = t.camera || "Canon EOS 7D Mark II";
+      document.getElementById("metExif").innerText = `${t.iso || "ISO 200"} · ${t.aperture || "f/2.8"} · ${t.shutter || "1/160s"}`;
+      document.getElementById("metEv").innerText = t.ev_status || "ÓPTIMA";
+      document.getElementById("metFocus").innerText = `${t.sharpness_score || 90}% (${t.focus_status || "CLAVADO"})`;
+      document.getElementById("metRatio").innerText = `${t.key_to_fill_ratio || 1.8}:1`;
+      document.getElementById("metLightDir").innerText = t.light_direction || "Centro";
+      document.getElementById("metClip").innerText = `HL ${t.highlights_clip_pct || 0}% · SH ${t.shadows_crush_pct || 0}%`;
+      document.getElementById("metFraming").innerText = t.headroom_balance || "4:5 OK";
+
+      if (shouldSpeak && shot.voice_feedback) {
+        speakFeedback(shot.voice_feedback);
+      } else if (shot.voice_feedback) {
+        document.getElementById("argonSpeechText").innerHTML = `"${shot.voice_feedback}"`;
+      }
+      refreshStatus();
+    }
+
+    // Reconocimiento de voz continuo en español
+    function toggleVoiceAssistant() {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) {
+        alert("Abre este estudio en Google Chrome o Microsoft Edge para usar el reconocimiento de voz en tiempo real.");
+        return;
+      }
+
+      if (voiceActive && recognition) {
+        voiceActive = false;
+        recognition.stop();
+        document.getElementById("btnToggleVoice").classList.remove("active");
+        document.getElementById("btnToggleVoice").innerText = '🎙️ Activar Voz en Tiempo Real ("Toma la foto")';
+        document.getElementById("micDot").classList.remove("mic-on");
+        document.getElementById("micStatusText").innerText = "Micrófono: Pausado";
+        return;
+      }
+
+      recognition = new SpeechRec();
+      recognition.lang = "es-MX";
+      recognition.continuous = true;
+      recognition.interimResults = false;
+
+      recognition.onstart = () => {
+        voiceActive = true;
+        document.getElementById("btnToggleVoice").classList.add("active");
+        document.getElementById("btnToggleVoice").innerText = "🎙️ ESCUCHANDO EN VIVO (Di: 'Toma la foto')";
+        document.getElementById("micDot").classList.add("mic-on");
+        document.getElementById("micStatusText").innerText = "Micrófono: Escuchando en vivo";
+        speakFeedback("Micrófono activo en modo loba, Alfonso. Dime 'toma la foto' o 'cuenta tres' cuando estés en posición.");
+      };
+
+      recognition.onresult = (event) => {
+        const lastResult = event.results[event.results.length - 1];
+        const transcript = lastResult[0].transcript.trim().toLowerCase();
+        document.getElementById("voiceTranscriptBox").innerHTML = `🗣️ Dijiste: <strong>"${transcript}"</strong>`;
+
+        if (
+          transcript.includes("cuenta tres") ||
+          transcript.includes("tres segundos") ||
+          transcript.includes("en tres")
+        ) {
+          startCountdownAndShoot(3);
+        } else if (
+          transcript.includes("toma la foto") ||
+          transcript.includes("tómala") ||
+          transcript.includes("tomala") ||
+          transcript.includes("dispara") ||
+          transcript.includes("saca la foto") ||
+          transcript.includes("otra más") ||
+          transcript.includes("otra foto") ||
+          transcript.includes("foto ya")
+        ) {
+          triggerShoot(`VOZ: "${transcript.toUpperCase()}"`);
+        } else if (
+          transcript.includes("cómo salió") ||
+          transcript.includes("como salio") ||
+          transcript.includes("analiza") ||
+          transcript.includes("repite")
+        ) {
+          repeatLastVoiceFeedback();
+        }
+      };
+
+      recognition.onend = () => {
+        if (voiceActive) {
+          try { recognition.start(); } catch (e) {}
+        }
+      };
+
+      recognition.start();
+    }
+
+    // Espejo Live View / Webcam / EOS Webcam Utility
+    async function toggleLiveWebcam() {
+      const videoEl = document.getElementById("liveWebcamVideo");
+      const imgEl = document.getElementById("mainShotImage");
+      const btn = document.getElementById("btnLiveCam");
+
+      if (liveVideoStream) {
+        liveVideoStream.getTracks().forEach(t => t.stop());
+        liveVideoStream = null;
+        videoEl.style.display = "none";
+        imgEl.style.display = "block";
+        btn.innerText = "🎥 Espejo Live View / Webcam";
+        return;
+      }
+
+      try {
+        liveVideoStream = await navigator.mediaDevices.getUserMedia({
+          video: { width: { ideal: 1920 }, height: { ideal: 1080 } },
+          audio: false
+        });
+        videoEl.srcObject = liveVideoStream;
+        videoEl.style.display = "block";
+        imgEl.style.display = "none";
+        btn.innerText = "⏹️ Salir de Live View";
+        speakFeedback("Espejo en vivo activado. Colócate dentro del marco dorado cuatro por cinco y dime 'toma la foto'.");
+      } catch (err) {
+        alert("No se detectó cámara de video/webcam activa. Puedes disparar por USB directo con tu Canon 7D Mark II.");
+      }
+    }
+
+    function toggleCropGuide() {
+      const g = document.getElementById("cropGuide");
+      g.style.display = g.style.display === "none" ? "flex" : "none";
+    }
+
+    async function saveGeminiKey() {
+      const key = document.getElementById("geminiKeyInput").value.trim();
+      await fetch("/api/config", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ gemini_api_key: key })
+      });
+      speakFeedback("Llave de visión artificial guardada. Ahora analizaré también expresión, postura y manos en cada disparo.");
+    }
+
+    function openSetupModal() { document.getElementById("setupModal").style.display = "flex"; }
+    function closeSetupModal() { document.getElementById("setupModal").style.display = "none"; }
+
+    // Sincronización periódica con el servidor para detectar cuando conectas la 7D Mark II o disparas desde la cámara
+    async function refreshStatus() {
+      try {
+        const res = await fetch("/api/status");
+        const st = await res.json();
+        const dot = document.getElementById("camDot");
+        const txt = document.getElementById("camStatusText");
+        txt.innerText = `${st.camera_model} (${st.os})`;
+        if (st.camera_connected) dot.classList.add("live");
+        else dot.classList.remove("live");
+
+        if (st.shots && st.shots.length > 0) {
+          const newest = st.shots[0];
+          if (!knownShotIds.has(newest.id)) {
+            renderShot(newest, true);
+          }
+          // Renderizar tira de miniaturas
+          const strip = document.getElementById("filmstripContainer");
+          strip.innerHTML = st.shots.map((s, idx) => `
+            <img src="${s.url}" class="thumb-item ${idx === 0 ? 'active' : ''}"
+                 title="${s.filename} (${s.telemetry?.iso || ''})"
+                 onclick='selectShotFromStrip(${JSON.stringify(s).replace(/'/g, "&#39;")})' />
+          `).join("");
+        }
+      } catch (e) {}
+    }
+
+    function selectShotFromStrip(shotObj) {
+      const videoEl = document.getElementById("liveWebcamVideo");
+      const imgEl = document.getElementById("mainShotImage");
+      if (liveVideoStream) {
+        videoEl.style.display = "none";
+        imgEl.style.display = "block";
+      }
+      renderShot(shotObj, false);
+    }
+
+    // Atajo de teclado: Barra espaciadora para disparar
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space" && document.activeElement.tagName !== "INPUT") {
+        e.preventDefault();
+        triggerShoot("BARRA ESPACIADORA");
+      }
+    });
+
+    setInterval(refreshStatus, 1800);
+    refreshStatus();
+  </script>
+</body>
+</html>

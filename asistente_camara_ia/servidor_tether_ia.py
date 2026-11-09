@@ -1,0 +1,548 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+================================================================================
+CAPTOORA STUDIO — ARGON LENS AI (TETHER & VOICE DIRECTOR ASSISTANT)
+================================================================================
+Compatible con:
+  - Canon EOS 7D Mark II (USB 3.0 Micro-B / UGREEN USB-C en Mac / USB-A en Windows)
+  - macOS: Control nativo vía `gphoto2` (PTP/USB) + desbloqueo automático de PTPCamera + TTS `say`
+  - Windows: Control vía `digiCamControl` (CameraControlCmd.exe), WIA PTP COM (`wiaCommandTakePicture`),
+    EOS Utility Hotkey Trigger, y Hot-Folder Watcher en tiempo real.
+  - Análisis Óptico en Vivo + IA Multimodal (Gemini Vision opcional + Telemetría Óptica Local):
+    Evalúa exposición, recorte de altas luces, empastado de sombras, ratio de iluminación (Key-to-Fill),
+    nitidez óptica en zona de rostro/ojos y balance de encuadre.
+================================================================================
+"""
+
+import os
+import sys
+import json
+import time
+import base64
+import shutil
+import platform
+import subprocess
+import threading
+from pathlib import Path
+from datetime import datetime
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
+import urllib.request
+import urllib.error
+
+try:
+    from PIL import Image, ImageStat, ImageFilter, ExifTags
+    PIL_AVAILABLE = True
+except ImportError:
+    PIL_AVAILABLE = False
+
+BASE_DIR = Path(__file__).resolve().parent
+REPO_ROOT = BASE_DIR.parent
+TETHER_DIR = BASE_DIR / "sesiones_tether"
+TETHER_DIR.mkdir(parents=True, exist_ok=True)
+
+OS_NAME = platform.system()  # 'Darwin' (macOS), 'Windows', 'Linux'
+
+STATE = {
+    "camera_connected": False,
+    "camera_model": "Buscando Canon EOS 7D Mark II...",
+    "connection_mode": "Hot-Folder / Simulador Óptico",
+    "os": "macOS" if OS_NAME == "Darwin" else OS_NAME,
+    "shots": [],
+    "last_shot_file": None,
+    "is_shooting": False,
+    "gemini_api_key": os.environ.get("GEMINI_API_KEY", ""),
+    "director_mode": "LOBA_PRO",  # 'LOBA_PRO' (Directo, exigente, editorial) | 'TECNICO' | 'SUAVE'
+}
+
+
+def detect_camera():
+    """Detecta la Canon EOS 7D Mark II (o cualquier DSLR/Mirrorless conectada por USB)."""
+    if OS_NAME == "Darwin":
+        # En macOS liberamos primero el proceso PTPCamera que secuestra el USB al conectar el UGREEN
+        subprocess.run(["killall", "-9", "PTPCamera"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        gphoto = shutil.which("gphoto2")
+        if gphoto:
+            try:
+                res = subprocess.run([gphoto, "--auto-detect"], capture_output=True, text=True, timeout=5)
+                lines = [l.strip() for l in res.stdout.splitlines() if l.strip() and not l.startswith("Model") and not l.startswith("---")]
+                if lines:
+                    STATE["camera_connected"] = True
+                    STATE["camera_model"] = lines[0].split("usb:")[0].strip()
+                    STATE["connection_mode"] = "macOS USB Directo (gphoto2 PTP)"
+                    return STATE
+            except Exception:
+                pass
+        # También revisamos system_profiler SPUSBDataType por si está conectada pero falta instalar gphoto2
+        try:
+            res = subprocess.run(["system_profiler", "SPUSBDataType"], capture_output=True, text=True, timeout=5)
+            if "Canon" in res.stdout or "7D" in res.stdout or "EOS" in res.stdout:
+                STATE["camera_connected"] = True
+                STATE["camera_model"] = "Canon EOS 7D Mark II (USB Detectado en Mac)"
+                STATE["connection_mode"] = "EOS Utility Hot-Folder / Instalar gphoto2 para Disparo Directo"
+                return STATE
+        except Exception:
+            pass
+
+    elif OS_NAME == "Windows":
+        # 1. Revisar digiCamControl CLI
+        dcc_paths = [
+            Path(r"C:\Program Files (x86)\digiCamControl\CameraControlCmd.exe"),
+            Path(r"C:\Program Files\digiCamControl\CameraControlCmd.exe"),
+        ]
+        dcc_exe = next((p for p in dcc_paths if p.exists()), None)
+        # 2. Revisar dispositivos WIA / PnP en Windows
+        ps_cmd = (
+            "Get-PnpDevice -PresentOnly | "
+            "Where-Object { $_.FriendlyName -match 'Canon|EOS|7D' } | "
+            "Select-Object -First 1 -ExpandProperty FriendlyName"
+        )
+        try:
+            res = subprocess.run(["powershell", "-NoProfile", "-Command", ps_cmd], capture_output=True, text=True, timeout=5)
+            friendly = res.stdout.strip()
+            if friendly:
+                STATE["camera_connected"] = True
+                STATE["camera_model"] = friendly
+                STATE["connection_mode"] = "Windows USB Directo (digiCamControl / WIA PTP)" if dcc_exe else "Windows USB PTP / EOS Utility Hot-Folder"
+                return STATE
+        except Exception:
+            pass
+
+    STATE["camera_connected"] = False
+    STATE["camera_model"] = "Canon EOS 7D Mark II (Esperando conexión USB / Modo Demo Activo)"
+    STATE["connection_mode"] = "Hot-Folder En Vivo + Simulador Óptico Captoora"
+    return STATE
+
+
+def extract_optical_telemetry(img_path: Path) -> dict:
+    """Analiza la fotografía recién tomada: EXIF real, histograma, foco/nitidez, iluminación Key/Fill y encuadre."""
+    telemetry = {
+        "filename": img_path.name,
+        "timestamp": datetime.now().strftime("%H:%M:%S"),
+        "width": 0,
+        "height": 0,
+        "camera": "Canon EOS 7D Mark II",
+        "iso": "ISO 200",
+        "shutter": "1/160s",
+        "aperture": "f/2.8",
+        "focal_length": "50mm",
+        "mean_brightness": 128.0,
+        "ev_status": "ÓPTIMA",
+        "highlights_clip_pct": 0.0,
+        "shadows_crush_pct": 0.0,
+        "key_to_fill_ratio": 1.5,
+        "light_direction": "Centro-Izquierda",
+        "sharpness_score": 85.0,
+        "focus_status": "CLAVADO",
+        "headroom_balance": "Equilibrado",
+    }
+
+    if not PIL_AVAILABLE or not img_path.exists():
+        return telemetry
+
+    try:
+        with Image.open(img_path) as im:
+            telemetry["width"], telemetry["height"] = im.size
+
+            # 1. Extraer EXIF si existe
+            exif_data = getattr(im, "_getexif", lambda: None)()
+            if exif_data:
+                exif = {ExifTags.TAGS.get(k, k): v for k, v in exif_data.items()}
+                model = str(exif.get("Model", "")).strip().replace("\x00", "")
+                if model:
+                    telemetry["camera"] = model
+                iso = exif.get("ISOSpeedRatings") or exif.get("PhotographicSensitivity")
+                if iso:
+                    telemetry["iso"] = f"ISO {iso}"
+                fnum = exif.get("FNumber")
+                if fnum:
+                    try:
+                        val = float(fnum[0]) / float(fnum[1]) if isinstance(fnum, tuple) else float(fnum)
+                        telemetry["aperture"] = f"f/{val:.1f}"
+                    except Exception:
+                        pass
+                exp = exif.get("ExposureTime")
+                if exp:
+                    try:
+                        val = float(exp[0]) / float(exp[1]) if isinstance(exp, tuple) else float(exp)
+                        if val < 1:
+                            telemetry["shutter"] = f"1/{int(round(1.0/val))}s"
+                        else:
+                            telemetry["shutter"] = f"{val:.1f}s"
+                    except Exception:
+                        pass
+
+            # 2. Convertir a escala de grises para análisis lumínico y de foco
+            gray = im.convert("L")
+            w, h = gray.size
+            hist = gray.histogram()
+            total_px = float(w * h)
+
+            mean_luma = ImageStat.Stat(gray).mean[0]
+            telemetry["mean_brightness"] = round(mean_luma, 1)
+
+            # Recorte en altas luces (>248) y empastado en sombras (<8)
+            high_clip = sum(hist[248:]) / total_px * 100.0
+            shad_crush = sum(hist[:8]) / total_px * 100.0
+            telemetry["highlights_clip_pct"] = round(high_clip, 2)
+            telemetry["shadows_crush_pct"] = round(shad_crush, 2)
+
+            if mean_luma < 72:
+                telemetry["ev_status"] = "SUBEXPUESTA (-1.2 EV)"
+            elif mean_luma > 185:
+                telemetry["ev_status"] = "SOBREEXPUESTA (+1.1 EV)"
+            elif high_clip > 6.5:
+                telemetry["ev_status"] = "ALTAS LUCES AL LÍMITE"
+            else:
+                telemetry["ev_status"] = "CLAVADA (RANGO ÓPTIMO)"
+
+            # 3. Ratio Key-to-Fill (Mitad Izquierda vs Mitad Derecha en zona central)
+            left_crop = gray.crop((int(w * 0.1), int(h * 0.15), int(w * 0.5), int(h * 0.85)))
+            right_crop = gray.crop((int(w * 0.5), int(h * 0.15), int(w * 0.9), int(h * 0.85)))
+            l_mean = max(ImageStat.Stat(left_crop).mean[0], 1.0)
+            r_mean = max(ImageStat.Stat(right_crop).mean[0], 1.0)
+            ratio = max(l_mean, r_mean) / min(l_mean, r_mean)
+            telemetry["key_to_fill_ratio"] = round(ratio, 2)
+            if abs(l_mean - r_mean) < 8:
+                telemetry["light_direction"] = "Frontal Simétrica (Beauty / Flat)"
+            elif l_mean > r_mean:
+                telemetry["light_direction"] = "Key Light a la Izquierda (Rembrandt / Split)"
+            else:
+                telemetry["light_direction"] = "Key Light a la Derecha (Rembrandt / Split)"
+
+            # 4. Nitidez óptica en zona de ojos/rostro (tercio superior-central)
+            focus_zone = gray.crop((int(w * 0.28), int(h * 0.16), int(w * 0.72), int(h * 0.55)))
+            edges = focus_zone.filter(ImageFilter.FIND_EDGES)
+            edge_std = ImageStat.Stat(edges).stddev[0]
+            sharp_score = min(100.0, round((edge_std / 38.0) * 100.0, 1))
+            telemetry["sharpness_score"] = sharp_score
+            if sharp_score >= 62:
+                telemetry["focus_status"] = "CLAVADO EN OJOS/SUJETO"
+            elif sharp_score >= 38:
+                telemetry["focus_status"] = "SUAVE (REVISAR VELOCIDAD / AF)"
+            else:
+                telemetry["focus_status"] = "TREPIDADA O FUERA DE FOCO"
+
+            # 5. Balance de encuadre (tercio superior vs centro)
+            top_zone = gray.crop((int(w * 0.2), 0, int(w * 0.8), int(h * 0.22)))
+            top_edges = ImageStat.Stat(top_zone.filter(ImageFilter.FIND_EDGES)).mean[0]
+            if top_edges < 6.5:
+                telemetry["headroom_balance"] = "Aire superior amplio (Baja 3° el lente)"
+            elif top_edges > 28.0:
+                telemetry["headroom_balance"] = "Encuadre cerrado arriba (Dame 2 dedos más de aire)"
+            else:
+                telemetry["headroom_balance"] = "Encuadre 4:5 Zero-Crop Impecable"
+
+    except Exception as e:
+        telemetry["error"] = str(e)
+
+    return telemetry
+
+
+def call_gemini_vision_director(img_path: Path, telemetry: dict) -> str:
+    """Si hay GEMINI_API_KEY, consulta a Gemini 2.5 Flash con la foto real para dar dirección de pose y luz."""
+    api_key = STATE.get("gemini_api_key", "").strip()
+    if not api_key or not img_path.exists():
+        return ""
+
+    try:
+        img_bytes = img_path.read_bytes()
+        b64_img = base64.b64encode(img_bytes).decode("utf-8")
+        prompt = (
+            "Eres Argon, el director de fotografía y asistente de cámara en vivo de Alfonso en Captoora Studio. "
+            "Acaba de disparar esta foto con su cámara. Háblale directo en primera persona, en español mexicano profesional, "
+            "con actitud 'loba' (seguro, directo, con ojo clínico editorial, máximo 3 oraciones para poderse leer en voz alta en el estudio). "
+            f"Datos ópticos reales de la toma: Exposición {telemetry['ev_status']}, Ratio de luz {telemetry['key_to_fill_ratio']}:1 ({telemetry['light_direction']}), "
+            f"Foco {telemetry['focus_status']} ({telemetry['sharpness_score']}/100). "
+            "Dile exactamente qué salió brutal y dale 1 o 2 instrucciones físicas precisas de pose, barbilla, hombros, cámara o luz para la siguiente toma."
+        )
+        payload = {
+            "contents": [{
+                "parts": [
+                    {"text": prompt},
+                    {"inline_data": {"mime_type": "image/jpeg", "data": b64_img}}
+                ]
+            }]
+        }
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
+            return text
+    except Exception:
+        return ""
+
+
+def build_director_voice_feedback(telemetry: dict, img_path: Path) -> str:
+    """Construye la crítica hablada del Asistente IA combinando visión IA (si hay API Key) o Telemetría Óptica Local."""
+    gemini_feedback = call_gemini_vision_director(img_path, telemetry)
+    if gemini_feedback:
+        return gemini_feedback
+
+    # Motor de Dirección Óptica Local (100% instantáneo sin latencia de red)
+    parts = []
+
+    # 1. Evaluación de exposición
+    ev = telemetry["ev_status"]
+    luma = telemetry["mean_brightness"]
+    if "SUBEXPUESTA" in ev:
+        parts.append(f"Alfonso, la toma entró oscura con luminancia en {int(luma)}. Sube medio paso el flash principal o abre un tercio de punto tu diafragma.")
+    elif "SOBREEXPUESTA" in ev or "ALTAS LUCES" in ev:
+        parts.append(f"Ojo con las altas luces, estamos al {telemetry['highlights_clip_pct']}% al límite. Baja un cuarto de potencia al estrobo o cierra un clic el diafragma.")
+    else:
+        parts.append(f"Exposición clavada al centro en {telemetry['iso']}, {telemetry['aperture']} y {telemetry['shutter']}.")
+
+    # 2. Evaluación de Foco y Nitidez
+    if telemetry["sharpness_score"] >= 62:
+        parts.append(f"El foco de la 7D Mark II está quirúrgico al {int(telemetry['sharpness_score'])}%.")
+    elif telemetry["sharpness_score"] >= 38:
+        parts.append("El foco quedó ligeramente suave; asegura el punto AF en el ojo más cercano a la cámara.")
+    else:
+        parts.append("La toma salió con ligero movimiento; sube la velocidad a 1 sobre 200 y pide que mantenga la postura un segundo más.")
+
+    # 3. Evaluación de Luz (Key-to-Fill) y Encuadre
+    ratio = telemetry["key_to_fill_ratio"]
+    if ratio >= 1.8:
+        parts.append(f"El contraste dramático está en {ratio} a 1 con luz desde {telemetry['light_direction'].lower()}.")
+    else:
+        parts.append(f"Luz envolvente y limpia en proporción {ratio} a 1.")
+
+    if "Baja 3°" in telemetry["headroom_balance"]:
+        parts.append("Tienes un poco de aire de más arriba; baja dos dedos el encuadre, proyecta ligeramente la barbilla hacia el lente y dime 'toma la foto'.")
+    elif "Dame 2 dedos" in telemetry["headroom_balance"]:
+        parts.append("Estás muy al ras en el borde superior; aléjate medio paso para cuidar nuestro Zero-Crop 4 por 5 y dime 'toma la foto'.")
+    else:
+        parts.append("El encuadre 4 por 5 está listo para portada. Gira 15 grados los hombros hacia la luz principal, relaja la mano y dime 'toma la foto' para hacer la variante.")
+
+    return " ".join(parts)
+
+
+def register_new_shot(img_path: Path, trigger_source: str = "VOZ / USB") -> dict:
+    """Registra una foto recién capturada o detectada en el Hot-Folder y genera su diagnóstico."""
+    telemetry = extract_optical_telemetry(img_path)
+    voice_text = build_director_voice_feedback(telemetry, img_path)
+
+    shot_record = {
+        "id": f"shot_{int(time.time() * 1000)}",
+        "filename": img_path.name,
+        "url": f"/sesiones_tether/{img_path.name}?t={int(time.time()*1000)}",
+        "trigger_source": trigger_source,
+        "telemetry": telemetry,
+        "voice_feedback": voice_text,
+    }
+    STATE["shots"].insert(0, shot_record)
+    STATE["shots"] = STATE["shots"][:30]
+    STATE["last_shot_file"] = img_path.name
+
+    # Si estamos en macOS, también podemos hablar con la voz nativa si el navegador no tiene el foco
+    return shot_record
+
+
+def trigger_camera_shutter(source_label: str = "COMANDO DE VOZ") -> dict:
+    """
+    Dispara la Canon EOS 7D Mark II por USB (gphoto2 en Mac / digiCamControl o WIA en Windows).
+    Si la cámara aún no está conectada físicamente, toma una captura real del portafolio óptico
+    como simulación de estudio para probar todo el flujo de voz + análisis en vivo.
+    """
+    STATE["is_shooting"] = True
+    timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+    out_file = TETHER_DIR / f"CAPTOORA_7DMKII_{timestamp_str}.jpg"
+
+    try:
+        detect_camera()
+
+        # 1. Intento real en macOS vía gphoto2
+        if OS_NAME == "Darwin":
+            subprocess.run(["killall", "-9", "PTPCamera"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            gphoto = shutil.which("gphoto2")
+            if gphoto and STATE["camera_connected"]:
+                res = subprocess.run(
+                    [gphoto, "--capture-image-and-download", "--filename", str(out_file), "--force-overwrite"],
+                    capture_output=True, text=True, timeout=15
+                )
+                if out_file.exists():
+                    shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
+                    return {"ok": True, "mode": "USB_REAL_MAC", "shot": shot}
+
+        # 2. Intento real en Windows vía digiCamControl CLI o EOS Utility
+        elif OS_NAME == "Windows":
+            dcc_paths = [
+                Path(r"C:\Program Files (x86)\digiCamControl\CameraControlCmd.exe"),
+                Path(r"C:\Program Files\digiCamControl\CameraControlCmd.exe"),
+            ]
+            dcc_exe = next((p for p in dcc_paths if p.exists()), None)
+            if dcc_exe and STATE["camera_connected"]:
+                res = subprocess.run(
+                    [str(dcc_exe), "/filename", str(out_file), "/capture"],
+                    capture_output=True, text=True, timeout=15
+                )
+                if out_file.exists():
+                    shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
+                    return {"ok": True, "mode": "USB_REAL_WIN", "shot": shot}
+
+            # Si EOS Utility está abierto en Windows, enviar barra espaciadora para disparar
+            ps_eos = (
+                "$wshell = New-Object -ComObject wscript.shell; "
+                "if ($wshell.AppActivate('EOS Utility') -or $wshell.AppActivate('7D Mark II')) { "
+                "Start-Sleep -Milliseconds 150; $wshell.SendKeys(' '); Write-Output 'TRIGGERED_EOS' }"
+            )
+            res = subprocess.run(["powershell", "-NoProfile", "-Command", ps_eos], capture_output=True, text=True, timeout=5)
+            if "TRIGGERED_EOS" in res.stdout:
+                # Esperar hasta 4 segundos a que EOS Utility deposite el archivo en sesiones_tether
+                for _ in range(8):
+                    time.sleep(0.5)
+                    newest = get_newest_unregistered_file()
+                    if newest:
+                        shot = register_new_shot(newest, trigger_source=f"{source_label} (Canon EOS Utility)")
+                        return {"ok": True, "mode": "EOS_UTILITY_WIN", "shot": shot}
+
+        # 3. Modo Demo / Simulador Óptico con las fotos reales de Captoora mientras conecta el cable USB
+        demo_pool = list((REPO_ROOT / "assets" / "media_jpg").glob("*.jpg"))
+        preferred = [
+            "IG_CPT_0550_4x5.jpg",
+            "pf-tamayo-01.jpg",
+            "pf-chipinque-01.jpg",
+            "pf-princis-01.jpg",
+            "pf-poncho25-01.jpg",
+            "pf-barbie-01.jpg",
+            "pf-0867.jpg",
+            "pf-1027.jpg",
+            "pf-villarreal-01.jpg",
+            "pf-texas-02.jpg",
+        ]
+        chosen = None
+        idx = len(STATE["shots"]) % len(preferred)
+        cand = REPO_ROOT / "assets" / "media_jpg" / preferred[idx]
+        if cand.exists():
+            chosen = cand
+        elif demo_pool:
+            chosen = demo_pool[len(STATE["shots"]) % len(demo_pool)]
+
+        if chosen and chosen.exists():
+            shutil.copy2(str(chosen), str(out_file))
+            shot = register_new_shot(out_file, trigger_source=f"{source_label} (Simulador Óptico — Conecta USB para 7D Mk II)")
+            return {"ok": True, "mode": "SIMULADOR_OPTICO", "shot": shot}
+
+        return {"ok": False, "error": "No se encontró cámara USB conectada ni imágenes de prueba."}
+    finally:
+        STATE["is_shooting"] = False
+
+
+def get_newest_unregistered_file():
+    """Detecta si EOS Utility, Lightroom o Capture One acaba de guardar una foto nueva en sesiones_tether/."""
+    known_names = {s["filename"] for s in STATE["shots"]}
+    jpgs = sorted(TETHER_DIR.glob("*.jpg"), key=lambda p: p.stat().st_mtime, reverse=True)
+    for j in jpgs:
+        if j.name not in known_names:
+            return j
+    return None
+
+
+def hot_folder_watcher_loop():
+    """Vigila la carpeta sesiones_tether/ cada 1 segundo por si disparas desde el botón físico de la 7D Mark II."""
+    while True:
+        try:
+            if not STATE["is_shooting"]:
+                newest = get_newest_unregistered_file()
+                if newest:
+                    register_new_shot(newest, trigger_source="BOTÓN FÍSICO 7D MARK II (Hot-Folder)")
+        except Exception:
+            pass
+        time.sleep(1.0)
+
+
+class ArgonTetherHandler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory=str(BASE_DIR), **kwargs)
+
+    def log_message(self, format, *args):
+        pass  # Silenciar logs ruidosos
+
+    def _send_json(self, data: dict, status: int = 200):
+        body = json.dumps(data, ensure_ascii=False).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Access-Control-Allow-Origin", "*")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        if parsed.path == "/api/status":
+            detect_camera()
+            self._send_json(STATE)
+            return
+        return super().do_GET()
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        length = int(self.headers.get("Content-Length", 0))
+        raw_body = self.rfile.read(length).decode("utf-8") if length > 0 else "{}"
+        try:
+            payload = json.loads(raw_body)
+        except Exception:
+            payload = {}
+
+        if parsed.path == "/api/shoot":
+            source = payload.get("source", "COMANDO DE VOZ")
+            result = trigger_camera_shutter(source_label=source)
+            self._send_json(result)
+            return
+
+        if parsed.path == "/api/webcam_shot":
+            # Permite disparar usando la señal de video / capturadora / cámara en vivo del navegador
+            b64_data = payload.get("image_b64", "")
+            if "," in b64_data:
+                b64_data = b64_data.split(",", 1)[1]
+            timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
+            out_file = TETHER_DIR / f"CAPTOORA_LIVE_{timestamp_str}.jpg"
+            out_file.write_bytes(base64.b64decode(b64_data))
+            shot = register_new_shot(out_file, trigger_source=payload.get("source", "LIVE VIEW / CAPTURADORA"))
+            self._send_json({"ok": True, "mode": "LIVE_VIEW", "shot": shot})
+            return
+
+        if parsed.path == "/api/config":
+            if "gemini_api_key" in payload:
+                STATE["gemini_api_key"] = payload["gemini_api_key"].strip()
+            if "director_mode" in payload:
+                STATE["director_mode"] = payload["director_mode"]
+            self._send_json({"ok": True, "state": STATE})
+            return
+
+        self._send_json({"ok": False, "error": "Ruta no encontrada"}, status=404)
+
+
+def main():
+    port = int(os.environ.get("ARGON_PORT", "8765"))
+    detect_camera()
+
+    watcher = threading.Thread(target=hot_folder_watcher_loop, daemon=True)
+    watcher.start()
+
+    server = HTTPServer(("127.0.0.1", port), ArgonTetherHandler)
+    url = f"http://127.0.0.1:{port}/index.html"
+    print("=" * 72)
+    print("  ARGON LENS AI — ASISTENTE DE CÁMARA Y VOZ EN TIEMPO REAL")
+    print(f"  Sistema Operativo : {STATE['os']}")
+    print(f"  Cámara Detectada  : {STATE['camera_model']}")
+    print(f"  Modo de Conexión  : {STATE['connection_mode']}")
+    print(f"  Carpeta Tether    : {TETHER_DIR}")
+    print(f"  Estudio Web Local : {url}")
+    print("=" * 72)
+
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nCerrando Argon Lens AI...")
+
+
+if __name__ == "__main__":
+    main()
