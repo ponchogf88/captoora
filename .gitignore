@@ -29,3 +29,11 @@ assets/screen_recordings_referencia/
 notebooklm-py/
 *.icloud
 .*.icloud
+
+# Pixieset Fotos Locales (No subir al repo por Ley Captoora)
+PIXIESET_ALBUMES_ENTREGA/**/*.jpg
+PIXIESET_ALBUMES_ENTREGA/**/*.JPG
+PIXIESET_ALBUMES_ENTREGA/**/*.jpeg
+PIXIESET_ALBUMES_ENTREGA/**/*.png
+
+asistente_camara_ia/portafolio_autorizado/

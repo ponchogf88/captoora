@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAPTOORA STUDIO — Argon Lens Director</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #030407;
+      --surface: #0a0c13;
+      --card: rgba(14, 17, 27, 0.75);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(245, 197, 66, 0.55);
+      --gold: #f5c542;
+      --gold-glow: rgba(245, 197, 66, 0.25);
+      --crimson: #ff2a5f;
+      --emerald: #00e676;
+      --text: #f0f2f8;
+      --text-muted: #8b93a7;
+      --font: "Space Grotesk", -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: "JetBrains Mono", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    /* FLASH EFFECT OBTURADOR */
+    #shutterFlash {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 9999;
+      transition: opacity 0.09s ease-out;
+    }
+
+    /* TOP BAR MINIMAL */
+    header {
+      background: rgba(10, 12, 19, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      z-index: 50;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--gold), #d49b15);
+      color: #050609;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+
+    .brand-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+
+    .brand-title span {
+      color: var(--text-muted);
+      font-weight: 400;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    .status-capsules {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .capsule {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--text-muted);
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #555;
+    }
+
+    .dot.live {
+      background: var(--emerald);
+      box-shadow: 0 0 8px var(--emerald);
+      animation: pulse 1.8s infinite;
+    }
+
+    .dot.warn {
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    /* WORKSPACE HERO GRID: 100% FOTOGRÁFICO */
+    .studio-viewport {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 14px;
+      padding: 14px 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* VISOR CENTRAL HERO (PROTAGONISTA ABSOLUTO) */
+    .viewfinder-card {
+      background: #020305;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+    }
+
+    .viewfinder-stage {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, #070912 0%, #010204 100%);
+      overflow: hidden;
+    }
+
+    #mainShotImage {
+      max-height: 94%;
+      max-width: 96%;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+    }
+
+    /* OVERLAY HERO DISCRETO (CERO TEXTO QUE ESTORBE LA FOTO) */
+    .floating-hud {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .hud-tag {
+      pointer-events: auto;
+      background: rgba(8, 10, 16, 0.78);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-family: var(--mono);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hud-tag strong {
+      color: var(--gold);
+    }
+
+    .hud-controls {
+      pointer-events: auto;
+      display: flex;
+      gap: 8px;
+    }
+
+    .hud-btn {
+      background: rgba(8, 10, 16, 0.78);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--border);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .hud-btn:hover {
+      border-color: var(--gold);
+      background: rgba(245, 197, 66, 0.15);
+    }
+
+    .hud-btn.active {
+      border-color: var(--emerald);
+      color: var(--emerald);
+      background: rgba(0, 230, 118, 0.15);
+    }
+
+    /* GUÍA ZERO-CROP 4:5 SUTIL */
+    .crop-guide-4x5 {
+      position: absolute;
+      height: 90%;
+      aspect-ratio: 4 / 5;
+      border: 1.5px dashed rgba(245, 197, 66, 0.45);
+      border-radius: 8px;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px 10px;
+      font-size: 9px;
+      font-family: var(--mono);
+      font-weight: 700;
+      color: rgba(245, 197, 66, 0.75);
+      letter-spacing: 1px;
+    }
+
+    .countdown-overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 160px;
+      font-weight: 900;
+      color: var(--gold);
+      background: rgba(0, 0, 0, 0.6);
+      text-shadow: 0 0 50px var(--gold-glow);
+      z-index: 30;
+      font-family: var(--mono);
+    }
+
+    /* CARRUSEL DE TOMAS FOTOGRÁFICAS EN VIVO */
+    .filmstrip-strip {
+      height: 84px;
+      background: rgba(6, 8, 12, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      overflow-x: auto;
+    }
+
+    .filmstrip-item {
+      height: 66px;
+      aspect-ratio: 4 / 5;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+
+    .filmstrip-item:hover, .filmstrip-item.active {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(245, 197, 66, 0.3);
+    }
+
+    .filmstrip-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* PANEL LATERAL ELEGANTE (CONTROL VOCAL + PORTAFOLIO VISUAL) */
+    .studio-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow-y: auto;
+    }
+
+    .action-card {
+      background: var(--card);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* BOTÓN SHUTTER GIGANTE DE ESTUDIO */
+    .shutter-btn-main {
+      width: 100%;
+      background: linear-gradient(135deg, var(--crimson), #c20040);
+      color: #fff;
+      border: none;
+      font-family: var(--font);
+      font-size: 15px;
+      font-weight: 800;
+      padding: 14px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 8px 25px rgba(255, 42, 95, 0.4);
+      transition: all 0.2s;
+    }
+
+    .shutter-btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(255, 42, 95, 0.55);
+    }
+
+    .shutter-btn-main:active {
+      transform: scale(0.98);
+    }
+
+    .voice-activation-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 11px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .voice-activation-btn.active {
+      background: linear-gradient(135deg, var(--emerald), #00a854);
+      color: #030407;
+      border-color: transparent;
+      box-shadow: 0 8px 25px rgba(0, 230, 118, 0.35);
+    }
+
+    /* TELEMETRÍA EN CÁPSULAS MINIMALISTAS */
+    .telemetry-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .tel-pill {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .tel-lbl {
+      font-size: 10px;
+      color: var(--text-muted);
+      font-family: var(--mono);
+      text-transform: uppercase;
+    }
+
+    .tel-val {
+      font-size: 13px;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: #fff;
+    }
+
+    .tel-val.gold { color: var(--gold); }
+    .tel-val.green { color: var(--emerald); }
+
+    /* PILOTO AUTOMÁTICO VOCAL - TARJETAS VISUALES CON MINIATURAS REALES */
+    .intent-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .intent-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-align: left;
+      transition: all 0.2s;
+    }
+
+    .intent-btn:hover {
+      border-color: var(--gold);
+      background: rgba(245, 197, 66, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .intent-btn.active {
+      border-color: var(--gold);
+      background: rgba(245, 197, 66, 0.15);
+    }
+
+    .intent-icon { font-size: 16px; }
+    .intent-name { font-size: 12px; font-weight: 700; color: #fff; }
+    .intent-spec { font-size: 10px; color: var(--gold); font-family: var(--mono); }
+
+    /* GALERÍA DE PORTAFOLIO AUTORIZADO (SELECTOR VISUAL DE ESTUDIO) */
+    .portfolio-gallery-title {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .portfolio-pills {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .cat-pill {
+      font-size: 10px;
+      font-family: var(--mono);
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .cat-pill.active {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(245, 197, 66, 0.15);
+    }
+
+    .portfolio-grid-thumbs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      max-height: 180px;
+      overflow-y: auto;
+      padding-right: 2px;
+    }
+
+    .port-thumb {
+      aspect-ratio: 4 / 5;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .port-thumb:hover {
+      border-color: var(--gold);
+      transform: scale(1.04);
+    }
+
+    .port-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* FEEDBACK DE VOZ DISCRETO EN FOOTER */
+    .voice-feedback-bubble {
+      background: rgba(14, 18, 28, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--text);
+      line-height: 1.45;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .voice-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--crimson));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="shutterFlash"></div>
+
+  <header>
+    <div class="brand-group">
+      <span class="logo-badge">CAPTOORA</span>
+      <div class="brand-title">ARGON LENS DIRECTOR <span>Canon 7D Mark II · Modo Estudio</span></div>
+    </div>
+    <div class="status-capsules">
+      <div class="capsule">
+        <span class="dot live" id="camDot"></span>
+        <span id="camStatusText">Canon EOS 7D Mk II (Lista)</span>
+      </div>
+      <div class="capsule">
+        <span class="dot" id="micDot"></span>
+        <span id="micStatusText">Voz: Espera</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="studio-viewport">
+    <!-- VISOR CENTRAL HERO -->
+    <section class="viewfinder-card">
+      <div class="floating-hud">
+        <div class="hud-tag">
+          <span style="color:var(--emerald);">● TOMA ACTIVA</span>
+          <span id="hudShotName">PORTAFOLIO AUTORIZADO</span>
+          <strong id="hudExif">ISO 100 · f/5.6 · 1/160s</strong>
+        </div>
+        <div class="hud-controls">
+          <button class="hud-btn active" id="btnCropGuide" onclick="toggleCropGuide()">
+            📐 4:5 Zero-Crop
+          </button>
+          <button class="hud-btn" onclick="startCountdownAndShoot(3)">
+            ⏱️ 3..2..1
+          </button>
+        </div>
+      </div>
+
+      <div class="viewfinder-stage">
+        <div id="countdownOverlay" class="countdown-overlay">3</div>
+        <img id="mainShotImage" src="portafolio_autorizado/CHUY_GTZ/SECH96.jpg" alt="Toma de Estudio" />
+        <div id="cropGuide" class="crop-guide-4x5">
+          <span>SAFE 4:5 HEADROOM</span>
+          <span>ZERO-CROP FULL-FRAME</span>
+        </div>
+      </div>
+
+      <!-- TIRA DE FOTOS RECIENTES -->
+      <div class="filmstrip-strip" id="filmstripContainer">
+        <!-- Generado en JS -->
+      </div>
+    </section>
+
+    <!-- PANEL LATERAL DE CONTROL Y DIRECCIÓN -->
+    <aside class="studio-sidebar">
+      <!-- DISPARADOR PRINCIPAL Y VOZ -->
+      <div class="action-card">
+        <button class="shutter-btn-main" onclick="triggerShoot('BOTÓN ESTUDIO')">
+          📸 DISPARAR (ESPACIO)
+        </button>
+        <button class="voice-activation-btn" id="btnToggleVoice" onclick="toggleVoiceAssistant()">
+          🎙️ Activar Comandos de Voz ("Toma la foto")
+        </button>
+        <div class="voice-feedback-bubble" id="voiceFeedbackBox">
+          <div class="voice-avatar">⚡</div>
+          <div id="argonSpeechText">"Listo Alfonso. Di <strong>'toma la foto'</strong> o elige un modo visual y yo configuro la cámara por USB."</div>
+        </div>
+      </div>
+
+      <!-- TELEMETRÍA EN CÁPSULAS LIMPIAS -->
+      <div class="action-card">
+        <div class="portfolio-gallery-title">
+          <span>TELEMETRÍA ÓPTICA</span>
+          <span style="color:var(--gold);" id="telemetryStatus">100% CALIBRADA</span>
+        </div>
+        <div class="telemetry-row">
+          <div class="tel-pill">
+            <span class="tel-lbl">Nitidez Foco</span>
+            <span class="tel-val green" id="metFocus">94% Clavado</span>
+          </div>
+          <div class="tel-pill">
+            <span class="tel-lbl">Iluminación</span>
+            <span class="tel-val gold" id="metRatio">1.8:1 Key/Fill</span>
+          </div>
+          <div class="tel-pill">
+            <span class="tel-lbl">Exposición</span>
+            <span class="tel-val green" id="metEv">Óptima (Piel)</span>
+          </div>
+          <div class="tel-pill">
+            <span class="tel-lbl">Encuadre</span>
+            <span class="tel-val" id="metFraming">4:5 Aprobado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODOS RÁPIDOS "MUÉVELE TÚ" -->
+      <div class="action-card">
+        <div class="portfolio-gallery-title">
+          <span>PILOTO "MUÉVELE TÚ"</span>
+          <span style="color:var(--emerald);" id="activeIntentBadge">ESTUDIO FLASH</span>
+        </div>
+        <div class="intent-grid">
+          <div class="intent-btn" onclick="applyCameraPreset('ESTUDIO_FLASH')">
+            <span class="intent-icon">⚡</span>
+            <span class="intent-name">Estudio Flash</span>
+            <span class="intent-spec">f/5.6 · 1/160 · ISO 100</span>
+          </div>
+          <div class="intent-btn" onclick="applyCameraPreset('FONDO_BORROSO')">
+            <span class="intent-icon">🌸</span>
+            <span class="intent-name">Bokeh Retrato</span>
+            <span class="intent-spec">f/2.0 · 1/250 · ISO 200</span>
+          </div>
+          <div class="intent-btn" onclick="applyCameraPreset('MOVIMIENTO_NINOS')">
+            <span class="intent-icon">🏃‍♂️</span>
+            <span class="intent-name">Acción / Niños</span>
+            <span class="intent-spec">f/4.0 · 1/800 · ISO 800</span>
+          </div>
+          <div class="intent-btn" onclick="applyCameraPreset('POCA_LUZ')">
+            <span class="intent-icon">🌙</span>
+            <span class="intent-name">Poca Luz</span>
+            <span class="intent-spec">f/2.8 · 1/125 · ISO 1600</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SELECTOR VISUAL DE PORTAFOLIO AUTORIZADO (INSPIRACIÓN Y REFERENCIA DE ESTUDIO) -->
+      <div class="action-card" style="flex:1;">
+        <div class="portfolio-gallery-title">
+          <span>PORTAFOLIO AUTORIZADO</span>
+          <span id="portCountBadge">195 FOTOS</span>
+        </div>
+        <div class="portfolio-pills" id="portfolioCategoryPills">
+          <!-- Categorías generadas dinámicamente -->
+        </div>
+        <div class="portfolio-grid-thumbs" id="portfolioThumbsGrid">
+          <!-- Miniaturas del portafolio autorizado -->
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    let voiceActive = false;
+    let recognition = null;
+    let portfolioData = {};
+    let currentCategory = "CHUY_GTZ";
+    let isBusyShooting = false;
+
+    // Efecto de audio de obturador réflex
+    function playShutterSound() {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.setValueAtTime(180, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(40, ctx.currentTime + 0.08);
+        gain.gain.setValueAtTime(0.5, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.08);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(ctx.currentTime + 0.08);
+      } catch (e) {}
+    }
+
+    function triggerFlashVisual() {
+      const fl = document.getElementById("shutterFlash");
+      fl.style.opacity = "0.75";
+      setTimeout(() => { fl.style.opacity = "0"; }, 140);
+    }
+
+    function speakFeedback(text) {
+      if (!text) return;
+      document.getElementById("argonSpeechText").innerText = `"${text}"`;
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = "es-MX";
+        utter.rate = 1.05;
+        const voices = window.speechSynthesis.getVoices();
+        const esVoice = voices.find(v => v.lang.includes("es-MX")) || voices.find(v => v.lang.startsWith("es"));
+        if (esVoice) utter.voice = esVoice;
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    function toggleCropGuide() {
+      const g = document.getElementById("cropGuide");
+      const btn = document.getElementById("btnCropGuide");
+      const isVisible = g.style.display !== "none";
+      g.style.display = isVisible ? "none" : "flex";
+      btn.classList.toggle("active", !isVisible);
+    }
+
+    // CARGA DE PORTAFOLIO AUTORIZADO
+    async function loadPortfolioData() {
+      try {
+        const res = await fetch("portafolio_data.json");
+        portfolioData = await res.json();
+        renderCategoryPills();
+        renderThumbs(currentCategory);
+      } catch (e) {
+        console.error("Error cargando portafolio:", e);
+      }
+    }
+
+    function renderCategoryPills() {
+      const pillsContainer = document.getElementById("portfolioCategoryPills");
+      pillsContainer.innerHTML = "";
+      Object.keys(portfolioData).forEach(cat => {
+        const pill = document.createElement("div");
+        pill.className = `cat-pill ${cat === currentCategory ? "active" : ""}`;
+        pill.innerText = cat.replace("_", " ");
+        pill.onclick = () => {
+          currentCategory = cat;
+          renderCategoryPills();
+          renderThumbs(cat);
+        };
+        pillsContainer.appendChild(pill);
+      });
+    }
+
+    function renderThumbs(cat) {
+      const grid = document.getElementById("portfolioThumbsGrid");
+      grid.innerHTML = "";
+      const photos = portfolioData[cat] || [];
+      photos.slice(0, 16).forEach(url => {
+        const div = document.createElement("div");
+        div.className = "port-thumb";
+        div.innerHTML = `<img src="${url}" loading="lazy" alt="Foto Autorizada" />`;
+        div.onclick = () => selectMainPhoto(url, cat);
+        grid.appendChild(div);
+      });
+    }
+
+    function selectMainPhoto(url, catName) {
+      const img = document.getElementById("mainShotImage");
+      img.src = url;
+      document.getElementById("hudShotName").innerText = catName.toUpperCase();
+      
+      // Añadir a filmstrip
+      addFilmstripThumb(url);
+    }
+
+    function addFilmstripThumb(url) {
+      const container = document.getElementById("filmstripContainer");
+      const item = document.createElement("div");
+      item.className = "filmstrip-item active";
+      item.innerHTML = `<img src="${url}" />`;
+      item.onclick = () => {
+        document.querySelectorAll(".filmstrip-item").forEach(el => el.classList.remove("active"));
+        item.classList.add("active");
+        document.getElementById("mainShotImage").src = url;
+      };
+      document.querySelectorAll(".filmstrip-item").forEach(el => el.classList.remove("active"));
+      container.insertBefore(item, container.firstChild);
+    }
+
+    // DISPARO
+    async function triggerShoot(source = "BOTÓN ESTUDIO") {
+      if (isBusyShooting) return;
+      isBusyShooting = true;
+      playShutterSound();
+      triggerFlashVisual();
+
+      try {
+        const res = await fetch("/api/shoot", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ source: source })
+        });
+        const data = await res.json();
+        if (data.ok && data.shot) {
+          const s = data.shot;
+          const img = document.getElementById("mainShotImage");
+          img.src = s.url;
+          addFilmstripThumb(s.url);
+          document.getElementById("hudShotName").innerText = s.filename;
+
+          if (s.telemetry) {
+            const t = s.telemetry;
+            document.getElementById("hudExif").innerText = `${t.iso} · ${t.aperture} · ${t.shutter}`;
+            document.getElementById("metFocus").innerText = `${Math.round(t.sharpness_score)}% Clavado`;
+            document.getElementById("metRatio").innerText = `${t.key_to_fill_ratio}:1`;
+            document.getElementById("metEv").innerText = t.ev_status || "Óptima";
+          }
+          if (s.voice_feedback) {
+            speakFeedback(s.voice_feedback);
+          }
+        }
+      } catch (e) {
+        console.error("Error disparando:", e);
+      } finally {
+        isBusyShooting = false;
+      }
+    }
+
+    // CONTEO 3..2..1
+    function startCountdownAndShoot(seconds = 3) {
+      const overlay = document.getElementById("countdownOverlay");
+      overlay.style.display = "flex";
+      let count = seconds;
+      overlay.innerText = count;
+
+      const timer = setInterval(() => {
+        count--;
+        if (count > 0) {
+          overlay.innerText = count;
+        } else {
+          clearInterval(timer);
+          overlay.style.display = "none";
+          triggerShoot("CONTEO VOZ");
+        }
+      }, 750);
+    }
+
+    // CONFIGURACIÓN RÁPIDA CÁMARA
+    async function applyCameraPreset(presetKey) {
+      try {
+        const res = await fetch("/api/preset", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ preset: presetKey })
+        });
+        const data = await res.json();
+        if (data.ok && data.camera_settings) {
+          const cs = data.camera_settings;
+          document.getElementById("activeIntentBadge").innerText = cs.human_intent.toUpperCase();
+          document.getElementById("hudExif").innerText = `ISO ${cs.iso} · f/${cs.aperture} · ${cs.shutter}`;
+          if (data.voice_confirm) {
+            speakFeedback(data.voice_confirm);
+          }
+        }
+      } catch (e) {}
+    }
+
+    // CONTROL POR VOZ NATIVO (Web Speech API)
+    function toggleVoiceAssistant() {
+      const btn = document.getElementById("btnToggleVoice");
+      const micDot = document.getElementById("micDot");
+      const micText = document.getElementById("micStatusText");
+
+      if (!("webkitSpeechRecognition" in window || "SpeechRecognition" in window)) {
+        alert("El control por voz requiere Chrome en macOS.");
+        return;
+      }
+
+      if (voiceActive) {
+        voiceActive = false;
+        if (recognition) recognition.stop();
+        btn.classList.remove("active");
+        btn.innerText = "🎙️ Activar Comandos de Voz (\"Toma la foto\")";
+        micDot.classList.remove("live");
+        micText.innerText = "Voz: Inactiva";
+        return;
+      }
+
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRec();
+      recognition.continuous = true;
+      recognition.interimResults = false;
+      recognition.lang = "es-MX";
+
+      recognition.onstart = () => {
+        voiceActive = true;
+        btn.classList.add("active");
+        btn.innerText = "🔴 Micrófono Escuchando...";
+        micDot.classList.add("live");
+        micText.innerText = "Voz: Activa";
+        speakFeedback("Micrófono activado. Dime 'toma la foto' cuando tengas el encuadre.");
+      };
+
+      recognition.onresult = (evt) => {
+        const last = evt.results.length - 1;
+        const phrase = evt.results[last][0].transcript.trim().toLowerCase();
+        handleVoiceCommand(phrase);
+      };
+
+      recognition.onerror = () => {};
+      recognition.onend = () => {
+        if (voiceActive) recognition.start();
+      };
+
+      recognition.start();
+    }
+
+    function handleVoiceCommand(phrase) {
+      if (phrase.includes("foto") || phrase.includes("dispara") || phrase.includes("toma")) {
+        triggerShoot("COMANDO DE VOZ");
+      } else if (phrase.includes("cuenta") || phrase.includes("tres") || phrase.includes("tiempo")) {
+        startCountdownAndShoot(3);
+      } else if (phrase.includes("borroso") || phrase.includes("bokeh")) {
+        applyCameraPreset("FONDO_BORROSO");
+      } else if (phrase.includes("niño") || phrase.includes("acción") || phrase.includes("movimiento")) {
+        applyCameraPreset("MOVIMIENTO_NINOS");
+      } else if (phrase.includes("flash") || phrase.includes("estudio")) {
+        applyCameraPreset("ESTUDIO_FLASH");
+      } else if (phrase.includes("oscura") || phrase.includes("luz")) {
+        applyCameraPreset("POCA_LUZ");
+      }
+    }
+
+    // TECLADO: ESPACIO PARA DISPARAR
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space" && e.target.tagName !== "INPUT") {
+        e.preventDefault();
+        triggerShoot("BARRA ESPACIADORA");
+      }
+    });
+
+    // INICIALIZACIÓN
+    window.addEventListener("DOMContentLoaded", () => {
+      loadPortfolioData();
+      // Inicializar primeras fotos en filmstrip
+      setTimeout(() => {
+        addFilmstripThumb("portafolio_autorizado/CHUY_GTZ/SECH96.jpg");
+        addFilmstripThumb("portafolio_autorizado/CHUY_GTZ/CHET29.jpg");
+        addFilmstripThumb("portafolio_autorizado/pop/8999310E-D2E5-4BCE-A52B-6ADAF1E65830.JPG");
+      }, 500);
+    });
+  </script>
+</body>
+</html>
