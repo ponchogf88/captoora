@@ -555,6 +555,37 @@
         </div>
       </div>
 
+      <!-- NUEVO: TRADUCTOR HUMANO DE BOTONES FÍSICOS Y PANTALLITA (CANON 7D MARK II) -->
+      <div class="card" style="border-color: rgba(0, 210, 255, 0.35);">
+        <div class="card-title">
+          <span>🎛️ Traductor de Botones Físicos (Canon 7D Mk II)</span>
+          <span style="color:var(--cyan); font-size:10px;">TOCA PARA ESCUCHAR</span>
+        </div>
+        <p style="font-size:12px; color:var(--muted); margin-bottom:10px;">
+          ¿Qué significan las letras raras de la pantallita de arriba y los switches del lente? Tócalos y te digo en español cómo dejarlos hoy:
+        </p>
+        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:7px;">
+          <button onclick="explainPhysicalButton('WB')" style="font-size:11px; padding:8px; justify-content:center;">
+            🌡️ <strong>WB</strong> (Color)
+          </button>
+          <button onclick="explainPhysicalButton('DRIVE')" style="font-size:11px; padding:8px; justify-content:center;">
+            🔫 <strong>DRIVE</strong> (Ráfaga)
+          </button>
+          <button onclick="explainPhysicalButton('MFN')" style="font-size:11px; padding:8px; justify-content:center;">
+            🎯 <strong>M-Fn</strong> (Puntos)
+          </button>
+          <button onclick="explainPhysicalButton('STABILIZER')" style="font-size:11px; padding:8px; justify-content:center;">
+            🫨 <strong>STABILIZER</strong>
+          </button>
+          <button onclick="explainPhysicalButton('AFMF')" style="font-size:11px; padding:8px; justify-content:center;">
+            👁️ <strong>AF / MF</strong>
+          </button>
+          <button onclick="explainPhysicalButton('PIEL_CANON')" style="font-size:11px; padding:8px; justify-content:center; border-color:rgba(245,197,66,0.4);">
+            ✨ <strong>Piel Canon</strong>
+          </button>
+        </div>
+      </div>
+
       <div class="card">
         <div class="card-title">
           <span>🧠 Visión IA Avanzada (Gemini 2.5 Flash Opcional)</span>
@@ -761,6 +792,18 @@
           }
         }
       } catch (e) {}
+    }
+
+    function explainPhysicalButton(code) {
+      const guides = {
+        WB: "W B significa Balance de Blancos, es decir, qué tan cálida o fría sale la piel. En tu Canon 7D Mark II déjalo en A W B, que es automático, o en el ícono de rayito cuando uses flashes de estudio. Así los tonos de piel de Canon salen cremosos y perfectos sin que le muevas nada más.",
+        DRIVE: "El botón Drive controla cuántos disparos hace la cámara cuando dejas apretado el botón. Si ves un solo cuadrito en la pantallita, toma una foto por clic. Si ves varios cuadritos encimados con una H, está en modo metralleta de diez fotos por segundo.",
+        MFN: "El botón M F N que está pegadito al disparador sirve para cambiar qué cuadritos de enfoque están activos cuando miras por el visor. Si no te quieres complicar, ponlo en Zona Central para que siempre enfoque la cara que esté en medio.",
+        STABILIZER: "El switch Stabilizer en tu lente es un motorcito que quita el temblor de tus manos. Regla de oro: si tienes la cámara en la mano, déjalo siempre en ON. Si la pones en tripié fijo en el estudio, ponlo en OFF.",
+        AFMF: "El switch A F y M F del lente significa Enfoque Automático o Manual. Déjalo SIEMPRE en A F para que la cámara enfoque sola los ojos cuando presionas a la mitad el disparador. Si por accidente se mueve a M F, todas tus fotos saldrán borrosas.",
+        PIEL_CANON: "Lo que notaste hoy entre Canon y Nikon es famosísimo: la ciencia de color de Canon mete tonos cálidos rosados y durazno en la piel humana desde el sensor, por eso en retrato la piel se ve con vida y textura de revista sin siquiera editarla."
+      };
+      speakFeedback(guides[code] || "");
     }
 
     // Reconocimiento de voz continuo en español
