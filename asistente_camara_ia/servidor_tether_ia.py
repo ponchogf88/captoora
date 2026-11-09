@@ -481,34 +481,26 @@ def trigger_camera_shutter(source_label: str = "COMANDO DE VOZ") -> dict:
                     shot = register_new_shot(out_file, trigger_source=f"{source_label} (Canon 7D Mark II USB)")
                     return {"ok": True, "mode": "USB_REAL_WIN", "shot": shot}
 
-        # 3. Modo Demo / Simulador Óptico con las fotos reales de Captoora mientras conecta el cable USB
-        demo_pool = list((REPO_ROOT / "assets" / "media_jpg").glob("*.jpg"))
-        preferred = [
-            "IG_CPT_0550_4x5.jpg",
-            "pf-tamayo-01.jpg",
-            "pf-chipinque-01.jpg",
-            "pf-princis-01.jpg",
-            "pf-poncho25-01.jpg",
-            "pf-barbie-01.jpg",
-            "pf-0867.jpg",
-            "pf-1027.jpg",
-            "pf-villarreal-01.jpg",
-            "pf-texas-02.jpg",
-        ]
+        # 3. Modo Simulador Óptico con fotos 100% reales del PORTAFOLIO AUTORIZADO
+        auth_pool_dir = BASE_DIR / "portafolio_autorizado"
+        auth_pool = list(auth_pool_dir.rglob("*.JPG")) + list(auth_pool_dir.rglob("*.jpg")) + list(auth_pool_dir.rglob("*.jpeg"))
+        
         chosen = None
-        idx = len(STATE["shots"]) % len(preferred)
-        cand = REPO_ROOT / "assets" / "media_jpg" / preferred[idx]
-        if cand.exists():
-            chosen = cand
-        elif demo_pool:
-            chosen = demo_pool[len(STATE["shots"]) % len(demo_pool)]
+        if auth_pool:
+            chosen = auth_pool[len(STATE["shots"]) % len(auth_pool)]
+        else:
+            # Respaldo directo a la carpeta en Desktop si existe
+            desktop_pool_dir = Path("/Users/imac/Desktop/PORTAFOLIO AUTORIZADO")
+            desktop_pool = list(desktop_pool_dir.rglob("*.JPG")) + list(desktop_pool_dir.rglob("*.jpg")) + list(desktop_pool_dir.rglob("*.jpeg"))
+            if desktop_pool:
+                chosen = desktop_pool[len(STATE["shots"]) % len(desktop_pool)]
 
         if chosen and chosen.exists():
             shutil.copy2(str(chosen), str(out_file))
-            shot = register_new_shot(out_file, trigger_source=f"{source_label} (Simulador Óptico — Conecta USB para 7D Mk II)")
-            return {"ok": True, "mode": "SIMULADOR_OPTICO", "shot": shot}
+            shot = register_new_shot(out_file, trigger_source=f"{source_label} (Portafolio Autorizado — Conecta USB para 7D Mk II)")
+            return {"ok": True, "mode": "PORTAFOLIO_AUTORIZADO", "shot": shot}
 
-        return {"ok": False, "error": "No se encontró cámara USB conectada ni imágenes de prueba."}
+        return {"ok": False, "error": "No se encontró cámara USB conectada ni fotos en el portafolio autorizado."}
     finally:
         STATE["is_shooting"] = False
 
