@@ -10,3 +10,7 @@ Estudio fotográfico en Monterrey. *Momentos que permanecen.*
 - Galerías Clientes (Pixieset): https://galeria.captoora.studio
 - Staging: https://ponchogf88.github.io/captoora/
 - WhatsApp: https://wa.me/528140050088
+
+### Skills & Herramientas Especiales
+- **Antigravity Halo Cursor Skill**: [`skills/antigravity-halo-cursor/SKILL.md`](skills/antigravity-halo-cursor/SKILL.md) — Efecto orbital de partículas magnéticas alrededor del cursor (Spring-Damper multi-armónico).
+
