@@ -2081,6 +2081,478 @@
       .vortex-card { width: 220px; height: 300px; top: -150px; left: -110px; }
       .studio-location-panel { padding: 30px 20px; }
     }
+
+    /* ==========================================================================
+       ANTIGRAVITY 2.0 INTERACTIVE DOCK & VECTOR MICRO-INTERACTIONS
+       Reproduce fielmente la interacción de íconos del IDE Antigravity:
+       - Frosted highlight circular con retroiluminación viva
+       - Micro-animaciones vectoriales en hover (giro 3D, dibujo de check, destello de filamento)
+       - Tooltip flotante dark glass con tipografía de precisión y atajos de teclado
+       - Retroalimentación auditiva y táctil de obturador óptico
+       ========================================================================== */
+    .agy-floating-dock {
+      position: fixed;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 9995;
+      background: rgba(14, 16, 21, 0.88);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 26px;
+      padding: 12px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 20px 48px -6px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .agy-dock-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #94a3b8;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      transition: background 0.22s ease, color 0.22s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .agy-dock-btn:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: #ffffff;
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.09);
+    }
+
+    .agy-dock-btn:active {
+      transform: scale(0.92);
+    }
+
+    .agy-dock-btn.active {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+    }
+
+    .agy-dock-divider {
+      width: 22px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.12);
+      margin: 2px 0;
+    }
+
+    /* TOOLTIPS DARK-GLASS FLOTANTES */
+    .agy-tooltip {
+      position: absolute;
+      left: calc(100% + 14px);
+      top: 50%;
+      transform: translateY(-50%) translateX(-8px);
+      background: rgba(24, 25, 29, 0.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 6px 12px;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.75), 0 0 1px 1px rgba(255, 255, 255, 0.06);
+      transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 10005;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .agy-tooltip::before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent rgba(24, 25, 29, 0.94) transparent transparent;
+    }
+
+    .agy-shortcut-key {
+      display: inline-flex;
+      align-items: center;
+      padding: 1px 6px;
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255, 255, 255, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .agy-dock-btn:hover .agy-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    /* MICRO-ANIMACIONES VECTORIALES EXACTAS DEL VIDEO */
+
+    /* 1. Chat / Conversación */
+    .icon-chat svg {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .agy-dock-btn:hover.icon-chat svg {
+      transform: scale(1.12) rotate(-3deg);
+    }
+    .icon-chat .chat-dot {
+      transform-origin: center;
+    }
+    .agy-dock-btn:hover.icon-chat .dot-1 {
+      animation: agyDotJump 0.6s infinite alternate ease-in-out;
+    }
+    .agy-dock-btn:hover.icon-chat .dot-2 {
+      animation: agyDotJump 0.6s infinite alternate ease-in-out 0.15s;
+    }
+    .agy-dock-btn:hover.icon-chat .dot-3 {
+      animation: agyDotJump 0.6s infinite alternate ease-in-out 0.3s;
+    }
+    @keyframes agyDotJump {
+      0% { transform: translateY(0); opacity: 0.35; }
+      100% { transform: translateY(-3px); opacity: 1; }
+    }
+
+    /* 2. Buscar ⌘K */
+    .icon-search svg {
+      transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .agy-dock-btn:hover.icon-search svg {
+      transform: rotate(-18deg) scale(1.15);
+    }
+    .icon-search .lens-glint {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      transform-origin: 11px 11px;
+    }
+    .agy-dock-btn:hover.icon-search .lens-glint {
+      opacity: 1;
+      animation: agySearchGlint 1.2s ease-in-out infinite;
+    }
+    @keyframes agySearchGlint {
+      0%, 100% { opacity: 0.2; transform: scale(0.85); stroke: #94a3b8; }
+      50% { opacity: 1; transform: scale(1.2); stroke: #00f0ff; }
+    }
+
+    /* 3. Biblioteca / Formas Geométricas Morphing */
+    .icon-library svg {
+      transform-origin: center;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .icon-library .shape-diamond {
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 6.5px 7px;
+    }
+    .icon-library .shape-triangle {
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 17.5px 7px;
+    }
+    .icon-library .shape-circle {
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 6.5px 17.5px;
+    }
+    .icon-library .shape-square {
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 17.5px 17.5px;
+    }
+    .agy-dock-btn:hover.icon-library .shape-diamond {
+      transform: translate(2.5px, 3px) rotate(45deg);
+      stroke: #a5b4fc;
+    }
+    .agy-dock-btn:hover.icon-library .shape-triangle {
+      transform: translate(-3.5px, 3px) scale(0.95);
+      stroke: #38bdf8;
+    }
+    .agy-dock-btn:hover.icon-library .shape-circle {
+      transform: translate(2.5px, -3px) scale(1.1);
+      stroke: #a7f3d0;
+    }
+    .agy-dock-btn:hover.icon-library .shape-square {
+      transform: translate(-3.5px, -3px) rotate(90deg);
+      stroke: #fde047;
+    }
+
+    /* 4. Ideas / Foco de Filamento */
+    .icon-ideas svg {
+      transition: filter 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .icon-ideas .filament-path {
+      transition: stroke 0.25s ease, stroke-width 0.25s ease;
+    }
+    .icon-ideas .bulb-rays {
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      transform-origin: 12px 9px;
+    }
+    .agy-dock-btn:hover.icon-ideas svg {
+      transform: scale(1.12) translateY(-1px);
+      filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.85));
+    }
+    .agy-dock-btn:hover.icon-ideas .bulb-outline {
+      stroke: #fbbf24;
+    }
+    .agy-dock-btn:hover.icon-ideas .filament-path {
+      stroke: #fbbf24;
+      stroke-width: 2.2;
+    }
+    .agy-dock-btn:hover.icon-ideas .bulb-rays {
+      opacity: 1;
+      animation: agyBulbRays 1.2s ease-in-out infinite alternate;
+    }
+    @keyframes agyBulbRays {
+      0% { opacity: 0.4; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.15); }
+    }
+
+    /* 5. Objetivos / Checkbox 3D con dibujo animado */
+    .icon-tasks {
+      perspective: 400px;
+    }
+    .icon-tasks svg {
+      transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .icon-tasks .task-check {
+      stroke-dasharray: 24;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 0.45s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s;
+    }
+    .agy-dock-btn:hover.icon-tasks svg {
+      transform: rotateY(20deg) rotateX(-10deg) scale(1.1);
+    }
+    .agy-dock-btn:hover.icon-tasks .task-box {
+      stroke: #38bdf8;
+    }
+    .agy-dock-btn:hover.icon-tasks .task-check {
+      animation: agyCheckDraw 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      stroke: #38bdf8;
+    }
+    @keyframes agyCheckDraw {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+
+    /* 6. Biometrics Lab */
+    .icon-biometrics svg {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+      transform-origin: center;
+    }
+    .icon-biometrics .iris-ring {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 12px 12px;
+    }
+    .agy-dock-btn:hover.icon-biometrics svg {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.7));
+      color: #00f0ff;
+    }
+    .agy-dock-btn:hover.icon-biometrics .iris-ring {
+      transform: rotate(180deg);
+      stroke: #00f0ff;
+    }
+
+    /* 7. Crear un espacio (+) */
+    .icon-plus svg {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: center;
+    }
+    .icon-plus .plus-cross {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-origin: 12px 12px;
+    }
+    .agy-dock-btn:hover.icon-plus svg {
+      transform: scale(1.12);
+    }
+    .agy-dock-btn:hover.icon-plus rect {
+      stroke: #34d399;
+    }
+    .agy-dock-btn:hover.icon-plus .plus-cross {
+      transform: rotate(90deg);
+      stroke: #34d399;
+    }
+
+    /* UPGRADE DE MICRO-INTERACCIÓN A LOS ÍCONOS DE PAQUETES (.feature-card-icon-badge) */
+    .feature-card-icon-badge {
+      perspective: 400px;
+    }
+    .feature-card-icon-badge svg {
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+    }
+    .pkg-glass-card:hover .feature-card-icon-badge {
+      transform: perspective(400px) rotateY(14deg) rotateX(-8deg) scale(1.1);
+      box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.75), 0 0 24px -2px var(--card-spotlight-color), inset 0 1px 0 0 rgba(255, 255, 255, 0.35);
+    }
+    .pkg-glass-card:hover .feature-card-icon-badge svg {
+      filter: drop-shadow(0 0 10px currentColor);
+      animation: agyBadgePulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes agyBadgePulse {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-3px) scale(1.08); }
+    }
+
+    /* SPOTLIGHT COMMAND SEARCH MODAL (⌘K) */
+    .agy-search-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 10010;
+      background: rgba(3, 4, 7, 0.78);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 14vh;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .agy-search-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .agy-search-modal {
+      width: 90%;
+      max-width: 620px;
+      background: rgba(18, 20, 26, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+      box-shadow: 0 28px 60px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      transform: scale(0.95) translateY(-10px);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .agy-search-backdrop.open .agy-search-modal {
+      transform: scale(1) translateY(0);
+    }
+    .agy-search-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .agy-search-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .agy-search-input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .agy-search-esc {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 3px 7px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+    }
+    .agy-search-results {
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+    .agy-search-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-radius: 10px;
+      color: #cbd5e1;
+      font-size: 13.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    }
+    .agy-search-item:hover, .agy-search-item.selected {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      transform: translateX(4px);
+    }
+    .agy-search-category {
+      font-size: 10.5px;
+      font-family: 'JetBrains Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #64748b;
+      padding: 8px 14px 4px;
+    }
+
+    /* ADAPTACIÓN MÓVIL (DOCK INFERIOR TIPO IOS / ANTIGRAVITY) */
+    @media (max-width: 768px) {
+      .agy-floating-dock {
+        left: 50%;
+        top: auto;
+        bottom: 16px;
+        transform: translateX(-50%);
+        flex-direction: row;
+        padding: 6px 14px;
+        border-radius: 999px;
+        gap: 8px;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(255, 255, 255, 0.08);
+      }
+      .agy-dock-btn {
+        width: 40px;
+        height: 40px;
+      }
+      .agy-dock-divider {
+        width: 1px;
+        height: 22px;
+        margin: 0 2px;
+      }
+      .agy-tooltip {
+        left: 50%;
+        top: auto;
+        bottom: calc(100% + 12px);
+        transform: translateX(-50%) translateY(4px);
+      }
+      .agy-tooltip::before {
+        right: auto;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        border-color: rgba(24, 25, 29, 0.94) transparent transparent transparent;
+      }
+      .agy-dock-btn:hover .agy-tooltip {
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -2090,6 +2562,113 @@
 
   <!-- STROBE FLASH BURST LAYER (ACT 3 - 150ms PURE WHITE FLASH) -->
   <div id="flash-screen"></div>
+
+  <!-- ==========================================================================
+       ANTIGRAVITY 2.0 INTERACTIVE FLOATING DOCK (SIDEBAR NAVIGATION)
+       ========================================================================== -->
+  <aside class="agy-floating-dock" id="agy-floating-dock" aria-label="Navegación Rápida Captoora">
+    <!-- 1. Conversación / Chat Concierge (⌘J) -->
+    <button type="button" class="agy-dock-btn icon-chat" id="dock-btn-chat" title="Conversación" onclick="openAgyChatConcierge()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path class="chat-bubble" d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        <circle class="chat-dot dot-1" cx="8.5" cy="11.5" r="1.1" fill="currentColor"/>
+        <circle class="chat-dot dot-2" cx="12" cy="11.5" r="1.1" fill="currentColor"/>
+        <circle class="chat-dot dot-3" cx="15.5" cy="11.5" r="1.1" fill="currentColor"/>
+      </svg>
+      <span class="agy-tooltip">Conversación <span class="agy-shortcut-key">⌘J</span></span>
+    </button>
+
+    <!-- 2. Buscar (⌘K) -->
+    <button type="button" class="agy-dock-btn icon-search" id="dock-btn-search" title="Buscar" onclick="toggleAgySearch()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/>
+        <line x1="16.5" y1="16.5" x2="21.5" y2="21.5"/>
+        <circle class="lens-glint" cx="9" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <span class="agy-tooltip">Buscar <span class="agy-shortcut-key">⌘K</span></span>
+    </button>
+
+    <!-- 3. Biblioteca / 13 Álbumes (Formas Morphing) -->
+    <button type="button" class="agy-dock-btn icon-library" id="dock-btn-library" title="Biblioteca" onclick="scrollToAgySection('inside-camera-stage')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polygon class="shape-diamond" points="6.5,3.5 10,7 6.5,10.5 3,7"/>
+        <polygon class="shape-triangle" points="17.5,3.5 21.5,10.5 13.5,10.5"/>
+        <circle class="shape-circle" cx="6.5" cy="17.5" r="3.5"/>
+        <rect class="shape-square" x="14" y="14" width="7" height="7" rx="1.8"/>
+      </svg>
+      <span class="agy-tooltip">Biblioteca (13 Álbumes)</span>
+    </button>
+
+    <!-- 4. Ideas / 6 Submarcas Planetarias (Foco Filamento Activo) -->
+    <button type="button" class="agy-dock-btn icon-ideas" id="dock-btn-ideas" title="Ideas" onclick="scrollToAgySection('constelacion-submarcas')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path class="bulb-outline" d="M9 18h6m-4 3h2M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+        <path class="filament-path" d="M10 9a2 2 0 0 1 4 0c0 1.2-1.5 2-2 3v1" stroke-width="1.5"/>
+        <g class="bulb-rays">
+          <line x1="12" y1="0.5" x2="12" y2="2" stroke="#f59e0b" stroke-width="1.6"/>
+          <line x1="4.5" y1="4.5" x2="5.8" y2="5.8" stroke="#f59e0b" stroke-width="1.6"/>
+          <line x1="19.5" y1="4.5" x2="18.2" y2="5.8" stroke="#f59e0b" stroke-width="1.6"/>
+        </g>
+      </svg>
+      <span class="agy-tooltip">6 Submarcas Planetarias</span>
+    </button>
+
+    <!-- 5. Objetivos / Paquetes & Precios (Checkbox 3D interactivo) -->
+    <button type="button" class="agy-dock-btn icon-tasks" id="dock-btn-tasks" title="Objetivos" onclick="scrollToAgySection('pricing-packages-section')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect class="task-box" x="3" y="3" width="18" height="18" rx="5"/>
+        <path class="task-check" d="M7.5 12l3.2 3.2 6.3-6.4"/>
+      </svg>
+      <span class="agy-tooltip">Objetivos (Paquetes)</span>
+    </button>
+
+    <!-- 6. Biometrics Lab (Escáner Iris Óptico) -->
+    <a href="captoora_biometrics.html" class="agy-dock-btn icon-biometrics" id="dock-btn-biometrics" title="Biometrics">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"/>
+        <circle class="iris-ring" cx="12" cy="12" r="4.5" stroke-dasharray="3 3"/>
+        <line x1="12" y1="3" x2="12" y2="6"/>
+        <line x1="12" y1="18" x2="12" y2="21"/>
+        <line x1="3" y1="12" x2="6" y2="12"/>
+        <line x1="18" y1="12" x2="21" y2="12"/>
+        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      </svg>
+      <span class="agy-tooltip">Biometrics Lab</span>
+    </a>
+
+    <div class="agy-dock-divider"></div>
+
+    <!-- 7. Crear un espacio (+) / Agendar Sesión (⌘B) -->
+    <button type="button" class="agy-dock-btn icon-plus" id="dock-btn-create" title="Crear un espacio" onclick="openAgyBooking()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <g class="plus-cross">
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </g>
+      </svg>
+      <span class="agy-tooltip">Crear un espacio <span class="agy-shortcut-key">⌘B</span></span>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       SPOTLIGHT COMMAND SEARCH MODAL (⌘K)
+       ========================================================================== -->
+  <div class="agy-search-backdrop" id="agy-search-backdrop" onclick="handleAgySearchBackdropClick(event)">
+    <div class="agy-search-modal">
+      <div class="agy-search-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="16.5" y1="16.5" x2="21" y2="21"/>
+        </svg>
+        <input type="text" id="agy-search-input" class="agy-search-input" placeholder="Buscar en Captoora (Álbumes, Submarcas, Renta, Biometrics)..." oninput="filterAgySearch(this.value)" />
+        <span class="agy-search-esc" onclick="toggleAgySearch(false)">ESC</span>
+      </div>
+      <div class="agy-search-results" id="agy-search-results">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
 
   <!-- PERSISTENT TOP NAVIGATION BAR -->
   <header class="top-nav">
@@ -2870,7 +3449,7 @@
       <!-- ====================================================================
            PAQUETES DE PRODUCCIÓN & RENTA (FLOATING BLACK GLASS)
            ==================================================================== -->
-      <div class="sec-header">
+      <div class="sec-header" id="pricing-packages-section">
         <div class="sec-kicker">Formatos de Trabajo // Sin Letras Chiquitas</div>
         <h3 class="sec-title">Producción y Renta de Estudio</h3>
       </div>
@@ -4348,6 +4927,169 @@
       initIndexReelSlider();
       initIndexParallaxRow();
     });
+
+    /* ==========================================================================
+       ANTIGRAVITY INTERACTIVE DOCK & COMMAND PALETTE (⌘K) LOGIC
+       ========================================================================== */
+    const AGY_SEARCH_DATA = [
+      { cat: 'Submarcas', title: '🪐 Captoora Core (Sol Central)', action: () => scrollToAgySection('constelacion-submarcas') },
+      { cat: 'Submarcas', title: '🪐 Captoora Studio 3D (San Jerónimo)', action: () => window.location.href = 'captoora_studio.html' },
+      { cat: 'Submarcas', title: '🪐 Captoora Signature (Fotografía de Autor)', action: () => window.location.href = 'captoora_signature.html' },
+      { cat: 'Submarcas', title: '🪐 Captoora Biometrics Lab (Bio-Óptica & Física)', action: () => window.location.href = 'captoora_biometrics.html' },
+      { cat: 'Submarcas', title: '🪐 Captoora Corp (Branding Ejecutivo & B2B)', action: () => window.location.href = 'captoora_corp.html' },
+      { cat: 'Submarcas', title: '🪐 Captoora Pop (Moda & Generación Z)', action: () => window.location.href = 'captoora_pop.html' },
+      { cat: 'Portafolio', title: '📸 Álbum 01 · 1- Sesión 2025 (Personal Branding)', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Portafolio', title: '📸 Álbum 03 · Parque Rufino Tamayo', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Portafolio', title: '📸 Álbum 07 · Barbie Lulú (Set Físico)', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Portafolio', title: '📸 Álbum 11 · Chipinque Exteriores', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Portafolio', title: '📸 Álbum 12 · Farmasi Fitness Real (Calistenia)', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Portafolio', title: '📸 Álbum 13 · Farmasi Sesión Estudio Real', action: () => scrollToAgySection('inside-camera-stage') },
+      { cat: 'Paquetes', title: '💼 Combo Studio + Clips ($1,600 / 2 hrs)', action: () => scrollToAgySection('pricing-packages-section') },
+      { cat: 'Paquetes', title: '💼 Renta de Estudio ($350 / hora Promo)', action: () => scrollToAgySection('pricing-packages-section') },
+      { cat: 'Paquetes', title: '💼 Sesión Básica ($1,000 / 1 hora)', action: () => scrollToAgySection('pricing-packages-section') },
+      { cat: 'Acciones', title: '💬 Agendar Sesión vía WhatsApp Oficial', action: () => openAgyBooking() },
+      { cat: 'Acciones', title: '🔊 Activar/Desactivar Sonido Obturador', action: () => triggerShutterSound() }
+    ];
+
+    function playAgyOpticClick() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(1400, audioCtx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(320, audioCtx.currentTime + 0.045);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.045);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.05);
+      } catch(e) {}
+    }
+
+    function scrollToAgySection(sectionId) {
+      playAgyOpticClick();
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function openAgyBooking() {
+      playAgyOpticClick();
+      window.open('https://wa.me/528140050088?text=Hola%20Captoora,%20quiero%20crear%20mi%20espacio%20y%20agendar%20sesi%C3%B3n', '_blank');
+    }
+
+    function openAgyChatConcierge() {
+      playAgyOpticClick();
+      window.open('https://wa.me/528140050088?text=Hola%20Captoora%20Concierge,%20tengo%20una%20consulta', '_blank');
+    }
+
+    function toggleAgySearch(forceState) {
+      playAgyOpticClick();
+      const modal = document.getElementById('agy-search-backdrop');
+      if (!modal) return;
+      const isOpen = forceState !== undefined ? forceState : !modal.classList.contains('open');
+      if (isOpen) {
+        modal.classList.add('open');
+        const input = document.getElementById('agy-search-input');
+        if (input) {
+          input.value = '';
+          filterAgySearch('');
+          setTimeout(() => input.focus(), 80);
+        }
+      } else {
+        modal.classList.remove('open');
+      }
+    }
+
+    function handleAgySearchBackdropClick(e) {
+      if (e.target.id === 'agy-search-backdrop') {
+        toggleAgySearch(false);
+      }
+    }
+
+    function filterAgySearch(query) {
+      const resultsContainer = document.getElementById('agy-search-results');
+      if (!resultsContainer) return;
+      const q = query.trim().toLowerCase();
+      const filtered = q === '' 
+        ? AGY_SEARCH_DATA 
+        : AGY_SEARCH_DATA.filter(item => item.title.toLowerCase().includes(q) || item.cat.toLowerCase().includes(q));
+
+      if (filtered.length === 0) {
+        resultsContainer.innerHTML = '<div style="padding: 24px; text-align: center; color: #64748b; font-size: 13px;">No se encontraron resultados para "' + query + '"</div>';
+        return;
+      }
+
+      let html = '';
+      let currentCat = '';
+      filtered.forEach((item, idx) => {
+        if (item.cat !== currentCat) {
+          currentCat = item.cat;
+          html += `<div class="agy-search-category">${currentCat}</div>`;
+        }
+        html += `
+          <div class="agy-search-item ${idx === 0 ? 'selected' : ''}" onclick="executeAgySearchItem(${idx})">
+            <span>${item.title}</span>
+            <span style="font-size: 11px; color: #64748b;">Ir →</span>
+          </div>
+        `;
+      });
+      resultsContainer.innerHTML = html;
+      window._currentAgyFiltered = filtered;
+    }
+
+    function executeAgySearchItem(idx) {
+      const list = window._currentAgyFiltered || AGY_SEARCH_DATA;
+      if (list[idx] && typeof list[idx].action === 'function') {
+        toggleAgySearch(false);
+        list[idx].action();
+      }
+    }
+
+    // Atajos de teclado globales (⌘K, ⌘J, ⌘B, ESC)
+    document.addEventListener('keydown', (e) => {
+      const isCmdOrCtrl = e.metaKey || e.ctrlKey;
+      if (isCmdOrCtrl && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        toggleAgySearch();
+      } else if (isCmdOrCtrl && (e.key === 'j' || e.key === 'J')) {
+        e.preventDefault();
+        openAgyChatConcierge();
+      } else if (isCmdOrCtrl && (e.key === 'b' || e.key === 'B')) {
+        e.preventDefault();
+        openAgyBooking();
+      } else if (e.key === 'Escape') {
+        toggleAgySearch(false);
+      }
+    });
+
+    // Actualización de estado activo del dock según posición de scroll
+    function updateAgyDockActiveState() {
+      const scrollY = window.scrollY;
+      const viewH = window.innerHeight;
+      const portafolioEl = document.getElementById('inside-camera-stage');
+      const constelacionEl = document.getElementById('constelacion-submarcas');
+      const pricingEl = document.getElementById('pricing-packages-section');
+
+      const btnLib = document.getElementById('dock-btn-library');
+      const btnIdeas = document.getElementById('dock-btn-ideas');
+      const btnTasks = document.getElementById('dock-btn-tasks');
+
+      [btnLib, btnIdeas, btnTasks].forEach(b => b && b.classList.remove('active'));
+
+      if (pricingEl && scrollY >= pricingEl.offsetTop - viewH * 0.4) {
+        btnTasks && btnTasks.classList.add('active');
+      } else if (constelacionEl && scrollY >= constelacionEl.offsetTop - viewH * 0.4) {
+        btnIdeas && btnIdeas.classList.add('active');
+      } else if (portafolioEl && scrollY >= portafolioEl.offsetTop - viewH * 0.4) {
+        btnLib && btnLib.classList.add('active');
+      }
+    }
+    window.addEventListener('scroll', updateAgyDockActiveState, { passive: true });
+
   </script>
 
 </body>
