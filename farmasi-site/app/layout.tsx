@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import HaloBackground from "./halo-background";
 
 export const metadata: Metadata = {
   title: "CAPTOORA · Farmasi 31 OCT",
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="es-MX"><body>{children}</body></html>;
+  return <html lang="es-MX"><body><HaloBackground />{children}</body></html>;
 }
