@@ -1134,7 +1134,17 @@
     window.addEventListener("DOMContentLoaded", () => {
       checkStatus();
       setInterval(() => { checkStatus(); }, 3500);
+      if (window.initAntigravityHalo) {
+        window.initAntigravityHalo({
+          particleCount: 240,
+          baseRadius: 70,
+          radiusSpread: 65,
+          zIndex: 9998,
+          opacity: 0.85
+        });
+      }
     });
   </script>
+  <script src="antigravity_halo_cursor.js"></script>
 </body>
 </html>
