@@ -25,20 +25,21 @@
     :root {
       --bg: #030508;
       --bg-darker: #000000;
-      --card-bg: rgba(8, 14, 22, 0.78);
-      --card-glass: rgba(10, 18, 28, 0.65);
-      --border-subtle: rgba(255, 255, 255, 0.1);
+      --card-bg: rgba(10, 16, 26, 0.58);
+      --card-glass: rgba(14, 22, 34, 0.48);
+      --glass-specular: inset 0 1px 0 0 rgba(255, 255, 255, 0.28), inset 0 0 24px rgba(255, 255, 255, 0.04);
+      --border-subtle: rgba(255, 255, 255, 0.12);
       --border-bio: rgba(0, 240, 255, 0.25);
       --border-lime: rgba(204, 255, 0, 0.4);
       --bio-cyan: #00f0ff;
       --bio-lime: #CCFF00;
       --bio-amber: #f59e0b;
-      --text-main: #f1f5f9;
-      --text-muted: #849ca9;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
       --font-display: 'Syncopate', sans-serif;
       --font-title: 'Syne', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
-      --font-body: 'Space Grotesk', sans-serif;
+      --font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     ::selection {
@@ -66,7 +67,7 @@
     }
 
     /* ==========================================================================
-       TOP NAVIGATION BAR (EMBERKIRI STYLE DOCK)
+       TOP NAVIGATION BAR (EMBERKIRI STYLE DOCK - APPLE LIQUID GLASS)
        ========================================================================== */
     .top-dock {
       position: fixed;
@@ -79,9 +80,11 @@
       align-items: center;
       justify-content: space-between;
       z-index: 5000;
-      backdrop-filter: blur(24px);
-      background: rgba(3, 5, 8, 0.85);
-      border-bottom: 1px solid var(--border-subtle);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      background: rgba(8, 12, 18, 0.65);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.08), 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
     .brand-group {
@@ -249,9 +252,9 @@
     .hero-headline {
       font-family: var(--font-title);
       font-size: clamp(2.4rem, 4.2vw, 4.2rem);
-      font-weight: 800;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.015em;
       color: #ffffff;
       margin-bottom: 24px;
     }
@@ -906,11 +909,12 @@
     .tier-card {
       position: relative;
       background: var(--card-glass);
-      border: 1px solid var(--border-subtle);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 24px;
       padding: 44px 36px;
-      backdrop-filter: blur(28px);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px) saturate(190%);
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 0 24px rgba(255, 255, 255, 0.03), 0 30px 80px rgba(0, 0, 0, 0.75);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1277,8 +1281,8 @@
 
     <!-- RIGHT INTERACTIVE EMBERKIRI REVEAL VIEWPORT -->
     <div class="ember-viewport-container" id="ember-viewport">
-      <!-- 1. BASE IMAGE: REAL ATHLETE IN ACTION (ALBUM 12) -->
-      <img src="assets/media_jpg/pf-0912.jpg" alt="Captoora Biometrics Potencia L-Sit Real" class="ember-img-base">
+      <!-- 1. BASE IMAGE: REAL ATHLETE IN ACTION (BIOMETRIC STUDIO COMPOSITE, ZERO PALM TREE) -->
+      <img src="assets/media_jpg/pf-0912_biometric_hero.jpg" alt="Captoora Biometrics Potencia L-Sit Real" class="ember-img-base">
 
       <!-- 2. SILHOUETTE DARK OVERLAY (BURNED THROUGH BY MOUSE) -->
       <div class="ember-silhouette-overlay" id="ember-mask"></div>
@@ -1623,7 +1627,7 @@
     <div class="location-card-wrap">
       <div class="loc-info">
         <div class="sec-kicker">Estudio Físico // San Jerónimo</div>
-        <h3 class="loc-title">Colinas de San Jerónimo 11</h3>
+        <h3 class="loc-title">Captoora Studio · San Jerónimo</h3>
         <p class="loc-address">
           Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. (CP 64630)
         </p>
@@ -2042,6 +2046,23 @@
         perElite.textContent = '/ cobertura';
       }
     }
+  </script>
+
+  <!-- ANTIGRAVITY ORBITAL HALO CURSOR ENGINE (BACKGROUND DYNAMICS) -->
+  <script src="assets/js/antigravity_halo_cursor.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      if (window.initAntigravityHalo) {
+        window.initAntigravityHalo({
+          particleCount: 220,
+          baseRadius: 76,
+          radiusSpread: 64,
+          palette: ["#00f0ff", "#CCFF00", "#38BDF8", "#7B61FF", "#F5C542"],
+          opacity: 0.85,
+          zIndex: 1
+        });
+      }
+    });
   </script>
 </body>
 </html>
