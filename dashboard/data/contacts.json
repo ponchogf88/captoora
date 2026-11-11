@@ -1,0 +1,88 @@
+{
+  "organization": "Capitanes de la Ciudad de México & Ecosistema de Basketball Varonil",
+  "contacts": [
+    {
+      "id": "cnt-001",
+      "name": "Carlos Tostado",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "Presidente del Equipo (Team President)",
+      "department": "Presidencia / Alta Dirección",
+      "email": "info@capitanes.mx",
+      "focus": "Decisiones estratégicas e institucionales del club.",
+      "approach_level": "Institucional / Vía recomendación comercial"
+    },
+    {
+      "id": "cnt-002",
+      "name": "Orlando Méndez-Valdez",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "General Manager (GM Deportivo)",
+      "department": "Operaciones Deportivas",
+      "email": "comunicacion@capitanes.mx",
+      "focus": "Construcción del roster varonil, staff técnico y scouting.",
+      "approach_level": "Deportivo (No compra fotos directamente, pero valida acceso a entrenamientos)"
+    },
+    {
+      "id": "cnt-003",
+      "name": "Nuño Pérez-Pla",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "Director de Operaciones (Director of Operations)",
+      "department": "Operaciones y Negocio",
+      "email": "info@capitanes.mx",
+      "focus": "Operación del club, cumplimiento de estándares de NBA y logística general.",
+      "approach_level": "Estratégico"
+    },
+    {
+      "id": "cnt-004",
+      "name": "Daniela Rivero",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "Directora de Operaciones del Equipo",
+      "department": "Team Personnel & Logistics",
+      "email": "comunicacion@capitanes.mx",
+      "focus": "Logística diaria del equipo varonil, viajes y entrenamientos.",
+      "approach_level": "Operativo / Prácticas"
+    },
+    {
+      "id": "cnt-005",
+      "name": "Jefatura de Prensa y Medios",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "Media Relations / Coordinación de Prensa",
+      "department": "Comunicación y PR",
+      "email": "comunicacion@capitanes.mx",
+      "focus": "Acreditaciones de cancha, gafetes de fotógrafos, sala de prensa y fotos oficiales.",
+      "approach_level": "Directo / Prioridad 1 para acreditaciones"
+    },
+    {
+      "id": "cnt-006",
+      "name": "Dirección Comercial y Patrocinios",
+      "organization": "Capitanes de la Ciudad de México",
+      "role": "Corporate Partnerships & Sponsorships",
+      "department": "Alianzas Comerciales",
+      "email": "ventas@capitanes.mx",
+      "focus": "Marcas patrocinadoras (ADO, Caliente.mx, etc.), activaciones en duela y venta corporativa.",
+      "approach_level": "Directo / Prioridad 1 para venta de auditoría visual de marcas"
+    },
+    {
+      "id": "cnt-007",
+      "name": "Coordinación de Producción y Eventos",
+      "organization": "Zignia Live / Arena CDMX",
+      "role": "Jefatura de Eventos y Recinto",
+      "department": "Operación de Recinto",
+      "email": "info_zignialive@zignia.mx",
+      "phone": "+52 (81) 8126 2100",
+      "focus": "Operación de pantallas Jumbotron, suites, logística de acceso y seguridad.",
+      "approach_level": "Operativo / Proveedor de recinto"
+    },
+    {
+      "id": "cnt-008",
+      "name": "Mesa de Asignaciones Deportivas",
+      "organization": "Imago7",
+      "role": "Coordinación de Fotoperiodismo",
+      "department": "Editorial Fotográfica",
+      "phone": "(55) 6363 0803 / (55) 7045 1679",
+      "whatsapp": "(55) 2114 0865",
+      "website": "https://www.imago7.com.mx",
+      "focus": "Asignación de fotógrafos a la Arena CDMX y Liga MX.",
+      "approach_level": "Prioridad 1 para prácticas y shadowing en cancha"
+    }
+  ]
+}

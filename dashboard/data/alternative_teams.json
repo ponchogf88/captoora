@@ -1,0 +1,171 @@
+{
+  "alternative_teams_ecosystem": {
+    "description": "Ecosistema exclusivo de BÁSQUETBOL VARONIL (Men's Basketball): ruta de acceso y escalamiento para fotógrafos deportivos, desde duelas de desarrollo y ligas locales de CDMX hasta franquicias profesionales y rivales de la NBA G League.",
+    "scope": "Básquetbol Varonil Exclusivo",
+    "categories": [
+      {
+        "category_id": "rivales-gleague-varonil",
+        "category_name": "Rivales Varoniles de Capitanes en NBA G League (Oportunidad Visitante en CDMX)",
+        "advantage": "Cuando estos equipos viajan a jugar a la Arena CDMX, casi nunca traen fotógrafo propio debido a costos de viaje internacional. Contratan o acreditan 'Local Stringers' (fotógrafos locales) para documentar a sus jugadores NBA asignados (Two-Way contracts y prospectos del Draft) para las redes de su franquicia matriz de la NBA.",
+        "teams": [
+          {
+            "name": "Austin Spurs (Varonil)",
+            "nba_affiliate": "San Antonio Spurs",
+            "city": "Austin / Cedar Park, Texas",
+            "venue_local": "H-E-B Center",
+            "access_difficulty": "Media (A través de su director de prensa cuando juegan en Arena CDMX)",
+            "contact_route": "austinspurspr@spurs.com / LinkedIn: Spurs Sports & Entertainment",
+            "opportunity": "Ofrecer cobertura exclusiva de sus prospectos varoniles en su visita a la Ciudad de México."
+          },
+          {
+            "name": "Texas Legends (Varonil)",
+            "nba_affiliate": "Dallas Mavericks",
+            "city": "Frisco / Dallas, Texas",
+            "venue_local": "Comerica Center",
+            "access_difficulty": "Media",
+            "contact_route": "media@texashoops.com / Dallas Mavericks PR",
+            "opportunity": "Excelente manejo de redes sociales y apertura a fotógrafos independientes para partidos fuera de EE.UU."
+          },
+          {
+            "name": "Rio Grande Valley Vipers (Varonil)",
+            "nba_affiliate": "Houston Rockets",
+            "city": "Edinburg / McAllen, Texas",
+            "venue_local": "Bert Ogden Arena",
+            "access_difficulty": "Media-Baja (Fuerte conexión con el mercado mexicano y latinoamericano)",
+            "contact_route": "media@rgvipers.com / Rockets Communications",
+            "opportunity": "El equipo más laureado de la G League; compran fotos de acción y duelos aéreos para reportes de desarrollo a Houston."
+          },
+          {
+            "name": "Birmingham Squadron (Varonil)",
+            "nba_affiliate": "New Orleans Pelicans",
+            "city": "Birmingham, Alabama",
+            "venue_local": "Legacy Arena",
+            "access_difficulty": "Media",
+            "contact_route": "squadronpr@pelicans.com",
+            "opportunity": "Rival frecuente en series consecutivas en la Arena CDMX."
+          },
+          {
+            "name": "Osceola Magic (Varonil)",
+            "nba_affiliate": "Orlando Magic",
+            "city": "Kissimmee / Orlando, Florida",
+            "venue_local": "Silver Spurs Arena",
+            "access_difficulty": "Media",
+            "contact_route": "magicpr@orlandomagic.com",
+            "opportunity": "Contenido para redes de la franquicia matriz de Orlando durante juegos internacionales en CDMX."
+          },
+          {
+            "name": "South Bay Lakers (Varonil)",
+            "nba_affiliate": "Los Angeles Lakers",
+            "city": "El Segundo / Los Angeles, California",
+            "venue_local": "UCLA Health Training Center",
+            "access_difficulty": "Alta (Gran demanda de marca)",
+            "contact_route": "lakerspr@la-lakers.com",
+            "opportunity": "Fotografías de prospectos de Lakers en visitas de temporada o pretemporada."
+          }
+        ]
+      },
+      {
+        "category_id": "cdmx-profesional-varonil",
+        "category_name": "Equipos Profesionales Varoniles en CDMX (Puertas Abiertas y Construcción de Marca)",
+        "advantage": "Franquicias varoniles en la Ciudad de México que compiten directamente por la afición al básquetbol, pero con esquemas mucho más accesibles para que un fotógrafo practique, haga relaciones y se integre a duela.",
+        "teams": [
+          {
+            "name": "Diablos Rojos del México Basquetbol (Varonil)",
+            "league": "LNBP Varonil (Liga Nacional de Baloncesto Profesional)",
+            "city": "Ciudad de México",
+            "venue_local": "Gimnasio Olímpico Juan de la Barrera (Alcaldía Benito Juárez, CDMX)",
+            "access_difficulty": "Media-Accesible (Gran presupuesto, equipo de reciente creación con ganas de innovar)",
+            "contact_route": "prensa@diablos.com.mx / Instagram: @diablosrojosbasquetbol",
+            "opportunity": "El proyecto varonil más fuerte en la CDMX fuera de Capitanes. Tienen el respaldo de Grupo Diablos. Buscan creadores de contenido dinámicos para sus partidos como local en el histórico Juan de la Barrera."
+          },
+          {
+            "name": "Ángeles de la Ciudad de México (Varonil)",
+            "league": "CIBACOPA Varonil (Circuito de Baloncesto de la Costa del Pacífico)",
+            "city": "Ciudad de México",
+            "venue_local": "Gimnasio Olímpico Juan de la Barrera (Alcaldía Benito Juárez, CDMX)",
+            "access_difficulty": "Baja - Muy Accesible (Franquicia en consolidación de comunidad)",
+            "contact_route": "contacto@angelescdmx.com / Instagram: @angelescdmxoficial",
+            "opportunity": "Franquicia varonil que trajo el básquetbol del pacífico a la capital. Al estar construyendo su presencia, sus encargados de comunicación dan enorme apertura a fotógrafos colaboradores y practicantes con ganas de foguearse."
+          }
+        ]
+      },
+      {
+        "category_id": "lnbp-varonil-nacional",
+        "category_name": "Ligas Profesionales Nacionales Varoniles (LNBP y CIBACOPA)",
+        "advantage": "Clubes varoniles consolidados en provincia que viajan a la CDMX para series contra Diablos o Ángeles, o que buscan fotógrafos fijos cuando visitan la capital.",
+        "teams": [
+          {
+            "name": "Astros de Jalisco (Varonil)",
+            "league": "LNBP Varonil / CIBACOPA Varonil",
+            "city": "Guadalajara, Jalisco",
+            "venue_local": "Arena Astros",
+            "access_difficulty": "Media",
+            "contact_route": "prensa@astrosdejalisco.com",
+            "opportunity": "Organización varonil modelo a nivel comercial y multimedia. Contratan fotógrafos locales cuando juegan fuera de Jalisco."
+          },
+          {
+            "name": "Fuerza Regia de Monterrey (Varonil)",
+            "league": "LNBP Varonil",
+            "city": "Monterrey, Nuevo León",
+            "venue_local": "Gimnasio Nuevo León Unido",
+            "access_difficulty": "Media",
+            "contact_route": "comunicacion@fuerzaregia.com",
+            "opportunity": "El club varonil más laureado de la LNBP. Necesitan soporte gráfico cuando disputan series en la Ciudad de México."
+          },
+          {
+            "name": "Halcones de Xalapa (Varonil)",
+            "league": "LNBP Varonil / BCL Americas (Basketball Champions League)",
+            "city": "Xalapa, Veracruz",
+            "venue_local": "Gimnasio Universitario 'Nido del Halcón'",
+            "access_difficulty": "Baja-Media",
+            "contact_route": "prensa@halconesdexalapa.com.mx",
+            "opportunity": "Disputan torneos internacionales masculinos contra clubes campeones de Sudamérica (Brasil, Argentina, Uruguay)."
+          },
+          {
+            "name": "Soles de Mexicali / Panteras de Aguascalientes / Plateros de Fresnillo (Varoniles)",
+            "league": "LNBP Varonil",
+            "city": "Norte y Centro de México",
+            "venue_local": "Auditorios Estatales",
+            "access_difficulty": "Baja (Alta demanda de material fotográfico de calidad)",
+            "contact_route": "Prensa oficial de los clubes / Mensajes directos en redes",
+            "opportunity": "Equipos donde la directiva te da acceso inmediato a duela si les ofreces un paquete de fotos de sus jugadores en alta velocidad."
+          }
+        ]
+      },
+      {
+        "category_id": "universitario-abe-varonil",
+        "category_name": "Liga ABE Varonil (Básquetbol Universitario de Élite - División 1)",
+        "advantage": "El mejor terreno de entrenamiento técnico para un fotógrafo deportivo varonil en México. Misma velocidad, altura en clavadas y potencia física que el básquetbol profesional varonil (tipo NCAA), pero con entrada sin burocracia para fotógrafos que buscan practicar y construir portafolio.",
+        "teams": [
+          {
+            "name": "Borregos Tec de Monterrey Varonil (Campus CDMX y Santa Fe)",
+            "league": "Liga ABE División 1 Varonil",
+            "city": "Ciudad de México",
+            "venue_local": "Arena Borregos CCM / Domo Tec Santa Fe",
+            "access_difficulty": "Mínima / Acceso Inmediato",
+            "contact_route": "Coordinación de Deportes Tec de Monterrey Campus CDMX",
+            "opportunity": "Juegos varoniles todos los viernes y sábados. Perfecto para dominar el lente 70-200mm a 1/1000s, disparar a ras de piso bajo la canasta y armar un book de 100 fotos de élite."
+          },
+          {
+            "name": "Pumas UNAM Baloncesto Varonil",
+            "league": "Liga ABE Varonil / Torneos Nacionales Universitarios",
+            "city": "Ciudad de México",
+            "venue_local": "Frontón Cerrado de Ciudad Universitaria",
+            "access_difficulty": "Mínima",
+            "contact_route": "Dirección General del Deporte Universitario (DGDU UNAM)",
+            "opportunity": "Instalaciones históricas y ambiente universitario varonil muy competitivo con libertad de movimiento para fotografía."
+          },
+          {
+            "name": "Águilas UPAEP Varonil / Tigres Blancos UMAD Varonil / Aztecas UDLAP Varonil",
+            "league": "Liga ABE División 1 Varonil (Ocho Grandes)",
+            "city": "Puebla (Sede cercana a CDMX)",
+            "venue_local": "El Nido UPAEP / Gimnasio Enrique Taylor",
+            "access_difficulty": "Baja",
+            "contact_route": "Comunicación Deportiva Universitaria UPAEP / UMAD",
+            "opportunity": "La máxima rivalidad del básquetbol varonil universitario en México. Gimnasios llenos y alto nivel atlético."
+          }
+        ]
+      }
+    ]
+  }
+}

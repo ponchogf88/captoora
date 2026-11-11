@@ -1,0 +1,91 @@
+{
+  "agencies": [
+    {
+      "id": "agency-imago7",
+      "name": "Imago7",
+      "category": "Fotoperiodismo Deportivo y Prensa",
+      "relevance_level": "Máxima (Presencia fija en Arena CDMX)",
+      "website": "https://www.imago7.com.mx",
+      "location": "Ciudad de México",
+      "phone": "(55) 6363 0803 / (55) 7045 1679",
+      "whatsapp": "(55) 2114 0865 / (55) 5499 9249",
+      "contact_channel": "Formulario web / WhatsApp directo",
+      "key_personnel": [
+        {"name": "Dirección Editorial / Asignaciones", "role": "Coordinador de Coberturas en CDMX"},
+        {"name": "Diego Padilla", "role": "Fotógrafo activo en duela (Capitanes CDMX)"},
+        {"name": "Etzel Espinosa", "role": "Fotógrafo activo en duela (Capitanes CDMX)"}
+      ],
+      "what_they_do": "Agencia líder en México que cubre partidos de Liga MX, NBA G League y eventos de gran escala. Venden bancos de fotos en tiempo real a medios de prensa.",
+      "practice_opportunity": "Asistente de fotógrafo en cancha (Shadowing / Runner / Ingesta de fotos). Ayudar con cableado ethernet, transmisión rápida por FTP, cambio de tarjetas de memoria y respaldo en tiempo real a cambio de aprender el flujo de trabajo NBA.",
+      "outreach_strategy": "Ofrecerse como asistente técnico o segundo cuerpo fotográfico voluntario para los partidos de Capitanes en la Arena CDMX."
+    },
+    {
+      "id": "agency-getty-nba",
+      "name": "Getty Images / NBA Photos",
+      "category": "Agencia Oficial Global NBA",
+      "relevance_level": "Alta (Socio Oficial de la Liga)",
+      "website": "https://www.gettyimages.es / https://www.nba.com",
+      "location": "Global / Asignaciones locales en CDMX",
+      "phone": "Vía portal corporativo Getty Editorial",
+      "contact_channel": "editorial.queries@gettyimages.com / NBA G League Media",
+      "key_personnel": [
+        {"name": "NBA G League Media Operations", "role": "Supervisión de credenciales visuales"},
+        {"name": "Getty Latin America Sports Desk", "role": "Asignaciones para eventos en México"}
+      ],
+      "what_they_do": "Distribuidor oficial de imagen para todas las propiedades de la NBA a nivel global. Sus fotos alimentan el archivo histórico y la NBA App.",
+      "practice_opportunity": "Ingresar como colaborador stringer o asistente de acreditados para eventos de la NBA en México.",
+      "outreach_strategy": "Presentar portafolio con metadatos IPTC completos para ser considerado en la base de fotógrafos colaboradores en eventos en CDMX."
+    },
+    {
+      "id": "agency-mexsport",
+      "name": "Mexsport",
+      "category": "Agencia de Fotografía Deportiva",
+      "relevance_level": "Media-Alta (Cobertura Deportiva Nacional)",
+      "website": "https://www.imago-images.com / Mexsport Archive",
+      "location": "Ciudad de México",
+      "phone": "Red de distribución autorizada",
+      "contact_channel": "Canales de distribución de prensa",
+      "key_personnel": [
+        {"name": "David Leah", "role": "Fundador y Director General"}
+      ],
+      "what_they_do": "Agencia pionera de fotografía deportiva en México con alianza con la plataforma internacional IMAGO.",
+      "practice_opportunity": "Prácticas profesionales en archivo gráfico, edición de metadatos y coberturas deportivas en CDMX.",
+      "outreach_strategy": "Contactar para solicitar prácticas en cobertura deportiva multidisciplinaria."
+    },
+    {
+      "id": "agency-zignia-live",
+      "name": "Zignia Live / Grupo Avalanz",
+      "category": "Operador del Recinto y Entretenimiento",
+      "relevance_level": "Estratégica (Dueños de Arena CDMX)",
+      "website": "https://www.zignia.mx / https://www.arenacdmx.com",
+      "location": "Av. de las Granjas 800, Santa Bárbara, Azcapotzalco, CDMX",
+      "phone": "+52 (81) 8126 2100 / Oficina Arena CDMX",
+      "email": "info_zignialive@zignia.mx",
+      "contact_channel": "info_zignialive@zignia.mx / Depto. de Producción y Eventos",
+      "key_personnel": [
+        {"name": "Gerencia de Producción y Eventos Arena CDMX", "role": "Supervisión de pantallas, accesos y cobertura del inmueble"},
+        {"name": "Coordinación de Marketing y Hospitalidad", "role": "Contenido de suites VIP y experiencia del fan"}
+      ],
+      "what_they_do": "Administran y operan la Arena CDMX, pantallas Jumbotron, activaciones comerciales y producción técnica de los eventos.",
+      "practice_opportunity": "Prácticas en producción audiovisual para recintos de espectáculos. Cobertura de la 'Experiencia Arena' (público, comida, suites, ambientación).",
+      "outreach_strategy": "Ofrecer servicios de cobertura del recinto y de la experiencia del espectador para enriquecer el material promocional de la Arena CDMX."
+    },
+    {
+      "id": "agency-sponsors-ado",
+      "name": "Agencias de Patrocinio y BTL (Ej. ADO / Caliente.mx)",
+      "category": "Agencias de Marcas Patrocinadoras",
+      "relevance_level": "Comercial / Presupuesto Directo",
+      "website": "Alianzas Capitanes CDMX",
+      "location": "Ciudad de México",
+      "phone": "Directorio corporativo de marcas",
+      "contact_channel": "Brand Managers de Patrocinadores",
+      "key_personnel": [
+        {"name": "Gerencia de Mercadotecnia y Patrocinios ADO", "role": "Responsable de 'Capitanes por México' y transporte oficial"},
+        {"name": "Agencias BTL y Experiencias de Marca", "role": "Encargados de activaciones en cancha"}
+      ],
+      "what_they_do": "Ejecutan las campañas de patrocinio pagadas por las marcas en la Arena CDMX.",
+      "practice_opportunity": "Fotógrafo dedicado a la marca durante los juegos. Cobertura especializada de activaciones para reportes de retorno de inversión.",
+      "outreach_strategy": "Contactar a las agencias que manejan las cuentas de ADO o marcas aliadas ofreciendo paquetes de auditoría fotográfica de activaciones."
+    }
+  ]
+}

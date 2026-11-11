@@ -1,0 +1,76 @@
+{
+  "outreach_pipeline": [
+    {
+      "id": "PIPE-001",
+      "target_entity": "Imago7",
+      "contact_person": "Coordinador de Coberturas en CDMX",
+      "channel": "WhatsApp / Teléfono / Formulario Web",
+      "objective": "Solicitud de prácticas profesionales / Shadowing como asistente de fotógrafo en duela de Capitanes CDMX",
+      "status": "Ready to Contact",
+      "priority": "Alta",
+      "assigned_agent": "Lead Agent",
+      "target_date": "2026-11-12",
+      "notes": "Ofrecer apoyo técnico en ingesta inmediata de fotos, cables y asistencia a cambio de gafete y aprendizaje."
+    },
+    {
+      "id": "PIPE-002",
+      "target_entity": "Capitanes CDMX - Prensa",
+      "contact_person": "Jefatura de Comunicación",
+      "channel": "comunicacion@capitanes.mx",
+      "objective": "Solicitud de acreditación piloto para fotógrafo independiente en el juego inaugural",
+      "status": "Ready to Contact",
+      "priority": "Alta",
+      "assigned_agent": "Outreach Agent",
+      "target_date": "2026-11-13",
+      "notes": "Adjuntar portafolio enfocado en velocidad de básquetbol y flujo de entrega en tiempo real."
+    },
+    {
+      "id": "PIPE-003",
+      "target_entity": "Capitanes CDMX - Alianzas Comerciales",
+      "contact_person": "Dirección de Ventas y Patrocinios",
+      "channel": "ventas@capitanes.mx",
+      "objective": "Propuesta de servicio de auditoría fotográfica de marcas para reporte de patrocinadores (ADO / Caliente)",
+      "status": "Drafting",
+      "priority": "Media",
+      "assigned_agent": "Commercial Agent",
+      "target_date": "2026-11-15",
+      "notes": "Enfocar el pitch en ROI visual para patrocinadores en duela."
+    },
+    {
+      "id": "PIPE-004",
+      "target_entity": "Diablos Rojos Basquetbol Varonil (Juan de la Barrera)",
+      "contact_person": "prensa@diablos.com.mx",
+      "channel": "Email / Instagram DM @diablosrojosbasquetbol",
+      "objective": "Solicitud de colaboración / prácticas en fotografía de cancha en LNBP Varonil",
+      "status": "Ready to Contact",
+      "priority": "Alta (Puerta alternativa en CDMX)",
+      "assigned_agent": "Field Agent",
+      "target_date": "2026-11-14",
+      "notes": "Excelente equipo varonil con gran despliegue visual en CDMX."
+    },
+    {
+      "id": "PIPE-005",
+      "target_entity": "Ángeles de la Ciudad de México Varonil (CIBACOPA)",
+      "contact_person": "contacto@angelescdmx.com",
+      "channel": "Email / Instagram DM @angelescdmxoficial",
+      "objective": "Colaboración como fotógrafo oficial o asistente de prensa para juegos en Juan de la Barrera",
+      "status": "Ready to Contact",
+      "priority": "Alta (Muy accesible)",
+      "assigned_agent": "Field Agent",
+      "target_date": "2026-11-14",
+      "notes": "Franquicia en crecimiento; gran apertura para creadores de contenido."
+    },
+    {
+      "id": "PIPE-006",
+      "target_entity": "Borregos Tec de Monterrey Varonil CCM",
+      "contact_person": "Coordinación Deportiva Tec Campus CDMX",
+      "channel": "Contacto presencial / Redes Deportivas",
+      "objective": "Pase de duela permanente para juegos de Liga ABE Varonil",
+      "status": "Ready to Contact",
+      "priority": "Máxima (Entrada sin barreras)",
+      "assigned_agent": "Field Agent",
+      "target_date": "2026-11-13",
+      "notes": "Ideal para foguearse este mismo fin de semana y tener 50 fotos de acción varonil en 48 horas."
+    }
+  ]
+}

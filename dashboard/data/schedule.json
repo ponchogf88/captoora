@@ -1,0 +1,186 @@
+{
+  "last_updated": "2026-11-11",
+  "team": "Capitanes de la Ciudad de México",
+  "league": "NBA G League",
+  "home_venue": "Arena Ciudad de México (Azcapotzalco, CDMX)",
+  "season": "2026-2027",
+  "games": [
+    {
+      "id": "CAP-001",
+      "date": "2026-11-16",
+      "time": "18:00 CST",
+      "opponent": "Birmingham Squadron",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Tip-Off Tournament",
+      "status": "Scheduled",
+      "anticipation_deadline": "2026-11-13",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7 (Cobertura en cancha)"
+      },
+      "coverage_objective": "Solicitud de acreditación piloto o shadowing con fotógrafo de Imago7",
+      "notes": "Juego clave de apertura en casa. Alta presencia de directiva y medios."
+    },
+    {
+      "id": "CAP-002",
+      "date": "2026-11-18",
+      "time": "20:00 CST",
+      "opponent": "Birmingham Squadron",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Tip-Off Tournament",
+      "status": "Scheduled",
+      "anticipation_deadline": "2026-11-15",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7"
+      },
+      "coverage_objective": "Seguimiento de portafolio y entrega de material de prueba",
+      "notes": "Segundo duelo de la serie inaugural."
+    },
+    {
+      "id": "CAP-003",
+      "date": "2026-11-23",
+      "time": "19:00 CST",
+      "opponent": "Rio Grande Valley Vipers",
+      "location": "Bert Ogden Arena (Edinburg, TX)",
+      "is_home": false,
+      "tournament": "Tip-Off Tournament",
+      "status": "Away",
+      "anticipation_deadline": "2026-11-20",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "primary_agency": "NBA G League Media Feed"
+      },
+      "coverage_objective": "Monitoreo remoto de fotos oficiales en redes y etiquetado de engagement",
+      "notes": "Gira internacional. Excelente oportunidad para interactuar en redes sociales."
+    },
+    {
+      "id": "CAP-004",
+      "date": "2026-11-25",
+      "time": "19:00 CST",
+      "opponent": "Austin Spurs",
+      "location": "H-E-B Center (Cedar Park, TX)",
+      "is_home": false,
+      "tournament": "Tip-Off Tournament",
+      "status": "Away",
+      "anticipation_deadline": "2026-11-22",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "primary_agency": "NBA G League Media Feed"
+      },
+      "coverage_objective": "Análisis de contenido de rivales y benchmarking visual",
+      "notes": "Encuentro de visita."
+    },
+    {
+      "id": "CAP-005",
+      "date": "2026-12-03",
+      "time": "18:00 CST",
+      "opponent": "Texas Legends",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Tip-Off Tournament",
+      "status": "Scheduled",
+      "anticipation_deadline": "2026-11-28",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7 / Getty Images"
+      },
+      "coverage_objective": "Cobertura en duela enfocada en activaciones de marca (ADO / Caliente)",
+      "notes": "Juego de fin de semana con gran asistencia esperada."
+    },
+    {
+      "id": "CAP-006",
+      "date": "2026-12-05",
+      "time": "20:00 CST",
+      "opponent": "Texas Legends",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Tip-Off Tournament",
+      "status": "Scheduled",
+      "anticipation_deadline": "2026-11-30",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7"
+      },
+      "coverage_objective": "Entrega de reporte fotográfico de patrocinadores a ventas@capitanes.mx",
+      "notes": "Cierre de fase de grupos local del Tip-Off Tournament."
+    },
+    {
+      "id": "CAP-007",
+      "date": "2026-12-19",
+      "time": "TBD",
+      "opponent": "Winter Showcase Cup",
+      "location": "Hyatt Regency / Mandalay Bay (Las Vegas, NV)",
+      "is_home": false,
+      "tournament": "NBA G League Winter Showcase",
+      "status": "Tournament",
+      "anticipation_deadline": "2026-12-10",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "nba_gleague": "gleaguemedia@nba.com"
+      },
+      "coverage_objective": "Mayor vitrina de scouts de la NBA del año",
+      "notes": "Concentración en Las Vegas con presencia de todos los GMs de la NBA."
+    },
+    {
+      "id": "CAP-008",
+      "date": "2027-01-08",
+      "time": "19:00 CST",
+      "opponent": "Osceola Magic",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Temporada Regular",
+      "status": "Scheduled",
+      "anticipation_deadline": "2027-01-02",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7 / Zignia Live"
+      },
+      "coverage_objective": "Inicio de temporada regular en casa. Paquete comercial formal activado.",
+      "notes": "Apertura de la segunda mitad de la temporada."
+    },
+    {
+      "id": "CAP-009",
+      "date": "2027-01-10",
+      "time": "17:00 CST",
+      "opponent": "Osceola Magic",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Temporada Regular",
+      "status": "Scheduled",
+      "anticipation_deadline": "2027-01-04",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7"
+      },
+      "coverage_objective": "Sesión de retratos en túnel y llegadas de jugadores (lifestyle / tunnel fits)",
+      "notes": "Día de partido familiar. Contenido de lifestyle NBA."
+    },
+    {
+      "id": "CAP-010",
+      "date": "2027-01-22",
+      "time": "20:00 CST",
+      "opponent": "Salt Lake City Stars",
+      "location": "Arena CDMX",
+      "is_home": true,
+      "tournament": "Temporada Regular",
+      "status": "Scheduled",
+      "anticipation_deadline": "2027-01-16",
+      "key_contacts": {
+        "team_pr": "comunicacion@capitanes.mx",
+        "venue": "info_zignialive@zignia.mx",
+        "primary_agency": "Imago7"
+      },
+      "coverage_objective": "Propuesta formal de proveedor de soporte visual para cierre de temporada",
+      "notes": "Partido estelar de viernes por la noche."
+    }
+  ]
+}
