@@ -83,15 +83,20 @@ Para generar ingresos inmediatos y flujo de efectivo sin fricción, se estructur
 
 ---
 
-## 4. Oferta de Lanzamiento Rápida: "La Campaña para Colegios y Estudios"
+## 4. Estrategia de Comunicación: "Cero Mención de IA — Solo Óptica y Tecnología de Punta"
 
-Aprovechando la base que ya tenemos de Pixieset y scrapping de colegios:
+> [!IMPORTANT]
+> **REGLA DE ORO DE CAPTOORA / PHOTODEV TOOLS:**
+> En fotografía profesional, la palabra "Inteligencia Artificial" (IA) está satanizada porque abarata la percepción del trabajo ("si es IA, lo hace un filtro y no vale nada").
+> **JAMÁS** usamos el término "IA" de cara al cliente final (colegios, familias, clientes comerciales).
+> **Tampoco atacamos errores ajenos** (no hablamos de fotógrafos que se equivocan).
+> **Siempre comunicamos en positivo, resaltando tecnología de punta, fidelidad óptica real y entregas récord:**
 
-1. **La Promesa Irresistible para el Colegio / Cliente:**
-   > *"No contratamos a un fotógrafo que tarda 3 semanas en entregar fotos con nombres equivocados. En Captoora usamos PhotoDev Tools: sistema de captura asistida por IA en tiempo real donde cada alumno queda catalogado en 3 segundos, revisado en foco y luz al instante en set, y con galería lista para padres de familia el mismo día."*
+1. **La Propuesta de Valor para Colegios / Familias (B2B Local):**
+   > *"En Captoora contamos con una arquitectura de captura digital de alta velocidad y fidelidad óptica calibrada: cada alumno cuenta con su propia galería digital privada en alta resolución protegida con acceso individual, asegurando tiempos de entrega récord en menos de 48 horas sin retrasar las actividades del colegio."*
 
-2. **La Oferta para otros Fotógrafos (SaaS B2B):**
-   > *"Conecta tu Canon o Nikon a tu compu. Olvídate de los menús viejos. Háblale a tu cámara, dispara sin tocarla y ten a un director de fotografía con IA en tu oreja guiándote en cada toma por $19 dólares al mes."*
+2. **La Oferta para Fotógrafos / Creadores (SaaS B2B):**
+   > *"PhotoDev Tools: Conecta tu cámara réflex o mirrorless (Canon, Nikon, Sony) y toma el control total en tiempo real sin perder tiempo en menús. Disparo con manos libres, calibración lumínica instantánea y visualización de ultra-definición directo en tu monitor."*
 
 ---
 
@@ -101,4 +106,4 @@ Aprovechando la base que ya tenemos de Pixieset y scrapping de colegios:
 - [ ] **Fase 1: Motor Universal Multi-Cámara** (Abstracción limpia para Canon PTP, Nikon PTP y Canon CCAPI Wi-Fi).
 - [ ] **Fase 2: Arquitectura de Micro-Módulos con AI Router** (Desacoplar la UI para que sea minimalista estilo Apple Liquid Glass con el Halo Cursor de Antigravity).
 - [ ] **Fase 3: Módulo de Fotografía Escolar/Volumen** (Lector QR/Código de barras por webcam o escáner USB + roster CSV).
-- [ ] **Fase 4: Landing Page Comercial de PhotoDev Tools** con demo interactiva y pasarela de pago (Stripe).
+- [x] **Fase 4: Landing Page Comercial de PhotoDev Tools** con demo interactiva y pasarela de pago (Stripe).

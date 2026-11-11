@@ -1,0 +1,2484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhotoDev Tools — Control de Cámara en Tiempo Real & Captura Computacional</title>
+  <meta name="description" content="PhotoDev Tools por Captoora: Control directo de cámara sin menús, telemetría óptica instantánea, disparo manos libres y flujos de captura de volumen para colegios con entrega récord en menos de 48 horas." />
+  
+  <!-- Tipografía Apple VisionOS / SF Style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       VARIABLES Y PALETA APPLE LIQUID GLASS (visionOS)
+       ========================================================================== */
+    :root {
+      --bg-dark: #07090e;
+      --bg-gradient: radial-gradient(circle at 18% 12%, rgba(56, 189, 248, 0.14) 0%, transparent 45%),
+                     radial-gradient(circle at 82% 28%, rgba(123, 97, 255, 0.16) 0%, transparent 50%),
+                     radial-gradient(circle at 50% 88%, rgba(212, 163, 89, 0.12) 0%, transparent 55%),
+                     #07090e;
+
+      /* Glassmorphism Líquido */
+      --glass-bg: rgba(18, 22, 34, 0.62);
+      --glass-bg-hover: rgba(26, 32, 48, 0.72);
+      --glass-bg-card: rgba(14, 18, 28, 0.68);
+      --glass-border: rgba(255, 255, 255, 0.14);
+      --glass-border-light: rgba(255, 255, 255, 0.22);
+      --glass-border-subtle: rgba(255, 255, 255, 0.07);
+      --glass-specular: inset 0 1px 1px 0 rgba(255, 255, 255, 0.28);
+      --glass-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.65);
+      --glass-glow: 0 0 35px rgba(56, 189, 248, 0.18);
+
+      /* Acentos Cromáticos */
+      --accent-gold: #d4a359;
+      --accent-gold-glow: rgba(212, 163, 89, 0.35);
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.35);
+      --accent-violet: #8b5cf6;
+      --accent-emerald: #10b981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.35);
+
+      /* Texto */
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+
+      /* Tipografía */
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-pill: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      min-height: 100vh;
+      line-height: 1.55;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Halo Canvas Container: no interfiere con clics */
+    #antigravityHaloCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Contenedor relativo para elevar el contenido sobre el fondo */
+    .page-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       EFECTO LIQUID GLASS & UTILIDADES
+       ========================================================================== */
+    .liquid-glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow), var(--glass-specular);
+      border-radius: var(--radius-lg);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .liquid-glass:hover {
+      border-color: var(--glass-border-light);
+      background: var(--glass-bg-hover);
+    }
+
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--glass-border-light);
+      backdrop-filter: blur(16px);
+      box-shadow: var(--glass-specular);
+    }
+
+    .pill-badge.cyan {
+      color: var(--accent-cyan);
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .pill-badge.gold {
+      color: var(--accent-gold);
+      background: rgba(212, 163, 89, 0.08);
+      border-color: rgba(212, 163, 89, 0.3);
+    }
+
+    .pill-badge.emerald {
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.08);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 10px currentColor;
+      animation: pulseAnim 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseAnim {
+      0%, 100% { opacity: 0.9; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* Botones VisionOS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 26px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+      color: #07090e;
+      box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.3), var(--glass-specular);
+      font-weight: 700;
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 15px 35px -5px rgba(255, 255, 255, 0.5), 0 0 20px rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-main);
+      border-color: var(--glass-border);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--glass-specular);
+    }
+
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--glass-border-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #d4a359 0%, #b88636 100%);
+      color: #07090e;
+      font-weight: 700;
+      box-shadow: 0 10px 25px -5px var(--accent-gold-glow);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px -5px var(--accent-gold-glow), 0 0 25px rgba(212, 163, 89, 0.5);
+    }
+
+    /* Layout Container */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       NAVBAR LIQUID GLASS
+       ========================================================================== */
+    .navbar-container {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      padding: 0 24px;
+      margin-bottom: 30px;
+    }
+
+    .navbar {
+      max-width: 1240px;
+      margin: 0 auto;
+      height: 64px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: var(--radius-pill);
+      background: rgba(14, 18, 28, 0.72);
+      backdrop-filter: blur(28px) saturate(200%);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), var(--glass-specular);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      color: var(--accent-gold);
+    }
+
+    .brand-text {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-text span {
+      color: var(--accent-gold);
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding: 60px 0 90px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(38px, 5.5vw, 68px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      max-width: 980px;
+      margin: 0 auto 24px;
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 70%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title .highlight-gold {
+      background: linear-gradient(135deg, #ffd787 0%, #d4a359 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      font-size: clamp(17px, 2vw, 20px);
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto 40px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .compatibility-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 8px 18px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--glass-border-subtle);
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    .compatibility-strip strong {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       SIMULADOR INTERACTIVO DE VISOR FULL-FRAME (visionOS HUD)
+       ========================================================================== */
+    .demo-wrapper {
+      margin-top: 55px;
+      position: relative;
+    }
+
+    .demo-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 70%;
+      background: radial-gradient(ellipse, rgba(56, 189, 248, 0.18) 0%, rgba(139, 92, 246, 0.1) 45%, transparent 70%);
+      filter: blur(60px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .camera-hud-card {
+      position: relative;
+      z-index: 2;
+      background: rgba(11, 14, 22, 0.85);
+      backdrop-filter: blur(32px) saturate(210%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px -25px rgba(0, 0, 0, 0.8), var(--glass-specular);
+    }
+
+    /* Barra Superior del Visor */
+    .hud-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom: 1px solid var(--glass-border-subtle);
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+
+    .hud-cam-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cam-badge {
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.05em;
+    }
+
+    .hud-controls-live {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: var(--text-muted);
+    }
+
+    .hud-param {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hud-param-label {
+      font-size: 9px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hud-param-val {
+      font-weight: 700;
+      color: var(--text-main);
+      font-size: 14px;
+    }
+
+    /* Visor Central de Imagen */
+    .hud-viewport {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      background: #090c14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Flash de obturador para simulación */
+    .hud-shutter-flash {
+      position: absolute;
+      inset: 0;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 50;
+      transition: opacity 0.08s ease-out;
+    }
+
+    /* Gráfica de Sujeto en Estudio */
+    .simulated-studio-scene {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: filter 0.4s ease;
+    }
+
+    .studio-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 40%, #1e2638 0%, #0d111a 60%, #06080d 100%);
+      transition: filter 0.4s ease;
+    }
+
+    .studio-portrait-svg {
+      width: 320px;
+      height: 380px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Retícula de Enfoque Ocular Dinámica */
+    .focus-reticle {
+      position: absolute;
+      top: 36%;
+      left: 51.5%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border: 1.5px solid #10b981;
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.45);
+      animation: focusLockAnim 3s infinite ease-in-out;
+      transition: all 0.3s ease;
+    }
+
+    .focus-reticle::after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: #10b981;
+      border-radius: 50%;
+    }
+
+    .focus-label {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: #34d399;
+      background: rgba(6, 78, 59, 0.85);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(16, 185, 129, 0.4);
+    }
+
+    @keyframes focusLockAnim {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(0.96); }
+    }
+
+    /* Telemetría Flotante Overlay (visionOS Widgets) */
+    .hud-overlay-left, .hud-overlay-right {
+      position: absolute;
+      top: 20px;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      pointer-events: auto;
+    }
+
+    .hud-overlay-left { left: 20px; }
+    .hud-overlay-right { right: 20px; }
+
+    .hud-telemetry-chip {
+      background: rgba(10, 14, 23, 0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .telemetry-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 4px;
+    }
+
+    .telemetry-row:last-child { margin-bottom: 0; }
+
+    .telemetry-tag { color: var(--text-dim); }
+    .telemetry-num { color: #38bdf8; font-weight: 600; }
+
+    /* Mini Histograma Dinámico */
+    .mini-histogram {
+      width: 140px;
+      height: 38px;
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      padding-top: 6px;
+    }
+
+    .hist-bar {
+      flex: 1;
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.8) 0%, rgba(139, 92, 246, 0.4) 100%);
+      border-radius: 2px 2px 0 0;
+      transition: height 0.3s ease;
+    }
+
+    /* Barra Inferior del Visor: Intenciones Interactivas */
+    .hud-footer {
+      padding: 18px 24px;
+      background: rgba(15, 19, 30, 0.95);
+      border-top: 1px solid var(--glass-border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intent-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .intent-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-right: 6px;
+    }
+
+    .intent-btn {
+      padding: 8px 16px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      color: var(--text-main);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .intent-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .intent-btn.active {
+      background: rgba(56, 189, 248, 0.16);
+      border-color: var(--accent-cyan);
+      color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+
+    .hud-shutter-action {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .trigger-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4), var(--glass-specular);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .trigger-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(239, 68, 68, 0.6);
+    }
+
+    .trigger-btn:active {
+      transform: scale(0.96);
+    }
+
+    .voice-badge-live {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--glass-border-subtle);
+    }
+
+    /* Carrete de Miniaturas en Vivo */
+    .hud-filmstrip {
+      padding: 12px 24px;
+      background: rgba(7, 9, 14, 0.98);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow-x: auto;
+    }
+
+    .filmstrip-label {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .filmstrip-thumbs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .thumb-item {
+      width: 48px;
+      height: 34px;
+      border-radius: 6px;
+      background: #1e293b;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .thumb-item.active {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 10px rgba(212, 163, 89, 0.4);
+    }
+
+    .thumb-item img, .thumb-item svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: MATRIZ COMPARATIVA DE SOLUCIONES
+       ========================================================================== */
+    .section-py {
+      padding: 100px 0;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 60px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .matrix-card {
+      padding: 36px;
+      border-radius: 28px;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    @media (max-width: 840px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .col-header {
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .col-header.traditional {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-dim);
+      border: 1px solid var(--glass-border-subtle);
+    }
+
+    .col-header.photodev {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+    }
+
+    .matrix-row {
+      display: contents;
+    }
+
+    .matrix-cell {
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--glass-border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .matrix-feature {
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .matrix-feature span {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 3px;
+    }
+
+    .matrix-bad {
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .matrix-good {
+      color: #f8fafc;
+      font-weight: 600;
+      background: rgba(56, 189, 248, 0.06);
+      border-color: rgba(56, 189, 248, 0.2);
+    }
+
+    .matrix-good svg {
+      color: #34d399;
+      flex-shrink: 0;
+    }
+
+    .savings-banner {
+      margin-top: 32px;
+      padding: 22px 28px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, rgba(212, 163, 89, 0.15) 0%, rgba(56, 189, 248, 0.1) 100%);
+      border: 1px solid rgba(212, 163, 89, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .savings-title {
+      font-weight: 700;
+      color: #ffd787;
+      font-size: 16px;
+    }
+
+    .savings-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: COLEGIOS & SESIONES DE VOLUMEN (48H GUARANTEE)
+       ========================================================================== */
+    .volume-feature-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    @media (max-width: 960px) {
+      .volume-feature-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .volume-text-block {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .volume-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 10px;
+    }
+
+    .step-card {
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--glass-border-subtle);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: all 0.25s ease;
+    }
+
+    .step-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--glass-border);
+      transform: translateX(6px);
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .step-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text-main);
+    }
+
+    .step-content p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Interactivo del Escáner Escolar */
+    .qr-interactive-card {
+      padding: 30px;
+      border-radius: 28px;
+      background: rgba(14, 18, 28, 0.85);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scanner-viewbox {
+      width: 100%;
+      height: 260px;
+      background: #090c14;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .scanner-laser-line {
+      position: absolute;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: #ef4444;
+      box-shadow: 0 0 14px #ef4444, 0 0 25px #ef4444;
+      animation: laserScan 2.4s infinite ease-in-out;
+      z-index: 10;
+    }
+
+    @keyframes laserScan {
+      0%, 100% { top: 15%; opacity: 0.8; }
+      50% { top: 85%; opacity: 1; }
+    }
+
+    .simulated-student-badge {
+      width: 220px;
+      padding: 16px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      backdrop-filter: blur(12px);
+    }
+
+    .badge-qr-code {
+      width: 58px;
+      height: 58px;
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-info {
+      font-size: 12px;
+    }
+
+    .badge-name {
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .badge-grade {
+      color: var(--accent-cyan);
+      font-size: 11px;
+    }
+
+    .badge-id {
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      font-size: 10px;
+      margin-top: 2px;
+    }
+
+    .scanner-log-console {
+      padding: 14px 18px;
+      background: #06080d;
+      border-radius: 12px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #34d399;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      min-height: 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .scanner-action-btn {
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    /* ==========================================================================
+       SECCIÓN: PLANES COMERCIALES (STRIPE-READY)
+       ========================================================================== */
+    .pricing-toggle-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 50px;
+    }
+
+    .toggle-pill {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      border-radius: var(--radius-pill);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+    }
+
+    .toggle-opt {
+      padding: 8px 20px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      background: transparent;
+    }
+
+    .toggle-opt.active {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--text-main);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .annual-discount-pill {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 980px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .plan-card {
+      padding: 36px 30px;
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .plan-card.featured {
+      background: rgba(22, 28, 44, 0.85);
+      border-color: rgba(212, 163, 89, 0.5);
+      box-shadow: 0 30px 70px -15px rgba(212, 163, 89, 0.25), var(--glass-specular);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 16px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, #d4a359 0%, #b88636 100%);
+      color: #07090e;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 6px 15px rgba(212, 163, 89, 0.4);
+    }
+
+    .plan-header {
+      margin-bottom: 24px;
+    }
+
+    .plan-title {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .plan-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      min-height: 40px;
+    }
+
+    .plan-price-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 20px 0 24px;
+    }
+
+    .price-currency {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .price-value {
+      font-size: 46px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+    }
+
+    .price-period {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .plan-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+
+    .plan-features-list li {
+      font-size: 13.5px;
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.45;
+    }
+
+    .plan-features-list li svg {
+      width: 16px;
+      height: 16px;
+      color: #34d399;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .plan-cta-btn {
+      width: 100%;
+    }
+
+    /* ==========================================================================
+       MODAL CHECKOUT STRIPE-READY (visionOS Glass)
+       ========================================================================== */
+    .checkout-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 6, 10, 0.75);
+      backdrop-filter: blur(20px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .checkout-modal-backdrop.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .checkout-glass-box {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(17, 22, 35, 0.92);
+      backdrop-filter: blur(36px) saturate(220%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.8), var(--glass-specular);
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .checkout-modal-backdrop.active .checkout-glass-box {
+      transform: scale(1);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--glass-border);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #fff;
+    }
+
+    .modal-head {
+      margin-bottom: 24px;
+    }
+
+    .modal-head h3 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .modal-plan-summary {
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--glass-border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--glass-border);
+      color: #fff;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .stripe-badge-strip {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* Toast de Notificación */
+    .toast-msg {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: rgba(16, 185, 129, 0.95);
+      color: #ffffff;
+      padding: 14px 22px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      font-size: 13.5px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      z-index: 2000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .footer {
+      border-top: 1px solid var(--glass-border-subtle);
+      padding: 60px 0 40px;
+      margin-top: 60px;
+      background: rgba(7, 9, 14, 0.9);
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: 860px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      max-width: 320px;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-col h5 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-main);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-cyan);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 12px;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       ANTIGRAVITY HALO CURSOR (CANVAS ORBITAL BACKGROUND)
+       ======================================================================== -->
+  <canvas id="antigravityHaloCanvas"></canvas>
+
+  <div class="page-wrapper">
+
+    <!-- ======================================================================
+         NAVBAR LIQUID GLASS
+         ====================================================================== -->
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#" class="nav-brand">
+          <div class="brand-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+          </div>
+          <div class="brand-text">CAPTOORA <span>PHOTODEV</span></div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#tecnologia">Tecnología</a></li>
+          <li><a href="#comparativa">Comparativa</a></li>
+          <li><a href="#colegios">Colegios & Volumen</a></li>
+          <li><a href="#planes">Planes Comerciales</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="index.html" class="btn btn-primary" title="Abrir consola de Tethering USB">
+            <span>Iniciar Sesión en Vivo</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <header class="hero-section" id="tecnologia">
+      <div class="container">
+        
+        <div class="hero-badge-wrap">
+          <div class="pill-badge cyan">
+            <span class="pulse-dot"></span>
+            Tecnología de Punta · Control de Cámara en Tiempo Real
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          El Control de Cámara Más Rápido del Mundo. <br />
+          <span class="highlight-gold">Cero Menús. Máxima Fidelidad Óptica.</span>
+        </h1>
+
+        <p class="hero-description">
+          Conecta tu cámara réflex o mirrorless (Canon, Nikon, Sony) y toma el control total en tiempo real. 
+          Sistemas de captura computacional, flujo óptico calibrado y galerías privadas con entrega récord en menos de 48 horas.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="index.html" class="btn btn-primary" style="padding: 16px 36px; font-size: 15px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <span>Probar en Vivo Ahora (Tethering USB)</span>
+          </a>
+
+          <a href="#planes" class="btn btn-glass" style="padding: 16px 30px; font-size: 15px;">
+            <span>Ver Planes & Precios</span>
+          </a>
+        </div>
+
+        <div class="compatibility-strip">
+          <span>Arquitectura Compatible:</span>
+          <strong>Canon EOS PTP & CCAPI</strong> · 
+          <strong>Nikon Z Series</strong> · 
+          <strong>Sony Alpha USB</strong> · 
+          <strong>macOS & Windows 11</strong>
+        </div>
+
+        <!-- ==================================================================
+             SIMULADOR INTERACTIVO DE VISOR FULL-FRAME (visionOS HUD)
+             ================================================================== -->
+        <div class="demo-wrapper">
+          <div class="demo-glow"></div>
+          
+          <div class="camera-hud-card liquid-glass">
+            <!-- Barra superior del visor -->
+            <div class="hud-header">
+              <div class="hud-cam-info">
+                <span class="cam-badge">CANON 7D MARK II · CONECTADA</span>
+                <span style="color: var(--text-dim);">SENSOR FULL-FRAME / APS-C OPTIMIZADO</span>
+              </div>
+
+              <div class="hud-controls-live">
+                <div class="hud-param">
+                  <span class="hud-param-label">Velocidad</span>
+                  <span class="hud-param-val" id="hudShutter">1/250s</span>
+                </div>
+                <div class="hud-param">
+                  <span class="hud-param-label">Diafragma</span>
+                  <span class="hud-param-val" id="hudAperture" style="color: #ffd787;">f/1.8</span>
+                </div>
+                <div class="hud-param">
+                  <span class="hud-param-label">Sensibilidad</span>
+                  <span class="hud-param-val" id="hudISO">ISO 100</span>
+                </div>
+                <div class="hud-param">
+                  <span class="hud-param-label">Kelvin</span>
+                  <span class="hud-param-val" id="hudKelvin">5600K</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visor Gráfico Central -->
+            <div class="hud-viewport" id="viewportStage">
+              <div class="hud-shutter-flash" id="demoFlash"></div>
+
+              <!-- Fondo del Estudio Simulado -->
+              <div class="studio-bg" id="studioBackground"></div>
+
+              <!-- Retrato de Estudio Simulado SVG Ultra Nítido -->
+              <div class="simulated-studio-scene" id="studioScene">
+                <svg class="studio-portrait-svg" viewBox="0 0 320 380" fill="none">
+                  <!-- Gradiente de iluminación de estudio -->
+                  <defs>
+                    <radialGradient id="keyLightGlow" cx="45%" cy="30%" r="65%">
+                      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.32" />
+                      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.08" />
+                      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#f8d7bb" />
+                      <stop offset="100%" stop-color="#c9916a" />
+                    </linearGradient>
+                    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#2d221c" />
+                      <stop offset="100%" stop-color="#120e0c" />
+                    </linearGradient>
+                  </defs>
+
+                  <!-- Halo de contraluz de estudio (Rim Light) -->
+                  <circle cx="160" cy="170" r="140" fill="url(#keyLightGlow)" />
+
+                  <!-- Hombros y Ropa elegante -->
+                  <path d="M70 370 C90 300, 120 270, 160 270 C200 270, 230 300, 250 370 Z" fill="#1e2230" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" />
+                  
+                  <!-- Cuello -->
+                  <path d="M142 220 L178 220 L180 275 L140 275 Z" fill="#d99f78" />
+
+                  <!-- Cabeza y Cabello -->
+                  <path d="M115 130 C110 70, 210 70, 205 130 C212 165, 210 215, 160 235 C110 215, 108 165, 115 130 Z" fill="url(#skinTone)" />
+                  <path d="M110 135 C105 85, 140 50, 160 50 C180 50, 215 85, 210 135 C200 100, 175 90, 160 90 C145 90, 120 100, 110 135 Z" fill="url(#hairGrad)" />
+
+                  <!-- Rasgos faciales estilizados y Ojos para Tracking -->
+                  <!-- Ojo Izquierdo -->
+                  <circle cx="145" cy="145" r="4.5" fill="#1b1c22" />
+                  <circle cx="146.2" cy="143.8" r="1.5" fill="#ffffff" />
+                  <!-- Ojo Derecho (Punto de Enfoque Crítico) -->
+                  <circle cx="175" cy="145" r="4.5" fill="#1b1c22" />
+                  <circle cx="176.2" cy="143.8" r="1.5" fill="#ffffff" />
+
+                  <!-- Nariz y Labios -->
+                  <path d="M160 148 L158 166 L163 166" stroke="#b37652" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M150 182 Q160 188 170 182" stroke="#ab4e48" stroke-width="2.5" stroke-linecap="round" fill="none" />
+                </svg>
+              </div>
+
+              <!-- Retícula de Enfoque Ocular Activa -->
+              <div class="focus-reticle" id="reticlePupil">
+                <span class="focus-label">PUPIL FOCUS · 99.8%</span>
+              </div>
+
+              <!-- Telemetría Flotante Overlay Izquierda -->
+              <div class="hud-overlay-left">
+                <div class="hud-telemetry-chip">
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">KEY-TO-FILL</span>
+                    <span class="telemetry-num" id="telemetryRatio">2.8 : 1</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">CLIPPING LUCES</span>
+                    <span class="telemetry-num" style="color: #34d399;">0.0% (SEGURO)</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">TREPIDACIÓN</span>
+                    <span class="telemetry-num" style="color: #34d399;">NULA (1/250s)</span>
+                  </div>
+                </div>
+
+                <div class="hud-telemetry-chip">
+                  <span class="telemetry-tag" style="display:block; margin-bottom: 4px;">HISTOGRAMA DINÁMICO</span>
+                  <div class="mini-histogram">
+                    <div class="hist-bar" style="height: 25%;"></div>
+                    <div class="hist-bar" style="height: 45%;"></div>
+                    <div class="hist-bar" style="height: 70%;"></div>
+                    <div class="hist-bar" style="height: 92%;"></div>
+                    <div class="hist-bar" style="height: 80%;"></div>
+                    <div class="hist-bar" style="height: 55%;"></div>
+                    <div class="hist-bar" style="height: 30%;"></div>
+                    <div class="hist-bar" style="height: 12%;"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Telemetría Flotante Overlay Derecha -->
+              <div class="hud-overlay-right">
+                <div class="hud-telemetry-chip">
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">RESOLUCIÓN</span>
+                    <span class="telemetry-num">5472 x 3648</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">LATENCIA VISOR</span>
+                    <span class="telemetry-num" style="color: #34d399;">18 ms</span>
+                  </div>
+                  <div class="telemetry-row">
+                    <span class="telemetry-tag">PERFIL COLOR</span>
+                    <span class="telemetry-num">sRGB Calibrado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Barra de Intenciones Interactivas en Vivo -->
+            <div class="hud-footer">
+              <div class="intent-selector">
+                <span class="intent-label">Enrutador de Intenciones:</span>
+                <button class="intent-btn active" id="btnBokeh" onclick="selectIntent('bokeh')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                  </svg>
+                  <span>Fondo Desenfocado (Bokeh)</span>
+                </button>
+
+                <button class="intent-btn" id="btnStudio" onclick="selectIntent('studio')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <span>Calibrar Luz de Estudio</span>
+                </button>
+
+                <button class="intent-btn" id="btnAction" onclick="selectIntent('action')">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                  </svg>
+                  <span>Congelar Acción Rápida</span>
+                </button>
+              </div>
+
+              <div class="hud-shutter-action">
+                <div class="voice-badge-live">
+                  <span class="pulse-dot" style="color: #38bdf8;"></span>
+                  <span>Modo Voz: "Disparar"</span>
+                </div>
+
+                <button class="trigger-btn" onclick="simulateShutterTrigger()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <circle cx="12" cy="12" r="9"></circle>
+                  </svg>
+                  <span>Disparar Obturador</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Carrete de Miniaturas Capturadas en Vivo -->
+            <div class="hud-filmstrip">
+              <span class="filmstrip-label">Carrete en Vivo:</span>
+              <div class="filmstrip-thumbs" id="filmstripContainer">
+                <div class="thumb-item active" title="Toma #004 (f/1.8 · 1/250s)">
+                  <svg viewBox="0 0 48 34" fill="#1e2638"><rect width="48" height="34" fill="#1b2234"/><circle cx="24" cy="17" r="8" fill="#d99f78"/></svg>
+                </div>
+                <div class="thumb-item" title="Toma #003 (f/2.8 · 1/250s)">
+                  <svg viewBox="0 0 48 34" fill="#1e2638"><rect width="48" height="34" fill="#141a28"/><circle cx="24" cy="17" r="8" fill="#c9916a"/></svg>
+                </div>
+                <div class="thumb-item" title="Toma #002 (f/4.0 · 1/160s)">
+                  <svg viewBox="0 0 48 34" fill="#1e2638"><rect width="48" height="34" fill="#161e30"/><circle cx="24" cy="17" r="8" fill="#e0ab88"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ======================================================================
+         SECCIÓN: MATRIZ COMPARATIVA DE SOLUCIONES
+         ====================================================================== -->
+    <section class="section-py" id="comparativa">
+      <div class="container">
+        <div class="section-head">
+          <div class="pill-badge gold" style="margin-bottom: 14px;">
+            Eficiencia & Flujo de Trabajo
+          </div>
+          <h2 class="section-title">
+            Diseñado para Fotógrafos que Valoran Cada Minuto en el Set
+          </h2>
+          <p class="section-desc">
+            Olvídate de pantallas saturadas de 300 botones y menús arcaicos. PhotoDev Tools te otorga control de cámara directo con fidelidad óptica instantánea.
+          </p>
+        </div>
+
+        <div class="matrix-card liquid-glass">
+          <div class="comparison-grid">
+            <!-- Headers -->
+            <div class="col-header" style="color: var(--text-dim);">Capacidad Técnica</div>
+            <div class="col-header traditional">Flujos Tradicionales</div>
+            <div class="col-header photodev">Captoora PhotoDev Tools</div>
+
+            <!-- Fila 1: Control de Parámetros -->
+            <div class="matrix-cell matrix-feature">
+              Control de Exposición y Óptica
+              <span>Modificación de diafragma, obturación e ISO</span>
+            </div>
+            <div class="matrix-cell matrix-bad">
+              Navegación manual por menús físicos o barras complejas de software.
+            </div>
+            <div class="matrix-cell matrix-good">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Enrutador de Intenciones directas y comandos por voz en tiempo real.
+            </div>
+
+            <!-- Fila 2: Verificación de Nitidez -->
+            <div class="matrix-cell matrix-feature">
+              Telemetría y Enfoque Crítico
+              <span>Verificación de foco ocular y nitidez al 100%</span>
+            </div>
+            <div class="matrix-cell matrix-bad">
+              Zoom manual foto por foto en la pantalla trasera de la cámara.
+            </div>
+            <div class="matrix-cell matrix-good">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Detección de foco ocular instantánea y ratio lumínico cantado en el visor.
+            </div>
+
+            <!-- Fila 3: Disparo Manos Libres -->
+            <div class="matrix-cell matrix-feature">
+              Dirección de Modelo & Manos Libres
+              <span>Libertad de movimiento mientras diriges poses</span>
+            </div>
+            <div class="matrix-cell matrix-bad">
+              Pegado al botón físico o usando disparadores remotos de bolsillo.
+            </div>
+            <div class="matrix-cell matrix-good">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Disparo por voz continuo sin soltar reflectores ni perder conexión visual.
+            </div>
+
+            <!-- Fila 4: Fotografía Escolar y Masiva -->
+            <div class="matrix-cell matrix-feature">
+              Asociación de Sesiones de Volumen
+              <span>Control de nombres, matrículas y entrega por alumno</span>
+            </div>
+            <div class="matrix-cell matrix-bad">
+              Listas en papel, fotos a pizarras y horas de renombrado manual nocturno.
+            </div>
+            <div class="matrix-cell matrix-good">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Escaneo óptico QR previo que indexa RAW + JPG automáticamente.
+            </div>
+
+            <!-- Fila 5: Tiempo de Entrega -->
+            <div class="matrix-cell matrix-feature">
+              Plazos de Entrega a Familias / Clientes
+              <span>Tiempo desde la captura hasta la galería privada</span>
+            </div>
+            <div class="matrix-cell matrix-bad">
+              De 7 a 15 días promedio por el cuello de botella organizativo.
+            </div>
+            <div class="matrix-cell matrix-good">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Entregas récord garantizadas en menos de 48 horas.
+            </div>
+          </div>
+
+          <div class="savings-banner">
+            <div>
+              <div class="savings-title">Rendimiento Operativo Comprobado</div>
+              <div class="savings-subtitle">Ahorro promedio de 3.5 horas por jornada de estudio y 2 días de trabajo administrativo en eventos escolares.</div>
+            </div>
+            <a href="index.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 13px;">
+              Experimentar en Set
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN: COLEGIOS Y SESIONES DE VOLUMEN (48H GUARANTEE)
+         ====================================================================== -->
+    <section class="section-py" id="colegios">
+      <div class="container">
+        <div class="volume-feature-wrap">
+          
+          <div class="volume-text-block">
+            <div class="pill-badge emerald">
+              <span class="pulse-dot"></span>
+              Sistemas de Captura Computacional para Colegios
+            </div>
+
+            <h2 class="section-title" style="margin-bottom: 0;">
+              Arquitectura de Captura de Alta Velocidad y Fidelidad Óptica Calibrada
+            </h2>
+
+            <p class="section-desc">
+              En Captoora contamos con una arquitectura de captura digital de alta velocidad y fidelidad óptica calibrada: cada alumno cuenta con su propia galería digital privada en alta resolución protegida con acceso individual, asegurando tiempos de entrega récord en menos de 48 horas sin retrasar las actividades del colegio.
+            </p>
+
+            <div class="volume-steps">
+              <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                  <h4>Escaneo Óptico Instantáneo (<0.1s)</h4>
+                  <p>Escanea el código QR o de barras del gafete del alumno frente a la webcam o lector USB para vincular su perfil en el acto.</p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                  <h4>Captura Full-Frame Indexada</h4>
+                  <p>Cada disparo almacena RAW y JPG calibrado ya renombrado con la matrícula y grado escolar exacto. Cero confusión de archivos.</p>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                  <h4>Galería Privada Familiar en <48 Horas</h4>
+                  <p>Las familias reciben un enlace protegido exclusivo para ordenar sus paquetes de fotografías con selección instantánea en tablet o móvil.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Módulo Interactivo de Simulación de Escaneo Escolar -->
+          <div class="qr-interactive-card liquid-glass">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+              <span style="font-weight: 700; font-size: 15px;">Simulador de Escáner Escolar</span>
+              <span class="pill-badge cyan" style="font-size: 11px;">Módulo Volumen v2.0</span>
+            </div>
+
+            <div class="scanner-viewbox">
+              <div class="scanner-laser-line"></div>
+              
+              <div class="simulated-student-badge">
+                <div class="badge-qr-code">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="#000000">
+                    <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14 0h4v4h-4v-4zm-4 4h4v2h-4v-2zm0-4h2v2h-2v-2zm4-4h2v2h-2v-2zm-2 2h2v2h-2v-2z"></path>
+                  </svg>
+                </div>
+                <div class="badge-info">
+                  <div class="badge-name" id="badgeStudentName">Sofía Ramos Vega</div>
+                  <div class="badge-grade" id="badgeStudentGrade">Primaria · 5° Grado B</div>
+                  <div class="badge-id" id="badgeStudentId">ID: MAT-2026-8942</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="scanner-log-console" id="scannerConsole">
+              <div>[SISTEMA DE VOLUMEN]: Esperando escaneo de gafete escolar...</div>
+              <div style="color: var(--text-dim);">Lista escolar cargada: 420 alumnos registrados.</div>
+            </div>
+
+            <button class="btn btn-primary scanner-action-btn" onclick="triggerStudentScan()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"></path>
+              </svg>
+              <span>Escanear Alumno Simulado (Vincular RAW)</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECCIÓN: PLANES COMERCIALES (STRIPE-READY)
+         ====================================================================== -->
+    <section class="section-py" id="planes">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="pill-badge cyan" style="margin-bottom: 14px;">
+            Inversión Transparente
+          </div>
+          <h2 class="section-title">
+            Elige el Nivel de Flujo de Trabajo que Necesita tu Estudio
+          </h2>
+          <p class="section-desc">
+            Comienza gratis con el Antimanual y tethering esencial, o desata el control hands-free con telemetría óptica avanzada y captura de volumen.
+          </p>
+        </div>
+
+        <!-- Toggle Mensual / Anual -->
+        <div class="pricing-toggle-wrap">
+          <div class="toggle-pill">
+            <button class="toggle-opt active" id="btnPeriodMonthly" onclick="setBillingPeriod('monthly')">Facturación Mensual</button>
+            <button class="toggle-opt" id="btnPeriodAnnual" onclick="setBillingPeriod('annual')">Facturación Anual</button>
+          </div>
+          <div class="annual-discount-pill">2 Meses de Cortesía</div>
+        </div>
+
+        <!-- Tarjetas de Planes -->
+        <div class="pricing-grid">
+          
+          <!-- Plan 1: Starter -->
+          <div class="plan-card liquid-glass">
+            <div class="plan-header">
+              <div class="plan-title">Starter</div>
+              <div class="plan-desc">El punto de partida esencial para fotógrafos que buscan tethering estable y aprender su cámara.</div>
+              <div class="plan-price-wrap">
+                <span class="price-currency">$</span>
+                <span class="price-value">0</span>
+                <span class="price-period">/ para siempre</span>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tethering USB en tiempo real con visor a pantalla completa
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Antimanual Interactivo de Cámaras (Canon, Nikon, Sony)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                15 disparos por voz al día
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Telemetría básica de histograma y luminancia
+              </li>
+            </ul>
+
+            <a href="index.html" class="btn btn-glass plan-cta-btn">
+              <span>Comenzar Gratis</span>
+            </a>
+          </div>
+
+          <!-- Plan 2: Pro Creator (Featured) -->
+          <div class="plan-card featured liquid-glass">
+            <div class="featured-badge">Más Elegido por Creadores</div>
+            <div class="plan-header">
+              <div class="plan-title" style="color: #ffd787;">Pro Creator</div>
+              <div class="plan-desc">Para fotógrafos de retrato, bodas, moda y creadores individuales que disparan en estudio.</div>
+              <div class="plan-price-wrap">
+                <span class="price-currency">$</span>
+                <span class="price-value" id="priceProValue">19</span>
+                <span class="price-period" id="priceProPeriod">USD / mes</span>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Disparos por Voz LIVE Ilimitados</strong> (manos libres en el set)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Piloto Automático Cero-Menús:</strong> traducción de intenciones a comandos PTP (ISO, apertura, obturación)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Director Óptico Computacional:</strong> telemetría en vivo de foco ocular, ratio de luz y alerta de trepidación
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Guías dinámicas de encuadre (Zero-Crop 4:5, 16:9 y portadas)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Soporte prioritario para configuración de estudio
+              </li>
+            </ul>
+
+            <button class="btn btn-gold plan-cta-btn" onclick="openCheckoutModal('pro')">
+              <span>Activar Pro Creator</span>
+            </button>
+          </div>
+
+          <!-- Plan 3: Studio & Volume -->
+          <div class="plan-card liquid-glass">
+            <div class="plan-header">
+              <div class="plan-title">Studio & Volumen</div>
+              <div class="plan-desc">Para estudios comerciales, agencias y fotografía escolar / eventos de alto volumen.</div>
+              <div class="plan-price-wrap">
+                <span class="price-currency">$</span>
+                <span class="price-value" id="priceStudioValue">49</span>
+                <span class="price-period" id="priceStudioPeriod">USD / mes</span>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Todo lo incluido en Pro Creator</strong>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Workflow Escolar con QR / Códigos de Barra</strong> para vinculación automática de RAW + JPG
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Multi-Cámara Tethering en Paralelo</strong> (hasta 3 cámaras sincronizadas)
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>Live Proofing en iPad/Tablet</strong> para selección de fotos en set en vivo
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Arquitectura de entrega récord en <48 horas para colegios
+              </li>
+            </ul>
+
+            <button class="btn btn-primary plan-cta-btn" onclick="openCheckoutModal('studio')">
+              <span>Comenzar Prueba Studio</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         MODAL CHECKOUT STRIPE-READY (visionOS Glass)
+         ====================================================================== -->
+    <div class="checkout-modal-backdrop" id="checkoutModal">
+      <div class="checkout-glass-box">
+        <button class="modal-close-btn" onclick="closeCheckoutModal()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div class="modal-head">
+          <div class="pill-badge gold" style="font-size: 11px; margin-bottom: 8px;">Pasarela de Pago Segura</div>
+          <h3 id="modalPlanTitle">Suscripción Pro Creator</h3>
+          <p style="font-size: 13px; color: var(--text-muted);">Acceso inmediato a la suite completa de tethering computacional.</p>
+        </div>
+
+        <div class="modal-plan-summary">
+          <div>
+            <div style="font-weight: 700; font-size: 14px;" id="modalPlanName">PhotoDev Pro Creator</div>
+            <div style="font-size: 12px; color: var(--text-dim);" id="modalPlanPeriodSub">Facturación mensual recurrente</div>
+          </div>
+          <div style="font-size: 20px; font-weight: 800; color: #ffd787;" id="modalPlanPriceDisplay">$19 USD</div>
+        </div>
+
+        <form id="stripeCheckoutForm" onsubmit="handleStripeSubmit(event)">
+          <div class="form-group">
+            <label>Correo Electrónico para la Licencia</label>
+            <input type="email" class="form-input" required placeholder="tu@estudiofotografico.com" value="fotografo@captoora.com" />
+          </div>
+
+          <div class="form-group">
+            <label>Información de Tarjeta (Stripe Elements Ready)</label>
+            <div style="position: relative;">
+              <input type="text" class="form-input" required placeholder="4242 •••• •••• 4242" maxlength="19" value="4242 4242 4242 4242" id="cardInput" oninput="formatCardNumber(this)" />
+              <div style="position: absolute; right: 12px; top: 11px; display: flex; gap: 6px;">
+                <svg width="28" height="18" viewBox="0 0 32 20" fill="none"><rect width="32" height="20" rx="3" fill="#1e293b"/><circle cx="12" cy="10" r="6" fill="#eb001b" fill-opacity="0.8"/><circle cx="20" cy="10" r="6" fill="#f79e1b" fill-opacity="0.8"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>Expiración (MM/AA)</label>
+              <input type="text" class="form-input" required placeholder="12/28" maxlength="5" value="12/28" />
+            </div>
+            <div class="form-group">
+              <label>Código CVC</label>
+              <input type="text" class="form-input" required placeholder="CVC" maxlength="4" value="888" />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; padding: 14px; font-size: 15px; margin-top: 8px;" id="btnSubmitPayment">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span id="btnPayText">Pagar $19 USD y Desbloquear Suite</span>
+          </button>
+        </form>
+
+        <div class="stripe-badge-strip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          <span>Encriptación Bancaria TLS de 256-bit · Procesado vía Stripe</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-msg" id="toastMessage">
+      ¡Suscripción activada con éxito! Tu clave de licencia ha sido configurada.
+    </div>
+
+    <!-- ======================================================================
+         FOOTER
+         ====================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="nav-brand">
+              <div class="brand-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <div class="brand-text">CAPTOORA <span>PHOTODEV</span></div>
+            </div>
+            <p>
+              Sistemas de captura computacional y control de cámara en tiempo real para fotógrafos de alto rendimiento y sesiones escolares de volumen.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>Soluciones</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Tethering en Vivo</a></li>
+              <li><a href="#colegios">Fotografía Escolar</a></li>
+              <li><a href="#comparativa">Telemetría Óptica</a></li>
+              <li><a href="#planes">Planes Comerciales</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Cámaras Compatibles</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Canon EOS PTP</a></li>
+              <li><a href="index.html">Canon CCAPI Wi-Fi</a></li>
+              <li><a href="index.html">Nikon Z Mirrorless</a></li>
+              <li><a href="index.html">Sony Alpha USB</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>Seguridad & Soporte</h5>
+            <ul class="footer-links">
+              <li><a href="#">Privacidad de Datos</a></li>
+              <li><a href="#">Galerías Protegidas</a></li>
+              <li><a href="#">Soporte 24/7</a></li>
+              <li><a href="#">Documentación API</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Captoora. Diseñado con fidelidad óptica para la nueva era de la captura digital.</div>
+          <div>Entregas récord garantizadas en menos de 48 horas · Sin menús arcaicos.</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ========================================================================
+       SCRIPTS: ANTIGRAVITY HALO CURSOR ENGINE & LÓGICA INTERACTIVA
+       ======================================================================== -->
+  <script src="assets/js/antigravity_halo_cursor.js"></script>
+  <script>
+    // Fallback de carga por si la ruta cambia según el servidor
+    if (!window.initAntigravityHalo) {
+      const fallbackScript = document.createElement('script');
+      fallbackScript.src = 'antigravity_halo_cursor.js';
+      document.head.appendChild(fallbackScript);
+    }
+
+    // Inicialización del motor orbital Antigravity Halo Cursor
+    window.addEventListener('DOMContentLoaded', () => {
+      const initHalo = () => {
+        if (window.initAntigravityHalo) {
+          window.initAntigravityHalo({
+            particleCount: 260,
+            baseRadius: 65,
+            radiusSpread: 75,
+            palette: [
+              "#38bdf8", // Liquid Cyan
+              "#7b61ff", // Cosmic Violet
+              "#a855f7", // Electric Purple
+              "#d4a359", // Captoora Gold
+              "#ec4899", // Rose Glow
+              "#ffffff"  // High Specular
+            ],
+            opacity: 0.88,
+            zIndex: 1
+          });
+        } else {
+          setTimeout(initHalo, 100);
+        }
+      };
+      initHalo();
+    });
+
+    // ========================================================================
+    // SIMULADOR DE INTENCIONES DE CÁMARA (DEMO INTERACTIVA)
+    // ========================================================================
+    let currentIntent = 'bokeh';
+
+    function selectIntent(intent) {
+      currentIntent = intent;
+      document.querySelectorAll('.intent-btn').forEach(btn => btn.classList.remove('active'));
+
+      const hudShutter = document.getElementById('hudShutter');
+      const hudAperture = document.getElementById('hudAperture');
+      const hudISO = document.getElementById('hudISO');
+      const hudKelvin = document.getElementById('hudKelvin');
+      const studioBackground = document.getElementById('studioBackground');
+      const studioScene = document.getElementById('studioScene');
+      const telemetryRatio = document.getElementById('telemetryRatio');
+      const reticlePupil = document.getElementById('reticlePupil');
+
+      if (intent === 'bokeh') {
+        document.getElementById('btnBokeh').classList.add('active');
+        hudAperture.innerText = 'f/1.4';
+        hudShutter.innerText = '1/500s';
+        hudISO.innerText = 'ISO 100';
+        hudKelvin.innerText = '5600K';
+        telemetryRatio.innerText = '2.4 : 1';
+        
+        // Simular desenfoque de fondo profundo estilo 85mm f/1.4
+        studioBackground.style.filter = 'blur(16px)';
+        studioScene.style.filter = 'none';
+        reticlePupil.style.borderColor = '#10b981';
+      } else if (intent === 'studio') {
+        document.getElementById('btnStudio').classList.add('active');
+        hudAperture.innerText = 'f/8.0';
+        hudShutter.innerText = '1/160s';
+        hudISO.innerText = 'ISO 100';
+        hudKelvin.innerText = '5500K';
+        telemetryRatio.innerText = '3.0 : 1';
+
+        // Iluminación de estudio uniforme y nítida en todo el plano
+        studioBackground.style.filter = 'blur(2px)';
+        studioScene.style.filter = 'contrast(1.08)';
+      } else if (intent === 'action') {
+        document.getElementById('btnAction').classList.add('active');
+        hudAperture.innerText = 'f/2.8';
+        hudShutter.innerText = '1/1600s';
+        hudISO.innerText = 'ISO 800';
+        hudKelvin.innerText = '5800K';
+        telemetryRatio.innerText = '1.8 : 1';
+
+        studioBackground.style.filter = 'blur(6px)';
+        studioScene.style.filter = 'none';
+      }
+    }
+
+    // Simulación de disparo de obturador y captura en el carrete
+    let shotCounter = 5;
+    function simulateShutterTrigger() {
+      const flash = document.getElementById('demoFlash');
+      flash.style.opacity = '1';
+      setTimeout(() => {
+        flash.style.opacity = '0';
+      }, 70);
+
+      // Añadir miniatura al carrete en vivo
+      const filmstrip = document.getElementById('filmstripContainer');
+      const newThumb = document.createElement('div');
+      newThumb.className = 'thumb-item active';
+      newThumb.title = `Toma #00${shotCounter} (${document.getElementById('hudAperture').innerText} · ${document.getElementById('hudShutter').innerText})`;
+      newThumb.innerHTML = `<svg viewBox="0 0 48 34" fill="#1e2638"><rect width="48" height="34" fill="#1f293d"/><circle cx="24" cy="17" r="8" fill="#f0be99"/></svg>`;
+
+      // Quitar active de las anteriores
+      document.querySelectorAll('.thumb-item').forEach(t => t.classList.remove('active'));
+      filmstrip.prepend(newThumb);
+      shotCounter++;
+    }
+
+    // ========================================================================
+    // SIMULADOR DE ESCÁNER DE VOLUMEN (COLEGIOS)
+    // ========================================================================
+    const studentsPool = [
+      { name: "Sofía Ramos Vega", grade: "Primaria · 5° Grado B", id: "MAT-2026-8942" },
+      { name: "Mateo Ortiz Silva", grade: "Secundaria · 2° Grado A", id: "MAT-2026-7731" },
+      { name: "Camila Fernández Lara", grade: "Bachillerato · 6° Semestre", id: "MAT-2026-9014" },
+      { name: "Sebastián Mendoza Cruz", grade: "Primaria · 3° Grado C", id: "MAT-2026-6420" }
+    ];
+    let studentIndex = 0;
+
+    function triggerStudentScan() {
+      studentIndex = (studentIndex + 1) % studentsPool.length;
+      const cur = studentsPool[studentIndex];
+
+      document.getElementById('badgeStudentName').innerText = cur.name;
+      document.getElementById('badgeStudentGrade').innerText = cur.grade;
+      document.getElementById('badgeStudentId').innerText = `ID: ${cur.id}`;
+
+      const consoleBox = document.getElementById('scannerConsole');
+      consoleBox.innerHTML = `
+        <div style="color: #34d399;">✔ [ESCANEO EXITOSO]: ${cur.id} - ${cur.name} (${cur.grade})</div>
+        <div style="color: #ffd787;">⚡ RAW+JPG vinculados automáticamente a carpeta de entrega <48h.</div>
+      `;
+    }
+
+    // ========================================================================
+    // PLANES Y CHECKOUT STRIPE-READY
+    // ========================================================================
+    let currentPeriod = 'monthly'; // 'monthly' | 'annual'
+    let selectedPlan = 'pro';      // 'pro' | 'studio'
+
+    function setBillingPeriod(period) {
+      currentPeriod = period;
+      document.getElementById('btnPeriodMonthly').classList.toggle('active', period === 'monthly');
+      document.getElementById('btnPeriodAnnual').classList.toggle('active', period === 'annual');
+
+      const pricePro = document.getElementById('priceProValue');
+      const periodPro = document.getElementById('priceProPeriod');
+      const priceStudio = document.getElementById('priceStudioValue');
+      const periodStudio = document.getElementById('priceStudioPeriod');
+
+      if (period === 'monthly') {
+        pricePro.innerText = '19';
+        periodPro.innerText = 'USD / mes';
+        priceStudio.innerText = '49';
+        periodStudio.innerText = 'USD / mes';
+      } else {
+        // Tarifa Anual con 2 meses de regalo
+        pricePro.innerText = '149';
+        periodPro.innerText = 'USD / año ($12.4/mes)';
+        priceStudio.innerText = '399';
+        periodStudio.innerText = 'USD / año ($33.2/mes)';
+      }
+    }
+
+    function openCheckoutModal(plan) {
+      selectedPlan = plan;
+      const modal = document.getElementById('checkoutModal');
+      const title = document.getElementById('modalPlanTitle');
+      const name = document.getElementById('modalPlanName');
+      const priceDisp = document.getElementById('modalPlanPriceDisplay');
+      const periodSub = document.getElementById('modalPlanPeriodSub');
+      const payBtnText = document.getElementById('btnPayText');
+
+      if (plan === 'pro') {
+        title.innerText = 'Suscripción PhotoDev Pro Creator';
+        name.innerText = 'PhotoDev Pro Creator';
+        if (currentPeriod === 'monthly') {
+          priceDisp.innerText = '$19 USD';
+          periodSub.innerText = 'Facturación mensual recurrente';
+          payBtnText.innerText = 'Pagar $19 USD y Desbloquear Suite';
+        } else {
+          priceDisp.innerText = '$149 USD';
+          periodSub.innerText = 'Facturación anual con 2 meses gratis';
+          payBtnText.innerText = 'Pagar $149 USD / Año';
+        }
+      } else {
+        title.innerText = 'Suscripción PhotoDev Studio & Volumen';
+        name.innerText = 'PhotoDev Studio & Volumen';
+        if (currentPeriod === 'monthly') {
+          priceDisp.innerText = '$49 USD';
+          periodSub.innerText = 'Facturación mensual para equipos y colegios';
+          payBtnText.innerText = 'Pagar $49 USD y Desbloquear Suite';
+        } else {
+          priceDisp.innerText = '$399 USD';
+          periodSub.innerText = 'Facturación anual ilimitada con 2 meses gratis';
+          payBtnText.innerText = 'Pagar $399 USD / Año';
+        }
+      }
+
+      modal.classList.add('active');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.remove('active');
+    }
+
+    function formatCardNumber(input) {
+      let val = input.value.replace(/\D/g, '');
+      let formatted = '';
+      for (let i = 0; i < val.length; i++) {
+        if (i > 0 && i % 4 === 0) formatted += ' ';
+        formatted += val[i];
+      }
+      input.value = formatted;
+    }
+
+    function handleStripeSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnSubmitPayment');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<span class="pulse-dot" style="display:inline-block; margin-right:8px;"></span> Conectando con Stripe...`;
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        closeCheckoutModal();
+
+        // Mostrar Toast de Éxito
+        const toast = document.getElementById('toastMessage');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 4000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
