@@ -37,3 +37,9 @@ Proyecto de herramientas de desarrollador para fotografía, dentro de `asistente
 - No publicar ni cambiar nada en main sin aprobación.
 - Antes de producir/entregar cualquier pieza visual comercial, leer y aplicar docs/LEY_VISUAL_CAPTOORA.md; toda pieza debe incluir fotografía protagonista, prohibidas entregas solo tipográficas.
 - No guardar contraseñas, códigos ni datos bancarios en el repo.
+
+## Dirección comercial
+- Objetivo: monetizar este programa con una oferta comercial para el nicho de fotógrafos.
+- Primero investigar a la competencia: qué programas similares existen y qué soluciones reales ofrecen.
+- Ofrecer programas que combinen una serie de herramientas, sin saturar al usuario.
+- La IA no es una navaja suiza que lo haga todo: es el puente/conector que dirige cada instrucción a la herramienta correcta, para evitar un cuello de botella.
