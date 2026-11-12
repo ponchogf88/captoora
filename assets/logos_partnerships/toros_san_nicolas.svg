@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="torosGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d90429" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#07060a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hornGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#d90429"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Glow -->
+  <circle cx="200" cy="200" r="180" fill="url(#torosGlow)"/>
+  
+  <!-- Outer Shield Emblem -->
+  <polygon points="200,30 350,90 320,290 200,370 80,290 50,90" fill="#0d0c13" stroke="#d90429" stroke-width="8" stroke-linejoin="round"/>
+  <polygon points="200,45 335,100 308,280 200,352 92,280 65,100" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.6"/>
+
+  <!-- Toros Bull Head & Horns (Helmet Mark of San Nicolas) -->
+  <g transform="translate(0, -10)">
+    <!-- Horns -->
+    <path d="M 120 170 Q 70 80 130 50 Q 150 110 175 140 Z" fill="#ffffff"/>
+    <path d="M 280 170 Q 330 80 270 50 Q 250 110 225 140 Z" fill="#ffffff"/>
+    
+    <!-- Skull / Forehead Armor -->
+    <polygon points="200,100 240,160 215,240 185,240 160,160" fill="#d90429"/>
+    <polygon points="200,115 230,160 208,230 192,230 170,160" fill="#ef233c"/>
+    
+    <!-- Eyes Aggressive -->
+    <polygon points="175,175 190,180 176,186" fill="#ffffff"/>
+    <polygon points="225,175 210,180 224,186" fill="#ffffff"/>
+    
+    <!-- Muzzle & Snout Ring -->
+    <ellipse cx="200" cy="250" rx="32" ry="24" fill="#1b1a24" stroke="#d90429" stroke-width="3"/>
+    <ellipse cx="190" cy="248" rx="5" ry="7" fill="#07060a"/>
+    <ellipse cx="210" cy="248" rx="5" ry="7" fill="#07060a"/>
+    <path d="M 188 262 Q 200 275 212 262" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="200" y="318" font-family="'Cinzel', 'Times New Roman', serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="4">TOROS</text>
+  <text x="200" y="342" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="500" fill="#d90429" text-anchor="middle" letter-spacing="3">SAN NICOLÁS DE LOS GARZA</text>
+</svg>

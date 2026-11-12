@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAPTOORA // Justin Jefferson JJettas Flow · High-Speed Sports Photography</title>
+  <title>CAPTOORA // High-Speed Sports Photography · JJettas Architecture</title>
   <meta name="description" content="Captoora Sports. Cobertura cinematográfica deportiva a 1/1000s en Monterrey y Ciudad de México.">
   <link rel="icon" type="image/png" href="assets/CAPTOORA_FAVICON_512x512.png">
 
-  <!-- FONTS IDENTICAL TO JJETTAS LUXURY ATHLETIC EDITORIAL -->
+  <!-- REFINED LUXURY TYPOGRAPHY (CINZEL, CORMORANT, PLUS JAKARTA, JETBRAINS MONO) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=Syncopate:wght@700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       JJETTAS EXACT ARCHITECTURE & DESIGN SYSTEM
+       JJETTAS LUXURY ATHLETIC EDITORIAL - REFINED ELEGANT TYPOGRAPHY
        ========================================================================== */
     *, *::before, *::after {
       margin: 0;
@@ -24,22 +24,21 @@
     }
 
     :root {
-      --color-ink-deep: #07060a;
-      --color-ink: #0d0c13;
-      --color-ink-card: #14131d;
-      --color-bone: #f6f3ef;
-      --color-bone-muted: rgba(246, 243, 239, 0.65);
-      --color-bone-subtle: rgba(246, 243, 239, 0.16);
+      --color-ink-deep: #060509;
+      --color-ink: #0c0b11;
+      --color-ink-card: #13121b;
+      --color-bone: #f7f4ef;
+      --color-bone-muted: rgba(247, 244, 239, 0.65);
+      --color-bone-subtle: rgba(247, 244, 239, 0.14);
       
       --cyan: #00f0ff;
-      --cyan-glow: rgba(0, 240, 255, 0.45);
+      --cyan-glow: rgba(0, 240, 255, 0.4);
       --lime: #CCFF00;
-      --lime-glow: rgba(204, 255, 0, 0.45);
-      --gold: #f59e0b;
-      --purple: #7950f2;
+      --lime-glow: rgba(204, 255, 0, 0.4);
+      --gold: #d4af37;
       
-      --font-display: 'Syncopate', sans-serif;
-      --font-headline: 'Syne', sans-serif;
+      --font-serif-luxury: 'Cormorant Garamond', serif;
+      --font-display-refined: 'Cinzel', serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
@@ -60,10 +59,10 @@
       font-family: var(--font-body);
       min-height: 100vh;
       overflow-x: hidden;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    /* PEBBLE GRAIN TEXTURE (JJettas Signature Overlay) */
+    /* SUBTLE PEBBLE GRAIN TEXTURE */
     .jj-pebble-overlay {
       position: fixed;
       inset: 0;
@@ -71,12 +70,12 @@
       height: 100%;
       pointer-events: none;
       z-index: 2;
-      opacity: 0.045;
+      opacity: 0.04;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
     /* ==========================================================================
-       LOADER SCREEN (EXACT JJETTAS LOADER)
+       JJETTAS INTRO LOADER (0% -> 100%)
        ========================================================================== */
     .jj-loader-screen {
       position: fixed;
@@ -97,188 +96,157 @@
     }
 
     .jj-loader-mark {
-      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     .jj-loader-logo {
-      width: 80px;
+      width: 74px;
       height: auto;
-      filter: drop-shadow(0 0 25px rgba(204, 255, 0, 0.5));
-      animation: pulseLoaderLogo 1.5s infinite ease-in-out;
+      filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.5));
+      animation: pulseLogo 1.6s infinite ease-in-out;
     }
 
-    @keyframes pulseLoaderLogo {
-      0%, 100% { transform: scale(1); opacity: 0.8; }
+    @keyframes pulseLogo {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
       50% { transform: scale(1.08); opacity: 1; }
     }
 
     .jj-loader-counter {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 4px;
+      font-size: 0.82rem;
+      letter-spacing: 5px;
       color: var(--color-bone);
-      opacity: 0.6;
+      opacity: 0.7;
     }
 
     /* ==========================================================================
-       TOP FIXED NAVIGATION CHROME
+       TOP FIXED NAVIGATION (CENTERED TRANSPARENT LOGO + REFINED TYPOGRAPHY)
        ========================================================================== */
     .jj-site-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 84px;
+      height: 104px;
       padding: 0 clamp(20px, 4.5vw, 64px);
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 1000;
-      background: rgba(7, 6, 10, 0.75);
+      background: rgba(6, 5, 9, 0.82);
       backdrop-filter: blur(28px) saturate(180%);
       -webkit-backdrop-filter: blur(28px) saturate(180%);
       border-bottom: 1px solid var(--color-bone-subtle);
     }
 
-    .jj-nav-logo-link {
+    .nav-left-links {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 28px;
+    }
+
+    .nav-link-refined {
+      color: var(--color-bone-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
       text-decoration: none;
+      transition: color 0.25s ease;
     }
 
-    .jj-nav-logo-link img {
-      height: 42px;
-      width: auto;
-      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
-    }
-
-    .jj-nav-brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .jj-brand-title {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 800;
-      letter-spacing: 3px;
+    .nav-link-refined:hover {
       color: var(--color-bone);
     }
 
-    .jj-brand-edition {
+    /* CENTERED CAPTOORA EMBLEM & TYPOGRAPHY UNDERNEATH */
+    .brand-centered-lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 4px;
+    }
+
+    .brand-logo-img {
+      height: 64px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.3)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+      transition: transform 0.3s ease;
+    }
+
+    .brand-centered-lockup:hover .brand-logo-img {
+      transform: scale(1.08);
+    }
+
+    .brand-title-decent {
+      font-family: var(--font-display-refined);
+      font-size: 0.96rem;
+      font-weight: 500;
+      letter-spacing: 7px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 4px;
+    }
+
+    .brand-subtitle-decent {
       font-family: var(--font-mono);
-      font-size: 0.62rem;
-      letter-spacing: 2px;
+      font-size: 0.58rem;
+      letter-spacing: 2.5px;
       color: var(--cyan);
       text-transform: uppercase;
     }
 
-    .jj-nav-right {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-    }
-
-    .jj-quick-links {
+    .nav-right-actions {
       display: flex;
       align-items: center;
       gap: 24px;
     }
 
-    @media (max-width: 860px) {
-      .jj-quick-links { display: none; }
+    @media (max-width: 900px) {
+      .nav-left-links { display: none; }
+      .brand-centered-lockup { position: static; transform: none; align-items: flex-start; }
     }
 
-    .jj-quick-link {
-      color: var(--color-bone-muted);
+    .nav-cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
       font-family: var(--font-mono);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       text-decoration: none;
-      transition: color 0.2s ease;
+      box-shadow: 0 0 20px var(--lime-glow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .jj-quick-link:hover {
-      color: var(--color-bone);
-    }
-
-    .jj-hamburger-btn {
-      background: transparent;
-      border: none;
-      color: var(--color-bone);
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding: 10px;
-      z-index: 1002;
-    }
-
-    .jj-hamburger-line {
-      width: 28px;
-      height: 2px;
-      background-color: var(--color-bone);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    /* FULLSCREEN JJETTAS MENU DRAWER */
-    .jj-menu-drawer {
-      position: fixed;
-      inset: 0;
-      z-index: 1001;
-      background-color: var(--color-ink-deep);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-
-    .jj-menu-drawer.open {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .jj-menu-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .jj-menu-item {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6vw, 4.8rem);
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      color: transparent;
-      -webkit-text-stroke: 1.5px rgba(246, 243, 239, 0.4);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .jj-menu-item:hover {
-      -webkit-text-stroke: 1.5px var(--lime);
-      color: var(--color-bone);
-      transform: translateY(-4px);
+    .nav-cta-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.65);
     }
 
     /* ==========================================================================
-       HERO EDITORIAL STAGE (WITH VIDEO + MARQUEE + REAL ATHLETE WITH GLASSES)
+       HERO EDITORIAL STAGE (REAL TOUCHDOWN VIDEO + ATHLETE WITH SUNGLASSES)
        ========================================================================== */
     .hero-editorial-stage {
       position: relative;
       min-height: 100vh;
       width: 100%;
-      padding-top: 100px;
+      padding-top: 110px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -287,15 +255,15 @@
       z-index: 10;
     }
 
-    /* BACKGROUND VIDEO WITH EDITORIAL SOFT-LIGHT TINT */
+    /* GENERIC FOOTBALL TOUCHDOWN RUN VIDEO (REPLACING PREVIOUS USER VIDEO) */
     .hero-video-bg {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.22;
-      filter: saturate(140%) contrast(120%);
+      opacity: 0.25;
+      filter: saturate(130%) contrast(115%);
       pointer-events: none;
       z-index: 1;
     }
@@ -303,13 +271,13 @@
     .hero-vignette {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 50% 40%, transparent 20%, var(--color-ink-deep) 85%),
-                  linear-gradient(to top, var(--color-ink-deep) 10%, transparent 60%);
+      background: radial-gradient(circle at 50% 45%, transparent 25%, var(--color-ink-deep) 88%),
+                  linear-gradient(to top, var(--color-ink-deep) 12%, transparent 60%);
       pointer-events: none;
       z-index: 2;
     }
 
-    /* KINETIC MARQUEE RUNNERS (JJETTAS BACKGROUND TRACKS) */
+    /* KINETIC BACKGROUND MARQUEES */
     .hero-marquees {
       position: absolute;
       top: 18%;
@@ -319,7 +287,7 @@
       opacity: 0.08;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
 
     .marquee-track {
@@ -330,23 +298,23 @@
     }
 
     .track-left {
-      animation: runMarqueeLeft 45s linear infinite;
+      animation: runMarqueeLeft 50s linear infinite;
     }
 
     .track-right {
-      animation: runMarqueeRight 50s linear infinite;
+      animation: runMarqueeRight 55s linear infinite;
     }
 
     .marquee-text {
-      font-family: var(--font-display);
-      font-size: clamp(90px, 16vw, 210px);
-      font-weight: 900;
-      letter-spacing: -2px;
-      line-height: 0.85;
+      font-family: var(--font-display-refined);
+      font-size: clamp(80px, 14vw, 180px);
+      font-weight: 600;
+      letter-spacing: 4px;
+      line-height: 0.9;
       color: transparent;
-      -webkit-text-stroke: 2px var(--color-bone);
+      -webkit-text-stroke: 1.5px var(--color-bone);
       text-transform: uppercase;
-      margin-right: 60px;
+      margin-right: 64px;
     }
 
     @keyframes runMarqueeLeft {
@@ -359,10 +327,10 @@
       to { transform: translateX(0); }
     }
 
-    /* CENTERPIECE ATHLETE CUTOUT (THE ATHLETE WITH SUNGLASSES) */
+    /* CENTERPIECE ATHLETE (THE PLAYER WITH WHITE SUNGLASSES) */
     .hero-athlete-portrait-wrap {
       position: relative;
-      width: min(95%, 1100px);
+      width: min(95%, 1150px);
       height: clamp(520px, 78vh, 880px);
       display: flex;
       justify-content: center;
@@ -378,13 +346,12 @@
       max-width: 100%;
       object-fit: contain;
       object-position: bottom center;
-      filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.95));
-      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-      transition: transform 0.2s ease-out;
+      filter: drop-shadow(0 25px 70px rgba(0, 0, 0, 0.98));
+      -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
     }
 
-    /* DUAL EDITORIAL FLANKERS (EXACTLY AS IN JJETTAS HERO) */
+    /* DUAL EDITORIAL FLANKERS (JJETTAS LAYOUT) */
     .hero-flankers-container {
       position: absolute;
       inset: 0;
@@ -410,11 +377,11 @@
 
     .hero-flanker-right {
       pointer-events: auto;
-      max-width: 340px;
+      max-width: 360px;
       text-align: right;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
       align-items: flex-end;
     }
 
@@ -434,7 +401,7 @@
       }
     }
 
-    /* 3D HOLOGRAPHIC ROOKIE CARD (HERO CARD) */
+    /* 3D HOLOGRAPHIC ROOKIE TRADING CARD */
     .jj-card-perspective-stage {
       perspective: 1500px;
       width: 100%;
@@ -442,9 +409,9 @@
 
     .jj-holo-card {
       position: relative;
-      width: 190px;
+      width: 195px;
       aspect-ratio: 1036 / 1519;
-      border-radius: 12px;
+      border-radius: 14px;
       overflow: hidden;
       cursor: pointer;
       transform-style: preserve-3d;
@@ -501,54 +468,56 @@
       transition: opacity 0.25s ease;
     }
 
-    .jj-holo-card:hover .jj-holo-prism { opacity: 0.8; }
+    .jj-holo-card:hover .jj-holo-prism { opacity: 0.85; }
     .jj-holo-card:hover .jj-holo-flare { opacity: 0.95; }
 
     .jj-card-caption {
       font-size: 0.82rem;
       color: var(--color-bone-muted);
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .hero-editorial-statement {
-      font-size: 0.95rem;
+      font-family: var(--font-serif-luxury);
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+      font-style: italic;
       color: var(--color-bone);
-      line-height: 1.6;
-      font-weight: 500;
+      line-height: 1.5;
     }
 
     .hero-btn-cta {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 12px 24px;
+      padding: 13px 28px;
       border-radius: 999px;
-      background: var(--lime);
+      background: var(--color-bone);
       color: #000;
       font-family: var(--font-mono);
       font-size: 0.75rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 0 0 25px var(--lime-glow);
+      box-shadow: 0 10px 30px rgba(247, 244, 239, 0.2);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
     .hero-btn-cta:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 40px rgba(204, 255, 0, 0.65);
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(0, 240, 255, 0.35);
     }
 
     /* ==========================================================================
-       SIGNATURE MOMENTS STAGE (STICKY HORIZONTAL FLOW WITH YARDLINES)
+       SIGNATURE MOMENTS STAGE (HORIZONTAL FLUID TRACK WITH YARDLINES)
        ========================================================================== */
     .signature-moments-stage {
       position: relative;
       background: var(--color-ink);
       border-top: 1px solid var(--color-bone-subtle);
       border-bottom: 1px solid var(--color-bone-subtle);
-      padding: 80px 0;
+      padding: 90px 0;
       overflow: hidden;
       z-index: 10;
     }
@@ -556,7 +525,7 @@
     .signature-moments-header {
       max-width: 1420px;
       margin: 0 auto;
-      padding: 0 clamp(20px, 4.5vw, 64px) 40px clamp(20px, 4.5vw, 64px);
+      padding: 0 clamp(20px, 4.5vw, 64px) 36px clamp(20px, 4.5vw, 64px);
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -564,20 +533,24 @@
       gap: 24px;
     }
 
-    .signature-headline {
-      font-family: var(--font-headline);
-      font-size: clamp(2.8rem, 6.8vw, 6.4rem);
-      font-weight: 900;
-      line-height: 0.9;
-      letter-spacing: -2px;
-      text-transform: uppercase;
-      color: transparent;
-      background: linear-gradient(to bottom, #ffffff 40%, rgba(246, 243, 239, 0.4) 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
+    .signature-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      margin-bottom: 8px;
     }
 
-    /* YARDLINES BAR */
+    .signature-headline {
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-bone);
+    }
+
     .yardlines-bar {
       width: 100%;
       height: 70px;
@@ -593,19 +566,18 @@
     }
 
     .yard-num {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 800;
+      font-family: var(--font-display-refined);
+      font-size: 1.25rem;
+      font-weight: 500;
       color: var(--color-bone);
     }
 
     .yard-tick {
-      width: 2px;
+      width: 1.5px;
       height: 16px;
       background: var(--color-bone);
     }
 
-    /* HORIZONTAL CARDS TRACK */
     .moments-cards-track-wrap {
       width: 100%;
       overflow-x: auto;
@@ -622,7 +594,7 @@
     }
 
     .moment-card-box {
-      width: 340px;
+      width: 350px;
       scroll-snap-align: start;
       display: flex;
       flex-direction: column;
@@ -669,143 +641,210 @@
     .moment-tag-label {
       font-family: var(--font-mono);
       font-size: 0.68rem;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 2px;
       color: var(--lime);
       text-transform: uppercase;
     }
 
     .moment-title-text {
-      font-family: var(--font-headline);
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-family: var(--font-display-refined);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: var(--color-bone);
     }
 
     .moment-desc-text {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--color-bone-muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* ==========================================================================
-       PARTNERSHIPS STAGE (OFFICIAL HIGH-PROFILE PARTNERS)
+       PARTNERSHIPS STAGE (WITH INFINITE TRANSITIONAL LOGOS CAROUSEL)
        ========================================================================== */
     .partnerships-stage {
       position: relative;
-      padding: clamp(90px, 12vw, 150px) clamp(20px, 4.5vw, 64px);
+      padding: clamp(90px, 12vw, 150px) 0;
       background: var(--color-ink-deep);
       border-bottom: 1px solid var(--color-bone-subtle);
       z-index: 10;
+      overflow: hidden;
     }
 
     .partnerships-inner {
       max-width: 1420px;
       margin: 0 auto;
+      padding: 0 clamp(20px, 4.5vw, 64px);
     }
 
     .partnerships-header {
       text-align: center;
-      margin-bottom: 64px;
+      margin-bottom: 50px;
     }
 
     .partnerships-supertitle {
-      font-family: var(--font-display);
-      font-size: clamp(3rem, 9vw, 8rem);
-      font-weight: 900;
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: -2px;
-      line-height: 0.85;
-      color: transparent;
-      -webkit-text-stroke: 1.5px rgba(246, 243, 239, 0.3);
+      letter-spacing: 4px;
+      color: var(--color-bone);
       margin-bottom: 16px;
     }
 
     .partnerships-sublead {
-      font-size: 1.1rem;
+      font-family: var(--font-serif-luxury);
+      font-size: 1.25rem;
+      font-style: italic;
       color: var(--color-bone-muted);
       max-width: 680px;
       margin: 0 auto;
     }
 
-    .partners-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 28px;
+    /* INFINITE TRANSITIONAL LOGO CAROUSEL */
+    .partners-carousel-viewport {
+      width: 100%;
+      overflow: hidden;
+      padding: 30px 0;
+      margin-bottom: 64px;
+      mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
     }
 
-    .partner-card {
-      background: var(--color-ink);
-      border: 1px solid var(--color-bone-subtle);
-      border-radius: 18px;
-      padding: 36px 32px;
+    .partners-carousel-track {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 300px;
-      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      gap: 40px;
+      width: max-content;
+      animation: carouselScroll 28s linear infinite;
     }
 
-    .partner-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--cyan);
-      box-shadow: 0 20px 45px rgba(0, 240, 255, 0.15);
+    .partners-carousel-track:hover {
+      animation-play-state: paused;
     }
 
-    .partner-card-top {
+    @keyframes carouselScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .carousel-partner-item {
       display: flex;
       align-items: center;
       gap: 20px;
-      margin-bottom: 24px;
+      padding: 18px 32px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--color-bone-subtle);
+      transition: all 0.3s ease;
+      white-space: nowrap;
     }
 
-    .partner-svg-logo {
-      width: 68px;
-      height: 68px;
-      flex-shrink: 0;
-      filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.15));
+    .carousel-partner-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+    }
+
+    .carousel-partner-img {
+      height: 48px;
+      width: auto;
+      max-width: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+
+    .carousel-partner-name {
+      font-family: var(--font-display-refined);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+    }
+
+    /* PARTNERS DETAILED GRID BELOW CAROUSEL */
+    .partners-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 28px;
+    }
+
+    .partner-detail-card {
+      background: var(--color-ink);
+      border: 1px solid var(--color-bone-subtle);
+      border-radius: 18px;
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .partner-detail-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--lime);
+      box-shadow: 0 20px 45px rgba(204, 255, 0, 0.12);
+    }
+
+    .partner-card-header {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 20px;
+    }
+
+    .partner-card-logo-img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.12));
     }
 
     .partner-card-titles h3 {
-      font-family: var(--font-headline);
-      font-size: 1.35rem;
-      font-weight: 800;
+      font-family: var(--font-display-refined);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
       color: var(--color-bone);
       text-transform: uppercase;
     }
 
     .partner-card-titles span {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--lime);
+      font-size: 0.7rem;
+      color: var(--cyan);
       display: block;
       margin-top: 4px;
     }
 
     .partner-card-desc {
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       color: var(--color-bone-muted);
       line-height: 1.6;
     }
 
-    .partner-badge {
+    .partner-category-badge {
       display: inline-block;
       align-self: flex-start;
-      margin-top: 24px;
+      margin-top: 20px;
       padding: 6px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--color-bone-subtle);
       font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
+      font-size: 0.68rem;
+      font-weight: 600;
       color: var(--color-bone);
       letter-spacing: 1px;
     }
 
     /* ==========================================================================
-       QUOTE & EDITORIAL HERO MANIFESTO (JJETTAS STYLE)
+       QUOTE MANIFESTO SECTION
        ========================================================================== */
     .quote-manifesto-stage {
       position: relative;
@@ -817,29 +856,29 @@
     }
 
     .quote-manifesto-inner {
-      max-width: 1000px;
+      max-width: 960px;
       margin: 0 auto;
     }
 
-    .quote-lead {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4.5vw, 3.8rem);
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.15;
-      letter-spacing: -1px;
+    .quote-text-large {
+      font-family: var(--font-serif-luxury);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.3;
       color: var(--color-bone);
       margin-bottom: 28px;
     }
 
-    .quote-lead span {
+    .quote-text-large span {
       color: var(--cyan);
+      font-style: normal;
     }
 
-    .quote-author {
+    .quote-author-tag {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
-      letter-spacing: 3px;
+      font-size: 0.82rem;
+      letter-spacing: 4px;
       color: var(--lime);
       text-transform: uppercase;
     }
@@ -868,11 +907,11 @@
     }
 
     .archive-title-h2 {
-      font-family: var(--font-headline);
-      font-size: clamp(2.4rem, 5vw, 4.2rem);
-      font-weight: 900;
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: -1.5px;
+      letter-spacing: 2px;
       color: var(--color-bone);
     }
 
@@ -890,7 +929,7 @@
       border-radius: 999px;
       font-family: var(--font-mono);
       font-size: 0.72rem;
-      font-weight: 700;
+      font-weight: 600;
       letter-spacing: 1px;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -945,16 +984,17 @@
       position: absolute;
       bottom: 0; left: 0; width: 100%;
       padding: 16px;
-      background: linear-gradient(to top, rgba(7, 6, 10, 0.95) 0%, rgba(7, 6, 10, 0.5) 75%, transparent 100%);
+      background: linear-gradient(to top, rgba(6, 5, 9, 0.95) 0%, rgba(6, 5, 9, 0.5) 75%, transparent 100%);
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
 
     .archive-item-info h4 {
-      font-family: var(--font-headline);
-      font-size: 0.92rem;
-      font-weight: 800;
+      font-family: var(--font-display-refined);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       color: var(--color-bone);
       text-transform: uppercase;
     }
@@ -968,7 +1008,7 @@
     }
 
     /* ==========================================================================
-       MAKE-A-PLAY / FOOTER STAGE (JJETTAS SIGNATURE FINALE)
+       MAKE-A-PLAY / FOOTER STAGE
        ========================================================================== */
     .make-a-play-stage {
       position: relative;
@@ -980,12 +1020,12 @@
     }
 
     .make-a-play-headline {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6.5vw, 5.8rem);
-      font-weight: 900;
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+      font-weight: 500;
       text-transform: uppercase;
-      letter-spacing: -2px;
-      line-height: 0.95;
+      letter-spacing: 4px;
+      line-height: 1;
       color: var(--color-bone);
       margin-bottom: 24px;
     }
@@ -993,11 +1033,12 @@
     .make-a-play-headline span {
       display: block;
       color: transparent;
-      -webkit-text-stroke: 1.5px var(--color-bone);
+      -webkit-text-stroke: 1px var(--color-bone);
+      margin-top: 8px;
     }
 
     .make-a-play-desc {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: var(--color-bone-muted);
       max-width: 640px;
       margin: 0 auto 40px auto;
@@ -1013,8 +1054,8 @@
       background: var(--lime);
       color: #000;
       font-family: var(--font-mono);
-      font-size: 0.88rem;
-      font-weight: 800;
+      font-size: 0.85rem;
+      font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
       text-decoration: none;
@@ -1032,7 +1073,7 @@
       position: fixed;
       inset: 0;
       z-index: 99999;
-      background: rgba(7, 6, 10, 0.94);
+      background: rgba(6, 5, 9, 0.95);
       backdrop-filter: blur(24px);
       display: none;
       align-items: center;
@@ -1111,49 +1152,35 @@
     </div>
   </div>
 
-  <!-- TOP SITE CHROME / NAVIGATION -->
+  <!-- TOP FIXED NAVIGATION WITH CENTERED TRANSPARENT CAPTOORA LOGO -->
   <header class="jj-site-nav">
-    <a href="#" class="jj-nav-logo-link">
-      <img src="assets/CAPTOORA_SIGNATURE_LOGO.png" alt="Captoora Signature Logo">
-      <div class="jj-nav-brand-text">
-        <span class="jj-brand-title">CAPTOORA</span>
-        <span class="jj-brand-edition">Sports // JJettas Edition</span>
-      </div>
+    <nav class="nav-left-links">
+      <a href="#signature-moments" class="nav-link-refined">Signature Moments</a>
+      <a href="#partnerships" class="nav-link-refined">Partnerships</a>
+      <a href="#archive" class="nav-link-refined">Archivo</a>
+    </nav>
+
+    <!-- CENTERED CAPTOORA EMBLEM & ELEGANT TYPOGRAPHY UNDERNEATH -->
+    <a href="#" class="brand-centered-lockup">
+      <img src="assets/CAPTOORA_FAVICON_512x512.png" alt="Captoora Emblem" class="brand-logo-img">
+      <span class="brand-title-decent">CAPTOORA</span>
+      <span class="brand-subtitle-decent">ESTUDIO FOTOGRÁFICO // SPORTS</span>
     </a>
 
-    <div class="jj-nav-right">
-      <nav class="jj-quick-links">
-        <a href="#signature-moments" class="jj-quick-link">Signature Moments</a>
-        <a href="#partnerships" class="jj-quick-link">Partnerships</a>
-        <a href="#archive" class="jj-quick-link">Archivo (78)</a>
-        <a href="dashboard/index.html" class="jj-quick-link" style="color: var(--cyan);">Scouting Hub</a>
-      </nav>
-
-      <button class="jj-hamburger-btn" id="menu-toggle" aria-label="Abrir Menú">
-        <div class="jj-hamburger-line"></div>
-        <div class="jj-hamburger-line"></div>
-      </button>
+    <div class="nav-right-actions">
+      <a href="dashboard/index.html" class="nav-link-refined" style="color: var(--cyan);">Scouting Hub</a>
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva" target="_blank" class="nav-cta-pill">
+        WhatsApp
+      </a>
     </div>
   </header>
 
-  <!-- FULLSCREEN MENU DRAWER -->
-  <div class="jj-menu-drawer" id="menu-drawer">
-    <div class="jj-menu-links">
-      <a href="#" class="jj-menu-item" onclick="toggleMenu()">Home</a>
-      <a href="#signature-moments" class="jj-menu-item" onclick="toggleMenu()">Signature Moments</a>
-      <a href="#partnerships" class="jj-menu-item" onclick="toggleMenu()">Partnerships</a>
-      <a href="#archive" class="jj-menu-item" onclick="toggleMenu()">Archivo Oficial</a>
-      <a href="dashboard/index.html" class="jj-menu-item" onclick="toggleMenu()" style="color: var(--cyan);">Scouting Dashboard</a>
-      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva" target="_blank" class="jj-menu-item" style="color: var(--lime);">WhatsApp Directo</a>
-    </div>
-  </div>
-
   <main>
-    <!-- HERO EDITORIAL STAGE (VIDEO + MARQUEE + SUNGLASSES ATHLETE) -->
+    <!-- HERO EDITORIAL STAGE (REAL FOOTBALL TOUCHDOWN RUN VIDEO + ATHLETE WITH SUNGLASSES) -->
     <section class="hero-editorial-stage">
-      <!-- VIDEO BACKGROUND LOOP -->
+      <!-- GENERIC FOOTBALL TOUCHDOWN RUN VIDEO LOOP -->
       <video class="hero-video-bg" autoplay loop muted playsinline preload="auto">
-        <source src="assets/video/hero-background.mp4" type="video/mp4">
+        <source src="assets/video/football_run_touchdown.mp4" type="video/mp4">
       </video>
 
       <!-- DARK VIGNETTE OVERLAY -->
@@ -1171,9 +1198,9 @@
         </div>
       </div>
 
-      <!-- CENTERPIECE ATHLETE (THE ATHLETE WITH SUNGLASSES & JERSEY #11) -->
+      <!-- CENTERPIECE ATHLETE (THE PLAYER WITH WHITE SUNGLASSES & RED #11 JERSEY) -->
       <div class="hero-athlete-portrait-wrap">
-        <img src="assets/hero-portrait.png" alt="Athlete Hero Portrait with Visor Sunglasses" class="hero-athlete-img">
+        <img src="assets/hero-portrait.png" alt="Athlete with Visor Sunglasses and Jersey #11" class="hero-athlete-img">
       </div>
 
       <!-- DUAL EDITORIAL FLANKERS -->
@@ -1195,7 +1222,7 @@
         <!-- RIGHT FLANKER: EDITORIAL STATEMENT -->
         <div class="hero-flanker-right">
           <p class="hero-editorial-statement">
-            Desde San Jerónimo, Monterrey hasta la duela de Arena CDMX. Cada disparo de Captoora lleva la velocidad quirúrgica y la historia que no se ve desde las gradas.
+            "Desde San Jerónimo, Monterrey hasta la duela de Arena CDMX. Cada disparo lleva la velocidad quirúrgica y la historia que no se ve desde las gradas."
           </p>
           <a href="#signature-moments" class="hero-btn-cta">
             Ver Signature Moments &rarr;
@@ -1208,10 +1235,10 @@
     <section class="signature-moments-stage" id="signature-moments">
       <div class="signature-moments-header">
         <div>
-          <div style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 2px; color: var(--cyan); margin-bottom: 8px;">// SIGNATURE SERIES</div>
+          <div class="signature-eyebrow">// SIGNATURE SERIES</div>
           <h2 class="signature-headline">Signature Moments</h2>
         </div>
-        <p style="color: var(--color-bone-muted); max-width: 420px; font-size: 0.95rem;">
+        <p style="color: var(--color-bone-muted); max-width: 440px; font-size: 0.95rem;">
           Desliza horizontalmente a través de las yardas para explorar los momentos cumbre capturados con física holográfica 3D.
         </p>
       </div>
@@ -1341,7 +1368,7 @@
       </div>
     </section>
 
-    <!-- PARTNERSHIPS STAGE (OFFICIAL HIGH-PROFILE PARTNERS) -->
+    <!-- PARTNERSHIPS STAGE (OFFICIAL TRANSPARENT LOGOS CAROUSEL + DETAIL CARDS) -->
     <section class="partnerships-stage" id="partnerships">
       <div class="partnerships-inner">
         <div class="partnerships-header">
@@ -1350,18 +1377,83 @@
             Colaboraciones oficiales, cobertura de alto rendimiento y alianzas estratégicas con franquicias deportivas, instituciones académicas y marcas de prestigio.
           </p>
         </div>
+      </div>
 
-        <div class="partners-grid">
+      <!-- INFINITE TRANSITIONAL LOGOS CAROUSEL -->
+      <div class="partners-carousel-viewport">
+        <div class="partners-carousel-track">
 
-          <div class="partner-card">
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Club Tigres UANL</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Borregos Tec de Monterrey</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Toros de San Nicolás</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">FARMASI Nutriplus</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">MANTAMAR Luxury Resort</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Multimedios Televisión</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Club Tigres UANL</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Borregos Tec de Monterrey</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Toros de San Nicolás</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">FARMASI Nutriplus</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">MANTAMAR Luxury Resort</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Multimedios Televisión</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="partnerships-inner">
+        <!-- DETAILED PARTNERS GRID BELOW CAROUSEL -->
+        <div class="partners-detail-grid">
+
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <circle cx="50" cy="50" r="46" fill="#003594" stroke="#fdb813" stroke-width="4"/>
-          <path d="M22 36 L78 36 L74 74 L50 88 L26 74 Z" fill="#fdb813"/>
-          <text x="50" y="52" font-family="'Syncopate', sans-serif" font-weight="900" font-size="14" fill="#003594" text-anchor="middle" letter-spacing="1">TIGRES</text>
-          <text x="50" y="68" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="11" fill="#003594" text-anchor="middle">UANL</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>Club Tigres UANL</h3>
                   <span>San Nicolás de los Garza // Liga MX</span>
@@ -1369,93 +1461,69 @@
               </div>
               <p class="partner-card-desc">Cobertura de velocidad pura, duelos aéreos y pasión auriazul en el Estadio Universitario (El Volcán).</p>
             </div>
-            <span class="partner-badge">Fútbol Profesional</span>
+            <span class="partner-category-badge">Fútbol Profesional</span>
           </div>
 
-          <div class="partner-card">
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <rect x="8" y="8" width="84" height="84" rx="20" fill="#002f6c" stroke="#ffffff" stroke-width="3"/>
-          <path d="M30 40 Q50 20 70 40 Q78 54 68 64 Q50 78 32 64 Q22 54 30 40 Z" fill="#ffffff"/>
-          <circle cx="42" cy="48" r="4" fill="#002f6c"/>
-          <circle cx="58" cy="48" r="4" fill="#002f6c"/>
-          <text x="50" y="86" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="9" fill="#ffffff" text-anchor="middle" letter-spacing="1">BORREGOS</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>Borregos Tec de Monterrey</h3>
-                  <span>Campus Monterrey // ONEFA & ABE</span>
+                  <span>Campus Monterrey // ONEFA & Liga ABE</span>
                 </div>
               </div>
-              <p class="partner-card-desc">Fotografía oficial de emparrillado en Estadio Banorte y duela de básquetbol División 1 Liga ABE.</p>
+              <p class="partner-card-desc">Fotografía oficial de emparrillado en Estadio Banorte y duela de básquetbol División 1.</p>
             </div>
-            <span class="partner-badge">Deporte Colegial de Élite</span>
+            <span class="partner-category-badge">Deporte Colegial de Élite</span>
           </div>
 
-          <div class="partner-card">
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <circle cx="50" cy="50" r="46" fill="#111111" stroke="#d90429" stroke-width="4"/>
-          <path d="M26 38 Q32 20 50 32 Q68 20 74 38 Q82 62 50 82 Q18 62 26 38 Z" fill="#d90429"/>
-          <path d="M36 44 L50 56 L64 44" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round"/>
-          <text x="50" y="93" font-family="'Syncopate', sans-serif" font-weight="900" font-size="9" fill="#ffffff" text-anchor="middle" letter-spacing="1">TOROS</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>Toros de San Nicolás</h3>
-                  <span>San Nicolás de los Garza // Football</span>
+                  <span>San Nicolás de los Garza // MFL Football</span>
                 </div>
               </div>
               <p class="partner-card-desc">Impacto a ras de césped, tacleadas en línea de golpeo y coberturas completas de temporada invicta.</p>
             </div>
-            <span class="partner-badge">Fútbol Americano Juvenil & Pro</span>
+            <span class="partner-category-badge">Fútbol Americano Juvenil & Pro</span>
           </div>
 
-          <div class="partner-card">
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <circle cx="50" cy="50" r="46" fill="#0b0f19" stroke="#00f0ff" stroke-width="3"/>
-          <text x="50" y="52" font-family="'Syne', sans-serif" font-weight="900" font-size="13" fill="#ffffff" text-anchor="middle" letter-spacing="2">FARMASI</text>
-          <text x="50" y="66" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="8" fill="#00f0ff" text-anchor="middle" letter-spacing="1">NUTRIPLUS</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>FARMASI Nutriplus</h3>
                   <span>Nutrición, Bienestar & Suplementos</span>
                 </div>
               </div>
-              <p class="partner-card-desc">Alianzas de nutrición, suplementación biomecánica y cobertura visual de eventos de bienestar y salud.</p>
+              <p class="partner-card-desc">Alianzas de nutrición, suplementación biomecánica y cobertura visual de eventos de bienestar.</p>
             </div>
-            <span class="partner-badge">Rendimiento y Salud Deportiva</span>
+            <span class="partner-category-badge">Rendimiento y Salud Deportiva</span>
           </div>
 
-          <div class="partner-card">
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <rect x="8" y="8" width="84" height="84" rx="16" fill="#050811" stroke="#CCFF00" stroke-width="3"/>
-          <path d="M25 65 L40 32 L50 52 L60 32 L75 65" fill="none" stroke="#CCFF00" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <text x="50" y="84" font-family="'Syncopate', sans-serif" font-weight="800" font-size="7" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">MANTAMAR</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>MANTAMAR Luxury Resort</h3>
                   <span>Beach Club & Luxury Hotel // Puerto Vallarta</span>
                 </div>
               </div>
-              <p class="partner-card-desc">Producción fotográfica de estilo de vida de lujo, estética atlética y experiencias costeras de alto calibre.</p>
+              <p class="partner-card-desc">Producción fotográfica de estilo de vida de lujo, estética atlética y experiencias costeras de alto nivel.</p>
             </div>
-            <span class="partner-badge">Hospitalidad & Alto Estilo</span>
+            <span class="partner-category-badge">Hospitalidad & Alto Estilo</span>
           </div>
 
-          <div class="partner-card">
+          <div class="partner-detail-card">
             <div>
-              <div class="partner-card-top">
-                <svg viewBox="0 0 100 100" class="partner-svg-logo">
-          <circle cx="50" cy="50" r="46" fill="#d90429" stroke="#ffffff" stroke-width="3"/>
-          <circle cx="50" cy="50" r="28" fill="#ffffff"/>
-          <text x="50" y="56" font-family="'Syncopate', sans-serif" font-weight="900" font-size="16" fill="#d90429" text-anchor="middle">TD</text>
-          <text x="50" y="88" font-family="'JetBrains Mono', monospace" font-weight="800" font-size="8" fill="#ffffff" text-anchor="middle">TELEDIARIO</text>
-        </svg>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="partner-card-logo-img">
                 <div class="partner-card-titles">
                   <h3>Multimedios Televisión</h3>
                   <span>Telediario Deportes // Canal 6 Monterrey</span>
@@ -1463,7 +1531,7 @@
               </div>
               <p class="partner-card-desc">Suministro de material gráfico de alta velocidad para emisiones en vivo, noticieros estelares y coberturas.</p>
             </div>
-            <span class="partner-badge">Medios de Comunicación & TV</span>
+            <span class="partner-category-badge">Medios de Comunicación & TV</span>
           </div>
 
         </div>
@@ -1473,10 +1541,10 @@
     <!-- QUOTE & EDITORIAL MANIFESTO -->
     <section class="quote-manifesto-stage">
       <div class="quote-manifesto-inner">
-        <p class="quote-lead">
-          "QUIERO QUE NOS RECUERDEN POR MÁS QUE UN CLIC DE CÁMARA — <span>CONGELAMOS EL ALMA Y LA VELOCIDAD</span> DEL ATLETA DE ÉLITE."
+        <p class="quote-text-large">
+          "Quiero que nos recuerden por más que un clic de cámara — <span>congelamos el alma y la velocidad</span> del atleta de élite."
         </p>
-        <div class="quote-author">
+        <div class="quote-author-tag">
           // CAPTOORA STUDIO · SAN JERÓNIMO, MONTERREY & ARENA CDMX
         </div>
       </div>
@@ -1534,10 +1602,10 @@
       <img src="" id="lightbox-img" alt="Foto Ampliada" class="lightbox-img">
       <div class="lightbox-dock">
         <div>
-          <strong id="lightbox-title" style="color: var(--color-bone); font-family: var(--font-headline); font-size: 1.15rem; text-transform: uppercase;"></strong>
+          <strong id="lightbox-title" style="color: var(--color-bone); font-family: var(--font-display-refined); font-size: 1.15rem; text-transform: uppercase;"></strong>
           <p id="lightbox-desc" style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.8rem; margin-top: 4px;"></p>
         </div>
-        <a id="lightbox-wa-btn" href="#" target="_blank" style="padding: 10px 24px; border-radius: 999px; background: var(--lime); color: #000; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none;">
+        <a id="lightbox-wa-btn" href="#" target="_blank" style="padding: 10px 24px; border-radius: 999px; background: var(--lime); color: #000; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-decoration: none;">
           Cotizar Toma en WhatsApp &rarr;
         </a>
       </div>
@@ -1581,14 +1649,6 @@
         counterEl.innerText = `${progress}%`;
       }
     }, 45);
-
-    // HAMBURGER MENU TOGGLE
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuDrawer = document.getElementById('menu-drawer');
-    function toggleMenu() {
-      menuDrawer.classList.toggle('open');
-    }
-    menuToggle.addEventListener('click', toggleMenu);
 
     // 3D HOLOGRAPHIC TILT CONTROLLER
     function initTiltEffect(card) {
