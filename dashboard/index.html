@@ -3,28 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Capitanes CDMX & Men's Basketball | Scouting & Media Hub</title>
+  <title>Captoora Sports // Centro de Mando, Contactos & Proyecto Operativo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/CAPTOORA_FAVICON_512x512.png">
+
   <style>
     :root {
-      --bg-dark: #070b14;
+      --bg-dark: #05070d;
+      --bg-surface: #0b1120;
       --bg-card: #0f172a;
-      --bg-card-hover: #1e293b;
-      --border-card: rgba(255, 255, 255, 0.08);
-      --primary: #0077ff;
-      --primary-glow: rgba(0, 119, 255, 0.35);
-      --accent: #f59e0b;
-      --accent-cyan: #06b6d4;
+      --bg-card-hover: #172554;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(0, 229, 255, 0.25);
+      
+      --cyan: #00e5ff;
+      --cyan-glow: rgba(0, 229, 255, 0.35);
+      --lime: #ccff00;
+      --lime-glow: rgba(204, 255, 0, 0.3);
+      --blue: #2563eb;
+      --amber: #f59e0b;
+      --emerald: #10b981;
+      --rose: #f43f5e;
+      
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --badge-home: #10b981;
-      --badge-away: #64748b;
-      --badge-alert: #ef4444;
-      --radius-lg: 16px;
-      --radius-md: 12px;
+      --text-faint: #64748b;
+      
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Cinzel', serif;
+      
       --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
     }
 
     * {
@@ -36,24 +49,26 @@
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: var(--font-sans);
       min-height: 100vh;
       line-height: 1.5;
-      padding-bottom: 60px;
+      padding-bottom: 80px;
     }
 
+    /* TOP GLOBAL NAVIGATION */
     header {
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(7, 11, 20, 0.95) 100%);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-card);
+      background: rgba(5, 7, 13, 0.88);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border-bottom: 1px solid var(--border-subtle);
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 16px 32px;
+      padding: 16px 28px;
     }
 
     .header-container {
-      max-width: 1400px;
+      max-width: 1440px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -62,54 +77,45 @@
       gap: 16px;
     }
 
-    .brand {
+    .brand-group {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 18px;
+      text-decoration: none;
     }
 
-    .brand-badge {
-      background: linear-gradient(135deg, #0077ff 0%, #00d2ff 100%);
-      color: white;
-      font-weight: 800;
-      font-size: 1.1rem;
-      padding: 8px 14px;
-      border-radius: var(--radius-sm);
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 14px var(--primary-glow);
+    .brand-logo-wolf {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 14px var(--cyan-glow));
     }
 
     .brand-text h1 {
-      font-size: 1.3rem;
-      font-weight: 800;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 3px;
       color: #ffffff;
-      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      line-height: 1.1;
     }
 
     .brand-text p {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .scope-tag {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: #fbbf24;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 1.5px;
+      color: var(--cyan);
       text-transform: uppercase;
-      letter-spacing: 0.6px;
     }
 
-    nav {
+    .nav-tabs-bar {
       display: flex;
-      gap: 8px;
-      background: rgba(15, 23, 42, 0.8);
-      padding: 6px;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.7);
+      padding: 5px;
       border-radius: var(--radius-md);
-      border: 1px solid var(--border-card);
+      border: 1px solid var(--border-subtle);
       overflow-x: auto;
     }
 
@@ -117,8 +123,8 @@
       background: transparent;
       border: none;
       color: var(--text-muted);
-      padding: 8px 18px;
-      font-size: 0.88rem;
+      padding: 8px 16px;
+      font-size: 0.82rem;
       font-weight: 600;
       border-radius: var(--radius-sm);
       cursor: pointer;
@@ -127,25 +133,156 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      font-family: var(--font-sans);
     }
 
     .tab-btn:hover {
       color: var(--text-main);
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.06);
     }
 
     .tab-btn.active {
-      background: var(--primary);
-      color: white;
-      box-shadow: 0 2px 8px var(--primary-glow);
+      background: var(--blue);
+      color: #ffffff;
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.4);
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-action-site {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px var(--lime-glow);
+      transition: transform 0.2s;
+    }
+
+    .btn-action-site:hover {
+      transform: translateY(-2px);
+    }
+
+    /* MAIN CONTAINER */
     main {
-      max-width: 1400px;
-      margin: 32px auto;
+      max-width: 1440px;
+      margin: 28px auto;
       padding: 0 24px;
     }
 
+    /* REAL-TIME PROGRESS COMMAND BANNER ("¿CÓMO VAMOS?") */
+    .command-kpi-banner {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(11, 17, 32, 0.95) 100%);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .command-banner-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .command-title h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .status-live-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--lime);
+      box-shadow: 0 0 10px var(--lime);
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .command-title p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    .progress-bar-wrap {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      height: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #00e5ff 0%, #2563eb 50%, #ccff00 100%);
+      border-radius: 999px;
+      transition: width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: 0 0 16px rgba(0, 229, 255, 0.5);
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .next-critical-alert {
+      margin-top: 18px;
+      background: rgba(245, 158, 11, 0.1);
+      border-left: 4px solid var(--amber);
+      padding: 12px 18px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .next-critical-alert strong {
+      color: #fbbf24;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* VIEW SECTIONS */
     .view-section {
       display: none;
     }
@@ -156,70 +293,16 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-banner {
-      background: linear-gradient(135deg, rgba(0, 119, 255, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
-      border: 1px solid rgba(0, 119, 255, 0.25);
-      border-radius: var(--radius-lg);
-      padding: 24px 32px;
-      margin-bottom: 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .hero-title h2 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      letter-spacing: -0.5px;
-    }
-
-    .hero-title p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 680px;
-    }
-
-    .hero-kpis {
-      display: flex;
-      gap: 16px;
-    }
-
-    .kpi-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      padding: 12px 20px;
-      border-radius: var(--radius-md);
-      text-align: center;
-      min-width: 110px;
-    }
-
-    .kpi-num {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--accent-cyan);
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .kpi-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
+    /* TOOLBARS & FILTERS */
     .toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       flex-wrap: wrap;
       gap: 16px;
     }
@@ -227,15 +310,16 @@
     .filter-pills {
       display: flex;
       gap: 8px;
+      flex-wrap: wrap;
     }
 
     .pill-btn {
       background: var(--bg-card);
-      border: 1px solid var(--border-card);
+      border: 1px solid var(--border-subtle);
       color: var(--text-muted);
       padding: 6px 14px;
       border-radius: 999px;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
@@ -248,996 +332,1360 @@
     }
 
     .search-box {
-      position: relative;
-      min-width: 280px;
-    }
-
-    .search-box input {
-      width: 100%;
       background: var(--bg-card);
-      border: 1px solid var(--border-card);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 16px;
       border-radius: var(--radius-md);
-      padding: 10px 16px;
-      color: var(--text-main);
-      font-size: 0.88rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .search-box input:focus {
-      border-color: var(--primary);
-    }
-
-    .grid-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
-      padding: 22px;
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(0, 119, 255, 0.4);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-    }
-
-    .card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-
-    .badge {
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .badge-home {
-      background: rgba(16, 185, 129, 0.15);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      color: #34d399;
-    }
-
-    .badge-away {
-      background: rgba(100, 116, 139, 0.2);
-      border: 1px solid rgba(100, 116, 139, 0.4);
-      color: #94a3b8;
-    }
-
-    .badge-tournament {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: #f59e0b;
-    }
-
-    .badge-alert {
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239, 68, 68, 0.4);
-      color: #f87171;
-    }
-
-    .card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #ffffff;
-    }
-
-    .card-subtitle {
+      color: white;
+      font-family: var(--font-sans);
       font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 14px;
+      min-width: 280px;
+      outline: none;
     }
 
-    .card-detail-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 0.83rem;
+    .search-box:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan-glow);
     }
 
-    .detail-label {
-      color: var(--text-muted);
-    }
-
-    .detail-value {
-      font-weight: 600;
-      color: var(--text-main);
-      text-align: right;
-    }
-
-    .anticipation-box {
-      margin-top: 14px;
-      padding: 10px 14px;
-      background: rgba(245, 158, 11, 0.08);
-      border-left: 3px solid var(--accent);
-      border-radius: 4px var(--radius-sm) var(--radius-sm) 4px;
-      font-size: 0.82rem;
-    }
-
-    .anticipation-box strong {
-      color: #fbbf24;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .card-footer-action {
-      margin-top: 16px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border-card);
-      display: flex;
-      gap: 8px;
-    }
-
-    .action-btn {
-      flex: 1;
-      background: var(--bg-card-hover);
-      color: var(--text-main);
-      border: 1px solid var(--border-card);
-      padding: 8px 12px;
-      border-radius: var(--radius-sm);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .action-btn:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
-    }
-
-    .action-btn-primary {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
-    }
-
-    .action-btn-primary:hover {
-      background: #0060d4;
-    }
-
-    .section-title-wrap {
-      margin-bottom: 20px;
-    }
-
-    .section-title-wrap h2 {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: white;
-    }
-
-    .section-title-wrap p {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-
+    /* TABLES & CARDS */
     .table-container {
       background: var(--bg-card);
-      border: 1px solid var(--border-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
       overflow-x: auto;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
     }
 
     th {
-      background: rgba(255, 255, 255, 0.02);
-      color: var(--text-muted);
+      background: rgba(15, 23, 42, 0.8);
       padding: 14px 18px;
-      font-weight: 700;
-      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
-      border-bottom: 1px solid var(--border-card);
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     td {
       padding: 16px 18px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-      color: var(--text-main);
+      color: #cbd5e1;
+      vertical-align: middle;
     }
 
     tr:hover td {
       background: rgba(255, 255, 255, 0.02);
     }
 
-    .checklist-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .checklist-step {
-      background: var(--bg-card);
-      border: 1px solid var(--border-card);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-    }
-
-    .step-header {
-      display: flex;
+    /* BADGES & CHIPS */
+    .badge {
+      display: inline-flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-card);
-    }
-
-    .step-num {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background: var(--primary);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 0.8rem;
-    }
-
-    .step-title {
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
       font-weight: 700;
-      font-size: 1rem;
-      color: white;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
     }
 
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 12px;
-      font-size: 0.86rem;
-      color: var(--text-muted);
-    }
-
-    .check-item input[type="checkbox"] {
-      margin-top: 3px;
-      accent-color: var(--primary);
-      cursor: pointer;
-    }
+    .badge-pending { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-sent { background: rgba(37, 99, 235, 0.15); color: #60a5fa; border: 1px solid rgba(37, 99, 235, 0.3); }
+    .badge-approved { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-confirmed { background: rgba(0, 229, 255, 0.15); color: #22d3ee; border: 1px solid rgba(0, 229, 255, 0.3); }
+    .badge-alert { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
 
     .contact-badge {
-      display: inline-block;
-      font-family: monospace;
-      background: rgba(0, 119, 255, 0.12);
-      color: #38bdf8;
-      padding: 2px 8px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 8px;
       border-radius: 4px;
-      font-size: 0.8rem;
-    }
-
-    /* Modal */
-    .modal-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(6px);
-      display: none;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      padding: 20px;
+      gap: 6px;
     }
 
-    .modal-overlay.active {
-      display: flex;
+    /* ACTION BUTTONS */
+    .btn-icon {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .modal-content {
-      background: #0f172a;
-      border: 1px solid rgba(255, 255, 255, 0.15);
+    .btn-icon:hover {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+      box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-icon-cyan {
+      background: rgba(0, 229, 255, 0.1);
+      border-color: rgba(0, 229, 255, 0.3);
+      color: var(--cyan);
+    }
+
+    .btn-icon-cyan:hover {
+      background: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 14px var(--cyan-glow);
+    }
+
+    /* CARDS GRID */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
-      max-width: 650px;
-      width: 100%;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .modal-header {
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 229, 255, 0.3);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ROADMAP / SOP PHASE CARDS */
+    .roadmap-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .phase-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position: relative;
+    }
+
+    .phase-card.active-phase {
+      border-color: var(--cyan);
+      box-shadow: 0 0 24px var(--cyan-glow);
+    }
+
+    .phase-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border-card);
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 14px;
     }
 
-    .modal-close {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-size: 1.5rem;
-      cursor: pointer;
+    .phase-title-group h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #ffffff;
     }
 
-    .copy-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: var(--radius-sm);
+    .phase-window-badge {
+      font-family: var(--font-mono);
       font-size: 0.78rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(0, 229, 255, 0.1);
+      color: var(--cyan);
+      border: 1px solid rgba(0, 229, 255, 0.3);
     }
-    .copy-btn:hover {
-      background: #0060d4;
+
+    .phase-tasks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .task-item:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .task-checkbox {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--cyan);
+      cursor: pointer;
+    }
+
+    .task-content {
+      flex: 1;
+    }
+
+    .task-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .task-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .task-item.completed .task-title {
+      text-decoration: line-through;
+      color: var(--text-faint);
+    }
+
+    /* MODAL POPUPS */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      max-width: 720px;
+      width: 100%;
+      padding: 32px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9);
+      position: relative;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .modal-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .modal-pre {
+      background: #04060a;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 18px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      margin: 18px 0;
+      user-select: all;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- TOP GLOBAL HEADER -->
   <header>
     <div class="header-container">
-      <div class="brand">
-        <div class="brand-badge">CAPITANES & HOOPS</div>
+      <a href="../captoora_sports.html" class="brand-group">
+        <img src="../assets/CAPTOORA_FAVICON_512x512.png" alt="Captoora Wolf" class="brand-logo-wolf">
         <div class="brand-text">
-          <h1>Mexico City Basketball Intelligence</h1>
-          <p>Scouting, Media Pass & Commercial Outreach Center</p>
+          <h1>CAPTOORA SPORTS</h1>
+          <p>COMMAND & SCOUTING INTELLIGENCE HUB</p>
         </div>
-        <span class="scope-tag">Solo Hombres / Men's Hoops</span>
-      </div>
+      </a>
 
-      <nav>
-        <button class="tab-btn active" onclick="switchTab('tab-schedule')">📅 Agenda y Calendario</button>
-        <button class="tab-btn" onclick="switchTab('tab-agencies')">🤝 Agencias & Prácticas</button>
-        <button class="tab-btn" onclick="switchTab('tab-alternative')">🏀 Equipos Rivales & Alternativos</button>
-        <button class="tab-btn" onclick="switchTab('tab-contacts')">📇 Directorio & Decisores</button>
-        <button class="tab-btn" onclick="switchTab('tab-pipeline')">🚀 Pipeline de Agentes</button>
-        <button class="tab-btn" onclick="switchTab('tab-checklist')">✅ Checklist Pre-Partido</button>
+      <!-- NAVIGATION TABS -->
+      <nav class="nav-tabs-bar">
+        <button class="tab-btn active" onclick="switchTab('tab-contacts')">📇 Directorio de Contactos</button>
+        <button class="tab-btn" onclick="switchTab('tab-roadmap')">🗺️ Proyecto Operativo (Paso a Paso)</button>
+        <button class="tab-btn" onclick="switchTab('tab-checklist')">✅ Checklist Técnico de Campo</button>
+        <button class="tab-btn" onclick="switchTab('tab-schedule')">📅 Calendario de Partidos</button>
+        <button class="tab-btn" onclick="switchTab('tab-templates')">✉️ Centro de Plantillas</button>
       </nav>
+
+      <div class="header-actions">
+        <a href="../captoora_sports.html" class="btn-action-site">
+          &larr; Ver Sitio Web
+        </a>
+      </div>
     </div>
   </header>
 
   <main>
-    <!-- TAB 1: AGENDA Y CALENDARIO -->
-    <section id="tab-schedule" class="view-section active">
-      <div class="hero-banner">
-        <div class="hero-title">
-          <h2>Agenda de Partidos & Ventanas de Anticipación</h2>
-          <p>Anticípate con <strong>5 días hábiles</strong> de antelación para tramitar pases de cancha (Media Pass) con Capitanes CDMX o solicitar acreditación como stringer para equipos visitantes.</p>
+    <!-- REAL-TIME COMMAND KPI BANNER -->
+    <section class="command-kpi-banner">
+      <div class="command-banner-top">
+        <div class="command-title">
+          <h2>
+            <span class="status-live-dot"></span>
+            Estatus del Proyecto en Tiempo Real // Operación Duela 2026-2027
+          </h2>
+          <p>Supervisa el avance global desde el primer correo de solicitud hasta la entrega de fotos en cancha.</p>
         </div>
-        <div class="hero-kpis">
-          <div class="kpi-card">
-            <div class="kpi-num" id="kpi-home-games">6</div>
-            <div class="kpi-label">Arena CDMX</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-num">100%</div>
-            <div class="kpi-label">Varonil</div>
-          </div>
-          <div class="kpi-card">
-            <div class="kpi-num" style="color: #f59e0b;">5 Días</div>
-            <div class="kpi-label">Anticipación</div>
-          </div>
+        <div style="text-align: right;">
+          <div style="font-family: var(--font-mono); font-size: 2.2rem; font-weight: 800; color: var(--cyan);" id="kpi-progress-pct">0%</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-family: var(--font-mono);">Progreso Completado</div>
         </div>
       </div>
 
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+
+      <div class="progress-meta">
+        <span id="tasks-progress-text">Cargando tareas operativas...</span>
+        <span id="contacts-progress-text">Contactos gestionados: 0 / 0</span>
+      </div>
+
+      <!-- NEXT CRITICAL ACTION ALERT -->
+      <div class="next-critical-alert">
+        <div>
+          <strong>🎯 Siguiente Paso Crítico:</strong>
+          <span id="next-action-label" style="font-size: 0.88rem; margin-left: 8px; color: #f8fafc;">
+            Enviar correo de solicitud formal a Jefatura de Prensa de Capitanes CDMX (5 días hábiles antes del juego inaugural).
+          </span>
+        </div>
+        <button class="btn-icon btn-icon-cyan" onclick="openPitchModal('Capitanes CDMX Prensa', 'comunicacion@capitanes.mx')">
+          ✉️ Enviar Correo Ahora
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TAB 1: DIRECTORIO MAESTRO DE CONTACTOS
+         ========================================================================= -->
+    <section id="tab-contacts" class="view-section active">
       <div class="toolbar">
         <div class="filter-pills">
-          <button class="pill-btn active" onclick="filterSchedule('all', this)">Todos</button>
-          <button class="pill-btn" onclick="filterSchedule('home', this)">Local (Arena CDMX)</button>
-          <button class="pill-btn" onclick="filterSchedule('away', this)">Visitante (EE.UU.)</button>
+          <button class="pill-btn active" onclick="filterContacts('all', this)">Todos (16)</button>
+          <button class="pill-btn" onclick="filterContacts('capitanes', this)">Capitanes CDMX</button>
+          <button class="pill-btn" onclick="filterContacts('gleague', this)">Rivales NBA G League</button>
+          <button class="pill-btn" onclick="filterContacts('local', this)">Ligas Locales (LNBP / CIBACOPA / ABE)</button>
+          <button class="pill-btn" onclick="filterContacts('agencies', this)">Agencias & Recinto</button>
         </div>
-        <div class="search-box">
-          <input type="text" id="schedule-search" placeholder="Buscar por rival, fecha o torneo..." onkeyup="searchSchedule()">
-        </div>
-      </div>
-
-      <div class="grid-cards" id="schedule-grid">
-        <!-- Rendered dynamically via JS -->
-      </div>
-    </section>
-
-    <!-- TAB 2: AGENCIAS Y PRÁCTICAS -->
-    <section id="tab-agencies" class="view-section">
-      <div class="section-title-wrap">
-        <h2>Agencias con las que colaboran: Vías de Entrada y Prácticas</h2>
-        <p>Aprende cómo infiltrarte a través de las agencias fotográficas y de entretenimiento que ya tienen presencia fija en duela.</p>
-      </div>
-
-      <div class="grid-cards" id="agencies-grid">
-        <!-- Rendered dynamically via JS -->
-      </div>
-    </section>
-
-    <!-- TAB 3: EQUIPOS RIVALES Y ALTERNATIVOS (SOLO HOMBRES) -->
-    <section id="tab-alternative" class="view-section">
-      <div class="hero-banner" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%); border-color: rgba(245, 158, 11, 0.3);">
-        <div class="hero-title">
-          <h2>Puertas Alternativas de Básquetbol Varonil</h2>
-          <p>Si la puerta de Capitanes está copada o tarda en responder, estos son los equipos varoniles donde puedes foguearte, practicar de inmediato y armar un portafolio de nivel profesional.</p>
-        </div>
-      </div>
-
-      <div class="toolbar">
-        <div class="filter-pills">
-          <button class="pill-btn active" onclick="filterAltTeams('all', this)">Todos los Circuitos</button>
-          <button class="pill-btn" onclick="filterAltTeams('cdmx', this)">CDMX Profesionales (Diablos / Ángeles)</button>
-          <button class="pill-btn" onclick="filterAltTeams('rivales', this)">Rivales G League (Visitas)</button>
-          <button class="pill-btn" onclick="filterAltTeams('abe', this)">Liga Universitaria ABE (Acceso Libre)</button>
-        </div>
-      </div>
-
-      <div class="grid-cards" id="alt-teams-grid">
-        <!-- Rendered dynamically via JS -->
-      </div>
-    </section>
-
-    <!-- TAB 4: DIRECTORIO Y DECISORES -->
-    <section id="tab-contacts" class="view-section">
-      <div class="section-title-wrap">
-        <h2>Directorio de Tomadores de Decisión y Presupuestos</h2>
-        <p>Contactos clave en Presidencia, Operaciones, Prensa y Alianzas Comerciales de Capitanes y Arena CDMX.</p>
+        <input type="text" id="contact-search" class="search-box" placeholder="🔍 Buscar contacto, equipo o correo..." oninput="searchContacts()">
       </div>
 
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
-              <th>Organización</th>
-              <th>Cargo</th>
-              <th>Contacto / Canal</th>
-              <th>Área de Decisión</th>
-              <th>Estrategia de Enfoque</th>
+              <th>Organización / Equipo</th>
+              <th>Contacto Clave / Puesto</th>
+              <th>Correo Electrónico</th>
+              <th>Objetivo & Estrategia</th>
+              <th>Estatus del Contacto</th>
+              <th>Acción Rápida</th>
             </tr>
           </thead>
           <tbody id="contacts-table-body">
-            <!-- Rendered dynamically via JS -->
+            <!-- Dynamic via JS -->
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- TAB 5: PIPELINE DE AGENTES -->
-    <section id="tab-pipeline" class="view-section">
-      <div class="section-title-wrap">
-        <h2>Bitácora y Pipeline de Prospección de Agentes</h2>
-        <p>Registro de tareas y estado de contacto asignado para los agentes de IA y colaboradores en este repositorio.</p>
+    <!-- =========================================================================
+         TAB 2: PROYECTO OPERATIVO PASO A PASO (ROADMAP DISEÑADO PARA NO FALLAR)
+         ========================================================================= -->
+    <section id="tab-roadmap" class="view-section">
+      <div class="toolbar">
+        <div class="hero-title">
+          <h2 style="font-size: 1.35rem; font-weight: 800;">Protocolo Operativo de Cobertura Deportiva (SOP)</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Secuencia cronológica diseñada estratégicamente para garantizar acreditación, acceso y entrega sin errores.</p>
+        </div>
       </div>
 
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Entidad Objetivo</th>
-              <th>Contacto / Canal</th>
-              <th>Objetivo de la Misión</th>
-              <th>Estado</th>
-              <th>Prioridad</th>
-              <th>Fecha Objetivo</th>
-              <th>Acción</th>
-            </tr>
-          </thead>
-          <tbody id="pipeline-table-body">
-            <!-- Rendered dynamically via JS -->
-          </tbody>
-        </table>
+      <div class="roadmap-timeline" id="roadmap-timeline-container">
+        <!-- Rendered via JS -->
       </div>
     </section>
 
-    <!-- TAB 6: CHECKLIST PRE-PARTIDO -->
+    <!-- =========================================================================
+         TAB 3: CHECKLIST TÉCNICO DE CAMPO
+         ========================================================================= -->
     <section id="tab-checklist" class="view-section">
-      <div class="section-title-wrap">
-        <h2>Checklist de Anticipación y Operación Courtside</h2>
-        <p>Cronograma estricto para asegurar acreditación, equipo técnico y entrega de fotos sin fallas.</p>
+      <div class="toolbar">
+        <div class="hero-title">
+          <h2 style="font-size: 1.35rem; font-weight: 800;">Checklist Técnico y Logístico de Maleta</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Marca cada elemento antes de salir hacia la Arena. El avance se sincroniza con el indicador en tiempo real.</p>
+        </div>
+        <button class="btn-icon" onclick="resetChecklist()">🔄 Reiniciar Checklist</button>
       </div>
 
-      <div class="checklist-container">
-        <div class="checklist-step">
-          <div class="step-header">
-            <div class="step-num">1</div>
-            <div class="step-title">T - 5 Días (Anticipación)</div>
-          </div>
-          <label class="check-item"><input type="checkbox"> Enviar solicitud formal de acreditación a <code>comunicacion@capitanes.mx</code>.</label>
-          <label class="check-item"><input type="checkbox"> Contactar a fotógrafo asignado de Imago7 para coordinar asistencia/shadowing.</label>
-          <label class="check-item"><input type="checkbox"> Investigar jugadores Two-Way y asignados NBA del equipo rival.</label>
-          <label class="check-item"><input type="checkbox"> Revisar patrocinadores que tendrán activación en cancha ese día.</label>
-        </div>
+      <div class="cards-grid" id="checklist-cards-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
 
-        <div class="checklist-step">
-          <div class="step-header">
-            <div class="step-num">2</div>
-            <div class="step-title">T - 24 Horas (Técnico)</div>
-          </div>
-          <label class="check-item"><input type="checkbox"> Limpieza de sensores y formateo de tarjetas CFexpress / SD rápidas (V90).</label>
-          <label class="check-item"><input type="checkbox"> Configurar perfiles de cámara: 1/1000s, f/2.8, ISO Auto (1600-3200).</label>
-          <label class="check-item"><input type="checkbox"> Configurar plantilla de metadatos IPTC con créditos de fotógrafo y fecha.</label>
-          <label class="check-item"><input type="checkbox"> Probar conexión FTP móvil o lector de tarjetas USB-C para iPhone/iPad.</label>
+    <!-- =========================================================================
+         TAB 4: CALENDARIO DE PARTIDOS
+         ========================================================================= -->
+    <section id="tab-schedule" class="view-section">
+      <div class="toolbar">
+        <div class="filter-pills">
+          <button class="pill-btn active" onclick="filterSchedule('all', this)">Todos los Juegos</button>
+          <button class="pill-btn" onclick="filterSchedule('home', this)">Local (Arena CDMX)</button>
+          <button class="pill-btn" onclick="filterSchedule('away', this)">Visita (EE.UU.)</button>
         </div>
+        <input type="text" id="schedule-search" class="search-box" placeholder="🔍 Buscar rival o sede..." oninput="searchSchedule()">
+      </div>
 
-        <div class="checklist-step">
-          <div class="step-header">
-            <div class="step-num">3</div>
-            <div class="step-title">Día de Juego (Arena CDMX)</div>
-          </div>
-          <label class="check-item"><input type="checkbox"> Llegar 90 minutos antes a la entrada de medios de la Arena CDMX.</label>
-          <label class="check-item"><input type="checkbox"> Retirar gafete y chaleco oficial de fotógrafo de cancha (*Courtside Photo*).</label>
-          <label class="check-item"><input type="checkbox"> Vestimenta: Ropa y calzado completamente negro (protocolo estricto NBA).</label>
-          <label class="check-item"><input type="checkbox"> Ubicación en línea de fondo respetando zona de escape de jugadores.</label>
-        </div>
+      <div class="cards-grid" id="schedule-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
 
-        <div class="checklist-step">
-          <div class="step-header">
-            <div class="step-num">4</div>
-            <div class="step-title">Post-Partido (Entrega Rápida)</div>
-          </div>
-          <label class="check-item"><input type="checkbox"> Enviar selección de 10 fotos al medio tiempo al equipo de Social Media.</label>
-          <label class="check-item"><input type="checkbox"> Exportar y entregar 25 fotos de máxima calidad 20 minutos post-partido.</label>
-          <label class="check-item"><input type="checkbox"> Subir galería de activaciones de marca y enviar liga a alianzas comerciales.</label>
-          <label class="check-item"><input type="checkbox"> Etiquetar en redes a Capitanes CDMX, NBA G League e Imago7.</label>
+    <!-- =========================================================================
+         TAB 5: CENTRO DE PLANTILLAS
+         ========================================================================= -->
+    <section id="tab-templates" class="view-section">
+      <div class="toolbar">
+        <div class="hero-title">
+          <h2 style="font-size: 1.35rem; font-weight: 800;">Plantillas de Correo Electrónico Listas para Enviar</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Copia con un clic o abre directamente en tu cliente de correo (Mailto) con asunto y cuerpo prellenados.</p>
         </div>
+      </div>
+
+      <div class="cards-grid" id="templates-grid">
+        <!-- Rendered via JS -->
       </div>
     </section>
   </main>
 
-  <!-- MODAL TEMPLATES -->
-  <div class="modal-overlay" id="modal-template">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modal-title">Plantilla de Contacto</h3>
-        <button class="modal-close" onclick="closeModal()">&times;</button>
-      </div>
-      <div id="modal-body" style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; white-space: pre-wrap;"></div>
-      <div style="margin-top: 20px; text-align: right;">
-        <button class="copy-btn" onclick="copyModalContent()">Copiar Texto</button>
+  <!-- MODAL TEMPLATE -->
+  <div class="modal-backdrop" id="modal-template">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeModal()">&times;</button>
+      <h3 class="modal-title" id="modal-title">Plantilla de Correo</h3>
+      <p id="modal-subtitle" style="font-size: 0.84rem; color: var(--text-muted);"></p>
+      
+      <div class="modal-pre" id="modal-body"></div>
+
+      <div class="modal-footer">
+        <button class="btn-icon" onclick="copyModalContent()">📋 Copiar Texto</button>
+        <a id="modal-mailto-btn" href="#" class="btn-icon btn-icon-cyan">✉️ Abrir en Mi Correo</a>
       </div>
     </div>
   </div>
 
   <script>
-    // DATA EMBEDDED
-    const scheduleData = [
+    // MASTER DATA SETS
+    const MASTER_CONTACTS = [
       {
-        id: "CAP-001",
-        date: "2026-11-16",
-        time: "18:00 CST",
-        opponent: "Birmingham Squadron",
-        location: "Arena CDMX",
-        is_home: true,
-        tournament: "Tip-Off Tournament",
-        status: "Programado",
-        anticipation_deadline: "2026-11-13 (Alerta)",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7" },
-        objective: "Solicitud de acreditación piloto o shadowing con fotógrafo de Imago7 en duela.",
-        notes: "Juego inaugural en casa. Alta afluencia de directivos y medios."
+        id: "cnt-001",
+        category: "capitanes",
+        org: "Capitanes CDMX",
+        name: "Jefatura de Prensa y Medios",
+        role: "Media Relations & Acreditaciones",
+        email: "comunicacion@capitanes.mx",
+        strategy: "Solicitud de Media Pass para Duela (5 días hábiles antes)",
+        pitchId: "pitch-acreditacion",
+        defaultStatus: "Pendiente"
       },
       {
-        id: "CAP-002",
-        date: "2026-11-18",
-        time: "20:00 CST",
-        opponent: "Birmingham Squadron",
-        location: "Arena CDMX",
-        is_home: true,
-        tournament: "Tip-Off Tournament",
-        status: "Programado",
-        anticipation_deadline: "2026-11-15",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7" },
-        objective: "Seguimiento de portafolio y entrega de material de prueba.",
-        notes: "Segundo juego de la serie inaugural."
+        id: "cnt-002",
+        category: "capitanes",
+        org: "Capitanes CDMX",
+        name: "Dirección de Alianzas y Patrocinios",
+        role: "Corporate Partnerships",
+        email: "ventas@capitanes.mx",
+        strategy: "Reporte y auditoría fotográfica de marcas (ADO / Caliente)",
+        pitchId: "pitch-sponsor",
+        defaultStatus: "Pendiente"
       },
       {
-        id: "CAP-003",
-        date: "2026-11-23",
-        time: "19:00 CST",
-        opponent: "Rio Grande Valley Vipers",
-        location: "Bert Ogden Arena (Edinburg, TX)",
-        is_home: false,
-        tournament: "Tip-Off Tournament",
-        status: "Gira Visita",
-        anticipation_deadline: "2026-11-20",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "NBA G League Media Feed" },
-        objective: "Monitoreo remoto de fotos oficiales y benchmarking.",
-        notes: "Gira internacional en Texas."
+        id: "cnt-003",
+        category: "capitanes",
+        org: "Capitanes CDMX",
+        name: "Carlos Tostado",
+        role: "Presidente del Equipo",
+        email: "info@capitanes.mx",
+        strategy: "Enlace institucional de alto nivel",
+        pitchId: "pitch-institucional",
+        defaultStatus: "Pendiente"
       },
       {
-        id: "CAP-004",
-        date: "2026-11-25",
-        time: "19:00 CST",
+        id: "cnt-004",
+        category: "capitanes",
+        org: "Capitanes CDMX",
+        name: "Orlando Méndez-Valdez",
+        role: "General Manager (GM Deportivo)",
+        email: "comunicacion@capitanes.mx",
+        strategy: "Validación de acceso a shootaround y prácticas",
+        pitchId: "pitch-acreditacion",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-005",
+        category: "gleague",
+        org: "Austin Spurs (San Antonio Spurs)",
+        name: "Austin Spurs PR & Communications",
+        role: "Head of Communications",
+        email: "austinspurspr@spurs.com",
+        strategy: "Stringer local en CDMX para cubrir prospectos Two-Way",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-006",
+        category: "gleague",
+        org: "Texas Legends (Dallas Mavericks)",
+        name: "Legends Media Relations",
+        role: "Director of Digital & PR",
+        email: "media@texashoops.com",
+        strategy: "Fotos de acción en duela para redes sociales de Dallas",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-007",
+        category: "gleague",
+        org: "Rio Grande Valley Vipers (Houston Rockets)",
+        name: "RGV Vipers Communications",
+        role: "Media Coordinator",
+        email: "media@rgvipers.com",
+        strategy: "Cobertura de clavadas y desarrollo atlético para Rockets",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-008",
+        category: "gleague",
+        org: "Birmingham Squadron (Pelicans)",
+        name: "Squadron Media Staff",
+        role: "Communications Manager",
+        email: "squadronpr@pelicans.com",
+        strategy: "Fotógrafo oficial de visita en series de 2 juegos en CDMX",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-009",
+        category: "gleague",
+        org: "Osceola Magic (Orlando Magic)",
+        name: "Magic Communications Staff",
+        role: "Director of PR",
+        email: "magicpr@orlandomagic.com",
+        strategy: "Entrega exprés en tiempo real para redes de Orlando",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-010",
+        category: "gleague",
+        org: "South Bay Lakers (LA Lakers)",
+        name: "Lakers PR Department",
+        role: "Director of Media Relations",
+        email: "lakerspr@la-lakers.com",
+        strategy: "Altísima demanda de contenido gráfico de asignados NBA",
+        pitchId: "pitch-gleague-rival",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-011",
+        category: "local",
+        org: "Diablos Rojos Basquetbol LNBP",
+        name: "Jefatura de Prensa Diablos",
+        role: "Coordinador de Prensa",
+        email: "prensa@diablos.com.mx",
+        strategy: "Colaboración directa en Juan de la Barrera (Gran Apertura)",
+        pitchId: "pitch-local-team",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-012",
+        category: "local",
+        org: "Ángeles de la Ciudad de México",
+        name: "Comunicación Ángeles CIBACOPA",
+        role: "Prensa y Contenido",
+        email: "contacto@angelescdmx.com",
+        strategy: "Acceso inmediato a duela para portafolio de fogueo",
+        pitchId: "pitch-local-team",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-013",
+        category: "local",
+        org: "Borregos Tec CCM (Liga ABE)",
+        name: "Coordinación Deportiva Tec CCM",
+        role: "Deportes & Comunicación",
+        email: "deportes.ccm@itesm.mx",
+        strategy: "Partidos semanales de alta intensidad sin burocracia",
+        pitchId: "pitch-local-team",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-014",
+        category: "agencies",
+        org: "Imago7 (Agencia en Duela)",
+        name: "Mesa de Asignaciones Fotoperiodismo",
+        role: "Coordinador de Fotógrafos",
+        email: "contacto@imago7.com.mx",
+        strategy: "Prácticas / Shadowing como asistente de duela en Arena CDMX",
+        pitchId: "pitch-imago7",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-015",
+        category: "agencies",
+        org: "Zignia Live / Arena CDMX",
+        name: "Producción & Marketing de Recinto",
+        role: "Gerencia de Recinto",
+        email: "info_zignialive@zignia.mx",
+        strategy: "Fotografía de Suites VIP, gastronomía y atmósfera de arena",
+        pitchId: "pitch-zignia",
+        defaultStatus: "Pendiente"
+      },
+      {
+        id: "cnt-016",
+        category: "agencies",
+        org: "Getty Images / NBA Photos",
+        name: "Editorial Image Operations",
+        role: "Sports Desk Coordinator",
+        email: "editorial.queries@gettyimages.com",
+        strategy: "Candidatura como stringer local para eventos NBA en México",
+        pitchId: "pitch-getty",
+        defaultStatus: "Pendiente"
+      }
+    ];
+
+    const ROADMAP_PHASES = [
+      {
+        id: "fase-1",
+        num: "01",
+        title: "Fase 1: Preparación, Enlace & Envío de Solicitudes",
+        window: "T-15 a T-5 Días",
+        tasks: [
+          { id: "task-1-1", title: "Configurar dossier y enlace de Captoora Sports", desc: "Verificar que captoora_sports.html esté en línea con el portafolio de 78 tomas y hero interactivo." },
+          { id: "task-1-2", title: "Enviar solicitud formal a Jefatura de Prensa de Capitanes", desc: "Mandar email a comunicacion@capitanes.mx solicitando Media Pass con 5 días hábiles de margen." },
+          { id: "task-1-3", title: "Mandar propuesta de Stringer al equipo rival de G League", desc: "Contactar al director de prensa del equipo visitante (ej. Austin Spurs / Texas Legends)." },
+          { id: "task-1-4", title: "Enviar propuesta de auditoría de marcas a Patrocinios", desc: "Escribir a ventas@capitanes.mx ofreciendo paquete de 30 fotos de activaciones para sus reportes." }
+        ]
+      },
+      {
+        id: "fase-2",
+        num: "02",
+        title: "Fase 2: Confirmación, Acreditación & Reglas de Sede",
+        window: "T-5 a T-1 Días",
+        tasks: [
+          { id: "task-2-1", title: "Recepción de confirmación escrita y código de acreditación", desc: "Asegurar que el correo de confirmación indique puerta de acceso de medios y gafete asignado." },
+          { id: "task-2-2", title: "Verificación de reglamento de fotógrafos en duela (NBA G League)", desc: "Confirmar que no se permite flash, uso obligatorio de chaleco y permanencia en 'baseline boxes'." },
+          { id: "task-2-3", title: "Solicitar acceso a Press Room y credenciales Wi-Fi/Ethernet", desc: "Garantizar mesa de trabajo con conexión rápida para ingesta y envío en el medio tiempo." }
+        ]
+      },
+      {
+        id: "fase-3",
+        num: "03",
+        title: "Fase 3: Calibración Técnica & Checklist de Maleta",
+        window: "T-24 Horas",
+        tasks: [
+          { id: "task-3-1", title: "Cargar baterías al 100% y formatear tarjetas SD/CFexpress", desc: "Llevar mínimo 4 baterías originales y tarjetas de alta velocidad UHS-II V90 / Type-B." },
+          { id: "task-3-2", title: "Inspección de ópticas: 70-200mm f/2.8 y 24-70mm f/2.8", desc: "Limpieza de cristales frontales, verificación de motor AF y estabilizador." },
+          { id: "task-3-3", title: "Empacar monopié de aluminio y rodilleras acolchadas", desc: "Las rodilleras son indispensables para soportar 2 horas y media de partido sentado en duela." },
+          { id: "task-3-4", title: "Sincronizar reloj interno de cámara y preconfigurar Kelvin", desc: "Ajustar reloj al segundo exacto y preconfigurar White Balance en 4500K-4800K." }
+        ]
+      },
+      {
+        id: "fase-4",
+        num: "04",
+        title: "Fase 4: Día de Partido - Pre-Game & Reconocimiento",
+        window: "T-120 a T-30 Minutos",
+        tasks: [
+          { id: "task-4-1", title: "Llegada por Puerta de Medios (T-120 min antes del salto)", desc: "Presentar identificación oficial, recibir gafete Media Pass y chaleco de prensa numerado." },
+          { id: "task-4-2", title: "Instalación en Sala de Prensa y prueba de conexión", desc: "Probar lector de tarjetas y conexión a internet para entrega de medio tiempo." },
+          { id: "task-4-3", title: "Inspección de duela durante Shootaround (Calentamiento)", desc: "Hacer tomas de prueba para fijar ISO (2500-3200) y velocidad de obturación en 1/1250s a f/2.8." },
+          { id: "task-4-4", title: "Ubicación en esquina de duela (Baseline)", desc: "Tomar posición en el cuadrante autorizado respetando la visibilidad de los árbitros." }
+        ]
+      },
+      {
+        id: "fase-5",
+        num: "05",
+        title: "Fase 5: Cobertura en Vivo, Entrega Rápida & Cierre",
+        window: "Durante el Juego & Post-Game",
+        tasks: [
+          { id: "task-5-1", title: "Captura de Cuartos 1 y 2 (Duelos en la pintura y clavadas)", desc: "Disparar ráfagas cortas en penetraciones a canasta y bloqueos defensivos." },
+          { id: "task-5-2", title: "Medio Tiempo Express (Halftime Ingestion - 15 min)", desc: "Correr a Press Room; seleccionar 8-10 tomas cumbre; revelado rápido y envío al equipo de redes." },
+          { id: "task-5-3", title: "Captura de Cuartos 3 y 4 (Tiros decisivos y celebraciones)", desc: "Monitorear la banca, emoción del público, tiempo fuera y tiros sobre la chicharra (Buzzer Beater)." },
+          { id: "task-5-4", title: "Conferencia de Prensa Post-Partido y Entrega Final", desc: "Tomar declaraciones de entrenador y MVP; procesar lote final de 80-120 fotos en alta resolución." }
+        ]
+      }
+    ];
+
+    const CHECKLIST_CATEGORIES = [
+      {
+        cat: "Ópticas & Cuerpos",
+        items: [
+          "Cuerpo principal Full Frame con disparo continuo a 10+ fps",
+          "Segundo cuerpo de respaldo (o para segunda focal rápida)",
+          "Teleobjetivo 70-200mm f/2.8 (indispensable para acción en la pintura)",
+          "Zoom estándar 24-70mm f/2.8 (celebraciones, tiros libres, plano general)",
+          "Monopié compacto con cabezal de movimiento rápido"
+        ]
+      },
+      {
+        cat: "Energía & Almacenamiento",
+        items: [
+          "4x Baterías originales cargadas al 100%",
+          "Cargador doble de pared y powerbank USB-C",
+          "4x Tarjetas de memoria UHS-II V90 / CFexpress formateadas",
+          "Lector de tarjetas de alta velocidad USB-C",
+          "Laptop / iPad con Lightroom Classic o Photo Mechanic listo"
+        ]
+      },
+      {
+        cat: "Equipo de Protección & Duela",
+        items: [
+          "Rodilleras acolchadas de duela (indispensables para 2.5 hrs sentado)",
+          "Chaleco o cinta oficial de prensa entregada en recinto",
+          "Gafete de acreditación visible en todo momento",
+          "Calzado con suela de goma limpia (prohibido calzado que marque duela)",
+          "Cinta de gaffer negra para fijar cables si es necesario"
+        ]
+      },
+      {
+        cat: "Parámetros de Cámara de Baloncesto",
+        items: [
+          "Modo Manual (M): Obturación fija a 1/1250s o 1/1000s mínimo",
+          "Apertura máxima constante: f/2.8",
+          "ISO: 2500 - 3200 (según iluminación de Arena CDMX / Juan de la Barrera)",
+          "Enfoque: AF-C (Continuo) con Seguimiento al Ojo / Zona Dinámica",
+          "Balance de Blancos: Kelvin manual (4500K - 4800K) fijado en calentamiento"
+        ]
+      }
+    ];
+
+    const SCHEDULE_GAMES = [
+      {
         opponent: "Austin Spurs",
-        location: "H-E-B Center (Cedar Park, TX)",
-        is_home: false,
-        tournament: "Tip-Off Tournament",
-        status: "Gira Visita",
-        anticipation_deadline: "2026-11-22",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "NBA G League" },
-        objective: "Análisis de cobertura del rival.",
-        notes: "Partido en Texas."
-      },
-      {
-        id: "CAP-005",
-        date: "2026-12-03",
-        time: "18:00 CST",
-        opponent: "Texas Legends",
-        location: "Arena CDMX",
-        is_home: true,
-        tournament: "Tip-Off Tournament",
-        status: "Programado",
-        anticipation_deadline: "2026-11-28",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7 / Getty" },
-        objective: "Cobertura enfocada en marcas y patrocinadores (ADO / Caliente).",
-        notes: "Juego estelar de fin de semana en CDMX."
-      },
-      {
-        id: "CAP-006",
-        date: "2026-12-05",
-        time: "20:00 CST",
-        opponent: "Texas Legends",
-        location: "Arena CDMX",
-        is_home: true,
-        tournament: "Tip-Off Tournament",
-        status: "Programado",
-        anticipation_deadline: "2026-11-30",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7" },
-        objective: "Entrega de reporte fotográfico de activaciones a ventas@capitanes.mx.",
-        notes: "Cierre de fase local del Tip-Off."
-      },
-      {
-        id: "CAP-007",
-        date: "2027-01-08",
+        date: "2026-11-17",
         time: "19:00 CST",
-        opponent: "Osceola Magic",
-        location: "Arena CDMX",
         is_home: true,
-        tournament: "Temporada Regular",
-        status: "Programado",
-        anticipation_deadline: "2027-01-02",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7 / Zignia Live" },
-        objective: "Arranque de temporada regular con paquete comercial formal.",
-        notes: "Apertura de la segunda mitad de la temporada en casa."
-      },
-      {
-        id: "CAP-008",
-        date: "2027-01-10",
-        time: "17:00 CST",
-        opponent: "Osceola Magic",
         location: "Arena CDMX",
+        tournament: "NBA G League Tip-Off Tournament",
+        pr: "austinspurspr@spurs.com",
+        deadline: "2026-11-12"
+      },
+      {
+        opponent: "Texas Legends",
+        date: "2026-11-20",
+        time: "20:00 CST",
         is_home: true,
+        location: "Arena CDMX",
+        tournament: "NBA G League Tip-Off Tournament",
+        pr: "media@texashoops.com",
+        deadline: "2026-11-15"
+      },
+      {
+        opponent: "Rio Grande Valley Vipers",
+        date: "2026-11-24",
+        time: "18:00 CST",
+        is_home: true,
+        location: "Arena CDMX",
+        tournament: "NBA G League Tip-Off Tournament",
+        pr: "media@rgvipers.com",
+        deadline: "2026-11-19"
+      },
+      {
+        opponent: "Birmingham Squadron",
+        date: "2026-11-28",
+        time: "19:00 CST",
+        is_home: true,
+        location: "Arena CDMX",
         tournament: "Temporada Regular",
-        status: "Programado",
-        anticipation_deadline: "2027-01-04",
-        key_contacts: { team_pr: "comunicacion@capitanes.mx", primary_agency: "Imago7" },
-        objective: "Sesión de fotos de llegada (Tunnel fits / Lifestyle NBA) y juego.",
-        notes: "Partido familiar de domingo."
+        pr: "squadronpr@pelicans.com",
+        deadline: "2026-11-23"
+      },
+      {
+        opponent: "Osceola Magic",
+        date: "2026-12-04",
+        time: "20:00 CST",
+        is_home: true,
+        location: "Arena CDMX",
+        tournament: "Temporada Regular",
+        pr: "magicpr@orlandomagic.com",
+        deadline: "2026-11-29"
+      },
+      {
+        opponent: "South Bay Lakers",
+        date: "2026-12-10",
+        time: "19:30 CST",
+        is_home: true,
+        location: "Arena CDMX",
+        tournament: "Temporada Regular",
+        pr: "lakerspr@la-lakers.com",
+        deadline: "2026-12-05"
       }
     ];
 
-    const agenciesData = [
-      {
-        name: "Imago7",
-        badge: "Máxima Relevancia",
-        category: "Fotoperiodismo Deportivo Líder",
-        contacts: "Tel: (55) 6363 0803 | Cel: (55) 2114 0865",
-        web: "imago7.com.mx",
-        desc: "La agencia que provee a todos los medios en los juegos de Capitanes en la Arena CDMX.",
-        opportunity: "Shadowing y Asistencia Técnica: Proponerte como asistente en duela para carga de baterías, cambio de tarjetas, ingesta rápida a laptop y transmisión FTP a cambio de aprender y entrar con acreditación oficial.",
-        pitchAction: "abrirTemplateImago()"
+    const PITCH_TEMPLATES = {
+      "pitch-acreditacion": {
+        title: "Solicitud de Acreditación / Media Pass en Duela - Capitanes CDMX",
+        subject: "Solicitud de Acreditación / Cobertura Fotográfica en Duela - Capitanes CDMX",
+        body: `Estimada Jefatura de Prensa y Comunicación de Capitanes de la Ciudad de México,
+
+Espero que se encuentren muy bien. Mi nombre es [Tu Nombre], fotógrafo deportivo con base en Monterrey / CDMX, especializado en baloncesto y fotografía de duela de alta velocidad.
+
+Me pongo en contacto para solicitar formalmente acreditación de cancha (Media Pass) para la cobertura fotográfica del próximo encuentro de Capitanes en la Arena CDMX.
+
+Contamos con un protocolo de trabajo optimizado para ligas profesionales y redes sociales:
+• Captura quirúrgica a 1/1250s f/2.8 (volcadas, choques y lenguaje corporal de los jugadores).
+• Entrega exprés al medio tiempo (Halftime Delivery): 10 tomas editadas y etiquetadas listas para redes inmediatas.
+• Entrega final de galería completa en alta resolución en menos de 2 horas post-partido.
+• Respeto absoluto del reglamento de duela de NBA G League y áreas designadas para medios.
+
+Portafolio Oficial Captoora Sports:
+https://captoora.com/sports (Ver portafolio de 78 tomas de acción)
+
+Equipo técnico: Cuerpos Full Frame con 70-200mm f/2.8 y 24-70mm f/2.8, monopié y credencial de prensa.
+
+Agradezco de antemano su atención y quedo a su entera disposición para completar cualquier formato oficial de acreditación.
+
+Saludos cordiales,
+[Tu Nombre] | Captoora Sports
+Tel / WhatsApp: +52 81 4005 0088`
       },
-      {
-        name: "Getty Images / NBA Photos",
-        badge: "Oficial Global",
-        category: "Distribuidor Global de la NBA",
-        contacts: "editorial.queries@gettyimages.com",
-        web: "gettyimages.es",
-        desc: "El banco oficial que nutre la app de la NBA y publicaciones internacionales.",
-        opportunity: "Stringer Local: Si tienes equipo con lentes luminosos (70-200mm f/2.8) y metadatos IPTC perfectos, puedes solicitar colaborar en fechas locales donde requieran fotógrafo de refuerzo.",
-        pitchAction: "abrirTemplateGetty()"
+      "pitch-gleague-rival": {
+        title: "Propuesta de Local Stringer para Equipos Visitantes de la NBA G League",
+        subject: "Local Courtside Action Photography for [Team Name] @ Mexico City Capitanes (Arena CDMX)",
+        body: `Dear Media Relations & Digital Content Team of [Team Name],
+
+I hope this message finds you well.
+
+My name is [Your Name], a courtside sports photographer based in Mexico specializing in high-speed basketball action and player storytelling.
+
+With your upcoming game against the Mexico City Capitanes at Arena CDMX, I would like to offer our services as your LOCAL STRINGER / COURTSIDE PHOTOGRAPHER in Mexico City:
+
+What we provide for visiting teams:
+1. Two-Way & Assigned Player Spotlight: Dedicated high-res coverage focused specifically on your NBA-assigned players and draft prospects during warm-ups and live action.
+2. Real-Time Halftime Delivery: 8 to 12 curated, color-graded photos uploaded to your team's cloud/FTP during halftime for immediate social media posting.
+3. Post-Game Master Pack: 60+ high-resolution, IPTC-tagged action shots delivered within 2 hours of the final buzzer.
+4. Professional Gear: Dual-body Full Frame setup with 70-200mm f/2.8 & 24-70mm f/2.8 lenses, following full NBA courtside safety guidelines.
+
+You can review our sports portfolio here:
+[Link to Captoora Sports Portfolio]
+
+We would love to provide photo coverage for your digital and PR channels during your trip to Mexico City. Please let us know if we can coordinate media access for this matchup.
+
+Best regards,
+[Your Name] | Captoora Sports
+WhatsApp: +52 81 4005 0088
+Email: info@captoora.com`
       },
-      {
-        name: "Zignia Live / Arena CDMX",
-        badge: "Dueños de la Sede",
-        category: "Operación de Recinto y Entretenimiento",
-        contacts: "info_zignialive@zignia.mx | Tel: (81) 8126 2100",
-        web: "zignia.mx / arenacdmx.com",
-        desc: "Operadores de la Arena CDMX, suites VIP, Jumbotron y hospitalidad.",
-        opportunity: "Cobertura de 'Experiencia Arena': Fotos de la afición, comida, ambientación y vida del recinto para su archivo de marketing institucional.",
-        pitchAction: "abrirTemplateZignia()"
+      "pitch-sponsor": {
+        title: "Propuesta de Auditoría Fotográfica para Marcas Patrocinadoras (ADO / Caliente)",
+        subject: "Auditoría Fotográfica y Reporte Visual de Activaciones de Marca en Arena CDMX",
+        body: `Estimada Dirección de Alianzas Comerciales y Patrocinios,
+
+Sabemos el valor estratégico y la inversión que realizan las marcas patrocinadoras en los partidos de Capitanes en la Arena CDMX.
+
+En Captoora Sports ofrecemos un servicio especializado de AUDITORÍA FOTOGRÁFICA DE PATROCINIOS:
+• Captura de alta resolución de su presencia de marca en duela, vallas LED perimetrales, jumbotron y activaciones con la afición.
+• Integración del patrocinador en momentos cumbre de acción deportiva (tiros libres, clavadas y celebraciones).
+• Reporte visual ejecutivo de 30 fotografías listo para presentación de Retorno de Inversión (ROI) a dirección general.
+
+¿Podríamos coordinar una breve llamada para mostrarles un ejemplo de reporte visual para sus patrocinadores?
+
+Atentamente,
+[Tu Nombre] | Captoora Sports
+WhatsApp: +52 81 4005 0088`
       },
-      {
-        name: "Agencias BTL de Patrocinadores (ADO / Caliente)",
-        badge: "Presupuesto Comercial",
-        category: "Activaciones y Retorno de Inversión",
-        contacts: "ventas@capitanes.mx / Agencias BTL asociadas",
-        web: "Alianzas Capitanes",
-        desc: "Las marcas pagan sumas millonarias por aparecer en duela y necesitan justificar el patrocinio.",
-        opportunity: "Auditoría Fotográfica de Patrocinio: Paquete de 30 fotos donde se aprecie claramente el logo del patrocinador con el juego de fondo.",
-        pitchAction: "abrirTemplateSponsor()"
+      "pitch-local-team": {
+        title: "Propuesta de Colaboración de Duela para Equipos Locales (Diablos / Ángeles)",
+        subject: "Propuesta de Cobertura Fotográfica Oficial en Duela - [Nombre del Equipo]",
+        body: `Estimado Equipo de Prensa y Comunicación de [Nombre del Equipo],
+
+Sigo con gran admiración el despliegue deportivo del equipo en su temporada actual.
+
+Soy fotógrafo especializado en baloncesto varonil de alta velocidad y me pongo en contacto para proponer una colaboración de cobertura en duela:
+• Acción congelada a 1/1250s con iluminación calibrada.
+• Retratos épicos de jugadores para posters de partido y redes sociales.
+• Entrega el mismo día del encuentro para potenciar el engagement con su afición.
+
+Muestra de trabajo: [Enlace a Captoora Sports]
+
+¿Sería posible coordinar una cobertura piloto en su próximo juego de local?
+
+Saludos cordiales,
+[Tu Nombre] | Captoora Sports
+WhatsApp: +52 81 4005 0088`
+      },
+      "pitch-imago7": {
+        title: "Solicitud de Prácticas Profesionales / Asistente en Duela - Imago7",
+        subject: "Postulación para Prácticas Profesionales / Asistencia en Duela en Arena CDMX - Imago7",
+        body: `Estimada Mesa de Asignaciones de Imago7,
+
+Mi nombre es [Tu Nombre], fotógrafo enfocado en deportes de velocidad y baloncesto en CDMX / Monterrey.
+
+Sigo de cerca la cobertura impecable que realizan sus fotógrafos en los juegos de Capitanes CDMX en la Arena CDMX.
+
+Me gustaría postularme para realizar PRÁCTICAS PROFESIONALES / ASISTENCIA TÉCNICA EN DUELA (Shadowing) con ustedes en las próximas fechas de baloncesto:
+• Soporte técnico en cancha: Apoyo con lentes teleobjetivo, baterías y seguridad de equipo.
+• Ingesta inmediata: Descarga y etiquetado de metadatos IPTC en vivo para acelerar la subida al banco de imágenes de Imago7.
+• Disponibilidad total para foguearme y aprender bajo sus rigurosos estándares editoriales.
+
+Cuento con equipo propio Full Frame, lentes f/2.8 y total compromiso. ¿Podríamos coordinar una breve entrevista?
+
+Portafolio: [Enlace a Captoora Sports]
+Tel / WhatsApp: +52 81 4005 0088`
+      },
+      "pitch-zignia": {
+        title: "Propuesta de Cobertura de Experiencia de Recinto - Zignia Live / Arena CDMX",
+        subject: "Propuesta de Cobertura Gráfica de Recinto y Experiencia de Hospitalidad - Arena CDMX",
+        body: `Estimado Equipo de Marketing y Producción de Zignia Live / Arena CDMX,
+
+Los encuentros deportivos en la Arena CDMX ofrecen una experiencia de entretenimiento de primer nivel en América Latina.
+
+Ofrecemos nuestros servicios de fotografía enfocados en 'Experiencia de Recinto':
+• Vida y atmósfera en Suites VIP, terrazas y zonas de hospitalidad.
+• Experiencia gastronómica y consumo de la afición.
+• Tomas panorámicas del inmueble con iluminación de evento y Jumbotron en pleno partido.
+
+Nos encantaría colaborar como proveedores de contenido visual para su archivo de marketing institucional.
+
+Quedo a su disposición para coordinar una fecha de muestra.
+
+Saludos,
+[Tu Nombre] | Captoora Sports
+WhatsApp: +52 81 4005 0088`
+      },
+      "pitch-getty": {
+        title: "Candidatura como Stringer Local - Getty Images / NBA Photos",
+        subject: "Freelance / Stringer Sports Photographer Application - Mexico City (NBA Games)",
+        body: `Dear Getty Images Sports Editorial Desk,
+
+I am writing to submit my application as a Freelance Sports Photographer / Local Stringer for basketball coverage in Mexico City (Capitanes CDMX & NBA international games).
+
+I specialize in fast-paced courtside basketball photography with full professional gear:
+• Full Frame camera bodies with fast continuous shooting (10+ fps).
+• 70-200mm f/2.8 and 24-70mm f/2.8 optics.
+• Immediate field ingestion and strict IPTC metadata compliance (Caption, Byline, Credit, Event details).
+• High-speed live transmission capability.
+
+My sports portfolio can be accessed here:
+[Link to Captoora Sports Portfolio]
+
+I am available for on-demand sports assignments in Mexico City and across northern Mexico.
+
+Best regards,
+[Your Name] | Captoora Sports
+Phone / WhatsApp: +52 81 4005 0088`
       }
-    ];
+    };
 
-    const altTeamsData = [
-      {
-        name: "Diablos Rojos del México Basquetbol",
-        type: "cdmx",
-        league: "LNBP Varonil",
-        venue: "Gimnasio Olímpico Juan de la Barrera (CDMX)",
-        difficulty: "Media - Gran Apertura",
-        contact: "prensa@diablos.com.mx | @diablosrojosbasquetbol",
-        desc: "El proyecto varonil más ambicioso de la CDMX en LNBP. Buscan activamente fotógrafos y creadores de contenido para sus partidos de local en el Juan de la Barrera.",
-        opportunity: "Prácticas o colaboración directa para toda la temporada de LNBP Varonil."
-      },
-      {
-        name: "Ángeles de la Ciudad de México",
-        type: "cdmx",
-        league: "CIBACOPA Varonil",
-        venue: "Gimnasio Olímpico Juan de la Barrera (CDMX)",
-        difficulty: "Baja - Muy Accesible",
-        contact: "contacto@angelescdmx.com | @angelescdmxoficial",
-        desc: "Franquicia varonil en consolidación en la capital. Al estar en etapa de crecimiento, su equipo de prensa da acceso casi inmediato a fotógrafos colaboradores.",
-        opportunity: "Excelente laboratorio de fogueo para dominar la fotografía de baloncesto rápido."
-      },
-      {
-        name: "Austin Spurs / Texas Legends (Rivales G League)",
-        type: "rivales",
-        league: "NBA G League (Filiales Spurs / Mavs)",
-        venue: "Visitan Arena CDMX",
-        difficulty: "Media (Vía Director de Prensa)",
-        contact: "austinspurspr@spurs.com | media@texashoops.com",
-        desc: "Cuando viajan a la Arena CDMX rara vez traen fotógrafo propio desde Texas. Contratan fotógrafos locales para enviar fotos a San Antonio y Dallas.",
-        opportunity: "Stringer local para documentar a sus jugadores Two-Way en México."
-      },
-      {
-        name: "Borregos Tec de Monterrey Varonil CCM",
-        type: "abe",
-        league: "Liga ABE División 1 Varonil",
-        venue: "Arena Borregos Campus CDMX",
-        difficulty: "Mínima / Entrada Inmediata",
-        contact: "Coordinación Deportiva Tec CCM",
-        desc: "Misma potencia atlética, clavadas y velocidad que el básquetbol universitario estadounidense. Sin burocracia de acreditación.",
-        opportunity: "Entrenamientos y juegos todos los fines de semana para calibrar cámara a 1/1000s y armar portafolio en 48 hrs."
-      },
-      {
-        name: "Pumas UNAM Baloncesto Varonil",
-        type: "abe",
-        league: "Liga ABE / Torneos Universitarios",
-        venue: "Frontón Cerrado de CU",
-        difficulty: "Mínima / Acceso Libre",
-        contact: "DGDU UNAM",
-        desc: "Acceso libre para fotógrafos en Ciudad Universitaria. Competencia varonil de alto impacto.",
-        opportunity: "Práctica libre con luz natural y artificial en duela emblemática."
+    // LOCAL STORAGE KEYS
+    const STORAGE_KEY_CONTACTS = 'captoora_contacts_status_v1';
+    const STORAGE_KEY_TASKS = 'captoora_roadmap_tasks_v1';
+    const STORAGE_KEY_CHECKLIST = 'captoora_checklist_items_v1';
+
+    let contactsStatus = JSON.parse(localStorage.getItem(STORAGE_KEY_CONTACTS) || '{}');
+    let completedTasks = JSON.parse(localStorage.getItem(STORAGE_KEY_TASKS) || '{}');
+    let completedChecklist = JSON.parse(localStorage.getItem(STORAGE_KEY_CHECKLIST) || '{}');
+
+    // INITIALIZATION
+    document.addEventListener('DOMContentLoaded', () => {
+      renderContactsTable();
+      renderRoadmap();
+      renderChecklist();
+      renderScheduleGrid();
+      renderTemplatesGrid();
+      updateGlobalProgress();
+    });
+
+    // PROGRESS CALCULATION
+    function updateGlobalProgress() {
+      // Count total tasks in roadmap
+      let totalTasks = 0;
+      let doneTasks = 0;
+      ROADMAP_PHASES.forEach(phase => {
+        phase.tasks.forEach(task => {
+          totalTasks++;
+          if (completedTasks[task.id]) doneTasks++;
+        });
+      });
+
+      // Count checklist items
+      let totalCheck = 0;
+      let doneCheck = 0;
+      CHECKLIST_CATEGORIES.forEach(cat => {
+        cat.items.forEach((item, idx) => {
+          totalCheck++;
+          const key = `chk-${cat.cat}-${idx}`;
+          if (completedChecklist[key]) doneCheck++;
+        });
+      });
+
+      // Count contacted entities
+      let totalContacts = MASTER_CONTACTS.length;
+      let contactedCount = 0;
+      MASTER_CONTACTS.forEach(c => {
+        const st = contactsStatus[c.id] || c.defaultStatus;
+        if (st !== 'Pendiente') contactedCount++;
+      });
+
+      // Weight: Tasks 50%, Contacts 30%, Checklist 20%
+      const taskRatio = totalTasks > 0 ? (doneTasks / totalTasks) : 0;
+      const contactRatio = totalContacts > 0 ? (contactedCount / totalContacts) : 0;
+      const checkRatio = totalCheck > 0 ? (doneCheck / totalCheck) : 0;
+
+      const totalPct = Math.round((taskRatio * 50) + (contactRatio * 30) + (checkRatio * 20));
+
+      document.getElementById('kpi-progress-pct').innerText = totalPct + '%';
+      document.getElementById('progress-bar-fill').style.width = totalPct + '%';
+
+      document.getElementById('tasks-progress-text').innerText = `Tareas operativas completadas: ${doneTasks} de ${totalTasks} (SOP)`;
+      document.getElementById('contacts-progress-text').innerText = `Contactos gestionados: ${contactedCount} de ${totalContacts}`;
+
+      // Update next critical action dynamically
+      updateNextCriticalAction();
+    }
+
+    function updateNextCriticalAction() {
+      for (const phase of ROADMAP_PHASES) {
+        for (const task of phase.tasks) {
+          if (!completedTasks[task.id]) {
+            document.getElementById('next-action-label').innerText = `[${phase.title.split(':')[0]}] ${task.title}`;
+            return;
+          }
+        }
       }
-    ];
-
-    const contactsData = [
-      { name: "Carlos Tostado", org: "Capitanes CDMX", role: "Presidente del Equipo", contact: "info@capitanes.mx", area: "Presidencia / Estrategia", strategy: "Institucional" },
-      { name: "Orlando Méndez-Valdez", org: "Capitanes CDMX", role: "General Manager (GM)", contact: "comunicacion@capitanes.mx", area: "Roster Varonil y Scouting", strategy: "Acceso a prácticas deportivas" },
-      { name: "Nuño Pérez-Pla", org: "Capitanes CDMX", role: "Director de Operaciones", contact: "info@capitanes.mx", area: "Operaciones y Negocio", strategy: "Estándares NBA" },
-      { name: "Daniela Rivero", org: "Capitanes CDMX", role: "Directora de Operaciones del Equipo", contact: "comunicacion@capitanes.mx", area: "Logística y Staff", strategy: "Prácticas de operaciones" },
-      { name: "Jefatura de Prensa", org: "Capitanes CDMX", role: "Coordinador de Medios", contact: "comunicacion@capitanes.mx", area: "Acreditaciones & Courtside Passes", strategy: "Prioridad 1 para Media Pass" },
-      { name: "Dirección de Alianzas", org: "Capitanes CDMX", role: "Gerente de Patrocinios", contact: "ventas@capitanes.mx", area: "Patrocinadores (ADO/Caliente)", strategy: "Venta de auditoría visual de marcas" },
-      { name: "Producción Arena CDMX", org: "Zignia Live", role: "Gerencia de Recinto", contact: "info_zignialive@zignia.mx", area: "Operación de Inmueble y Pantallas", strategy: "Proveedor de contenido de recinto" },
-      { name: "Mesa de Asignaciones", org: "Imago7", role: "Coordinador Fotoperiodismo", contact: "Tel: (55) 6363 0803", area: "Fotógrafos en Duela", strategy: "Shadowing / Asistente de cancha" }
-    ];
-
-    const pipelineData = [
-      { id: "PIPE-001", target: "Imago7", channel: "WhatsApp (55) 2114 0865", goal: "Prácticas / Shadowing como asistente de fotógrafo en duela", status: "Listo para Contactar", priority: "Alta", date: "2026-11-12" },
-      { id: "PIPE-002", target: "Capitanes CDMX Prensa", channel: "comunicacion@capitanes.mx", goal: "Solicitud de acreditación piloto en Arena CDMX", status: "Listo para Contactar", priority: "Alta", date: "2026-11-13" },
-      { id: "PIPE-003", target: "Capitanes Alianzas", channel: "ventas@capitanes.mx", goal: "Propuesta de reporte fotográfico para marcas (ADO)", status: "En Borrador", priority: "Media", date: "2026-11-15" },
-      { id: "PIPE-004", target: "Diablos Rojos Basquetbol Varonil", channel: "prensa@diablos.com.mx", goal: "Colaboración / Prácticas en Juan de la Barrera", status: "Listo para Contactar", priority: "Alta (Alternativa)", date: "2026-11-14" },
-      { id: "PIPE-005", target: "Ángeles CDMX Varonil", channel: "contacto@angelescdmx.com", goal: "Pase de duela para CIBACOPA Varonil", status: "Listo para Contactar", priority: "Alta (Fácil Acceso)", date: "2026-11-14" },
-      { id: "PIPE-006", target: "Borregos Tec CCM Varonil", channel: "Deportes Tec CCM", goal: "Pase de cancha para Liga ABE División 1", status: "Listo para Contactar", priority: "Inmediata", date: "2026-11-13" }
-    ];
-
-    // RENDER FUNCTIONS
-    function renderSchedule(filter = 'all', search = '') {
-      const grid = document.getElementById('schedule-grid');
-      grid.innerHTML = '';
-      
-      const filtered = scheduleData.filter(g => {
-        const matchesFilter = filter === 'all' || (filter === 'home' && g.is_home) || (filter === 'away' && !g.is_home);
-        const matchesSearch = !search || g.opponent.toLowerCase().includes(search.toLowerCase()) || g.location.toLowerCase().includes(search.toLowerCase());
-        return matchesFilter && matchesSearch;
-      });
-
-      filtered.forEach(game => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <div>
-            <div class="card-top">
-              <span class="badge ${game.is_home ? 'badge-home' : 'badge-away'}">${game.is_home ? 'LOCAL (ARENA CDMX)' : 'VISITA (EE.UU.)'}</span>
-              <span class="badge badge-tournament">${game.tournament}</span>
-            </div>
-            <h3>vs ${game.opponent}</h3>
-            <div class="card-subtitle">📍 ${game.location}</div>
-            
-            <div class="card-detail-row">
-              <span class="detail-label">Fecha y Hora:</span>
-              <span class="detail-value">${game.date} • ${game.time}</span>
-            </div>
-            <div class="card-detail-row">
-              <span class="detail-label">Contacto Prensa:</span>
-              <span class="detail-value contact-badge">${game.key_contacts.team_pr}</span>
-            </div>
-            <div class="card-detail-row">
-              <span class="detail-label">Agencia en Duela:</span>
-              <span class="detail-value">${game.key_contacts.primary_agency}</span>
-            </div>
-
-            <div class="anticipation-box">
-              <strong>⏰ Ventana Límite de Anticipación:</strong>
-              Tramitar acreditación antes del <b>${game.anticipation_deadline}</b>.
-            </div>
-          </div>
-
-          <div class="card-footer-action">
-            <button class="action-btn action-btn-primary" onclick="openPitchModal('${game.opponent}', '${game.date}', '${game.location}')">Ver Plantilla de Contacto</button>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
+      document.getElementById('next-action-label').innerText = "¡Excelente trabajo! Todas las etapas operativas han sido ejecutadas exitosamente.";
     }
 
-    function renderAgencies() {
-      const grid = document.getElementById('agencies-grid');
-      grid.innerHTML = '';
-
-      agenciesData.forEach(ag => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <div>
-            <div class="card-top">
-              <span class="badge badge-tournament">${ag.badge}</span>
-              <span style="font-size: 0.75rem; color: #94a3b8;">${ag.category}</span>
-            </div>
-            <h3>${ag.name}</h3>
-            <div class="card-subtitle">🌐 ${ag.web} | 📞 ${ag.contacts}</div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 12px;">${ag.desc}</p>
-            
-            <div class="anticipation-box" style="background: rgba(6, 182, 212, 0.08); border-left-color: #06b6d4;">
-              <strong style="color: #38bdf8;">🎯 Oportunidad de Prácticas / Entrada:</strong>
-              ${ag.opportunity}
-            </div>
-          </div>
-
-          <div class="card-footer-action">
-            <button class="action-btn action-btn-primary" onclick="${ag.pitchAction}">Ver Propuesta de Prácticas</button>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function renderAltTeams(filter = 'all') {
-      const grid = document.getElementById('alt-teams-grid');
-      grid.innerHTML = '';
-
-      const filtered = altTeamsData.filter(t => filter === 'all' || t.type === filter);
-
-      filtered.forEach(team => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-          <div>
-            <div class="card-top">
-              <span class="badge badge-home">${team.league}</span>
-              <span class="badge badge-tournament">${team.difficulty}</span>
-            </div>
-            <h3>${team.name}</h3>
-            <div class="card-subtitle">🏟️ ${team.venue}</div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 12px;">${team.desc}</p>
-            
-            <div class="card-detail-row">
-              <span class="detail-label">Contacto:</span>
-              <span class="detail-value contact-badge">${team.contact}</span>
-            </div>
-
-            <div class="anticipation-box">
-              <strong>💡 Oportunidad para Ti:</strong>
-              ${team.opportunity}
-            </div>
-          </div>
-
-          <div class="card-footer-action">
-            <button class="action-btn" onclick="openTeamPitch('${team.name}')">Ver Script para este Equipo</button>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
-
-    function renderContacts() {
+    // RENDER CONTACTS
+    function renderContactsTable(filter = 'all', query = '') {
       const tbody = document.getElementById('contacts-table-body');
       tbody.innerHTML = '';
 
-      contactsData.forEach(c => {
+      const filtered = MASTER_CONTACTS.filter(c => {
+        const matchesFilter = filter === 'all' || c.category === filter;
+        const matchesQuery = !query || 
+          c.org.toLowerCase().includes(query.toLowerCase()) || 
+          c.name.toLowerCase().includes(query.toLowerCase()) || 
+          c.email.toLowerCase().includes(query.toLowerCase()) || 
+          c.role.toLowerCase().includes(query.toLowerCase());
+        return matchesFilter && matchesQuery;
+      });
+
+      filtered.forEach(c => {
+        const currentStatus = contactsStatus[c.id] || c.defaultStatus;
+        let badgeClass = 'badge-pending';
+        if (currentStatus === 'Email Enviado') badgeClass = 'badge-sent';
+        if (currentStatus === 'En Negociación') badgeClass = 'badge-confirmed';
+        if (currentStatus === 'Acreditado') badgeClass = 'badge-approved';
+
         const tr = document.createElement('tr');
         tr.innerHTML = `
-          <td><strong>${c.name}</strong></td>
-          <td>${c.org}</td>
-          <td>${c.role}</td>
-          <td><span class="contact-badge">${c.contact}</span></td>
-          <td>${c.area}</td>
-          <td><span class="badge badge-home">${c.strategy}</span></td>
+          <td><strong>${c.org}</strong></td>
+          <td>
+            <div style="font-weight: 600; color: #fff;">${c.name}</div>
+            <div style="font-size: 0.76rem; color: var(--text-muted);">${c.role}</div>
+          </td>
+          <td>
+            <span class="contact-badge" onclick="copyText('${c.email}')" title="Clic para copiar correo" style="cursor: pointer;">
+              ✉️ ${c.email}
+            </span>
+          </td>
+          <td>
+            <div style="font-size: 0.82rem; color: #cbd5e1;">${c.strategy}</div>
+          </td>
+          <td>
+            <select class="badge ${badgeClass}" onchange="changeContactStatus('${c.id}', this.value)" style="border: none; cursor: pointer; outline: none; background-color: rgba(255,255,255,0.06);">
+              <option value="Pendiente" ${currentStatus === 'Pendiente' ? 'selected' : ''}>⏳ Pendiente</option>
+              <option value="Email Enviado" ${currentStatus === 'Email Enviado' ? 'selected' : ''}>✉️ Email Enviado</option>
+              <option value="En Negociación" ${currentStatus === 'En Negociación' ? 'selected' : ''}>💬 En Negociación</option>
+              <option value="Acreditado" ${currentStatus === 'Acreditado' ? 'selected' : ''}>✅ Acreditado / Ganado</option>
+            </select>
+          </td>
+          <td>
+            <button class="btn-icon btn-icon-cyan" onclick="openPitchModal('${c.org} - ${c.name}', '${c.email}', '${c.pitchId}')">
+              Ver Pitch &rarr;
+            </button>
+          </td>
         `;
         tbody.appendChild(tr);
       });
     }
 
-    function renderPipeline() {
-      const tbody = document.getElementById('pipeline-table-body');
-      tbody.innerHTML = '';
+    function changeContactStatus(id, newStatus) {
+      contactsStatus[id] = newStatus;
+      localStorage.setItem(STORAGE_KEY_CONTACTS, JSON.stringify(contactsStatus));
+      renderContactsTable(currentContactFilter, document.getElementById('contact-search').value);
+      updateGlobalProgress();
+    }
 
-      pipelineData.forEach(p => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td><code>${p.id}</code></td>
-          <td><strong>${p.target}</strong></td>
-          <td><span class="contact-badge">${p.channel}</span></td>
-          <td>${p.goal}</td>
-          <td><span class="badge ${p.status.includes('Listo') ? 'badge-home' : 'badge-tournament'}">${p.status}</span></td>
-          <td><span class="badge badge-alert">${p.priority}</span></td>
-          <td>${p.date}</td>
-          <td><button class="action-btn" style="padding: 4px 8px; font-size: 0.75rem;" onclick="openGenericModal('${p.target}', '${p.goal}')">Plantilla</button></td>
+    let currentContactFilter = 'all';
+    function filterContacts(cat, btn) {
+      currentContactFilter = cat;
+      btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderContactsTable(cat, document.getElementById('contact-search').value);
+    }
+
+    function searchContacts() {
+      const q = document.getElementById('contact-search').value;
+      renderContactsTable(currentContactFilter, q);
+    }
+
+    // RENDER ROADMAP
+    function renderRoadmap() {
+      const container = document.getElementById('roadmap-timeline-container');
+      container.innerHTML = '';
+
+      ROADMAP_PHASES.forEach(phase => {
+        const card = document.createElement('div');
+        card.className = 'phase-card';
+
+        let tasksHtml = '';
+        phase.tasks.forEach(task => {
+          const isDone = completedTasks[task.id] || false;
+          tasksHtml += `
+            <div class="task-item ${isDone ? 'completed' : ''}" onclick="toggleTask('${task.id}')">
+              <input type="checkbox" class="task-checkbox" ${isDone ? 'checked' : ''} onclick="event.stopPropagation(); toggleTask('${task.id}')">
+              <div class="task-content">
+                <div class="task-title">${task.title}</div>
+                <div class="task-desc">${task.desc}</div>
+              </div>
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div class="phase-header">
+            <div class="phase-title-group">
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyan); font-weight: 700;">// FASE ${phase.num}</span>
+              <h3>${phase.title}</h3>
+            </div>
+            <span class="phase-window-badge">⏰ Ventana: ${phase.window}</span>
+          </div>
+          <div class="phase-tasks-list">
+            ${tasksHtml}
+          </div>
         `;
-        tbody.appendChild(tr);
+        container.appendChild(card);
       });
     }
 
-    // TAB SWITCHING
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+    function toggleTask(id) {
+      completedTasks[id] = !completedTasks[id];
+      localStorage.setItem(STORAGE_KEY_TASKS, JSON.stringify(completedTasks));
+      renderRoadmap();
+      updateGlobalProgress();
+    }
 
-      event.currentTarget.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
+    // RENDER CHECKLIST
+    function renderChecklist() {
+      const grid = document.getElementById('checklist-cards-grid');
+      grid.innerHTML = '';
+
+      CHECKLIST_CATEGORIES.forEach(cat => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        let itemsHtml = '';
+        cat.items.forEach((item, idx) => {
+          const key = `chk-${cat.cat}-${idx}`;
+          const isDone = completedChecklist[key] || false;
+          itemsHtml += `
+            <div class="task-item ${isDone ? 'completed' : ''}" style="margin-bottom: 8px;" onclick="toggleChecklistItem('${key}')">
+              <input type="checkbox" class="task-checkbox" ${isDone ? 'checked' : ''} onclick="event.stopPropagation(); toggleChecklistItem('${key}')">
+              <div class="task-content">
+                <div class="task-title" style="font-size: 0.86rem;">${item}</div>
+              </div>
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <div>
+            <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--cyan);">
+              📦 ${cat.cat}
+            </h3>
+            <div class="phase-tasks-list">
+              ${itemsHtml}
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function toggleChecklistItem(key) {
+      completedChecklist[key] = !completedChecklist[key];
+      localStorage.setItem(STORAGE_KEY_CHECKLIST, JSON.stringify(completedChecklist));
+      renderChecklist();
+      updateGlobalProgress();
+    }
+
+    function resetChecklist() {
+      if (confirm('¿Deseas reiniciar todas las casillas del checklist técnico?')) {
+        completedChecklist = {};
+        localStorage.removeItem(STORAGE_KEY_CHECKLIST);
+        renderChecklist();
+        updateGlobalProgress();
+      }
+    }
+
+    // RENDER SCHEDULE
+    function renderScheduleGrid(filter = 'all', query = '') {
+      const grid = document.getElementById('schedule-grid');
+      grid.innerHTML = '';
+
+      const filtered = SCHEDULE_GAMES.filter(g => {
+        const matchesFilter = filter === 'all' || (filter === 'home' && g.is_home) || (filter === 'away' && !g.is_home);
+        const matchesQuery = !query || g.opponent.toLowerCase().includes(query.toLowerCase()) || g.location.toLowerCase().includes(query.toLowerCase());
+        return matchesFilter && matchesQuery;
+      });
+
+      filtered.forEach(g => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="badge ${g.is_home ? 'badge-confirmed' : 'badge-pending'}">${g.is_home ? 'LOCAL (ARENA CDMX)' : 'VISITA (EE.UU.)'}</span>
+              <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--text-muted);">${g.tournament}</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 4px;">vs ${g.opponent}</h3>
+            <div style="font-size: 0.85rem; color: var(--cyan); font-family: var(--font-mono); margin-bottom: 14px;">📍 ${g.location}</div>
+
+            <div style="font-size: 0.84rem; color: #cbd5e1; margin-bottom: 8px;">
+              <strong>Fecha:</strong> ${g.date} • ${g.time}
+            </div>
+            <div style="font-size: 0.84rem; color: #cbd5e1; margin-bottom: 12px;">
+              <strong>Contacto Prensa:</strong> <span class="contact-badge">${g.pr}</span>
+            </div>
+
+            <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid var(--amber); padding: 8px 12px; border-radius: 4px; font-size: 0.8rem;">
+              <strong style="color: #fbbf24;">⏰ Límite de Acreditación:</strong> Antes del <b>${g.deadline}</b>
+            </div>
+          </div>
+
+          <div style="margin-top: 18px;">
+            <button class="btn-icon btn-icon-cyan" style="width: 100%; justify-content: center;" onclick="openPitchModal('${g.opponent}', '${g.pr}', 'pitch-gleague-rival')">
+              ✉️ Preparar Solicitud para este Juego
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
     }
 
     function filterSchedule(type, btn) {
       btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderSchedule(type, document.getElementById('schedule-search').value);
+      renderScheduleGrid(type, document.getElementById('schedule-search').value);
     }
 
     function searchSchedule() {
-      const q = document.getElementById('schedule-search').value;
-      renderSchedule('all', q);
+      renderScheduleGrid('all', document.getElementById('schedule-search').value);
     }
 
-    function filterAltTeams(type, btn) {
-      btn.parentElement.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderAltTeams(type);
+    // RENDER TEMPLATES GRID
+    function renderTemplatesGrid() {
+      const grid = document.getElementById('templates-grid');
+      grid.innerHTML = '';
+
+      Object.entries(PITCH_TEMPLATES).forEach(([id, tpl]) => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div>
+            <span class="badge badge-confirmed" style="margin-bottom: 12px;">PLANTILLA MAESTRA</span>
+            <h3 style="font-size: 1.15rem; font-weight: 700; color: #fff; margin-bottom: 8px;">${tpl.title}</h3>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 16px;"><strong>Asunto:</strong> ${tpl.subject}</p>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-icon" style="flex: 1; justify-content: center;" onclick="openPitchModal('${tpl.title}', '', '${id}')">
+              👁️ Ver & Copiar
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
     }
 
-    // MODAL FUNCTIONS
-    function openModal(title, text) {
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-body').innerText = text;
+    // MODAL ACTIONS
+    function openPitchModal(title, recipient = '', pitchId = 'pitch-acreditacion') {
+      const tpl = PITCH_TEMPLATES[pitchId] || PITCH_TEMPLATES['pitch-acreditacion'];
+      document.getElementById('modal-title').innerText = tpl.title;
+      document.getElementById('modal-subtitle').innerText = recipient ? `Destinatario: ${recipient} | Asunto: ${tpl.subject}` : `Asunto: ${tpl.subject}`;
+      document.getElementById('modal-body').innerText = tpl.body;
+
+      // Mailto button
+      const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(tpl.subject)}&body=${encodeURIComponent(tpl.body)}`;
+      document.getElementById('modal-mailto-btn').href = mailtoUrl;
+
       document.getElementById('modal-template').classList.add('active');
     }
 
@@ -1248,122 +1696,22 @@
     function copyModalContent() {
       const text = document.getElementById('modal-body').innerText;
       navigator.clipboard.writeText(text);
-      alert('¡Plantilla copiada al portapapeles!');
+      alert('¡Plantilla copiada con éxito al portapapeles!');
     }
 
-    function openPitchModal(opponent, date, location) {
-      const text = `Asunto: Solicitud de Acreditación / Cobertura Fotográfica - Capitanes CDMX vs ${opponent} (${date})
-
-Estimado Equipo de Prensa y Comunicación de Capitanes de la Ciudad de México,
-
-Espero que se encuentren muy bien. Mi nombre es [Tu Nombre], fotógrafo deportivo especializado en básquetbol y cobertura de duela.
-
-Me pongo en contacto para solicitar acreditación de cancha (Media Pass) para el encuentro del próximo ${date} ante ${opponent} en ${location}.
-
-Desarrollamos un flujo de trabajo optimizado para redes sociales con estándares de liga profesional:
-• Entrega de selección editada en tiempo real al medio tiempo y al terminar el juego.
-• Captura especializada a 1/1000s de clavadas, choques y expresiones de los jugadores.
-• Cobertura de activaciones de marcas patrocinadoras en cancha.
-
-Portafolio de duela: [Enlace a tu portafolio web / Instagram]
-Equipo técnico: Cuerpo Full Frame con 70-200mm f/2.8 y 24-70mm f/2.8.
-
-Quedo a su disposición para compartir cualquier documentación requerida.
-
-Saludos cordiales,
-[Tu Nombre] | [Teléfono / WhatsApp]`;
-      openModal(`Plantilla de Acreditación - vs ${opponent}`, text);
+    function copyText(str) {
+      navigator.clipboard.writeText(str);
+      alert(`Copiado: ${str}`);
     }
 
-    function abrirTemplateImago() {
-      const text = `Estimado equipo de Coordinación Editorial de Imago7,
+    // TAB SWITCHING
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
 
-Mi nombre es [Tu Nombre], fotógrafo con base en la Ciudad de México enfocado en deportes de alta velocidad y básquetbol.
-
-Sigo con gran admiración la cobertura que realizan sus fotógrafos (como Diego Padilla y Etzel Espinosa) en los partidos de Capitanes de la Ciudad de México en la Arena CDMX.
-
-Me gustaría postularme para realizar PRÁCTICAS PROFESIONALES / ASISTENCIA TÉCNICA EN DUELA (Shadowing) con ustedes en las fechas de Capitanes en la CDMX:
-• Asistencia en cancha: Manejo de cableado, cambio de baterías y soporte con teleobjetivos.
-• Ingesta inmediata: Descarga y etiquetado de metadatos IPTC en tiempo real para agilizar la subida al banco de imágenes de Imago7.
-• Disponibilidad total para aprender y foguearme bajo sus estándares editoriales.
-
-Cuento con equipo propio y pasión total por el baloncesto. ¿Sería posible coordinar una breve llamada o reunirnos antes del próximo juego en la Arena CDMX?
-
-Portafolio: [Enlace a tu portafolio]
-Teléfono / WhatsApp: [Tu Número]`;
-      openModal("Solicitud de Prácticas / Asistente - Imago7", text);
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
     }
-
-    function abrirTemplateZignia() {
-      const text = `Asunto: Propuesta de Cobertura Gráfica de Recinto y Experiencia del Espectador - Arena CDMX
-
-Estimado equipo de Producción y Marketing de Zignia Live / Arena CDMX,
-
-Los eventos deportivos de Capitanes en la Arena CDMX ofrecen una atmósfera única en América Latina.
-
-Me pongo en contacto para ofrecer nuestros servicios de fotografía especializada en 'Experiencia de Recinto':
-• Ambiente de suites y palcos VIP.
-• Activaciones gastronómicas y de hospitalidad.
-• Interacción del público con el Jumbotron y dinámicas comerciales.
-
-Adjunto una muestra visual de cobertura de recintos masivos. Nos encantaría colaborar como proveedores gráficos para su banco de imágenes institucionales.
-
-Atentamente,
-[Tu Nombre] | [Teléfono]`;
-      openModal("Propuesta de Cobertura - Zignia Live / Arena CDMX", text);
-    }
-
-    function abrirTemplateSponsor() {
-      const text = `Asunto: Reporte Visual y Auditoría Fotográfica de Activaciones de Marca en Arena CDMX
-
-Hola [Nombre del Brand Manager / Agencia BTL],
-
-Sabemos la inversión estratégica que realizan las marcas patrocinadoras en los partidos de Capitanes CDMX en la Arena CDMX.
-
-Ofrecemos un servicio llave en mano de Auditoría Fotográfica de Patrocinio:
-• Captura de alta resolución de su marca en duela, vallas LED y activaciones de medio tiempo.
-• Reporte de 30 fotografías de alta calidad listas para sus presentaciones de retorno de inversión (ROI) a dirección general.
-
-¿Podríamos agendar una llamada de 5 minutos para mostrarles un ejemplo de reporte visual?
-
-Saludos,
-[Tu Nombre]`;
-      openModal("Propuesta a Patrocinadores / Agencias BTL", text);
-    }
-
-    function openTeamPitch(teamName) {
-      const text = `Asunto: Propuesta de Fotografía de Cancha y Cobertura Oficial - ${teamName}
-
-Hola equipo de Comunicación y Marketing de ${teamName},
-
-Sigo con entusiasmo el desarrollo deportivo del equipo en su temporada varonil.
-
-Soy fotógrafo especializado en baloncesto varonil de alta velocidad y me gustaría colaborar con ustedes cubriendo sus próximos encuentros en la duela.
-
-Ofrezco:
-• Fotos de acción congelada (1/1000s) con estética profesional.
-• Retratos de impacto de jugadores para tarjetas de partido y redes.
-• Entrega el mismo día para maximizar el engagement de sus publicaciones.
-
-Pueden consultar mi trabajo aquí: [Enlace a Portafolio]
-
-¿Podríamos coordinar una cobertura piloto en su próximo juego de local?
-
-Saludos cordiales,
-[Tu Nombre]`;
-      openModal(`Script de Acercamiento - ${teamName}`, text);
-    }
-
-    function openGenericModal(target, goal) {
-      openModal(`Misión: ${target}`, `Objetivo: ${goal}\n\nCanal: Contacto directo institucional.\nRevisar archivo docs/estrategia_outreach.md en el repositorio para los guiones completos.`);
-    }
-
-    // INIT
-    renderSchedule();
-    renderAgencies();
-    renderAltTeams();
-    renderContacts();
-    renderPipeline();
   </script>
 </body>
 </html>

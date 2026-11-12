@@ -128,13 +128,13 @@
     .jj-site-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
-      height: 104px;
+      height: 134px;
       padding: 0 clamp(20px, 4.5vw, 64px);
       display: flex;
       align-items: center;
       justify-content: space-between;
       z-index: 1000;
-      background: rgba(6, 5, 9, 0.82);
+      background: rgba(6, 5, 9, 0.85);
       backdrop-filter: blur(28px) saturate(180%);
       -webkit-backdrop-filter: blur(28px) saturate(180%);
       border-bottom: 1px solid var(--color-bone-subtle);
@@ -161,7 +161,7 @@
       color: var(--color-bone);
     }
 
-    /* CENTERED CAPTOORA EMBLEM & TYPOGRAPHY UNDERNEATH */
+    /* CENTERED CAPTOORA EMBLEM & TYPOGRAPHY UNDERNEATH (1.5X PROMINENT) */
     .brand-centered-lockup {
       position: absolute;
       left: 50%;
@@ -171,26 +171,26 @@
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      gap: 4px;
+      gap: 5px;
     }
 
     .brand-logo-img {
-      height: 64px;
+      height: 96px;
       width: auto;
       object-fit: contain;
-      filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.3)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+      filter: drop-shadow(0 0 24px rgba(0, 229, 255, 0.35)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
       transition: transform 0.3s ease;
     }
 
     .brand-centered-lockup:hover .brand-logo-img {
-      transform: scale(1.08);
+      transform: scale(1.06);
     }
 
     .brand-title-decent {
       font-family: var(--font-display-refined);
-      font-size: 0.96rem;
+      font-size: 1.05rem;
       font-weight: 500;
-      letter-spacing: 7px;
+      letter-spacing: 8px;
       color: var(--color-bone);
       text-transform: uppercase;
       line-height: 1;
@@ -199,8 +199,9 @@
 
     .brand-subtitle-decent {
       font-family: var(--font-mono);
-      font-size: 0.58rem;
-      letter-spacing: 2.5px;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 3px;
       color: var(--cyan);
       text-transform: uppercase;
     }
@@ -246,7 +247,7 @@
       position: relative;
       min-height: 100vh;
       width: 100%;
-      padding-top: 110px;
+      padding-top: 144px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
