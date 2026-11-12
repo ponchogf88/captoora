@@ -10,11 +10,11 @@
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=Syne:wght@700;800;900&family=Syncopate:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=Syncopate:wght@700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <style>
     /* ==========================================================================
-       RESET & ATHLETIC CINEMATIC PALETTE (DARK VOID, CYBER CYAN, LIME & PURE WHITE)
+       JJETTAS-INSPIRED DESIGN SYSTEM: LUXURY INK, BONE & ATHLETIC NEONS
        ========================================================================== */
     *, *::before, *::after {
       margin: 0;
@@ -24,22 +24,24 @@
     }
 
     :root {
-      --bg-void: #03050a;
-      --bg-surface: rgba(10, 16, 28, 0.75);
-      --bg-glass: rgba(14, 22, 38, 0.65);
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --border-luminous: rgba(0, 240, 255, 0.28);
+      --color-ink-deep: #07060a;
+      --color-ink: #0d0c13;
+      --color-ink-card: #13121c;
+      --color-bone: #f6f3ef;
+      --color-bone-muted: rgba(246, 243, 239, 0.65);
+      --color-bone-subtle: rgba(246, 243, 239, 0.2);
+      
       --cyan: #00f0ff;
-      --cyan-glow: rgba(0, 240, 255, 0.45);
+      --cyan-glow: rgba(0, 240, 255, 0.4);
       --lime: #CCFF00;
-      --lime-glow: rgba(204, 255, 0, 0.45);
+      --lime-glow: rgba(204, 255, 0, 0.4);
+      --purple: #8b5cf6;
       --amber: #f59e0b;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
+      
       --font-display: 'Syncopate', sans-serif;
       --font-headline: 'Syne', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
       --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
     ::selection {
@@ -47,30 +49,29 @@
       color: #000;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--bg-void);
-      color: var(--text-main);
+      background-color: var(--color-ink-deep);
+      color: var(--color-bone);
       font-family: var(--font-body);
       min-height: 100vh;
       overflow-x: hidden;
       line-height: 1.5;
-      /* Backgrounds.supply analog grain & subtle radial depth */
-      background-image: 
-        radial-gradient(circle at 18% 15%, rgba(0, 240, 255, 0.07) 0%, transparent 50%),
-        radial-gradient(circle at 82% 40%, rgba(204, 255, 0, 0.05) 0%, transparent 45%),
-        radial-gradient(circle at 50% 85%, rgba(0, 119, 255, 0.06) 0%, transparent 60%);
-      background-attachment: fixed;
     }
 
-    /* Ambient Film Noise Overlay (Backgrounds.supply aesthetic) */
-    .noise-layer {
+    /* Subdued Pebble/Grain Texture (JJettas overlay) */
+    .jj-grain {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      width: 100%; height: 100%;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 2;
-      opacity: 0.035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
     /* ==========================================================================
@@ -79,16 +80,16 @@
     .top-dock {
       position: fixed;
       top: 0; left: 0; width: 100%;
-      height: 76px;
-      padding: 0 40px;
+      height: 78px;
+      padding: 0 clamp(20px, 4vw, 56px);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      z-index: 1000;
-      backdrop-filter: blur(28px) saturate(180%);
-      -webkit-backdrop-filter: blur(28px) saturate(180%);
-      background: rgba(3, 5, 10, 0.82);
-      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      background: rgba(7, 6, 10, 0.78);
+      border-bottom: 1px solid var(--color-bone-subtle);
     }
 
     .brand-wrap {
@@ -99,9 +100,10 @@
     }
 
     .brand-logo-img {
-      height: 40px;
+      height: 38px;
       width: auto;
-      filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
     }
 
     .brand-titles {
@@ -111,481 +113,853 @@
 
     .brand-name {
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 800;
-      letter-spacing: 1.5px;
-      color: #ffffff;
-      line-height: 1;
+      letter-spacing: 3px;
+      color: var(--color-bone);
     }
 
     .brand-sub {
       font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 2px;
+      font-size: 0.62rem;
+      letter-spacing: 1.5px;
       color: var(--cyan);
       text-transform: uppercase;
-      margin-top: 4px;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
       align-items: center;
+      gap: 28px;
     }
 
     .nav-link {
+      color: var(--color-bone-muted);
       font-family: var(--font-mono);
-      font-size: 0.78rem;
+      font-size: 0.74rem;
+      font-weight: 600;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--text-muted);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
     }
 
     .nav-link:hover {
-      color: #fff;
+      color: var(--color-bone);
     }
 
     .nav-cta-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 22px;
+      gap: 8px;
+      padding: 9px 20px;
       border-radius: 999px;
       background: var(--lime);
       color: #000;
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 0 0 24px var(--lime-glow);
-      transition: all 0.25s ease;
+      box-shadow: 0 0 20px var(--lime-glow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .nav-cta-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 35px rgba(204, 255, 0, 0.7);
-      background: #dcff33;
+      box-shadow: 0 0 30px rgba(204, 255, 0, 0.6);
     }
 
     /* ==========================================================================
-       HERO CTA SHOWCASE (INSPIRED BY BACKGROUNDS SUPPLY ON CTA.GALLERY)
+       KINETIC MARQUEE LAYERS (JJettas signature running background text)
        ========================================================================== */
-    .hero-cta-stage {
-      position: relative;
-      min-height: 94vh;
-      padding-top: 130px;
-      padding-bottom: 80px;
+    .marquee-container {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.045;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      z-index: 10;
+      justify-content: space-around;
     }
 
-    .kicker-tag {
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .marquee-track.track-left {
+      animation: marqueeLeft 42s linear infinite;
+    }
+
+    .marquee-track.track-right {
+      animation: marqueeRight 48s linear infinite;
+    }
+
+    .marquee-text {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 16vw, 190px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--color-bone);
+      text-transform: uppercase;
+      margin-right: 48px;
+    }
+
+    @keyframes marqueeLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marqueeRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    /* ==========================================================================
+       HERO EDITORIAL STAGE (JJETTAS STYLE)
+       ========================================================================== */
+    .hero-editorial-stage {
+      position: relative;
+      min-height: 100vh;
+      padding-top: 120px;
+      padding-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .hero-split-layout {
+      width: min(94%, 1380px);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: clamp(32px, 5vw, 80px);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      .hero-split-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    .hero-copy-block {
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-edition-pill {
       display: inline-flex;
       align-items: center;
       gap: 10px;
       padding: 6px 16px;
       border-radius: 999px;
-      background: rgba(0, 240, 255, 0.08);
-      border: 1px solid rgba(0, 240, 255, 0.25);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--color-bone-subtle);
       font-family: var(--font-mono);
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       letter-spacing: 2.5px;
       text-transform: uppercase;
       color: var(--cyan);
       margin-bottom: 24px;
     }
 
-    .kicker-dot {
-      width: 7px;
-      height: 7px;
+    .hero-edition-pill .pulse-indicator {
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: var(--cyan);
       box-shadow: 0 0 10px var(--cyan);
-      animation: pulseDot 1.8s infinite ease-in-out;
     }
 
-    @keyframes pulseDot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(0.7); opacity: 0.4; }
-    }
-
-    .hero-main-title {
+    .hero-headline {
       font-family: var(--font-headline);
-      font-size: clamp(2.4rem, 6.2vw, 5.6rem);
+      font-size: clamp(2.8rem, 6.4vw, 5.8rem);
       font-weight: 900;
       line-height: 0.95;
       letter-spacing: -2px;
       text-transform: uppercase;
-      max-width: 1100px;
-      margin: 0 auto 20px auto;
-      color: #ffffff;
+      margin-bottom: 24px;
+      color: var(--color-bone);
     }
 
-    .hero-main-title .gradient-text {
-      background: linear-gradient(135deg, #ffffff 30%, var(--cyan) 100%);
+    .hero-headline .highlight-word {
+      background: linear-gradient(135deg, #ffffff 30%, var(--cyan) 90%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .hero-subtitle {
-      font-size: clamp(0.95rem, 1.3vw, 1.25rem);
-      color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 36px auto;
-      font-weight: 400;
-      line-height: 1.6;
+    .hero-lead-text {
+      font-size: clamp(1rem, 1.35vw, 1.22rem);
+      color: var(--color-bone-muted);
+      line-height: 1.65;
+      max-width: 580px;
+      margin-bottom: 36px;
     }
 
-    .hero-actions-group {
+    .hero-actions {
       display: flex;
-      gap: 18px;
-      align-items: center;
-      justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 64px;
-      z-index: 20;
+      gap: 16px;
     }
 
-    .btn-primary-glow {
-      padding: 16px 36px;
+    .btn-solid-glow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
       border-radius: 999px;
-      background: var(--cyan);
-      color: #03050a;
+      background: var(--color-bone);
+      color: #000;
       font-family: var(--font-mono);
-      font-size: 0.88rem;
+      font-size: 0.78rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 0 0 32px var(--cyan-glow);
       transition: all 0.25s ease;
+      box-shadow: 0 10px 30px rgba(246, 243, 239, 0.15);
+    }
+
+    .btn-solid-glow:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(0, 240, 255, 0.35);
+    }
+
+    .btn-outline-sports {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-    }
-
-    .btn-primary-glow:hover {
-      transform: translateY(-3px) scale(1.02);
-      box-shadow: 0 0 50px rgba(0, 240, 255, 0.8);
-      background: #38f5ff;
-    }
-
-    .btn-secondary-glass {
-      padding: 16px 32px;
+      gap: 10px;
+      padding: 14px 28px;
       border-radius: 999px;
-      background: var(--bg-glass);
-      color: #ffffff;
-      border: 1px solid var(--border-subtle);
+      border: 1px solid var(--color-bone-subtle);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--color-bone);
       font-family: var(--font-mono);
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 1.2px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       text-decoration: none;
-      backdrop-filter: blur(20px);
       transition: all 0.25s ease;
     }
 
-    .btn-secondary-glass:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.3);
-      transform: translateY(-3px);
+    .btn-outline-sports:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0, 240, 255, 0.06);
     }
 
     /* ==========================================================================
-       CTA GALLERY BACKGROUNDS-SUPPLY STYLE: FLOATING CARDS FAN / MOSAIC
+       3D HOLOGRAPHIC TRADING CARD ENGINE (JJETTAS SIGNATURE)
        ========================================================================== */
-    .floating-cards-fan {
+    .holo-card-stage {
       position: relative;
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      height: 380px;
       display: flex;
       justify-content: center;
       align-items: center;
-      perspective: 1200px;
-      pointer-events: auto;
+      perspective: 1600px;
     }
 
-    .fan-card {
-      position: absolute;
-      width: 260px;
-      height: 340px;
-      border-radius: 20px;
+    .holo-card {
+      position: relative;
+      width: min(100%, 360px);
+      aspect-ratio: 1036 / 1519;
+      border-radius: 18px;
       overflow: hidden;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       cursor: pointer;
+      transform-style: preserve-3d;
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--scale, 1));
+      transition: transform 0.12s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.25s ease;
+      background: var(--color-ink-card);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.12);
       user-select: none;
     }
 
-    .fan-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
+    .holo-card:hover {
+      box-shadow: 0 35px 80px rgba(0, 0, 0, 0.85), 0 0 45px rgba(0, 240, 255, 0.35), 0 0 0 1.5px rgba(204, 255, 0, 0.45);
     }
 
-    .fan-card .card-meta {
+    .holo-card-img {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 16px;
-      background: linear-gradient(180deg, transparent 0%, rgba(3, 5, 10, 0.95) 100%);
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .fan-card .sport-tag {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: var(--lime);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .fan-card .exif-tag {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
-      color: var(--text-muted);
-    }
-
-    /* Fan Positions */
-    .fan-card:nth-child(1) { transform: translateX(-440px) translateY(30px) rotate(-14deg) scale(0.85); z-index: 1; opacity: 0.6; }
-    .fan-card:nth-child(2) { transform: translateX(-220px) translateY(12px) rotate(-7deg) scale(0.92); z-index: 2; opacity: 0.85; }
-    .fan-card:nth-child(3) { transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.05); z-index: 3; border-color: var(--cyan); box-shadow: 0 25px 60px rgba(0, 240, 255, 0.25); }
-    .fan-card:nth-child(4) { transform: translateX(220px) translateY(12px) rotate(7deg) scale(0.92); z-index: 2; opacity: 0.85; }
-    .fan-card:nth-child(5) { transform: translateX(440px) translateY(30px) rotate(14deg) scale(0.85); z-index: 1; opacity: 0.6; }
-
-    .fan-card:hover {
-      transform: translateY(-24px) scale(1.12) rotate(0deg) !important;
-      z-index: 100 !important;
-      border-color: var(--lime) !important;
-      box-shadow: 0 30px 70px rgba(204, 255, 0, 0.35) !important;
-      opacity: 1 !important;
-    }
-
-    .fan-card:hover img {
-      transform: scale(1.08);
-    }
-
-    /* ==========================================================================
-       INTERACTIVE GALLERY & MASONRY (BIO GENETICS PORTFOLIO)
-       ========================================================================== */
-    .portfolio-section {
-      position: relative;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 80px 32px 140px 32px;
-      z-index: 10;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-bottom: 48px;
-    }
-
-    .section-header h2 {
-      font-family: var(--font-headline);
-      font-size: clamp(2rem, 3.8vw, 3.6rem);
-      font-weight: 800;
-      letter-spacing: -1px;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-
-    .section-header p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      max-width: 480px;
-      margin-top: 10px;
-    }
-
-    /* Filter pills */
-    .filter-bar {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      background: rgba(14, 22, 38, 0.5);
-      border: 1px solid var(--border-subtle);
-      padding: 6px;
-      border-radius: 999px;
-      backdrop-filter: blur(16px);
-    }
-
-    .filter-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 8px 18px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: all 0.25s;
-    }
-
-    .filter-btn:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .filter-btn.active {
-      background: var(--lime);
-      color: #000;
-      box-shadow: 0 0 18px var(--lime-glow);
-    }
-
-    /* Gallery Grid */
-    .sports-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 28px;
-    }
-
-    .sport-card {
-      position: relative;
-      border-radius: 20px;
-      overflow: hidden;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      aspect-ratio: 4 / 5;
-      cursor: pointer;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .sport-card img {
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s ease;
+      transform: scale(1.02);
+      transition: transform 0.4s ease;
     }
 
-    .sport-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--cyan);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.25);
-    }
-
-    .sport-card:hover img {
+    .holo-card:hover .holo-card-img {
       transform: scale(1.06);
     }
 
-    .card-glass-dock {
+    /* Holographic Prismatic Rainbow Sheen (Color-Dodge) */
+    .holo-prism-foil {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      padding: 20px 24px;
-      background: linear-gradient(180deg, transparent 0%, rgba(3, 5, 10, 0.92) 80%);
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        115deg,
+        rgba(255, 0, 128, 0.28) 0%,
+        rgba(0, 240, 255, 0.35) 32%,
+        rgba(204, 255, 0, 0.28) 64%,
+        rgba(138, 43, 226, 0.32) 100%
+      );
+      mix-blend-mode: color-dodge;
+      opacity: var(--foil-opacity, 0.25);
+      transition: opacity 0.25s ease;
+    }
+
+    .holo-card:hover .holo-prism-foil {
+      opacity: 0.75;
+    }
+
+    /* Dynamic Metallic Glare Flare (Screen Blend) */
+    .holo-specular-flare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        105deg,
+        transparent 32%,
+        rgba(255, 255, 255, 0.25) 45%,
+        rgba(255, 255, 255, 0.65) 50%,
+        rgba(255, 255, 255, 0.25) 55%,
+        transparent 68%
+      );
+      background-size: 260% 100%;
+      background-position-x: calc(var(--mx, 0.5) * 100%);
+      mix-blend-mode: screen;
+      opacity: var(--flare-opacity, 0.2);
+      transition: opacity 0.25s ease;
+    }
+
+    .holo-card:hover .holo-specular-flare {
+      opacity: 0.9;
+    }
+
+    /* Card Framing & Badges */
+    .holo-card-frame {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: 18px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28), inset 0 0 20px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+    }
+
+    .holo-card-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
-    }
-
-    .card-title-group h4 {
-      font-family: var(--font-headline);
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #ffffff;
-      text-transform: uppercase;
-      margin-bottom: 2px;
-    }
-
-    .card-title-group span {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 1.5px;
-      color: var(--lime);
-      text-transform: uppercase;
-    }
-
-    .zoom-badge {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      display: flex;
       align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-size: 1.1rem;
-      transition: all 0.2s;
     }
 
-    .sport-card:hover .zoom-badge {
-      background: var(--cyan);
-      color: #000;
-      border-color: var(--cyan);
-      transform: scale(1.1);
+    .holo-series-badge {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--lime);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .holo-court-badge {
+      background: rgba(0, 240, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--cyan);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--cyan);
+      letter-spacing: 1.5px;
+    }
+
+    .holo-card-footer {
+      background: rgba(7, 6, 10, 0.85);
+      backdrop-filter: blur(14px);
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .holo-card-title {
+      font-family: var(--font-headline);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--color-bone);
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+    }
+
+    .holo-card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--cyan);
     }
 
     /* ==========================================================================
-       TECHNICAL SPECIFICATIONS & METRICS (NBA STANDARDS)
+       YARDLINES & COURTSIDE MARKERS STRIP (JJETTAS AESTHETIC)
        ========================================================================== */
-    .specs-strip {
-      background: rgba(10, 16, 28, 0.85);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 48px 32px;
-      margin: 40px 0 100px 0;
-      backdrop-filter: blur(20px);
+    .yardlines-strip {
+      position: relative;
+      width: 100%;
+      height: 90px;
+      border-top: 1px solid var(--color-bone-subtle);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      background: rgba(13, 12, 19, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(20px, 4vw, 80px);
+      overflow: hidden;
+      user-select: none;
+      z-index: 10;
     }
 
-    .specs-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 32px;
-    }
-
-    .spec-item {
+    .yard-marker {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 6px;
+      opacity: 0.35;
+      transition: opacity 0.25s ease;
     }
 
-    .spec-num {
+    .yard-marker:hover {
+      opacity: 0.9;
+    }
+
+    .yard-num {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--color-bone);
+    }
+
+    .yard-tick {
+      width: 1.5px;
+      height: 18px;
+      background: var(--color-bone);
+    }
+
+    .yard-subticks {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .subtick {
+      width: 1px;
+      height: 8px;
+      background: var(--color-bone-subtle);
+    }
+
+    /* ==========================================================================
+       THE HOLO-VAULT (COLLECTIBLE 3D CARDS SHOWCASE)
+       ========================================================================== */
+    .holo-vault-section {
+      position: relative;
+      padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 56px);
+      z-index: 10;
+    }
+
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 12px;
+    }
+
+    .section-title-large {
+      font-family: var(--font-headline);
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -1.5px;
+      line-height: 1;
+      color: var(--color-bone);
+      margin-bottom: 16px;
+    }
+
+    .section-desc-lead {
+      font-size: 1.05rem;
+      color: var(--color-bone-muted);
+      max-width: 620px;
+      margin-bottom: 50px;
+      line-height: 1.6;
+    }
+
+    .vault-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    /* ==========================================================================
+       EDITORIAL SIGNATURE MOMENTS (ON-FIELD VS OFF-FIELD)
+       ========================================================================== */
+    .moments-section {
+      position: relative;
+      padding: 90px clamp(20px, 4vw, 56px);
+      background: var(--color-ink);
+      border-top: 1px solid var(--color-bone-subtle);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      z-index: 10;
+    }
+
+    .moments-dual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 860px) {
+      .moments-dual-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .moment-editorial-card {
+      position: relative;
+      background: var(--color-ink-deep);
+      border: 1px solid var(--color-bone-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 480px;
+    }
+
+    .moment-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.38;
+      transition: transform 0.6s ease, opacity 0.4s ease;
+    }
+
+    .moment-editorial-card:hover .moment-bg-img {
+      transform: scale(1.05);
+      opacity: 0.52;
+    }
+
+    .moment-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    .moment-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--lime);
+      margin-bottom: 14px;
+    }
+
+    .moment-heading {
+      font-family: var(--font-headline);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      color: var(--color-bone);
+    }
+
+    .moment-text {
+      font-size: 0.95rem;
+      color: var(--color-bone-muted);
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    .moment-footer {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-bone-subtle);
+    }
+
+    /* ==========================================================================
+       TECHNICAL SPECIFICATIONS STRIP (COURTSIDE STANDARDS)
+       ========================================================================== */
+    .specs-strip {
+      position: relative;
+      padding: 70px clamp(20px, 4vw, 56px);
+      background: var(--color-ink-deep);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      z-index: 10;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      width: min(100%, 1380px);
+      margin: 0 auto;
+    }
+
+    .spec-card {
+      border-left: 2px solid var(--cyan);
+      padding-left: 20px;
+    }
+
+    .spec-val {
       font-family: var(--font-display);
       font-size: 2.2rem;
       font-weight: 800;
-      color: var(--cyan);
-      letter-spacing: 1px;
+      color: var(--color-bone);
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
     .spec-label {
       font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 0.74rem;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: var(--lime);
+      margin-bottom: 6px;
     }
 
     .spec-desc {
       font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.4;
+      color: var(--color-bone-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       FULL PORTFOLIO ARCHIVE (78 AUTHORIZED HIGH-SPEED PHOTOS)
+       ========================================================================== */
+    .archive-section {
+      position: relative;
+      padding: clamp(80px, 10vw, 130px) clamp(20px, 4vw, 56px);
+      z-index: 10;
+    }
+
+    .archive-header {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-bottom: 44px;
+    }
+
+    .archive-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--color-bone-subtle);
+      color: var(--color-bone-muted);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--cyan);
+      color: var(--color-bone);
+    }
+
+    .filter-pill.active {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .archive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 22px;
+    }
+
+    .archive-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--color-ink-card);
+      border: 1px solid var(--color-bone-subtle);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .archive-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--lime);
+    }
+
+    .archive-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .archive-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .archive-card-glass {
+      position: absolute;
+      bottom: 0; left: 0; width: 100%;
+      padding: 14px 16px;
+      background: linear-gradient(to top, rgba(7, 6, 10, 0.92) 0%, rgba(7, 6, 10, 0.6) 70%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .archive-card-info h4 {
+      font-family: var(--font-headline);
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--color-bone);
+      text-transform: uppercase;
+    }
+
+    .archive-card-info span {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--cyan);
+      display: block;
+      margin-top: 3px;
+    }
+
+    .archive-zoom-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: var(--color-bone);
+    }
+
+    /* ==========================================================================
+       INQUIRIES & CONTACT SECTION
+       ========================================================================== */
+    .inquiries-section {
+      position: relative;
+      padding: clamp(90px, 12vw, 150px) clamp(20px, 4vw, 56px);
+      background: linear-gradient(180deg, var(--color-ink) 0%, var(--color-ink-deep) 100%);
+      border-top: 1px solid var(--color-bone-subtle);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .inquiries-box {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .inquiries-title {
+      font-family: var(--font-headline);
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 24px;
+      color: var(--color-bone);
+    }
+
+    .inquiries-p {
+      font-size: 1.15rem;
+      color: var(--color-bone-muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .inquiries-wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 40px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 35px var(--lime-glow);
+      transition: all 0.25s ease;
+    }
+
+    .inquiries-wa-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 50px rgba(204, 255, 0, 0.7);
     }
 
     /* ==========================================================================
@@ -593,81 +967,80 @@
        ========================================================================== */
     .lightbox-modal {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.92);
-      backdrop-filter: blur(16px);
+      inset: 0;
+      z-index: 9999;
+      background: rgba(7, 6, 10, 0.92);
+      backdrop-filter: blur(20px);
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 10000;
-      padding: 30px;
+      padding: 24px;
     }
 
     .lightbox-modal.active {
       display: flex;
-      animation: modalFadeIn 0.25s ease-out;
-    }
-
-    @keyframes modalFadeIn {
-      from { opacity: 0; transform: scale(0.97); }
-      to { opacity: 1; transform: scale(1); }
     }
 
     .lightbox-content {
       position: relative;
-      max-width: 1100px;
+      max-width: 90vw;
       max-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .lightbox-content img {
+    .lightbox-img {
       max-width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
+      max-height: 75vh;
       border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+      object-fit: contain;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 0 1px var(--color-bone-subtle);
     }
 
     .lightbox-info {
-      margin-top: 16px;
+      width: 100%;
       display: flex;
       justify-content: space-between;
-      width: 100%;
       align-items: center;
-      color: #ffffff;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 18px;
     }
 
-    .lightbox-close-btn {
+    .lightbox-close {
       position: absolute;
-      top: -46px;
+      top: -48px;
       right: 0;
       background: transparent;
       border: none;
-      color: #ffffff;
-      font-size: 2rem;
+      color: var(--color-bone);
+      font-size: 2.2rem;
       cursor: pointer;
       line-height: 1;
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 60px 40px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      border-top: 1px solid var(--color-bone-subtle);
+      padding: 50px clamp(20px, 4vw, 56px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--color-bone-muted);
+      z-index: 10;
+      position: relative;
     }
   </style>
 </head>
 <body>
 
-  <!-- NOISE GRAIN LAYER -->
-  <div class="noise-layer"></div>
+  <!-- NOISE PEBBLE LAYER (JJettas Texture) -->
+  <div class="jj-grain"></div>
 
   <!-- TOP DOCK NAVIGATION -->
   <header class="top-dock">
@@ -680,81 +1053,317 @@
     </a>
 
     <nav class="nav-links">
-      <a href="#portfolio" class="nav-link">Portafolio</a>
-      <a href="#specs" class="nav-link">Estándares NBA</a>
+      <a href="#vault" class="nav-link">Holo-Vault</a>
+      <a href="#moments" class="nav-link">On-Field</a>
+      <a href="#archive" class="nav-link">Archivo (78)</a>
       <a href="dashboard/index.html" class="nav-link" style="color: var(--cyan);">Scouting Hub</a>
-      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva%20en%20duela%20para%20un%20partido" target="_blank" class="nav-cta-btn">
-        WhatsApp 81 4005 0088
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva%20profesional" target="_blank" class="nav-cta-btn">
+        WhatsApp Oficial
       </a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO CTA STAGE (CTA.GALLERY / BACKGROUNDS.SUPPLY INSPIRED) -->
-    <section class="hero-cta-stage">
-      <div class="kicker-tag">
-        <span class="kicker-dot"></span>
-        High-Speed Sports Photography · Action at 1/1000s
+    <!-- HERO EDITORIAL STAGE WITH KINETIC MARQUEE (JJETTAS ARCHITECTURE) -->
+    <section class="hero-editorial-stage">
+      <!-- BACKGROUND MARQUEE -->
+      <div class="marquee-container" aria-hidden="true">
+        <div class="marquee-track track-left">
+          <span class="marquee-text">CAPTOORA SPORTS · COURTSIDE ACTION · 1/1000s HIGH SPEED · BIO GENETICS ·</span>
+          <span class="marquee-text">CAPTOORA SPORTS · COURTSIDE ACTION · 1/1000s HIGH SPEED · BIO GENETICS ·</span>
+        </div>
+        <div class="marquee-track track-right">
+          <span class="marquee-text">MONTERREY · ARENA CDMX · BORREGOS TEC · TOROS AMERICANO ·</span>
+          <span class="marquee-text">MONTERREY · ARENA CDMX · BORREGOS TEC · TOROS AMERICANO ·</span>
+        </div>
       </div>
 
-      <h1 class="hero-main-title">
-        EL ARTE DE <br>
-        <span class="gradient-text">CONGELAR LA VELOCIDAD.</span>
-      </h1>
+      <div class="hero-split-layout">
+        <!-- COPY BLOCK -->
+        <div class="hero-copy-block">
+          <div class="hero-edition-pill">
+            <span class="pulse-indicator"></span>
+            Captoora Elite Sports Series // 2026 Edition
+          </div>
 
-      <p class="hero-subtitle">
-        Cobertura profesional de duela, campo y acción atlética de élite. Flujo de trabajo en tiempo real para redes sociales y auditoría visual de patrocinadores en México y EE.UU.
-      </p>
+          <h1 class="hero-headline">
+            EL ARTE DE <br>
+            <span class="highlight-word">CONGELAR LA VELOCIDAD.</span>
+          </h1>
 
-      <div class="hero-actions-group">
-        <a href="#portfolio" class="btn-primary-glow">
-          Ver Portafolio Deportivo
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20me%20interesa%20agendar%20una%20cobertura%20fotogr%C3%A1fica%20de%20partido" target="_blank" class="btn-secondary-glass">
-          Agendar Cobertura
-        </a>
+          <p class="hero-lead-text">
+            Desde San Jerónimo Monterrey hasta la duela principal de Arena CDMX. Cobertura cinematográfica a 1/1000s en emparrillado, duela y eventos atléticos. Flujo de entrega en tiempo real para redes sociales de franquicias y patrocinadores.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#archive" class="btn-solid-glow">
+              Ver Archivo Deportivo (78 Fotos) &rarr;
+            </a>
+            <a href="#vault" class="btn-outline-sports">
+              Explorar Holo-Cards 3D
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D HOLOGRAPHIC HERO CARD (THE ROOKIE / HERO ATHLETE) -->
+        <div class="holo-card-stage">
+          <div class="holo-card" id="hero-holo-card" onclick="openLightbox('assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg', 'Toros Fútbol Americano', 'Impacto en Línea · 1/1000s f/2.8 · Edición Coleccionable')">
+            <img src="assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg" alt="Toros Acción Hero Card" class="holo-card-img">
+            <div class="holo-prism-foil"></div>
+            <div class="holo-specular-flare"></div>
+            <div class="holo-card-frame">
+              <div class="holo-card-header">
+                <span class="holo-series-badge">BIO GENETICS #01</span>
+                <span class="holo-court-badge">1/1000s · f/2.8</span>
+              </div>
+              <div class="holo-card-footer">
+                <div class="holo-card-title">Impacto en Línea</div>
+                <div class="holo-card-meta">
+                  <span>Fútbol Americano Toros</span>
+                  <span style="color: var(--lime);">HOLO PRISM 3D</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- FLOATING CARDS FAN (BACKGROUNDS-SUPPLY CTA PATTERN) -->
-      <div class="floating-cards-fan">
-        <div class="fan-card" onclick="openLightbox('assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg', 'Toros Fútbol Americano', 'Impacto en Línea · 1/1000s f/2.8')">
-          <img src="assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg" alt="Fútbol Americano Toros">
-          <div class="card-meta">
-            <span class="sport-tag">Fútbol Americano</span>
-            <span class="exif-tag">1/1000s · f/2.8 · ISO 2000</span>
+    <!-- YARDLINES & COURTSIDE MARKERS STRIP -->
+    <section class="yardlines-strip" aria-hidden="true">
+      <div class="yard-marker">
+        <span class="yard-num">10</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">20</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">30</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">40</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num" style="color: var(--cyan);">50</span>
+        <div class="yard-tick" style="background: var(--cyan);"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">40</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">30</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">20</span>
+        <div class="yard-tick"></div>
+      </div>
+      <div class="yard-subticks">
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+        <div class="subtick"></div>
+      </div>
+      <div class="yard-marker">
+        <span class="yard-num">10</span>
+        <div class="yard-tick"></div>
+      </div>
+    </section>
+
+    <!-- THE HOLO-VAULT: 3D HOLOGRAPHIC COLLECTIBLES SHOWCASE -->
+    <section class="holo-vault-section" id="vault">
+      <div style="max-width: 1380px; margin: 0 auto;">
+        <div class="section-eyebrow">
+          <span>// The Collectible Vault</span>
+          <span style="color: var(--lime);">· 3D Foil Interactive</span>
+        </div>
+        <h2 class="section-title-large">Trading Cards de Acción</h2>
+        <p class="section-desc-lead">
+          Pasa el cursor sobre cada tarjeta coleccionable para interactuar con la perspectiva 3D, el reflejo especular y el prisma de foil holográfico.
+        </p>
+
+        <div class="vault-grid">
+          <!-- CARD 1: TOROS ACCION -->
+          <div class="holo-card-stage">
+            <div class="holo-card holo-tilt-card" onclick="openLightbox('assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg', 'Toros Fútbol Americano', 'Línea de Golpeo · 1/1000s f/2.8 · Holo #02')">
+              <img src="assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg" alt="Línea de Golpeo" class="holo-card-img" loading="lazy">
+              <div class="holo-prism-foil"></div>
+              <div class="holo-specular-flare"></div>
+              <div class="holo-card-frame">
+                <div class="holo-card-header">
+                  <span class="holo-series-badge">TOROS #02</span>
+                  <span class="holo-court-badge">1/1000s</span>
+                </div>
+                <div class="holo-card-footer">
+                  <div class="holo-card-title">Fuerza en la Línea</div>
+                  <div class="holo-card-meta">
+                    <span>Fútbol Americano</span>
+                    <span style="color: var(--cyan);">TILT 3D</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2: SOCCER DUELO AEREO -->
+          <div class="holo-card-stage">
+            <div class="holo-card holo-tilt-card" onclick="openLightbox('assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg', 'Soccer Pro', 'Duelo Aéreo · 1/1250s f/2.8 · Holo #03')">
+              <img src="assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg" alt="Duelo Aéreo Soccer" class="holo-card-img" loading="lazy">
+              <div class="holo-prism-foil"></div>
+              <div class="holo-specular-flare"></div>
+              <div class="holo-card-frame">
+                <div class="holo-card-header">
+                  <span class="holo-series-badge">SOCCER #03</span>
+                  <span class="holo-court-badge">1/1250s</span>
+                </div>
+                <div class="holo-card-footer">
+                  <div class="holo-card-title">Duelo Aéreo de Élite</div>
+                  <div class="holo-card-meta">
+                    <span>Soccer Profesional</span>
+                    <span style="color: var(--cyan);">TILT 3D</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3: BORREGOS TEC -->
+          <div class="holo-card-stage">
+            <div class="holo-card holo-tilt-card" onclick="openLightbox('assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg', 'Borregos Tec', 'Evento Atlético · 1/1000s f/2.8 · Holo #04')">
+              <img src="assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg" alt="Borregos Tec" class="holo-card-img" loading="lazy">
+              <div class="holo-prism-foil"></div>
+              <div class="holo-specular-flare"></div>
+              <div class="holo-card-frame">
+                <div class="holo-card-header">
+                  <span class="holo-series-badge">BORREGOS #04</span>
+                  <span class="holo-court-badge">1/1000s</span>
+                </div>
+                <div class="holo-card-footer">
+                  <div class="holo-card-title">Atleta Tec Monterrey</div>
+                  <div class="holo-card-meta">
+                    <span>Atletismo & Liderazgo</span>
+                    <span style="color: var(--cyan);">TILT 3D</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4: NIDOS COLINAS -->
+          <div class="holo-card-stage">
+            <div class="holo-card holo-tilt-card" onclick="openLightbox('assets/portfolio/nidos/480312433_590978247099800_8721015503281072349_n.jpg', 'Nidos Colinas', 'Formación y Rendimiento · Holo #05')">
+              <img src="assets/portfolio/nidos/480312433_590978247099800_8721015503281072349_n.jpg" alt="Nidos Colinas" class="holo-card-img" loading="lazy">
+              <div class="holo-prism-foil"></div>
+              <div class="holo-specular-flare"></div>
+              <div class="holo-card-frame">
+                <div class="holo-card-header">
+                  <span class="holo-series-badge">NIDOS #05</span>
+                  <span class="holo-court-badge">1/1000s</span>
+                </div>
+                <div class="holo-card-footer">
+                  <div class="holo-card-title">Semillero y Pasión</div>
+                  <div class="holo-card-meta">
+                    <span>Nidos Colinas</span>
+                    <span style="color: var(--cyan);">TILT 3D</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="fan-card" onclick="openLightbox('assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg', 'Soccer Pro', 'Velocidad de Disparo · 1/1250s')">
-          <img src="assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg" alt="Soccer de Alta Velocidad">
-          <div class="card-meta">
-            <span class="sport-tag">Soccer Acción</span>
-            <span class="exif-tag">1/1250s · f/2.8 · ISO 1600</span>
-          </div>
+    <!-- EDITORIAL SIGNATURE MOMENTS (ON-FIELD VS OFF-FIELD) -->
+    <section class="moments-section" id="moments">
+      <div style="max-width: 1380px; margin: 0 auto;">
+        <div class="section-eyebrow">
+          <span>// Editorial Split</span>
+          <span style="color: var(--lime);">· On-Field & Off-Field</span>
         </div>
+        <h2 class="section-title-large">Momentos de Firma</h2>
+        <p class="section-desc-lead">
+          La velocidad de la jugada en cancha y la disciplina biomecánica detrás del atleta de élite.
+        </p>
 
-        <div class="fan-card" onclick="openLightbox('assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg', 'Toros Fútbol Americano', 'Tacleada Ras de Césped · 1/1000s')">
-          <img src="assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg" alt="Toros Acción Principal">
-          <div class="card-meta">
-            <span class="sport-tag">Fútbol Americano</span>
-            <span class="exif-tag">1/1000s · f/2.8 · ISO 2500</span>
+        <div class="moments-dual-grid">
+          <!-- ON-FIELD CARD -->
+          <div class="moment-editorial-card">
+            <img src="assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg" alt="On Field Action" class="moment-bg-img" loading="lazy">
+            <div class="moment-content">
+              <span class="moment-tag">On-Field Series</span>
+              <h3 class="moment-heading">Impacto a 1/1250s en Duela y Cancha</h3>
+              <p class="moment-text">
+                Enfoque continuo por seguimiento de fase, captura de expresiones en el aire, sudor congelado y el balón en su máxima deformación física.
+              </p>
+            </div>
+            <div class="moment-footer">
+              <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--cyan);">Fútbol Americano · Soccer · Duela</span>
+              <a href="#archive" class="btn-outline-sports" style="padding: 8px 20px; font-size: 0.7rem;">Ver On-Field</a>
+            </div>
           </div>
-        </div>
 
-        <div class="fan-card" onclick="openLightbox('assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg', 'Borregos Tec de Monterrey', 'Evento Atlético · 1/1000s')">
-          <img src="assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg" alt="Borregos Tec">
-          <div class="card-meta">
-            <span class="sport-tag">Borregos Tec Events</span>
-            <span class="exif-tag">1/1000s · f/2.8 · ISO 1800</span>
-          </div>
-        </div>
-
-        <div class="fan-card" onclick="openLightbox('assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg', 'Soccer Pro', 'Duelo en Aire · 1/1250s')">
-          <img src="assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg" alt="Duelo Aéreo Soccer">
-          <div class="card-meta">
-            <span class="sport-tag">Soccer Aéreo</span>
-            <span class="exif-tag">1/1250s · f/2.8 · ISO 2200</span>
+          <!-- OFF-FIELD / BIO GENETICS CARD -->
+          <div class="moment-editorial-card">
+            <img src="assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Off Field Athlete" class="moment-bg-img" loading="lazy">
+            <div class="moment-content">
+              <span class="moment-tag">Off-Field & Bio Genetics</span>
+              <h3 class="moment-heading">Potencia Atlética y Acondicionamiento</h3>
+              <p class="moment-text">
+                Retratos de fuerza, tensión muscular y preparación biomecánica previa al encuentro. La identidad visual que los patrocinadores y marcas deportivas buscan.
+              </p>
+            </div>
+            <div class="moment-footer">
+              <span style="font-family: var(--font-mono); font-size: 0.74rem; color: var(--lime);">Fitness · Rendimiento Físico</span>
+              <a href="#archive" class="btn-outline-sports" style="padding: 8px 20px; font-size: 0.7rem;">Ver Retratos</a>
+            </div>
           </div>
         </div>
       </div>
@@ -762,52 +1371,78 @@
 
     <!-- TECHNICAL SPECIFICATIONS STRIP (NBA G LEAGUE READY) -->
     <section class="specs-strip" id="specs">
-      <div class="specs-container">
-        <div class="spec-item">
-          <div class="spec-num">1/1000s</div>
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-val">1/1000s</div>
           <div class="spec-label">Velocidad de Obturación</div>
-          <div class="spec-desc">Congelamiento absoluto del movimiento, balón y expresiones sin trepidación ni barrido.</div>
+          <div class="spec-desc">Congelamiento total de balón y expresiones sin trepidación ni barrido residual.</div>
         </div>
-        <div class="spec-item">
-          <div class="spec-num">15 MIN</div>
+        <div class="spec-card">
+          <div class="spec-val">15 MIN</div>
           <div class="spec-label">Entrega In-Game</div>
-          <div class="spec-desc">Selección editada al medio tiempo enviada directamente para publicación en redes oficiales.</div>
+          <div class="spec-desc">Selección editada al medio tiempo enviada directamente a los CMs de las franquicias.</div>
         </div>
-        <div class="spec-item">
-          <div class="spec-num">f/2.8</div>
-          <div class="spec-label">Óptica Luminosa</div>
-          <div class="spec-desc">Desenfoque cinematográfico que aísla al atleta del graderío con máxima nitidez.</div>
+        <div class="spec-card">
+          <div class="spec-val">f/2.8</div>
+          <div class="spec-label">Aislamiento Óptico</div>
+          <div class="spec-desc">Desenfoque cinematográfico que despeja al atleta del graderío con máxima nitidez.</div>
         </div>
-        <div class="spec-item">
-          <div class="spec-num">100%</div>
+        <div class="spec-card">
+          <div class="spec-val">100%</div>
           <div class="spec-label">Protocolo Courtside</div>
-          <div class="spec-desc">Cumplimiento estricto de normas de vestimenta oscura y seguridad en línea de fondo.</div>
+          <div class="spec-desc">Cumplimiento de normas de vestimenta oscura y seguridad en línea de fondo NBA / LNBP.</div>
         </div>
       </div>
     </section>
 
-    <!-- MASONRY PORTFOLIO SECTION -->
-    <section class="portfolio-section" id="portfolio">
-      <div class="section-header">
-        <div>
-          <h2>Portafolio Bio Genetics</h2>
-          <p>Muestra real de fotografía deportiva de alta velocidad en fútbol americano, eventos atléticos y soccer.</p>
+    <!-- FULL PORTFOLIO ARCHIVE (78 AUTHORIZED HIGH-SPEED PHOTOS) -->
+    <section class="archive-section" id="archive">
+      <div style="max-width: 1380px; margin: 0 auto;">
+        <div class="archive-header">
+          <div class="archive-top-row">
+            <div>
+              <div class="section-eyebrow">
+                <span>// Archivo Oficial Bio Genetics</span>
+                <span style="color: var(--lime);">· 78 Tomas Autorizadas</span>
+              </div>
+              <h2 class="section-title-large">El Archivo Deportivo</h2>
+            </div>
+
+            <!-- FILTER BUTTONS WITH COUNTERS -->
+            <div class="filter-tabs">
+              <button class="filter-pill active" onclick="filterArchive('all', this)">Todos (78)</button>
+              <button class="filter-pill" onclick="filterArchive('toros', this)">Toros Americano (21)</button>
+              <button class="filter-pill" onclick="filterArchive('tec', this)">Borregos Tec (16)</button>
+              <button class="filter-pill" onclick="filterArchive('soccer', this)">Soccer Pro (12)</button>
+              <button class="filter-pill" onclick="filterArchive('nidos', this)">Nidos Colinas (12)</button>
+              <button class="filter-pill" onclick="filterArchive('football', this)">Fútbol Americano (7)</button>
+              <button class="filter-pill" onclick="filterArchive('sports', this)">Atletas & Fitness (5)</button>
+              <button class="filter-pill" onclick="filterArchive('cheer', this)">Acrobacia & Porras (5)</button>
+            </div>
+          </div>
         </div>
 
-        <div class="filter-bar">
-          <button class="filter-btn active" onclick="filterGallery('all', this)">Todos (78)</button>
-          <button class="filter-btn" onclick="filterGallery('toros', this)">Toros Americano (21)</button>
-          <button class="filter-btn" onclick="filterGallery('tec', this)">Borregos Tec (16)</button>
-          <button class="filter-btn" onclick="filterGallery('soccer', this)">Soccer Pro (12)</button>
-          <button class="filter-btn" onclick="filterGallery('nidos', this)">Nidos Colinas (12)</button>
-          <button class="filter-btn" onclick="filterGallery('football', this)">Fútbol Americano (7)</button>
-          <button class="filter-btn" onclick="filterGallery('sports', this)">Atletas & Fitness (5)</button>
-          <button class="filter-btn" onclick="filterGallery('cheer', this)">Acrobacia & Porras (5)</button>
+        <!-- DYNAMIC GRID -->
+        <div class="archive-grid" id="archive-grid">
+          <!-- Populated by JavaScript with all 78 photos -->
         </div>
       </div>
+    </section>
 
-      <div class="sports-grid" id="sports-grid">
-        <!-- Dynamic Cards Injected via JavaScript -->
+    <!-- INQUIRIES & CONTACT -->
+    <section class="inquiries-section" id="inquiries">
+      <div class="inquiries-box">
+        <div class="section-eyebrow" style="justify-content: center;">
+          <span>// Inquiries & Booking</span>
+          <span style="color: var(--lime);">· San Jerónimo MTY & CDMX</span>
+        </div>
+        <h2 class="inquiries-title">¿Listo para Congelar la Duela?</h2>
+        <p class="inquiries-p">
+          Disponible para acreditaciones de partidos, torneos oficiales, asignaciones de agencias de noticias (Imago7, Zignia Live) y cobertura comercial de atletas de alto rendimiento.
+        </p>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva%20profesional%20para%20un%20partido" target="_blank" class="inquiries-wa-btn">
+          Cotizar Partido en WhatsApp &rarr;
+        </a>
       </div>
     </section>
   </main>
@@ -815,14 +1450,14 @@
   <!-- LIGHTBOX MODAL -->
   <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox(event)">
     <div class="lightbox-content">
-      <button class="lightbox-close-btn" onclick="closeLightbox(event)">&times;</button>
-      <img src="" id="lightbox-img" alt="Foto en alta resolución">
+      <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+      <img src="" id="lightbox-img" alt="Foto en alta resolución" class="lightbox-img">
       <div class="lightbox-info">
         <div>
-          <strong id="lightbox-title" style="color: var(--cyan); font-size: 1.05rem;"></strong>
-          <p id="lightbox-desc" style="color: var(--text-muted); font-size: 0.8rem; margin-top: 4px;"></p>
+          <strong id="lightbox-title" style="color: var(--color-bone); font-family: var(--font-headline); font-size: 1.15rem; text-transform: uppercase;"></strong>
+          <p id="lightbox-desc" style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.8rem; margin-top: 4px;"></p>
         </div>
-        <a id="lightbox-whatsapp" href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20vi%20esta%20foto%20de%20su%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 999px; background: var(--lime); color: #000; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none;">
+        <a id="lightbox-wa-link" href="#" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; border-radius: 999px; background: var(--lime); color: #000; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 800; text-decoration: none;">
           Cotizar Foto en WhatsApp &rarr;
         </a>
       </div>
@@ -830,589 +1465,87 @@
   </div>
 
   <footer>
-    <p>CAPTOORA STUDIO · BIO GENETICS // San Jerónimo, Monterrey & Ciudad de México</p>
-    <p style="margin-top: 6px; font-size: 0.75rem; color: #64748b;">WhatsApp Oficial: +52 81 4005 0088 · Fotografía de Acción y Duela Profesional · 78 Fotos Autorizadas</p>
+    <div>
+      <span style="color: var(--color-bone); font-weight: 800;">CAPTOORA STUDIO // BIO GENETICS</span>
+      <p style="margin-top: 4px; color: rgba(246, 243, 239, 0.45);">San Jerónimo, Monterrey, N.L. & Ciudad de México</p>
+    </div>
+    <div>
+      <span style="color: var(--cyan);">WhatsApp Oficial: +52 81 4005 0088</span>
+      <p style="margin-top: 4px; color: rgba(246, 243, 239, 0.45);">78 Tomas Autorizadas · Archivo Libre de Fotos Familiares</p>
+    </div>
   </footer>
 
-  <!-- ANTIGRAVITY HALO CURSOR SCRIPT (ATG Constellation Swarm) -->
+  <!-- ANTIGRAVITY DANCING CONSTELLATION PARTICLES & HALO CURSOR SCRIPT -->
   <script src="assets/js/antigravity-halo-cursor.js"></script>
 
   <script>
-    // 78 AUTHORIZED HIGH-SPEED SPORTS PHOTOS MANIFEST (BIO GENETICS)
-    const PORTFOLIO_DATA = [
-  {
-    "src": "assets/portfolio/toros/676704073_1479726187278408_3571250205910652904_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #01",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/677644373_1479726513945042_2013935375144154777_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #02",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/677708515_1479725427278484_5852371895596882984_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #03",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/677738259_1479725460611814_1925484060004680783_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #04",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/678182162_1479726390611721_1041437285977639823_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #05",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #06",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679355354_1479726220611738_5123412448722861594_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #07",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679482366_1479726277278399_638955856787533988_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #08",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679546800_1479725997278427_4758216151910064887_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #09",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679696619_1479725777278449_4932572657458311860_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #10",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/679997578_1479726313945062_2156854633067351568_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #11",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/680108916_1479725297278497_7996712751285532717_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #12",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/680159749_1479726467278380_5663217748501807034_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #13",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/680213467_1479725177278509_6200865164776676250_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #14",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/680913372_1479725370611823_7857427391737919501_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #15",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/686309762_1487892973128396_3868545345411523833_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #16",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/686850558_1487892509795109_3820985867456060862_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #17",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #18",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/688819878_1487892649795095_4700011729839992034_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #19",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/689016181_1487892876461739_1812629713595802980_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #20",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/toros/689017760_1487893013128392_3712963149749542936_n.jpg",
-    "category": "toros",
-    "title": "Fútbol Americano Toros #21",
-    "exif": "1/1000s · f/2.8 · Toros Pro",
-    "sport": "Fútbol Americano Toros"
-  },
-  {
-    "src": "assets/portfolio/football/855502680_1699091181735389_7034572351783518089_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #01",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/855758154_1108959031534984_5768774677711228409_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #02",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/856573723_1119742207235109_8731702464069294673_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #03",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/856758745_1103549915411804_4727521283894208774_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #04",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/857903183_1797465984844351_173169939120361270_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #05",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/858073012_1785250692751583_6686968200130636931_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #06",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/football/858304559_1905666907072399_2767893787422264998_n.jpeg",
-    "category": "football",
-    "title": "Fútbol Americano Acción #07",
-    "exif": "1/1000s · f/2.8 · Campo",
-    "sport": "Fútbol Americano Acción"
-  },
-  {
-    "src": "assets/portfolio/tec/768145092_1070993905564137_1513861794575341866_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #01",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #02",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/770609167_1064467706533654_1202849407051191142_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #03",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/772217945_1372901260903772_7417548735303576169_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #04",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/772840266_2283984202434096_1377683369381118596_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #05",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/773209447_1043517221984592_2093275934461052880_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #06",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/773403051_1598756012042882_5743022164566353534_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #07",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/773820969_1498337018978567_8314157241462720454_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #08",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/774042553_1548590752914350_774506131605767687_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #09",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/856541738_1411740047607853_3890008977788640504_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #10",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/857627166_1376091040988199_174100290534674604_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #11",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/857766639_1083992544632613_8937529420473652816_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #12",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/858381128_1806092637203035_6874152236326226085_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #13",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/858402572_1849296656489851_5827583528022263709_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #14",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/860336465_2617296365405412_5934298755636718878_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #15",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/tec/861128466_2097268267631854_6774852041908776207_n.jpeg",
-    "category": "tec",
-    "title": "Borregos Tec de Monterrey #16",
-    "exif": "1/1000s · f/2.8 · Borregos",
-    "sport": "Borregos Tec de Monterrey"
-  },
-  {
-    "src": "assets/portfolio/soccer/885451140_29181705734782347_8831359719326675937_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #01",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/894460907_2381487825988096_446495948368352994_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #02",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #03",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/901372616_1480737527303547_3659607846776129579_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #04",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/902005588_1376463047707876_6199171546584619212_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #05",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/902045737_2278770549370725_2831775999497768946_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #06",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/903424327_4676146702635836_8928731957007542516_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #07",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/903424555_2191611561435339_4966008600155840142_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #08",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/903439407_1856658052008099_3056953155906166379_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #09",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #10",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/903701785_3117857935234538_1461484447841871997_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #11",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/soccer/904220793_1115688038115108_2314397900334641541_n.jpeg",
-    "category": "soccer",
-    "title": "Soccer Profesional #12",
-    "exif": "1/1250s · f/2.8 · Velocidad",
-    "sport": "Soccer Profesional"
-  },
-  {
-    "src": "assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg",
-    "category": "sports",
-    "title": "Atletas & Fitness #01",
-    "exif": "1/800s · f/2.8 · Bio Genetics",
-    "sport": "Atletas & Fitness"
-  },
-  {
-    "src": "assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg",
-    "category": "sports",
-    "title": "Atletas & Fitness #02",
-    "exif": "1/800s · f/2.8 · Bio Genetics",
-    "sport": "Atletas & Fitness"
-  },
-  {
-    "src": "assets/portfolio/sports/497230380_1343142761146044_3003690679777942792_n.jpg",
-    "category": "sports",
-    "title": "Atletas & Fitness #03",
-    "exif": "1/800s · f/2.8 · Bio Genetics",
-    "sport": "Atletas & Fitness"
-  },
-  {
-    "src": "assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg",
-    "category": "sports",
-    "title": "Atletas & Fitness #04",
-    "exif": "1/800s · f/2.8 · Bio Genetics",
-    "sport": "Atletas & Fitness"
-  },
-  {
-    "src": "assets/portfolio/sports/497576130_1343142781146042_3870341899245466729_n.jpg",
-    "category": "sports",
-    "title": "Atletas & Fitness #05",
-    "exif": "1/800s · f/2.8 · Bio Genetics",
-    "sport": "Atletas & Fitness"
-  },
-  {
-    "src": "assets/portfolio/cheer/855294486_2264275124158889_410146105259851496_n.jpeg",
-    "category": "cheer",
-    "title": "Animación & Porristas #01",
-    "exif": "1/1000s · f/2.8 · Acrobacia",
-    "sport": "Animación & Porristas"
-  },
-  {
-    "src": "assets/portfolio/cheer/855655058_1458095346386297_7735575010540799118_n.jpeg",
-    "category": "cheer",
-    "title": "Animación & Porristas #02",
-    "exif": "1/1000s · f/2.8 · Acrobacia",
-    "sport": "Animación & Porristas"
-  },
-  {
-    "src": "assets/portfolio/cheer/856911053_2630040657416605_1969096425608777617_n.jpeg",
-    "category": "cheer",
-    "title": "Animación & Porristas #03",
-    "exif": "1/1000s · f/2.8 · Acrobacia",
-    "sport": "Animación & Porristas"
-  },
-  {
-    "src": "assets/portfolio/cheer/857378097_29132204053058349_6679366774907787712_n.jpeg",
-    "category": "cheer",
-    "title": "Animación & Porristas #04",
-    "exif": "1/1000s · f/2.8 · Acrobacia",
-    "sport": "Animación & Porristas"
-  },
-  {
-    "src": "assets/portfolio/cheer/858366255_1344046794339036_550093106872114621_n.jpeg",
-    "category": "cheer",
-    "title": "Animación & Porristas #05",
-    "exif": "1/1000s · f/2.8 · Acrobacia",
-    "sport": "Animación & Porristas"
-  },
-  {
-    "src": "assets/portfolio/nidos/470215850_17956179929850613_8859799692486523034_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #01",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480312433_590978247099800_8721015503281072349_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #02",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480432327_590996427097982_1339764515609095699_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #03",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480629167_590996420431316_7771585021352249142_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #04",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480785230_597086143155677_5514808034673151394_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #05",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480906721_597086083155683_2705458490996950253_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #06",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/480916421_593857220145236_7727516625176960838_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #07",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/481007476_593856846811940_9211345882332971007_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #08",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/481153870_597086149822343_4827554235976732958_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #09",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/481192777_597086236489001_1159088362017179627_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #10",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/481237533_593857210145237_4172278252608781976_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #11",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  },
-  {
-    "src": "assets/portfolio/nidos/481668079_597086306488994_9097893005352945634_n.jpg",
-    "category": "nidos",
-    "title": "Nidos Colinas #12",
-    "exif": "1/1000s · f/2.8 · Liga Colinas",
-    "sport": "Nidos Colinas"
-  }
-];
+    // 78 AUTHORIZED HIGH-SPEED SPORTS PHOTOS (BIO GENETICS)
+    const PORTFOLIO_DATA = [{"src": "assets/portfolio/toros/676704073_1479726187278408_3571250205910652904_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #01", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677644373_1479726513945042_2013935375144154777_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #02", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677708515_1479725427278484_5852371895596882984_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #03", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677738259_1479725460611814_1925484060004680783_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #04", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/678182162_1479726390611721_1041437285977639823_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #05", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #06", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679355354_1479726220611738_5123412448722861594_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #07", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679482366_1479726277278399_638955856787533988_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #08", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679546800_1479725997278427_4758216151910064887_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #09", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679696619_1479725777278449_4932572657458311860_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #10", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679997578_1479726313945062_2156854633067351568_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #11", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680108916_1479725297278497_7996712751285532717_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #12", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680159749_1479726467278380_5663217748501807034_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #13", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680213467_1479725177278509_6200865164776676250_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #14", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680913372_1479725370611823_7857427391737919501_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #15", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/686309762_1487892973128396_3868545345411523833_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #16", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/686850558_1487892509795109_3820985867456060862_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #17", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #18", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/688819878_1487892649795095_4700011729839992034_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #19", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/689016181_1487892876461739_1812629713595802980_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #20", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/689017760_1487893013128392_3712963149749542936_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #21", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/football/855502680_1699091181735389_7034572351783518089_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #01", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/855758154_1108959031534984_5768774677711228409_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #02", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/856573723_1119742207235109_8731702464069294673_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #03", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/856758745_1103549915411804_4727521283894208774_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #04", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/857903183_1797465984844351_173169939120361270_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #05", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/858073012_1785250692751583_6686968200130636931_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #06", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/858304559_1905666907072399_2767893787422264998_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #07", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/tec/768145092_1070993905564137_1513861794575341866_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #01", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #02", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/770609167_1064467706533654_1202849407051191142_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #03", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/772217945_1372901260903772_7417548735303576169_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #04", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/772840266_2283984202434096_1377683369381118596_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #05", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773209447_1043517221984592_2093275934461052880_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #06", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773403051_1598756012042882_5743022164566353534_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #07", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773820969_1498337018978567_8314157241462720454_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #08", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/774042553_1548590752914350_774506131605767687_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #09", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/856541738_1411740047607853_3890008977788640504_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #10", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/857627166_1376091040988199_174100290534674604_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #11", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/857766639_1083992544632613_8937529420473652816_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #12", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/858381128_1806092637203035_6874152236326226085_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #13", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/858402572_1849296656489851_5827583528022263709_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #14", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/860336465_2617296365405412_5934298755636718878_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #15", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/861128466_2097268267631854_6774852041908776207_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #16", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/soccer/885451140_29181705734782347_8831359719326675937_n.jpeg", "category": "soccer", "title": "Soccer Profesional #01", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/894460907_2381487825988096_446495948368352994_n.jpeg", "category": "soccer", "title": "Soccer Profesional #02", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg", "category": "soccer", "title": "Soccer Profesional #03", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/901372616_1480737527303547_3659607846776129579_n.jpeg", "category": "soccer", "title": "Soccer Profesional #04", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/902005588_1376463047707876_6199171546584619212_n.jpeg", "category": "soccer", "title": "Soccer Profesional #05", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/902045737_2278770549370725_2831775999497768946_n.jpeg", "category": "soccer", "title": "Soccer Profesional #06", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903424327_4676146702635836_8928731957007542516_n.jpeg", "category": "soccer", "title": "Soccer Profesional #07", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903424555_2191611561435339_4966008600155840142_n.jpeg", "category": "soccer", "title": "Soccer Profesional #08", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903439407_1856658052008099_3056953155906166379_n.jpeg", "category": "soccer", "title": "Soccer Profesional #09", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg", "category": "soccer", "title": "Soccer Profesional #10", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903701785_3117857935234538_1461484447841871997_n.jpeg", "category": "soccer", "title": "Soccer Profesional #11", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/904220793_1115688038115108_2314397900334641541_n.jpeg", "category": "soccer", "title": "Soccer Profesional #12", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg", "category": "sports", "title": "Atletas & Fitness #01", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg", "category": "sports", "title": "Atletas & Fitness #02", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497230380_1343142761146044_3003690679777942792_n.jpg", "category": "sports", "title": "Atletas & Fitness #03", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg", "category": "sports", "title": "Atletas & Fitness #04", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497576130_1343142781146042_3870341899245466729_n.jpg", "category": "sports", "title": "Atletas & Fitness #05", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/cheer/855294486_2264275124158889_410146105259851496_n.jpeg", "category": "cheer", "title": "Animación & Porristas #01", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/855655058_1458095346386297_7735575010540799118_n.jpeg", "category": "cheer", "title": "Animación & Porristas #02", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/856911053_2630040657416605_1969096425608777617_n.jpeg", "category": "cheer", "title": "Animación & Porristas #03", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/857378097_29132204053058349_6679366774907787712_n.jpeg", "category": "cheer", "title": "Animación & Porristas #04", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/858366255_1344046794339036_550093106872114621_n.jpeg", "category": "cheer", "title": "Animación & Porristas #05", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/nidos/470215850_17956179929850613_8859799692486523034_n.jpg", "category": "nidos", "title": "Nidos Colinas #01", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480312433_590978247099800_8721015503281072349_n.jpg", "category": "nidos", "title": "Nidos Colinas #02", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480432327_590996427097982_1339764515609095699_n.jpg", "category": "nidos", "title": "Nidos Colinas #03", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480629167_590996420431316_7771585021352249142_n.jpg", "category": "nidos", "title": "Nidos Colinas #04", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480785230_597086143155677_5514808034673151394_n.jpg", "category": "nidos", "title": "Nidos Colinas #05", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480906721_597086083155683_2705458490996950253_n.jpg", "category": "nidos", "title": "Nidos Colinas #06", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480916421_593857220145236_7727516625176960838_n.jpg", "category": "nidos", "title": "Nidos Colinas #07", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481007476_593856846811940_9211345882332971007_n.jpg", "category": "nidos", "title": "Nidos Colinas #08", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481153870_597086149822343_4827554235976732958_n.jpg", "category": "nidos", "title": "Nidos Colinas #09", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481192777_597086236489001_1159088362017179627_n.jpg", "category": "nidos", "title": "Nidos Colinas #10", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481237533_593857210145237_4172278252608781976_n.jpg", "category": "nidos", "title": "Nidos Colinas #11", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481668079_597086306488994_9097893005352945634_n.jpg", "category": "nidos", "title": "Nidos Colinas #12", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}];
 
-    // RENDER GALLERY CARDS DYNAMICALLY
-    function renderGallery(filter = 'all') {
-      const grid = document.getElementById('sports-grid');
+    // 3D HOLOGRAPHIC CARD TILT ENGINE (JJETTAS INTERACTION)
+    function initHoloTilt(card) {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        // Calculate tilt angles (-16deg to 16deg)
+        const rx = -((y - centerY) / centerY) * 16;
+        const ry = ((x - centerX) / centerX) * 16;
+        
+        // Normalized mouse position (0 to 1) for specular glares
+        const mx = x / rect.width;
+        const my = y / rect.height;
+
+        card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+        card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+        card.style.setProperty('--mx', mx.toFixed(3));
+        card.style.setProperty('--my', my.toFixed(3));
+        card.style.setProperty('--scale', '1.04');
+        card.style.setProperty('--foil-opacity', '0.75');
+        card.style.setProperty('--flare-opacity', '0.85');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+        card.style.setProperty('--scale', '1');
+        card.style.setProperty('--foil-opacity', '0.25');
+        card.style.setProperty('--flare-opacity', '0.2');
+      });
+    }
+
+    // INITIALIZE ALL 3D HOLO CARDS
+    document.querySelectorAll('.holo-card').forEach(initHoloTilt);
+
+    // RENDER ARCHIVE CARDS DYNAMICALLY
+    function renderArchive(filter = 'all') {
+      const grid = document.getElementById('archive-grid');
       grid.innerHTML = '';
 
-      const filtered = (filter === 'all') 
-        ? PORTFOLIO_DATA 
+      const filtered = (filter === 'all')
+        ? PORTFOLIO_DATA
         : PORTFOLIO_DATA.filter(item => item.category === filter);
 
       filtered.forEach((item) => {
         const card = document.createElement('div');
-        card.className = 'sport-card';
+        card.className = 'archive-card';
         card.setAttribute('data-category', item.category);
-        
+
         card.innerHTML = `
           <img src="${item.src}" alt="${item.title}" loading="lazy">
-          <div class="card-glass-dock">
-            <div class="card-title-group">
+          <div class="archive-card-glass">
+            <div class="archive-card-info">
               <h4>${item.title}</h4>
               <span>${item.sport} · ${item.exif}</span>
             </div>
-            <div class="zoom-badge">⤢</div>
+            <div class="archive-zoom-icon">⤢</div>
           </div>
         `;
-        
+
         card.addEventListener('click', () => {
           openLightbox(item.src, item.title, `${item.sport} · ${item.exif}`);
         });
@@ -1421,43 +1554,42 @@
       });
     }
 
-    // FILTER GALLERY
-    function filterGallery(cat, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    // FILTER ARCHIVE
+    function filterArchive(cat, btn) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
       if (btn) btn.classList.add('active');
-      renderGallery(cat);
+      renderArchive(cat);
     }
 
-    // LIGHTBOX
+    // LIGHTBOX CONTROLLER
     function openLightbox(src, title, desc) {
       const img = document.getElementById('lightbox-img');
       img.src = src;
       document.getElementById('lightbox-title').innerText = title;
       document.getElementById('lightbox-desc').innerText = desc;
-      
-      const waBtn = document.getElementById('lightbox-whatsapp');
-      const waMsg = encodeURIComponent(`Hola Captoora, vi esta foto de su portafolio (${title} - ${desc}) y me interesa cotizar cobertura deportiva.`);
+
+      const waBtn = document.getElementById('lightbox-wa-link');
+      const waMsg = encodeURIComponent(`Hola Captoora, vi esta foto en su portafolio (${title} - ${desc}) y me gustaría cotizar cobertura deportiva.`);
       waBtn.href = `https://wa.me/528140050088?text=${waMsg}`;
-      
+
       document.getElementById('lightbox-modal').classList.add('active');
     }
 
     function closeLightbox(e) {
-      if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close-btn')) {
+      if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close')) {
         document.getElementById('lightbox-modal').classList.remove('active');
       }
     }
 
-    // Keyboard support for Lightbox
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.getElementById('lightbox-modal').classList.remove('active');
       }
     });
 
-    // Initialize gallery on load
+    // Initialize gallery on page load
     document.addEventListener('DOMContentLoaded', () => {
-      renderGallery('all');
+      renderArchive('all');
     });
   </script>
 </body>
