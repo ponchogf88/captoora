@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA · BIO GENETICS // High-Speed Sports & Courtside Photography</title>
+  <meta name="description" content="Captoora Sports & Bio Genetics. Fotografía deportiva de alta velocidad, duela y acción profesional en Monterrey y Ciudad de México.">
+  <link rel="icon" type="image/png" href="assets/CAPTOORA_FAVICON_512x512.png">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800&family=Syne:wght@700;800;900&family=Syncopate:wght@700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       RESET & ATHLETIC CINEMATIC PALETTE (DARK VOID, CYBER CYAN, LIME & PURE WHITE)
+       ========================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --bg-void: #03050a;
+      --bg-surface: rgba(10, 16, 28, 0.75);
+      --bg-glass: rgba(14, 22, 38, 0.65);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-luminous: rgba(0, 240, 255, 0.28);
+      --cyan: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.45);
+      --lime: #CCFF00;
+      --lime-glow: rgba(204, 255, 0, 0.45);
+      --amber: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-display: 'Syncopate', sans-serif;
+      --font-headline: 'Syne', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: #000;
+    }
+
+    body {
+      background-color: var(--bg-void);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.5;
+      /* Backgrounds.supply analog grain & subtle radial depth */
+      background-image: 
+        radial-gradient(circle at 18% 15%, rgba(0, 240, 255, 0.07) 0%, transparent 50%),
+        radial-gradient(circle at 82% 40%, rgba(204, 255, 0, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(0, 119, 255, 0.06) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    /* Ambient Film Noise Overlay (Backgrounds.supply aesthetic) */
+    .noise-layer {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* ==========================================================================
+       TOP DOCK NAVIGATION
+       ========================================================================== */
+    .top-dock {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      height: 76px;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      background: rgba(3, 5, 10, 0.82);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-logo-img {
+      height: 40px;
+      width: auto;
+      filter: drop-shadow(0 0 12px rgba(0, 240, 255, 0.35));
+    }
+
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 24px var(--lime-glow);
+      transition: all 0.25s ease;
+    }
+
+    .nav-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.7);
+      background: #dcff33;
+    }
+
+    /* ==========================================================================
+       HERO CTA SHOWCASE (INSPIRED BY BACKGROUNDS SUPPLY ON CTA.GALLERY)
+       ========================================================================== */
+    .hero-cta-stage {
+      position: relative;
+      min-height: 94vh;
+      padding-top: 130px;
+      padding-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .kicker-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0, 240, 255, 0.08);
+      border: 1px solid rgba(0, 240, 255, 0.25);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 24px;
+    }
+
+    .kicker-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      animation: pulseDot 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.7); opacity: 0.4; }
+    }
+
+    .hero-main-title {
+      font-family: var(--font-headline);
+      font-size: clamp(2.4rem, 6.2vw, 5.6rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      text-transform: uppercase;
+      max-width: 1100px;
+      margin: 0 auto 20px auto;
+      color: #ffffff;
+    }
+
+    .hero-main-title .gradient-text {
+      background: linear-gradient(135deg, #ffffff 30%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.95rem, 1.3vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 36px auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .hero-actions-group {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+      z-index: 20;
+    }
+
+    .btn-primary-glow {
+      padding: 16px 36px;
+      border-radius: 999px;
+      background: var(--cyan);
+      color: #03050a;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 32px var(--cyan-glow);
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary-glow:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 50px rgba(0, 240, 255, 0.8);
+      background: #38f5ff;
+    }
+
+    .btn-secondary-glass {
+      padding: 16px 32px;
+      border-radius: 999px;
+      background: var(--bg-glass);
+      color: #ffffff;
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      backdrop-filter: blur(20px);
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary-glass:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================================================
+       CTA GALLERY BACKGROUNDS-SUPPLY STYLE: FLOATING CARDS FAN / MOSAIC
+       ========================================================================== */
+    .floating-cards-fan {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      height: 380px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1200px;
+      pointer-events: auto;
+    }
+
+    .fan-card {
+      position: absolute;
+      width: 260px;
+      height: 340px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .fan-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .fan-card .card-meta {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px;
+      background: linear-gradient(180deg, transparent 0%, rgba(3, 5, 10, 0.95) 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .fan-card .sport-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--lime);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .fan-card .exif-tag {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-muted);
+    }
+
+    /* Fan Positions */
+    .fan-card:nth-child(1) { transform: translateX(-440px) translateY(30px) rotate(-14deg) scale(0.85); z-index: 1; opacity: 0.6; }
+    .fan-card:nth-child(2) { transform: translateX(-220px) translateY(12px) rotate(-7deg) scale(0.92); z-index: 2; opacity: 0.85; }
+    .fan-card:nth-child(3) { transform: translateX(0px) translateY(0px) rotate(0deg) scale(1.05); z-index: 3; border-color: var(--cyan); box-shadow: 0 25px 60px rgba(0, 240, 255, 0.25); }
+    .fan-card:nth-child(4) { transform: translateX(220px) translateY(12px) rotate(7deg) scale(0.92); z-index: 2; opacity: 0.85; }
+    .fan-card:nth-child(5) { transform: translateX(440px) translateY(30px) rotate(14deg) scale(0.85); z-index: 1; opacity: 0.6; }
+
+    .fan-card:hover {
+      transform: translateY(-24px) scale(1.12) rotate(0deg) !important;
+      z-index: 100 !important;
+      border-color: var(--lime) !important;
+      box-shadow: 0 30px 70px rgba(204, 255, 0, 0.35) !important;
+      opacity: 1 !important;
+    }
+
+    .fan-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* ==========================================================================
+       INTERACTIVE GALLERY & MASONRY (BIO GENETICS PORTFOLIO)
+       ========================================================================== */
+    .portfolio-section {
+      position: relative;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 80px 32px 140px 32px;
+      z-index: 10;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-headline);
+      font-size: clamp(2rem, 3.8vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      max-width: 480px;
+      margin-top: 10px;
+    }
+
+    /* Filter pills */
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      background: rgba(14, 22, 38, 0.5);
+      border: 1px solid var(--border-subtle);
+      padding: 6px;
+      border-radius: 999px;
+      backdrop-filter: blur(16px);
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .filter-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .filter-btn.active {
+      background: var(--lime);
+      color: #000;
+      box-shadow: 0 0 18px var(--lime-glow);
+    }
+
+    /* Gallery Grid */
+    .sports-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 28px;
+    }
+
+    .sport-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      aspect-ratio: 4 / 5;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sport-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .sport-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--cyan);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.25);
+    }
+
+    .sport-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .card-glass-dock {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 20px 24px;
+      background: linear-gradient(180deg, transparent 0%, rgba(3, 5, 10, 0.92) 80%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .card-title-group h4 {
+      font-family: var(--font-headline);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .card-title-group span {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      color: var(--lime);
+      text-transform: uppercase;
+    }
+
+    .zoom-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+
+    .sport-card:hover .zoom-badge {
+      background: var(--cyan);
+      color: #000;
+      border-color: var(--cyan);
+      transform: scale(1.1);
+    }
+
+    /* ==========================================================================
+       TECHNICAL SPECIFICATIONS & METRICS (NBA STANDARDS)
+       ========================================================================== */
+    .specs-strip {
+      background: rgba(10, 16, 28, 0.85);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 48px 32px;
+      margin: 40px 0 100px 0;
+      backdrop-filter: blur(20px);
+    }
+
+    .specs-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .spec-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--cyan);
+      letter-spacing: 1px;
+    }
+
+    .spec-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .spec-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       LIGHTBOX MODAL
+       ========================================================================== */
+    .lightbox-modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      padding: 30px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+      animation: modalFadeIn 0.25s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 1100px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.85);
+    }
+
+    .lightbox-info {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      color: #ffffff;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .lightbox-close-btn {
+      position: absolute;
+      top: -46px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 60px 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NOISE GRAIN LAYER -->
+  <div class="noise-layer"></div>
+
+  <!-- TOP DOCK NAVIGATION -->
+  <header class="top-dock">
+    <a href="#" class="brand-wrap">
+      <img src="assets/CAPTOORA_SIGNATURE_LOGO.png" alt="Captoora Signature Logo" class="brand-logo-img">
+      <div class="brand-titles">
+        <span class="brand-name">CAPTOORA</span>
+        <span class="brand-sub">Bio Genetics // Sports</span>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#portfolio" class="nav-link">Portafolio</a>
+      <a href="#specs" class="nav-link">Estándares NBA</a>
+      <a href="dashboard/index.html" class="nav-link" style="color: var(--cyan);">Scouting Hub</a>
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva%20en%20duela%20para%20un%20partido" target="_blank" class="nav-cta-btn">
+        WhatsApp 81 4005 0088
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO CTA STAGE (CTA.GALLERY / BACKGROUNDS.SUPPLY INSPIRED) -->
+    <section class="hero-cta-stage">
+      <div class="kicker-tag">
+        <span class="kicker-dot"></span>
+        High-Speed Sports Photography · Action at 1/1000s
+      </div>
+
+      <h1 class="hero-main-title">
+        EL ARTE DE <br>
+        <span class="gradient-text">CONGELAR LA VELOCIDAD.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Cobertura profesional de duela, campo y acción atlética de élite. Flujo de trabajo en tiempo real para redes sociales y auditoría visual de patrocinadores en México y EE.UU.
+      </p>
+
+      <div class="hero-actions-group">
+        <a href="#portfolio" class="btn-primary-glow">
+          Ver Portafolio Deportivo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20me%20interesa%20agendar%20una%20cobertura%20fotogr%C3%A1fica%20de%20partido" target="_blank" class="btn-secondary-glass">
+          Agendar Cobertura
+        </a>
+      </div>
+
+      <!-- FLOATING CARDS FAN (BACKGROUNDS-SUPPLY CTA PATTERN) -->
+      <div class="floating-cards-fan">
+        <div class="fan-card" onclick="openLightbox('assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg', 'Toros Fútbol Americano', 'Impacto en Línea · 1/1000s f/2.8')">
+          <img src="assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg" alt="Fútbol Americano Toros">
+          <div class="card-meta">
+            <span class="sport-tag">Fútbol Americano</span>
+            <span class="exif-tag">1/1000s · f/2.8 · ISO 2000</span>
+          </div>
+        </div>
+
+        <div class="fan-card" onclick="openLightbox('assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg', 'Soccer Pro', 'Velocidad de Disparo · 1/1250s')">
+          <img src="assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg" alt="Soccer de Alta Velocidad">
+          <div class="card-meta">
+            <span class="sport-tag">Soccer Acción</span>
+            <span class="exif-tag">1/1250s · f/2.8 · ISO 1600</span>
+          </div>
+        </div>
+
+        <div class="fan-card" onclick="openLightbox('assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg', 'Toros Fútbol Americano', 'Tacleada Ras de Césped · 1/1000s')">
+          <img src="assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg" alt="Toros Acción Principal">
+          <div class="card-meta">
+            <span class="sport-tag">Fútbol Americano</span>
+            <span class="exif-tag">1/1000s · f/2.8 · ISO 2500</span>
+          </div>
+        </div>
+
+        <div class="fan-card" onclick="openLightbox('assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg', 'Borregos Tec de Monterrey', 'Evento Atlético · 1/1000s')">
+          <img src="assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg" alt="Borregos Tec">
+          <div class="card-meta">
+            <span class="sport-tag">Borregos Tec Events</span>
+            <span class="exif-tag">1/1000s · f/2.8 · ISO 1800</span>
+          </div>
+        </div>
+
+        <div class="fan-card" onclick="openLightbox('assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg', 'Soccer Pro', 'Duelo en Aire · 1/1250s')">
+          <img src="assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg" alt="Duelo Aéreo Soccer">
+          <div class="card-meta">
+            <span class="sport-tag">Soccer Aéreo</span>
+            <span class="exif-tag">1/1250s · f/2.8 · ISO 2200</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SPECIFICATIONS STRIP (NBA G LEAGUE READY) -->
+    <section class="specs-strip" id="specs">
+      <div class="specs-container">
+        <div class="spec-item">
+          <div class="spec-num">1/1000s</div>
+          <div class="spec-label">Velocidad de Obturación</div>
+          <div class="spec-desc">Congelamiento absoluto del movimiento, balón y expresiones sin trepidación ni barrido.</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">15 MIN</div>
+          <div class="spec-label">Entrega In-Game</div>
+          <div class="spec-desc">Selección editada al medio tiempo enviada directamente para publicación en redes oficiales.</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">f/2.8</div>
+          <div class="spec-label">Óptica Luminosa</div>
+          <div class="spec-desc">Desenfoque cinematográfico que aísla al atleta del graderío con máxima nitidez.</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-num">100%</div>
+          <div class="spec-label">Protocolo Courtside</div>
+          <div class="spec-desc">Cumplimiento estricto de normas de vestimenta oscura y seguridad en línea de fondo.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MASONRY PORTFOLIO SECTION -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="section-header">
+        <div>
+          <h2>Portafolio Bio Genetics</h2>
+          <p>Muestra real de fotografía deportiva de alta velocidad en fútbol americano, eventos atléticos y soccer.</p>
+        </div>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterGallery('all', this)">Todos</button>
+          <button class="filter-btn" onclick="filterGallery('toros', this)">Fútbol Americano</button>
+          <button class="filter-btn" onclick="filterGallery('tec', this)">Borregos Tec</button>
+          <button class="filter-btn" onclick="filterGallery('soccer', this)">Soccer</button>
+          <button class="filter-btn" onclick="filterGallery('sports', this)">Atletas & Fitness</button>
+        </div>
+      </div>
+
+      <div class="sports-grid" id="sports-grid">
+        <!-- TOROS -->
+        <div class="sport-card" data-category="toros" onclick="openLightbox('assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg', 'Toros Fútbol Americano', 'Acción y Tacleada · 1/1000s f/2.8')">
+          <img src="assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg" alt="Toros Acción" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Tacleada en Zona</h4>
+              <span>Toros Americano</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="toros" onclick="openLightbox('assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg', 'Toros Fútbol Americano', 'Fuerza en la Línea · 1/1000s')">
+          <img src="assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg" alt="Línea de Golpeo" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Línea de Golpeo</h4>
+              <span>Toros Americano</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="toros" onclick="openLightbox('assets/portfolio/toros/678182162_1479726390611721_1041437285977639823_n.jpg', 'Toros Fútbol Americano', 'Pase Largo · 1/1250s')">
+          <img src="assets/portfolio/toros/678182162_1479726390611721_1041437285977639823_n.jpg" alt="Pase en Carrera" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Pase en Carrera</h4>
+              <span>Toros Americano</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="toros" onclick="openLightbox('assets/portfolio/toros/689016181_1487892876461739_1812629713595802980_n.jpg', 'Toros Fútbol Americano', 'Duelo en Velocidad · 1/1000s')">
+          <img src="assets/portfolio/toros/689016181_1487892876461739_1812629713595802980_n.jpg" alt="Duelo en Velocidad" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Duelo en Velocidad</h4>
+              <span>Toros Americano</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <!-- SOCCER -->
+        <div class="sport-card" data-category="soccer" onclick="openLightbox('assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg', 'Soccer de Alta Velocidad', 'Tiro Potente · 1/1250s')">
+          <img src="assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg" alt="Tiro Potente" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Tiro Potente</h4>
+              <span>Soccer Acción</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="soccer" onclick="openLightbox('assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg', 'Soccer de Alta Velocidad', 'Duelo Aéreo · 1/1250s')">
+          <img src="assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg" alt="Salto de Cabeza" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Duelo Aéreo</h4>
+              <span>Soccer Acción</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="soccer" onclick="openLightbox('assets/portfolio/soccer/903424327_4676146702635836_8928731957007542516_n.jpeg', 'Soccer de Alta Velocidad', 'Control de Balón · 1/1000s')">
+          <img src="assets/portfolio/soccer/903424327_4676146702635836_8928731957007542516_n.jpeg" alt="Control de Balón" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Control en Carrera</h4>
+              <span>Soccer Acción</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <!-- TEC EVENTS -->
+        <div class="sport-card" data-category="tec" onclick="openLightbox('assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg', 'Borregos Tec de Monterrey', 'Evento Atlético · 1/1000s')">
+          <img src="assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg" alt="Borregos Tec Evento" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Atleta Borrego</h4>
+              <span>Borregos Tec</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="tec" onclick="openLightbox('assets/portfolio/tec/774042553_1548590752914350_774506131605767687_n.jpeg', 'Borregos Tec de Monterrey', 'Deporte y Liderazgo · 1/1000s')">
+          <img src="assets/portfolio/tec/774042553_1548590752914350_774506131605767687_n.jpeg" alt="Deportistas Tec" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Poder Institucional</h4>
+              <span>Borregos Tec</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="tec" onclick="openLightbox('assets/portfolio/tec/858402572_1849296656489851_5827583528022263709_n.jpeg', 'Borregos Tec de Monterrey', 'Momento de Euforia')">
+          <img src="assets/portfolio/tec/858402572_1849296656489851_5827583528022263709_n.jpeg" alt="Momento Tec" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Festejo de Equipo</h4>
+              <span>Borregos Tec</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <!-- SPORTS & FITNESS -->
+        <div class="sport-card" data-category="sports" onclick="openLightbox('assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg', 'Atletas & Bio Genetics', 'Retrato Atlético')">
+          <img src="assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Retrato Atlético" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Perfil Atlético</h4>
+              <span>Fitness & Bio</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+
+        <div class="sport-card" data-category="sports" onclick="openLightbox('assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg', 'Atletas & Bio Genetics', 'Fuerza Muscular')">
+          <img src="assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg" alt="Fuerza y Rendimiento" loading="lazy">
+          <div class="card-glass-dock">
+            <div class="card-title-group">
+              <h4>Rendimiento Físico</h4>
+              <span>Fitness & Bio</span>
+            </div>
+            <div class="zoom-badge">⤢</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" onclick="closeLightbox(event)">&times;</button>
+      <img src="" id="lightbox-img" alt="Foto en alta resolución">
+      <div class="lightbox-info">
+        <div>
+          <strong id="lightbox-title" style="color: var(--cyan);"></strong>
+          <p id="lightbox-desc" style="color: var(--text-muted); font-size: 0.75rem; margin-top: 2px;"></p>
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20vi%20esta%20foto%20de%20su%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar" target="_blank" style="color: var(--lime); text-decoration: none; font-weight: 700;">
+          Contactar por WhatsApp &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>CAPTOORA STUDIO · BIO GENETICS // San Jerónimo, Monterrey & Ciudad de México</p>
+    <p style="margin-top: 6px; font-size: 0.75rem; color: #64748b;">WhatsApp Oficial: +52 81 4005 0088 · Fotografía de Acción y Duela Profesional</p>
+  </footer>
+
+  <!-- ANTIGRAVITY HALO CURSOR SCRIPT -->
+  <script src="assets/js/antigravity-halo-cursor.js"></script>
+
+  <script>
+    // FILTER GALLERY
+    function filterGallery(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.sport-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // LIGHTBOX
+    function openLightbox(src, title, desc) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-desc').innerText = desc;
+      document.getElementById('lightbox-modal').classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close-btn')) {
+        document.getElementById('lightbox-modal').classList.remove('active');
+      }
+    }
+  </script>
+</body>
+</html>
