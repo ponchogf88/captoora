@@ -51,3 +51,6 @@ Pendientes:75 cobrizo. Cuatro ensayos internos de limpieza NO pasan control:rest
 Receta real ejecutada: historial/modelo_D_todas/produccion_acabado_D.py;29 auditorias en MANIFIESTO.json. Sin nuevas generaciones en este lote, sin cargos de API. Pixeles protegidos y zona inferior sin cambios en PNG respecto a bases ya existentes; esto no certifica que esas bases contengan detalle ausente en el original. JPG tiene compresion. Antiguas bases1024x1536 conservan esa resolucion. Fotografias/PNG/JPG no se incluyen en GitHub.
 
 Despues de terminar esta mujer, retomar montajes madre+bebe usando solamente partes de originales compatibles segun requisitos existentes. No crear automatizaciones.
+
+## 5nov:formula solicitada por usuario
+Añadida FORMULA_EDICION_ACTUAL.md con parámetros exactos, enlaces a código y seis prompts intermedios, prueba limitada a máscara, dependencia de originales y estados pendientes. Entrada de raíz actualizada y conteos históricos corregidos con registros vigentes. No se editaron fotos en esta tarea.

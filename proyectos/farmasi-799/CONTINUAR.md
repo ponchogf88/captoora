@@ -1,3 +1,5 @@
+> **Fórmula de edición actual (5nov):** [proceso exacto, parámetros y scripts](FORMULA_EDICION_ACTUAL.md). Incluye corrección de blancos, restauración original, prompts intermedios y límites; no equivale a aprobación.
+
 # Continuar FARMASI 799 — instrucciones vigentes
 
 Actualizado 5 noviembre 2026. Este documento sustituye la antigua guía nocturna. La entrada canónica estará en `main`: `FARMASI_799_CONTINUAR_AQUI.md`. La rama `farmasi/continuidad-edicion-799` conserva el respaldo de trabajo.

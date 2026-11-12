@@ -1,3 +1,5 @@
+> **Fórmula de edición actual (5nov):** [proceso exacto, parámetros y scripts](FORMULA_EDICION_ACTUAL.md). Incluye corrección de blancos, restauración original, prompts intermedios y límites; no equivale a aprobación.
+
 # FARMASI 799 — paquete de continuidad para Antigravity y otros editores
 
 **Entrada:** [CONTINUAR.md](CONTINUAR.md). **Prompts reales:** [148 ejecuciones legibles](prompts/EJECUTADOS_EXACTOS.md) y [JSON exacto](prompts/ejecutados_exactos.json). **Métodos actuales:** [RECETAS_VIGENTES.md](prompts/RECETAS_VIGENTES.md).

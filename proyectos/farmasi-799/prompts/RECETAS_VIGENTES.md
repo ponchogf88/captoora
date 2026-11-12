@@ -1,3 +1,5 @@
+> Actualización5nov: [Fórmula ejecutada de cobrizo y corrección de blancos](../FORMULA_EDICION_ACTUAL.md). Los prompts exactos de seis generaciones intermedias están en `../historial/cobrizo_sola_6/PROMPTS_EJECUTADOS.json`; no confundirlos con la corrección local v03 sin generación.
+
 # Recetas vigentes y biblioteca de prompts
 
 ## No confundir tres cosas
