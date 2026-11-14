@@ -1,5 +1,7 @@
 # CAPTOORA · cola de trabajo para agentes
 
+> Prioridad de ingresos vigente: [sprint de 72 horas](../operacion-comercial/SPRINT_72H_INGRESOS_2026-11-14.md). Resolver la página de reserva y atender demanda existente antes de diseñar nuevas piezas.
+
 Actualizado: 2026-11-14 (America/Mexico_City). Evento canónico: FARMASI-20261031. Este documento es un encargo de trabajo para el siguiente despertar del agente; no prueba que un agente externo haya arrancado o que una red social se haya publicado.
 
 ## Al despertar
