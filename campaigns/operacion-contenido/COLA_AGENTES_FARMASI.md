@@ -41,3 +41,9 @@ Chuy autorizó preparar la operación, investigar, organizar, codificar y dejar 
 ## Estado de esta entrega
 
 Este archivo es la cola inicial. La automatización de actualización de ChatGPT se registra por separado y debe leer el estado más reciente antes de editar esta misma ruta; si el conector GitHub no puede escribir en una ejecución futura, debe reportar el bloqueo y no simular un commit.
+
+## Ritmo propuesto y estado del programador
+
+Ventanas sugeridas para el agente que Chuy programa por su cuenta: 09:00 y 17:00, hora de Monterrey. Al despertar, leer `main`, trabajar la primera tarea comprobable y escribir el registro. No interpretar estas horas como un cron o daemon instalado.
+
+ChatGPT intentó crear una automatización propia de actualización dos veces al día el 14 de noviembre. La plataforma respondió `too_many_active_automations` (5 tareas activas, límite 5). Por tanto, **no existe una nueva automatización de ChatGPT para esta cola**. El archivo y el enlace desde `AGENTS.md` sí están en GitHub; futuras actualizaciones programadas requieren liberar un cupo o un programador externo configurado y verificado. No convertir el intento fallido en una tarea activa.
