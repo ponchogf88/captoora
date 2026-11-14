@@ -1,3 +1,5 @@
+**Piloto de edición paralela (14 nov):** [Motor, prompt y guías por herramienta](piloto-edicion-paralela/README.md).
+
 > **Fórmula de edición actual (5nov):** [proceso exacto, parámetros y scripts](FORMULA_EDICION_ACTUAL.md). Incluye corrección de blancos, restauración original, prompts intermedios y límites; no equivale a aprobación.
 
 # FARMASI 799 — paquete de continuidad para Antigravity y otros editores

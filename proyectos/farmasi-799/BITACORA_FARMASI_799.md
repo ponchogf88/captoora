@@ -1,5 +1,11 @@
 # Bitácora operativa FARMASI799
 
+## 14 noviembre 2026 · Piloto de edición paralela
+
+La propuesta parte del álbum de Google Fotos. La misma foto y un prompt común llegan a Picsart, Grok, Gemini y ChatGPT en paralelo. Se registraron Browserflow, Page Agent, control de Chrome, Playwright, extensiones con CSV, Meta, Obscura, Artemis con Android, edición en Google Fotos web y recepción desde iPhone. Google Fotos en Android y Meta quedan disponibles como variantes adicionales. La selección y las correcciones quedan a cargo del fotógrafo antes de la entrega en Pixieset.
+
+En la MacBook se comprobó con cuatro editores simulados que se envían el mismo archivo y prompt, que las cuatro ramas arrancan antes de liberar la descarga, que se guardan cuatro PNG, y que repetir la ejecución conserva las descargas existentes. Calibración con servicios reales y cuota móvil pendientes. La prueba no procesó fotos de la sesión. [Guía y motor](piloto-edicion-paralela/README.md).
+
 ## 3–4 noviembre2026: generación histórica
 Se localizaron799 fuentes de la selección de31octubre. Se ensayaron fondos negros elegantes con ámbar discreto, paneles sin manos y suelo negro corto; blancos/grupales con sombras cálidas y alfombra dreamy real. Se conservan148 prompts reales completos, sin reconstruir ni sustituir los fallidos. El identificador del modelo integrado no fue expuesto.
 Lote01 fue rechazado por contornos/cabellos. La máscara Vision NO vuelve a producción. Hubo tres bloqueos de herramienta; no se eluden filtros ni se cuentan como imágenes producidas.

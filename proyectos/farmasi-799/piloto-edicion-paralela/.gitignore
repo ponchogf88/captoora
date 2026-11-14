@@ -1,0 +1,6 @@
+node_modules/
+.chrome-captoora/
+motores.local.json
+entradas/
+borradores/
+cola.csv

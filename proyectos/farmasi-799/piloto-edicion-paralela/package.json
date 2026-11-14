@@ -1,0 +1,6 @@
+{
+  "name": "captoora-piloto",
+  "private": true,
+  "type": "module",
+  "dependencies": { "playwright": "^1.55.0", "csv-parse": "^6.0.0" }
+}
