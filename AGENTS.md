@@ -1,3 +1,5 @@
+> **COLA VIGENTE PARA AGENTES · 14 nov 2026:** leer primero [campaigns/operacion-contenido/COLA_AGENTES_FARMASI.md](campaigns/operacion-contenido/COLA_AGENTES_FARMASI.md) para la revisión de Instagram, la auditoría real de Metricool/Buffer/Publora, fotos, atención y medición de Evelyn. Los planes de octubre son contexto histórico; verificar el estado vivo antes de ejecutar.
+
 > **FARMASI799 — continuidad vigente4nov2026:** leer primero [FARMASI_799_CONTINUAR_AQUI.md](FARMASI_799_CONTINUAR_AQUI.md). Incluye148prompts históricos completos, recetas locales realmente utilizadas, bitácora,799fuentes y143aprobadas. No usar los antiguos scripts/horarios del repo como autorización para regenerar caras, etiquetas o relanzar la noche.
 
 # REGLAS MAESTRAS DE TRABAJO - AMDA AGENTIC ENGINE
