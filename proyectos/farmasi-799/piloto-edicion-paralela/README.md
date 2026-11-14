@@ -1,5 +1,17 @@
 # CAPTOORA · Edición de una foto en paralelo
 
+## Una foto, una orden
+
+```bash
+node piloto.mjs foto /ruta/retrato.jpg blanco+grupo
+```
+
+Usa `oscuro`, `blanco`, `grupo`, `producto` o una combinación aplicable. Omite la receta para el revelado base. La guía [CAPTOORA Photo Editing](skill-captoora-photo-editing.md) explica cómo elegir la receta mirando la foto y cuándo proponer otra pasada. El comando de Terminal recibe esa decisión como argumento. Dos ejecuciones directas con el mismo archivo y prompt comparten la carpeta de resultados. Si quieres usar el CSV, agrega la columna opcional `receta` y asigna un ID nuevo al cambiar la receta de una toma que ya tiene resultados.
+
+El comando directo usa todos los motores activos en `CAPTOORA_MOTORES` (si no está definido, usa `motores.json`). Cada variante de modelo puede tener su propia clave, por ejemplo `gemini-nano-banana`, con los campos `url`, `modelo` y `pasos`. Confirma el modelo seleccionado durante la calibración y usa `activo: false` para excluir una entrada del disparo general. Las ramas ejecutadas por Playwright empiezan en paralelo. Una rama sin calibrar o pendiente de verificación devuelve su propio error mientras las demás siguen.
+
+Para completar el disparo único con extensiones, cada flujo necesita recibir el archivo y el prompt y devolver la descarga con su ID de motor. El comando actual ejecuta los pasos de Playwright. Las rutas Browserflow, Page Agent, extensiones nativas, Obscura, APIs y Artemis conservan sus propios requisitos de calibración. Meta, Dola AI, One y Google Fotos aparecen en la ficha como rutas previstas. Confirma la identidad de One y la compatibilidad de cada ruta con foto de referencia antes de habilitarla. El piloto usa las cuentas y cupos que ya tienes configurados. Conserva la revisión y aprobación humana antes de cualquier entrega a Pixieset.
+
 Prepara una carpeta de trabajo en el SSD externo. Define `CAPTOORA_WORK_DIR` con su ruta absoluta y copia allí `cola.ejemplo.csv` como `cola.csv`. Selecciona un JPG del álbum en Google Fotos, identifica la fuente correspondiente en `../registros/fuentes_799.json` y descarga esa foto al SSD externo. En `cola.csv` escribe su ID único y la ruta relativa a la carpeta de trabajo. Usa el mismo archivo y `prompt.txt` para cada motor. Cada motor recibe el original. La foto sale por cuatro ramas independientes: Picsart, Grok, Gemini y ChatGPT. Meta queda disponible como quinta prueba. La decisión editorial y la entrega en Pixieset las haces tú.
 
 ```csv
