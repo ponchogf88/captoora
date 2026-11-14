@@ -1,0 +1,5 @@
+Edita la fotografía adjunta y entrega una sola imagen editada. Usa el archivo adjunto como base y conserva su encuadre y proporción.
+
+Aplica un revelado fotográfico natural. Corrige suavemente el balance de blancos, recupera detalle en las luces y abre un poco las sombras. Mantén la intención de la iluminación y el aspecto real de la escena.
+
+Conserva la identidad, las facciones, la expresión, la textura de la piel, las manos, el cabello, la pose, la ropa y el fondo. Mantén fieles los colores, logotipos y textos de los productos. Evita remodelar el cuerpo, alisar la piel, sustituir elementos, agregar texto o introducir filtros intensos. Si una corrección requiere reconstruir detalles que no se ven en la foto, conserva esa zona tal como está.
