@@ -52,6 +52,42 @@ window.CAPTOORA = {
       items: ["Todo lo de la Hora IA", "Prioridad de render", "2 bebidas"] }
   ],
 
+  // ---- ESCENARIOS (sets del estudio) ----------------------------
+  // Hasta 3. show:false = oculto. Para agregar uno: pon show:true, texto e imagen
+  // (image = ruta a un .jpg.b64 en assets/media).
+  scenarios: [
+    { show: true, name: "Escenario 1", image: "assets/media/escenario-1.jpg.b64",
+      alt: "Escenario 1 de Captoora: ciclorama blanco, TV, vitrina, softbox y tripié",
+      desc: "Uno de los espacios de Captoora. Aquí tienes con qué jugar: ciclorama blanco o negro, luz de todo tipo y varios rincones para cambiar de fondo sin salir del set.",
+      items: ["TV", "Espejos", "Armario", "Softbox", "Tripiés", "Iluminación de todo tipo", "Ciclorama blanco o negro", "Algunos sets, elementos y herramientas para tu sesión"],
+      note: "Incluido en la Renta de estudio.",
+      cta: "Agendar el Escenario 1",
+      waMessage: "Hola, quiero agendar el Escenario 1." },
+    { show: false, name: "Escenario 2", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 2." },
+    { show: false, name: "Escenario 3", image: "", alt: "", desc: "", items: [], waMessage: "Hola, quiero agendar el Escenario 3." }
+  ],
+
+  // ---- PORTAFOLIO --------------------------------------------------
+  // Fotos propias (nada de banco ni IA). Para agregar una: sube el .jpg.b64 a
+  // assets/media/ y añade un objeto aquí. cat = una de las claves de portfolioCats.
+  // w/h = tamaño real de la foto (para que el grid no brinque al cargar).
+  portfolioCats: [
+    { key: "retrato", label: "Retrato" },
+    { key: "eventos", label: "Eventos" },
+    { key: "marca",   label: "Producto y marca" }
+  ],
+  portfolio: [
+    { cat: "retrato", image: "assets/media/pf-1946.jpg.b64", w: 800,  h: 1200, alt: "Retrato de hombre en exterior, luz de tarde" },
+    { cat: "eventos", image: "assets/media/pf-0032.jpg.b64", w: 1200, h: 800,  alt: "Foto grupal de un evento de bienestar al aire libre" },
+    { cat: "marca",   image: "assets/media/pf-1027.jpg.b64", w: 1200, h: 800,  alt: "Exhibición de productos Nutriplus y Dr. C. Tuna en evento Farmasi" },
+    { cat: "retrato", image: "assets/media/pf-0912.jpg.b64", w: 800,  h: 1200, alt: "Atleta haciendo parada de manos junto a la alberca" },
+    { cat: "eventos", image: "assets/media/pf-1042.jpg.b64", w: 1200, h: 800,  alt: "Coaches dirigiendo al grupo frente al banner del evento" },
+    { cat: "marca",   image: "assets/media/pf-1062.jpg.b64", w: 800,  h: 1200, alt: "Activación de marca Farmasi con entrenamiento al aire libre" },
+    { cat: "retrato", image: "assets/media/pf-1957.jpg.b64", w: 902,  h: 1200, alt: "Retrato de hombre con camisa negra" },
+    { cat: "eventos", image: "assets/media/pf-0867.jpg.b64", w: 1200, h: 800,  alt: "Vista general del evento con banner Nutriplus" },
+    { cat: "marca",   image: "assets/media/pf-0041.jpg.b64", w: 1200, h: 800,  alt: "Momento de baño de hielo durante la activación de marca" }
+  ],
+
   // ---- REDES -------------------------------------------------
   social: [
     { label: "Instagram", handle: "@Captoora.studio", url: "https://instagram.com/captoora.studio" },
