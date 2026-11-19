@@ -76,3 +76,12 @@
 | `herramientas_diseno_showcase.html` | `historico_y_archivos/prototipos_html/herramientas_diseno_showcase.html` | Prototipo HTML archivado (Zero Delete) |
 | `top_10_visual_showcase.html` | `historico_y_archivos/prototipos_html/top_10_visual_showcase.html` | Prototipo HTML archivado (Zero Delete) |
 | `selector_fotos_grupales.html` | `historico_y_archivos/prototipos_html/selector_fotos_grupales.html` | Prototipo HTML archivado (Zero Delete) |
+| `preview-canon-antigravity.html` | `historico_y_archivos/previews_descartados_2026-11-12/preview-canon-antigravity.html` | Preview web descartado 12 nov 2026 (Zero Delete) |
+| `preview-nikon-captoora.html` | `historico_y_archivos/previews_descartados_2026-11-12/preview-nikon-captoora.html` | Preview web descartado 12 nov 2026 (Zero Delete) |
+| `preview-v1-captoora.html` | `historico_y_archivos/previews_descartados_2026-11-12/preview-v1-captoora.html` | Preview web descartado 12 nov 2026 (Zero Delete) |
+| `preview-v2-grok-spacex.html` | `historico_y_archivos/previews_descartados_2026-11-12/preview-v2-grok-spacex.html` | Preview web descartado 12 nov 2026 (Zero Delete) |
+| `preview-v3-antigravity-halo.html` | `historico_y_archivos/previews_descartados_2026-11-12/preview-v3-antigravity-halo.html` | Preview web descartado 12 nov 2026 (Zero Delete) |
+| `site-core.js` | `historico_y_archivos/previews_descartados_2026-11-12/site-core.js` | JS de previews descartados 12 nov 2026 (Zero Delete) |
+| `studio-v2.css` | `historico_y_archivos/previews_descartados_2026-11-12/studio-v2.css` | CSS de previews descartados 12 nov 2026 (Zero Delete) |
+| `studio-v2.js` | `historico_y_archivos/previews_descartados_2026-11-12/studio-v2.js` | JS de previews descartados 12 nov 2026 (Zero Delete) |
+| `themes.css` | `historico_y_archivos/previews_descartados_2026-11-12/themes.css` | CSS de temas descartados 12 nov 2026 (Zero Delete) |

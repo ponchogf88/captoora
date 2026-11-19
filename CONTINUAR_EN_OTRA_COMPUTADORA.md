@@ -10,3 +10,7 @@ Pide al agente: “Lee `docs/ESTADO_ACTUAL.md`, `docs/DECISIONES_PENDIENTES.md` 
 ejecutable sin duplicar gastos, archivos ni trabajo”.
 
 GitHub conserva los documentos; el chat no se sincroniza por este archivo. Accesos confidenciales solo mediante referencia privada y cuenta autorizada.
+
+- Respaldo literal de conversación (Campaña Navideña, ManyChat, `notebooklm-py` y Muse · corte 19 nov 2026 para continuar en Windows): [docs/conversaciones/2026-11-11_f71b5fab_campana_navidad_manychat/README.md](docs/conversaciones/2026-11-11_f71b5fab_campana_navidad_manychat/README.md).
+- Respaldo literal de conversación (Evento Farmasi 31 Oct, Skill `captoora-studio-retouch`, Pixieset Parte 1 `89` fotos y entrega QR/WhatsApp a Evelyn Valdés · corte 19 nov 2026 para continuar en Windows): [docs/conversaciones/2026-11-19_f2879dea_farmasi_oct31_retoque_pixieset_evelyn/README.md](docs/conversaciones/2026-11-19_f2879dea_farmasi_oct31_retoque_pixieset_evelyn/README.md).
+
