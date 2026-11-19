@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-theme="antigravity">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captoora Studio · Canon EOS 60D + 85mm f/1.4L (Antigravity Halo)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/studio-v2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/studio-v2.js" defer></script>
+</head>
+<body>
+  <canvas id="halo-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a href="#" class="brand-link">
+      <span class="brand-name">CAPTOOR<span class="dot">A</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#trabajo">Portafolio</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+    <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20agendar%20una%20sesi%C3%B3n." target="_blank" rel="noopener" class="header-cta">
+      Agendar Sesión
+    </a>
+  </header>
+
+  <main>
+    <!-- 1. HERO CON CÁMARA 3D REAL -->
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-kicker">Captoora Studio · Monterrey</div>
+        <h1 class="hero-title">Captura tu mejor momento en estudio.</h1>
+        <p class="hero-sub">
+          No necesitas saber posar. Te dirigimos paso a paso en nuestro estudio de Colinas de San Jerónimo, Monterrey, con iluminación profesional y parque exterior justo afuera.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20agendar%20una%20sesi%C3%B3n." target="_blank" rel="noopener" class="btn-primary">
+            Agendar por WhatsApp
+          </a>
+          <a href="#paquetes" class="btn-secondary">
+            Ver Paquetes
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-3d-wrap">
+        <div class="camera-glow"></div>
+        <iframe
+          class="sketchfab-frame"
+          title="Canon EOS 60D + EF 85mm f/1.4L"
+          allow="autoplay; fullscreen; xr-spatial-tracking"
+          src="https://sketchfab.com/models/80f7a79909b3492c82e7ebab76f0c93f/embed?autospin=0.45&autostart=1&transparent=1&ui_infos=0&ui_controls=0&ui_stop=0&ui_hint=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&dnt=1">
+        </iframe>
+        <div class="stage-badge">Canon EOS 60D + EF 85mm f/1.4L · 3D</div>
+      </div>
+    </section>
+
+    <!-- 2. CUERPO EDITORIAL -->
+    <section id="trabajo" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Fotografía Real · Zero Crop</div>
+          <h2 class="section-title">Retrato, luz de autor y movimiento.</h2>
+        </div>
+        <p class="section-lead">
+          Cada sesión combina dirección de pose guiada, óptica profesional y entrega digital en alta resolución vía Pixieset.
+        </p>
+      </div>
+
+      <div class="editorial-grid">
+        <article class="ed-card span-7 vf-corners" >
+          <div class="ed-img-wrap">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato corporativo en estudio Captoora)</div>
+          </div>
+          <div class="ed-caption">
+            <strong>Captoora Corp · Presencia Ejecutiva</strong>
+            <span>ESTUDIO SAN JERÓNIMO</span>
+          </div>
+        </article>
+        <article class="ed-card span-5 vf-corners" >
+          <div class="ed-img-wrap">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato Signature en estudio)</div>
+          </div>
+          <div class="ed-caption">
+            <strong>Captoora Signature · Editorial</strong>
+            <span>TELÓN &amp; LUZ DE AUTOR</span>
+          </div>
+        </article>
+        <article class="ed-card span-4 vf-corners" >
+          <div class="ed-img-wrap">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato en exterior Golden Hour)</div>
+          </div>
+          <div class="ed-caption">
+            <strong>Exteriores · Golden Hour</strong>
+            <span>MONTERREY</span>
+          </div>
+        </article>
+        <article class="ed-card span-4 vf-corners" >
+          <div class="ed-img-wrap">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Fotografía deportiva y fitness)</div>
+          </div>
+          <div class="ed-caption">
+            <strong>Captoora Kinetic · Fuerza</strong>
+            <span>1/2000s</span>
+          </div>
+        </article>
+        <article class="ed-card span-4 vf-corners" >
+          <div class="ed-img-wrap">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Sesión familiar en Chipinque)</div>
+          </div>
+          <div class="ed-caption">
+            <strong>Captoora Studio · Familia</strong>
+            <span>CHIPINQUE</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. PAQUETES -->
+    <section id="paquetes" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Transparencia Total</div>
+          <h2 class="section-title">Paquetes y Renta de Estudio</h2>
+        </div>
+        <p class="section-lead">
+          Apartas tu fecha con 30% de anticipo por transferencia o tarjeta. El resto se liquida el día de tu sesión.
+        </p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="pkg-card">
+          <div>
+            <span class="pkg-badge">Más popular</span>
+            <h3 class="pkg-name">Sesión Básica</h3>
+            <div class="pkg-price">\$1,000 <small>MXN · 1 hora</small></div>
+            <ul class="pkg-list">
+              <li>1 set con iluminación profesional</li>
+              <li>Dirección completa de poses</li>
+              <li>15 fotos editadas en alta resolución</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20me%20interesa%20la%20Sesi%C3%B3n%20B%C3%A1sica%20de%20%241%2C000." target="_blank" rel="noopener" class="btn-secondary">Apartar Básica</a>
+        </div>
+
+        <div class="pkg-card featured">
+          <div>
+            <span class="pkg-badge">Recomendado · Foto + Video</span>
+            <h3 class="pkg-name">Combo Studio + Clips</h3>
+            <div class="pkg-price">\$1,600 <small>MXN · 2 horas</small></div>
+            <ul class="pkg-list">
+              <li>Sesión fotográfica completa en set</li>
+              <li>8 a 12 clips verticales listos para Reels/TikTok</li>
+              <li>Dirección frente a cámara incluida</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20el%20Combo%20Studio%20%2B%20Clips%20de%20%241%2C600." target="_blank" rel="noopener" class="btn-primary">Apartar Combo</a>
+        </div>
+
+        <div class="pkg-card">
+          <div>
+            <span class="pkg-badge">Temporada 2026</span>
+            <h3 class="pkg-name">Preventa Navideña Flash</h3>
+            <div class="pkg-price">\$1,500 <small>MXN · Apartas con \$500</small></div>
+            <ul class="pkg-list">
+              <li>Set navideño editorial o familiar en estudio</li>
+              <li>Precio regular \$2,500 MXN</li>
+              <li>Cupos limitados en noviembre y diciembre</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20apartar%20mi%20Preventa%20Navide%C3%B1a%20con%20%24500." target="_blank" rel="noopener" class="btn-secondary">Apartar con \$500</a>
+        </div>
+
+        <div class="pkg-card">
+          <div>
+            <span class="pkg-badge">Para fotógrafos y creadores</span>
+            <h3 class="pkg-name">Renta de Estudio</h3>
+            <div class="pkg-price">\$500 <small>MXN · por hora</small></div>
+            <ul class="pkg-list">
+              <li>Ciclorama blanco o negro + softboxes</li>
+              <li>Espejos, pantallas, clima e internet</li>
+              <li>Opción de parque exterior justo saliendo</li>
+            </ul>
+          </div>
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20rentar%20el%20estudio." target="_blank" rel="noopener" class="btn-secondary">Rentar Estudio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. ESTUDIO -->
+    <section id="estudio" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Colinas de San Jerónimo, MTY</div>
+          <h2 class="section-title">Tu estudio privado en Monterrey</h2>
+        </div>
+        <p class="section-lead">
+          Av. Paseo de los Álamos 165. Sets profesionales adentro y parque arbolado justo saliendo.
+        </p>
+      </div>
+
+      <div class="location-grid">
+        <div class="ed-card vf-corners" >
+          <div class="ed-img-wrap" style="height:320px;">
+            <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Interior del estudio Captoora en Colinas de San Jerónimo)</div>
+          </div>
+        </div>
+        <div>
+          <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Av.+Paseo+de+los+%C3%81lamos+165,+Colinas+de+San+Jer%C3%B3nimo,+Monterrey,+N.L.+64630&t=m&z=16&output=embed" title="Mapa Captoora Studio"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. GALERÍA Y CIERRE -->
+    <section id="galeria" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Archivo Seleccionado</div>
+          <h2 class="section-title">Galería</h2>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Todo</button>
+          <button class="filter-btn" data-filter="estudio">Estudio</button>
+          <button class="filter-btn" data-filter="exteriores">Exteriores</button>
+          <button class="filter-btn" data-filter="fitness">Kinetic</button>
+        </div>
+      </div>
+
+      <div class="gallery-masonry">
+        <div class="gal-item" data-cat="estudio" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato Brenda en estudio)</div>
+        </div>
+        <div class="gal-item" data-cat="estudio" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato grupal en estudio)</div>
+        </div>
+        <div class="gal-item" data-cat="estudio" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Editorial Princis en estudio)</div>
+        </div>
+        <div class="gal-item" data-cat="estudio" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Set temático Pop en estudio)</div>
+        </div>
+        <div class="gal-item" data-cat="exteriores" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Sesión en Chipinque)</div>
+        </div>
+        <div class="gal-item" data-cat="exteriores" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Parque Rufino Tamayo)</div>
+        </div>
+        <div class="gal-item" data-cat="fitness" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Fotografía deportiva en exterior)</div>
+        </div>
+        <div class="gal-item" data-cat="estudio" >
+          <div style="height:100%;min-height:280px;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;color:#71717a;font-family:var(--font-mono);font-size:12px;border-bottom:1px solid var(--border);">SLOT LISTO · CONECTAR FOTO OFICIAL DESDE DRIVE / PIXIESET<br>(Retrato con luz de autor)</div>
+        </div>
+      </div>
+
+      <div class="closer-box">
+        <div class="section-kicker" style="margin-bottom:0;">Monterrey, Nuevo León</div>
+        <h2>Book a Session.</h2>
+        <p>Nunca vamos a volver a ser tan jóvenes como en este instante. Consulta fechas disponibles directo por WhatsApp y aparta tu hora en el set.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20reservar%20mi%20sesi%C3%B3n." target="_blank" rel="noopener" class="btn-primary">
+            Agendar por WhatsApp · 81 4005 0088
+          </a>
+          <a href="https://galeria.captoora.studio" target="_blank" rel="noopener" class="btn-secondary">
+            Ir a Galerías de Clientes
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Captoora Studio · Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.</span>
+    <span>
+      <a href="https://instagram.com/captoora.studio" target="_blank" rel="noopener">@captoora.studio</a> ·
+      <a href="mailto:alfonsogf.88@gmail.com">alfonsogf.88@gmail.com</a>
+    </span>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Cerrar">×</button>
+    <img id="lightbox-img" src="" alt="Vista ampliada Captoora">
+  </div>
+
+  <nav class="preview-switcher" aria-label="Comparar cámaras 3D reales">
+    <a href="preview-canon-antigravity.html" class="current">1. Canon 60D + 85mm (Antigravity Halo)</a>
+    <a href="preview-nikon-captoora.html" class="">2. Nikon D3100 (Captoora)</a>
+  </nav>
+</body>
+</html>
