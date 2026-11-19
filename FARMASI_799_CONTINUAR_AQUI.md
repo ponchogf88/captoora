@@ -26,3 +26,8 @@ python3 scripts/revisar_relevo.py --source 'DSC08258.JPG'
 ```
 
 La biblioteca exacta no se modifica al redactar plantillas nuevas. Mantener esta copia de main actualizada después de cada entrega: [SINCRONIZAR_GITHUB](proyectos/farmasi-799/SINCRONIZAR_GITHUB.md).
+
+## Entrega Parte 1 (6 nov 2026) y continuidad en Windows (19 nov 2026)
+- **Publicado y entregado a Evelyn Valdés por WhatsApp Business (`2026-11-06 21:19` CST):** `https://captoorastudio.pixieset.com/farmasistudiogalaandfit/` (**89 fotografías**, Parte 1) con QR y aviso de **Partes 2 y 3 pendientes**.
+- **Para retomar exactamente desde Windows con todo el contexto de esa sesión:** leer [Respaldo conversación `f2879dea`](docs/conversaciones/2026-11-19_f2879dea_farmasi_oct31_retoque_pixieset_evelyn/README.md), la skill [`.agents/skills/captoora-studio-retouch/SKILL.md`](.agents/skills/captoora-studio-retouch/SKILL.md) y los 11 scripts en [lote retoque `f2879dea`](proyectos/farmasi-799/historial/sesion_f2879dea_lote_pixieset_prt1/README.md).
+
