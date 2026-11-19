@@ -472,5 +472,254 @@
       "ctaText": "COMENTA: NEON 🚀",
       "accentColor": "#DFB15B"
     }
+  ],
+  "EP03_TONY_CUOTA": [
+    {
+      "kind": "clip",
+      "durationInFrames": 58,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "🚨 ¡WATERS · CUOTA EN 0%!",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.14,
+      "shakeIntro": true
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 58,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "🚨 ¡WATERS · CUOTA EN 0%!",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.06,
+      "zoomEnd": 1.2,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_04_escucha_atento.mp4",
+      "topTag": "😠 TONY · REGAÑO EN VIVO",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 169,
+      "topTag": "📉 SETTINGS · MODEL CREDITS",
+      "monitorTitle": "ANTIGRAVITY · QUOTA 0%",
+      "headline": "CUOTA SEMANAL: 0%",
+      "lines": [
+        "> Gemini Models .......... 0% (5d 9h)",
+        "> Claude & GPT ........... 0% (6d 3h)",
+        "> Gemini 4 Argon ......... 0% (5d 15h)",
+        "! PARO TOTAL DE AGENTES"
+      ],
+      "screenshotFile": "screenshots/cuota_0_porciento_antigravity.jpg",
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😱 ¿POR QUÉ EN CERO?!",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.1,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 32,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😱 ¿POR QUÉ EN CERO?!",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.06,
+      "zoomEnd": 1.16,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "📊 AUTOPSIA DEL CHAT",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 323,
+      "topTag": "🔥 TELEMETRÍA REAL",
+      "monitorTitle": "TRANSCRIPT · 82fb8bb2 LOGS",
+      "headline": "135.1M TOKENS QUEMADOS",
+      "lines": [
+        "$ steps: 1,614 | subagentes: 15",
+        "> input: 12.8M | output: 710K",
+        "> cache_read: 121.6M TOKENS",
+        "★ SPRINT: 15 MP4 + 20 FOTOS + 3D"
+      ],
+      "screenshotFile": null,
+      "ctaText": null,
+      "accentColor": "#DFB15B"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😅 PENA CON GOOGLE",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😅 PENA CON GOOGLE",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.06,
+      "zoomEnd": 1.18,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😅 PENA CON GOOGLE",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.24,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 56,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😅 PENA CON GOOGLE",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.18,
+      "zoomEnd": 1.3,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 351,
+      "topTag": "⚠️ AUDITORÍA CTO",
+      "monitorTitle": "AI FINOPS · RISK ALERT",
+      "headline": "¿Y SI NO HAY 2DA CUENTA?",
+      "lines": [
+        "[!] 1 chat largo re-envía >100K/turno",
+        "[!] Sin límites = cuota congelada 6 días",
+        "[X] RIESGO OPERATIVO DE EMPRESA"
+      ],
+      "screenshotFile": null,
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "🤖 AGY · AI FINOPS",
+      "accentColor": "#22C55E",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 203,
+      "topTag": "🛡️ GUARDRAILS ACTIVOS",
+      "monitorTitle": "FINOPS · TOKEN GOVERNANCE",
+      "headline": "4 GUARDRAILS ANTI-QUEMA",
+      "lines": [
+        "1. /compact o Handoff cada 250 pasos",
+        "2. Evita re-leer 121.6M de caché",
+        "✓ AHORRO ~90% EN CADA MENSAJE"
+      ],
+      "screenshotFile": null,
+      "ctaText": null,
+      "accentColor": "#22C55E"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_06_feliz_celebrando.mp4",
+      "topTag": "⚡ MODEL TIERING",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 172,
+      "topTag": "⚙️ OFFLOAD A PYTHON",
+      "monitorTitle": "ROUTING · COST CONTROL",
+      "headline": "TIERING + PYTHON LOCAL",
+      "lines": [
+        "3. Orchestrator = diseño y estrategia",
+        "   Flash = terminal, git y copias",
+        "4. Python / FFmpeg = 0 TOKENS LLM"
+      ],
+      "screenshotFile": null,
+      "ctaText": null,
+      "accentColor": "#38BDF8"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_05_cierre_sonrisa.mp4",
+      "topTag": "💸 CIRCUIT BREAKER 80%",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.09,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 108,
+      "videoFile": "chuy_05_cierre_sonrisa.mp4",
+      "topTag": "💸 CIRCUIT BREAKER 80%",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.06,
+      "zoomEnd": 1.15,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 54,
+      "videoFile": "chuy_05_cierre_sonrisa.mp4",
+      "topTag": "💸 CIRCUIT BREAKER 80%",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.21,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 171,
+      "topTag": "📩 PROTOCOLO FINOPS",
+      "monitorTitle": "CAPTOORA × AI FINOPS",
+      "headline": "CONTROLA TUS CUOTAS HOY",
+      "lines": [
+        "> Script auditor de transcript JSONL",
+        "> Alertas 70% / 85% / Freno al 95%"
+      ],
+      "screenshotFile": null,
+      "ctaText": "COMENTA: FINOPS 🚀",
+      "accentColor": "#22C55E"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 80,
+      "videoFile": "agy_03_solo_feliz_guino.mp4",
+      "topTag": "🌊 ¡WATERS!",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12,
+      "shakeIntro": true
+    }
   ]
 }
