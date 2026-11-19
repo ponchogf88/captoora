@@ -1,0 +1,21 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Python virtual environment & caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Internal agent IDE runtime state
+.antigravity_state/
+
+# Large regenerable NL batch mockups & email archives (keeps PV captures, bases & test kit tracked)
+assets/mockups/clubs/
+assets/mockups/small_biz/
+assets/mockups/test/*.eml
+assets/gmaps_audits/*.png

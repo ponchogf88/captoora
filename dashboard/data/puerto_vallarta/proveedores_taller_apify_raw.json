@@ -1,0 +1,4097 @@
+[
+  {
+    "title": "Placas y trofeos",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de trofeos",
+    "address": "Colombia 148, La Vena, 48320 Puerto Vallarta, Jal., México",
+    "neighborhood": "La Vena",
+    "street": "Colombia 148",
+    "city": "Puerto Vallarta",
+    "postalCode": "48320",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 222 3170",
+    "phoneUnformatted": "+523222223170",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6324991,
+      "lng": -105.2248214
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": "JQJG+X3 Puerto Vallarta, Jalisco, México",
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJM7AJHl1FIYQR80YI-KeVvz8",
+    "categories": [
+      "Tienda de trofeos"
+    ],
+    "fid": "0x8421455d1e09b033:0x3fbf95a7f80846f3",
+    "cid": "4593554693594564339",
+    "reviewsCount": 19,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 17
+    },
+    "imagesCount": 18,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.213Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Placas%20y%20trofeos&query_place_id=ChIJM7AJHl1FIYQR80YI-KeVvz8",
+    "searchPageUrl": "https://www.google.com/maps/search/trofeos%20reconocimientos%20placas%20grabadas%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "trofeos reconocimientos placas grabadas Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeslCpcE6q2cO7BaOSan3ayvuVdXKYdhtpPt5zlMP7vU02wnWXOUXk4cYUeg_Lh6188t6Y3Z5ZvpUM64xFTrGPQta9doPYgIkofIOJCdl-3dDa8I3UdvMcPn8REwtOVQpHtgFk=w408-h306-k-no",
+    "kgmid": "/g/11cn94mbbv",
+    "businessProfileId": "7000237353866674777"
+  },
+  {
+    "title": "Rotularte",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Mezquital 604-Local #2, Los Portales, 48315 Puerto Vallarta, Jal., México",
+    "neighborhood": "Los Portales",
+    "street": "Mezquital 604-Local #2",
+    "city": "Puerto Vallarta",
+    "postalCode": "48315",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.rotulartepv.com/",
+    "phone": "+52 322 215 0694",
+    "phoneUnformatted": "+523222150694",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6631052,
+      "lng": -105.2284188
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJCXewSYRPIYQRp1GdKGetWpg",
+    "categories": [
+      "Imprenta",
+      "Comercio"
+    ],
+    "fid": "0x84214f8449b07709:0x985aad67289d51a7",
+    "cid": "10978277700243640743",
+    "reviewsCount": 16,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 15
+    },
+    "imagesCount": 66,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.236Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Rotularte&query_place_id=ChIJCXewSYRPIYQRp1GdKGetWpg",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLemxFdTqx66F0Kdyxhpv584KrLscvCTc-a9sJiHOqxZCikr4dv5ssRbKI8_ncBa2yyYYWFfsB1ugqAK4pDtajH-NmAzim3dRDMUjaSngBLiGL7B3hj0Z9G-PZo4PhOkYL5nIDdV=w480-h240-k-no",
+    "kgmid": "/g/12ml2wxx5",
+    "businessProfileId": "6900467531094781360"
+  },
+  {
+    "title": "Rótulos creativa",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Diseñador gráfico",
+    "address": "C. Prisciliano Sánchez 530, Vallarta 750, 48315 Puerto Vallarta, Jal., México",
+    "neighborhood": "Vallarta 750",
+    "street": "C. Prisciliano Sánchez 530",
+    "city": "Puerto Vallarta",
+    "postalCode": "48315",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://sites.google.com/view/rotulos-creativa",
+    "phone": "+52 33 1635 0111",
+    "phoneUnformatted": "+523316350111",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6545547,
+      "lng": -105.229217
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ34XLsoBFIYQRoRplRw6_H4Y",
+    "categories": [
+      "Diseñador gráfico",
+      "Centro artístico",
+      "Diseñador de sitios web"
+    ],
+    "fid": "0x84214580b2cb85df:0x861fbf0e47651aa1",
+    "cid": "9664653393408629409",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 144,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.236Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 5 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=R%C3%B3tulos%20creativa&query_place_id=ChIJ34XLsoBFIYQRoRplRw6_H4Y",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcSadaSQBxP3CwSWIrkFRgY4TqD97-M78HQCPZLEqkPVuLVh2pD0Km9k2EkvtNaDQrNnPk0EVhRjBLZMgVTO5h2AiOH532QFaNeGtysJI35S1a8-VfRBkG4mF2_dMtK0PvN5PHxPiuZaP6a=w408-h306-k-no",
+    "kgmid": "/g/11ll9y1kzv",
+    "businessProfileId": "4873365762657376287"
+  },
+  {
+    "title": "Print PV",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Agencia de publicidad",
+    "address": "Berna 252-Loc 4, Versalles, 48310 Puerto Vallarta, Jal., México",
+    "neighborhood": "Versalles",
+    "street": "Berna 252-Loc 4",
+    "city": "Puerto Vallarta",
+    "postalCode": "48310",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.printpv.com/",
+    "phone": "+52 322 223 0140",
+    "phoneUnformatted": "+523222230140",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6342006,
+      "lng": -105.2263444
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJh5QMRWRFIYQRQaV7PNGzCyY",
+    "categories": [
+      "Agencia de publicidad",
+      "Imprenta",
+      "Imprenta comercial",
+      "Impresora de etiquetas personalizadas",
+      "Servicio de impresión digital"
+    ],
+    "fid": "0x84214564450c9487:0x260bb3d13c7ba541",
+    "cid": "2741482509429351745",
+    "reviewsCount": 321,
+    "reviewsDistribution": {
+      "oneStar": 9,
+      "twoStar": 1,
+      "threeStar": 2,
+      "fourStar": 8,
+      "fiveStar": 301
+    },
+    "imagesCount": 111,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.236Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Print%20PV&query_place_id=ChIJh5QMRWRFIYQRQaV7PNGzCyY",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcTEwSR743Xte7g7HdriwrRQu380EviIcxv0SQ9EqWx0HkgpjW941Cby-pslB8cH7IDLuEhhcaBZOzQeUUJbHXE1fsBH52OfJXebPxkl0vfATMDaMYEkly90cvsMnsLCqthHmWEN5WOSlD5=w408-h510-k-no",
+    "kgmid": "/g/11h0fq5d0",
+    "businessProfileId": "1476532663747458250"
+  },
+  {
+    "title": "TODO GRAFIC",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicio de corte láser",
+    "address": "C. Prisciliano Sánchez 519-Loc 6, Las Moras, Aramara, 48315 Puerto Vallarta, Jal., México",
+    "neighborhood": "Las Moras, Aramara",
+    "street": "C. Prisciliano Sánchez 519-Loc 6",
+    "city": "Puerto Vallarta",
+    "postalCode": "48315",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 114 5529",
+    "phoneUnformatted": "+523221145529",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6555209,
+      "lng": -105.2311512
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJywTK24dFIYQRz24efIUw6eE",
+    "categories": [
+      "Servicio de corte láser",
+      "Servicio de impresión digital"
+    ],
+    "fid": "0x84214587dbca04cb:0xe1e930857c1e6ecf",
+    "cid": "16278595677978521295",
+    "reviewsCount": 5,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 4
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.236Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 2:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 2:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 2:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 1:30 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 2:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 2:30 PM, 4 to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=TODO%20GRAFIC&query_place_id=ChIJywTK24dFIYQRz24efIUw6eE",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLc70KTDdEIbz8jJTmyq3MrVuDMIsAkoyjEvCyX_K-95mxUJtrb5_4DMEjZUFlTSUeHc8ySvSkGVVk_bSS7ASWG2OoEvjw8LVSf_pdIVXqcp2WeEEa-6L_5qZqVjaHKje_dkRWisdnASbXEL=w408-h306-k-no",
+    "kgmid": "/g/11gtr8xpd6",
+    "businessProfileId": "13427088920511970167"
+  },
+  {
+    "title": "MUREX Estampados Creativos",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicio de corte láser",
+    "address": "Abasolo 287, Ex Hacienda El Pitillal, 48298 Puerto Vallarta, Jal., México",
+    "neighborhood": "Ex Hacienda El Pitillal",
+    "street": "Abasolo 287",
+    "city": "Puerto Vallarta",
+    "postalCode": "48298",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.instagram.com/murex_estampados_creativos/",
+    "phone": "+52 322 136 5057",
+    "phoneUnformatted": "+523221365057",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6544344,
+      "lng": -105.2193612
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJlfrTz4BFIYQR9EnzP7KqJl0",
+    "categories": [
+      "Servicio de corte láser",
+      "Imprenta comercial",
+      "Proveedor de calcomanías",
+      "Imprenta",
+      "Tienda de serigrafía",
+      "Tienda de uniformes"
+    ],
+    "fid": "0x84214580cfd3fa95:0x5d26aab23ff349f4",
+    "cid": "6712239977196112372",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 7
+    },
+    "imagesCount": 138,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.237Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=MUREX%20Estampados%20Creativos&query_place_id=ChIJlfrTz4BFIYQR9EnzP7KqJl0",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcji3xNXx66nCKmtLXRsbwyq10F5oodemPelkENqUuCw7L4djPjv4qy8lCFXFJ8577979m1pfIzRhH-zUDvCZ6rzyvYlBVNfAU27nGkQZHtZJ-YWNC2WPKLkW4CoXtlC5jNHnf1=w408-h306-k-no",
+    "kgmid": "/g/11c43p5xy2",
+    "businessProfileId": "17673356679921889060"
+  },
+  {
+    "title": "The Print Company Puerto Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Av. de los Grandes Lagos 192-Loc 1, Fluvial Vallarta, 48312 Puerto Vallarta, Jal., México",
+    "neighborhood": "Fluvial Vallarta",
+    "street": "Av. de los Grandes Lagos 192-Loc 1",
+    "city": "Puerto Vallarta",
+    "postalCode": "48312",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.theprintco.mx/",
+    "phone": "+52 322 225 4551",
+    "phoneUnformatted": "+523222254551",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6458903,
+      "lng": -105.2264102
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJp5W_ne1FIYQRhqLe_qr6KxE",
+    "categories": [
+      "Imprenta"
+    ],
+    "fid": "0x842145ed9dbf95a7:0x112bfaaafedea286",
+    "cid": "1237358134970720902",
+    "reviewsCount": 23,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 16
+    },
+    "imagesCount": 208,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.238Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=The%20Print%20Company%20Puerto%20Vallarta&query_place_id=ChIJp5W_ne1FIYQRhqLe_qr6KxE",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLe72XGEy-hONTxAVf6-_amsTZG5jM4jtVjR3boPjXSQ0sA30P8t0S8ng6BaOexVccrXqIylRg7IgLi3suQnGtO8_2yCHUXQ_GC4k_EL4xGpfPI7SoZCv8XX_ELU3AW5TLQJLv1-jA=w408-h408-k-no",
+    "kgmid": "/g/11f73zs51k",
+    "businessProfileId": "4054828932700658541"
+  },
+  {
+    "title": "PLASMA soluciones gráficas",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Diseñador gráfico",
+    "address": "Parota Center, Av. Francisco Villa 1010-Loc 4, Jardines de Las Gaviotas, 48328 Puerto Vallarta, Jal., México",
+    "neighborhood": "Jardines de Las Gaviotas",
+    "street": "Parota Center, Av. Francisco Villa 1010-Loc 4",
+    "city": "Puerto Vallarta",
+    "postalCode": "48328",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.plasmapv.com/",
+    "phone": "+52 322 370 7782",
+    "phoneUnformatted": "+523223707782",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.638003,
+      "lng": -105.2220851
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfQJrjDpFIYQRftBxGUqQO0E",
+    "categories": [
+      "Diseñador gráfico",
+      "Proveedor de calcomanías",
+      "Imprenta",
+      "Tienda de señalización"
+    ],
+    "fid": "0x8421453a8c6b027d:0x413b904a1971d07e",
+    "cid": "4700509284020113534",
+    "reviewsCount": 14,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 9
+    },
+    "imagesCount": 33,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:09.238Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 12 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=PLASMA%20soluciones%20gr%C3%A1ficas&query_place_id=ChIJfQJrjDpFIYQRftBxGUqQO0E",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.648756322411646,-105.19454322037566,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdUG241z2hDHMpDWr60zZDkLqWJeqEiw93gdQixCxmQfysph_GdHSuMUfaFi2FWfkoO2H9WUF4XGGpNT0bMI2aNaMM-m5exBsAvFzq9fpP7uG0_Y-BQGbnlQAUqxIz2OJFRPnco=w408-h272-k-no",
+    "kgmid": "/g/11fls8t104",
+    "businessProfileId": "4235092449166432295"
+  },
+  {
+    "title": "Puerto Láser",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Mayorista",
+    "address": "Mariano Abasolo 932, Morelos y Pavón, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Morelos y Pavón",
+    "street": "Mariano Abasolo 932",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 149 3089",
+    "phoneUnformatted": "+523221493089",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6683643,
+      "lng": -105.2136741
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJRX9aLpNPIYQRv3AxdHQeW04",
+    "categories": [
+      "Mayorista"
+    ],
+    "fid": "0x84214f932e5a7f45:0x4e5b1e74743170bf",
+    "cid": "5646140043353485503",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 21,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:12.501Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 3 PM, 4 to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 3 PM, 4 to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 3 PM, 4 to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 3 PM, 4 to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 3 PM, 4 to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Puerto%20L%C3%A1ser&query_place_id=ChIJRX9aLpNPIYQRv3AxdHQeW04",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLekFzuP-ujhv6O1CRR-xSsfff9isKDcBq3xfmePBuhlCtaWes8oArkeWd1OaBMctSt1UX5yjvMeIFuulmYR5pdh55BZdAW0YIbdnZQb-XVoE4QXX6bZDPdK-X0rWlKoc-1JQERD=w408-h408-k-no",
+    "kgmid": "/g/11j8qqb44d",
+    "businessProfileId": "7197587718458182649"
+  },
+  {
+    "title": "Estrella Taller Creativo (CORTE LÁSER)",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Diseñador arquitectónico",
+    "address": "Abasolo 283a, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro Pitillal",
+    "street": "Abasolo 283a",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/estrellatallercreativo",
+    "phone": "+52 322 225 6130",
+    "phoneUnformatted": "+523222256130",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6543281,
+      "lng": -105.2193105
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJf2InN_xPIYQRT3jmbRUm7HU",
+    "categories": [
+      "Diseñador arquitectónico",
+      "Servicios de diseño",
+      "Tienda de regalos",
+      "Tienda de artículos de fiesta"
+    ],
+    "fid": "0x84214ffc3727627f:0x75ec26156de6784f",
+    "cid": "8497208470421272655",
+    "reviewsCount": 33,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 1,
+      "fiveStar": 27
+    },
+    "imagesCount": 71,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:12.502Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 4 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Estrella%20Taller%20Creativo%20(CORTE%20L%C3%81SER)&query_place_id=ChIJf2InN_xPIYQRT3jmbRUm7HU",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0QIdaLL9_B9tr8v3YPaynXnKE-7FS3jjrF7mPQYrQ02kmp8uXiWbmJoR74GFMWNLlw5f-gi_U6CNF2oP37wPtEVXc3UWPpx05jIxcFSjgLmFQRErZz5zNlUs5sJQFOWkBAd0=w408-h408-k-no",
+    "kgmid": "/g/11frqxkbgw",
+    "businessProfileId": "14481373521308596777"
+  },
+  {
+    "title": "Rótulos",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de pancartas publicitarias",
+    "address": "Lib. Luis Donaldo Colosio 80, Lázaro Cárdenas, 48330 Puerto Vallarta, Jal., México",
+    "neighborhood": "Lázaro Cárdenas",
+    "street": "Lib. Luis Donaldo Colosio 80",
+    "city": "Puerto Vallarta",
+    "postalCode": "48330",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 223 3297",
+    "phoneUnformatted": "+523222233297",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6277041,
+      "lng": -105.2255596
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ_4Z0CMWN2IARoJqZ1b8k5Aw",
+    "categories": [
+      "Tienda de pancartas publicitarias"
+    ],
+    "fid": "0x80d88dc5087486ff:0xce424bfd5999aa0",
+    "cid": "928907829486131872",
+    "reviewsCount": 18,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 2,
+      "fourStar": 2,
+      "fiveStar": 14
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:15.121Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9:30 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9:30 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9:30 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9:30 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9:30 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=R%C3%B3tulos&query_place_id=ChIJ_4Z0CMWN2IARoJqZ1b8k5Aw",
+    "searchPageUrl": "https://www.google.com/maps/search/anuncios%20luminosos%20letras%203D%20LED%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "anuncios luminosos letras 3D LED Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh5.googleusercontent.com/p4PZ-jnTlP15nQwoYwyjrvF0LI1A-NJ0mEVpTG1cjTLdlGPnS0KF7Xn3QoRQLHY=w427-h240-k-no",
+    "kgmid": "/g/1tjkg262",
+    "businessProfileId": null
+  },
+  {
+    "title": "galloprintpv",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicios de diseño",
+    "address": "Cl. Fco. I. Madero 506, Coapinole, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Coapinole",
+    "street": "Cl. Fco. I. Madero 506",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 201 7350",
+    "phoneUnformatted": "+523222017350",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6577179,
+      "lng": -105.2141382
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJffLa1vNPIYQRaorpFotbhuI",
+    "categories": [
+      "Servicios de diseño"
+    ],
+    "fid": "0x84214ff3d6daf27d:0xe2865b8b16e98a6a",
+    "cid": "16322834552393927274",
+    "reviewsCount": 48,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 47
+    },
+    "imagesCount": 31,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:15.121Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=galloprintpv&query_place_id=ChIJffLa1vNPIYQRaorpFotbhuI",
+    "searchPageUrl": "https://www.google.com/maps/search/anuncios%20luminosos%20letras%203D%20LED%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "anuncios luminosos letras 3D LED Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLezIEurhidColW0hRuBJAwdaaGnAWNBhx--fawon1OC9sC5cvE5SY4c8weTeYuzdCn4SbEcEQQhg0hhWIAVsCObqAD6OHakBBMwP11umrr8dK9Zbi4HbXv3cABtdF7rP73uGxW-bbpAklU=w408-h306-k-no",
+    "kgmid": "/g/11vy7n7_78",
+    "businessProfileId": "3872532435547638478"
+  },
+  {
+    "title": "Marcos y Molduras Bravo Espinoza",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de enmarcación",
+    "address": "5 de Mayo 45, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro Pitillal",
+    "street": "5 de Mayo 45",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 225 5341",
+    "phoneUnformatted": "+523222255341",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6521233,
+      "lng": -105.2210469
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfVHi6oBFIYQRalUhXqC2KFk",
+    "categories": [
+      "Tienda de enmarcación"
+    ],
+    "fid": "0x84214580eae2517d:0x5928b6a05e21556a",
+    "cid": "6424585668334277994",
+    "reviewsCount": 46,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 3,
+      "fourStar": 5,
+      "fiveStar": 33
+    },
+    "imagesCount": 62,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:16.624Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Marcos%20y%20Molduras%20Bravo%20Espinoza&query_place_id=ChIJfVHi6oBFIYQRalUhXqC2KFk",
+    "searchPageUrl": "https://www.google.com/maps/search/enmarcado%20marcos%20cuadros%20molduras%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "enmarcado marcos cuadros molduras Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfoVccbpNH5DlQWS2KMnYxcKC-VpIiufog0Fvouk_HgapnvCbVMrmz5TwnodxtVORdZzfFCJiLRK9mDTg9m0C_M7TF4ruULTEemnb3Az0BxLB5j1ehke8lTgk1hKbvaw4CBYoGwSA=w408-h306-k-no",
+    "kgmid": "/g/11cndbvw8b",
+    "businessProfileId": null
+  },
+  {
+    "title": "Enmarcados Gmc",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de enmarcación",
+    "address": "Av. Francisco Villa 305, Olímpica, 48330 Puerto Vallarta, Jal., México",
+    "neighborhood": "Olímpica",
+    "street": "Av. Francisco Villa 305",
+    "city": "Puerto Vallarta",
+    "postalCode": "48330",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 223 2046",
+    "phoneUnformatted": "+523222232046",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6278046,
+      "lng": -105.2285838
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxUTlWWZFIYQR3uT2IX5UZqk",
+    "categories": [
+      "Tienda de enmarcación"
+    ],
+    "fid": "0x8421456659e544c5:0xa966547e21f6e4de",
+    "cid": "12206536740746749150",
+    "reviewsCount": 96,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 5,
+      "fiveStar": 89
+    },
+    "imagesCount": 21,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:16.624Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 2 PM, 4 to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Enmarcados%20Gmc&query_place_id=ChIJxUTlWWZFIYQR3uT2IX5UZqk",
+    "searchPageUrl": "https://www.google.com/maps/search/enmarcado%20marcos%20cuadros%20molduras%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "enmarcado marcos cuadros molduras Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfjGZkXayuW_YVgxE-y0PabeW4PfOP807iLOAlHknnaVbXMn_OKO4zrvUN2vOlQyYh9iTdTP3e60KFdpk8oy1iWz5Kk_AAFxRPofXqGYh5j3bZew0Nf31v5DTufD6K3Y4zbLPrHIQ=w408-h544-k-no",
+    "kgmid": "/g/1tf717h8",
+    "businessProfileId": null
+  },
+  {
+    "title": "Marcos y Molduras Uruapan",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de enmarcación",
+    "address": "Venustiano Carranza 332, Zona Romántica, Emiliano Zapata, 48380 Puerto Vallarta, Jal., México",
+    "neighborhood": "Zona Romántica, Emiliano Zapata",
+    "street": "Venustiano Carranza 332",
+    "city": "Puerto Vallarta",
+    "postalCode": "48380",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 222 1738",
+    "phoneUnformatted": "+523222221738",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6031611,
+      "lng": -105.2341749
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJj9vD_0xFIYQRmPEGZ0h526g",
+    "categories": [
+      "Tienda de enmarcación"
+    ],
+    "fid": "0x8421454cffc3db8f:0xa8db79486706f198",
+    "cid": "12167452170144641432",
+    "reviewsCount": 20,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 16
+    },
+    "imagesCount": 24,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:16.624Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Marcos%20y%20Molduras%20Uruapan&query_place_id=ChIJj9vD_0xFIYQRmPEGZ0h526g",
+    "searchPageUrl": "https://www.google.com/maps/search/enmarcado%20marcos%20cuadros%20molduras%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "enmarcado marcos cuadros molduras Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh6.googleusercontent.com/s6A93PasFcFKVIbXz6WgSLvYMMOYB77UcX5cUszWai9xariZJEnuQsYamYaULTHP=w427-h240-k-no",
+    "kgmid": "/g/11cnc2q23x",
+    "businessProfileId": "1141541502237911929"
+  },
+  {
+    "title": "Imprime+",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Impresora digital",
+    "address": "ESQUINA CON, CARLOS JONGITUD BARRIOS, Lago Michigan, 48312 Puerto Vallarta, Jal., México",
+    "neighborhood": "Fovissste 100, Fluvial Vallarta",
+    "street": "ESQUINA CON, CARLOS JONGITUD BARRIOS, Lago Michigan",
+    "city": "Puerto Vallarta",
+    "postalCode": "48312",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "https://www.imprimemasmx.com/",
+    "phone": "+52 322 305 9893",
+    "phoneUnformatted": "+523223059893",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6475826,
+      "lng": -105.2258924
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ3wgAcSpFIYQReOWjg4yfYzE",
+    "categories": [
+      "Impresora digital",
+      "Imprenta comercial",
+      "Copistería",
+      "Impresora de etiquetas personalizadas",
+      "Servicio de impresión digital",
+      "Servicio de corte láser"
+    ],
+    "fid": "0x8421452a710008df:0x31639f8c83a3e578",
+    "cid": "3558863556405618040",
+    "reviewsCount": 19,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 19
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 1 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 4 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 4 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Imprime%2B&query_place_id=ChIJ3wgAcSpFIYQReOWjg4yfYzE",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdgNYPDghkqNoUJjkmnPOkOmMtt1wVscBqepS6aEUO3GDRxkpNdRkTb9-wEmEueb-pcW_mkR1C67POy4SCwHYhqRFW8OAeKeOQ5eA6ypl3Mc380IOVnhIdrMXOLapn977MIsaHi6Y45X3ZB=w408-h306-k-no",
+    "kgmid": "/g/11njdvy_fg",
+    "businessProfileId": "4955067489506830416"
+  },
+  {
+    "title": "CPK Printing Puerto Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Carr. Aeropuerto km. 7.5 Plaza Marina Local G-31, Marina Vallarta, 48354 Puerto Vallarta, Jal., México",
+    "neighborhood": "Marina Vallarta",
+    "street": "Carr. Aeropuerto km. 7.5 Plaza Marina Local G-31",
+    "city": "Puerto Vallarta",
+    "postalCode": "48354",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "http://www.cpkprinting.com/",
+    "phone": "+52 322 221 0013",
+    "phoneUnformatted": "+523222210013",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6730439,
+      "lng": -105.2512336
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJt8_ZjMZFIYQRqy-lqDSuIns",
+    "categories": [
+      "Imprenta"
+    ],
+    "fid": "0x842145c68cd9cfb7:0x7b22ae34a8a52fab",
+    "cid": "8872845757064228779",
+    "reviewsCount": 52,
+    "reviewsDistribution": {
+      "oneStar": 13,
+      "twoStar": 2,
+      "threeStar": 0,
+      "fourStar": 6,
+      "fiveStar": 31
+    },
+    "imagesCount": 14,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8:30 AM to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=CPK%20Printing%20Puerto%20Vallarta&query_place_id=ChIJt8_ZjMZFIYQRqy-lqDSuIns",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcngZbW5IhemXKvhD8EkQ32TlRBonfMZzZJoM8S8UbEOfXUj9fqfajIuTAYOrrg7EEA0JinMPP7JXLoZpY-RlS2i2xgs0ghoLVVkahEflLPVuaKi9Cmp0uVgy6GIhhH5PCVtq9nMA=w408-h544-k-no",
+    "kgmid": "/g/11byyj44lw",
+    "businessProfileId": "8097292620856802837"
+  },
+  {
+    "title": "Puerto Copy - Impresión Digital",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicio de impresión digital",
+    "address": "Villa Colonial 573, Los Portales, 48315 Puerto Vallarta, Jal., México",
+    "neighborhood": "Los Portales",
+    "street": "Villa Colonial 573",
+    "city": "Puerto Vallarta",
+    "postalCode": "48315",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://puertocopy.com/",
+    "phone": "+52 322 191 6038",
+    "phoneUnformatted": "+523221916038",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.662612,
+      "lng": -105.2285098
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJD__4Ii5FIYQRqTIBy3STms0",
+    "categories": [
+      "Servicio de impresión digital",
+      "Imprenta comercial",
+      "Imprenta",
+      "Servicio de reparación de impresoras",
+      "Proveedor de equipos de impresión",
+      "Societe de Flocage"
+    ],
+    "fid": "0x8421452e22f8ff0f:0xcd9a9374cb0132a9",
+    "cid": "14815316054020010665",
+    "reviewsCount": 9,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 8
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2:30 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8:30 AM to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8:30 AM to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Puerto%20Copy%20-%20Impresi%C3%B3n%20Digital&query_place_id=ChIJD__4Ii5FIYQRqTIBy3STms0",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLd4x-bOlKNJv0S8zAqlyAbzecoEXbJdTP7VU0lci405Mmoj2lqr2BPnSOenXNSc_4CFHVqarUAXhDoVUBo6oNsWCnUffJIb9DrHy3RSdWOQ_2cnadpTtoJF4gq_SSxTfsHwrnMXomBizoi9=w408-h306-k-no",
+    "kgmid": "/g/11q1t0k81h",
+    "businessProfileId": "16191775709569383550"
+  },
+  {
+    "title": "Print Marketing",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Alameda 209, Bobadilla, 48298 Puerto Vallarta, Jal., México",
+    "neighborhood": "Bobadilla",
+    "street": "Alameda 209",
+    "city": "Puerto Vallarta",
+    "postalCode": "48298",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.printmarketing.com.mx/",
+    "phone": "+52 322 299 7433",
+    "phoneUnformatted": "+523222997433",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6572544,
+      "lng": -105.2206917
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ8WgRtIdFIYQRPmej0oMPpbs",
+    "categories": [
+      "Imprenta",
+      "Imprenta comercial",
+      "Agencia de diseño",
+      "Servicio de impresión digital"
+    ],
+    "fid": "0x84214587b41168f1:0xbba50f83d2a3673e",
+    "cid": "13521230515098838846",
+    "reviewsCount": 43,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 3,
+      "fiveStar": 34
+    },
+    "imagesCount": 9,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Print%20Marketing&query_place_id=ChIJ8WgRtIdFIYQRPmej0oMPpbs",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcn68UlJkEsHIj8acRIqybEeFlFkVa2A8XOQkksGlakzYBG1KcUZ-Vg2WXTkJzkoQA3H3xrIUMvKn73MMrf1K6yWajtjGjwML-ZkMQsCpIszb7C8N_zTyb7E2CR2g1ADHweVmIx=w426-h240-k-no",
+    "kgmid": "/g/11ggsy8dgl",
+    "businessProfileId": "15203799971973040942"
+  },
+  {
+    "title": "COPY PLANET",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Av. Francisco Villa 1489, Fovissste 100, Fluvial Vallarta, 48328 Puerto Vallarta, Jal., México",
+    "neighborhood": "Fovissste 100, Fluvial Vallarta",
+    "street": "Av. Francisco Villa 1489",
+    "city": "Puerto Vallarta",
+    "postalCode": "48328",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 225 9568",
+    "phoneUnformatted": "+523222259568",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6445588,
+      "lng": -105.220758
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ10mPPn5FIYQRmPE-2-lMNc0",
+    "categories": [
+      "Imprenta"
+    ],
+    "fid": "0x8421457e3e8f49d7:0xcd354ce9db3ef198",
+    "cid": "14786809518830317976",
+    "reviewsCount": 219,
+    "reviewsDistribution": {
+      "oneStar": 24,
+      "twoStar": 6,
+      "threeStar": 8,
+      "fourStar": 24,
+      "fiveStar": 157
+    },
+    "imagesCount": 23,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=COPY%20PLANET&query_place_id=ChIJ10mPPn5FIYQRmPE-2-lMNc0",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeJ9pYYRr8ipMS4z5jE9VmzK9fSu3OEDLODI5F72HXFSwZRj55EZTmJBAFetHgF59o1yrl3-4gAXezq1OrMROFavel_ySF1h8AlAUqsK0otHMMu4D2gqqbSJgY-z5MkN-RrQTc=w408-h544-k-no",
+    "kgmid": "/g/1tfvt7z5",
+    "businessProfileId": null
+  },
+  {
+    "title": "Digital",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Impresora digital",
+    "address": "Genaro Padilla 451B, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro Pitillal",
+    "street": "Genaro Padilla 451B",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 225 6957",
+    "phoneUnformatted": "+523222256957",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6529534,
+      "lng": -105.2203774
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJl1z-uoBFIYQRaQbPYJMF5os",
+    "categories": [
+      "Impresora digital"
+    ],
+    "fid": "0x84214580bafe5c97:0x8be6059360cf0669",
+    "cid": "10080750946457945705",
+    "reviewsCount": 43,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 3,
+      "fourStar": 3,
+      "fiveStar": 32
+    },
+    "imagesCount": 6,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 1:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 1:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 1:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 1:30 PM, 4 to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 1:30 PM, 4 to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Digital&query_place_id=ChIJl1z-uoBFIYQRaQbPYJMF5os",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh4.googleusercontent.com/OoaFsLu6tB0pXjnFBes1IHsABXj_kefmqp_YSovtoAPtXfRELUf3Mh10C_aSqqv5pw=w427-h240-k-no",
+    "kgmid": "/g/11by_l8_c7",
+    "businessProfileId": "16476303052002252523"
+  },
+  {
+    "title": "IMPRESORA VALDEZ IMPRENTA EN PUERTO VALLARTA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Diseñador gráfico",
+    "address": "Emiliano Zapata 326, Valentín Gómez Farias, 48320 Puerto Vallarta, Jal., México",
+    "neighborhood": "Valentín Gómez Farias",
+    "street": "Emiliano Zapata 326",
+    "city": "Puerto Vallarta",
+    "postalCode": "48320",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.impresoravaldez.com/",
+    "phone": "+52 322 175 8702",
+    "phoneUnformatted": "+523221758702",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6294198,
+      "lng": -105.2251374
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJO5JXxH1PIYQRAMjeyaljmtA",
+    "categories": [
+      "Diseñador gráfico",
+      "Tienda de pancartas publicitarias",
+      "Impresora de etiquetas personalizadas",
+      "Impresora digital",
+      "Imprenta comercial",
+      "Tienda de sellos de caucho"
+    ],
+    "fid": "0x84214f7dc457923b:0xd09a63a9c9dec800",
+    "cid": "15031436287189895168",
+    "reviewsCount": 26,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 23
+    },
+    "imagesCount": 91,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=IMPRESORA%20VALDEZ%20IMPRENTA%20EN%20PUERTO%20VALLARTA&query_place_id=ChIJO5JXxH1PIYQRAMjeyaljmtA",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfAhVLXZ_3yzPZNM7avY7OHZhC3RqFIiwYFyMHVWs-W3jPQ35WuY0vtARf3cNjZG3owx7viKqAXGqOt-hO2EydJcWbCI1cYbEAPZ9_kwRYQnWg9nsHSmzzwh31lWXzQb5gHyY9E=w408-h408-k-no",
+    "kgmid": "/g/1w2yv627",
+    "businessProfileId": "11035567444512414531"
+  },
+  {
+    "title": "Impresiones vagsa",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Imprenta",
+    "address": "Rep. del Salvador 913, Lomas de Enmedio, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Lomas de Enmedio",
+    "street": "Rep. del Salvador 913",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 127 7066",
+    "phoneUnformatted": "+523221277066",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6694494,
+      "lng": -105.2058115
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJFx8B3zZFIYQRFXwIl8eEmDQ",
+    "categories": [
+      "Imprenta",
+      "Agencia de publicidad",
+      "Tienda de señalización"
+    ],
+    "fid": "0x84214536df011f17:0x349884c797087c15",
+    "cid": "3789925079199546389",
+    "reviewsCount": 8,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 6
+    },
+    "imagesCount": 2,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:19.648Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Impresiones%20vagsa&query_place_id=ChIJFx8B3zZFIYQRFXwIl8eEmDQ",
+    "searchPageUrl": "https://www.google.com/maps/search/imprenta%20gran%20formato%20impresion%20digital%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "imprenta gran formato impresion digital Puerto Vallarta",
+    "language": "es",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=G6shfOjZw5_Fi8tGBoS6QA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=325.9179&pitch=0&thumbfov=100",
+    "kgmid": "/g/11rn0yqfcq",
+    "businessProfileId": "12054678936692960021"
+  },
+  {
+    "title": "Carpintería Alvarez",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Carpintero",
+    "address": "Clavel 1149, La Floresta, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "La Floresta",
+    "street": "Clavel 1149",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6662723,
+      "lng": -105.2232646
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJj20gyBtFIYQRGfy40SvtTqo",
+    "categories": [
+      "Carpintero"
+    ],
+    "fid": "0x8421451bc8206d8f:0xaa4eed2bd1b8fc19",
+    "cid": "12272006807089118233",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Carpinter%C3%ADa%20Alvarez&query_place_id=ChIJj20gyBtFIYQRGfy40SvtTqo",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=8fEWOrIjPaGQ2mHdnIos0g&cb_client=search.gws-prod.grass&w=408&h=240&yaw=330.03952&pitch=0&thumbfov=100",
+    "kgmid": "/g/11hzmnc6sv",
+    "businessProfileId": "15147915758537439766"
+  },
+  {
+    "title": "AC Carpinteria y Cocinas Puerto Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Fábrica",
+    "address": "Manuel Gómez Pedraza 367, Guadalupe Victoria, 48317 Puerto Vallarta, Jal., México",
+    "neighborhood": "Guadalupe Victoria",
+    "street": "Manuel Gómez Pedraza 367",
+    "city": "Puerto Vallarta",
+    "postalCode": "48317",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/profile.php?id=100094463795932",
+    "phone": "+52 322 263 5796",
+    "phoneUnformatted": "+523222635796",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6790259,
+      "lng": -105.2390666
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ7-0ZURVFIYQRqZJoz0WIZzQ",
+    "categories": [
+      "Fábrica"
+    ],
+    "fid": "0x842145155119edef:0x34678845cf6892a9",
+    "cid": "3776136645987308201",
+    "reviewsCount": 29,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 29
+    },
+    "imagesCount": 50,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 1 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=AC%20Carpinteria%20y%20Cocinas%20Puerto%20Vallarta&query_place_id=ChIJ7-0ZURVFIYQRqZJoz0WIZzQ",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfIJOYH4afDPjoB3vlR7hW221De2eYKupo3nsgjejbhbKVOH6bc7LXwba3sTUNjsVHObaitDjNyulZkj93jve4ZXdWNptMOCBOKir-bRrgRjyhB47OKeGJAH8F_2-yapXyaAa_y05KQLyBh=w408-h544-k-no",
+    "kgmid": "/g/11sv_s0f6h",
+    "businessProfileId": "10724227090336237331"
+  },
+  {
+    "title": "Carpintería Arte & Ébano",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Carpintería",
+    "address": "C. 16 de Septiembre 435 A, Coapinole, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Coapinole",
+    "street": "C. 16 de Septiembre 435 A",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://arteyebano.com/",
+    "phone": "+52 322 318 2534",
+    "phoneUnformatted": "+523223182534",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6575537,
+      "lng": -105.2140295
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ7ZEZya9PIYQRnxcQqb0WeqM",
+    "categories": [
+      "Carpintería",
+      "Ebanista",
+      "Carpintero"
+    ],
+    "fid": "0x84214fafc91991ed:0xa37a16bda910179f",
+    "cid": "11779752779181987743",
+    "reviewsCount": 4,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 4
+    },
+    "imagesCount": 18,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Carpinter%C3%ADa%20Arte%20%26%20%C3%89bano&query_place_id=ChIJ7ZEZya9PIYQRnxcQqb0WeqM",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcca2dVpp67BDkKTbeWJwjWkMp_u1WySmJgdpdncyRg_mx3Nt88-KHBL-h1LmVUBFoxRl8rTiqDcvyA0vWp1uhkI3SnHNN1BX3i26VWdPj6xCUEdLTq1ZFstbCaKxRRz26qh3V2U1dpOu96=w408-h248-k-no",
+    "kgmid": "/g/11nhy_tnb5",
+    "businessProfileId": "2693239267957114016"
+  },
+  {
+    "title": "Todo para el Carpintero",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de herramientas",
+    "address": "Prolongacion Bolivia 1900 Esq. Libramiento, Lázaro Cárdenas, 48330 Puerto Vallarta, Jal., México",
+    "neighborhood": "Lázaro Cárdenas",
+    "street": "Prolongacion Bolivia 1900 Esq. Libramiento",
+    "city": "Puerto Vallarta",
+    "postalCode": "48330",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "phone": "+52 322 293 3442",
+    "phoneUnformatted": "+523222933442",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.628158,
+      "lng": -105.2258868
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJuWpmp4FFIYQR-YQ93XXr07k",
+    "categories": [
+      "Tienda de herramientas"
+    ],
+    "fid": "0x84214581a7666ab9:0xb9d3eb75dd3d84f9",
+    "cid": "13390305008558114041",
+    "reviewsCount": 63,
+    "reviewsDistribution": {
+      "oneStar": 7,
+      "twoStar": 1,
+      "threeStar": 3,
+      "fourStar": 5,
+      "fiveStar": 47
+    },
+    "imagesCount": 12,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8:30 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8:30 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8:30 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8:30 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8:30 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8:30 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Todo%20para%20el%20Carpintero&query_place_id=ChIJuWpmp4FFIYQR-YQ93XXr07k",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh4.googleusercontent.com/zDSaLWOm2tidWO_-zlhsIZF24rJHaLq0in-j2nkjigAjRf9b_-ceZ9FAzL4wuy9kOw=w427-h240-k-no",
+    "kgmid": "/g/11fb3lpw3d",
+    "businessProfileId": "13579481919434486354"
+  },
+  {
+    "title": "Ibanava PV ( carpentry + architecture)",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Carpintero",
+    "address": "C. Ignacio López Rayon 116, Independencia, 48327 Puerto Vallarta, Jal., México",
+    "neighborhood": "Independencia",
+    "street": "C. Ignacio López Rayon 116",
+    "city": "Puerto Vallarta",
+    "postalCode": "48327",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/IbanavaPV",
+    "phone": "+52 322 182 2963",
+    "phoneUnformatted": "+523221822963",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.644956,
+      "lng": -105.2079554
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJMzZ_dqRPIYQRsjaG01rFVKo",
+    "categories": [
+      "Carpintero",
+      "Herrero",
+      "Fábrica de muebles"
+    ],
+    "fid": "0x84214fa4767f3633:0xaa54c55ad38636b2",
+    "cid": "12273651878377961138",
+    "reviewsCount": 17,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 15
+    },
+    "imagesCount": 202,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ibanava%20PV%20(%20carpentry%20%2B%20architecture)&query_place_id=ChIJMzZ_dqRPIYQRsjaG01rFVKo",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfQVaOHhBvaUcr9WAXpcBKTDef4JdHyM64ruAcwcpiWBylQLv5Oe7Ioj1PH72Px3ENAIVovBTCodsvElVh_s9-EunxFDOJauJPIBMdraMpQ0S1xau3pMCRmk6xQ_D6VOWPQCA=w454-h240-k-no",
+    "kgmid": "/g/11fjxg33vq",
+    "businessProfileId": "15982969446386878565"
+  },
+  {
+    "title": "Maderería Productos Maderables de Cuale en Puerto Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Establecimiento de venta de madera",
+    "address": "C. 16 de Septiembre 274, Bobadilla, 48298 Puerto Vallarta, Jal., México",
+    "neighborhood": "Bobadilla",
+    "street": "C. 16 de Septiembre 274",
+    "city": "Puerto Vallarta",
+    "postalCode": "48298",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.maderasdecuale.com/",
+    "phone": "+52 322 299 1824",
+    "phoneUnformatted": "+523222991824",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6618073,
+      "lng": -105.2221649
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJy47uCYhFIYQRrL6x9DnzBVY",
+    "categories": [
+      "Establecimiento de venta de madera",
+      "Tienda de materiales para la construcción"
+    ],
+    "fid": "0x8421458809ee8ecb:0x5605f339f4b1beac",
+    "cid": "6198627892389330604",
+    "reviewsCount": 107,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 4,
+      "fourStar": 14,
+      "fiveStar": 84
+    },
+    "imagesCount": 35,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 1:30 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 6 PM"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Horario de atención en línea": [
+        {
+          "day": "miércoles",
+          "hours": "8 a.m.–6 p.m."
+        },
+        {
+          "day": "jueves",
+          "hours": "8 a.m.–6 p.m."
+        },
+        {
+          "day": "viernes",
+          "hours": "8 a.m.–6 p.m."
+        },
+        {
+          "day": "sábado",
+          "hours": "8 a.m.–1:30 p.m."
+        },
+        {
+          "day": "domingo",
+          "hours": "Cerrado"
+        },
+        {
+          "day": "lunes",
+          "hours": "8 a.m.–6 p.m."
+        },
+        {
+          "day": "martes",
+          "hours": "8 a.m.–6 p.m."
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Maderer%C3%ADa%20Productos%20Maderables%20de%20Cuale%20en%20Puerto%20Vallarta&query_place_id=ChIJy47uCYhFIYQRrL6x9DnzBVY",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLckH1rBWDrXdd8URECKta29Wyj5nzNp-75sjY6hT_m1I2O48lKbnSQEDZWj4cSsVHwR0h0xQV0vWfpTFB253EAfG4p5bpkRWPTuUcDBIhs8YAHhX7mBrqUWquie2vl3jJUFfwOO=w408-h306-k-no",
+    "kgmid": "/g/1tcx_45j",
+    "businessProfileId": "8492919668644267732"
+  },
+  {
+    "title": "Taller de Carpintería Aguilar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Carpintero",
+    "address": "C. Bolivia 1734, Lázaro Cárdenas, 48330 Puerto Vallarta, Jal., México",
+    "neighborhood": "Lázaro Cárdenas",
+    "street": "C. Bolivia 1734",
+    "city": "Puerto Vallarta",
+    "postalCode": "48330",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://martinaguilaar.wixsite.com/website",
+    "phone": "+52 322 143 5664",
+    "phoneUnformatted": "+523221435664",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.626883,
+      "lng": -105.2266545
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJYeeDIWdFIYQRwACp5QY-f_Y",
+    "categories": [
+      "Carpintero"
+    ],
+    "fid": "0x842145672183e761:0xf67f3e06e5a900c0",
+    "cid": "17761983654716309696",
+    "reviewsCount": 28,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 1,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 23
+    },
+    "imagesCount": 22,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.456Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 4 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Taller%20de%20Carpinter%C3%ADa%20Aguilar&query_place_id=ChIJYeeDIWdFIYQRwACp5QY-f_Y",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcZE3KqwOf_JdsoZy75o-V3xhD4OoP2Y15cC4PdantyMXFPXg7sn_dwgrleDKWgG9UjQMDd6PuZWllMUq-y5ATpzV7ZetMp2w4Gposjhji4wgbezTocRfNiJCc8u5jnUiix3YEk=w408-h544-k-no",
+    "kgmid": "/g/11cnd55tgd",
+    "businessProfileId": "7548327178116546007"
+  },
+  {
+    "title": "Mueblería y Accesorios de Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Carpintero",
+    "address": "C. Ecuador 1462A-S, Lázaro Cárdenas, 48330 Puerto Vallarta, Jal., México",
+    "neighborhood": "Lázaro Cárdenas",
+    "street": "C. Ecuador 1462A-S",
+    "city": "Puerto Vallarta",
+    "postalCode": "48330",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 113 0302",
+    "phoneUnformatted": "+523221130302",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6228094,
+      "lng": -105.227217
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": null,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJF75bXKVFIYQR5RBzBB8FsYA",
+    "categories": [
+      "Carpintero"
+    ],
+    "fid": "0x842145a55c5bbe17:0x80b1051f047310e5",
+    "cid": "9273198738509336805",
+    "reviewsCount": null,
+    "imagesCount": 1,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:20.457Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Muebler%C3%ADa%20y%20Accesorios%20de%20Vallarta&query_place_id=ChIJF75bXKVFIYQR5RBzBB8FsYA",
+    "searchPageUrl": "https://www.google.com/maps/search/carpinteria%20ebanisteria%20madera%20fina%20parota%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "carpinteria ebanisteria madera fina parota Puerto Vallarta",
+    "language": "es",
+    "rank": 12,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=mHmjXK7LI3g1yql6_gInpg&cb_client=search.gws-prod.grass&w=408&h=240&yaw=82.853874&pitch=0&thumbfov=100",
+    "kgmid": "/g/11g0mjr0m3",
+    "businessProfileId": null
+  },
+  {
+    "title": "TODO N TORNO",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Taller de metalurgia",
+    "address": "Rosa 1448, La Floresta, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "La Floresta",
+    "street": "Rosa 1448",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 134 8940",
+    "phoneUnformatted": "+523221348940",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.669648,
+      "lng": -105.2245332
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJi_I4Q4tFIYQRP8-o5ILiSV0",
+    "categories": [
+      "Taller de metalurgia"
+    ],
+    "fid": "0x8421458b4338f28b:0x5d49e282e4a8cf3f",
+    "cid": "6722152970637070143",
+    "reviewsCount": 6,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 5
+    },
+    "imagesCount": 3,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:23.169Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=TODO%20N%20TORNO&query_place_id=ChIJi_I4Q4tFIYQRP8-o5ILiSV0",
+    "searchPageUrl": "https://www.google.com/maps/search/router%20CNC%20rotulacion%20taller%20publicidad%20Puerto%20Vallarta/@20.680911212058252,-105.22889359320811,16z?hl=es",
+    "searchString": "router CNC rotulacion taller publicidad Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeo96DOwg17CPDcIq8ukEXwyyor4VYIhacgxWlkQt4hSGnlt7Lji7cX-4JsqvYsPIClwMX_QyMmLLOSTtRHRvYCret7kvhZcOgDDB_zlCzPtOjfEeb2I_vpmMRRfVJsinrIg82h9OHun3Bx=w408-h306-k-no",
+    "kgmid": "/g/11c1qkg657",
+    "businessProfileId": null
+  },
+  {
+    "title": "HandyBird - Corte & Grabado Láser",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicios de diseño",
+    "address": "Allende 239, Independencia, 48327 Puerto Vallarta, Jal., México",
+    "neighborhood": "Independencia",
+    "street": "Allende 239",
+    "city": "Puerto Vallarta",
+    "postalCode": "48327",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/handybird.lasercut",
+    "phone": "+52 322 135 8549",
+    "phoneUnformatted": "+523221358549",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6412536,
+      "lng": -105.2106403
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.2,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJubRFqL5PIYQRJrOXtGh1sIE",
+    "categories": [
+      "Servicios de diseño"
+    ],
+    "fid": "0x84214fbea845b4b9:0x81b07568b497b326",
+    "cid": "9345098319360668454",
+    "reviewsCount": 12,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 2,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 9
+    },
+    "imagesCount": 15,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.009Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=HandyBird%20-%20Corte%20%26%20Grabado%20L%C3%A1ser&query_place_id=ChIJubRFqL5PIYQRJrOXtGh1sIE",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfZHTnySw9PmT-O15KgHC5fU6AYt7Asrym-FlDIT9sxO3KpQdmE0OVRc2s9L7iqbG7gSRuEAgpSucWwtIwxAIORHgD-o1C5UR1k_gBBj38yTr80yhzOZDuSIHLTyTuXWd6CRLXF=w408-h408-k-no",
+    "kgmid": "/g/11fsry9796",
+    "businessProfileId": "8253099834160560867"
+  },
+  {
+    "title": "Lacadi Taller Láser & Arquitectura (la casa del diseño)",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Servicio de corte láser",
+    "address": "Av. Francisco Medina Ascencio 1939-Loc 1, Zona Hotelera, Las Glorias, 48333 Puerto Vallarta, Jal., México",
+    "neighborhood": "Zona Hotelera, Las Glorias",
+    "street": "Av. Francisco Medina Ascencio 1939-Loc 1",
+    "city": "Puerto Vallarta",
+    "postalCode": "48333",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 228 8115",
+    "phoneUnformatted": "+523222288115",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6321838,
+      "lng": -105.2295565
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJPegukN9FIYQRKfD3hKSKICo",
+    "categories": [
+      "Servicio de corte láser",
+      "Tienda de modelismo",
+      "Societe de Flocage",
+      "Papelería"
+    ],
+    "fid": "0x842145df902ee83d:0x2a208aa484f7f029",
+    "cid": "3035578588057825321",
+    "reviewsCount": 124,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 123
+    },
+    "imagesCount": 48,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.009Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 2 PM, 3:30 to 7:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 2 PM, 3:30 to 7:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 2 PM, 3:30 to 7:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 2 PM, 3:30 to 7:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 2 PM, 3:30 to 7:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lacadi%20Taller%20L%C3%A1ser%20%26%20Arquitectura%20(la%20casa%20del%20dise%C3%B1o)&query_place_id=ChIJPegukN9FIYQRKfD3hKSKICo",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLc8bgG5B1wnWyI4-BpjRfgx7AE6oiWxl5JbirbLK1aCdcwDAMxO8SeW6tLW4AaJjv23_b9obcKdsST9Vs1Oz1NywUSYQGbhA9upFm8SzElwyOWc_0YLmb2yOsDC1ReQAs-x94ItRA=w408-h544-k-no",
+    "kgmid": "/g/11l5w071kh",
+    "businessProfileId": "15158722557716020752"
+  },
+  {
+    "title": "D of D - Arte y Arquitectura",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de manualidades y bellas artes",
+    "address": "Lázaro Cárdenas 172-Loc 2, El, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "El, Centro Pitillal",
+    "street": "Lázaro Cárdenas 172-Loc 2",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 888 9090",
+    "phoneUnformatted": "+523228889090",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6539994,
+      "lng": -105.2192631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ-yww_n1PIYQRxzgDhSetAdI",
+    "categories": [
+      "Tienda de manualidades y bellas artes",
+      "Servicio de corte láser"
+    ],
+    "fid": "0x84214f7dfe302cfb:0xd201ad27850338c7",
+    "cid": "15132566608188487879",
+    "reviewsCount": 91,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 4,
+      "threeStar": 1,
+      "fourStar": 4,
+      "fiveStar": 74
+    },
+    "imagesCount": 179,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.009Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 5 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=D%20of%20D%20-%20Arte%20y%20Arquitectura&query_place_id=ChIJ-yww_n1PIYQRxzgDhSetAdI",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfiFddIuRHC_mDLTQEQ5vpbA6I4-Xx7Cjv-fLuGXwUyGsVYdlOdflVrgDzJDOuvWQ11Urb2xbd9_RT1HPBHt7qk1wRuARs9dKB8pBUSYohp-oEKlJ2cC24esRfUMCirE7gz9YupaQ=w408-h408-k-no",
+    "kgmid": "/g/11dyxsc2gd",
+    "businessProfileId": "5697263030565482707"
+  },
+  {
+    "title": "JAS CORTE LÁSER + IMPRESIONES",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Arquitecto",
+    "address": "Av. Francisco Villa 647, Versalles, 48310 Puerto Vallarta, Jal., México",
+    "neighborhood": "Versalles",
+    "street": "Av. Francisco Villa 647",
+    "city": "Puerto Vallarta",
+    "postalCode": "48310",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/JASarquitectos",
+    "phone": "+52 322 293 4138",
+    "phoneUnformatted": "+523222934138",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.63213,
+      "lng": -105.226218
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.4,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfWDybmRFIYQRxenpnWO0pIo",
+    "categories": [
+      "Arquitecto",
+      "Impresora digital"
+    ],
+    "fid": "0x842145646ef2607d:0x8aa4b4639de9e9c5",
+    "cid": "9990308213358717381",
+    "reviewsCount": 29,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 2,
+      "fourStar": 5,
+      "fiveStar": 20
+    },
+    "imagesCount": 266,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.009Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=JAS%20CORTE%20L%C3%81SER%20%2B%20IMPRESIONES&query_place_id=ChIJfWDybmRFIYQRxenpnWO0pIo",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfN5vMasxQTFi9y9fjlBR9c5VXs2n_LKjAZH3KQ86gApm55YyLsRVrWLhZWcJ6gwVnITnCKJ0HUvwrJFu0HYfRqF72m8hwTfA1aitIYvzfCuStGcmzXZO8ZXtEwIV8-DyGW5jew=w436-h240-k-no",
+    "kgmid": "/g/11bw77wt7c",
+    "businessProfileId": "10953718103909138026"
+  },
+  {
+    "title": "RF manufacturas metálicas (Herrería, corte plasma y estructura)",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Herrero",
+    "address": "Av. Francisco Villa 730, La Vena, 48320 Puerto Vallarta, Jal., México",
+    "neighborhood": "La Vena",
+    "street": "Av. Francisco Villa 730",
+    "city": "Puerto Vallarta",
+    "postalCode": "48320",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 232 1102",
+    "phoneUnformatted": "+523222321102",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6333707,
+      "lng": -105.2252442
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJddqMadtwo0YRsYncqIcIgzk",
+    "categories": [
+      "Herrero",
+      "Planta mecánica",
+      "Fabricante de estructuras metálicas",
+      "Soldador"
+    ],
+    "fid": "0x46a370db698cda75:0x39830887a8dc89b1",
+    "cid": "4144165460857620913",
+    "reviewsCount": 28,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 28
+    },
+    "imagesCount": 86,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.010Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=RF%20manufacturas%20met%C3%A1licas%20(Herrer%C3%ADa%2C%20corte%20plasma%20y%20estructura)&query_place_id=ChIJddqMadtwo0YRsYncqIcIgzk",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcVyajRziBMQSkDczpdBfrbhS-ym_N3yug1ocr4dt8WWT4InWAb6EecQZGDN98-EDyrrt3Um3DItM8NQ2lC9pMB-sI165-Dukoz-2b-P-4VcCwBo7qzPXWuiRw0AQuWTKcdUsWArhfA1W8p=w408-h544-k-no",
+    "kgmid": "/g/11yxrnyg9n",
+    "businessProfileId": "16936073375189788645"
+  },
+  {
+    "title": "Vallarta Laser",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Agencia de publicidad",
+    "address": "C. Exiquio Corona 216-B, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro Pitillal",
+    "street": "C. Exiquio Corona 216-B",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 237 9379",
+    "phoneUnformatted": "+523222379379",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6526218,
+      "lng": -105.2212326
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJhx7pIqVFIYQRcZxrtVoKskc",
+    "categories": [
+      "Agencia de publicidad"
+    ],
+    "fid": "0x842145a522e91e87:0x47b20a5ab56b9c71",
+    "cid": "5166203107254443121",
+    "reviewsCount": 2,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 2
+    },
+    "imagesCount": 4,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:03:25.010Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Vallarta%20Laser&query_place_id=ChIJhx7pIqVFIYQRcZxrtVoKskc",
+    "searchPageUrl": "https://www.google.com/maps/search/corte%20laser%20acrilico%20grabado%20Puerto%20Vallarta/@20.632678877588344,-105.19454322037566,16z?hl=es",
+    "searchString": "corte laser acrilico grabado Puerto Vallarta",
+    "language": "es",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=CcgWvD2LzamTqJo0pC-GGA&cb_client=search.gws-prod.grass&w=408&h=240&yaw=108.65178&pitch=0&thumbfov=100",
+    "kgmid": "/g/11x6shwltw",
+    "businessProfileId": "4139821979572346351"
+  },
+  {
+    "title": "Enmarque Pv",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de enmarcación",
+    "address": "5 de Mayo 24, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro Pitillal",
+    "street": "5 de Mayo 24",
+    "city": "Puerto Vallarta",
+    "postalCode": "48290",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 121 8521",
+    "phoneUnformatted": "+523221218521",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6520564,
+      "lng": -105.2211624
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ5TW_eGFFIYQRQpnukE6PnPE",
+    "categories": [
+      "Tienda de enmarcación"
+    ],
+    "fid": "0x8421456178bf35e5:0xf19c8f4e90ee9942",
+    "cid": "17409947827109271874",
+    "reviewsCount": 12,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 0,
+      "fiveStar": 7
+    },
+    "imagesCount": 16,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T17:04:31.905Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 5 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 5 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Enmarque%20Pv&query_place_id=ChIJ5TW_eGFFIYQRQpnukE6PnPE",
+    "searchPageUrl": "https://www.google.com/maps/search/enmarcado%20marcos%20cuadros%20molduras%20Puerto%20Vallarta/@20.6521233,-105.2210469,16.906881317663228z?hl=es",
+    "searchString": "enmarcado marcos cuadros molduras Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfYjq6XYnw6oiS-xkwDKOfsu3GZq7RY8m_2hBsjlpxqilA-gcISv1TYNOXoXnrrAOu6_TSs8UuL-ZnsnRbCw-cCBGFiKyMZa7fLH_RGDxIpiHeNyCYa92edd-kXKAkSAGH6u3Q=w408-h453-k-no",
+    "kgmid": "/g/11tfffhkm3",
+    "businessProfileId": "2754024318289031398"
+  }
+]

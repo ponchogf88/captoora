@@ -1,0 +1,18 @@
+{
+  "limits": {
+    "daily_token_budget": 500000,
+    "monthly_whatsapp_limit": 1000,
+    "daily_usd_limit": 5.0,
+    "dry_run_preferred": false
+  },
+  "runtime_calls": [],
+  "whatsapp_dispatches": [
+    {
+      "timestamp": "2026-11-15T18:09:52-06:00",
+      "count": 2,
+      "mode": "meta_cloud_api"
+    }
+  ],
+  "apify_runs": [],
+  "updated_at": "2026-11-15T18:09:52-06:00"
+}

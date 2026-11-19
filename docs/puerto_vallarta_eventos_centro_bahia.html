@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captoora Studio · Eventos PV — Centro / Bahía</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07060b;
+      --card: #101018;
+      --surface: #171724;
+      --gold: #d4af37;
+      --champagne: #e8d5a8;
+      --volt: #c6ff00;
+      --danger: #ff6b6b;
+      --text: #f5f4f8;
+      --muted: #9c9aa8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    body {
+      background: radial-gradient(circle at 85% 0%, rgba(198,255,0,0.06), transparent 36%),
+                  radial-gradient(circle at 10% 10%, rgba(212,175,55,0.08), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding: 28px 20px 64px;
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      margin-bottom: 18px;
+    }
+    .brand-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--volt);
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+      color: #fff;
+      margin-top: 4px;
+    }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .nav-pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(255,255,255,0.03);
+      color: var(--champagne);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nav-pill.active, .nav-pill:hover {
+      border-color: var(--volt);
+      color: #07060b;
+      background: var(--volt);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .kpi-val { font-size: 1.65rem; font-weight: 800; color: #fff; font-family: 'JetBrains Mono', monospace; }
+    .kpi-val.volt { color: var(--volt); }
+    .kpi-val.gold { color: var(--gold); }
+    .kpi-label { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .callout {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      color: var(--champagne);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 900px) { .controls { grid-template-columns: 1fr; } }
+    input, select {
+      width: 100%;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      font-family: inherit;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-title { font-size: 1.02rem; font-weight: 700; color: #fff; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: 1px solid rgba(212,175,55,0.45);
+      background: rgba(212,175,55,0.12);
+      color: var(--champagne);
+    }
+    .tag.volt {
+      border-color: rgba(198,255,0,0.55);
+      background: rgba(198,255,0,0.1);
+      color: var(--volt);
+    }
+    .meta { font-size: 0.81rem; color: var(--muted); }
+    .meta strong { color: #e2e0ec; }
+    .obs {
+      font-size: 0.8rem;
+      color: #ebe6d7;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid var(--gold);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+    .actions {
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 7px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn.primary { background: var(--volt); color: #07060b; border-color: var(--volt); }
+    .btn.gold { border-color: rgba(212,175,55,0.5); color: var(--champagne); }
+    .shot-thumb {
+      width: 100%;
+      height: 175px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: left top;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #090910;
+    }
+    dialog {
+      margin: auto;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 16px;
+      max-width: 820px;
+      width: 92vw;
+      padding: 20px;
+    }
+    dialog::backdrop { background: rgba(0,0,0,0.82); }
+    textarea {
+      width: 100%;
+      min-height: 200px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      margin: 10px 0;
+    }
+    h2.section-h {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--champagne);
+      margin: 26px 0 12px;
+    }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div>
+        <div class="brand-eyebrow">CAPTOORA STUDIO · CARTELERA EN VIVO, INVITADOS &amp; COBERTURA PUERTO VALLARTA</div>
+        <h1>Eventos &amp; Oportunidades — Centro / Bahía</h1>
+        <p class="subtitle">Centro Histórico · Malecón · Isla Río Cuale · Col. 5 de Diciembre (Teatro Vallarta / MUYGUUD) · Salidas en Bahía PV · Filtrado estricto fuera de Nayarit / Vidanta / Tepic.</p>
+      </div>
+    </header>
+    <nav class="nav-pills"><a class="nav-pill" href="puerto_vallarta_eventos_zona_romantica.html">Eventos · Zona Romántica</a><a class="nav-pill" href="puerto_vallarta_eventos_zona_hotelera.html">Eventos · Zona Hotelera</a><a class="nav-pill active" href="puerto_vallarta_eventos_centro_bahia.html">Eventos · Centro / Bahía</a><a class="nav-pill" href="puerto_vallarta_influencers_y_cobertura.html">Influencers, Invitados &amp; Cobertura</a><a class="nav-pill" href="puerto_vallarta_proveedores_taller.html">Proveedores Taller PV</a></nav>
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-val">18</div><div class="kpi-label">Eventos en Centro / Bahía</div></div>
+      <div class="kpi"><div class="kpi-val volt">10</div><div class="kpi-label">Sin Fotógrafo Dedicado</div></div>
+      <div class="kpi"><div class="kpi-val gold">8</div><div class="kpi-label">Oportunidad VIP / Marcas</div></div>
+      <div class="kpi"><div class="kpi-val">27</div><div class="kpi-label">Excluidos (Fuera de PV)</div></div>
+    </section>
+    <section class="controls">
+      <input id="qInput" type="search" placeholder="Buscar por evento, artista, chef, DJ, recinto o fecha..." />
+      <select id="subSelect"><option value="all">Todas las subzonas (3)</option><option value="Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta">Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta</option><option value="Centro / Bahía · Experiencias en la Bahía (Salida PV)">Centro / Bahía · Experiencias en la Bahía (Salida PV)</option><option value="Centro / Bahía · Malecón, Centro Histórico &amp; Isla Río Cuale">Centro / Bahía · Malecón, Centro Histórico &amp; Isla Río Cuale</option></select>
+      <select id="catSelect"><option value="all">Todas las categorías (13)</option><option value="Año Nuevo / Pirotecnia">Año Nuevo / Pirotecnia</option><option value="Ballet Clásico / Temporada Navideña">Ballet Clásico / Temporada Navideña</option><option value="Circuito de Galerías / Arte">Circuito de Galerías / Arte</option><option value="Concierto / Fiesta / Networking (Eventbrite)">Concierto / Fiesta / Networking (Eventbrite)</option><option value="Concierto / Ópera-Pop">Concierto / Ópera-Pop</option><option value="Concierto Sinfónico">Concierto Sinfónico</option><option value="Concierto a la Luz de las Velas">Concierto a la Luz de las Velas</option><option value="Espectáculo Escénico / Acrobacia">Espectáculo Escénico / Acrobacia</option><option value="Feria Internacional de Arte Contemporáneo">Feria Internacional de Arte Contemporáneo</option><option value="Fiestas en Bahía / Año Nuevo">Fiestas en Bahía / Año Nuevo</option><option value="Música Electrónica / Beach Festival en Bahía">Música Electrónica / Beach Festival en Bahía</option><option value="Posadas, Cenas Navideñas &amp; Hospitalidad">Posadas, Cenas Navideñas &amp; Hospitalidad</option><option value="Tradición / Peregrinaciones">Tradición / Peregrinaciones</option></select>
+    </section>
+    <div style="margin-bottom:12px; color:var(--muted); font-size:0.84rem;" id="countLabel"></div>
+    <main id="cardsGrid" class="grid"></main>
+  </div>
+  <dialog id="scriptModal">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong id="modalTitle"></strong>
+      <button class="btn" onclick="document.getElementById('scriptModal').close()">Cerrar</button>
+    </div>
+    <textarea id="modalText"></textarea>
+    <div style="display:flex; justify-content:flex-end; gap:10px;">
+      <button class="btn primary" onclick="copyModal()">Copiar Guion</button>
+    </div>
+  </dialog>
+  <script>
+    const EVENTS = [{"id": "vpv-fiestas-guadalupanas-2026", "fecha": "01-12-2026 al 12-12-2026", "horario": "Consultar sede / ficha oficial", "titulo": "Fiestas Guadalupanas 2026", "recinto": "Parroquia de Ntra. Sra. de Guadalupe & Centro Histórico", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale", "categoria": "Tradición / Peregrinaciones", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Cobertura editorial cultural para marcas locales, balcones privados y hoteles centro/malecón.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/fiestas-guadalupanas-2026", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Fiestas Guadalupanas 2026 Fiestas Guadalupanas 2026 Inicia : 01-12-2026 Finaliza : 12-12-2026 Durante los primeros doce días de diciembre, Puerto Vallarta vive una de sus celebraciones más emblemáticas: las Fiestas Guadalupanas. Las calles del Centro Histórico se transforman con", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Parroquia de Ntra. Sra. de Guadalupe & Centro Histórico (Fiestas Guadalupanas 2026 junto a Talento y anfitriones oficiales del programa PV · 01-12-2026 al 12-12-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "teatro_interstellar_with_live_orchestra_c", "fecha": "11 Dic 2026", "horario": "Noche (Red Access)", "titulo": "Interstellar with Live Orchestra — Concierto Sinfónico Inmersivo", "recinto": "Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Concierto Sinfónico", "invitados_artistas_lineup": ["Orquesta en vivo interpretando partitura de Hans Zimmer"], "influencers_relacionados": ["Comunidad cultural PV, audiencia internacional expat y prensa de espectáculos"], "cobertura_fotografica_detectada": "Abierta — Giras internacionales (Candlelight, Interstellar, World Ballet, CelloVoci) casi nunca viajan con fotógrafo propio para prensa/patrocinadores locales.", "estado_oportunidad_captoora": "Abierta / Alta Prioridad Promotores", "fuente_url": "https://boletos.redaccess.com/artes-escenicas/interstellar-with-live-orchestra-puerto-vallarta.-1925", "fuente_portal": "TeatroVallarta.com / Fever / RedAccess", "resumen": "Fecha verificada en cartelera oficial de Teatro Vallarta y boleteras.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre) (Interstellar with Live Orchestra — Concierto Sinfónico Inmersivo junto a Orquesta en vivo interpretando partitura de Hans Zimmer · 11 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "teatro_el_cascanueces_world_ballet_tour", "fecha": "18 Dic 2026", "horario": "Noche", "titulo": "El Cascanueces — World Ballet Tour", "recinto": "Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Ballet Clásico / Temporada Navideña", "invitados_artistas_lineup": ["Compañía internacional World Ballet Tour"], "influencers_relacionados": ["Comunidad cultural PV, audiencia internacional expat y prensa de espectáculos"], "cobertura_fotografica_detectada": "Abierta — Giras internacionales (Candlelight, Interstellar, World Ballet, CelloVoci) casi nunca viajan con fotógrafo propio para prensa/patrocinadores locales.", "estado_oportunidad_captoora": "Abierta / Alta Prioridad Promotores", "fuente_url": "https://www.teatrovallarta.com/otros/el-cascanueces-world-ballet-tour-27", "fuente_portal": "TeatroVallarta.com / Fever / RedAccess", "resumen": "Fecha verificada en cartelera oficial de Teatro Vallarta y boleteras.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre) (El Cascanueces — World Ballet Tour junto a Compañía internacional World Ballet Tour · 18 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "teatro_mayahuel_the_goddess_of_tequila_a", "fecha": "18 Nov 2026 (y fechas de temporada)", "horario": "Por confirmar en taquilla", "titulo": "Mayahuel — The Goddess of Tequila (Acrobacia, Danza & Tecnología Escénica)", "recinto": "Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Espectáculo Escénico / Acrobacia", "invitados_artistas_lineup": ["Elenco mexicano de artes circenses, danza contemporánea y música original", "Tasting Maestro Tequilero VIP"], "influencers_relacionados": ["Comunidad cultural PV, audiencia internacional expat y prensa de espectáculos"], "cobertura_fotografica_detectada": "Abierta — Giras internacionales (Candlelight, Interstellar, World Ballet, CelloVoci) casi nunca viajan con fotógrafo propio para prensa/patrocinadores locales.", "estado_oportunidad_captoora": "Abierta / Alta Prioridad Promotores", "fuente_url": "https://www.teatrovallarta.com/artes-escenicas/mayahuel-11", "fuente_portal": "TeatroVallarta.com / Fever / RedAccess", "resumen": "Fecha verificada en cartelera oficial de Teatro Vallarta y boleteras.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre) (Mayahuel — The Goddess of Tequila (Acrobacia, Danza & Tecnología Escénica) junto a Elenco mexicano de artes circenses, danza contemporánea y música original, Tasting Maestro Tequilero VIP · 18 Nov 2026 (y fechas de temporada)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_brick_and_sip_higuera_launch_party", "fecha": "2026-11-27", "horario": "Ver horario en Eventbrite", "titulo": "Brick and Sip: Higuera Launch Party", "recinto": "Colombia 1429 (1429 Colombia)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["Host / Productora del evento"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.com.mx/e/brick-and-sip-higuera-launch-party-tickets-2004773758278", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en Colombia 1429, 1429 Colombia, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Colombia 1429 (1429 Colombia) (Brick and Sip: Higuera Launch Party junto a Host / Productora del evento · 2026-11-27), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "pv-cenas-navidad-rio-cuale-dic2026", "fecha": "24 – 25 Dic 2026", "horario": "18:00 – 23:30 h", "titulo": "Cenas de Nochebuena & Navidad con Música en Vivo (Isla Río Cuale)", "recinto": "Restaurantes Oscar's & Le Bistro (Isla del Río Cuale, Centro PV)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale", "categoria": "Posadas, Cenas Navideñas & Hospitalidad", "invitados_artistas_lineup": ["Músicos residentes de jazz/acústico", "Comensales navideños de lujo"], "influencers_relacionados": ["Turistas de fin de año, familias VIP y creadores locales de hospitalidad"], "cobertura_fotografica_detectada": "Abierta — Recintos gastronómicos frente al río con menús multi-tiempo sin estudio editorial asignado en mesas navideñas ni display LED QR actualizado.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://restaurantoscars.com/", "fuente_portal": "Oscar's / Le Bistro PV", "resumen": "Ventana prioritaria de posadas corporativas, cenas de Nochebuena y festejos de Fin de Año 2026.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Restaurantes Oscar's & Le Bistro (Isla del Río Cuale, Centro PV) (Cenas de Nochebuena & Navidad con Música en Vivo (Isla Río Cuale) junto a Músicos residentes de jazz/acústico, Comensales navideños de lujo · 24 – 25 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos cobertura nocturna con iluminación editorial para cenas de gala, posadas corporativas y celebraciones (galería lista al día siguiente para invitados y prensa). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, porta-menús o displays acrílicos LED grabados con QR directo a Google Maps o galería privada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "teatro_candlelight_puerto_vallarta_vivaldi", "fecha": "27 Dic 2026", "horario": "19:00 h & 21:00 h", "titulo": "Candlelight Puerto Vallarta: Vivaldi & Clásicos Navideños a la Luz de las Velas", "recinto": "Teatro Vallarta Centro Cultural (Uruguay 184, Col. 5 de Diciembre)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Concierto a la Luz de las Velas", "invitados_artistas_lineup": ["Cuarteto de cuerdas Candlelight / Fever Originals"], "influencers_relacionados": ["Comunidad cultural PV, audiencia internacional expat y prensa de espectáculos"], "cobertura_fotografica_detectada": "Abierta — Giras internacionales (Candlelight, Interstellar, World Ballet, CelloVoci) casi nunca viajan con fotógrafo propio para prensa/patrocinadores locales.", "estado_oportunidad_captoora": "Abierta / Alta Prioridad Promotores", "fuente_url": "https://feverup.com/es/puerto-vallarta/candlelight", "fuente_portal": "TeatroVallarta.com / Fever / RedAccess", "resumen": "Fecha verificada en cartelera oficial de Teatro Vallarta y boleteras.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Teatro Vallarta Centro Cultural (Uruguay 184, Col. 5 de Diciembre) (Candlelight Puerto Vallarta: Vivaldi & Clásicos Navideños a la Luz de las Velas junto a Cuarteto de cuerdas Candlelight / Fever Originals · 27 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-vallarta-art-walk-2026-2027", "fecha": "28-10-2026 al 26-05-2027", "horario": "Consultar sede / ficha oficial", "titulo": "Vallarta Art Walk 2026-2027", "recinto": "Centro Histórico (16 galerías de arte)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale", "categoria": "Circuito de Galerías / Arte", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/vallarta-art-walk-2026-2027", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Vallarta Art Walk 2026-2027 Vallarta Art Walk 2026-2027 Inicia : 28-10-2026 Finaliza : 26-05-2027 El Centro Histórico de Puerto Vallarta se transforma en una galería abierta con el regreso de Vallarta ArtWalk, que celebra su temporada número 30. A partir del miércoles 28 de octu", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Centro Histórico (16 galerías de arte) (Vallarta Art Walk 2026-2027 junto a Talento y anfitriones oficiales del programa PV · 28-10-2026 al 26-05-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos fotografía documental de exhibición, obra e invitados VIP con colorimetría fiel y entrega inmediata para catálogos y difusión. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, cédulas o señalética museográfica grabada en acrílico óptico (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "teatro_cellovoci_presents_music_of_the_nig", "fecha": "30 Dic 2026", "horario": "Noche", "titulo": "CelloVoci Presents: Music of the Night (Pre-Año Nuevo)", "recinto": "Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Concierto / Ópera-Pop", "invitados_artistas_lineup": ["Branden & James (America's Got Talent)", "Effie Passero (Postmodern Jukebox / American Idol)", "Host: Sutton Lee Seymour", "Director: Mark Hartman + Orquesta local PV"], "influencers_relacionados": ["Comunidad cultural PV, audiencia internacional expat y prensa de espectáculos"], "cobertura_fotografica_detectada": "Abierta — Giras internacionales (Candlelight, Interstellar, World Ballet, CelloVoci) casi nunca viajan con fotógrafo propio para prensa/patrocinadores locales.", "estado_oportunidad_captoora": "Abierta / Alta Prioridad Promotores", "fuente_url": "https://www.teatrovallarta.com/musica/music-of-the-night-29", "fuente_portal": "TeatroVallarta.com / Fever / RedAccess", "resumen": "Fecha verificada en cartelera oficial de Teatro Vallarta y boleteras.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Teatro Vallarta (Uruguay 184, Col. 5 de Diciembre) (CelloVoci Presents: Music of the Night (Pre-Año Nuevo) junto a Branden & James (America's Got Talent), Effie Passero (Postmodern Jukebox / American Idol) · 30 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-ano-nuevo-en-puerto-vallarta", "fecha": "31-12-2026", "horario": "Consultar sede / ficha oficial", "titulo": "Año Nuevo en Puerto Vallarta", "recinto": "Malecón de Puerto Vallarta & Bahía de Banderas", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale", "categoria": "Año Nuevo / Pirotecnia", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/ano-nuevo-en-puerto-vallarta", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Año Nuevo en Puerto Vallarta Año Nuevo en Puerto Vallarta 31-12-2026 Despedir el año frente al Pacífico mexicano tiene un atractivo especial, y Puerto Vallarta convierte la noche del 31 de diciembre en una gran celebración. El Malecón es el punto de reunión por excelencia con mú", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Malecón de Puerto Vallarta & Bahía de Banderas (Año Nuevo en Puerto Vallarta junto a Talento y anfitriones oficiales del programa PV · 31-12-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Centro / Bahía. Trabajamos cobertura nocturna con iluminación editorial para cenas de gala, posadas corporativas y celebraciones (galería lista al día siguiente para invitados y prensa). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, porta-menús o displays acrílicos LED grabados con QR directo a Google Maps o galería privada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "pv-marigalante-posada-nye-bahia-dic2026", "fecha": "16 – 31 Dic 2026", "horario": "Crucero Nocturno Bahía", "titulo": "Cruceros Temáticos Navideños & Fiesta de Año Nuevo en Bahía de Banderas", "recinto": "Barco Pirata Marigalante & Embarcaciones Turísticas (Salida Terminal Marítima PV)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Fiestas en Bahía / Año Nuevo", "invitados_artistas_lineup": ["Elenco pirata acrobático, pirotecnia sobre la bahía y cena gourmet"], "influencers_relacionados": ["Turistas de fin de año, familias VIP y creadores locales de hospitalidad"], "cobertura_fotografica_detectada": "Parcial — Operador vende fotografía turística básica de recuerdo; oportunidad de propuesta editorial de alto calibre para grupos VIP y posadas privadas a bordo.", "estado_oportunidad_captoora": "Parcial / Oportunidad VIP", "fuente_url": "https://pirateshipvallarta.com/", "fuente_portal": "PirateShipVallarta.com", "resumen": "Ventana prioritaria de posadas corporativas, cenas de Nochebuena y festejos de Fin de Año 2026.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Barco Pirata Marigalante & Embarcaciones Turísticas (Salida Terminal Marítima PV) (Cruceros Temáticos Navideños & Fiesta de Año Nuevo en Bahía de Banderas junto a Elenco pirata acrobático, pirotecnia sobre la bahía y cena gourmet · 16 – 31 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos cobertura nocturna con iluminación editorial para cenas de gala, posadas corporativas y celebraciones (galería lista al día siguiente para invitados y prensa). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, porta-menús o displays acrílicos LED grabados con QR directo a Google Maps o galería privada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-muyguud-feria-internacional-de-arte-contemporaneo-2026", "fecha": "19-11-2026 al 22-11-2026", "horario": "Consultar sede / ficha oficial", "titulo": "MUYGUUD Feria Internacional de Arte Contemporáneo 2026", "recinto": "Playa Camarones / Venezuela 55-A, Col. 5 de Diciembre", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Col. 5 de Diciembre / Teatro Vallarta", "categoria": "Feria Internacional de Arte Contemporáneo", "invitados_artistas_lineup": ["+71 artistas internacionales (16 estados MX, 13 países)", "Orquesta Escuela PV", "Rimiyoho", "Taiga Brava", "DJ Memo Pearls", "Jorge Ayala 'Troglodita'"], "influencers_relacionados": ["Coleccionistas de arte, prensa cultural y fotógrafa Alejandra Herrera (promo OAPV)"], "cobertura_fotografica_detectada": "Parcial — Material promocional acreditado a Alejandra Herrera / OAPV, pero 71 artistas y performances individuales buscan cobertura personalizada y reels.", "estado_oportunidad_captoora": "Parcial / Oportunidad VIP & Marcas", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/muyguud-feria-internacional-de-arte-contemporaneo-2026", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " MUYGUUD Feria Internacional de Arte Contemporáneo 2026 MUYGUUD Feria Internacional de Arte Contemporáneo 2026 Inicia : 19-11-2026 Finaliza : 22-11-2026 Del 19 al 22 de noviembre de 2026, Puerto Vallarta se convertirá en el nuevo epicentro del arte contemporáneo con la segunda ed", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Camarones / Venezuela 55-A, Col. 5 de Diciembre (MUYGUUD Feria Internacional de Arte Contemporáneo 2026 junto a +71 artistas internacionales (16 estados MX, 13 países), Orquesta Escuela PV · 19-11-2026 al 22-11-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos fotografía documental de exhibición, obra e invitados VIP con colorimetría fiel y entrega inmediata para catálogos y difusión. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, cédulas o señalética museográfica grabada en acrílico óptico (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_jueves_31_dic_2026_nye", "fecha": "Jueves 31 Dic 2026 (NYE)", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Darco · Baron (FR) B2B Dorian Craft · Liam Fitzgerald", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Darco", "Baron (FR) B2B Dorian Craft", "Liam Fitzgerald"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Darco · Baron (FR) B2B Dorian Craft · Liam Fitzgerald.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Darco · Baron (FR) B2B Dorian Craft · Liam Fitzgerald junto a Darco, Baron (FR) B2B Dorian Craft · Jueves 31 Dic 2026 (NYE)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_martes_29_dic_2026", "fecha": "Martes 29 Dic 2026", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Arodes · Nagib y Jackson · Max Mignot", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Arodes", "Nagib y Jackson", "Max Mignot"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Arodes · Nagib y Jackson · Max Mignot.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Arodes · Nagib y Jackson · Max Mignot junto a Arodes, Nagib y Jackson · Martes 29 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_sabado_05_dic_2026", "fecha": "Sábado 05 Dic 2026", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Secret Echoes · Rameff · Fresco", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Secret Echoes", "Rameff", "Fresco"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Secret Echoes · Rameff · Fresco.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Secret Echoes · Rameff · Fresco junto a Secret Echoes, Rameff · Sábado 05 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_sabado_21_nov_2026", "fecha": "Sábado 21 Nov 2026", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Madota · Isabeu Fort · Liam Fitzgerald", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Madota", "Isabeu Fort", "Liam Fitzgerald"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Madota · Isabeu Fort · Liam Fitzgerald.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Madota · Isabeu Fort · Liam Fitzgerald junto a Madota, Isabeu Fort · Sábado 21 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_sabado_26_dic_2026", "fecha": "Sábado 26 Dic 2026", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Mystery Affair · Liam Fitzgerald · Rameff", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Mystery Affair", "Liam Fitzgerald", "Rameff"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Mystery Affair · Liam Fitzgerald · Rameff.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Mystery Affair · Liam Fitzgerald · Rameff junto a Mystery Affair, Liam Fitzgerald · Sábado 26 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "majahuitas_sabado_28_nov_2026", "fecha": "Sábado 28 Nov 2026", "horario": "Salida vespertina en catamarán PV -> playa", "titulo": "Majahuitas Beach Party · Lineup: Nacho Isa y Madmotor · Max Mignot", "recinto": "Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta)", "zona": "centro_y_bahia", "subzona": "Centro / Bahía · Experiencias en la Bahía (Salida PV)", "categoria": "Música Electrónica / Beach Festival en Bahía", "invitados_artistas_lineup": ["Nacho Isa y Madmotor", "Max Mignot"], "influencers_relacionados": ["DJs internacionales (Baron FR, Dorian Craft, Arodes, Mystery Affair) y creadores de viajes/lifestyle en la bahía"], "cobertura_fotografica_detectada": "Parcial — Operador promueve marca general, pero DJs invitados internacionales (especialmente NYE Baron FR / Dorian Craft / Arodes) compran paquetes propios de foto + press kit en playa.", "estado_oportunidad_captoora": "Parcial / Acercamiento Directo a DJs Invitados", "fuente_url": "https://majahuitas-beach-party-vallarta.com/dj-lineup/", "fuente_portal": "Majahuitas-Beach-Party-Vallarta.com", "resumen": "Lineup confirmado en caleta sur de la bahía: Nacho Isa y Madmotor · Max Mignot.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa Majahuitas (Acceso marítimo desde Bahía de Puerto Vallarta) (Majahuitas Beach Party · Lineup: Nacho Isa y Madmotor · Max Mignot junto a Nacho Isa y Madmotor, Max Mignot · Sábado 28 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Centro / Bahía. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}];
+    function esc(s) { return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    function render() {
+      const q = document.getElementById('qInput').value.trim().toLowerCase();
+      const sub = document.getElementById('subSelect').value;
+      const cat = document.getElementById('catSelect').value;
+      const rows = EVENTS.filter(e => {
+        if (sub !== 'all' && e.subzona !== sub) return false;
+        if (cat !== 'all' && e.categoria !== cat) return false;
+        if (q) {
+          const hay = `${e.titulo} ${e.recinto} ${e.fecha} ${(e.invitados_artistas_lineup||[]).join(' ')} ${(e.influencers_relacionados||[]).join(' ')}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      document.getElementById('countLabel').textContent = `Mostrando ${rows.length} de ${EVENTS.length} eventos verificados`;
+      document.getElementById('cardsGrid').innerHTML = rows.map(e => {
+        const openCls = String(e.estado_oportunidad_captoora||'').includes('Abierta') ? 'tag volt' : 'tag';
+        const guests = (e.invitados_artistas_lineup||[]).join(' · ') || 'Talento anunciado en ficha';
+        const leadTag = e.lead_gmaps_vinculado ? `<div class="meta"><strong>Ficha Maps vinculada:</strong> ${esc(e.lead_gmaps_vinculado.nombre_gmaps)} (${esc(e.lead_gmaps_vinculado.telefono||'Sin tel')})</div>` : '';
+        return `
+          <article class="card">
+            <div>
+              <div class="card-top">
+                <div class="card-title">${esc(e.titulo)}</div>
+                <span class="${openCls}">${esc(e.estado_oportunidad_captoora)}</span>
+              </div>
+              <div class="meta" style="margin-top:6px;"><strong>Fecha:</strong> ${esc(e.fecha)} · ${esc(e.horario)}</div>
+              <div class="meta"><strong>Recinto:</strong> ${esc(e.recinto)}</div>
+              <div class="meta"><strong>Subzona:</strong> ${esc(e.subzona)} · <strong>Categoría:</strong> ${esc(e.categoria)}</div>
+              <div class="meta"><strong>Invitados / Lineup:</strong> ${esc(guests)}</div>
+              ${leadTag}
+              <div class="obs" style="margin-top:8px;"><strong>Cobertura detectada:</strong> ${esc(e.cobertura_fotografica_detectada)}</div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="${esc(e.fuente_url)}" target="_blank">Fuente en vivo &rarr;</a>
+              <button class="btn primary" onclick="openScript('${esc(e.id)}')">Ver Guion Captoora</button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+    function openScript(id) {
+      const ev = EVENTS.find(x => x.id === id);
+      if (!ev) return;
+      document.getElementById('modalTitle').textContent = `${ev.titulo} — Guion Neutral`;
+      document.getElementById('modalText').value = ev.guion_acercamiento_captoora || '';
+      document.getElementById('scriptModal').showModal();
+    }
+    function copyModal() {
+      const t = document.getElementById('modalText');
+      t.select();
+      navigator.clipboard.writeText(t.value);
+    }
+    ['qInput','subSelect','catSelect'].forEach(id => {
+      document.getElementById(id).addEventListener('input', render);
+      document.getElementById(id).addEventListener('change', render);
+    });
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+{
+  "updated_at": "2026-11-18T11:19:23-06:00",
+  "territory": "Puerto Vallarta, Jalisco (Zona Romántica, Zona Hotelera y Centro / Bahía)",
+  "resumen_cobertura_actual": {
+    "hallazgo_clave": "En la prensa local (Out & About PV / GAYPV) se detectaron fotógrafos comunitarios en eventos puntuales (Adan Villa, Alejandra Herrera, Michael Fluck, Angel Villa, Eddy Araiza, Armando Miranda), pero MÁS DEL 75% de eventos de temporada, posadas hoteleras, conciertos íntimos, DJs invitados, restaurantes anfitriones y microinfluencers NO cuentan con cobertura editorial con entrega el mismo día ni piezas físicas de taller.",
+    "fotografos_y_medios_detectados": [
+      {
+        "nombre_medio": "Adan Villa",
+        "enfoque_actual": "Cobertura comunitaria/editorial específica detectada en artículos recientes",
+        "eventos_cubiertos_muestra": [
+          "Photos: Coco Cabaret Gay+ Mixer Draws 260 People",
+          "Photos: Villa Tita Gay+ Mixer Draws 400 People"
+        ],
+        "brecha_que_deja_para_captoora": "Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller)."
+      },
+      {
+        "nombre_medio": "Alejandra Herrera",
+        "enfoque_actual": "Cobertura comunitaria/editorial específica detectada en artículos recientes",
+        "eventos_cubiertos_muestra": [
+          "MUYGUUD Returns to Puerto Vallarta for Second Edition With 71 Art"
+        ],
+        "brecha_que_deja_para_captoora": "Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller)."
+      },
+      {
+        "nombre_medio": "Angel Villa",
+        "enfoque_actual": "Cobertura comunitaria/editorial específica detectada en artículos recientes",
+        "eventos_cubiertos_muestra": [
+          "Photos: Red Carpet at HEAT Latin Music Awards"
+        ],
+        "brecha_que_deja_para_captoora": "Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller)."
+      },
+      {
+        "nombre_medio": "Eddy Araiza Fotografía (@araizafoto)",
+        "enfoque_actual": "Cobertura comunitaria/editorial específica detectada en artículos recientes",
+        "eventos_cubiertos_muestra": [
+          "Boys on Fire Launches Its Own Clothing Line in Puerto Vallarta",
+          "Cristian Rendón",
+          "GAYPV Magazine 44th Edition Summer 2026",
+          "Get ready for the 2027 BOYS ON FIRE Charity Fundraiser Calendar"
+        ],
+        "brecha_que_deja_para_captoora": "Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller)."
+      },
+      {
+        "nombre_medio": "Michael Fluck",
+        "enfoque_actual": "Cobertura comunitaria/editorial específica detectada en artículos recientes",
+        "eventos_cubiertos_muestra": [
+          "Photos: D’Residences 1A Open House"
+        ],
+        "brecha_que_deja_para_captoora": "Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller)."
+      }
+    ]
+  },
+  "influencers_y_creadores_pv": [
+    {
+      "nombre": "Pao Marlene",
+      "handle": "@paomarlene",
+      "segmento": "Senderismo costa sur PV (Conchas Chinas/Las Ánimas), estilo de vida y viajes",
+      "cobertura_actual": "Autoproducción móvil / colaboraciones puntuales de turismo (#VisitaPuertoVallarta)",
+      "oportunidad_captoora": "Intercambio editorial de sesión al atardecer en Zona Romántica / Conchas Chinas para generar catálogo conjunto y cross-tagging con restaurantes/beach clubs.",
+      "guion_dm_captoora": "Hola Pao, sigo tu trabajo recorriendo la costa sur de Puerto Vallarta. Soy Jesús Gutiérrez, fotógrafo editorial (Captoora Studio) y estaré cubriendo activaciones esta temporada en Zona Romántica y Centro. Si armas algún proyecto con hotel o restaurante esta semana, podemos hacer una micro-sesión editorial con entrega el mismo día. ¿Te muestro portafolio?",
+      "fuente": "https://visitapuertovallarta.com.mx/"
+    },
+    {
+      "nombre": "Delia García / Sonia Cruz / Gloria Candiani / Cinthia Aguilar",
+      "handle": "@soydeliagarcia · @soycandiani · @cinthiaaguilar",
+      "segmento": "Lifestyle, gastronomía y talento nacional vinculado a campañas #VisitaPuertoVallarta",
+      "cobertura_actual": "Contenido orgánico y activaciones de marca hotelera",
+      "oportunidad_captoora": "Ofrecer apoyo visual flash en eventos gastronómicos, lanzamientos y hoteles PV con galería instantánea optimizada para Instagram/Reels.",
+      "guion_dm_captoora": "Hola, vimos tu cobertura reciente de Puerto Vallarta. En Captoora Studio hacemos fotografía editorial de gastronomía y lifestyle con entrega el mismo día para lanzamientos y hoteles en Zona Hotelera y Centro. Si vienes a algún evento esta temporada, encantado de armar mancuerna editorial.",
+      "fuente": "https://visitapuertovallarta.com.mx/"
+    },
+    {
+      "nombre": "Alejo Ospina",
+      "handle": "@alejoospina",
+      "segmento": "Creador internacional LGBTQ+, música & marca propia (¿Aprietas?), frecuente en Zona Romántica",
+      "cobertura_actual": "Artículos de GAYPV acreditan material como 'autor desconocido' / autoproducido",
+      "oportunidad_captoora": "Sesiones editoriales nocturnas de alto contraste y look & feel cinematográfico para lanzamientos de marca personal en Zona Romántica.",
+      "guion_dm_captoora": "Hola Alejo, felicidades por el lanzamiento de tu línea y música reciente. Trabajo retrato editorial nocturno y cobertura de eventos para talento internacional en Zona Romántica (entrega el mismo día). Te comparto mi portafolio por si armamos una sesión de alto contraste esta temporada.",
+      "fuente": "https://gaypv.com/people/aprietas-alejo-ospina/"
+    },
+    {
+      "nombre": "Cristian Rendón & Talento Boys on Fire",
+      "handle": "@cristian_rendon_ · Elenco Coco Cabaret",
+      "segmento": "Creadores fitness, modelaje y espectáculo en Zona Romántica",
+      "cobertura_actual": "Eddy Araiza cubrió la sesión principal del calendario 2027, pero cada creador requiere contenido constante de entrenamiento y escenario",
+      "oportunidad_captoora": "Sesiones escultóricas de progreso físico (estilo estudio / Captoora Biogen Beta) y retrato editorial back-stage con entrega inmediata.",
+      "guion_dm_captoora": "Hola Cristian, soy Jesús Gutiérrez de Captoora Studio. Vimos tu temporada en Zona Romántica y el título de Mister Universal México 2026. Hacemos fotografía escultórica de fitness y retrato escénico con iluminación controlada y entrega en 24h. ¿Revisamos 3 referencias visuales para una colaboración en Vallarta?",
+      "fuente": "https://gaypv.com/people/cristian-rendon/"
+    },
+    {
+      "nombre": "Creadores Travel Pop Up & Foodie/Lifestyle PV (Fun Travel / Una Cita con el Mundo / Dos Truchas / Mariel de Viaje)",
+      "handle": "@funtravelven · @unacitaconelmundo · @dostruchas · @marieldeviaje · @viajaliscomx",
+      "segmento": "Creadores de viaje convocados en encuentros turísticos y reseñas hoteleras de Jalisco/PV",
+      "cobertura_actual": "Mayormente video vertical en smartphone durante fam-trips",
+      "oportunidad_captoora": "Complementar sus viajes y fam-trips con retrato editorial profesional de alta gama para portadas y patrocinadores hoteleros.",
+      "guion_dm_captoora": "Hola equipo, cuando tengan agenda o fam-trip en Puerto Vallarta (Zona Romántica, Hotelera o Centro), en Captoora Studio apoyamos con fotografía editorial profesional y entrega el mismo día para elevar el material que entregan a hoteles y marcas. ¿Les comparto portafolio?",
+      "fuente": "https://visitapuertovallarta.com.mx/"
+    },
+    {
+      "nombre": "Jordano Garcia & Christopher Conner",
+      "handle": "@jordano_garcia · Christopher Conner (GAYPV)",
+      "segmento": "Creadores lifestyle / autores residentes y visitantes frecuentes Zona Romántica & Centro",
+      "cobertura_actual": "Publicaciones editoriales y sociales sin fotógrafo permanente asignado para sus lanzamientos locales",
+      "oportunidad_captoora": "Cobertura de lanzamientos de libros, mixers y retratos de marca personal en Centro y Zona Romántica.",
+      "guion_dm_captoora": "Hola, leímos tu entrevista reciente en Puerto Vallarta. Soy Jesús Gutiérrez, fotógrafo editorial (Captoora Studio). Cubrimos lanzamientos y retratos de marca personal en Centro y Zona Romántica con entrega en 24–48h. Si organizas algún encuentro esta temporada, cuenta con nosotros.",
+      "fuente": "https://gaypv.com/people/christopher-conner-puerto-vallarta-gay-scene/"
+    }
+  ],
+  "invitados_especiales_y_artistas": [
+    {
+      "nombre": "Baron (FR) & Dorian Craft & Arodes & Darco",
+      "evento": "Majahuitas Beach Party (Dic 29 y NYE Dic 31)",
+      "zona": "centro_y_bahia",
+      "cobertura_propia": "Sin fotógrafo propio listado en lineup público"
+    },
+    {
+      "nombre": "Countess Luann",
+      "evento": "NYE at The Tryst Puerto Vallarta (31 Dic)",
+      "zona": "zona_romantica",
+      "cobertura_propia": "Oportunidad directa para hotel anfitrión The Tryst y galería VIP de medianoche"
+    },
+    {
+      "nombre": "KEiiNO (Alexandra Rotan, Tom Hugo, Fred Buljo)",
+      "evento": "Coco Cabaret (6 fechas Ene 2027)",
+      "zona": "zona_romantica",
+      "cobertura_propia": "Productora local; alta oportunidad de paquete de 6 shows + meet & greet"
+    },
+    {
+      "nombre": "CelloVoci (Branden & James, Effie Passero) + Sutton Lee Seymour + Mark Hartman",
+      "evento": "Music of the Night · Teatro Vallarta (30 Dic)",
+      "zona": "centro_y_bahia",
+      "cobertura_propia": "Gira internacional en Teatro Vallarta; sin fotógrafo editorial propio publicado"
+    },
+    {
+      "nombre": "Chef Esteban Lluis (Michelin ★) · Chef Xavier Pérez Stone · Chef Víctor Howard · Chef Freddy Monteros",
+      "evento": "31º Festival Gourmet Internacional (18–22 Nov)",
+      "zona": "zona_hotelera",
+      "cobertura_propia": "Prensa general del festival; alta oportunidad directa por restaurante anfitrión"
+    },
+    {
+      "nombre": "Los Claxons",
+      "evento": "Cantando + Contando · Cuarto de Música (26 Nov)",
+      "zona": "zona_hotelera",
+      "cobertura_propia": "Venue íntimo sin crédito de cobertura oficial en cartelera turística"
+    },
+    {
+      "nombre": "Alexis Mateo & Xunami Muse / Tynomi Banks / Sherry Vine / Hedda Lettuce / Jackie Cox & Jan Sport",
+      "evento": "Temporada Cabaret Invierno (Act2PV / The Palm / Coco Cabaret)",
+      "zona": "zona_romantica",
+      "cobertura_propia": "Talento visitante de gira que frecuentemente adquiere paquetes por función para redes"
+    },
+    {
+      "nombre": "+71 Artistas MUYGUUD (Rimiyoho, Taiga Brava, DJ Memo Pearls, Jorge Ayala 'Troglodita', etc.)",
+      "evento": "MUYGUUD Feria Arte Contemporáneo (19–22 Nov · Col. 5 de Diciembre)",
+      "zona": "centro_y_bahia",
+      "cobertura_propia": "Promo inicial de Alejandra Herrera; 71 artistas y performances en vivo sin cobertura 1:1"
+    }
+  ],
+  "chefs_invitados_festival_gourmet_pv": [
+    {
+      "nombre_invitado": "Xavier Pérez Stone",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Amixtli",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas",
+      "direccion": "Carretera a Barra de Navidad km 9.5, Zona Hotelera Sur, 48390 Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/amixtli/"
+    },
+    {
+      "nombre_invitado": "Christian Matty",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Bocados Steak House",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera",
+      "direccion": "Carretera a Barra de Navidad Km. 7.5, 48390 Puerto Vallarta, Jalisco, México.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/bocados-steak-house/"
+    },
+    {
+      "nombre_invitado": "ESTEBAN LLUIS",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Café des Artistes",
+      "zona": "centro_y_bahia",
+      "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale",
+      "direccion": "Guadalupe Sánchez 740, Centro, Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/cafe-des-artistes/"
+    },
+    {
+      "nombre_invitado": "Luis Quiroz",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Dao",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera",
+      "direccion": "Carretera a Barra de Navidad Km. 7.5 Puerto Vallarta, JAL, 48390, México.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/dao/"
+    },
+    {
+      "nombre_invitado": "Ángel Beltrán",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "El Dorado",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "direccion": "El Dorado Restaurant, Púlpito 102, Zona Romántica, Emiliano Zapata, 48380 Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/el-dorado/"
+    },
+    {
+      "nombre_invitado": "Freddy Monteros",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Elena 1927",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera",
+      "direccion": "",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/elena-1927/"
+    },
+    {
+      "nombre_invitado": "Jaime Macias",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Hiroshi",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas",
+      "direccion": "Garza Blanca Preserve, CARRETERA A BARRA DE NAVIDAD KM 7.5, 48272 Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/hiroshi/"
+    },
+    {
+      "nombre_invitado": "Cesar Castañeda",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Karuma",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera",
+      "direccion": "Carretera a Barra de Navidad Km. 7.5 Puerto Vallarta, JAL, 48390, México",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/karuma/"
+    },
+    {
+      "nombre_invitado": "Víctor Howard",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "La Ribera",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico",
+      "direccion": "Av Paseo de la Marina Nte 585, Marina Vallarta, 48354 Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/laribera/"
+    },
+    {
+      "nombre_invitado": "Chris Marín",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Le Kliff",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas",
+      "direccion": "Carretera a Barra de Navidad Km. 17.5. C.P. 48394 – Pto. Vallarta. Centro, 48300. Puerto Vallarta, Jal.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/lekliff/"
+    },
+    {
+      "nombre_invitado": "Yosuke Nishimura",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Misika",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera",
+      "direccion": "",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/misika/"
+    },
+    {
+      "nombre_invitado": "Carlos Augusto Trejo Espinosa",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "River Cafe",
+      "zona": "centro_y_bahia",
+      "subzona": "Centro / Bahía · Malecón, Centro Histórico & Isla Río Cuale",
+      "direccion": "Isla Rio Cuale #4, Centro Puerto Vallarta",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/rivercafe/"
+    },
+    {
+      "nombre_invitado": "Nahúm Velasco",
+      "rol": "Chef Invitado (31º Festival Gourmet Internacional · 12–22 Nov 2026)",
+      "sede_pv": "Táu",
+      "zona": "zona_hotelera",
+      "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico",
+      "direccion": "Avenida Paseo de la Marina #655, Marina Vallarta, Puerto Vallarta, Jalisco",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/tau/"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "architecture": "10 Single-Job Specialized Agents (Chief of Staff + 6 Ops/Sales + Marketing Cell: Marky -> Lupe + Conan) with Human Trigger",
+  "inspired_by": "https://www.youtube.com/watch?v=BSGNizOge_c",
+  "updated_at": "2026-11-18T10:29:45-06:00",
+  "agents": [
+    {
+      "id": "chief_of_staff",
+      "number": 1,
+      "name": "Director de Orquesta (Chief of Staff)",
+      "role_title": "Estratega & Coordinador General",
+      "single_job": "Priorizar la meta del primer 'Sí', asignar misiones entre los 9 bots especialistas (incluyendo Marky, Lupe y Conan sin Grokbot), detectar bloqueos y consolidar tu Bandeja de Último Trigger.",
+      "schedule_label": "Bajo demanda + Resumen Diario 08:30",
+      "status": "ready",
+      "last_run": "2026-11-15T06:02:40-06:00",
+      "tools": [
+        "subagents(2..10)",
+        "projects_asana.json",
+        "approval_queue.json",
+        "sprint_countdown"
+      ],
+      "safety_boundary": "Nunca aprueba acciones externas en tu nombre; solo organiza prioridades y delega."
+    },
+    {
+      "id": "scouting_radar",
+      "number": 2,
+      "name": "Scouting & Radar NL",
+      "role_title": "Prospección Apify & Calendario Temporada",
+      "single_job": "Extraer y calificar clubes de pádel, academias de danza y boxes en San Pedro/MTY (Torneos del Pavo, Posadas y Galas Nov-Dic) sin saturar de datos irrelevantes.",
+      "schedule_label": "Lunes y Jueves 09:00 + Bajo demanda",
+      "status": "ready",
+      "last_run": "2026-11-15T05:53:57-06:00",
+      "tools": [
+        "apify_scraped_leads.json",
+        "run_apify_production.py",
+        "search_web"
+      ],
+      "safety_boundary": "Solo lectura y calificación de prospectos; no inicia contacto."
+    },
+    {
+      "id": "embudo_marketing",
+      "number": 3,
+      "name": "Marketing & Embudo Invisible",
+      "role_title": "Arquitectura Pull, Ofertas Autofinanciables & Dossiers",
+      "single_job": "Convertir objeciones de gasto en inversiones de estatus riesgo cero (patrocinadores en pádel / preventa White-Glove en danza) y estructurar campañas en Pixieset.",
+      "schedule_label": "Martes 10:00 + Bajo demanda",
+      "status": "ready",
+      "last_run": "2026-11-15T05:53:57-06:00",
+      "tools": [
+        "ARQUITECTURA_EMBUDO_INVISIBLE_CAPTOORA.md",
+        "enqueue_for_human_trigger"
+      ],
+      "safety_boundary": "Prohibido mencionar IA o 'presumir' en textos hacia clientes; protege distinción digital vs 3-5 días de taller."
+    },
+    {
+      "id": "social_content",
+      "number": 4,
+      "name": "Redes Sociales & Marca (@captoora)",
+      "role_title": "Guiones Reels 9:16, Stories & Carruseles",
+      "single_job": "Redactar copys editoriales y guiones cortos mostrando la entrega el mismo día y los reconocimientos en acrílico óptico iluminados con LED cálida.",
+      "schedule_label": "Miércoles y Sábado 11:00",
+      "status": "ready",
+      "last_run": "2026-11-15T05:53:57-06:00",
+      "tools": [
+        "assets/portfolio/manifest.json",
+        "enqueue_for_human_trigger"
+      ],
+      "safety_boundary": "Solo encola propuestas de publicación para tu revisión; no publica directo."
+    },
+    {
+      "id": "ventas_outreach",
+      "number": 5,
+      "name": "Ventas B2B & Cierre 3 Días",
+      "role_title": "Borradores WhatsApp Directo, Pixieset Email & Seguimiento 72h",
+      "single_job": "Preparar mensajes diagnósticos hiper-personalizados (Torneo del Pavo $12.5k, Gala Navideña $14.5k, Sponsor Proof $18.5k) y seguimientos de cierre.",
+      "schedule_label": "Sprint Diario 09:30 & 16:00",
+      "status": "ready",
+      "last_run": "2026-11-15T05:53:57-06:00",
+      "tools": [
+        "apify_scraped_leads.json",
+        "whatsapp_quick_replies.md",
+        "enqueue_for_human_trigger"
+      ],
+      "safety_boundary": "Bloqueo duro SDK: jamás envía mensajes solo; todo borrador pasa por Tu Último Trigger."
+    },
+    {
+      "id": "contabilidad_finanzas",
+      "number": 6,
+      "name": "Contabilidad, Cotizaciones & Margen",
+      "role_title": "Control de Caja, Costos Maquila, Suscripciones & SAT/CFDI",
+      "single_job": "Auditar márgenes (>=70%), validar esquemas 50% anticipo / 50% entrega, controlar suscripciones (Pixieset, Apify, Gemini API) y preparar checklist CFDI.",
+      "schedule_label": "Viernes 18:00 + Por cotización",
+      "status": "ready",
+      "last_run": "2026-11-15T06:14:08-06:00",
+      "tools": [
+        "cotizaciones_y_tarifario.md",
+        "accounting_ledger.json",
+        "calculate_package_financials"
+      ],
+      "safety_boundary": "No realiza pagos, cargos ni timbrados automáticos; genera dictamen financiero para aprobación."
+    },
+    {
+      "id": "ops_talleres_legal",
+      "number": 7,
+      "name": "Operaciones, Talleres LED & Legal",
+      "role_title": "Logística Halftime Blitz, Proveedores & Revisión Contractual",
+      "single_job": "Coordinar flujo en cancha (15 min Halftime Blitz), apartar tiempos de taller en El Marco San Pedro / Foco Lab (3-5 días hábiles) y auditar focos rojos en contratos.",
+      "schedule_label": "Pre-evento T-72h / Post-cierre",
+      "status": "ready",
+      "last_run": "2026-11-15T05:53:57-06:00",
+      "tools": [
+        "revision_contratos_guia.md",
+        "manual_tecnico_courtside.md",
+        "enqueue_for_human_trigger"
+      ],
+      "safety_boundary": "Garantiza cero promesas falsas de acrílico en 15 min y protege derechos de autoría moral."
+    },
+    {
+      "id": "marky_marketing",
+      "number": 8,
+      "name": "Marky (Director de Marketing)",
+      "role_title": "Director de Marketing, 2x Google Pro & Plan de Suscripciones (Ex-Grokbot)",
+      "single_job": "Dirigir a Lupe y Conan sin cuotas Grokbot, orquestar la sincronía Dual Google AI Pro (Poncho $395 + Yari $99), priorizar el rescate OpusClip Pro y generar el Brief de Bolsillo Meta Muse móvil.",
+      "schedule_label": "Motor Local Cero Cuotas + Diario 08:45",
+      "status": "ready",
+      "last_run": "2026-11-18T10:24:44-06:00",
+      "tools": [
+        "marketing_hub.py",
+        "generate_subscription_content_plan",
+        "assign_conan_creative_brief",
+        "muse_mobile_sync"
+      ],
+      "safety_boundary": "Opera 100% en localhost sin Grokbot; nunca promete IA ni 'presumir' hacia clientes."
+    },
+    {
+      "id": "lupe_social",
+      "number": 9,
+      "name": "Lupe (Redes, Meta Suite & DMs)",
+      "role_title": "Social Publisher Meta Business Suite, TikTok, LinkedIn & Community (Bajo Marky)",
+      "single_job": "Programar y organizar publicaciones en Facebook, Instagram, Meta Business Suite, TikTok y LinkedIn, redactar captions sin IA y responder mensajes/DMs con plantillas aprobadas.",
+      "schedule_label": "Parrilla Semanal + Inbox Diario (Bajo Marky)",
+      "status": "waiting_trigger",
+      "last_run": "2026-11-18T10:29:45-06:00",
+      "tools": [
+        "marketing_studio.json",
+        "prepare_lupe_social_post",
+        "Meta Business Suite Planner"
+      ],
+      "safety_boundary": "Jamás autopublica ni contesta DMs sin pasar por Cola de Último Trigger o tu copiado directo."
+    },
+    {
+      "id": "conan_content",
+      "number": 10,
+      "name": "Conan (Creación de Contenido)",
+      "role_title": "Productor Creativo & Explotador de Suscripciones (Bajo Marky -> Lupe)",
+      "single_job": "Crear Reels, clips virales 9:16, carruseles y Antes/Después para Lupe usando OpusClip Pro (urgente antes de vencer), Captions, Canva, Aftershoot, Evoto, CapCut y motor local.",
+      "schedule_label": "Producción Continua (Entrega directa a Lupe)",
+      "status": "ready",
+      "last_run": "2026-11-18T10:23:42-06:00",
+      "tools": [
+        "OpusClip Pro",
+        "Captions + Canva + CapCut",
+        "Aftershoot + Evoto",
+        "assign_conan_creative_brief"
+      ],
+      "safety_boundary": "Solo genera briefs, guiones y piezas en assets/; no publica directamente en redes."
+    }
+  ]
+}

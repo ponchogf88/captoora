@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captoora Studio · Influencers, Invitados &amp; Cobertura PV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07060b;
+      --card: #101018;
+      --surface: #171724;
+      --gold: #d4af37;
+      --champagne: #e8d5a8;
+      --volt: #c6ff00;
+      --danger: #ff6b6b;
+      --text: #f5f4f8;
+      --muted: #9c9aa8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    body {
+      background: radial-gradient(circle at 85% 0%, rgba(198,255,0,0.06), transparent 36%),
+                  radial-gradient(circle at 10% 10%, rgba(212,175,55,0.08), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding: 28px 20px 64px;
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      margin-bottom: 18px;
+    }
+    .brand-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--volt);
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+      color: #fff;
+      margin-top: 4px;
+    }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .nav-pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(255,255,255,0.03);
+      color: var(--champagne);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nav-pill.active, .nav-pill:hover {
+      border-color: var(--volt);
+      color: #07060b;
+      background: var(--volt);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .kpi-val { font-size: 1.65rem; font-weight: 800; color: #fff; font-family: 'JetBrains Mono', monospace; }
+    .kpi-val.volt { color: var(--volt); }
+    .kpi-val.gold { color: var(--gold); }
+    .kpi-label { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .callout {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      color: var(--champagne);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 900px) { .controls { grid-template-columns: 1fr; } }
+    input, select {
+      width: 100%;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      font-family: inherit;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-title { font-size: 1.02rem; font-weight: 700; color: #fff; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: 1px solid rgba(212,175,55,0.45);
+      background: rgba(212,175,55,0.12);
+      color: var(--champagne);
+    }
+    .tag.volt {
+      border-color: rgba(198,255,0,0.55);
+      background: rgba(198,255,0,0.1);
+      color: var(--volt);
+    }
+    .meta { font-size: 0.81rem; color: var(--muted); }
+    .meta strong { color: #e2e0ec; }
+    .obs {
+      font-size: 0.8rem;
+      color: #ebe6d7;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid var(--gold);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+    .actions {
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 7px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn.primary { background: var(--volt); color: #07060b; border-color: var(--volt); }
+    .btn.gold { border-color: rgba(212,175,55,0.5); color: var(--champagne); }
+    .shot-thumb {
+      width: 100%;
+      height: 175px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: left top;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #090910;
+    }
+    dialog {
+      margin: auto;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 16px;
+      max-width: 820px;
+      width: 92vw;
+      padding: 20px;
+    }
+    dialog::backdrop { background: rgba(0,0,0,0.82); }
+    textarea {
+      width: 100%;
+      min-height: 200px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      margin: 10px 0;
+    }
+    h2.section-h {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--champagne);
+      margin: 26px 0 12px;
+    }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div>
+        <div class="brand-eyebrow">CAPTOORA STUDIO · INTELIGENCIA DE CREADORES, ARTISTAS INVITADOS &amp; PRENSA PV</div>
+        <h1>Influencers, Invitados VIP &amp; Brechas de Cobertura</h1>
+        <p class="subtitle">Mapeo de quién está viniendo a Puerto Vallarta, quién ya tiene fotógrafo y dónde hay puerta abierta para Captoora.</p>
+      </div>
+    </header>
+    <nav class="nav-pills"><a class="nav-pill" href="puerto_vallarta_eventos_zona_romantica.html">Eventos · Zona Romántica</a><a class="nav-pill" href="puerto_vallarta_eventos_zona_hotelera.html">Eventos · Zona Hotelera</a><a class="nav-pill" href="puerto_vallarta_eventos_centro_bahia.html">Eventos · Centro / Bahía</a><a class="nav-pill active" href="puerto_vallarta_influencers_y_cobertura.html">Influencers, Invitados &amp; Cobertura</a><a class="nav-pill" href="puerto_vallarta_proveedores_taller.html">Proveedores Taller PV</a></nav>
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-val">6</div><div class="kpi-label">Grupos de Creadores / Influencers</div></div>
+      <div class="kpi"><div class="kpi-val volt">8</div><div class="kpi-label">Artistas / DJs / Celebridades VIP</div></div>
+      <div class="kpi"><div class="kpi-val gold">13</div><div class="kpi-label">Chefs Invitados (Solo PV)</div></div>
+      <div class="kpi"><div class="kpi-val">5</div><div class="kpi-label">Fotógrafos Prensa Detectados</div></div>
+    </section>
+    <div class="callout">En la prensa local (Out &amp; About PV / GAYPV) se detectaron fotógrafos comunitarios en eventos puntuales (Adan Villa, Alejandra Herrera, Michael Fluck, Angel Villa, Eddy Araiza, Armando Miranda), pero MÁS DEL 75% de eventos de temporada, posadas hoteleras, conciertos íntimos, DJs invitados, restaurantes anfitriones y microinfluencers NO cuentan con cobertura editorial con entrega el mismo día ni piezas físicas de taller.</div>
+    <h2 class="section-h">1. Influencers &amp; Creadores Locales / Temporada</h2>
+    <div class="grid"><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Pao Marlene</div>
+                  <span class="tag volt">@paomarlene</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Senderismo costa sur PV (Conchas Chinas/Las Ánimas), estilo de vida y viajes</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Autoproducción móvil / colaboraciones puntuales de turismo (#VisitaPuertoVallarta)</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Intercambio editorial de sesión al atardecer en Zona Romántica / Conchas Chinas para generar catálogo conjunto y cross-tagging con restaurantes/beach clubs.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://visitapuertovallarta.com.mx/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(0)">Copiar Guion DM</button>
+              </div>
+            </article><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Delia García / Sonia Cruz / Gloria Candiani / Cinthia Aguilar</div>
+                  <span class="tag volt">@soydeliagarcia · @soycandiani · @cinthiaaguilar</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Lifestyle, gastronomía y talento nacional vinculado a campañas #VisitaPuertoVallarta</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Contenido orgánico y activaciones de marca hotelera</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Ofrecer apoyo visual flash en eventos gastronómicos, lanzamientos y hoteles PV con galería instantánea optimizada para Instagram/Reels.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://visitapuertovallarta.com.mx/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(1)">Copiar Guion DM</button>
+              </div>
+            </article><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Alejo Ospina</div>
+                  <span class="tag volt">@alejoospina</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Creador internacional LGBTQ+, música &amp; marca propia (¿Aprietas?), frecuente en Zona Romántica</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Artículos de GAYPV acreditan material como &#x27;autor desconocido&#x27; / autoproducido</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Sesiones editoriales nocturnas de alto contraste y look &amp; feel cinematográfico para lanzamientos de marca personal en Zona Romántica.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://gaypv.com/people/aprietas-alejo-ospina/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(2)">Copiar Guion DM</button>
+              </div>
+            </article><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Cristian Rendón &amp; Talento Boys on Fire</div>
+                  <span class="tag volt">@cristian_rendon_ · Elenco Coco Cabaret</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Creadores fitness, modelaje y espectáculo en Zona Romántica</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Eddy Araiza cubrió la sesión principal del calendario 2027, pero cada creador requiere contenido constante de entrenamiento y escenario</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Sesiones escultóricas de progreso físico (estilo estudio / Captoora Biogen Beta) y retrato editorial back-stage con entrega inmediata.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://gaypv.com/people/cristian-rendon/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(3)">Copiar Guion DM</button>
+              </div>
+            </article><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Creadores Travel Pop Up &amp; Foodie/Lifestyle PV (Fun Travel / Una Cita con el Mundo / Dos Truchas / Mariel de Viaje)</div>
+                  <span class="tag volt">@funtravelven · @unacitaconelmundo · @dostruchas · @marieldeviaje · @viajaliscomx</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Creadores de viaje convocados en encuentros turísticos y reseñas hoteleras de Jalisco/PV</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Mayormente video vertical en smartphone durante fam-trips</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Complementar sus viajes y fam-trips con retrato editorial profesional de alta gama para portadas y patrocinadores hoteleros.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://visitapuertovallarta.com.mx/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(4)">Copiar Guion DM</button>
+              </div>
+            </article><article class="card">
+              <div>
+                <div class="card-top">
+                  <div class="card-title">Jordano Garcia &amp; Christopher Conner</div>
+                  <span class="tag volt">@jordano_garcia · Christopher Conner (GAYPV)</span>
+                </div>
+                <div class="meta" style="margin-top:6px;"><strong>Segmento:</strong> Creadores lifestyle / autores residentes y visitantes frecuentes Zona Romántica &amp; Centro</div>
+                <div class="meta"><strong>Cobertura actual:</strong> Publicaciones editoriales y sociales sin fotógrafo permanente asignado para sus lanzamientos locales</div>
+                <div class="obs" style="margin-top:8px;"><strong>Ángulo Captoora:</strong> Cobertura de lanzamientos de libros, mixers y retratos de marca personal en Centro y Zona Romántica.</div>
+              </div>
+              <div class="actions">
+                <a class="btn" href="https://gaypv.com/people/christopher-conner-puerto-vallarta-gay-scene/" target="_blank">Referencia &rarr;</a>
+                <button class="btn primary" onclick="copyTextIdx(5)">Copiar Guion DM</button>
+              </div>
+            </article></div>
+    <h2 class="section-h">2. Talento Internacional, DJs &amp; Invitados Especiales</h2>
+    <div class="grid"><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Baron (FR) &amp; Dorian Craft &amp; Arodes &amp; Darco</div>
+              <span class="tag">centro_y_bahia</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> Majahuitas Beach Party (Dic 29 y NYE Dic 31)</div>
+            <div class="obs" style="margin-top:8px;">Sin fotógrafo propio listado en lineup público</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Countess Luann</div>
+              <span class="tag">zona_romantica</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> NYE at The Tryst Puerto Vallarta (31 Dic)</div>
+            <div class="obs" style="margin-top:8px;">Oportunidad directa para hotel anfitrión The Tryst y galería VIP de medianoche</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">KEiiNO (Alexandra Rotan, Tom Hugo, Fred Buljo)</div>
+              <span class="tag">zona_romantica</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> Coco Cabaret (6 fechas Ene 2027)</div>
+            <div class="obs" style="margin-top:8px;">Productora local; alta oportunidad de paquete de 6 shows + meet &amp; greet</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">CelloVoci (Branden &amp; James, Effie Passero) + Sutton Lee Seymour + Mark Hartman</div>
+              <span class="tag">centro_y_bahia</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> Music of the Night · Teatro Vallarta (30 Dic)</div>
+            <div class="obs" style="margin-top:8px;">Gira internacional en Teatro Vallarta; sin fotógrafo editorial propio publicado</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Chef Esteban Lluis (Michelin ★) · Chef Xavier Pérez Stone · Chef Víctor Howard · Chef Freddy Monteros</div>
+              <span class="tag">zona_hotelera</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> 31º Festival Gourmet Internacional (18–22 Nov)</div>
+            <div class="obs" style="margin-top:8px;">Prensa general del festival; alta oportunidad directa por restaurante anfitrión</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Los Claxons</div>
+              <span class="tag">zona_hotelera</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> Cantando + Contando · Cuarto de Música (26 Nov)</div>
+            <div class="obs" style="margin-top:8px;">Venue íntimo sin crédito de cobertura oficial en cartelera turística</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Alexis Mateo &amp; Xunami Muse / Tynomi Banks / Sherry Vine / Hedda Lettuce / Jackie Cox &amp; Jan Sport</div>
+              <span class="tag">zona_romantica</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> Temporada Cabaret Invierno (Act2PV / The Palm / Coco Cabaret)</div>
+            <div class="obs" style="margin-top:8px;">Talento visitante de gira que frecuentemente adquiere paquetes por función para redes</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">+71 Artistas MUYGUUD (Rimiyoho, Taiga Brava, DJ Memo Pearls, Jorge Ayala &#x27;Troglodita&#x27;, etc.)</div>
+              <span class="tag">centro_y_bahia</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Evento:</strong> MUYGUUD Feria Arte Contemporáneo (19–22 Nov · Col. 5 de Diciembre)</div>
+            <div class="obs" style="margin-top:8px;">Promo inicial de Alejandra Herrera; 71 artistas y performances en vivo sin cobertura 1:1</div>
+          </div>
+        </article></div>
+    <h2 class="section-h">3. Chefs Invitados en Puerto Vallarta (31º Festival Gourmet)</h2>
+    <div class="grid"><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Xavier Pérez Stone</div>
+              <span class="tag gold">Amixtli</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas</div>
+            <div class="meta"><strong>Dirección:</strong> Carretera a Barra de Navidad km 9.5, Zona Hotelera Sur, 48390 Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/amixtli/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Christian Matty</div>
+              <span class="tag gold">Bocados Steak House</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</div>
+            <div class="meta"><strong>Dirección:</strong> Carretera a Barra de Navidad Km. 7.5, 48390 Puerto Vallarta, Jalisco, México.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/bocados-steak-house/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">ESTEBAN LLUIS</div>
+              <span class="tag gold">Café des Artistes</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Centro / Bahía · Malecón, Centro Histórico &amp; Isla Río Cuale</div>
+            <div class="meta"><strong>Dirección:</strong> Guadalupe Sánchez 740, Centro, Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/cafe-des-artistes/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Luis Quiroz</div>
+              <span class="tag gold">Dao</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</div>
+            <div class="meta"><strong>Dirección:</strong> Carretera a Barra de Navidad Km. 7.5 Puerto Vallarta, JAL, 48390, México.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/dao/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Ángel Beltrán</div>
+              <span class="tag gold">El Dorado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Romántica · Olas Altas / Gastronomía / Mixers</div>
+            <div class="meta"><strong>Dirección:</strong> El Dorado Restaurant, Púlpito 102, Zona Romántica, Emiliano Zapata, 48380 Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/el-dorado/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Freddy Monteros</div>
+              <span class="tag gold">Elena 1927</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</div>
+            <div class="meta"><strong>Dirección:</strong> </div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/elena-1927/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Jaime Macias</div>
+              <span class="tag gold">Hiroshi</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas</div>
+            <div class="meta"><strong>Dirección:</strong> Garza Blanca Preserve, CARRETERA A BARRA DE NAVIDAD KM 7.5, 48272 Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/hiroshi/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Cesar Castañeda</div>
+              <span class="tag gold">Karuma</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</div>
+            <div class="meta"><strong>Dirección:</strong> Carretera a Barra de Navidad Km. 7.5 Puerto Vallarta, JAL, 48390, México</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/karuma/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Víctor Howard</div>
+              <span class="tag gold">La Ribera</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera · Marina Vallarta &amp; Puerto Mágico</div>
+            <div class="meta"><strong>Dirección:</strong> Av Paseo de la Marina Nte 585, Marina Vallarta, 48354 Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/laribera/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Chris Marín</div>
+              <span class="tag gold">Le Kliff</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas</div>
+            <div class="meta"><strong>Dirección:</strong> Carretera a Barra de Navidad Km. 17.5. C.P. 48394 – Pto. Vallarta. Centro, 48300. Puerto Vallarta, Jal.</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/lekliff/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Yosuke Nishimura</div>
+              <span class="tag gold">Misika</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</div>
+            <div class="meta"><strong>Dirección:</strong> </div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/misika/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Carlos Augusto Trejo Espinosa</div>
+              <span class="tag gold">River Cafe</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Centro / Bahía · Malecón, Centro Histórico &amp; Isla Río Cuale</div>
+            <div class="meta"><strong>Dirección:</strong> Isla Rio Cuale #4, Centro Puerto Vallarta</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/rivercafe/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Nahúm Velasco</div>
+              <span class="tag gold">Táu</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Subzona:</strong> Zona Hotelera · Marina Vallarta &amp; Puerto Mágico</div>
+            <div class="meta"><strong>Dirección:</strong> Avenida Paseo de la Marina #655, Marina Vallarta, Puerto Vallarta, Jalisco</div>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://festivalgourmet.com.mx/restaurantes/tau/" target="_blank">Ficha FGI &rarr;</a>
+          </div>
+        </article></div>
+    <h2 class="section-h">4. Fotógrafos &amp; Medios Detectados (Mapa de Brechas)</h2>
+    <div class="grid"><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Adan Villa</div>
+              <span class="tag">Crédito Detectado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Cobertura muestra:</strong> Photos: Coco Cabaret Gay+ Mixer Draws 260 People; Photos: Villa Tita Gay+ Mixer Draws 400 People</div>
+            <div class="obs" style="margin-top:8px;"><strong>Brecha libre:</strong> Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller).</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Alejandra Herrera</div>
+              <span class="tag">Crédito Detectado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Cobertura muestra:</strong> MUYGUUD Returns to Puerto Vallarta for Second Edition With 71 Art</div>
+            <div class="obs" style="margin-top:8px;"><strong>Brecha libre:</strong> Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller).</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Angel Villa</div>
+              <span class="tag">Crédito Detectado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Cobertura muestra:</strong> Photos: Red Carpet at HEAT Latin Music Awards</div>
+            <div class="obs" style="margin-top:8px;"><strong>Brecha libre:</strong> Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller).</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Eddy Araiza Fotografía (@araizafoto)</div>
+              <span class="tag">Crédito Detectado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Cobertura muestra:</strong> Boys on Fire Launches Its Own Clothing Line in Puerto Vallarta; Cristian Rendón; GAYPV Magazine 44th Edition Summer 2026; Get ready for the 2027 BOYS ON FIRE Charity Fundraiser Calendar</div>
+            <div class="obs" style="margin-top:8px;"><strong>Brecha libre:</strong> Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller).</div>
+          </div>
+        </article><article class="card">
+          <div>
+            <div class="card-top">
+              <div class="card-title">Michael Fluck</div>
+              <span class="tag">Crédito Detectado</span>
+            </div>
+            <div class="meta" style="margin-top:6px;"><strong>Cobertura muestra:</strong> Photos: D’Residences 1A Open House</div>
+            <div class="obs" style="margin-top:8px;"><strong>Brecha libre:</strong> Cubre principalmente prensa de revista o sesiones calendar, dejando sin cobertura inmediata de entrega mismo día (1/2000s, retratos de marcas/patrocinadores, bodegas de vino, posadas de hoteles y piezas LED QR en taller).</div>
+          </div>
+        </article></div>
+  </div>
+  <script>
+    const DMS = ["Hola Pao, sigo tu trabajo recorriendo la costa sur de Puerto Vallarta. Soy Jesús Gutiérrez, fotógrafo editorial (Captoora Studio) y estaré cubriendo activaciones esta temporada en Zona Romántica y Centro. Si armas algún proyecto con hotel o restaurante esta semana, podemos hacer una micro-sesión editorial con entrega el mismo día. ¿Te muestro portafolio?", "Hola, vimos tu cobertura reciente de Puerto Vallarta. En Captoora Studio hacemos fotografía editorial de gastronomía y lifestyle con entrega el mismo día para lanzamientos y hoteles en Zona Hotelera y Centro. Si vienes a algún evento esta temporada, encantado de armar mancuerna editorial.", "Hola Alejo, felicidades por el lanzamiento de tu línea y música reciente. Trabajo retrato editorial nocturno y cobertura de eventos para talento internacional en Zona Romántica (entrega el mismo día). Te comparto mi portafolio por si armamos una sesión de alto contraste esta temporada.", "Hola Cristian, soy Jesús Gutiérrez de Captoora Studio. Vimos tu temporada en Zona Romántica y el título de Mister Universal México 2026. Hacemos fotografía escultórica de fitness y retrato escénico con iluminación controlada y entrega en 24h. ¿Revisamos 3 referencias visuales para una colaboración en Vallarta?", "Hola equipo, cuando tengan agenda o fam-trip en Puerto Vallarta (Zona Romántica, Hotelera o Centro), en Captoora Studio apoyamos con fotografía editorial profesional y entrega el mismo día para elevar el material que entregan a hoteles y marcas. ¿Les comparto portafolio?", "Hola, leímos tu entrevista reciente en Puerto Vallarta. Soy Jesús Gutiérrez, fotógrafo editorial (Captoora Studio). Cubrimos lanzamientos y retratos de marca personal en Centro y Zona Romántica con entrega en 24–48h. Si organizas algún encuentro esta temporada, cuenta con nosotros."];
+    function copyTextIdx(i) {
+      navigator.clipboard.writeText(DMS[i] || '');
+      alert('Guion DM copiado al portapapeles.');
+    }
+  </script>
+</body>
+</html>

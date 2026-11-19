@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captoora Biogen Club · Propuesta para Gimnasios y Estudios Independientes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#050608;--surface:#0b0e14;--surface-2:#111622;
+      --gold:#c9a23f;--gold-bright:#ecd28a;--volt:#c6ff00;--cyan:#38bdf8;
+      --border:rgba(255,255,255,.1);--border-gold:rgba(201,162,63,.36);
+      --text:#f5f4ef;--muted:#9aa3b2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    @page{size:letter portrait;margin:0}
+    html,body{background:#030406;color:var(--text);font-family:"Inter",-apple-system,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{
+      width:8.5in;height:11in;margin:0 auto;padding:.42in .48in .36in;
+      background:
+        radial-gradient(circle at 88% 8%,rgba(201,162,63,.14),transparent 42%),
+        radial-gradient(circle at 12% 92%,rgba(198,255,0,.08),transparent 44%),
+        var(--bg);
+      display:flex;flex-direction:column;justify-content:space-between;
+      page-break-after:always;break-after:page;overflow:hidden;position:relative;
+    }
+    .page:last-child{page-break-after:auto;break-after:auto}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:34px;object-fit:contain}
+    .brand-txt{font-family:"Cinzel",Georgia,serif;font-size:13px;letter-spacing:.14em;color:var(--gold-bright)}
+    .brand-sub{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.12em;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-family:"JetBrains Mono",monospace;font-size:9.5px;font-weight:700;letter-spacing:.08em;border:1px solid var(--border-gold);color:var(--gold-bright);background:rgba(201,162,63,.08)}
+    .pill.volt{border-color:rgba(198,255,0,.48);color:var(--volt);background:rgba(198,255,0,.08)}
+    .pill.cyan{border-color:rgba(56,189,248,.45);color:var(--cyan);background:rgba(56,189,248,.08)}
+    .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--volt);margin-bottom:5px}
+    h1{font-family:"Cinzel",Georgia,serif;font-size:26px;line-height:1.09;letter-spacing:.03em;color:var(--text);margin-bottom:8px}
+    h1 span{color:var(--gold-bright)}
+    h2{font-family:"Cinzel",Georgia,serif;font-size:15.5px;letter-spacing:.05em;color:var(--gold-bright);margin-bottom:8px}
+    .lead{font-size:11.6px;line-height:1.48;color:#d6dbe4}
+    .card{background:linear-gradient(155deg,rgba(17,22,34,.94),rgba(8,10,15,.98));border:1px solid var(--border);border-radius:14px;padding:13px 15px}
+    .card.gold{border-color:var(--border-gold)}
+    .card.volt{border-color:rgba(198,255,0,.4)}
+    .card.cyan{border-color:rgba(56,189,248,.36)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;margin:12px 0}
+    .hero-photo{border-radius:14px;overflow:hidden;border:1px solid var(--border-gold);position:relative;background:#06080c;height:252px}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+    .photo-badge{position:absolute;bottom:8px;left:8px;background:rgba(5,6,8,.88);border:1px solid rgba(198,255,0,.45);border-radius:999px;padding:4px 10px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;color:var(--volt)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .k-title{font-size:11.4px;font-weight:800;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:7px}
+    .k-copy{font-size:10.5px;line-height:1.44;color:var(--muted)}
+    .k-copy strong{color:var(--text)}
+    .gallery-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+    .g-shot{border-radius:10px;overflow:hidden;border:1px solid var(--border);height:122px;position:relative;background:#07090e}
+    .g-shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .g-cap{position:absolute;bottom:0;left:0;right:0;padding:4px 8px;font-family:"JetBrains Mono",monospace;font-size:8.5px;background:linear-gradient(transparent,rgba(5,6,8,.92));color:var(--gold-bright)}
+    .partner-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;border-radius:12px;background:rgba(17,22,34,.78);border:1px solid var(--border)}
+    .partner-logos{display:flex;align-items:center;gap:12px}
+    .partner-logos img{height:22px;object-fit:contain}
+    .flow-card{padding:13px;border-radius:13px;background:#0a0d14;border:1px solid var(--border-gold)}
+    .step-badge{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;color:#050608;background:var(--volt);padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:6px}
+    .step-badge.gold{background:var(--gold-bright)}
+    .step-badge.cyan{background:var(--cyan)}
+    .cta-box{border:1px solid rgba(198,255,0,.45);background:linear-gradient(135deg,rgba(198,255,0,.08),rgba(201,162,63,.08));border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .footer{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--border);font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.08em;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+  <!-- PÁGINA 1 -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">CAPTOORA BIOGEN CLUB · RED DE GIMNASIOS</div>
+            <div class="brand-sub">PROGRAMAS DE TRANSFORMACIÓN ENERO 2027 &amp; CONTENIDO DE MARCA</div>
+          </div>
+        </div>
+        <span class="pill volt">ALIANZA GIMNASIOS · MONTERREY 2027</span>
+      </div>
+
+      <div class="hero-grid">
+        <div style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div class="eyebrow">LO QUE LAS PLATAFORMAS MASIVAS NO OFRECEN</div>
+            <h1>TRAE RETOS DE <span>ENERO 2027</span> CON RESULTADOS REALES A TU GIMNASIO</h1>
+            <p class="lead">
+              Las plataformas corporativas solo dan acceso por día, pero no construyen comunidad ni prueban resultados.
+              <strong>Captoora Biogen Club</strong> une tu gimnasio con fotografía profesional semanal, nutrióloga titular,
+              cocinas saludables y suplementos en <strong>programas piloto de 4, 8 y 12 semanas</strong> arrancando en enero 2027.
+            </p>
+          </div>
+          <div class="card gold" style="margin-top:10px;">
+            <div class="k-title" style="color:var(--gold-bright);">SESIÓN PROFESIONAL DE TUS INSTALACIONES DESDE EL DÍA 1</div>
+            <p class="k-copy">
+              Al integrarte como sede aliada, <strong>Captoora Studio</strong> realiza una sesión fotográfica de tus instalaciones, equipo,
+              clases y coaches para tu perfil de Google Maps e Instagram. Portafolio: <strong style="color:var(--volt);">https://captoora.studio/sports</strong>
+            </p>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg" alt="Captoora Biogen Club" />
+          <span class="photo-badge">FOTOGRAFÍA DE INSTALACIONES + ATLETAS</span>
+        </div>
+      </div>
+
+      <h2>1. QUÉ GANA TU GIMNASIO COMO SEDE OFICIAL BIOGEN</h2>
+      <div class="grid-3">
+        <div class="card volt">
+          <div class="k-title" style="color:var(--volt);">INFLUENCERS ENTRENANDO AHÍ</div>
+          <p class="k-copy">
+            Atletas y creadores de Monterrey (8K–25K+ seguidores) entrenan en tus instalaciones y publican su proceso semanal etiquetando tu gimnasio.
+          </p>
+        </div>
+        <div class="card cyan">
+          <div class="k-title" style="color:var(--cyan);">CLIENTES DE PAGA COMPROMETIDOS</div>
+          <p class="k-copy">
+            Participantes del público general llegan en enero con fecha de arranque, plan de la Nutrióloga Karen, comidas y meta de 4, 8 o 12 semanas: menos deserción.
+          </p>
+        </div>
+        <div class="card gold">
+          <div class="k-title" style="color:var(--gold-bright);">RENOVACIÓN VISUAL DE TU SEDE</div>
+          <p class="k-copy">
+            Sesión de fotografía y clips verticales de tu gimnasio y comunidad para que proyectes nivel profesional frente a prospectos en tu zona.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <div class="eyebrow" style="margin:0;">ESTÁNDAR VISUAL CAPTOORA (PORTAFOLIO PRESENTADO A EQUIPOS PROFESIONALES)</div>
+          <span class="brand-sub" style="color:var(--gold-bright);">VER MÁS ➔ CAPTOORA.STUDIO/SPORTS</span>
+        </div>
+        <div class="gallery-strip">
+          <div class="g-shot">
+            <img src="../assets/hero-portrait.png" alt="Retrato escultural" style="object-position:center top;" />
+            <div class="g-cap">RETRATO DE COACHES Y ATLETAS</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/presentation/capitanes_court_hero.jpg" alt="Acción deportiva" />
+            <div class="g-cap">ACCIÓN DE ALTA VELOCIDAD 1/2000s</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Iluminación profesional" style="object-position:center 20%;" />
+            <div class="g-cap">CONTENIDO VERTICAL 9:16</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="partner-bar" style="margin-bottom:8px;">
+        <span class="brand-sub" style="color:var(--text);font-weight:700;">RESPALDO COMERCIAL:</span>
+        <div class="partner-logos">
+          <span style="background:rgba(245,244,239,.92);padding:2px 7px;border-radius:6px;display:inline-flex"><img src="../assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec" /></span>
+          <img src="../assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Tigres UANL" />
+          <img src="../assets/logos_partnerships/farmasi_transparent.png" alt="Farmasi" />
+          <span class="brand-sub" style="color:var(--gold-bright);">COCA-COLA FEMSA · TECATE · PODER JUDICIAL NL</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>CAPTOORA BIOGEN CLUB · GIMNASIOS Y ESTUDIOS INDEPENDIENTES</span>
+        <span>PÁGINA 1 DE 2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 2 -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">PILOTO ENERO 2027 · FLUJO COMPLETO</div>
+            <div class="brand-sub">DIFERÉNCIATE CON TRANSFORMACIÓN COMPROBABLE</div>
+          </div>
+        </div>
+        <span class="pill cyan" style="white-space:nowrap">CUPOS POR ZONA · MONTERREY</span>
+      </div>
+
+      <div style="margin:12px 0 10px;">
+        <div class="eyebrow">2. UN PROGRAMA LLAVE EN MANO PARA TU COMUNIDAD</div>
+        <h1>TU GIMNASIO + <span>NUTRIÓLOGA + COMIDA + FOTOS</span></h1>
+        <p class="lead">
+          Quien entrena solo deja de ir en febrero. Al integrarte a <strong>Captoora Biogen Club</strong>, tus nuevos inscritos de enero
+          (y nuestra cohorte de creadores) tienen todo resuelto en un mismo circuito, mientras tu gimnasio se convierte en la sede donde ocurre el cambio.
+        </p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:12px;">
+        <div class="flow-card">
+          <span class="step-badge gold">01 · TU GIMNASIO</span>
+          <div class="k-title">SEDE OFICIAL DE ENTRENAMIENTO</div>
+          <p class="k-copy">
+            Recibes a los creadores asignados a tu zona y a clientes del carril Biogen con acceso preferente acordado. Tus coaches y sede salen en el contenido semanal.
+          </p>
+        </div>
+        <div class="flow-card">
+          <span class="step-badge cyan">02 · NUTRICIÓN Y COMIDA</span>
+          <div class="k-title">KAREN + COCINAS + FARMASI</div>
+          <p class="k-copy">
+            La <strong>Nutrióloga Karen</strong> da plan y Ficha Nutricional, cocinas aliadas surten los platillos diarios y <strong>Farmasi · Nutriplus</strong> cubre suplementación con afiliados.
+          </p>
+        </div>
+        <div class="flow-card">
+          <span class="step-badge">03 · CAPTOORA BIOGEN</span>
+          <div class="k-title">EVIDENCIA VISUAL SEMANAL</div>
+          <p class="k-copy">
+            Cada semana o quincena fotografiamos los avances físicos en estudio con luz idéntica y editamos clips verticales 9:16 listos para redes.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:12px;">
+        <div class="card volt" style="padding:12px 14px;">
+          <div class="k-title" style="color:var(--volt);">ACUERDO SIMPLE DE INTERCAMBIO</div>
+          <p class="k-copy" style="line-height:1.46;">
+            • <strong>Aportas:</strong> acceso de entrenamiento para 1–2 creadores asignados a tu zona + tarifa preferente para participantes del programa Biogen.<br>
+            • <strong>Recibes:</strong> sesión profesional de tus instalaciones y coaches desde el Día 1 + etiqueta continua de los creadores entrenando en tu sede + flujo de alumnos nuevos en enero.
+          </p>
+        </div>
+
+        <div class="card gold" style="padding:12px 14px;">
+          <div class="k-title" style="color:var(--gold-bright);">POR QUÉ ENTRAR ANTES DE DICIEMBRE</div>
+          <p class="k-copy" style="line-height:1.46;">
+            • Limitamos a <strong>1–2 gimnasios aliados por zona</strong> (San Nicolás, Guadalupe, Cumbres, Zona Tec, San Pedro, Apodaca).<br>
+            • Hacemos tu sesión de instalaciones en diciembre para arrancar campañas el <strong>2 de enero de 2027</strong>.<br>
+            • Si tus socios ven que ofreces seguimiento fotográfico y nutricional real, renuevan más meses.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <div>
+          <div class="eyebrow" style="margin-bottom:3px;">SEDE PILOTO POR ZONA · CUPO LIMITADO</div>
+          <div style="font-family:'Cinzel',serif;font-size:15px;color:var(--text);">
+            ¿SEPARAMOS TU ZONA PARA <span style="color:var(--volt);">ENERO 2027</span>?
+          </div>
+          <div class="k-copy" style="color:#d6dbe4;margin-top:3px;">
+            Respóndenos por WhatsApp o Instagram para agendar tu sesión de instalaciones y asignar creadores a tu sede.
+          </div>
+        </div>
+        <div style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.6;">
+          <div style="color:var(--volt);font-weight:700;">@captoora.studio</div>
+          <div style="color:var(--gold-bright);">WA +52 81 4005 0088</div>
+          <div style="color:var(--cyan);">chuy@captoora.studio</div>
+          <div style="color:var(--text);">https://captoora.studio/sports</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>JESÚS GUTIÉRREZ · DIRECTOR EDITORIAL · CAPTOORA STUDIO &amp; BIOGEN</span>
+      <span>PÁGINA 2 DE 2 · PORTAFOLIO: CAPTOORA.STUDIO/SPORTS</span>
+    </div>
+  </section>
+
+</body>
+</html>

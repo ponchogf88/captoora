@@ -1,0 +1,456 @@
+{
+  "updated_at": "2026-11-19T08:30:36-06:00",
+  "tracking_ids": {
+    "ga4_id": "",
+    "meta_pixel_id": "",
+    "tiktok_pixel_id": "",
+    "google_ads_tag": ""
+  },
+  "calendly": {
+    "base_url": "",
+    "event_types": [
+      {
+        "id": "maps_audit_15",
+        "label": "Auditoría Google Maps & Vitrina 2027 (15 min)",
+        "slug": "auditoria-maps-15m"
+      },
+      {
+        "id": "navidad_led_20",
+        "label": "Demo Eventos + Trofeos Acrílico LED (20 min)",
+        "slug": "demo-led-20m"
+      },
+      {
+        "id": "biogen_piloto_20",
+        "label": "Sesión Piloto Captoora Biogen (20 min)",
+        "slug": "biogen-piloto-20m"
+      }
+    ],
+    "generated_links": []
+  },
+  "ceo_plan": {
+    "updated_at": "2026-11-19T08:30:36-06:00",
+    "week_focus": "Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad hasta cobrar el 1er anticipo 50% y liberar Ads.",
+    "primary_kpis": [
+      "Primer 'Sí' cobrado (50%)",
+      "15–20 WA Web diarios sin bloqueo",
+      "20–30 clips semanales Pull"
+    ],
+    "trending_hooks_mty": [
+      "¿Tu negocio abre en Google Maps con el carrito gris de Street View?",
+      "Congelamiento Global Shutter 1/2000s + entrega Halftime Blitz en 15 minutos",
+      "Premiación con acrílico óptico iluminado LED cálida financiada por tus patrocinadores",
+      "Captoora Biogen Flow: registro semanal escultural + dieta y evolución comprobable"
+    ],
+    "daily_priorities": [
+      {
+        "day": "Hoy / Arranque",
+        "focus": "Despachar las 4 aprobaciones + lote de 15 fichas con Street View vía WhatsApp Web y Zoho."
+      },
+      {
+        "day": "Día 2",
+        "focus": "Publicar primeros Reels teardown de Google Maps + seguimiento 48h."
+      },
+      {
+        "day": "Día 3–4",
+        "focus": "Agendar 3–5 demos de 15 min en Calendly y cobrar 1er anticipo 50% para desbloquear pauta."
+      },
+      {
+        "day": "Viernes 16:00",
+        "focus": "Auditoría de caja del Contador (SAT IVA/ISR + margen) y recalibración semanal."
+      }
+    ]
+  },
+  "seo_and_clips": {
+    "updated_at": "2026-11-18T14:15:40-06:00",
+    "last_topic": "Auditoría Visual Google Maps + Producción Editorial 1/2000s",
+    "target_keywords": [
+      "fotografía deportiva profesional 1/2000s monterrey",
+      "cobertura torneos pádel entrega mismo día san pedro",
+      "optimizar google maps negocios clínicas colegios monterrey",
+      "trofeos y placas acrílico led personalizadas monterrey",
+      "sesión fotográfica evolutiva atletas captoora biogen"
+    ],
+    "clips_20": [
+      {
+        "clip_num": 1,
+        "id": "CLIP-01",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Dolor Maps",
+        "hook_0_3s": "¿Tu negocio abre en Google Maps con el carrito gris de Street View?",
+        "duration": "18–32s",
+        "tool": "OpusClip + OBS",
+        "platform": "IG Reels + TikTok",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 2,
+        "id": "CLIP-02",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Técnica 1/2000s",
+        "hook_0_3s": "Así se ve congelar acción real a 1/2000s Global Shutter vs foto normal.",
+        "duration": "18–32s",
+        "tool": "Aftershoot + CapCut",
+        "platform": "TikTok + Shorts",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 3,
+        "id": "CLIP-03",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Acrílico LED",
+        "hook_0_3s": "Por qué un trofeo acrílico LED genera menciones que un diploma nunca logra.",
+        "duration": "18–32s",
+        "tool": "Captions App",
+        "platform": "IG Reels + FB",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 4,
+        "id": "CLIP-04",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Colegios & Kínders",
+        "hook_0_3s": "3 segundos en Google Maps deciden si un padre agenda visita en tu colegio.",
+        "duration": "18–32s",
+        "tool": "OBS + OpusClip",
+        "platform": "LinkedIn B2B",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 5,
+        "id": "CLIP-05",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Pádel / Sponsor",
+        "hook_0_3s": "Cómo se autofinancia la cobertura fotográfica de un torneo con patrocinadores.",
+        "duration": "18–32s",
+        "tool": "Captions App",
+        "platform": "IG Reels + TikTok",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 6,
+        "id": "CLIP-06",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Captoora Biogen",
+        "hook_0_3s": "Por qué las selfies de espejo distorsionan tu progreso físico (luz escultural).",
+        "duration": "18–32s",
+        "tool": "Evoto + CapCut",
+        "platform": "TikTok + Shorts",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 7,
+        "id": "CLIP-07",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Clínicas Salud",
+        "hook_0_3s": "Lo que pasa cuando un paciente compara dos consultorios dentales en Maps.",
+        "duration": "18–32s",
+        "tool": "OBS + Canva",
+        "platform": "IG Reels + FB",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 8,
+        "id": "CLIP-08",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Velocidad",
+        "hook_0_3s": "Halftime Blitz: cómo entregamos fotos editoriales en 15 minutos en cancha.",
+        "duration": "18–32s",
+        "tool": "Aftershoot + Reels",
+        "platform": "LinkedIn B2B",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 9,
+        "id": "CLIP-09",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Meta Portfolio",
+        "hook_0_3s": "El error #1 en enlaces de Meta que provoca bloqueos entre FB, IG y WhatsApp.",
+        "duration": "18–32s",
+        "tool": "Captions App",
+        "platform": "IG Reels + TikTok",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 10,
+        "id": "CLIP-10",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Conversión Maps",
+        "hook_0_3s": "De ficha 'Sin Reclamar' a vitrina verificada lista para recibir citas.",
+        "duration": "18–32s",
+        "tool": "OBS + CapCut",
+        "platform": "TikTok + Shorts",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 11,
+        "id": "CLIP-11",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Transparencia SLA",
+        "hook_0_3s": "Por qué dividimos pago digital mismo día y piezas físicas LED en taller (3–5d).",
+        "duration": "18–32s",
+        "tool": "Captions App",
+        "platform": "IG Reels + FB",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 12,
+        "id": "CLIP-12",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Gyms & TotalPass",
+        "hook_0_3s": "Antes vs. Después real: gimnasio TotalPass renovado para cerrar inscripciones.",
+        "duration": "18–32s",
+        "tool": "Canva + CapCut",
+        "platform": "LinkedIn B2B",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 13,
+        "id": "CLIP-13",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "B2B Patrocinios",
+        "hook_0_3s": "El ángulo exacto que piden las marcas patrocinadoras para renovar en 2027.",
+        "duration": "18–32s",
+        "tool": "LinkedIn Clip",
+        "platform": "IG Reels + TikTok",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 14,
+        "id": "CLIP-14",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Danza White-Glove",
+        "hook_0_3s": "Cómo una academia financia su festival navideño sin descapitalizar la escuela.",
+        "duration": "18–32s",
+        "tool": "Captions App",
+        "platform": "TikTok + Shorts",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 15,
+        "id": "CLIP-15",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "QR LED Reseñas",
+        "hook_0_3s": "El bucle de 5 años: una placa QR LED en recepción generando reseñas diarias.",
+        "duration": "18–32s",
+        "tool": "OpusClip Pro",
+        "platform": "IG Reels + FB",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 16,
+        "id": "CLIP-16",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Iluminación",
+        "hook_0_3s": "Behind the scenes: calibración de luz escultural en menos de 12 minutos en sitio.",
+        "duration": "18–32s",
+        "tool": "CapCut 9:16",
+        "platform": "LinkedIn B2B",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 17,
+        "id": "CLIP-17",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Biogen Flow",
+        "hook_0_3s": "Cómo documentamos dieta + meal prep + físico como un Flow continuo.",
+        "duration": "18–32s",
+        "tool": "Captions + Evoto",
+        "platform": "IG Reels + TikTok",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 18,
+        "id": "CLIP-18",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Autoridad",
+        "hook_0_3s": "Los 3 errores que hacen ver amateur a una marca deportiva en Instagram.",
+        "duration": "18–32s",
+        "tool": "OpusClip Pro",
+        "platform": "TikTok + Shorts",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 19,
+        "id": "CLIP-19",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Lead Magnet",
+        "hook_0_3s": "Qué revisamos gratis en menos de 24h en tu ficha actual de Google Maps.",
+        "duration": "18–32s",
+        "tool": "OBS + Captions",
+        "platform": "IG Reels + FB",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      },
+      {
+        "clip_num": 20,
+        "id": "CLIP-20",
+        "topic": "Auditoría Google Maps + Alta Velocidad 1/2000s",
+        "pillar": "Oferta Directa",
+        "hook_0_3s": "Resumen semanal: cómo elevar tu vitrina 2027 con -35% vigente antes de cierre.",
+        "duration": "18–32s",
+        "tool": "Meta Suite + TT",
+        "platform": "LinkedIn B2B",
+        "cta": "Pide tu lámina Antes/Después en captoora.studio/sports o WA +52 81 4005 0088"
+      }
+    ]
+  },
+  "agenda": {
+    "updated_at": "2026-11-18T14:15:40-06:00",
+    "today_blocks": [
+      {
+        "time": "08:30",
+        "title": "Briefing CEO + Revisión Cola Último Trigger",
+        "owner": "chief_of_staff",
+        "channel": "Dashboard :8765"
+      },
+      {
+        "time": "09:30",
+        "title": "Ventana Push Clínica / Colegios / Kínders (Zoho 20–30)",
+        "owner": "ventas_outreach",
+        "channel": "Zoho chuy@"
+      },
+      {
+        "time": "11:00",
+        "title": "Ventana Push Clubes Pádel / Gyms (15–20 WA Web 1-Clic)",
+        "owner": "ventas_outreach",
+        "channel": "WhatsApp Web"
+      },
+      {
+        "time": "13:00",
+        "title": "Seguimiento respuestas + Links Calendly 15 min",
+        "owner": "ventas_outreach",
+        "channel": "Calendly"
+      },
+      {
+        "time": "16:30",
+        "title": "Batch Creativo Pull (OpusClip 9:16 + Meta Suite + TikTok)",
+        "owner": "conan_content",
+        "channel": "Meta/TT/LI"
+      },
+      {
+        "time": "18:00",
+        "title": "Cierre diario Contador + Recordatorio de Mañana",
+        "owner": "contabilidad_finanzas",
+        "channel": "Contabilidad"
+      }
+    ],
+    "tomorrow_blocks": [
+      {
+        "time": "08:30",
+        "title": "Despertador 24/7: Resumen CEO & Cola Follow-up 48h",
+        "owner": "chief_of_staff",
+        "channel": "Scheduler"
+      },
+      {
+        "time": "09:30",
+        "title": "Rutas presenciales confirmadas (Mapa MTY Optimizado)",
+        "owner": "ops_talleres_legal",
+        "channel": "Mapa Rutas"
+      },
+      {
+        "time": "12:00",
+        "title": "Corte Seguimientos 72h (-35% / 2do Momento)",
+        "owner": "ventas_outreach",
+        "channel": "WA / Zoho"
+      },
+      {
+        "time": "17:00",
+        "title": "Publicación Reel / Collab hora pico según Insights",
+        "owner": "lupe_social",
+        "channel": "IG / TikTok"
+      }
+    ],
+    "tomorrow_reminders_log": [
+      {
+        "triggered_at": "2026-11-18T18:00:33-06:00",
+        "blocks_count": 4,
+        "email_result": null,
+        "text": "Agenda de Mañana Captoora Studio:\n- 08:30 | Despertador 24/7: Resumen CEO & Cola Follow-up 48h (Scheduler)\n- 09:30 | Rutas presenciales confirmadas (Mapa MTY Optimizado) (Mapa Rutas)\n- 12:00 | Corte Seguimientos 72h (-35% / 2do Momento) (WA / Zoho)\n- 17:00 | Publicación Reel / Collab hora pico según Insights (IG / TikTok)"
+      }
+    ]
+  },
+  "crm_records": {},
+  "mail_campaigns_log": [],
+  "whatsapp_web_log": [],
+  "apify_sweeps_log": [],
+  "scheduler": {
+    "enabled": true,
+    "last_tick": "2026-11-19T08:44:37-06:00",
+    "ran_slots_today": {
+      "18_00_tomorrow": "2026-11-18",
+      "08_30_ceo": "2026-11-19"
+    },
+    "slots": [
+      {
+        "id": "08_30_ceo",
+        "hour": 8,
+        "minute": 30,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "08:30 CST · Briefing CEO & Agenda"
+      },
+      {
+        "id": "10_00_followups",
+        "hour": 10,
+        "minute": 0,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "10:00 CST · Detector Follow-up 24–48h"
+      },
+      {
+        "id": "13_00_pull",
+        "hour": 13,
+        "minute": 0,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "13:00 CST · Corte Mediodía & Pull SEO"
+      },
+      {
+        "id": "18_00_tomorrow",
+        "hour": 18,
+        "minute": 0,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "18:00 CST · Recordatorio Agenda Mañana"
+      },
+      {
+        "id": "fri_16_report",
+        "hour": 16,
+        "minute": 0,
+        "weekdays": [
+          4
+        ],
+        "label": "Viernes 16:00 CST · Reporte Contador & Ventas"
+      }
+    ],
+    "last_executed_slot": {
+      "slot_id": "08_30_ceo",
+      "at": "2026-11-19T08:30:37-06:00",
+      "manual": false,
+      "detail": "CEO Briefing despertado: Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad"
+    }
+  }
+}

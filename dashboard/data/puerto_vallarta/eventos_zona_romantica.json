@@ -1,0 +1,2069 @@
+{
+  "updated_at": "2026-11-18T11:19:23-06:00",
+  "territory": "Puerto Vallarta — Zona Romántica",
+  "zone_key": "zona_romantica",
+  "total_events": 83,
+  "open_coverage_count": 74,
+  "partial_coverage_count": 9,
+  "excluded_outside_pv_count": 27,
+  "excluded_outside_pv_sample": [
+    {
+      "titulo": "Campeonato Internacional Charro Vallarta 2027",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/campeonato-internacional-charro-vallarta-2027",
+      "razon": "Fuera de ventana Nov 2026 – Ene 2027"
+    },
+    {
+      "titulo": "Día Internacional de la Raicilla",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/dia-internacional-de-la-raicilla",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Vidanta / Tepic)"
+    },
+    {
+      "titulo": "FairyLand Music Festival 2027",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/fairyland-music-festival-2027",
+      "razon": "Fuera de ventana Nov 2026 – Ene 2027"
+    },
+    {
+      "titulo": "Festival del Ceviche y Aguachile Puerto Vallarta 2027",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/festival-del-ceviche-y-aguachile-puerto-vallarta-2027",
+      "razon": "Fuera de ventana Nov 2026 – Ene 2027"
+    },
+    {
+      "titulo": "Puerto Vallarta, México by UTMB 2027",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/puerto-vallarta-mexico-by-utmb-2027",
+      "razon": "Fuera de ventana Nov 2026 – Ene 2027"
+    },
+    {
+      "titulo": "Yelapa: The Gathering 2026",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/yelapa-the-gathering-2026",
+      "razon": "Fuera de zonas PV objetivo (Yelapa)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Codex",
+      "direccion": "Carr. Punta de Mita Manzana Sayulita Km 2, Litibu, 63734 Desarrollo Punta Mita, Nay.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/codex/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Emiliano",
+      "direccion": "",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/emiliano/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Hoja Santa",
+      "direccion": "Av. El Anclote 200, 63734 Punta de Mita, Nay.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/hoja-santa/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Ikan",
+      "direccion": "America latina 3, San Francisco, Mexico, 63729",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/ikan/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Il Molo",
+      "direccion": "",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/il-molo/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: La Cocina",
+      "direccion": "",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/la-cocina/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: La Casa",
+      "direccion": "Av. Las Palmas 112, Bucerías, Nayarit.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/lacasa/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Loma 42 NN",
+      "direccion": "Blvd. Nuevo Vallarta 4 Int. 2 Plaza San Carlos, 63732 Nuevo Vallarta, Nay.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/loma42nvonayarit/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Loma 42 Tepic",
+      "direccion": "Av. Paseo de la Loma s/n, Tepic, Nayarit.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/loma42tepic/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Mauka",
+      "direccion": "Rinconada Careyeros Lote 10, Punta Negra, 63734 Desarrollo Punta Mita, Nay.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/mauka/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Piaf",
+      "direccion": "Av Cocoteros 98 Sur, Nuevo Nayarit, Mexico",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/piaf/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Taormina",
+      "direccion": "Paseo de los Cocoteros 53, Zona Hotelera, 63735 Nuevo Vallarta, Nay.",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/taormina/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "FGI Anfitrión: Tuna Blanca",
+      "direccion": "Avenida Anclote Lote 5, El Anclote, Punta de Mita, Riviera Nayarit",
+      "fuente_url": "https://festivalgourmet.com.mx/restaurantes/tunablanca/",
+      "razon": "Fuera de Puerto Vallarta (Riviera Nayarit / Tepic)"
+    },
+    {
+      "titulo": "HBR Book Webinar:  Unspeakable",
+      "fuente_url": "https://www.eventbrite.co.uk/e/hbr-book-webinar-unspeakable-tickets-2003706919334",
+      "razon": "Evento online o fuera de PV (Online)"
+    },
+    {
+      "titulo": "Lo sviluppo della forza nella corsa prolungata",
+      "fuente_url": "https://www.eventbrite.it/e/lo-sviluppo-della-forza-nella-corsa-prolungata-tickets-2004286389545",
+      "razon": "Evento online o fuera de PV (Online)"
+    },
+    {
+      "titulo": "The MI5 Archive: Official Secrets",
+      "fuente_url": "https://www.eventbrite.co.uk/e/the-mi5-archive-official-secrets-tickets-1997551526388",
+      "razon": "Evento online o fuera de PV (Online)"
+    },
+    {
+      "titulo": "How to Choose a (New) Career Fast",
+      "fuente_url": "https://www.eventbrite.co.uk/e/how-to-choose-a-new-career-fast-tickets-1993681331531",
+      "razon": "Evento online o fuera de PV (Online)"
+    },
+    {
+      "titulo": "Sorted Live: A Food Nightmare Before Christmas",
+      "fuente_url": "https://www.eventbrite.co.uk/e/sorted-live-a-food-nightmare-before-christmas-tickets-2003030292525",
+      "razon": "Evento online o fuera de PV (Online)"
+    },
+    {
+      "titulo": "HBR Press Webinar:  The Scientific Mindset",
+      "fuente_url": "https://www.eventbrite.com/e/hbr-press-webinar-the-scientific-mindset-tickets-2003821631441",
+      "razon": "Evento online o fuera de PV (Online)"
+    }
+  ],
+  "events": [
+    {
+      "id": "vpv-olas-altas-farmers-market-2026-2027",
+      "fecha": "07-11-2026 al 08-05-2027",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "Olas Altas Farmers Market 2026-2027",
+      "recinto": "Parque Lázaro Cárdenas, Zona Romántica",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Mercado Gastronómico & Diseño",
+      "invitados_artistas_lineup": [
+        "Talento y anfitriones oficiales del programa PV"
+      ],
+      "influencers_relacionados": [
+        "Productores artesanales, nómadas digitales y microcreadores foodie"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/olas-altas-farmers-market-2026-2027",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " Olas Altas Farmers Market 2026-2027 Olas Altas Farmers Market 2026-2027 Inicia : 07-11-2026 Finaliza : 08-05-2027 El corazón de la Zona Romántica volverá a llenarse de aromas, sabores, colores y creatividad con la nueva temporada del Olas Altas Farmers Market. A partir del sábad",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Parque Lázaro Cárdenas, Zona Romántica (Olas Altas Farmers Market 2026-2027 junto a Talento y anfitriones oficiales del programa PV · 07-11-2026 al 08-05-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "vpv-puerto-vallarta-cabaret-workshop",
+      "fecha": "17-11-2026 al 21-11-2026",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "Puerto Vallarta Cabaret Workshop",
+      "recinto": "Act2PV Theater, Basilio Badillo (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret & Clases Magistrales",
+      "invitados_artistas_lineup": [
+        "Mark Hartman",
+        "Lina Koutrakos",
+        "Beckie Menzie"
+      ],
+      "influencers_relacionados": [
+        "Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Participantes internacionales buscando headshots y reels escénicos en vivo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/puerto-vallarta-cabaret-workshop",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " Puerto Vallarta Cabaret Workshop Puerto Vallarta Cabaret Workshop Inicia : 17-11-2026 Finaliza : 21-11-2026 Puerto Vallarta se transforma en escenario de formación artística con el Taller de Cabaret Puerto Vallarta 2026. Presentado por Broadway a la Playa y bajo la producción de",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Theater, Basilio Badillo (Zona Romántica) (Puerto Vallarta Cabaret Workshop junto a Mark Hartman, Lina Koutrakos · 17-11-2026 al 21-11-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "vpv-ifc-vallarta-home-tours",
+      "fecha": "17-11-2026 al 24-03-2027",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "IFC Vallarta Home Tours",
+      "recinto": "Salida Sea Monkey (Zona Romántica) -> Gringo Gulch & Conchas Chinas",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Arquitectura & Beneficencia",
+      "invitados_artistas_lineup": [
+        "Talento y anfitriones oficiales del programa PV"
+      ],
+      "influencers_relacionados": [
+        "Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/ifc-vallarta-home-tours",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " IFC Vallarta Home Tours IFC Vallarta Home Tours Inicia : 17-11-2026 Finaliza : 24-03-2027 El martes 17 de noviembre marca el inicio de la temporada 2026-2027 de los home tours, organizados por el Club Internacional de la Amistad (IFC). Cada martes y miércoles, a partir de las 10",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Salida Sea Monkey (Zona Romántica) -> Gringo Gulch & Conchas Chinas (IFC Vallarta Home Tours junto a Talento y anfitriones oficiales del programa PV · 17-11-2026 al 24-03-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "oapv-east-emiliano-bar-crawl",
+      "fecha": "19 Nov 2026",
+      "horario": "Tarde / Noche (6 paradas)",
+      "titulo": "East Emiliano Bar Crawl (6 Bares Zona Romántica)",
+      "recinto": "Corredor Emiliano Zapata Este (Awaysis, Onyx y 4 sedes)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Vida Nocturna & Circuito de Bares",
+      "invitados_artistas_lineup": [
+        "Hosts de 6 bares en Emiliano Zapata"
+      ],
+      "influencers_relacionados": [
+        "Creadores locales de vida nocturna y asistentes turísticos"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Ideal para entregar galería instantánea a los 6 bares participantes para Google Maps y Meta Ads.",
+      "estado_oportunidad_captoora": "Abierta / Venta Multi-Bar 6x1",
+      "fuente_url": "https://outandaboutpv.com/east-emiliano-bar-crawl-returns-nov-19-with-six-stops/",
+      "fuente_portal": "OutAndAboutPV.com",
+      "resumen": "Recorrido coordinado por 6 bares de Zona Romántica este jueves 19 de noviembre.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Corredor Emiliano Zapata Este (Awaysis, Onyx y 4 sedes) (East Emiliano Bar Crawl (6 Bares Zona Romántica) junto a Hosts de 6 bares en Emiliano Zapata · 19 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "vpv-vrban-vallarta-2026",
+      "fecha": "19-12-2026",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "Vrban Vallarta 2026",
+      "recinto": "Malecón de Puerto Vallarta -> Centro -> Zona Romántica (10K)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Deportes / Carrera Urbana",
+      "invitados_artistas_lineup": [
+        "Talento y anfitriones oficiales del programa PV"
+      ],
+      "influencers_relacionados": [
+        "Atletas locales y clubes ciclistas/running (Vallarta Sobre Ruedas / Xisco Bikes)"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Carrera urbana escénica de 10K (Malecón–Zona Romántica) ideal para venta de galería editorial instantánea y marcas patrocinadoras.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/vrban-vallarta-2026",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " Vrban Vallarta 2026 Vrban Vallarta 2026 19-12-2026 Vrban Vallarta es un evento atlético que combina diversos terrenos como: arena, pavimento, ascensos, escaleras, paso por calles estrechas y resistencia, a realizarse el sábado 19 de diciembre, a partir de las 7:00am. En Vrban Va",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Malecón de Puerto Vallarta -> Centro -> Zona Romántica (10K) (Vrban Vallarta 2026 junto a Talento y anfitriones oficiales del programa PV · 19-12-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos acción deportiva a 1/2000s (cuerpo entero y entregas digitales el mismo día para competidores y marcas). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, trofeos/placas en acrílico óptico con luz LED y logotipo de patrocinadores (listos en 3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_rewind_monaco_gina_daniel",
+      "fecha": "2026-11-18 al 2026-12-02 (3 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Rewind – Monaco, Gina & Daniel",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Monaco, Gina & Daniel"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/rewind-monaco-gina-daniel-5/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Rewind – Monaco, Gina & Daniel junto a Monaco, Gina & Daniel · 2026-11-18 al 2026-12-02 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_sargento_the_biggest_broadway_sing",
+      "fecha": "2026-11-18 al 2026-12-02 (3 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Sargento: The Biggest Broadway Sing Along On Earth",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "The Biggest Broadway Sing Along On Earth"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/sargento-the-biggest-broadway-sing-along-on-earth-4/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Sargento: The Biggest Broadway Sing Along On Earth junto a The Biggest Broadway Sing Along On Earth · 2026-11-18 al 2026-12-02 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_musical_dreams_2_la_magia_de_disney",
+      "fecha": "2026-11-18 al 2026-12-07 (3 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Musical Dreams 2: La Magia de Disney Se Hace Realidad!",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "La Magia de Disney Se Hace Realidad!"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/musical-dreams-2-la-magia-de-disney-se-hace-realidad-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Musical Dreams 2: La Magia de Disney Se Hace Realidad! junto a La Magia de Disney Se Hace Realidad! · 2026-11-18 al 2026-12-07 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_humans_bodies_within",
+      "fecha": "2026-11-18 al 2026-12-09 (4 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Humans: Bodies Within",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Bodies Within"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/humans-bodies-within-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (4 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Humans: Bodies Within junto a Bodies Within · 2026-11-18 al 2026-12-09 (4 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_amy_winehouse_forever_starring_patri",
+      "fecha": "2026-11-19",
+      "horario": "19:00 h",
+      "titulo": "Amy Winehouse Forever Starring Patriz",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Patriz"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/amy-winehouse-forever-starring-patriz/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Amy Winehouse Forever Starring Patriz junto a Patriz · 2026-11-19), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_cecille_you_ask_she_delivers",
+      "fecha": "2026-11-19 al 2026-12-03 (3 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Cecille: You Ask, She Delivers",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "You Ask, She Delivers"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/cecille-you-ask-she-delivers-3/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Cecille: You Ask, She Delivers junto a You Ask, She Delivers · 2026-11-19 al 2026-12-03 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_the_rat_pack_show",
+      "fecha": "2026-11-19 al 2026-12-03 (3 funciones)",
+      "horario": "17:00 h",
+      "titulo": "The Rat Pack Show",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "The Rat Pack Show"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/the-rat-pack-show-18/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (The Rat Pack Show junto a The Rat Pack Show · 2026-11-19 al 2026-12-03 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_hedda_lettuce_in_heddas_here",
+      "fecha": "2026-11-19 al 2026-12-10 (4 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Hedda Lettuce in Hedda’s Here!",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Hedda Lettuce in Hedda’s Here!"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/hedda-lettuce-in-heddas-here-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (4 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Hedda Lettuce in Hedda’s Here! junto a Hedda Lettuce in Hedda’s Here! · 2026-11-19 al 2026-12-10 (4 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_la_la_land_big_dreams_bigger_voic",
+      "fecha": "2026-11-20 al 2026-11-23 (2 funciones)",
+      "horario": "21:00 h",
+      "titulo": "LA LA LAND – Big Dreams, Bigger Voices",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Big Dreams, Bigger Voices"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/la-la-land-big-dreams-bigger-voices-4/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (LA LA LAND – Big Dreams, Bigger Voices junto a Big Dreams, Bigger Voices · 2026-11-20 al 2026-11-23 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_garth_the_ultimate_concert_experien",
+      "fecha": "2026-11-20 al 2026-12-04 (2 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Garth: The Ultimate Concert Experience",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "The Ultimate Concert Experience"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/garth-the-ultimate-concert-experience-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Garth: The Ultimate Concert Experience junto a The Ultimate Concert Experience · 2026-11-20 al 2026-12-04 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_cocos_in_control_the_janet_jackson",
+      "fecha": "2026-11-20 al 2026-12-04 (3 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Coco’s in Control: The Janet Jackson Experience",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "The Janet Jackson Experience"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/cocos-in-control-the-janet-jackson-experience-12/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Coco’s in Control: The Janet Jackson Experience junto a The Janet Jackson Experience · 2026-11-20 al 2026-12-04 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_freddie_a_legendary_tribute_starrin",
+      "fecha": "2026-11-20 al 2026-12-04 (4 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Freddie: A Legendary Tribute Starring Roy Cruz",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Roy Cruz"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/freddie-a-legendary-tribute-starring-roy-cruz-4/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (4 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Freddie: A Legendary Tribute Starring Roy Cruz junto a Roy Cruz · 2026-11-20 al 2026-12-04 (4 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_airotic_soiree",
+      "fecha": "2026-11-20 al 2026-12-08 (5 funciones)",
+      "horario": "19:00 h",
+      "titulo": "AirOtic Soirée",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "AirOtic Soirée"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/airotic-soiree-4/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (5 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (AirOtic Soirée junto a AirOtic Soirée · 2026-11-20 al 2026-12-08 (5 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_heaven_hell_and_back",
+      "fecha": "2026-11-21",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Heaven, Hell and Back",
+      "recinto": "Nacho Daddy (287 Basilio Badillo)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/heaven-hell-and-back-tickets-2004748098529",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Nacho Daddy, 287 Basilio Badillo, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Nacho Daddy (287 Basilio Badillo) (Heaven, Hell and Back junto a Host / Productora del evento · 2026-11-21), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_kinky_karaoke",
+      "fecha": "2026-11-21",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Kinky Karaoke",
+      "recinto": "Sanctuary - PV (Venustiano Carranza 239-B)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/kinky-karaoke-tickets-2004446779275",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Sanctuary - PV, Venustiano Carranza 239-B, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Sanctuary - PV (Venustiano Carranza 239-B) (Kinky Karaoke junto a Host / Productora del evento · 2026-11-21), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_lady_gaga_mother_mayhem_starring_ma",
+      "fecha": "2026-11-21",
+      "horario": "21:00 h",
+      "titulo": "Lady Gaga: Mother Mayhem Starring Maru Prado",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Maru Prado"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/gaga-a-confession-starring-maru-prado-5/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Lady Gaga: Mother Mayhem Starring Maru Prado junto a Maru Prado · 2026-11-21), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_n_k_d_pool_party_saturdays_3",
+      "fecha": "2026-11-21",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "N K D POOL PARTY | SATURDAYS |  3 - 8 PM | POOL CLUB PV CASA CUPULA",
+      "recinto": "Casa Cupula (#129 Callejon de la Igualdad)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/n-k-d-pool-party-saturdays-3-8-pm-pool-club-pv-casa-cupula-tickets-1993471493901",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Casa Cupula, #129 Callejon de la Igualdad, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Casa Cupula (#129 Callejon de la Igualdad) (N K D POOL PARTY | SATURDAYS |  3 - 8 PM | POOL CLUB PV CASA CUPULA junto a Host / Productora del evento · 2026-11-21), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_circoncierto_by_tromba_vetusta",
+      "fecha": "2026-11-21 al 2026-12-05 (3 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Circoncierto by Tromba Vetusta",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Circoncierto by Tromba Vetusta"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/circoncierto-by-tromba-vetusta/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Circoncierto by Tromba Vetusta junto a Circoncierto by Tromba Vetusta · 2026-11-21 al 2026-12-05 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_diva_3_times_a_broad",
+      "fecha": "2026-11-21 al 2026-12-05 (3 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Diva! – 3 Times a Broad!",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "3 Times a Broad!"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/diva-11/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Diva! – 3 Times a Broad! junto a 3 Times a Broad! · 2026-11-21 al 2026-12-05 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_mama_tits_sweet_release",
+      "fecha": "2026-11-21 al 2026-12-05 (3 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Mama Tits – Sweet Release",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Sweet Release"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/mama-tits-sweet-release-4/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Mama Tits – Sweet Release junto a Sweet Release · 2026-11-21 al 2026-12-05 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_boys_on_fire_villains",
+      "fecha": "2026-11-21 al 2026-12-09 (6 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Boys on Fire: Villains",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Villains"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Parcial — Show Boys on Fire acredita a Eddy Araiza en sesiones promo de calendario; funciones regulares y estrenos de artistas buscan foto de escenario y meet & greet.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/boys-on-fire-villains-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (6 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Boys on Fire: Villains junto a Villains · 2026-11-21 al 2026-12-09 (6 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_big_gay_drag_brunch_at_pool_club_pv",
+      "fecha": "2026-11-22",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "BIG GAY DRAG BRUNCH at POOL CLUB PV | 11am-2pm | SUNDAY BRUNCH",
+      "recinto": "Casa Cupula (#129 Callejon de la Igualdad)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/big-gay-drag-brunch-at-pool-club-pv-11am-2pm-sunday-brunch-tickets-2002466690777",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Casa Cupula, #129 Callejon de la Igualdad, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Casa Cupula (#129 Callejon de la Igualdad) (BIG GAY DRAG BRUNCH at POOL CLUB PV | 11am-2pm | SUNDAY BRUNCH junto a Host / Productora del evento · 2026-11-22), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_tynomi_banks_she_works_hard_for_the",
+      "fecha": "2026-11-22 al 2026-11-29 (2 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Tynomi Banks: She Works Hard for The Money",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "She Works Hard for The Money"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/tynomi-banks-she-works-hard-for-the-money-2/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Tynomi Banks: She Works Hard for The Money junto a She Works Hard for The Money · 2026-11-22 al 2026-11-29 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_jackie_cox_jan_sport_y2j",
+      "fecha": "2026-11-22 al 2026-11-29 (3 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Jackie Cox  & Jan Sport –  Y2J",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Y2J"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/jackie-cox-jan-sport-y2j-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Jackie Cox  & Jan Sport –  Y2J junto a Y2J · 2026-11-22 al 2026-11-29 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_bruce_springsteen_tribute_starring_m",
+      "fecha": "2026-11-22 al 2026-12-06 (2 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Bruce Springsteen Tribute Starring Mau Jiménez",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Mau Jiménez"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/bruce-springsteen-tribute-starring-mau-jimenez-6/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Bruce Springsteen Tribute Starring Mau Jiménez junto a Mau Jiménez · 2026-11-22 al 2026-12-06 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_selena_tribute_como_la_flor_starrin",
+      "fecha": "2026-11-22 al 2026-12-06 (2 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Selena Tribute: Como la Flor Starring Losana",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Losana"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/selena-tribute-como-la-flor-starring-losana-2/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Selena Tribute: Como la Flor Starring Losana junto a Losana · 2026-11-22 al 2026-12-06 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_madonna_tribute_starring_waleska",
+      "fecha": "2026-11-22 al 2026-12-06 (3 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Madonna – Tribute Starring Waleska",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Waleska"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/madonna-tribute-starring-waleska-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Madonna – Tribute Starring Waleska junto a Waleska · 2026-11-22 al 2026-12-06 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_annie_lennox_concert_experience_st",
+      "fecha": "2026-11-23",
+      "horario": "17:00 h",
+      "titulo": "Annie Lennox – Concert Experience Starring Delilah Beaucoup",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Delilah Beaucoup"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/annie-lennox-concert-experience-starring-delilah-beaucoup/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Annie Lennox – Concert Experience Starring Delilah Beaucoup junto a Delilah Beaucoup · 2026-11-23), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_abba_golden",
+      "fecha": "2026-11-23 al 2026-11-30 (2 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Abba: Golden",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Golden"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/abba-golden-4/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Abba: Golden junto a Golden · 2026-11-23 al 2026-11-30 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_miss_conception_scream_kweeen",
+      "fecha": "2026-11-23 al 2026-12-03 (5 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Miss Conception: Scream Kweeen",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Scream Kweeen"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/miss-conception-scream-kweeen/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (5 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Miss Conception: Scream Kweeen junto a Scream Kweeen · 2026-11-23 al 2026-12-03 (5 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_the_vampire_steven_retchless",
+      "fecha": "2026-11-23 al 2026-12-07 (3 funciones)",
+      "horario": "19:00 h",
+      "titulo": "The Vampire – Steven Retchless",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Steven Retchless"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/the-vampire-steven-retchless-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (The Vampire – Steven Retchless junto a Steven Retchless · 2026-11-23 al 2026-12-07 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_copacabana_a_night_of_barry_manilow",
+      "fecha": "2026-11-24",
+      "horario": "17:00 h",
+      "titulo": "Copacabana: A Night of Barry Manilow Starring Nick Rogers",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Nick Rogers"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/copacabana-a-night-of-barry-manilow-starring-nick-rogers/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Copacabana: A Night of Barry Manilow Starring Nick Rogers junto a Nick Rogers · 2026-11-24), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_sutton_lee_seymour_sasshole",
+      "fecha": "2026-11-24 al 2026-12-04 (4 funciones)",
+      "horario": "19:00 h",
+      "titulo": "Sutton Lee Seymour: Sasshole",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Sasshole"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/sutton-lee-seymour-sasshole/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (4 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Sutton Lee Seymour: Sasshole junto a Sasshole · 2026-11-24 al 2026-12-04 (4 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_rouge_cabaret",
+      "fecha": "2026-11-25 al 2026-12-09 (3 funciones)",
+      "horario": "17:00 h",
+      "titulo": "Rouge Cabaret",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Rouge Cabaret"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/rouge-cabaret-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (3 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Rouge Cabaret junto a Rouge Cabaret · 2026-11-25 al 2026-12-09 (3 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_pink_tribute_starring_eva_jimenez",
+      "fecha": "2026-11-26",
+      "horario": "21:00 h",
+      "titulo": "Pink – Tribute Starring Eva Jimenez",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Eva Jimenez"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/pink-tribute-starring-eva-jimenez-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Pink – Tribute Starring Eva Jimenez junto a Eva Jimenez · 2026-11-26), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_thanksgiving_dinner_show_at_pool_c",
+      "fecha": "2026-11-26",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Thanksgiving Dinner & Show at Pool Club PV by Casa Cupula| 2026",
+      "recinto": "Pool Club PV (Amapas)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/thanksgiving-dinner-show-at-pool-club-pv-by-casa-cupula-2026-tickets-1996318091150",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Pool Club PV, Amapas, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Pool Club PV (Amapas) (Thanksgiving Dinner & Show at Pool Club PV by Casa Cupula| 2026 junto a DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc · 2026-11-26), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_thanksgiving_festival_2026",
+      "fecha": "2026-11-26 al 2026-11-29",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Thanksgiving festival 2026",
+      "recinto": "Lázaro Cárdenas 258 (258 Lázaro Cárdenas)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com.mx/e/thanksgiving-festival-2026-tickets-1997089299856",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Lázaro Cárdenas 258, 258 Lázaro Cárdenas, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Lázaro Cárdenas 258 (258 Lázaro Cárdenas) (Thanksgiving festival 2026 junto a DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc · 2026-11-26 al 2026-11-29), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_forever_in_blue_jeans_neil_diamond",
+      "fecha": "2026-11-27",
+      "horario": "17:00 h",
+      "titulo": "Forever in Blue Jeans: Neil Diamond – The Tribute",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "The Tribute"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/forever-in-blue-jeans-neil-diamond-the-tribute-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Forever in Blue Jeans: Neil Diamond – The Tribute junto a The Tribute · 2026-11-27), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_kim_kuzma_best_of_acustico",
+      "fecha": "2026-11-27",
+      "horario": "17:00 h",
+      "titulo": "Kim Kuzma: Best of Acústico",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Best of Acústico"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/kim-kuzma-best-of-acustico/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Kim Kuzma: Best of Acústico junto a Best of Acústico · 2026-11-27), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_starman_david_bowie_tribute_starrin",
+      "fecha": "2026-11-28",
+      "horario": "17:00 h",
+      "titulo": "Starman: David Bowie Tribute Starring Jordon Carnegie",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Jordon Carnegie"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/starman-david-bowie-tribute-starring-jordon-carnegie/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Starman: David Bowie Tribute Starring Jordon Carnegie junto a Jordon Carnegie · 2026-11-28), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_gaga_a_confession_starring_maru_pra",
+      "fecha": "2026-11-28 al 2026-12-05 (2 funciones)",
+      "horario": "21:00 h",
+      "titulo": "Gaga: A Confession Starring Maru Prado",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Maru Prado"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/gaga-a-confession-starring-maru-prado-11/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (2 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Gaga: A Confession Starring Maru Prado junto a Maru Prado · 2026-11-28 al 2026-12-05 (2 funciones)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_james_taylor_jim_croce_storytelle",
+      "fecha": "2026-11-29",
+      "horario": "17:00 h",
+      "titulo": "James Taylor & Jim Croce: Storytellers",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Storytellers"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/james-taylor-jim-croce-storytellers-2/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (James Taylor & Jim Croce: Storytellers junto a Storytellers · 2026-11-29), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_shine_on_an_evening_with_pink_floyd",
+      "fecha": "2026-11-29",
+      "horario": "17:00 h",
+      "titulo": "Shine On: An Evening with Pink Floyd",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "An Evening with Pink Floyd"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/shine-on-an-evening-with-pink-floyd-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Shine On: An Evening with Pink Floyd junto a An Evening with Pink Floyd · 2026-11-29), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_purple_the_music_of_prince_starring",
+      "fecha": "2026-11-30",
+      "horario": "21:00 h",
+      "titulo": "Purple: The Music of Prince Starring Joi Carter",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Joi Carter"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/purple-the-music-of-prince-starring-joi-varter-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Purple: The Music of Prince Starring Joi Carter junto a Joi Carter · 2026-11-30), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_sherry_vine_dirty_blonde",
+      "fecha": "2026-12-01",
+      "horario": "21:00 h",
+      "titulo": "Sherry Vine: Dirty Blonde",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Dirty Blonde"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/sherry-vine-dirty-blonde/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Sherry Vine: Dirty Blonde junto a Dirty Blonde · 2026-12-01), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_the_palm_c_celine_dion_tribute_starring_mariana",
+      "fecha": "2026-12-04",
+      "horario": "17:00 h",
+      "titulo": "Céline Dion Tribute Starring Mariana Vigueras",
+      "recinto": "The Palm Cabaret & Bar (Olas Altas 508)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Mariana Vigueras"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://thepalmcabaret.com/event/celine-dion-tribute-starring-mariana-vigueras/",
+      "fuente_portal": "ThePalmCabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Palm Cabaret & Bar (Olas Altas 508) (Céline Dion Tribute Starring Mariana Vigueras junto a Mariana Vigueras · 2026-12-04), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_dont_cry_for_me_argentina",
+      "fecha": "2026-12-06",
+      "horario": "17:00 h",
+      "titulo": "Don’t Cry For Me Argentina",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "Don’t Cry For Me Argentina"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/dont-cry-for-me-argentina-2/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (Don’t Cry For Me Argentina junto a Don’t Cry For Me Argentina · 2026-12-06), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_madera_strings_at_nacho_daddy",
+      "fecha": "2026-12-06",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Madera Strings at Nacho Daddy",
+      "recinto": "Nacho Daddy (287 Basilio Badillo)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Madera Strings (Música en vivo)"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/madera-strings-at-nacho-daddy-tickets-2002395425621",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Nacho Daddy, 287 Basilio Badillo, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Nacho Daddy (287 Basilio Badillo) (Madera Strings at Nacho Daddy junto a Madera Strings (Música en vivo) · 2026-12-06), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "cab_coco_cabar_oda_by_tromba_vetusta",
+      "fecha": "2026-12-10",
+      "horario": "17:00 h",
+      "titulo": "ODA by Tromba Vetusta",
+      "recinto": "Coco Cabaret by The Palm (Fco. I. Madero 289)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Cabaret, Tributo Musical & Teatro en Vivo",
+      "invitados_artistas_lineup": [
+        "ODA by Tromba Vetusta"
+      ],
+      "influencers_relacionados": [
+        "Creadores LGBT+, fans de teatro musical y reseñadores locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta / Promo Ocasional — Las funciones semanales dependen de celulares del público o cortesías antiguas; fuerte oportunidad de paquete foto + reels por artista/productora.",
+      "estado_oportunidad_captoora": "Abierta / Paquete Artista & Productora",
+      "fuente_url": "https://coco-cabaret.com/event/oda-by-tromba-vetusta-3/",
+      "fuente_portal": "Coco-Cabaret.com",
+      "resumen": "Residencia o función confirmada en calendario oficial (1 fecha(s) registradas desde 2026-11-18).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret by The Palm (Fco. I. Madero 289) (ODA by Tromba Vetusta junto a ODA by Tromba Vetusta · 2026-12-10), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_industry_new_years_celebration_festi",
+      "fecha": "2026-12-28 al 2027-01-03",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "INDUSTRY NEW YEARS CELEBRATION FESTIVAL 2027",
+      "recinto": "Lázaro Cárdenas 258 (258 Lázaro Cárdenas)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com.mx/e/industry-new-years-celebration-festival-2027-tickets-1992294707100",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Lázaro Cárdenas 258, 258 Lázaro Cárdenas, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Lázaro Cárdenas 258 (258 Lázaro Cárdenas) (INDUSTRY NEW YEARS CELEBRATION FESTIVAL 2027 junto a DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc · 2026-12-28 al 2027-01-03), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_mantamar_new_years_2027_festival",
+      "fecha": "2026-12-29 al 2027-01-03",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "Mantamar New Years 2027 Festival",
+      "recinto": "Mantamar Beach Club Bar & Sushi (169 Malecón)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/mantamar-new-years-2027-festival-tickets-1979630368723",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Mantamar Beach Club Bar & Sushi, 169 Malecón, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club Bar & Sushi (169 Malecón) (Mantamar New Years 2027 Festival junto a Host / Productora del evento · 2026-12-29 al 2027-01-03), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_new_years_fireworks_party_2027_ca",
+      "fecha": "2026-12-31",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "New Year’s Fireworks Party 2027 - Casa Cupula & Pool Club  Fiesta año nuevo",
+      "recinto": "Pool Club PV (Amapas)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Host / Productora del evento"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/new-years-fireworks-party-2027-casa-cupula-pool-club-fiesta-ano-nuevo-tickets-1996319146306",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Pool Club PV, Amapas, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Pool Club PV (Amapas) (New Year’s Fireworks Party 2027 - Casa Cupula & Pool Club  Fiesta año nuevo junto a Host / Productora del evento · 2026-12-31), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_new_years_eve_at_the_tryst_puerto_va",
+      "fecha": "2026-12-31 al 2027-01-01",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "New Years Eve at The Tryst Puerto Vallarta with Countess Luann",
+      "recinto": "The Tryst Puerto Vallarta (138 Púlpito)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "Countess Luann (The Real Housewives / Cabaret Star)"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com/e/new-years-eve-at-the-tryst-puerto-vallarta-with-countess-luann-tickets-2004456685906",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en The Tryst Puerto Vallarta, 138 Púlpito, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Tryst Puerto Vallarta (138 Púlpito) (New Years Eve at The Tryst Puerto Vallarta with Countess Luann junto a Countess Luann (The Real Housewives / Cabaret Star) · 2026-12-31 al 2027-01-01), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "eb_industry_bearfest_2027",
+      "fecha": "2027-01-26 al 2027-01-31",
+      "horario": "Ver horario en Eventbrite",
+      "titulo": "INDUSTRY BEARFEST 2027",
+      "recinto": "Lázaro Cárdenas 258 (258 Lázaro Cárdenas)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Concierto / Fiesta / Networking (Eventbrite)",
+      "invitados_artistas_lineup": [
+        "DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc"
+      ],
+      "influencers_relacionados": [
+        "Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://www.eventbrite.com.mx/e/industry-bearfest-2027-tickets-1992104245424",
+      "fuente_portal": "Eventbrite.com",
+      "resumen": "Evento presencial confirmado en Lázaro Cárdenas 258, 258 Lázaro Cárdenas, Puerto Vallarta.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Lázaro Cárdenas 258 (258 Lázaro Cárdenas) (INDUSTRY BEARFEST 2027 junto a DJs Luis Vázquez, Alex Ramos, Alex Acosta, Diego Álvarez, Alberto Ponzo, Ed Rodriguez, Leo Blanco, Marc · 2027-01-26 al 2027-01-31), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "gaypv-keiino-coco-cabaret-ene2027",
+      "fecha": "23, 24, 27, 28, 29 y 30 Ene 2027",
+      "horario": "Horario por función",
+      "titulo": "KEiiNO Live in Puerto Vallarta (Trío Eurovisión)",
+      "recinto": "Coco Cabaret (Fco. I. Madero 289, Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Concierto Internacional Pop / Eurovisión",
+      "invitados_artistas_lineup": [
+        "Alexandra Rotan, Tom Hugo y Fred Buljo (KEiiNO)"
+      ],
+      "influencers_relacionados": [
+        "Fans internacionales de Eurovisión, prensa LGBTQ+ PV y GAYPV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Residencia internacional de 6 fechas con alta oportunidad para press kit editorial y meet & greet VIP.",
+      "estado_oportunidad_captoora": "Abierta / Artista Internacional 6 Fechas",
+      "fuente_url": "https://gaypv.com/blog/theater-and-cabaret/keiino-puerto-vallarta-coco-cabaret/",
+      "fuente_portal": "GAYPV.com",
+      "resumen": "Residencia confirmada de 6 shows del trío noruego KEiiNO en Coco Cabaret.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Coco Cabaret (Fco. I. Madero 289, Zona Romántica) (KEiiNO Live in Puerto Vallarta (Trío Eurovisión) junto a Alexandra Rotan, Tom Hugo y Fred Buljo (KEiiNO) · 23, 24, 27, 28, 29 y 30 Ene 2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "vpv-mantamar-bear-week-2027",
+      "fecha": "25-01-2027 al 31-01-2027",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "Mantamar Bear Week 2027",
+      "recinto": "Mantamar Beach Club & Zona Romántica",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Festival & DJs",
+      "invitados_artistas_lineup": [
+        "Talento y anfitriones oficiales del programa PV"
+      ],
+      "influencers_relacionados": [
+        "Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/mantamar-bear-week-2027",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " Mantamar Bear Week 2027 Mantamar Bear Week 2027 Inicia : 25-01-2027 Finaliza : 31-01-2027 Mantamar Bear Week 2027 reunirá, durante toda una semana, a la comunidad bear, sus admiradores y visitantes de distintos países en uno de los escenarios frente al mar más conocidos de Puert",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club & Zona Romántica (Mantamar Bear Week 2027 junto a Talento y anfitriones oficiales del programa PV · 25-01-2027 al 31-01-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_a_country_christmas",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "A COUNTRY CHRISTMAS",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "A Country Christmas"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (A COUNTRY CHRISTMAS).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (A COUNTRY CHRISTMAS junto a A Country Christmas · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_a_very_gaga_holiday",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "A VERY GAGA HOLIDAY",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "A Very Gaga Holiday"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (A VERY GAGA HOLIDAY).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (A VERY GAGA HOLIDAY junto a A Very Gaga Holiday · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_a_very_liberace_christmas",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "A VERY LIBERACE CHRISTMAS",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "A Very Liberace Christmas"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (A VERY LIBERACE CHRISTMAS).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (A VERY LIBERACE CHRISTMAS junto a A Very Liberace Christmas · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_cabaret_noir_with_lina_koutrakos",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "CABARET NOIR WITH LINA KOUTRAKOS",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Cabaret Noir With Lina Koutrakos"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (CABARET NOIR WITH LINA KOUTRAKOS).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (CABARET NOIR WITH LINA KOUTRAKOS junto a Cabaret Noir With Lina Koutrakos · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_carlos_santana_gipsy_kings_a_tribut",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "CARLOS SANTANA & GIPSY KINGS: A TRIBUTE",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Carlos Santana & Gipsy Kings: A Tribute"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (CARLOS SANTANA & GIPSY KINGS: A TRIBUTE).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (CARLOS SANTANA & GIPSY KINGS: A TRIBUTE junto a Carlos Santana & Gipsy Kings: A Tribute · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_dueling_pianos",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "DUELING PIANOS",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Dueling Pianos"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (DUELING PIANOS).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (DUELING PIANOS junto a Dueling Pianos · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_giselle_y_suite_de_casanueces",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "GISELLE Y SUITE DE CASANUECES",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Giselle Y Suite De Casanueces"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (GISELLE Y SUITE DE CASANUECES).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (GISELLE Y SUITE DE CASANUECES junto a Giselle Y Suite De Casanueces · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_latina_royale_xmas_xtravaganza",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "LATINA ROYALE XMAS XTRAVAGANZA",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Latina Royale Xmas Xtravaganza"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (LATINA ROYALE XMAS XTRAVAGANZA).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (LATINA ROYALE XMAS XTRAVAGANZA junto a Latina Royale Xmas Xtravaganza · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_motown_beyond_featuring_gabriela_he",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "MOTOWN & BEYOND: FEATURING GABRIELA HEART",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Motown & Beyond: Featuring Gabriela Heart"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (MOTOWN & BEYOND: FEATURING GABRIELA HEART).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (MOTOWN & BEYOND: FEATURING GABRIELA HEART junto a Motown & Beyond: Featuring Gabriela Heart · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_pv_cabaret_workshop_showcase",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "PV CABARET WORKSHOP SHOWCASE",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "Pv Cabaret Workshop Showcase"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (PV CABARET WORKSHOP SHOWCASE).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (PV CABARET WORKSHOP SHOWCASE junto a Pv Cabaret Workshop Showcase · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_the_beatles_now_and_then",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "THE BEATLES: NOW AND THEN",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "The Beatles: Now And Then"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (THE BEATLES: NOW AND THEN).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (THE BEATLES: NOW AND THEN junto a The Beatles: Now And Then · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_the_best_of_broadway",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "THE BEST OF BROADWAY",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "The Best Of Broadway"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (THE BEST OF BROADWAY).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (THE BEST OF BROADWAY junto a The Best Of Broadway · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "act2_the_best_of_los_bambinos",
+      "fecha": "Nov 2026 – Ene 2027 (Cartelera Activa)",
+      "horario": "17:00 – 21:30 h según función",
+      "titulo": "THE BEST OF LOS BAMBINOS",
+      "recinto": "Act2PV Entertainment Complex (Basilio Badillo 300)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Circuito Cabaret & Teatros",
+      "categoria": "Teatro Musical, Cabaret & Especiales Navideños",
+      "invitados_artistas_lineup": [
+        "The Best Of Los Bambinos"
+      ],
+      "influencers_relacionados": [
+        "Alexis Mateo / Xunami Muse (en Latina Royale), Mark Hartman, Lina Koutrakos, comunidad teatral PV"
+      ],
+      "cobertura_fotografica_detectada": "Abierta — Cartelera múltiple con shows navideños nuevos sin crédito editorial fijo en ficha web.",
+      "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado",
+      "fuente_url": "https://act2pv.com/",
+      "fuente_portal": "Act2PV.com",
+      "resumen": "Producción en cartelera de temporada alta en Act2PV (THE BEST OF LOS BAMBINOS).",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Act2PV Entertainment Complex (Basilio Badillo 300) (THE BEST OF LOS BAMBINOS junto a The Best Of Los Bambinos · Nov 2026 – Ene 2027 (Cartelera Activa)), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "oapv-sula-bow-wow-gala",
+      "fecha": "04 Dic 2026",
+      "horario": "Gala nocturna",
+      "titulo": "4th Annual Sula Bow Wow Gala",
+      "recinto": "Sede Zona Romántica / Centro PV (The Sula Society)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Gala Filantrópica & Networking Expat",
+      "invitados_artistas_lineup": [
+        "Donantes y patronato The Sula Society",
+        "Patrocinadores locales"
+      ],
+      "influencers_relacionados": [
+        "Comunidad expat residente, amantes de mascotas y medios locales PV"
+      ],
+      "cobertura_fotografica_detectada": "Parcial — Suelen publicar reseña posterior, pero sin paquetes inmediatos para patrocinadores o retratos editoriales de gala.",
+      "estado_oportunidad_captoora": "Parcial / Oportunidad Gala & Patrocinadores",
+      "fuente_url": "https://outandaboutpv.com/sula-bow-wow-gala-set-for-dec-4-to-support-rescue-dogs/",
+      "fuente_portal": "OutAndAboutPV.com",
+      "resumen": "Cuarta gala anual benéfica con subasta, música en vivo y cena.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Sede Zona Romántica / Centro PV (The Sula Society) (4th Annual Sula Bow Wow Gala junto a Donantes y patronato The Sula Society, Patrocinadores locales · 04 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "vpv-gay-mixers-2026-2027",
+      "fecha": "06-10-2026 al 25-05-2027",
+      "horario": "Consultar sede / ficha oficial",
+      "titulo": "Gay+ Mixers 2026-2027",
+      "recinto": "Sedes rotativas ZR / Centro / Versalles (Daiquiri Dicks, Trovasi, Red Door Versalles, Casa Cupula)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Networking & Comunidad LGBTQ+",
+      "invitados_artistas_lineup": [
+        "Out & About PV",
+        "Henry Ho / Jeremy Reigel",
+        "Chefs y anfitriones locales semanales"
+      ],
+      "influencers_relacionados": [
+        "Out & About PV (Adan Villa cubre ediciones selectas)",
+        "Emprendedores expat & creadores LGBTQ+"
+      ],
+      "cobertura_fotografica_detectada": "Parcial — Out & About PV (Adan Villa) cubre varias noches; marcas patrocinadoras, bares anfitriones e invitados VIP carecen de galería propia mismo día.",
+      "estado_oportunidad_captoora": "Parcial / Oportunidad VIP & Marcas",
+      "fuente_url": "https://visitapuertovallarta.com.mx/eventos/gay-mixers-2026-2027",
+      "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)",
+      "resumen": " Gay+ Mixers 2026-2027 Gay+ Mixers 2026-2027 Inicia : 06-10-2026 Finaliza : 25-05-2027 La revista local Out & About PV presenta la nueva temporada de Gay+ Mixers, una serie de eventos sociales semanales, abiertos a las personas LGBTQ+ y sus aliados, con sede en diferentes venues ",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Sedes rotativas ZR / Centro / Versalles (Daiquiri Dicks, Trovasi, Red Door Versalles, Casa Cupula) (Gay+ Mixers 2026-2027 junto a Out & About PV, Henry Ho / Jeremy Reigel · 06-10-2026 al 25-05-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "mlk_weekend_2027_mantamar_beach_club",
+      "fecha": "15 – 17 Ene 2027",
+      "horario": "11:00 AM",
+      "titulo": "MLK Weekend 2027 @ Mantamar Beach Club",
+      "recinto": "Mantamar Beach Club | Bar & Sushi (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Beach Club / Festival Música Electrónica & Circuito",
+      "invitados_artistas_lineup": [
+        "DJs invitados circuito norteamericano"
+      ],
+      "influencers_relacionados": [
+        "Creadores fitness & circuito LGBTQ+ internacional (ej. círculo Boys on Fire / Jordano Garcia / visitantes CDMX-EUA)"
+      ],
+      "cobertura_fotografica_detectada": "Parcial / Oportunidad Patrocinadores & DJs — Fotografía general de club sin servicio dedicado de reels inmediatos para cabanas VIP ni DJs invitados.",
+      "estado_oportunidad_captoora": "Parcial / Venta a DJs, Cabanas VIP & Patrocinadores",
+      "fuente_url": "https://mantamarvallarta.com/es/eventos-gay-puerto-vallarta",
+      "fuente_portal": "MantamarVallarta.com",
+      "resumen": "Festival oficial confirmado en calendario Mantamar Beach Club.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club | Bar & Sushi (Zona Romántica) (MLK Weekend 2027 @ Mantamar Beach Club junto a DJs invitados circuito norteamericano · 15 – 17 Ene 2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "brawny_bear_weekend_mantamar_beach_club",
+      "fecha": "19 – 22 Nov 2026",
+      "horario": "11:00 AM",
+      "titulo": "Brawny Bear Weekend @ Mantamar Beach Club",
+      "recinto": "Mantamar Beach Club | Bar & Sushi (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Beach Club / Festival Música Electrónica & Circuito",
+      "invitados_artistas_lineup": [
+        "10+ DJs internacionales y residentes Brawny Bear",
+        "Fiestas de alberca y espuma"
+      ],
+      "influencers_relacionados": [
+        "Creadores fitness & circuito LGBTQ+ internacional (ej. círculo Boys on Fire / Jordano Garcia / visitantes CDMX-EUA)"
+      ],
+      "cobertura_fotografica_detectada": "Parcial / Oportunidad Patrocinadores & DJs — Fotografía general de club sin servicio dedicado de reels inmediatos para cabanas VIP ni DJs invitados.",
+      "estado_oportunidad_captoora": "Parcial / Venta a DJs, Cabanas VIP & Patrocinadores",
+      "fuente_url": "https://mantamarvallarta.com/es/eventos-gay-puerto-vallarta",
+      "fuente_portal": "MantamarVallarta.com",
+      "resumen": "Festival oficial confirmado en calendario Mantamar Beach Club.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club | Bar & Sushi (Zona Romántica) (Brawny Bear Weekend @ Mantamar Beach Club junto a 10+ DJs internacionales y residentes Brawny Bear, Fiestas de alberca y espuma · 19 – 22 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "mantamar_bear_week_2027",
+      "fecha": "25 Ene – 01 Feb 2027",
+      "horario": "11:00 AM",
+      "titulo": "Mantamar Bear Week 2027",
+      "recinto": "Mantamar Beach Club | Bar & Sushi (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Beach Club / Festival Música Electrónica & Circuito",
+      "invitados_artistas_lineup": [
+        "DJs internacionales + Bear Week PV"
+      ],
+      "influencers_relacionados": [
+        "Creadores fitness & circuito LGBTQ+ internacional (ej. círculo Boys on Fire / Jordano Garcia / visitantes CDMX-EUA)"
+      ],
+      "cobertura_fotografica_detectada": "Parcial / Oportunidad Patrocinadores & DJs — Fotografía general de club sin servicio dedicado de reels inmediatos para cabanas VIP ni DJs invitados.",
+      "estado_oportunidad_captoora": "Parcial / Venta a DJs, Cabanas VIP & Patrocinadores",
+      "fuente_url": "https://mantamarvallarta.com/es/eventos-gay-puerto-vallarta",
+      "fuente_portal": "MantamarVallarta.com",
+      "resumen": "Festival oficial confirmado en calendario Mantamar Beach Club.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club | Bar & Sushi (Zona Romántica) (Mantamar Bear Week 2027 junto a DJs internacionales + Bear Week PV · 25 Ene – 01 Feb 2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "thanksgiving_weekend_mantamar_beach_club",
+      "fecha": "26 – 29 Nov 2026",
+      "horario": "11:00 AM",
+      "titulo": "Thanksgiving Weekend @ Mantamar Beach Club",
+      "recinto": "Mantamar Beach Club | Bar & Sushi (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Beach Club / Festival Música Electrónica & Circuito",
+      "invitados_artistas_lineup": [
+        "Lineup DJs circuito internacional Thanksgiving PV"
+      ],
+      "influencers_relacionados": [
+        "Creadores fitness & circuito LGBTQ+ internacional (ej. círculo Boys on Fire / Jordano Garcia / visitantes CDMX-EUA)"
+      ],
+      "cobertura_fotografica_detectada": "Parcial / Oportunidad Patrocinadores & DJs — Fotografía general de club sin servicio dedicado de reels inmediatos para cabanas VIP ni DJs invitados.",
+      "estado_oportunidad_captoora": "Parcial / Venta a DJs, Cabanas VIP & Patrocinadores",
+      "fuente_url": "https://mantamarvallarta.com/es/eventos-gay-puerto-vallarta",
+      "fuente_portal": "MantamarVallarta.com",
+      "resumen": "Festival oficial confirmado en calendario Mantamar Beach Club.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club | Bar & Sushi (Zona Romántica) (Thanksgiving Weekend @ Mantamar Beach Club junto a Lineup DJs circuito internacional Thanksgiving PV · 26 – 29 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "mantamar_new_years_2027_festival",
+      "fecha": "29 Dic 2026 – 03 Ene 2027",
+      "horario": "11:00 AM",
+      "titulo": "Mantamar New Years 2027 Festival",
+      "recinto": "Mantamar Beach Club | Bar & Sushi (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Beach Club / Festival Música Electrónica & Circuito",
+      "invitados_artistas_lineup": [
+        "DJs internacionales de circuito, go-go dancers y cierre NYE frente al mar"
+      ],
+      "influencers_relacionados": [
+        "Creadores fitness & circuito LGBTQ+ internacional (ej. círculo Boys on Fire / Jordano Garcia / visitantes CDMX-EUA)"
+      ],
+      "cobertura_fotografica_detectada": "Parcial / Oportunidad Patrocinadores & DJs — Fotografía general de club sin servicio dedicado de reels inmediatos para cabanas VIP ni DJs invitados.",
+      "estado_oportunidad_captoora": "Parcial / Venta a DJs, Cabanas VIP & Patrocinadores",
+      "fuente_url": "https://mantamarvallarta.com/es/eventos-gay-puerto-vallarta",
+      "fuente_portal": "MantamarVallarta.com",
+      "resumen": "Festival oficial confirmado en calendario Mantamar Beach Club.",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de Mantamar Beach Club | Bar & Sushi (Zona Romántica) (Mantamar New Years 2027 Festival junto a DJs internacionales de circuito, go-go dancers y cierre NYE frente al mar · 29 Dic 2026 – 03 Ene 2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "fgi_safari_gourmet_puerto_vallarta",
+      "fecha": "Miércoles 18 Nov 2026",
+      "horario": "18:00 h",
+      "titulo": "Safari Gourmet Puerto Vallarta (El Dorado · Azafrán · Le Bistro · Café des Artistes)",
+      "recinto": "El Dorado -> Azafrán -> Le Bistro -> Café des Artistes",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Olas Altas / Gastronomía / Mixers",
+      "categoria": "Gastronomía de Alta Gama / Festival Gourmet",
+      "invitados_artistas_lineup": [
+        "Chefs de El Dorado, Azafrán, Le Bistro y Thierry Blouet (Café des Artistes)",
+        "Casas vinícolas Viparmex"
+      ],
+      "influencers_relacionados": [
+        "Creadores foodie PV/GDL, prensa gastronómica y sommeliers"
+      ],
+      "cobertura_fotografica_detectada": "Parcial — Prensa institucional general del festival; alta demanda individual de restaurantes anfitriones, chefs invitados y bodegas de vino para reels y retrato privado.",
+      "estado_oportunidad_captoora": "Parcial / Oportunidad Chefs & Restaurantes",
+      "fuente_url": "https://festivalgourmet.com.mx/programa/",
+      "fuente_portal": "FestivalGourmet.com.mx (Edición 31)",
+      "resumen": "Programa – Festival Gourmet Internacional Ir al contenido Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Comprar boletos ",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de El Dorado -> Azafrán -> Le Bistro -> Café des Artistes (Safari Gourmet Puerto Vallarta (El Dorado · Azafrán · Le Bistro · Café des Artistes) junto a Chefs de El Dorado, Azafrán, Le Bistro y Thierry Blouet (Café des Artistes), Casas vinícolas Viparmex · Miércoles 18 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos fotografía editorial culinaria, emplatado con iluminación controlada, retratos de chefs y cobertura discreta en mesa VIP el mismo día. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, menús luminosos o placas QR en acrílico óptico y madera sellada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    },
+    {
+      "id": "fgi_sky_drag_brunch_31o_festival_g",
+      "fecha": "Sábado 21 Nov 2026",
+      "horario": "09:00 h",
+      "titulo": "Sky Drag Brunch · 31º Festival Gourmet Internacional",
+      "recinto": "The Top Sky Bar — Almar Resort (Zona Romántica)",
+      "zona": "zona_romantica",
+      "subzona": "Zona Romántica · Beach Clubs, Hoteles Boutique & Nightlife",
+      "categoria": "Gastronomía de Alta Gama / Festival Gourmet",
+      "invitados_artistas_lineup": [
+        "Talento Drag residente de The Top Sky Bar",
+        "Mixología & gastronomía FGI"
+      ],
+      "influencers_relacionados": [
+        "Creadores foodie PV/GDL, prensa gastronómica y sommeliers"
+      ],
+      "cobertura_fotografica_detectada": "Parcial — Prensa institucional general del festival; alta demanda individual de restaurantes anfitriones, chefs invitados y bodegas de vino para reels y retrato privado.",
+      "estado_oportunidad_captoora": "Parcial / Oportunidad Chefs & Restaurantes",
+      "fuente_url": "https://festivalgourmet.com.mx/programa/",
+      "fuente_portal": "FestivalGourmet.com.mx (Edición 31)",
+      "resumen": "Programa – Festival Gourmet Internacional Ir al contenido Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Comprar boletos ",
+      "lead_gmaps_vinculado": null,
+      "guion_acercamiento_captoora": "Hola equipo de The Top Sky Bar — Almar Resort (Zona Romántica) (Sky Drag Brunch · 31º Festival Gourmet Internacional junto a Talento Drag residente de The Top Sky Bar, Mixología & gastronomía FGI · Sábado 21 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Romántica. Trabajamos fotografía editorial culinaria, emplatado con iluminación controlada, retratos de chefs y cobertura discreta en mesa VIP el mismo día. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, menús luminosos o placas QR en acrílico óptico y madera sellada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"
+    }
+  ]
+}

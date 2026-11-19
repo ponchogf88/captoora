@@ -1,0 +1,4569 @@
+[
+  {
+    "title": "Galeria Colectika",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "#858 G. Sánchez, Calle Allende esquina, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "#858 G. Sánchez, Calle Allende esquina",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "https://peyotepeople.com/",
+    "phone": "+52 322 222 1007",
+    "phoneUnformatted": "+523222221007",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.612933,
+      "lng": -105.2313897
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJwZAaUkVFIYQRIoDKlWA8W_0",
+    "categories": [
+      "Galería de arte"
+    ],
+    "fid": "0x84214545521a90c1:0xfd5b3c6095ca8022",
+    "cid": "18256251900004040738",
+    "reviewsCount": 76,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 5,
+      "fiveStar": 69
+    },
+    "imagesCount": 306,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.466Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Galeria%20Colectika&query_place_id=ChIJwZAaUkVFIYQRIoDKlWA8W_0",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLf4mP6K3C3I8RbymiMfv-gld2EuchGbYJWlHDQNmCb1lYZ2N_6b2H4cTz9YTwZein5kOp3YSFqOX8bI0ka9yEp63OMhnVYcgQgQPoesmmPVt1Sx2iQJKZ-s28loUfT8AHobDegV=w408-h306-k-no",
+    "kgmid": "/g/11b5yq62yd",
+    "businessProfileId": "14524440945715740056",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "GALERIA INDIGENA",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "C. Juárez 628, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 628",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://m.facebook.com/Galer%C3%ADa-Ind%C3%ADgena-352728288203969/?locale2=es_LA",
+    "phone": "+52 322 223 0800",
+    "phoneUnformatted": "+523222230800",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6110195,
+      "lng": -105.2333414
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJCdi1kE9FIYQR9EL1bfhrOKo",
+    "categories": [
+      "Galería de arte"
+    ],
+    "fid": "0x8421454f90b5d809:0xaa386bf86df542f4",
+    "cid": "12265672299884397300",
+    "reviewsCount": 61,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 1,
+      "threeStar": 2,
+      "fourStar": 5,
+      "fiveStar": 53
+    },
+    "imagesCount": 73,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.467Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=GALERIA%20INDIGENA&query_place_id=ChIJCdi1kE9FIYQR9EL1bfhrOKo",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfoDs3Gelfqd_RpTa2wgXUSImc9MuEBrOUTEJm_9YeRCF3ssOt-3oOM2uvlr68MWT9JHZ5bAcGuFxZzUsJ3uJffuIeeL0BGDYtoAVr7cxEQRI6K1rNOrjZSbBo8dp2ciNsqWPTQ=w408-h541-k-no",
+    "kgmid": "/g/1ydk8jplv",
+    "businessProfileId": "14136378668397074160",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Galería Uno",
+    "subTitle": null,
+    "description": "Galería íntima en una estructura de adobe blanca que exhibe obras de artistas mexicanos desde 1971.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "C. Juárez 712, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 712",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.galeriauno.com/",
+    "phone": "+52 322 222 0908",
+    "phoneUnformatted": "+523222220908",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6117803,
+      "lng": -105.2328745
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJFapAqU5FIYQRlhmhvGecHZI",
+    "categories": [
+      "Galería de arte",
+      "Atracción turística"
+    ],
+    "fid": "0x8421454ea940aa15:0x921d9c67bca11996",
+    "cid": "10528743473222326678",
+    "reviewsCount": 59,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 1,
+      "threeStar": 1,
+      "fourStar": 8,
+      "fiveStar": 48
+    },
+    "imagesCount": 203,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.467Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10:30 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10:30 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10:30 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10:30 AM to 3 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10:30 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10:30 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Galer%C3%ADa%20Uno&query_place_id=ChIJFapAqU5FIYQRlhmhvGecHZI",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLci7xTWJFUjhzSqFO9WJfFnJKWC-XNOutAMJDyj10noc8DuP7AV3FXnHabssFM0_XiVrexfBRU9Z5FFnMOvB8NOPSJR8WM6rX7_jgvBnnuIYqiROulh2OoHmYbMbUhJEb8HZk-LSg=w408-h544-k-no",
+    "kgmid": "/g/1tr7jpys",
+    "businessProfileId": "3428744287218516602",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Galeria Omar Alonso",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "Leona Vicario 249, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Leona Vicario 249",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://galeriaomaralonso.com/%20email%20galeriaomaralonso@gmail.com",
+    "phone": "+52 322 222 5587",
+    "phoneUnformatted": "+523222225587",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.611995,
+      "lng": -105.2321797
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJW8ZI9k9FIYQRvMKV856or5o",
+    "categories": [
+      "Galería de arte"
+    ],
+    "fid": "0x8421454ff648c65b:0x9aafa89ef395c2bc",
+    "cid": "11146313003410244284",
+    "reviewsCount": 18,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 17
+    },
+    "imagesCount": 63,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.467Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "11 AM to 10 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "11 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "11 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "11 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "11 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "11 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Galeria%20Omar%20Alonso&query_place_id=ChIJW8ZI9k9FIYQRvMKV856or5o",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeTek-oYwJowHHV71fTsDmv5Mv4-Z8gMur3-OGut0wN3_YOKfQoHbknORZgrnl4WIqCY6LGCQEf8zTTGALtUBbIzz5Q66qSzckiF73gCpAuzLnhvGEXEWkXgH1_lkg-tOUA_1NrG6zGl6hM=w408-h280-k-no",
+    "kgmid": "/g/1td9__l1",
+    "businessProfileId": "11477513333046179087",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Browne galeria",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "Leona Vicario 230C, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Leona Vicario 230C",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://galeriabrowne.com/",
+    "phone": "+52 322 318 1436",
+    "phoneUnformatted": "+523223181436",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6119475,
+      "lng": -105.2323997
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJE89qL_dFIYQRIiyvc-wqy1w",
+    "categories": [
+      "Galería de arte",
+      "Interiorista"
+    ],
+    "fid": "0x842145f72f6acf13:0x5ccb2aec73af2c22",
+    "cid": "6686485266803141666",
+    "reviewsCount": 33,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 2,
+      "fiveStar": 31
+    },
+    "imagesCount": 51,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.467Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "11 AM to 10 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10:30 AM to 6:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10:30 AM to 6:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10:30 AM to 6:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10:30 AM to 6:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Browne%20galeria&query_place_id=ChIJE89qL_dFIYQRIiyvc-wqy1w",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfKqUVWg2Jrnb7G-aanJJcsFOTHkDEgxcnmI2T1_X4E_Hh_PzkXLLhOGH-6Ce2464GROtHaRTol6BySmnrkepPawrQP9PvwxNAS1dOekBpAhwmH_5tPkp4-w9RCybG8EhsRRDUYZA=w408-h421-k-no",
+    "kgmid": "/g/11fhqf0817",
+    "businessProfileId": "13548869033467393500",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Galería Corsica",
+    "subTitle": null,
+    "description": "Galería moderna que presenta una variedad de contemporáneas pinturas y esculturas mexicanas.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Galería de arte",
+    "address": "C. Guadalupe Sánchez 756, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Guadalupe Sánchez 756",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://galeriacorsica.mx/",
+    "phone": "+52 322 128 1467",
+    "phoneUnformatted": "+523221281467",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6118996,
+      "lng": -105.2319917
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJner0CF1FIYQRJCyhCbfWYpw",
+    "categories": [
+      "Galería de arte"
+    ],
+    "fid": "0x8421455d08f4ea9d:0x9c62d6b709a12c24",
+    "cid": "11268805299263319076",
+    "reviewsCount": 71,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 5,
+      "fiveStar": 65
+    },
+    "imagesCount": 148,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:13.468Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Galer%C3%ADa%20Corsica&query_place_id=ChIJner0CF1FIYQRJCyhCbfWYpw",
+    "searchPageUrl": "https://www.google.com/maps/search/galerias%20de%20arte%20boutique%20ropa%20Centro%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "galerias de arte boutique ropa Centro Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLezlbmvj_k-WP3FpaWUD_zLlwKjpNXV6RRq1Kq5sBGGBAIbZYxirvzcJk1JevSFoO48wNJzdhu9husu1fxzdRs22XZW1_dVerKqj84WED5iELN5vPHhd8tSIrEXEanBVb58yrn6=w408-h306-k-no",
+    "kgmid": "/g/11rw2fsz5",
+    "businessProfileId": "1307616044495420137",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Downtown Rio Cuale Flea Market Alex curios shop",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Mercadillo",
+    "address": "Matamoros esquina con Agustín Rodríguez s/n, local 100 y 88, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Matamoros esquina con Agustín Rodríguez s/n, local 100 y 88",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6065299,
+      "lng": -105.2354931
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJgdCon05FIYQRDeq_XzwnDik",
+    "categories": [
+      "Mercadillo",
+      "Joyería",
+      "Mercado"
+    ],
+    "fid": "0x8421454e9fa8d081:0x290e273c5fbfea0d",
+    "cid": "2958345145486928397",
+    "reviewsCount": 553,
+    "reviewsDistribution": {
+      "oneStar": 6,
+      "twoStar": 6,
+      "threeStar": 46,
+      "fourStar": 118,
+      "fiveStar": 377
+    },
+    "imagesCount": 339,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:18.851Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "7 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "7 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Downtown%20Rio%20Cuale%20Flea%20Market%20Alex%20curios%20shop&query_place_id=ChIJgdCon05FIYQRDeq_XzwnDik",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20artesanias%20souvenirs%20cafe%20Isla%20Rio%20Cuale%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "tienda artesanias souvenirs cafe Isla Rio Cuale Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdfQN-1AnSBS0oosHq4eNyYtho-ZlIb0jEWccr-pl2FNsU7mH0NA0M-llIHedOETgLgKaeCyX4ColNrHkOnKb97LcBjrxg2NAH5dqth86PmOHWIMnXFyRaBbn985lAvkfIXmcvzDA=w408-h724-k-no",
+    "kgmid": "/g/1hf0j_gp8",
+    "businessProfileId": "9724992991826871476",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Artesanias Ana Maria",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de recuerdos",
+    "address": "Mercado Municipal Rio Cuale, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Mercado Municipal Rio Cuale",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6061113,
+      "lng": -105.2353407
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJvwB6IBFFIYQRPp4JiuhCD6s",
+    "categories": [
+      "Tienda de recuerdos"
+    ],
+    "fid": "0x84214511207a00bf:0xab0f42e88a099e3e",
+    "cid": "12326144271652068926",
+    "reviewsCount": 1,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 1
+    },
+    "imagesCount": 33,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:18.851Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "jueves",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "lunes",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "12 to 7 AM, 8 AM to 12 a.m."
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Artesanias%20Ana%20Maria&query_place_id=ChIJvwB6IBFFIYQRPp4JiuhCD6s",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20artesanias%20souvenirs%20cafe%20Isla%20Rio%20Cuale%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "tienda artesanias souvenirs cafe Isla Rio Cuale Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfsvJNNdzamMC5VcjxHBnmyUVuZXo988e6af6UO6fnYgGMK8FlFgZiRhrpOMgmHNIgKmve9Qc35KuAm9I4Fo3-ucxEtp1_eliWFXcxYJmVSdGaPtp_zDhjEDn0R7PoZqwMPAcvc=w408-h306-k-no",
+    "kgmid": "/g/11wn7t1drb",
+    "businessProfileId": "4312621035800531415",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Isla Río Cuale & Gringo Gulch"
+  },
+  {
+    "title": "Pueblo Viejo Mercado De Artesanías",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Comercio",
+    "address": "Agustín Rodríguez 110, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Agustín Rodríguez 110",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.607045,
+      "lng": -105.2367649
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDxpztE5FIYQRa8-fPuJ7BPo",
+    "categories": [
+      "Comercio"
+    ],
+    "fid": "0x8421454eb4731a0f:0xfa047be23e9fcf6b",
+    "cid": "18015660621032312683",
+    "reviewsCount": 241,
+    "reviewsDistribution": {
+      "oneStar": 1,
+      "twoStar": 1,
+      "threeStar": 23,
+      "fourStar": 61,
+      "fiveStar": 155
+    },
+    "imagesCount": 219,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:18.851Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "10:30 AM to 6 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Pueblo%20Viejo%20Mercado%20De%20Artesan%C3%ADas&query_place_id=ChIJDxpztE5FIYQRa8-fPuJ7BPo",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20artesanias%20souvenirs%20cafe%20Isla%20Rio%20Cuale%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "tienda artesanias souvenirs cafe Isla Rio Cuale Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdDFtSHyMTp_oLH4d2P9leymYJzzqENlTRmlvBLdIRMm-c9cKm0QhIzf93ZQr13419kPtQWixHgwdH6dPYamu5JslBGtpPfCsDtw5mTbLIVGiLyw-XXMxd66M36NmijyvlidI7M0DqCQFw=w532-h240-k-no",
+    "kgmid": "/g/11bzz235bz",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Mercado Municipal Río Cuale",
+    "subTitle": null,
+    "description": "Mercado local con puestos de arte y joyería de la región de Jalisco, así como sopa de pozole y tacos de carne.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Mercado",
+    "address": "Encino y matamoros, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Encino y matamoros",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "http://www.mercadoriocuale.com/",
+    "phone": "+52 322 152 6584",
+    "phoneUnformatted": "+523221526584",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6061781,
+      "lng": -105.235483
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJq6qq2U1FIYQR6Cn2mFiqOAw",
+    "categories": [
+      "Mercado",
+      "Atracción turística"
+    ],
+    "fid": "0x8421454dd9aaaaab:0xc38aa5898f629e8",
+    "cid": "880641024651045352",
+    "reviewsCount": 11429,
+    "reviewsDistribution": {
+      "oneStar": 129,
+      "twoStar": 200,
+      "threeStar": 1077,
+      "fourStar": 2895,
+      "fiveStar": 7128
+    },
+    "imagesCount": 7816,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:18.852Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        },
+        {
+          "Bucle magnético de asistencia": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mercado%20Municipal%20R%C3%ADo%20Cuale&query_place_id=ChIJq6qq2U1FIYQR6Cn2mFiqOAw",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20artesanias%20souvenirs%20cafe%20Isla%20Rio%20Cuale%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "tienda artesanias souvenirs cafe Isla Rio Cuale Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcXCygPru9UjIqXGcZ907LZk-Ho3G0-r-eSJmySCZoinBTEWl7sBYd53r0H3Id1gpEn_heHf5n_PH-py4IO080bofoPigjdJ517ULqWw_1jDQtrYWcGYJousQcG4e7BLsdiXrEcqg=w408-h544-k-no",
+    "kgmid": "/g/1tfqg3b5",
+    "businessProfileId": "13253734439843966747",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Terrazo House Bar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "C. Mina SN-C, Proyecto escola, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Proyecto escola, Centro",
+    "street": "C. Mina SN-C",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 156 3313",
+    "phoneUnformatted": "+523221563313",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.609597,
+      "lng": -105.2350484
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJjTq_QuNFIYQRxQhDW6b6640",
+    "categories": [
+      "Bar"
+    ],
+    "fid": "0x842145e342bf3a8d:0x8debfaa65b4308c5",
+    "cid": "10226542971277478085",
+    "reviewsCount": 166,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 4,
+      "threeStar": 5,
+      "fourStar": 20,
+      "fiveStar": 129
+    },
+    "imagesCount": 251,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "11:30 AM to 12 a.m."
+      },
+      {
+        "day": "jueves",
+        "hours": "11:30 AM to 1 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "11:30 AM to 1 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "11:30 AM to 1 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "11:30 AM to 12 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "11:30 AM to 12 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "11:30 AM to 12 a.m."
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Terrazo%20House%20Bar&query_place_id=ChIJjTq_QuNFIYQRxQhDW6b6640",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 1,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcqeNs-kyxNN4-Te3dArJxXNERQCgGsE74RPS63g69_93e457SaZgQ-Sa_fGtLeZVib-sO1-G9Waeehxr_Lj_djlWHPBpiuI9e2Ef4LKgQvIxSATNT_rDMePVoOoTuIXgcwv7654g=w408-h306-k-no",
+    "kgmid": "/g/11qn2jh8wy",
+    "businessProfileId": "9249261011666478706",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Bar Océano",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Paseo Díaz Ordaz 538, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Paseo Díaz Ordaz 538",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 222 4294",
+    "phoneUnformatted": "+523222224294",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6107206,
+      "lng": -105.2347463
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJSbfvINtFIYQRRUj7V7RIfsA",
+    "categories": [
+      "Bar",
+      "Restaurante mexicano",
+      "Restaurante de desayunos",
+      "Club nocturno",
+      "Restaurante"
+    ],
+    "fid": "0x842145db20efb749:0xc07e48b457fb4845",
+    "cid": "13870603841755105349",
+    "reviewsCount": 804,
+    "reviewsDistribution": {
+      "oneStar": 57,
+      "twoStar": 18,
+      "threeStar": 75,
+      "fourStar": 148,
+      "fiveStar": 506
+    },
+    "imagesCount": 607,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 9 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 12 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 12 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 12 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 12 a.m."
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 12 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 12 a.m."
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bar%20Oc%C3%A9ano&query_place_id=ChIJSbfvINtFIYQRRUj7V7RIfsA",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLd6QBvdlukKcDQzB3ZBHlQ2CMtkBLsC3hIpYVlYyeFEye8343sgArXAz5PPCGEi1ouAXOTntJDbiSddZL3Aq4z3OqRiz9_Vt4UZI-QxgfwNnxc53GHkBIwJBD1KWi5J49G4kU5Iiw=w426-h240-k-no",
+    "kgmid": "/g/1tfshqg6",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "Zoo Bar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Malecón, Paseo Díaz Ordaz 630, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Malecón, Paseo Díaz Ordaz 630",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "http://zoodancebar.com/",
+    "phone": "+52 322 150 4152",
+    "phoneUnformatted": "+523221504152",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6115661,
+      "lng": -105.234298
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJkcYqeU9FIYQR_5Ky_VJsX0A",
+    "categories": [
+      "Bar",
+      "Discoteca",
+      "Snack bar"
+    ],
+    "fid": "0x8421454f792ac691:0x405f6c52fdb292ff",
+    "cid": "4638545244914356991",
+    "reviewsCount": 758,
+    "reviewsDistribution": {
+      "oneStar": 121,
+      "twoStar": 27,
+      "threeStar": 63,
+      "fourStar": 157,
+      "fiveStar": 390
+    },
+    "imagesCount": 485,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "jueves",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "viernes",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "sábado",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "domingo",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "lunes",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      },
+      {
+        "day": "martes",
+        "hours": "12 to 6 AM, 10 PM to 12 AM"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Zoo%20Bar&query_place_id=ChIJkcYqeU9FIYQR_5Ky_VJsX0A",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLeKvdoFZJYQLeX6Rrkrbe2Pl0ZaQhRm4WIfD85ddRSsYGQfThmjS3LKxtIFiri6Y8uCuwdi7hhwEHlNJbaLjslxESH22shqD4ODIkQXrE-vQxplWYkPfyJmeizV4ETZN66N7Zk3cA=w426-h240-k-no",
+    "kgmid": "/g/1tcxvkc8",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "Oasis Bay Malecón",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Paseo Díaz Ordaz 558, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Paseo Díaz Ordaz 558",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 151 8063",
+    "phoneUnformatted": "+523221518063",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6108837,
+      "lng": -105.2346901
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJDyynTklFIYQROU7M5B4tqHc",
+    "categories": [
+      "Bar",
+      "Restaurante",
+      "Restaurante de desayunos"
+    ],
+    "fid": "0x842145494ea72c0f:0x77a82d1ee4cc4e39",
+    "cid": "8622191097311678009",
+    "reviewsCount": 1293,
+    "reviewsDistribution": {
+      "oneStar": 135,
+      "twoStar": 63,
+      "threeStar": 128,
+      "fourStar": 241,
+      "fiveStar": 726
+    },
+    "imagesCount": 1326,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 2 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 2 a.m."
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Oasis%20Bay%20Malec%C3%B3n&query_place_id=ChIJDyynTklFIYQROU7M5B4tqHc",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfpZhlgqE2A4WrvUctfYzrw2ERJV0PnL6uGYbuLLPm4-I8hEeY7vLlJsaTFeJPKd1Az6f5WpaFD3IPAde5fvw6Phk2EKsQuTFzUBBcWbWaImTaOFxCxCmlb6M7tQWW78aD9RUDL0w=w408-h306-k-no",
+    "kgmid": "/g/1ptvyf5cb",
+    "businessProfileId": "6037695732163748662",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "Bar Morelos Puerto Vallarta",
+    "subTitle": null,
+    "description": "Concurrido lugar de ambiente con decoración ecléctica para probar tragos originales y escuchar música.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Morelos 589, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Morelos 589",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.barmorelos.com/",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.611034,
+      "lng": -105.234298
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJJ6hQdk9FIYQRN4UYR2b_EMc",
+    "categories": [
+      "Bar",
+      "Club nocturno"
+    ],
+    "fid": "0x8421454f7650a827:0xc710ff6647188537",
+    "cid": "14344245627919566135",
+    "reviewsCount": 1234,
+    "reviewsDistribution": {
+      "oneStar": 70,
+      "twoStar": 17,
+      "threeStar": 53,
+      "fourStar": 201,
+      "fiveStar": 893
+    },
+    "imagesCount": 847,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 PM to 5 AM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 PM to 5 AM"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Bucle magnético de asistencia": false
+        },
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bar%20Morelos%20Puerto%20Vallarta&query_place_id=ChIJJ6hQdk9FIYQRN4UYR2b_EMc",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcigUzSV1hOnV_k_akTdXluYlAlYrEmlrpgrR2i4suOXKMJDiELQM45weP0gre2nrtUqhKEV4I0GUSYX8Xt9yIWfDQdyM14SSwyv0pQy5sJmDUwz-8sJsG1tVdLKG_Z5Dxh_t8Z=w408-h272-k-no",
+    "kgmid": "/g/1ptvvzfwx",
+    "businessProfileId": "13477606340729964746",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "La Bodeguita del Medio Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Paseo Díaz Ordaz 858, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Paseo Díaz Ordaz 858",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://labodeguitadelmedio.com.mx/restaurantes-la-bodeguita-del-medio.html",
+    "phone": "+52 322 223 1585",
+    "phoneUnformatted": "+523222231585",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6137679,
+      "lng": -105.2330519
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJF31sQoJPIYQRv_cQL91MBs4",
+    "categories": [
+      "Bar",
+      "Restaurante cubano"
+    ],
+    "fid": "0x84214f82426c7d17:0xce064cdd2f10f7bf",
+    "cid": "14845637734534543295",
+    "reviewsCount": 7937,
+    "reviewsDistribution": {
+      "oneStar": 200,
+      "twoStar": 150,
+      "threeStar": 456,
+      "fourStar": 1428,
+      "fiveStar": 5703
+    },
+    "imagesCount": 8904,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "jueves",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "viernes",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "sábado",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "domingo",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "lunes",
+        "hours": "12 PM to 2 AM"
+      },
+      {
+        "day": "martes",
+        "hours": "12 PM to 2 AM"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Hora feliz": [
+        {
+          "day": "miércoles",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "jueves",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "viernes",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "sábado",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "domingo",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "lunes",
+          "hours": "12–6 p.m."
+        },
+        {
+          "day": "martes",
+          "hours": "12–6 p.m."
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Espacio accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=La%20Bodeguita%20del%20Medio%20Vallarta&query_place_id=ChIJF31sQoJPIYQRv_cQL91MBs4",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfys2_CwZS8Ar1BzR4uVJreoGTLx6QPtBMshyB5ttBdhT19DS-PcBKVvjLaYuT1jx9h3pQSKvuQKmHPFsi93OLeJ1AYcb4lon3wG0-C1EdA16sUTdSqLAl12Zc7tKNCRgMHyJO1=w408-h306-k-no",
+    "kgmid": "/g/1tdyr2yz",
+    "businessProfileId": "4975879852597621421",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "Restaurant El Malecón",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar",
+    "address": "Paseo Díaz Ordaz 895, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Paseo Díaz Ordaz 895",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.facebook.com/restaurantemalecon",
+    "phone": "+52 322 222 6999",
+    "phoneUnformatted": "+523222226999",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6143064,
+      "lng": -105.2329159
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJSQF0F0VFIYQRcD_JGQQN3_g",
+    "categories": [
+      "Bar",
+      "Restaurante"
+    ],
+    "fid": "0x8421454517740149:0xf8df0d0419c93f70",
+    "cid": "17933066552476254064",
+    "reviewsCount": 989,
+    "reviewsDistribution": {
+      "oneStar": 120,
+      "twoStar": 43,
+      "threeStar": 120,
+      "fourStar": 222,
+      "fiveStar": 484
+    },
+    "imagesCount": 896,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:20.418Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 10 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Restaurant%20El%20Malec%C3%B3n&query_place_id=ChIJSQF0F0VFIYQRcD_JGQQN3_g",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20terraza%20lounge%20Centro%20Malecon%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "bar terraza lounge Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdel5UHU5F-NzplL62BXU1ai_FzNDhAlwmXs4nbYQ-uq5NrbdJq-ge_DV81haSCv3cRL_elx91YD-yz4agD0XvSrautpT9RWnikYeFtwIdzVyxZxJ8sFGHxhsWkiNuhHTDOWm7N=w408-h408-k-no",
+    "kgmid": "/g/11ckvvcyy5",
+    "businessProfileId": "4480693358936305006",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "La Casa del Jardin Yoga Studio",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Centro de yoga",
+    "address": "Argentina 265-U2, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "Argentina 265-U2",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://casadeljardin.com/",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6144671,
+      "lng": -105.2304493
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ0YCp2lpFIYQRe33MFDgWv38",
+    "categories": [
+      "Centro de yoga"
+    ],
+    "fid": "0x8421455adaa980d1:0x7fbf163814cc7d7b",
+    "cid": "9205100593491508603",
+    "reviewsCount": 39,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 39
+    },
+    "imagesCount": 37,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:23.123Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 9 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 9:15 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 9 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 9 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "9 AM to 9 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 9 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 9:15 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=La%20Casa%20del%20Jardin%20Yoga%20Studio&query_place_id=ChIJ0YCp2lpFIYQRe33MFDgWv38",
+    "searchPageUrl": "https://www.google.com/maps/search/estudio%20yoga%20gimnasio%20pilates%20Centro%205%20de%20Diciembre%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "estudio yoga gimnasio pilates Centro 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLe9uG3iyTcDNnHLwM4jc3n1GyHHUVljvd1Fq2S1a4nr_sQi_bvLp3rHmAXcgRfCPPaInYWjCtv7lXF74XyoFDZJYiYw6LRYAP4G9j2yJURRgCL6ixLQl_SAvFuN_zTGRS12hUk-GQ=w493-h240-k-no",
+    "kgmid": "/g/11nml6j2fc",
+    "businessProfileId": "18000746874544867874",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Bloom Yoga Puerto Vallarta",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Centro de yoga",
+    "address": "Morelos 667, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Morelos 667",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://bloomyogapvr.com/",
+    "phone": "+52 322 349 2927",
+    "phoneUnformatted": "+523223492927",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6117778,
+      "lng": -105.2337424
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJL3O02Hx5_wkRQc9_mLVogDY",
+    "categories": [
+      "Centro de yoga"
+    ],
+    "fid": "0x9ff797cd8b4732f:0x368068b5987fcf41",
+    "cid": "3927254004223954753",
+    "reviewsCount": 46,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 46
+    },
+    "imagesCount": 73,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:23.123Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "7 AM to 9 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Bloom%20Yoga%20Puerto%20Vallarta&query_place_id=ChIJL3O02Hx5_wkRQc9_mLVogDY",
+    "searchPageUrl": "https://www.google.com/maps/search/estudio%20yoga%20gimnasio%20pilates%20Centro%205%20de%20Diciembre%20Puerto%20Vallarta/@20.61660143276504,-105.21171840679189,16z?hl=es",
+    "searchString": "estudio yoga gimnasio pilates Centro 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfVWfUOy49PEpjKUKKOZuqECH4LaMFfI75a-HC5K8-KNsyJTqNEApn7EqUgLZf2SwU86Bq5xrUCCPgFVn1l4eBxmd11mN2zPuFdhEKwyD-XtGE7-FiObnJIxHilWaEpWhAZHDjm=w408-h532-k-no",
+    "kgmid": "/g/11shvf6yyz",
+    "businessProfileId": "6945403939534444873",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Calmate Cafe",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Cafetería",
+    "address": "C. Honduras 218, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "C. Honduras 218",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 365 1557",
+    "phoneUnformatted": "+523223651557",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6187366,
+      "lng": -105.2303264
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJUyTZDg5FIYQRR1E_15SdCCg",
+    "categories": [
+      "Cafetería",
+      "Restaurante de desayunos",
+      "Restaurante de almuerzo",
+      "Restaurante"
+    ],
+    "fid": "0x8421450e0ed92453:0x28089d94d73f5147",
+    "cid": "2884728823922774343",
+    "reviewsCount": 672,
+    "reviewsDistribution": {
+      "oneStar": 8,
+      "twoStar": 2,
+      "threeStar": 10,
+      "fourStar": 44,
+      "fiveStar": 608
+    },
+    "imagesCount": 762,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:26.588Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 3:50 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 3:50 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Calmate%20Cafe&query_place_id=ChIJUyTZDg5FIYQRR1E_15SdCCg",
+    "searchPageUrl": "https://www.google.com/maps/search/restaurantes%20cafe%20especialidad%20Centro%20Malecon%20Puerto%20Vallarta/@20.648756322411646,-105.26324396604056,16z?hl=es",
+    "searchString": "restaurantes cafe especialidad Centro Malecon Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfOFDkNcTOtJiXzTWSyMqt_3vHARXU4XBI2mpQBIHd-bvSsuoL_qcGM2EH2uB0zfVVFFEoG3sLwHLQhq1mA-zUfHgG68r1-SSsgPystLXdQSa5-gbaiyRiGdjiBkamFS2ADyq5EeA=w408-h544-k-no",
+    "kgmid": "/g/11fpfrjl_7",
+    "businessProfileId": "9027022634649882778",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Revueltas",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Cafetería",
+    "address": "Rep. de Chile 208, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "Rep. de Chile 208",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 183 6884",
+    "phoneUnformatted": "+523221836884",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6161977,
+      "lng": -105.230964
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.8,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ1Q2yL_pFIYQRQT3FIcifC4A",
+    "categories": [
+      "Cafetería",
+      "Bar"
+    ],
+    "fid": "0x842145fa2fb20dd5:0x800b9fc821c53d41",
+    "cid": "9226643943507443009",
+    "reviewsCount": 170,
+    "reviewsDistribution": {
+      "oneStar": 6,
+      "twoStar": 1,
+      "threeStar": 4,
+      "fourStar": 7,
+      "fiveStar": 152
+    },
+    "imagesCount": 133,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:31.232Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "7 AM to 9 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "7 AM to 2 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "7 AM to 2 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Revueltas&query_place_id=ChIJ1Q2yL_pFIYQRQT3FIcifC4A",
+    "searchPageUrl": "https://www.google.com/maps/search/restaurante%20cafe%20brunch%205%20de%20Diciembre%20Puerto%20Vallarta/@20.632678877588344,-105.26324396604056,16z?hl=es",
+    "searchString": "restaurante cafe brunch 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfQfhstP5nqBoUi856isxg2YdEbrRZdZytRvBX8RLK4BvivD38FJ1kGhL6q5NXiG70zUXI6-DieZzrrdRWGshQpzISMllgHJzOzzISs9ku8Hnn7MJ7NX5UMNSf9DWFZ2ZtnLrs=w408-h306-k-no",
+    "kgmid": "/g/11tjlhsxx0",
+    "businessProfileId": "3441266548893280976",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Meño's Place",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Restaurante",
+    "address": "C. Honduras 348, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "C. Honduras 348",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.facebook.com/menosplace/",
+    "phone": "+52 322 222 7549",
+    "phoneUnformatted": "+523222227549",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6185527,
+      "lng": -105.228896
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJwYkdpr5FIYQRmTZWrROZDjw",
+    "categories": [
+      "Restaurante"
+    ],
+    "fid": "0x842145bea61d89c1:0x3c0e9913ad563699",
+    "cid": "4327564601741162137",
+    "reviewsCount": 1532,
+    "reviewsDistribution": {
+      "oneStar": 21,
+      "twoStar": 18,
+      "threeStar": 41,
+      "fourStar": 198,
+      "fiveStar": 1254
+    },
+    "imagesCount": 1419,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:31.232Z",
+    "reserveTableUrl": "https://www.google.com/maps/reserve/v/dine/c/IW7m-N0nBBw?source=pa&opi=79508299&hl=es-US&gei=lvH9aoa9HtjVp84Pxoyv6Qc&ahbb=1&sourceurl=https://www.google.com/search?authuser%3D0%26tbm%3Dmap%26q%3Drestaurante%2Bcafe%2Bbrunch%2B5%2Bde%2BDiciembre%2BPuerto%2BVallarta%26psi%3Dk_H9atLMH6nLp84P5qGy8Aw.1795027348303.1%26hl%3Des%26gl%3Dus%26pb%3D!4m12!1m3!1d7467.812446462211!2d-105.26324396604056!3d20.632678877588344!2m3!1f0!2f0!3f0!3m2!1i1920!2i1080!4f13.1!7i20!8i0!10b1!12m36!1m1!18b1!2m3!5m1!6e2!20e3!6m18!4b1!49b1!63m0!73m0!74i150000!75b1!85b1!89b1!91b1!101i97!110m0!114b1!149b1!171b1!176f8!179f90!182b1!183m0!10b1!12b1!13b1!14b1!16b1!17m1!3e1!20m3!5e2!6b1!14b1!19m4!2m3!1i360!2i120!4i8!20m57!2m2!1i203!2i100!3m2!2i4!5b1!6m6!1m2!1i86!2i86!1m2!1i408!2i240!7m42!1m3!1e1!2b0!3e3!1m3!1e2!2b1!3e2!1m3!1e2!2b0!3e3!1m3!1e8!2b0!3e3!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e9!2b1!3e2!1m3!1e10!2b0!3e3!1m3!1e10!2b1!3e2!1m3!1e10!2b0!3e4!2b1!4b1!9b0!22m6!1sk_H9atLMH6nLp84P5qGy8Aw!2s1i:0,t:20588,p:k_H9atLMH6nLp84P5qGy8Aw:22!4m1!2i20588!7e81!12e3!24m92!1m26!13m9!2b1!3b1!4b1!6i1!8b1!9b1!14b1!20b1!25b1!18m15!3b1!4b1!5b1!6b1!13b1!14b1!15b1!17b1!21b1!22b0!25b1!27m1!1b0!28b0!31b0!2b1!5m5!2b1!5b1!6b1!7b1!10b1!10m1!8e3!11m1!3e1!14m1!3b1!17b1!20m2!1e3!1e6!24b1!25b1!26b1!29b1!30m1!2b1!36b1!39m3!2m2!2i1!3i1!43b1!52b1!55b1!56m2!1b1!3b1!65m5!3m4!1m3!1m2!1i224!2i298!71b1!72m17!1m5!1b1!2b1!3b1!5b1!7b1!4b1!8m8!1m6!4m1!1e1!4m1!1e3!4m1!1e4!3sother_user_reviews!9b1!89b1!103b1!113b1!117b1!122m1!1b1!26m4!2m3!1i80!2i92!4i8!30m28!1m6!1m2!1i0!2i0!2m2!1i0!2i0!1m6!1m2!1i0!2i0!2m2!1i0!2i0!1m6!1m2!1i0!2i0!2m2!1i0!2i0!1m6!1m2!1i0!2i0!2m2!1i0!2i0!34m19!2b1!3b1!4b1!6b1!7b1!8m6!1b1!3b1!4b1!5b1!6b1!7b1!9b1!12b1!14b1!20b1!23b1!25b1!26b1!37m1!1e81!42b1!46m1!1e10!47m0!49m7!3b1!6m2!1b1!2b1!7m2!1e3!2b1!50m25!1m21!2m7!1u3!4zT3RldsWZZW7DqQ!5e1!9s!10m2!3m1!1e1!2m7!1u2!4zTmVqbMOpcGUgaG9kbm9jZW7DqQ!5e1!9s!10m2!2m1!1e1!3m1!1u2!3m1!1u3!4BIAE!2e2!3m1!3b1!59BQ2dBd0Fn!61b1!67m3!7b1!10b1!14b0!69i675",
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 2 PM, 5 to 11 PM"
+      }
+    ],
+    "additionalOpeningHours": {
+      "Cena": [
+        {
+          "day": "miércoles",
+          "hours": "5–11 p.m."
+        },
+        {
+          "day": "jueves",
+          "hours": "5–11 p.m."
+        },
+        {
+          "day": "viernes",
+          "hours": "5–11 p.m."
+        },
+        {
+          "day": "sábado",
+          "hours": "5–11 p.m."
+        },
+        {
+          "day": "domingo",
+          "hours": "Cerrado"
+        },
+        {
+          "day": "lunes",
+          "hours": "5–11 p.m."
+        },
+        {
+          "day": "martes",
+          "hours": "5–11 p.m."
+        }
+      ],
+      "Desayuno": [
+        {
+          "day": "miércoles",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "jueves",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "viernes",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "sábado",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "domingo",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "lunes",
+          "hours": "8 a.m.–2 p.m."
+        },
+        {
+          "day": "martes",
+          "hours": "8 a.m.–2 p.m."
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Me%C3%B1o's%20Place&query_place_id=ChIJwYkdpr5FIYQRmTZWrROZDjw",
+    "searchPageUrl": "https://www.google.com/maps/search/restaurante%20cafe%20brunch%205%20de%20Diciembre%20Puerto%20Vallarta/@20.632678877588344,-105.26324396604056,16z?hl=es",
+    "searchString": "restaurante cafe brunch 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdrUZZr0oCsXOeFbVWcN4z8tfGqPXWT_u8egcyIEaZw0OzLNBXahrgcqwI3MnMpfO6W0q25kO3lqmpqfbzOu8m2706Oi4ME0PAkyVYL06ztq9Gm8Y_PAiBAzRizWpsdB6_-UfRmww=w408-h305-k-no",
+    "kgmid": "/g/11gzq76wjl",
+    "businessProfileId": "15112003173902790693",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Lola Restaurant",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Restaurante",
+    "address": "C. Matamoros 339, 5 de Diciembre, 48304 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "C. Matamoros 339",
+    "city": "Puerto Vallarta",
+    "postalCode": "48304",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.lolarestaurant.com.mx/",
+    "phone": "+52 322 356 4429",
+    "phoneUnformatted": "+523223564429",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.613607,
+      "lng": -105.2305022
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJWTV6QQBFIYQRCszhI9RxgFA",
+    "categories": [
+      "Restaurante"
+    ],
+    "fid": "0x84214500417a3559:0x508071d423e1cc0a",
+    "cid": "5800761476002204682",
+    "reviewsCount": 1013,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 1,
+      "threeStar": 3,
+      "fourStar": 25,
+      "fiveStar": 982
+    },
+    "imagesCount": 754,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:31.232Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 2 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 2 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Lola%20Restaurant&query_place_id=ChIJWTV6QQBFIYQRCszhI9RxgFA",
+    "searchPageUrl": "https://www.google.com/maps/search/restaurante%20cafe%20brunch%205%20de%20Diciembre%20Puerto%20Vallarta/@20.632678877588344,-105.26324396604056,16z?hl=es",
+    "searchString": "restaurante cafe brunch 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLe0rJxbUnlS_T6Ihd0tW-H8PCOBJaXUAtQWq6iWB-byDFVtMlAAaEZeTiAw2iV8HouIMy-TiVBbwSWzOp3QlUTax4TSXUn6rqVsYI9Gr9yBnMj_eMkLfwdnFkDW-CB555t98MkmUCtx3Vks=w408-h544-k-no",
+    "kgmid": "/g/11lyp1x34z",
+    "businessProfileId": "7560954753291715260",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Hotel Encino",
+    "subTitle": null,
+    "description": "Hotel básico con habitaciones y suites discretas, piscina al aire libre, 2 tinas y un restaurante.",
+    "ownerDescription": null,
+    "price": "$54",
+    "categoryName": "Hotel",
+    "address": "C. Juárez 122, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 122",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.encino-hotel.com/",
+    "phone": "+52 322 222 0051",
+    "phoneUnformatted": "+523222220051",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6063497,
+      "lng": -105.2364723
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 3.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJIRIjr05FIYQRVe9nd0bBlVw",
+    "categories": [
+      "Hotel"
+    ],
+    "fid": "0x8421454eaf231221:0x5c95c1467767ef55",
+    "cid": "6671450931414429525",
+    "reviewsCount": 1984,
+    "reviewsDistribution": {
+      "oneStar": 168,
+      "twoStar": 98,
+      "threeStar": 353,
+      "fourStar": 487,
+      "fiveStar": 878
+    },
+    "imagesCount": 2421,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:50.416Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": "Hotel de 3 estrellas",
+    "hotelDescription": "Este hotel básico con vista a la bahía de Banderas se encuentra a 5 minutos a pie del Museo Naval Secretaría de Marina Armada de México, a 9 minutos a pie del paseo del malecón y a 2 km de la playa de los Muertos.\n Las habitaciones sencillas tienen pisos de cerámica y TV por cable. Algunas tienen balcón. Las suites y los monoambientes mejorados incluyen cocina integrada y comedor.\n El hotel cuenta con una piscina al aire libre con vista a la bahía, 2 tinas y un solárium. También hay un restaurante, un café/bar y un patio con jardín.",
+    "checkInDate": "2026-11-25",
+    "checkOutDate": "2026-11-26",
+    "hotelAds": [
+      {
+        "title": "Best Hotel Deals",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjPmR1MLddrkYS0DcG64p3Jp-3Ox0E4Jzuy03p-jObgsf9O1lq1KkxyNxXhR7BU3_cR-ZRmpltqLzcatAYy9W8p3AFQb0KwJ7TfRvfheSEtt7fm9_qw0-eE9HkUh0HHpNJv1lWLEhi49LS_S9JHtjNOukENIuSqKDgOkRoNCWUulmDs09jYuycoUOvVOmkcrA&pcurl=https://besthoteldealsglobal.com/property/14485?rooms%3D1%26currency%3DUSD%26startDate%3D25-11-2026%26endDate%3D26-11-2026%26occupancies%3D%255B%257B%2522Adults%2522%253A2%252C%2522Children%2522%253A0%257D%255D%26utm_source%3Dgoogle%26utm_medium%3DHAC%26utm_content%3D25_11_2026_1_mapresults_14485_US_desktop_default___2%26tp%3D65.72%26tt%3D11.41%26sup%3D126%26flow%3DGH3wQHeyY96-Q3i-QYIL9eIsXNiDw_i8-oMb6TFL56zQtWJw0A%26room%3Ddouble-or-twin%26user_device%3Ddesktop%26google_click_type%3Dhotel%26google_ad_click%3Dfalse%26google_campaign_id%3D%26google_default_date%3Dtrue%26google_click_source%3D&s=ALZo0YKArF24z8sjJsQ6mUOThgdX",
+        "isOfficialSite": false,
+        "price": "$66",
+        "url": "https://besthoteldealsglobal.com/property/14485?rooms=1&currency=USD&startDate=25-11-2026&endDate=26-11-2026&occupancies=[{\"Adults\":2,\"Children\":0}]&utm_source=google&utm_medium=HAC&utm_content=25_11_2026_1_mapresults_14485_US_desktop_default___2&tp=65.72&tt=11.41&sup=126&flow=GH3wQHeyY96-Q3i-QYIL9eIsXNiDw_i8-oMb6TFL56zQtWJw0A&room=double-or-twin&user_device=desktop&google_click_type=hotel&google_ad_click=false&google_campaign_id=&google_default_date=true&google_click_source="
+      },
+      {
+        "title": "Super.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjd9OUrw7gWKeBNr2oPiRqJ5luhp7jqFFw-LNLrvdh8EglXtV26MGu4Mp9P2MxeNrLDwyEd88Ceai2r2btNTYZ4h-GU99QcZuUYkpGdbQwFsyYiNqMf-I3vIz_Jrar1OzVs5ehp2YheIn53-7vfLIBKphHncGKeAhWimCBn5ep-QxiPcXIlgYu8yQ&pcurl=https://www.super.com/travel/transition/?data%3Dprice%3D57.75%2526total_price%3D69.87%2526retail_price%3D121.55%2526retail_total_price%3D147.07%2526request_id%3D10481045464850376704%2526ps%3D1671434612%2526pb%3D0-slAkZlDjP06IhVxwa_7Le5vHF0zXm8HMFx9VMLQ4Z6YEzgUaHPVKYTUEI-cJTnhZnqqzdkySWEcG62tvPk-ftkkvKLfjF84W9crLN0ltJ7LCV4gD8xv8vA_UKekmAti5-M_XQ16XlDBpxXNig5aA%25253D%25253D%2526gha_pull_request%3DTrue%2526alwd_rand%3Dfalse%2526gt%3D1794999994%2526sg%3DrBLlD%2526sid%3DGHA_MD2%2526cmab_id%3D33%2526ib%3Dfalse%2526all_inclusive%3Dfalse%26utm_source%3Dgha%26utm_content%3Dmapresults%26currency%3DUSD%26user_country%3DUS%26verification%3Dfalse%26rate_rule_ids%3D%26date_type%3Ddefault%26rate_rule_id%3Dsignedout_desktop%26display_currency%3DUSD%26display_all_inclusive_price%3D69.87%26checkin_at%3D2026-11-25%26checkout_at%3D2026-11-26%26provider_hotel_id%3D10004459499%26provider%3Dhtl%26num_adults%3D2%26children%3D%5B%5D%26hotel_campaign%3D%26utm_campaign%3D%26user_locale%3Des-US%26user_list_id%3D%26utm_medium%3Dorganic%26utm_id%3Dgha_organic&s=ALZo0YJStabVTWdYlOiiOJi1MQYj",
+        "isOfficialSite": false,
+        "price": "$70",
+        "url": "https://www.super.com/travel/transition/?data=price=57.75&total_price=69.87&retail_price=121.55&retail_total_price=147.07&request_id=10481045464850376704&ps=1671434612&pb=0-slAkZlDjP06IhVxwa_7Le5vHF0zXm8HMFx9VMLQ4Z6YEzgUaHPVKYTUEI-cJTnhZnqqzdkySWEcG62tvPk-ftkkvKLfjF84W9crLN0ltJ7LCV4gD8xv8vA_UKekmAti5-M_XQ16XlDBpxXNig5aA%3D%3D&gha_pull_request=True&alwd_rand=false&gt=1794999994&sg=rBLlD&sid=GHA_MD2&cmab_id=33&ib=false&all_inclusive=false&utm_source=gha&utm_content=mapresults&currency=USD&user_country=US&verification=false&rate_rule_ids=&date_type=default&rate_rule_id=signedout_desktop&display_currency=USD&display_all_inclusive_price=69.87&checkin_at=2026-11-25&checkout_at=2026-11-26&provider_hotel_id=10004459499&provider=htl&num_adults=2&children=[]&hotel_campaign=&utm_campaign=&user_locale=es-US&user_list_id=&utm_medium=organic&utm_id=gha_organic"
+      },
+      {
+        "title": "Vio.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjaGNsiA8BnX8tMETI0LjFrr7I0V05u9aFHV5MC9qIarq1_j_GtJdPbkjS74rnRKvasi3Hg164v7cVD9jSQ87FOUpoielnzSkaFkOYvB_1temKu5njurIV09xsQKjuCxh93ysT4gcfjncpZZUu37p_d33NdtFjLABbe7Tb4h3WUIDPUXSMJMIar&pcurl=https://deals.vio.com/?sig%3D73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233%26turl%3Dhttps%253A%252F%252Fwww.vio.com%252FHotel%252FSearch%253FcheckIn%253D2026-11-25%2526checkOut%253D2026-11-26%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Des%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D1194698%2526userCountry%253DUS%2526profile%253Dr2d2m73kn8%2526preferredRate%253D68.09%2526deviceType%253Ddesktop%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Ddefault%252526gsite%25253Dmapresults%252526vf%25253D0%252526ucountry%25253DUS%252526udevice%25253Ddesktop%252526hotel%25253D1194698%252526day%25253D25%252526month%25253D11%252526year%25253D2026%252526los%25253D1%252526price%25253D68.09%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DUS_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253DM7hR4-5U6VVROirlChQI2iwYvwgiA1VTRCiA-PjXBlIBMhIaFRbzZIIaC1VxaGZYODYzbHY0KAMws8331wY&s=ALZo0YLWJvtfWbhvp7D2840zGfWA",
+        "isOfficialSite": false,
+        "price": "$68",
+        "url": "https://deals.vio.com/?sig=73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233&turl=https://www.vio.com/Hotel/Search?checkIn=2026-11-25&checkOut=2026-11-26&currency=USD&forceCurrencyChange=1&lang=es&forceLanguageChange=1&rooms=2:&utm_source=gha&utm_medium=cpc&hotelId=1194698&userCountry=US&profile=r2d2m73kn8&preferredRate=68.09&deviceType=desktop&label=src%3Dgha%26cltype%3Dhotel%26datype%3Ddefault%26gsite%3Dmapresults%26vf%3D0%26ucountry%3DUS%26udevice%3Ddesktop%26hotel%3D1194698%26day%3D25%26month%3D11%26year%3D2026%26los%3D1%26price%3D68.09%26currency%3DUSD%26cid%3D%26listid%3D%26rateid%3DUS_D%26closerateid%3D%26promo%3D0%26isPrivateRate%3D0%26isAudienceUser%3D0%26isPaidClick%3D0%26&cp=M7hR4-5U6VVROirlChQI2iwYvwgiA1VTRCiA-PjXBlIBMhIaFRbzZIIaC1VxaGZYODYzbHY0KAMws8331wY"
+      },
+      {
+        "title": "es.momondo.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygvJ_uQDMPnPG6wzkW1rli846ygji31KODJWGWX1-WgFg6H3-IZhAw1-MFPaz_rwb1jpXeTnrLLbmvsLu9UqyPUjiNk5EOu1LM1BQdkpOtfG_Sqouf_SakcDAPTPDRugNLecGxYVfSvR4BgLkaC5kysJS24XQ9ABe2FhrUemrILlb4Dw37kKg&pcurl=https://www.es.momondo.com/semi/ha/hotel_ads/71189/es.html?utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D71189%26adType%3D0%26utm_content%3Dmapresults%26utm_campaign%3DHotelAds%26ci%3D2026-11-25%26co%3D2026-11-26%26gs%3Dmapresults%26l%3D1%26pc%3DUSD%26rid%3D%26pdtax%3D12.41%26pdtotal%3D72.07%26rpid%3D%26uc%3DUS%26ucuc%3DUSD%26d%3Ddesktop%26lc%3Des%26v%3Dfalse%26rrid%3DUFJJQ0VMSU5FQ09SRQ%26k_pc%3D~UENMTkhPVEVMV0hJU0tZ%26k_rt%3D%26k_sid%3D2bBkVxSlYZ%26k_kct%3D1795022624%26k_gct%3D1795027020%26g%3D2%26r%3D1%26ac%3D2%26k_cc%3Dus%26dt%3Ddefault%26cmpid%3D%26cmptrack%3D%26click_source%3D&s=ALZo0YJ3nMzyenpD2Es3AoUi-nn7",
+        "isOfficialSite": false,
+        "price": "$72",
+        "url": "https://www.es.momondo.com/semi/ha/hotel_ads/71189/es.html?utm_source=google&utm_medium=cpc&utm_term=71189&adType=0&utm_content=mapresults&utm_campaign=HotelAds&ci=2026-11-25&co=2026-11-26&gs=mapresults&l=1&pc=USD&rid=&pdtax=12.41&pdtotal=72.07&rpid=&uc=US&ucuc=USD&d=desktop&lc=es&v=false&rrid=UFJJQ0VMSU5FQ09SRQ&k_pc=~UENMTkhPVEVMV0hJU0tZ&k_rt=&k_sid=2bBkVxSlYZ&k_kct=1795022624&k_gct=1795027020&g=2&r=1&ac=2&k_cc=us&dt=default&cmpid=&cmptrack=&click_source="
+      },
+      {
+        "title": "Clicktrip.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyi19qx-aj71XMewWYxtxIObOGlzrqtX9j5rijng8BuVA5GIUFQMr8bsswuUdZx8GfqIV9sxToP6QBZm7dzxoWhuCC7DrlravbH5jdxs_WZ1kcQzyCHRMk2L7as54xGli7cAbDdjXlIDyS-vKS9KGlm5P8F0CUV4iAR0gDDQPFvVBVUIbv7x727cz76cQf5YRqijPwCjHe8&pcurl=https://clicktrip.com/hotels/details/3BRQ1CEiYLQfuxEZ3vmZ3Jzea8_IQ7Tmji9at0ueQ0Co2NpAorTdrl0P7dQO3EtB-_xApzLj40sRWAjG8wcXfJY1DLgazYbbbaW6tI59z6uiZTSPzmnf9kKMVi_4cRjR0?locale%3Des%26currency%3DUSD%26pos%3DUS%26date_type%3Ddefault%26taf%3Dsh-4YdYKZx55HcOF-ul0VzyaQsXAFbePRzGtN3DzoVgOLYvlv5GeYxhQLssgW_mJ0%26verification%3Dfalse%26clk_src%3D%26utm_source%3Dgha%26rate_rule_id%3Dnot_domestic&s=ALZo0YJUR2GFyifoFL09MW9n3oed",
+        "isOfficialSite": false,
+        "price": "$72",
+        "url": "https://clicktrip.com/hotels/details/3BRQ1CEiYLQfuxEZ3vmZ3Jzea8_IQ7Tmji9at0ueQ0Co2NpAorTdrl0P7dQO3EtB-_xApzLj40sRWAjG8wcXfJY1DLgazYbbbaW6tI59z6uiZTSPzmnf9kKMVi_4cRjR0?locale=es&currency=USD&pos=US&date_type=default&taf=sh-4YdYKZx55HcOF-ul0VzyaQsXAFbePRzGtN3DzoVgOLYvlv5GeYxhQLssgW_mJ0&verification=false&clk_src=&utm_source=gha&rate_rule_id=not_domestic"
+      },
+      {
+        "title": "Traveluro",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjmBuNS3tGj0ljMe3SA6APxGqgY4CPn7IPh9Kzl9ZAXlkLMdKlRrCC-KMce8VSLIHqN1a7n_UiExW6RgU_u0cfEzC0Z-rVpIoQUnQDpja1AozNkEbNSHfTRC1u_eiuiNAFXc2-L76F4x_ISJLDV0i5MSRwV6Li69uwkMkS_p_EntBHFUJmlHR2Y&pcurl=https://www.traveluro.com/hotels/mexico_ja_puerto-vallarta/368399_hotel-encino?checkIn%3D2026-11-25%26checkOut%3D2026-11-26%26placeId%3DH368399%26campaignName%3DGoogle_US%26currencyCode%3DUSD%26dealKey%3DCAIQqwEiDAiu3ffXBhCwyczRAipODQAAlEIVAACIQiWF6x1BLXsUHkAwATi6AkUfBZRCSgwI-tP31wYQmNv43QJiClN0YW5kYXJkIDJoAoIBAI0B1yOUQqAB_NvoiASoAcgGMI0GOI--FkCF-A9IAVIIR-hZ40dZEexYyAZiAwoBIA%26countryCode%3DUS%26languageCode%3Des%26rule%3DGoogle_US%26site%3Dmapresults%26origin%3D31%26ads%3D%26priceDisplayedTotal%3D74.01%26priceDisplayedTax%3D12.34%26device%3Ddesktop%26adults%3D2%26children%3D0&s=ALZo0YLagv3WP21VPJxEhLo12dka",
+        "isOfficialSite": false,
+        "price": "$74",
+        "url": "https://www.traveluro.com/hotels/mexico_ja_puerto-vallarta/368399_hotel-encino?checkIn=2026-11-25&checkOut=2026-11-26&placeId=H368399&campaignName=Google_US&currencyCode=USD&dealKey=CAIQqwEiDAiu3ffXBhCwyczRAipODQAAlEIVAACIQiWF6x1BLXsUHkAwATi6AkUfBZRCSgwI-tP31wYQmNv43QJiClN0YW5kYXJkIDJoAoIBAI0B1yOUQqAB_NvoiASoAcgGMI0GOI--FkCF-A9IAVIIR-hZ40dZEexYyAZiAwoBIA&countryCode=US&languageCode=es&rule=Google_US&site=mapresults&origin=31&ads=&priceDisplayedTotal=74.01&priceDisplayedTax=12.34&device=desktop&adults=2&children=0"
+      },
+      {
+        "title": "Encino",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyi8Z_bRv8F7325QXVlCg3ucctB3VZERSpMlOu5fjn7DMnboOKzyRgLk71pMPXqWEfUgdbT0OW-6kri6tVvMb6zTpyl8ZQaCKhdNcnGxN_2vU_1qMaJ3JR1stDgg4wCy5RVv5l5XluHMp5YUfnFtgld0WEaDy95-U7mGetJIkSe5QGOeIAz9iSiT&pcurl=https://reservation.mirai.com/Forwarder/googleFrontDispatcher.htm?idtokenprovider%3D100378654%26checkin%3D25/11/2026%26nights%3D1%26lang%3Des%26hsri%3D08041%26adults%3D2%26children%3D0%26ages%3D%26babies%3D0%26googlecrawler%3Dfalse%26utm_source%3Dhotelfinder%26utm_medium%3Dorganic%26utm_campaign%3Dorganic%26currency%3DUSD%26rates%3DMzkxNDN8NTgwMzZ8MzE5ODE3YjB8MzExMzR8NDcwNzU0%26tracking%3D%26utm_content%3DUS%26UserDevice%3Ddesktop%26clickorigin%3DNOT-RBM%26date_type%3Ddefault%26campaign_id%3Dorganic%26googlesite%3Dmapresults%26tt_meta%3Dgha%26PPA1%3DFALSE%26user_list_id%3D%26clk_src%3D%26prid%3Dmirai_desktop_us_club%26totalPrice%3D74.42%26taxes%3D12.92%26otherFees%3D0.00&s=ALZo0YKViptBYV9GiMwVhz9tdtPr",
+        "isOfficialSite": true,
+        "price": "$74",
+        "url": "https://reservation.mirai.com/Forwarder/googleFrontDispatcher.htm?idtokenprovider=100378654&checkin=25/11/2026&nights=1&lang=es&hsri=08041&adults=2&children=0&ages=&babies=0&googlecrawler=false&utm_source=hotelfinder&utm_medium=organic&utm_campaign=organic&currency=USD&rates=MzkxNDN8NTgwMzZ8MzE5ODE3YjB8MzExMzR8NDcwNzU0&tracking=&utm_content=US&UserDevice=desktop&clickorigin=NOT-RBM&date_type=default&campaign_id=organic&googlesite=mapresults&tt_meta=gha&PPA1=FALSE&user_list_id=&clk_src=&prid=mirai_desktop_us_club&totalPrice=74.42&taxes=12.92&otherFees=0.00"
+      },
+      {
+        "title": "trivago DEALS",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyiS349yxBwL2V5G-UTXajS9zxfj5sg0ZFeC6LPiOgj8fj-bI0ckChX_NN2-3LE3CPlLNaNyqawaLJFLsCiXPb10DoPWYZsIJUv2dIuPPwA0HYHaEOi0hMmpmi3mmYFw8TzFAFMEHKBix9pffPECy1wt47Q5T-eh6byYvjW2sy5PPfr1oPkv3EvMDHPxvbEeMaU6S4P08mEr&pcurl=https://www.trivago.deals/hotels/mexico_ja_puerto-vallarta/368399_hotel-encino?checkIn%3D2026-11-25%26checkOut%3D2026-11-26%26placeId%3DH368399%26campaignName%3DTrivagoDeals_Google_US%26currencyCode%3DUSD%26dealKey%3DCAIQjQYiDAj60_fXBhDYg4CFAypNDQAAlkIVAACIQiUAACBBLQAAIEAwATi6AkUAAJZCSgsI89P31wYQoNzdc2IKU3RhbmRhcmQgMmgCggEAjQEAgJVCoAH82-iIBKgByAYwjQY4j74WQIX4D0gBUgg1yVnGPd7KvFjIBmIDCgEg%26countryCode%3DUS%26languageCode%3Des%26rule%3DGoogle_US%26site%3Dmapresults%26ads%3D%26origin%3D31%26priceDisplayedTotal%3D75.00%26priceDisplayedTax%3D12.50%26device%3Ddesktop%26adults%3D2%26children%3D0&s=ALZo0YKTY4LAU4Mz2mPQiWkEIS1A",
+        "isOfficialSite": false,
+        "price": "$75",
+        "url": "https://www.trivago.deals/hotels/mexico_ja_puerto-vallarta/368399_hotel-encino?checkIn=2026-11-25&checkOut=2026-11-26&placeId=H368399&campaignName=TrivagoDeals_Google_US&currencyCode=USD&dealKey=CAIQjQYiDAj60_fXBhDYg4CFAypNDQAAlkIVAACIQiUAACBBLQAAIEAwATi6AkUAAJZCSgsI89P31wYQoNzdc2IKU3RhbmRhcmQgMmgCggEAjQEAgJVCoAH82-iIBKgByAYwjQY4j74WQIX4D0gBUgg1yVnGPd7KvFjIBmIDCgEg&countryCode=US&languageCode=es&rule=Google_US&site=mapresults&ads=&origin=31&priceDisplayedTotal=75.00&priceDisplayedTax=12.50&device=desktop&adults=2&children=0"
+      },
+      {
+        "title": "Evendo",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygpGa2iSL_JC9ZSjsKNgOUFC_W6gNTP8SuXMNiAnFOEQvB5SG3COM_qma0oPJtkDkIJf8Oo56PsY6_1KBrU2RgT_yJHHyiw7F2hI396YXmQsLT3ZA2uQvGwh-LeBd3PA1E68DvGfE3pmyVpu--tyjPTiZOP5JTYnQNLiCyuH4yxIzbYJzeEaZzDa59oLZ9YYA&pcurl=https://evendo.com/stays/hotel-encino-malecon-centro-puerto-vallarta/00172671?check_in%3D2026-11-25%26check_out%3D2026-11-26%26who%3D%255B%257B%2522adults%2522:2,%2522children%2522:%255B%255D%257D%255D%26currency%3DUSD%26language%3Des%26country%3DUS%26utm_source%3Dgoogle%26utm_medium%3Dgooglehotels%26utm_campaign%3Dmapresults%26pdtax%3D13.70%26pdtotal%3D82.18%26prid%3D&s=ALZo0YKUOIGfsyN5I5OuG5sdqjQl",
+        "isOfficialSite": false,
+        "price": "$82",
+        "url": "https://evendo.com/stays/hotel-encino-malecon-centro-puerto-vallarta/00172671?check_in=2026-11-25&check_out=2026-11-26&who=[{\"adults\":2,\"children\":[]}]&currency=USD&language=es&country=US&utm_source=google&utm_medium=googlehotels&utm_campaign=mapresults&pdtax=13.70&pdtotal=82.18&prid="
+      },
+      {
+        "title": "Trip.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyi1M-p08xiCgAcstArWrqjUHk9GdP2FSZXIQF6fO_fLOfrQgWTd7DW0ru5tPoG8ImIbAPuvi2TjrMtrUL5MmHBrJA2Kcrzw96jfjt8nqp28m2kos_mOxccbrwTDzTCpONgOqIB9d0hDBRtv26NlpTzxzhDwx3W6H_6_E-1aeTgDR9JQGnk&pcurl=https://us.trip.com/hotels/redirect?hotelid%3D3066850%26city%3D3701%26shoppingid%3DMp6XbQfvpk-6%26adult%3D2%26children%3D0%26ages%3D%26checkin%3D2026-11-25%26checkout%3D2026-11-26%26curr%3DUSD%26Allianceid%3D15214%26Sid%3D1209572%26prid%3DLANG_US_ES%26trip_sub1%3D25_11_2026_1_mapresults_3066850_US_desktop_default___0_0-LANG_US_ES-landing%26hpaopts%3DH4sIAAAAAAAA_-MK5WKSYBJi4mCU8uY4-_Dpeg4hdkNTMwNDAyODpUIWD4sCOGYwPpq-m3EFI-MORqaLjK2vA3fIpQY7PGQUWef-sEok3OEF4_y_vb8YO1mWFNhyXV_M5LCAhVGKx7fALCIpMK2sIFvXTIFRY_7279fZPBiD2CwsLAwcTaNkuJhDg10EXxdvFf29WspBCsRThPGSWFOLdUODM46KdTEyeTCuYmTnYjYwMhRg-sTIj2xuvLnBJCZGQwDy2D9TxAAAAA%26fgt%3D1%26br%3D92.32%26tf%3D14.74%26display%3Dexavg%26locale%3Des_us%26crn%3D1%26roomid%3D2247717069&s=ALZo0YJ8ocQ8Mp3h6aMkGfrYmx5w",
+        "isOfficialSite": false,
+        "price": "$92",
+        "url": "https://us.trip.com/hotels/redirect?hotelid=3066850&city=3701&shoppingid=Mp6XbQfvpk-6&adult=2&children=0&ages=&checkin=2026-11-25&checkout=2026-11-26&curr=USD&Allianceid=15214&Sid=1209572&prid=LANG_US_ES&trip_sub1=25_11_2026_1_mapresults_3066850_US_desktop_default___0_0-LANG_US_ES-landing&hpaopts=H4sIAAAAAAAA_-MK5WKSYBJi4mCU8uY4-_Dpeg4hdkNTMwNDAyODpUIWD4sCOGYwPpq-m3EFI-MORqaLjK2vA3fIpQY7PGQUWef-sEok3OEF4_y_vb8YO1mWFNhyXV_M5LCAhVGKx7fALCIpMK2sIFvXTIFRY_7279fZPBiD2CwsLAwcTaNkuJhDg10EXxdvFf29WspBCsRThPGSWFOLdUODM46KdTEyeTCuYmTnYjYwMhRg-sTIj2xuvLnBJCZGQwDy2D9TxAAAAA&fgt=1&br=92.32&tf=14.74&display=exavg&locale=es_us&crn=1&roomid=2247717069"
+      },
+      {
+        "title": "Qantas Hotels",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygpTQkXUE_IBYiPVMrxodA-tHjyqATKYl5gFvIUhSpLsE1rCxelGvGp601QDUCy-H2qD6SRjnfCXCWxrEvr8Q7144b0SIH8TYDQXF6VDyiCnbXygd6_pkJxaNd4O1k7oTlifWTHXsXQ3pigh5A3_qlQMOMblaA7SOwUTD4FJduvZbkNb-kj&pcurl=https://www.qantas.com/hotels/properties/51970?adults%3D2%26children%3D0%26infants%3D0%26checkIn%3D2026-11-25%26checkOut%3D2026-11-26%26utm_campaign%3DGoogleHotels%26adType%3D0%26utm_medium%3Dorganic-search%26utm_source%3DGoogle-Hotels%26utm_term%3D51970%26hotelID%3D51970%26hotel_campaign%3D&s=ALZo0YJSJ-KM6XNOZzrEZ1ohwgF6",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.qantas.com/hotels/properties/51970?adults=2&children=0&infants=0&checkIn=2026-11-25&checkOut=2026-11-26&utm_campaign=GoogleHotels&adType=0&utm_medium=organic-search&utm_source=Google-Hotels&utm_term=51970&hotelID=51970&hotel_campaign="
+      },
+      {
+        "title": "Catchit.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyivWg_l67Cggobc_r-cjbiVCBz9aN4lSamBQnY1ZM8lH54z3JUKvGQciHjFRwjImin_6oyzUqeOWYOwtMUSeqqOXNCZ7qhYgA1DemR1GbnYJCD0h72sX_JRE_NsqageyNisxLv_vxYIXCdN0gTFkRzTGftWTp_D93Rxh1YvHURteJYFD4fmFS8&pcurl=https://www.catchit.com/tracking/A6-6524-HO-116731_2511202626112026_7800_1109_1109_8800_42_payclick/es/hoteles/116731-0_x?atoken%3Dn1c7fbx9bpx9bqxax0x2zzzzzzzzzzzzz%26utoken%3D1%253A0%253A77778020%253A0%253A1fc71%26chash%3D11d93c858d870f093b9f3c0ef1c7858f%26odata%3D0dg1ymthwgm3t38wAl1spgc6nhd5z9f7gvg5k4vlfp2tdtp6f3mcAd8sxlb1jl5v5s3b06hl3q45k89l31nlqgsmfwpmhg2755zsw53%26craw%3DNDIqKjE3ODQ5OTkqKjJfMTAwXzBfMF8wXzFfMCoqU0EqKk8qKk4qKmQzMGM0MGE2NjkzZWM4YTIyYWU1YjlkYWM3MTQ3NzJhKipO%26fco%3Dus%26mcc%3Dusd%26utm_source%3Dgoogle_hotel%26utm_medium%3Dmetabuscadores%26utm_campaign%3Dhoteles-afiliacion%26hotelID%3D116731%26hotel_campaign%3D&s=ALZo0YLgE1Kym765-eOu71FE-NZa",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.catchit.com/tracking/A6-6524-HO-116731_2511202626112026_7800_1109_1109_8800_42_payclick/es/hoteles/116731-0_x?atoken=n1c7fbx9bpx9bqxax0x2zzzzzzzzzzzzz&utoken=1:0:77778020:0:1fc71&chash=11d93c858d870f093b9f3c0ef1c7858f&odata=0dg1ymthwgm3t38wAl1spgc6nhd5z9f7gvg5k4vlfp2tdtp6f3mcAd8sxlb1jl5v5s3b06hl3q45k89l31nlqgsmfwpmhg2755zsw53&craw=NDIqKjE3ODQ5OTkqKjJfMTAwXzBfMF8wXzFfMCoqU0EqKk8qKk4qKmQzMGM0MGE2NjkzZWM4YTIyYWU1YjlkYWM3MTQ3NzJhKipO&fco=us&mcc=usd&utm_source=google_hotel&utm_medium=metabuscadores&utm_campaign=hoteles-afiliacion&hotelID=116731&hotel_campaign="
+      },
+      {
+        "title": "Travelocity.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyhXxHnUVKs7692IKCNmUop5cgfp6HgwWAo3hdOzu0Kg_du2GtvNzi0885U4InjdXU-sFD1P_iJsMPITtrAgZScDMKPM3bxsUSyRhfRe_Tk6M6GbEipmwrnz8eb0oNU3ZuDzZWcCbznrWBiQ5KQPBkD0i8eDQCHCaDWwPMZ2-K_AURhB-mtFhNEbCHKGgWut&pcurl=https://www.travelocity.com/Hotel-Search?selected%3D1784999%26startDate%3D2026-11-25%26endDate%3D2026-11-26%26adults%3D2%26children%3D%26langid%3D2058%26MDPCID%3Dtravelocity-US.META.HPA.ORGANIC-US-ES.HOTEL%26MDPDTL%3DHTL.1784999.20261125.20261126.DDT.7.CID..AUDID..mapresults%26mpg%3DUSD%26mpf%3D97.49%26mpj%3D16.92%26mpr%3D0.00%26mctc%3D10%26rateplanid%3D404135216%26mpm%3D24%26mpn%3D200007140%26mpo%3DEC%26mpe%3D1794972481%26mpp%3D1&s=ALZo0YIxz3BgyP2Y-ph8g7CEtUu6",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.travelocity.com/Hotel-Search?selected=1784999&startDate=2026-11-25&endDate=2026-11-26&adults=2&children=&langid=2058&MDPCID=travelocity-US.META.HPA.ORGANIC-US-ES.HOTEL&MDPDTL=HTL.1784999.20261125.20261126.DDT.7.CID..AUDID..mapresults&mpg=USD&mpf=97.49&mpj=16.92&mpr=0.00&mctc=10&rateplanid=404135216&mpm=24&mpn=200007140&mpo=EC&mpe=1794972481&mpp=1"
+      },
+      {
+        "title": "eDreams",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygw_61nHrir1enMsc78XiSMlGax6CYpxczNnqpzyrnvQmB3H5kz3PLqb_Jsln_HdTtcvasFIrnnBorXBlh-t2CzJ4YwK9N_tghSLqWrYkb9pPdyv0jM3qwF0q6AMyu8-BcOe3Wse5dYkPRyS9aqhiHTFu9CWiBPBcbT6xJJdlhHoajBKGGl&pcurl=https://accommodation.edreams.net/Hotel-Search?selected%3D1784999%26startDate%3D2026-11-25%26endDate%3D2026-11-26%26adults%3D2%26children%3D%26mpf%3D97.49%26cur%3DUSD%26mpj%3D16.92%26MDPCID%3DeDreams-US.DPS.Edreams.MetaSearch-GHA.HOTEL%26mpl%3DUSD%26numberOfRooms%3D1%26locale%3Den_US%26rffrid%3Dh4p.hcom.US.ghaodigeo.000.000.kwrd%3D%26pos%3DEDREAMS_US%26rateplanid%3D404135216%26mctc%3D10%26utm_medium%3Dmetasearch%26utm_campaign%3D199530%26utm_term%3Dhotel%26utm_source%3DFREEBOOKING&s=ALZo0YIB2j3HR1do_vme6QH5GoV0",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://accommodation.edreams.net/Hotel-Search?selected=1784999&startDate=2026-11-25&endDate=2026-11-26&adults=2&children=&mpf=97.49&cur=USD&mpj=16.92&MDPCID=eDreams-US.DPS.Edreams.MetaSearch-GHA.HOTEL&mpl=USD&numberOfRooms=1&locale=en_US&rffrid=h4p.hcom.US.ghaodigeo.000.000.kwrd=&pos=EDREAMS_US&rateplanid=404135216&mctc=10&utm_medium=metasearch&utm_campaign=199530&utm_term=hotel&utm_source=FREEBOOKING"
+      },
+      {
+        "title": "Expedia.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyh2-jrn2RYtQ_Xmsi9DqJhTmBZ6uc-xzmxLsm-33mxrrU1i8rrt_CUhgoc6oxubAaWwGOx--xJUuOVfI0IAF7RONTraR-9SqlJNqLgEEn-Qg7DtoSATleHU3Vd88pS0nL5yDFAAoVeuqFm_dTGbwQF9wEvxPCxo6Qqxq5qWWKmqNBOO-HoMl8bf4Jhm5ISM&pcurl=https://www.expedia.com/Hotel-Search?selected%3D1784999%26startDate%3D2026-11-25%26endDate%3D2026-11-26%26MDPCID%3DUS.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.1784999.20261125.20261126.DDT.7.CID..AUDID..RRID.bex_us_desktop%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D97.49%26mpj%3D16.92%26mpr%3D0.00%26mpl%3DUSD%26exp_pg%3Dgoogle%26langid%3Des%26ad%3D2%26tp%3D%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D1784999%26utm_content%3Dmapresults%26utm_campaign%3DHotelAds%26langid%3D2058%26adults%3D2%26children%3D%26rrid%3Dbex_us_desktop%26rateplanid%3D404135216%26mpm%3D24%26mpn%3D200007140%26mpo%3DEC%26mpe%3D1794972481%26mpp%3D1&s=ALZo0YJRs9gi_e6XiWtkh04UuHhs",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.expedia.com/Hotel-Search?selected=1784999&startDate=2026-11-25&endDate=2026-11-26&MDPCID=US.META.HPA.HOTEL-ORGANIC-desktop.HOTEL&MDPDTL=HTL.1784999.20261125.20261126.DDT.7.CID..AUDID..RRID.bex_us_desktop&mctc=10&ct=hotel&mpg=USD&mpf=97.49&mpj=16.92&mpr=0.00&mpl=USD&exp_pg=google&langid=es&ad=2&tp=&utm_source=google&utm_medium=cpc&utm_term=1784999&utm_content=mapresults&utm_campaign=HotelAds&langid=2058&adults=2&children=&rrid=bex_us_desktop&rateplanid=404135216&mpm=24&mpn=200007140&mpo=EC&mpe=1794972481&mpp=1"
+      },
+      {
+        "title": "Hotels.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyg6VrdOGh-wDBOKwyRAIWnBrKpfyWeHzmAgXitv_gp3K4HpWjtnQWcdShJxfMGG4T5k_5dSuRxvBiMioiY8nD8BdBvyXF22ycdyivjq6D0dIM7RhcRtXRE7KWC12LJGMm1PkHiMPgzJznD14vAgDvuuUa63sSp3S3vGqL_DOAC67BDW8iVkVffKdLrZ6gk&pcurl=https://www.hotels.com/Hotel-Search?selected%3D1784999%26startDate%3D2026-11-25%26endDate%3D2026-11-26%26mdpcid%3DHCOM-US.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.1784999.20261125.20261126.DDT.7.CID..AUDID.%26adults%3D2%26children%3D%26mctc%3D10%26mpf%3D97.49%26mpg%3DUSD%26mpl%3DUSD%26mpj%3D16.92%26mpr%3D0.00%26rffrid%3Dsem.hcom.US.156.024.mapresults.02.desktop-1.kwrd%3DGGMETA.1784999USes-20261125-D-ABW%3D7-camp%3D-aud%3D-N%26rateplanid%3D404135216%26mpm%3D24%26mpn%3D200007140%26mpo%3DEC%26mpe%3D1795026218%26mpp%3D1%26locale%3Des_US%26siteid%3D300000001&s=ALZo0YKTtEnw_N4qA2vHMMaN5QXq",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.hotels.com/Hotel-Search?selected=1784999&startDate=2026-11-25&endDate=2026-11-26&mdpcid=HCOM-US.META.HPA.HOTEL-ORGANIC-desktop.HOTEL&MDPDTL=HTL.1784999.20261125.20261126.DDT.7.CID..AUDID.&adults=2&children=&mctc=10&mpf=97.49&mpg=USD&mpl=USD&mpj=16.92&mpr=0.00&rffrid=sem.hcom.US.156.024.mapresults.02.desktop-1.kwrd=GGMETA.1784999USes-20261125-D-ABW=7-camp=-aud=-N&rateplanid=404135216&mpm=24&mpn=200007140&mpo=EC&mpe=1795026218&mpp=1&locale=es_US&siteid=300000001"
+      },
+      {
+        "title": "Orbitz.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjaHvQJTc8ihZ6750QacLLNjiatWxmRe0SwCOGRtvaZPj0C3LpIcQypxm-JSb9E9q_ILstHRTK0JOO9igvvvMKacgNQrZvAmwJRQOhoGd6kmVV3inaP28o7sy6a_2VWGNm-dAA8Je6ffoQ1gXw22xT5Qud71poB8SlOO3a9u6c57M26pX5TH0IGdQAVIbA&pcurl=https://www.orbitz.com/Hotel-Search?selected%3D1784999%26startDate%3D2026-11-25%26endDate%3D2026-11-26%26adults%3D2%26children%3D%26langid%3D2058%26MDPCID%3DORBITZ-US.META.HPA.ORGANIC-desktop-US-ES.HOTEL%26MDPDTL%3Dhtl.1784999.20261125.20261126.DDT.7.CID..AUDID..mapresults%26mpg%3DUSD%26mpf%3D97.49%26mpj%3D16.92%26mctc%3D10%26rateplanid%3D404135216%26mpm%3D24%26mpn%3D200007140%26mpo%3DEC%26mpe%3D1794972481%26mpp%3D1&s=ALZo0YLo3MavixzoCy8cU4Z9zIqi",
+        "isOfficialSite": false,
+        "price": "$97",
+        "url": "https://www.orbitz.com/Hotel-Search?selected=1784999&startDate=2026-11-25&endDate=2026-11-26&adults=2&children=&langid=2058&MDPCID=ORBITZ-US.META.HPA.ORGANIC-desktop-US-ES.HOTEL&MDPDTL=htl.1784999.20261125.20261126.DDT.7.CID..AUDID..mapresults&mpg=USD&mpf=97.49&mpj=16.92&mctc=10&rateplanid=404135216&mpm=24&mpn=200007140&mpo=EC&mpe=1794972481&mpp=1"
+      },
+      {
+        "title": "Traveloka.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygK3o9eeYrVf1_mfQj_KtmnLYK_2D687umdBTcq5aBdLM4rH_E3diTQd8qBgWjPjzLkGUNPbHghsLdFfahf1paHEPBpxtpv1HMZteApHmaBLSfQvqdF3HCLRjVQ5GVObGOKbeqK0NFfOcL0a_Kng0aZHkwZ8fXyQWmn2frBrIHQNjrEGEobb8ie&pcurl=https://www.traveloka.com/en-en/hotel/search?spec%3D25-11-2026.26-11-2026.1.1.HOTEL_GEO.4004004156.Estado%2520de%2520Jalisco.2%26hotelId%3D1000000199530%26contexts%3D%257B%2522accessCode%2522:%252290975GHAD1305desktop%2522%252C%2522metasearchRequestId%2522%253A%25225358ded8-d664-44ee-b4fc-9cc9a786eb8a%2522%252C%2522dateSelectionType%2522%253A%2522default%2522%252C%2522metasearchSelectedHotelId%2522%253A%25221000000199530%2522%252C%2522plc%2522%253A%2522QEWIxYMeo%252Fc9m4yApUEcgTGTn8k9r%252Fa%252FFL19IW%252BRTYpZ%252BRM3QT4Jd50LmqhucVzNovbGgGDpq3xoWtEBJXF%252FKg%253D%253D%2522%252C%2522pvlc%2522%253A%25221cpvY2wMOxm5iVvwVLB%252F%252BS81YpN6z60hzPV7jdcFkc9gD7FSTrmYPv0THfUwXMzc%2522%257D%26metasearchId%3DGoogleHotelAdsUser%26metasearchRateId%3Ddesktop%26metasearchRatekey%3DsgyUU2M0LrnnpXh1LPwoI%26priceDisplay%3DNIGHT%26metasearchRefid%3D12345678910abcdefghijk@-%26adType%3D0%26PPA%3D0%26hotelCampaign%3D1%26cur%3DUSD&s=ALZo0YJUCTCJdSpWmxw8g6aPV2hS",
+        "isOfficialSite": false,
+        "price": "$98",
+        "url": "https://www.traveloka.com/en-en/hotel/search?spec=25-11-2026.26-11-2026.1.1.HOTEL_GEO.4004004156.Estado de Jalisco.2&hotelId=1000000199530&contexts={\"accessCode\":\"90975GHAD1305desktop\",\"metasearchRequestId\":\"5358ded8-d664-44ee-b4fc-9cc9a786eb8a\",\"dateSelectionType\":\"default\",\"metasearchSelectedHotelId\":\"1000000199530\",\"plc\":\"QEWIxYMeo/c9m4yApUEcgTGTn8k9r/a/FL19IW+RTYpZ+RM3QT4Jd50LmqhucVzNovbGgGDpq3xoWtEBJXF/Kg==\",\"pvlc\":\"1cpvY2wMOxm5iVvwVLB/+S81YpN6z60hzPV7jdcFkc9gD7FSTrmYPv0THfUwXMzc\"}&metasearchId=GoogleHotelAdsUser&metasearchRateId=desktop&metasearchRatekey=sgyUU2M0LrnnpXh1LPwoI&priceDisplay=NIGHT&metasearchRefid=12345678910abcdefghijk@-&adType=0&PPA=0&hotelCampaign=1&cur=USD"
+      },
+      {
+        "title": "Central de Reservas",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEygUqZ5Ww-rK6MOYKzJtL8LGjjHNoFM9TJW2vU4SmAepcgrjkM6tQoJ3mePghhYWKRDibTlAy8k0OBBWY3FXc-lV5yc3IhO_q9MjRGRKqKLcp4JdsvaJlvgFeTQGcNP8n8M2Fu1us4j26hpGH1Mdj8QGRNA8acuC2l877ampH2LEJ27WKdU60ZeWy8Y72I6W8g&pcurl=https://h.centraldereservas.com/search?i%3D7103%26rf%3DGOOGLEHOTELS%26lang%3Des%26auto%3D1%26tipo%3DS%26id%3D42708%26numero_habs%3D1%26no_adultos_hab1%3D2%26no_ninos_hab1%3D0%26fecha_entrada%3D25%252F11%252F2026%26fecha_salida%3D26%252F11%252F2026%26refp%3D102.39%26campaing-id%3D%26tp%3D%26moneda%3DUSD%26device%3Ddesktop%26pais_dom%3DUS%26sg%3Db%3D93.36,bhab%3D263,big%3D2026-11-18T13:17:00%2B01:00,bmid%3D95,bpd%3Dus,bpt%3D16.15,breg%3D12,bwp%3DR_Yw4JyALJI,ts%3D2026-11-18T14:57:35%2B01:00/B:A435863ABF7E270DBFA1F405571DD6D9908EED6848C994BBBFE73C66%26c3%3Dmode%3DP,d%3D2,ts_id%3D102552192086247%26r%3DCAMPAIGN-ID%3D;TRACKING-PARAM%3D;RATE-RULE%3DBASERATE;PRICE-DISPLAYED-TOTAL%3D102.39;DEFAULT-DATE%3D1;CLICK-TYPE%3Dhotel;USER-COUNTRY%3DUS;DEVICE%3Ddesktop;SITE%3Dmapresults;USER-LANGUAGE%3Des;USER-CURRENCY%3DUSD;POS%3DUE-ES-EUR-CDR;AD-CLICK%3D0;PAYMENT-ID%3Dfree;C2%3Db%3D93.36,bhab%3D263,big%3D2026-11-18T13:17:00%2B01:00,bmid%3D95,bpd%3Dus,bpt%3D16.15,breg%3D12,bwp%3DR_Yw4JyALJI,ts%3D2026-11-18T14:57:35%2B01:00/B:A435863ABF7E270DBFA1F405571DD6D9908EED6848C994BBBFE73C66;C3%3Dmode%3DP,d%3D2,ts_id%3D102552192086247&s=ALZo0YI-yXjQDxqGmyWAb2S4JS7K",
+        "isOfficialSite": false,
+        "price": "$102",
+        "url": "https://h.centraldereservas.com/search?i=7103&rf=GOOGLEHOTELS&lang=es&auto=1&tipo=S&id=42708&numero_habs=1&no_adultos_hab1=2&no_ninos_hab1=0&fecha_entrada=25/11/2026&fecha_salida=26/11/2026&refp=102.39&campaing-id=&tp=&moneda=USD&device=desktop&pais_dom=US&sg=b=93.36,bhab=263,big=2026-11-18T13:17:00+01:00,bmid=95,bpd=us,bpt=16.15,breg=12,bwp=R_Yw4JyALJI,ts=2026-11-18T14:57:35+01:00/B:A435863ABF7E270DBFA1F405571DD6D9908EED6848C994BBBFE73C66&c3=mode=P,d=2,ts_id=102552192086247&r=CAMPAIGN-ID=;TRACKING-PARAM=;RATE-RULE=BASERATE;PRICE-DISPLAYED-TOTAL=102.39;DEFAULT-DATE=1;CLICK-TYPE=hotel;USER-COUNTRY=US;DEVICE=desktop;SITE=mapresults;USER-LANGUAGE=es;USER-CURRENCY=USD;POS=UE-ES-EUR-CDR;AD-CLICK=0;PAYMENT-ID=free;C2=b=93.36,bhab=263,big=2026-11-18T13:17:00+01:00,bmid=95,bpd=us,bpt=16.15,breg=12,bwp=R_Yw4JyALJI,ts=2026-11-18T14:57:35+01:00/B:A435863ABF7E270DBFA1F405571DD6D9908EED6848C994BBBFE73C66;C3=mode=P,d=2,ts_id=102552192086247"
+      },
+      {
+        "title": "Booking.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyix8UQ7jAzDL7Z50cMcku3Djnt5WFKLms-ozal8lVm4nsAs-O2p1CLbcTgCN8EWGKhUDWsLrahOVd80kmLIVVc70niU_QJ18Wb9t0agQ86x8bb4DG53FDWAgI1lHSac_Iq28jKfr5UjmuKC0CNhIo5znqkxFkW69IzhosYufK-G9usX2e_UiZ6j-7fLSXt9T0erGg&pcurl=https://www.booking.com/searchresults.es.html?dest_id%3D473406%26highlighted_hotels%3D473406%26dest_type%3Dhotel%26checkin%3D2026-11-25%26checkout%3D2026-11-26%26group_adults%3D2%26req_adults%3D2%26show_room%3D47340602_100451417_2_0_0%26lang%3Des%26selected_currency%3DUSD%26exrt%3D0.05356920%26ext_price_total%3D102.69%26ext_price_tax%3D19.78%26xfc%3DMXN%26hca%3Dm%26group_children%3D0%26req_children%3D0%26%26no_rooms%3D1%26ts%3D1795020288%26edgtid%3Dpuoa2Y8-THCDwwKw9lrpqg%26efpc%3DFUe1ihkWuJpB%26utm_source%3Dmetagha%26utm_medium%3Dmapresults%26utm_campaign%3DUS%26utm_term%3Dhotel-473406%26utm_content%3Ddev-desktop_los-1_bw-7_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-ig_aud-0_gacid-_mcid-50_bc-AAc5Pg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261125_ppt-GBdB%26aid%3D2127489%26label%3Dmetagha-link-MRUS-hotel-473406_dev-desktop_los-1_bw-7_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-ig_aud-0_gacid-_mcid-50_bc-AAc5Pg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261125_ppt-GBdB&s=ALZo0YL0zb3Z0fLzpL1EhlbauqZ2",
+        "isOfficialSite": false,
+        "price": "$103",
+        "url": "https://www.booking.com/searchresults.es.html?dest_id=473406&highlighted_hotels=473406&dest_type=hotel&checkin=2026-11-25&checkout=2026-11-26&group_adults=2&req_adults=2&show_room=47340602_100451417_2_0_0&lang=es&selected_currency=USD&exrt=0.05356920&ext_price_total=102.69&ext_price_tax=19.78&xfc=MXN&hca=m&group_children=0&req_children=0&&no_rooms=1&ts=1795020288&edgtid=puoa2Y8-THCDwwKw9lrpqg&efpc=FUe1ihkWuJpB&utm_source=metagha&utm_medium=mapresults&utm_campaign=US&utm_term=hotel-473406&utm_content=dev-desktop_los-1_bw-7_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-ig_aud-0_gacid-_mcid-50_bc-AAc5Pg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261125_ppt-GBdB&aid=2127489&label=metagha-link-MRUS-hotel-473406_dev-desktop_los-1_bw-7_dow-Wednesday_defdate-1_room-0_gstadt-2_rateid-ig_aud-0_gacid-_mcid-50_bc-AAc5Pg_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20261125_ppt-GBdB"
+      },
+      {
+        "title": "Priceline",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyjvK0j2k-d5xVY3NXE3x2MJj5XGO9nSubjLBekOU9_JSCVfZ5Scc9SXDhc9tlrhSUVGYFkNerpVr9T3BfpUnWvdKKFUqTY4pgNoMLnlqeMaDJ2y_iPCzJDNMSxVLSnfnACULfdBJshxRjqTSFZ08WeceYtlNWiElIvFbA8M1-BJtItkDOJji9QWyES4aMvjyCE&pcurl=https://www.priceline.com/r/?channel%3Dmeta%26product%3Dhotel%26theme%3DGoogle-L%26refid%3DPLGOOGLEMSS%26refclickid%3DUS_HP%257C1346705_mapresults_1%257C20261125%257Cdesktop%257Cdefaultdate%7Cinternational%7C%7C%7C7%257C2%257C0%7C0%7CEN%26hotelid%3D1346705%26checkin%3D20261125%26checkout%3D20261126%26rooms%3D1%26cur%3DUSD%26POSCountryCode%3DUS%26taxDisplayMode%3DBP%26cityID%3D3000060600%26adults%3D2%26land%3DL%26metaid%3De9FNE3h5S2nKPrcNQp8uiMwAM9sqNsjHeVfcoqkjYKeukC_JlV52f-9tKy46aIFEAJFEXM_NctvLNTWJX7bDyk6yNF6cBHAos8_c-4RcVjd186gDK4aZXpMMmo3GNYqX5O7OJObY7dJY_CCJLSmKsKETYqie3qpIEKvmwhHAyYMZZeg2JTkvWy-j833jMTWI_wZ8S0ZGkEM3D2OJlRkheCZnyCmt7FO3yCmO0ktNJnUoAGxqy1hcgR6eelmCPf-Fiw9R_mSDPyuUEhQ46gVh_2wDyuQvEV0X9LG6Vyc5QddCCwE6Q7j5E85Nj6tMk3jb8px2r3Q0HUy7_s5mwIgg57cX_DX1OMc_jzg_A-7XfEAU34XlWjKBU29CTwJH8wH3kVjt6m_zOYF1mimSjDPqyx2Weg9bHKNGR0XlPGhlruAl0cB8ql_0qX-CVN3OClJUCuEt2yfL8nb7Ea6-ijK2yra930Gw4swE77sC7l3oHrc%26dblcnt%3Dtrue%26hc%3D1%26pdtax%3D19.79%26pdf%3D0.00%26pdt%3D114.00%26locale%3Des-us%26ad-src%3D%26numChild%3D0%26aid%3D%26selAdults%3D2&s=ALZo0YIp6JJ8W7z5qHa1McjI0jD-",
+        "isOfficialSite": false,
+        "price": "$114",
+        "url": "https://www.priceline.com/r/?channel=meta&product=hotel&theme=Google-L&refid=PLGOOGLEMSS&refclickid=US_HP|1346705_mapresults_1|20261125|desktop|defaultdate|international|||7|2|0|0|EN&hotelid=1346705&checkin=20261125&checkout=20261126&rooms=1&cur=USD&POSCountryCode=US&taxDisplayMode=BP&cityID=3000060600&adults=2&land=L&metaid=e9FNE3h5S2nKPrcNQp8uiMwAM9sqNsjHeVfcoqkjYKeukC_JlV52f-9tKy46aIFEAJFEXM_NctvLNTWJX7bDyk6yNF6cBHAos8_c-4RcVjd186gDK4aZXpMMmo3GNYqX5O7OJObY7dJY_CCJLSmKsKETYqie3qpIEKvmwhHAyYMZZeg2JTkvWy-j833jMTWI_wZ8S0ZGkEM3D2OJlRkheCZnyCmt7FO3yCmO0ktNJnUoAGxqy1hcgR6eelmCPf-Fiw9R_mSDPyuUEhQ46gVh_2wDyuQvEV0X9LG6Vyc5QddCCwE6Q7j5E85Nj6tMk3jb8px2r3Q0HUy7_s5mwIgg57cX_DX1OMc_jzg_A-7XfEAU34XlWjKBU29CTwJH8wH3kVjt6m_zOYF1mimSjDPqyx2Weg9bHKNGR0XlPGhlruAl0cB8ql_0qX-CVN3OClJUCuEt2yfL8nb7Ea6-ijK2yra930Gw4swE77sC7l3oHrc&dblcnt=true&hc=1&pdtax=19.79&pdf=0.00&pdt=114.00&locale=es-us&ad-src=&numChild=0&aid=&selAdults=2"
+      },
+      {
+        "title": "Hotel Booking Zone",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyh9SMCz907PnuXdasPtQXYLyUKOefj_tPiUGgyWOHVKy3p2Ozac6r1t3SKsj1mI4BeP621eOuFZqRz2w9Ar-5WbhXYsHqUS-Cp78d7yQsJ1sPviB8j3RyLbDuWitaQSBAAgN1_c4pbNyxfH22HU9KtQVcT1vTzdKQ7hTCz9gjhg2b31NnsWf3Bsk3szKNWvLv4&pcurl=https://hotelbookingzone.com/hotels/73707331512/?checkin%3D2026-11-25%26checkout%3D2026-11-26%26room0_adults%3D2%26room0_children%3D0%26ad_click%3D%26click_type%3Dhotel%26date_type%3Ddefault%26gads_source%3D%26gads_site%3Dmapresults%26campaign_id%3D%26bw%3D7%26len%3D1%26room_id%3D%26disp_total%3D132.20%26disp_tax%3D22.93%26rr_id%3D%26user_country%3DUS%26user_currency%3DUSD%26user_device%3Ddesktop%26user_language%3Des%26user_list_id%3D%26C1%3D%26C2%3D6afce0f827ab-100d-0910-20f9e9f25b9-1df1db34a%26C3%3DPUBLIC%26C4%3D%26C5%3D&s=ALZo0YJY7GNelx0sbLgpEQeSsooH",
+        "isOfficialSite": false,
+        "price": "$132",
+        "url": "https://hotelbookingzone.com/hotels/73707331512/?checkin=2026-11-25&checkout=2026-11-26&room0_adults=2&room0_children=0&ad_click=&click_type=hotel&date_type=default&gads_source=&gads_site=mapresults&campaign_id=&bw=7&len=1&room_id=&disp_total=132.20&disp_tax=22.93&rr_id=&user_country=US&user_currency=USD&user_device=desktop&user_language=es&user_list_id=&C1=&C2=6afce0f827ab-100d-0910-20f9e9f25b9-1df1db34a&C3=PUBLIC&C4=&C5="
+      },
+      {
+        "title": "BusinessHotels.com",
+        "googleUrl": "https://www.google.com/travel/lodging/clk?pc=AJ0xEyhOZ-91nr0tLpFGIkdCe-sArEsP_HJY5onTMm7ii77mFBwHLhgSbIie4sgjoMQsEBdsNgJyFhVs1-Gp37WWVmNe-08-VDLRjx_-7U1Som98JurgXqHEWDrRWmZBrzwqzsePc8fk7wVsrFm_PSES7dKWpPmcxpxC6i2pboJEZJRK0miAsyMBY7lU-aXaOaGTpeuI&pcurl=https://www.businesshotels.com/gha_landing.php?hotel-id%3D700344657%26checkin-date%3D2026-11-25%26checkout-date%3D2026-11-26%26language%3Den%26USER-CURRENCY%3DUSD%26USER-COUNTRY%3DUS%26NUM-ADULTS%3D2%26NUM-CHILDREN%3D0%26is_google%3Dfalse%26alternate_hotel_id%3D700344657BH2101033971!%26ts%3D20261125%26ts2%3D20261126%26sig%3DGL700344657700344657BH2101033971!%26src%3Dfree%26click_type%3Dhotel%26google_site%3Dmapresults%26campaign_id%3D%26user_lang%3Des&s=ALZo0YKuBfgg7t8eSppmazUYITqY",
+        "isOfficialSite": false,
+        "price": "$147",
+        "url": "https://www.businesshotels.com/gha_landing.php?hotel-id=700344657&checkin-date=2026-11-25&checkout-date=2026-11-26&language=en&USER-CURRENCY=USD&USER-COUNTRY=US&NUM-ADULTS=2&NUM-CHILDREN=0&is_google=false&alternate_hotel_id=700344657BH2101033971!&ts=20261125&ts2=20261126&sig=GL700344657700344657BH2101033971!&src=free&click_type=hotel&google_site=mapresults&campaign_id=&user_lang=es"
+      }
+    ],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Wi-Fi gratis": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Hotel%20Encino&query_place_id=ChIJIRIjr05FIYQRVe9nd0bBlVw",
+    "searchPageUrl": "https://www.google.com/maps/search/hotel%20boutique%20hostal%20Centro%205%20de%20Diciembre%20Puerto%20Vallarta/@20.600523987941738,-105.24606877962434,16z?hl=es",
+    "searchString": "hotel boutique hostal Centro 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 21,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcQg79hrhrgGlHrpy9hZYChC9Jw_p6Mh0oBGGGpysjNfrNuuhizBrsHmfDEDmF5W3Jf-xywbnFP-0L2Ca4aaS-0BnUNM4OL1XzDRQIc9p6fnLyDbWCcuXnpL-BkIi7pu4dD4c9MzHkHSB_Q=w408-h267-k-no",
+    "kgmid": "/g/1vppsvcl",
+    "businessProfileId": "11114253786321134271",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Ten to Ten Puerto Vallarta",
+    "subTitle": null,
+    "description": "Hostal con habitaciones y dormitorios luminosos, terraza en la azotea y café/bar de influencia japonesa.",
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Hotel",
+    "address": "C. Juárez 467, Proyecto escola, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Proyecto escola, Centro",
+    "street": "C. Juárez 467",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://tentotentoten.com/en/hostel/puertovallarta/",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6096245,
+      "lng": -105.2345726
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJn463BU9FIYQRW574b0Qr_XA",
+    "categories": [
+      "Hotel",
+      "Albergue",
+      "Hostal juvenil"
+    ],
+    "fid": "0x8421454f05b78e9f:0x70fd2b446ff89e5b",
+    "cid": "8141711274292059739",
+    "reviewsCount": 407,
+    "reviewsDistribution": {
+      "oneStar": 33,
+      "twoStar": 9,
+      "threeStar": 22,
+      "fourStar": 65,
+      "fiveStar": 278
+    },
+    "imagesCount": 271,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:55.065Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": "Hotel de 2 estrellas",
+    "hotelDescription": "Este hostal tranquilo, ubicado entre las tiendas de la carretera federal 200, se encuentra a 3 minutos a pie de la playa de Puerto Vallarta y a 4 minutos a pie del Museo Naval.\n Las habitaciones coloridas y los dormitorios mixtos vienen equipados con Wi-Fi, ropa de cama y baño compartido. Los dormitorios y algunas habitaciones incluyen literas.\n El hotel dispone de comodidades, incluidos un café/bar de influencia japonesa, una terraza en la azotea y una cocina compartida.",
+    "checkInDate": "2026-11-25",
+    "checkOutDate": "2026-11-26",
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Wi-Fi gratis": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Ten%20to%20Ten%20Puerto%20Vallarta&query_place_id=ChIJn463BU9FIYQRW574b0Qr_XA",
+    "searchPageUrl": "https://www.google.com/maps/search/hotel%20boutique%20hostal%20Centro%205%20de%20Diciembre%20Puerto%20Vallarta/@20.66483376723495,-105.26324396604056,16z?hl=es",
+    "searchString": "hotel boutique hostal Centro 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfkp7a06n_mRyeUJFH10AdLtQPumEfT5tNqwP00Fqok5LBsJ3RdBHPz5Xq1aGC86YI2aZ_WLg46G3RmP3Ck_WOPY090Ae5DA5SJqyeXYtHsvcerzUMRRdKojzVt3GU3rhHnInE=w408-h272-k-no",
+    "kgmid": "/g/11fmljbj_b",
+    "businessProfileId": "11033734083877010649",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Casa Pancha Puerto Vallarta Centro - Adults Only",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Hotel",
+    "address": "C. Matamoros 425, Proyecto escola, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Proyecto escola, Centro",
+    "street": "C. Matamoros 425",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.casapanchapv.com/",
+    "phone": "+52 322 779 4270",
+    "phoneUnformatted": "+523227794270",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.608635,
+      "lng": -105.234092
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ2xkfVk5FIYQRGb8IYq2Pg1A",
+    "categories": [
+      "Hotel",
+      "Bed & Breakfast"
+    ],
+    "fid": "0x8421454e561f19db:0x50838fad6208bf19",
+    "cid": "5801638719820185369",
+    "reviewsCount": 28,
+    "reviewsDistribution": {
+      "oneStar": 2,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 3,
+      "fiveStar": 22
+    },
+    "imagesCount": 225,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T18:42:55.065Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": "Hotel",
+    "hotelDescription": null,
+    "checkInDate": "2026-11-25",
+    "checkOutDate": "2026-11-26",
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Wi-Fi gratis": true
+        },
+        {
+          "Desayuno incluido": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Casa%20Pancha%20Puerto%20Vallarta%20Centro%20-%20Adults%20Only&query_place_id=ChIJ2xkfVk5FIYQRGb8IYq2Pg1A",
+    "searchPageUrl": "https://www.google.com/maps/search/hotel%20boutique%20hostal%20Centro%205%20de%20Diciembre%20Puerto%20Vallarta/@20.66483376723495,-105.26324396604056,16z?hl=es",
+    "searchString": "hotel boutique hostal Centro 5 de Diciembre Puerto Vallarta",
+    "language": "es",
+    "rank": 3,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLf-hAt2QJGvt4MsBcHdpcAURlYprYtjqhgQH7YdT_b_voPVtZTpViG9aacVjpiLXT9mJjASgGD_1OxxK-Sf_1Tmj2k_t5MnIgJePAkkgtQvLJ5CLk4S60yJhgQp-77AbRuP8gPy=w408-h247-k-no",
+    "kgmid": "/g/11s_l_lszh",
+    "businessProfileId": "9632110014782711993",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Once Olas",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Pub restaurante",
+    "address": "Morelos 687, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Morelos 687",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.instagram.com/once.olas/profilecard/?igsh=MWNyZHZ4YXY5ankwbA==",
+    "phone": "+52 322 305 9851",
+    "phoneUnformatted": "+523223059851",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6119224,
+      "lng": -105.2336378
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJHTO3LABFIYQRrdJL-gYwfs4",
+    "categories": [
+      "Pub restaurante",
+      "Marisquería"
+    ],
+    "fid": "0x842145002cb7331d:0xce7e3006fa4bd2ad",
+    "cid": "14879383025405907629",
+    "reviewsCount": 242,
+    "reviewsDistribution": {
+      "oneStar": 3,
+      "twoStar": 0,
+      "threeStar": 2,
+      "fourStar": 7,
+      "fiveStar": 230
+    },
+    "imagesCount": 207,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:06.226Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "jueves",
+        "hours": "3 to 10 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "3 to 10 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "1 to 10 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "1 to 10 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "3 to 10 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "Cerrado"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Once%20Olas&query_place_id=ChIJHTO3LABFIYQRrdJL-gYwfs4",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20cocteleria%20cafe%20especialidad%20Olas%20Altas%20Emiliano%20Zapata%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "bar cocteleria cafe especialidad Olas Altas Emiliano Zapata Puerto Vallarta",
+    "language": "es",
+    "rank": 2,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfLN3yBr89ohmH5rAJK1kytjmFaaYYTX0zGGtB9loD3-qQmhSvKPT7tmmK02icf81KpjSsUenTaudDTsNTA0maGmHpcWOM9VGl5c8e7ot7NEOLuwCm5jxHW6diqNV_7eWeL55EBepwreqM=w408-h544-k-no",
+    "kgmid": "/g/11y725q6j7",
+    "businessProfileId": "10922917407204301134",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Puerto Cafe",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Cafetería",
+    "address": "Morelos 540, Proyecto escola, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Proyecto escola, Centro",
+    "street": "Morelos 540",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.facebook.com/delpuertocafe/",
+    "phone": "+52 322 131 3891",
+    "phoneUnformatted": "+523221313891",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6105358,
+      "lng": -105.2344377
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJu3BTC09FIYQRfUWfoWG8Az4",
+    "categories": [
+      "Cafetería",
+      "Bar",
+      "Club de vino"
+    ],
+    "fid": "0x8421454f0b5370bb:0x3e03bc61a19f457d",
+    "cid": "4468622382791083389",
+    "reviewsCount": 812,
+    "reviewsDistribution": {
+      "oneStar": 21,
+      "twoStar": 11,
+      "threeStar": 22,
+      "fourStar": 44,
+      "fiveStar": 714
+    },
+    "imagesCount": 635,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:06.226Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8 AM to 3 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 10 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 10 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": false
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Puerto%20Cafe&query_place_id=ChIJu3BTC09FIYQRfUWfoWG8Az4",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20cocteleria%20cafe%20especialidad%20Olas%20Altas%20Emiliano%20Zapata%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "bar cocteleria cafe especialidad Olas Altas Emiliano Zapata Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLc7YNCuSifjo7468rADBDKTB1upQBPnEOVmhFeLwprFrT98D8X6M50KIAaBn7Skn5eKrtuZk4qU_ZnznBk0JBym4SLZKrlMR5_81I6DejdKpSDJ6pG8GiNzB2SCIHnoDLfh2o6i=w408-h272-k-no",
+    "kgmid": "/g/11f3y4ry6_",
+    "businessProfileId": "11689837227738112715",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Moments Café & Bar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar restaurante",
+    "address": "C. Juárez 122, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 122",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 108 5015",
+    "phoneUnformatted": "+523221085015",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6064038,
+      "lng": -105.2364478
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJIRIjr05FIYQRdr7YK_mGWTk",
+    "categories": [
+      "Bar restaurante",
+      "Cafetería"
+    ],
+    "fid": "0x8421454eaf231221:0x395986f92bd8be76",
+    "cid": "4132482537829744246",
+    "reviewsCount": 1403,
+    "reviewsDistribution": {
+      "oneStar": 43,
+      "twoStar": 29,
+      "threeStar": 83,
+      "fourStar": 235,
+      "fiveStar": 1013
+    },
+    "imagesCount": 688,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:06.226Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "jueves",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "viernes",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "sábado",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "domingo",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "lunes",
+        "hours": "3 PM to 1 AM"
+      },
+      {
+        "day": "martes",
+        "hours": "3 PM to 1 AM"
+      }
+    ],
+    "wasOpenAtScrapeTime": false,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Moments%20Caf%C3%A9%20%26%20Bar&query_place_id=ChIJIRIjr05FIYQRdr7YK_mGWTk",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20cocteleria%20cafe%20especialidad%20Olas%20Altas%20Emiliano%20Zapata%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "bar cocteleria cafe especialidad Olas Altas Emiliano Zapata Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLemKqfYboWX5ut5UpYZH3RMLIGaKNLfbPAeivANvVnSZ_hLBKrp2ShvdTYVnQZ1u1OWDYnGAcG_WfINZq2XUwNCnW9aPglKSwur6WLCgFJ9Ml_YDCrWBCckuvvk8gbF2DULnVs=w426-h240-k-no",
+    "kgmid": "/g/1q6698hmp",
+    "businessProfileId": "10054695404229308691",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Horchata Boutique",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Boutique",
+    "address": "Libertad 270, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Libertad 270",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://www.instagram.com/horchata.boutique/",
+    "phone": "",
+    "phoneUnformatted": "",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6069632,
+      "lng": -105.2354975
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJfWxilTtFIYQRTeBqodOPIa4",
+    "categories": [
+      "Boutique"
+    ],
+    "fid": "0x8421453b95626c7d:0xae218fd3a16ae04d",
+    "cid": "12547468175939919949",
+    "reviewsCount": 19,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 18
+    },
+    "imagesCount": 19,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:15.766Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "9 AM to 3 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Horchata%20Boutique&query_place_id=ChIJfWxilTtFIYQRTeBqodOPIa4",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20recuerdos%20Zona%20Romantica%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "tienda de ropa boutique recuerdos Zona Romantica Puerto Vallarta",
+    "language": "es",
+    "rank": 6,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfqXXzYDoBYwNK4Np4ZS0SKTgmY1ZivXDdGuL-3nKg56sfqWmffHPA78sxg5h5wbIdbMJCUNbKHLPehIArxWaG_oEzYUyNyJ04JhTayYFWGGyhfliU-oNS4h2t6mti6TEcjisBx=w408-h307-k-no",
+    "kgmid": "/g/11kc8r5jyh",
+    "businessProfileId": "11837636101286785511",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "SUCESOS",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de ropa",
+    "address": "Miguel Hidalgo 113-B, Downtown, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Miguel Hidalgo 113-B, Downtown",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jal.",
+    "countryCode": "MX",
+    "website": "http://sucesosart.com/",
+    "phone": "+52 322 222 0868",
+    "phoneUnformatted": "+523222220868",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6071131,
+      "lng": -105.2357719
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJz1NZF4pPIYQRT75qZBK7wPw",
+    "categories": [
+      "Tienda de ropa"
+    ],
+    "fid": "0x84214f8a175953cf:0xfcc0bb12646abe4f",
+    "cid": "18212762580754808399",
+    "reviewsCount": 20,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 20
+    },
+    "imagesCount": 33,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:15.766Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=SUCESOS&query_place_id=ChIJz1NZF4pPIYQRT75qZBK7wPw",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20recuerdos%20Zona%20Romantica%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "tienda de ropa boutique recuerdos Zona Romantica Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/9IkmEvPPHHu1F62_JLDf8QKPnV0aqLgtS4uoCR8M6eTwBI-fRoT6nJL1TecDsF4=w427-h240-k-no",
+    "kgmid": "/g/1tdyr2z4",
+    "businessProfileId": "2689552820083189150",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Boutique D' Paola",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de ropa",
+    "address": "Agustín Rodríguez 299, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Agustín Rodríguez 299",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 222 1120",
+    "phoneUnformatted": "+523222221120",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6066486,
+      "lng": -105.235494
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJqWbNvE5FIYQRQM-kILxv0a0",
+    "categories": [
+      "Tienda de ropa",
+      "Boutique",
+      "Tienda de regalos"
+    ],
+    "fid": "0x8421454ebccd66a9:0xadd16fbc20a4cf40",
+    "cid": "12524914892486266688",
+    "reviewsCount": 3,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 0,
+      "fiveStar": 3
+    },
+    "imagesCount": 23,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:15.766Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 7 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 7 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Boutique%20D'%20Paola&query_place_id=ChIJqWbNvE5FIYQRQM-kILxv0a0",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20recuerdos%20Zona%20Romantica%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "tienda de ropa boutique recuerdos Zona Romantica Puerto Vallarta",
+    "language": "es",
+    "rank": 8,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/PywUJjiFqw4ZtWFuLuWAq6L0ACil85ZuNBjz5B7PMoMt6VHchrIVL4JCX-DA3ZaH=w427-h240-k-no",
+    "kgmid": "/g/1tp0d_0d",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "María de Guadalajara",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Tienda de ropa de mujer",
+    "address": "Morelos 552, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Morelos 552",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://mariadeguadalajara.com/",
+    "phone": "+52 322 222 2387",
+    "phoneUnformatted": "+523222222387",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6106414,
+      "lng": -105.2343149
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJrYgddU9FIYQR8-mSQhTQBKs",
+    "categories": [
+      "Tienda de ropa de mujer"
+    ],
+    "fid": "0x8421454f751d88ad:0xab04d0144292e9f3",
+    "cid": "12323203265827367411",
+    "reviewsCount": 30,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 1,
+      "fourStar": 2,
+      "fiveStar": 27
+    },
+    "imagesCount": 25,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:15.766Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 8 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 8 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Mar%C3%ADa%20de%20Guadalajara&query_place_id=ChIJrYgddU9FIYQR8-mSQhTQBKs",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20recuerdos%20Zona%20Romantica%20Puerto%20Vallarta/@20.61660143276504,-105.22889359320811,16z?hl=es",
+    "searchString": "tienda de ropa boutique recuerdos Zona Romantica Puerto Vallarta",
+    "language": "es",
+    "rank": 9,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLczyXeb-QcBEBXaymkSO74Mm5fRDV3Elg0Ltu7cEUFKbUMXghLDJzrcshl5mYerA7PGAk4FllJGEBA-nMLZxfm_AxjFz-aig8J7zMnD5ubIBJx83dd6mqU9RAJURq4_7zUVZ0U_tSCg0KHK=w408-h544-k-no",
+    "kgmid": "/g/11cn941y14",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Vallarta Factory Restaurant Bar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar restaurante",
+    "address": "Libertad 100, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Libertad 100",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://vallartafactory.mx/",
+    "phone": "+52 322 222 0300",
+    "phoneUnformatted": "+523222220300",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6064892,
+      "lng": -105.2348631
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.7,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJvYJPm05FIYQROhPdvGIuTLk",
+    "categories": [
+      "Bar restaurante",
+      "Restaurante de desayunos",
+      "Restaurante de brunch",
+      "Cafetería",
+      "Pizza para llevar"
+    ],
+    "fid": "0x8421454e9b4f82bd:0xb94c2e62bcdd133a",
+    "cid": "13352097996856955706",
+    "reviewsCount": 1039,
+    "reviewsDistribution": {
+      "oneStar": 16,
+      "twoStar": 9,
+      "threeStar": 39,
+      "fourStar": 119,
+      "fiveStar": 856
+    },
+    "imagesCount": 1326,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:33.990Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "8 AM to 11 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "8 AM to 11 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "8 AM to 11 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "8 AM to 11 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "8:30 AM to 11 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "8 AM to 11 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "8 AM to 11 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Vallarta%20Factory%20Restaurant%20Bar&query_place_id=ChIJvYJPm05FIYQROhPdvGIuTLk",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20lounge%20cafeteria%20Zona%20Hotelera%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "bar lounge cafeteria Zona Hotelera Puerto Vallarta",
+    "language": "es",
+    "rank": 4,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLf15yvOxhM_JSziES9q1blwzvOdy2uaKJLYrrx3QVPFAkj68C5XPd1jPwG-aFtu47WZfdQc78O7-eXfbfxqSNB4hl6UZLiEVIX4B-PHo8YB5pZpfOJvw5e3J8_nXv324NxfEID6SQ=w408-h306-k-no",
+    "kgmid": "/g/1tkrm3b6",
+    "businessProfileId": "9652061857692145209",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Pool Vallarta Cafe & Bar",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Bar deportivo",
+    "address": "Av México 1062, 5 de Diciembre, 48350 Puerto Vallarta Jal, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "Av México 1062",
+    "city": "Puerto Vallarta Jal",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 222 3443",
+    "phoneUnformatted": "+523222223443",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6157698,
+      "lng": -105.2317066
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJP_5ZKV1FIYQRyind9AUhu5s",
+    "categories": [
+      "Bar deportivo",
+      "Cafetería",
+      "Sala de billares"
+    ],
+    "fid": "0x8421455d2959fe3f:0x9bbb2105f4dd29ca",
+    "cid": "11221599205990410698",
+    "reviewsCount": 562,
+    "reviewsDistribution": {
+      "oneStar": 11,
+      "twoStar": 6,
+      "threeStar": 54,
+      "fourStar": 110,
+      "fiveStar": 381
+    },
+    "imagesCount": 165,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:33.990Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "jueves",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "lunes",
+        "hours": "7:30 AM to 2 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "7:30 AM to 2 a.m."
+      }
+    ],
+    "additionalOpeningHours": {
+      "Hora feliz": [
+        {
+          "day": "miércoles",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "jueves",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "viernes",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "sábado",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "domingo",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "lunes",
+          "hours": "7 a.m.–2 a.m."
+        },
+        {
+          "day": "martes",
+          "hours": "7 a.m.–2 a.m."
+        }
+      ]
+    },
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Espacio accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": false
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Pool%20Vallarta%20Cafe%20%26%20Bar&query_place_id=ChIJP_5ZKV1FIYQRyind9AUhu5s",
+    "searchPageUrl": "https://www.google.com/maps/search/bar%20lounge%20cafeteria%20Zona%20Hotelera%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "bar lounge cafeteria Zona Hotelera Puerto Vallarta",
+    "language": "es",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfWykBBbOYCrjXsYfcTcDprSDiz7KlpGJ_y-xqoz2U_wYfm5i7pVXDzRg_lbU5HdGFuO5vJyFOwLGbj7-JtbeZY42Wrdi3EdSXJQXtPEi4kIpmuo6RjBTejqfXToGiYAgX2UNEf=w408-h408-k-no",
+    "kgmid": "/g/1pp2vhywh",
+    "businessProfileId": "44222470173722284",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Makpalli - Mexican Clothing & Handicrafts",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Boutique",
+    "address": "C. Juárez 202-A, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 202-A",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://makpalli.com.mx/",
+    "phone": "+52 322 222 5002",
+    "phoneUnformatted": "+523222225002",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6073616,
+      "lng": -105.2358368
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.9,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJQ3UOBqpFIYQRtB7Fhg4CYsc",
+    "categories": [
+      "Boutique"
+    ],
+    "fid": "0x842145aa060e7543:0xc762020e86c51eb4",
+    "cid": "14367048022679166644",
+    "reviewsCount": 7,
+    "reviewsDistribution": {
+      "oneStar": 0,
+      "twoStar": 0,
+      "threeStar": 0,
+      "fourStar": 1,
+      "fiveStar": 6
+    },
+    "imagesCount": 76,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:38.539Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 2 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "Cerrado"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 6 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 6 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Makpalli%20-%20Mexican%20Clothing%20%26%20Handicrafts&query_place_id=ChIJQ3UOBqpFIYQRtB7Fhg4CYsc",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20souvenirs%20Zona%20Hotelera%20Las%20Glorias%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "tienda de ropa boutique souvenirs Zona Hotelera Las Glorias Puerto Vallarta",
+    "language": "es",
+    "rank": 7,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLcNpMo0FBs8xYqkzYfLBlp4oae6MdM1jIwg286z4xQ3ImHE4h4fAfvkYOZ1CDoGMKylZJLAQzfc9hgVsqTznLA0U6Uja1AGuNcBVfpAiu_Lub20tfOj86o_aXz-p4pWUj4laVBJ=w408-h544-k-no",
+    "kgmid": "/g/11qyb34ylq",
+    "businessProfileId": "6343151756463791446",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "Rolling Stones Leather",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Marroquinería",
+    "address": "Paseo Díaz Ordaz 802, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "Paseo Díaz Ordaz 802",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "phone": "+52 322 223 1769",
+    "phoneUnformatted": "+523222231769",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6133331,
+      "lng": -105.2333479
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.6,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJrY-dckVFIYQRyhLtvUzx-wM",
+    "categories": [
+      "Marroquinería"
+    ],
+    "fid": "0x84214545729d8fad:0x3fbf14cbded12ca",
+    "cid": "287088313174397642",
+    "reviewsCount": 111,
+    "reviewsDistribution": {
+      "oneStar": 4,
+      "twoStar": 1,
+      "threeStar": 7,
+      "fourStar": 16,
+      "fiveStar": 83
+    },
+    "imagesCount": 77,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:38.539Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "10 AM to 10 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "10 AM to 10 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Rolling%20Stones%20Leather&query_place_id=ChIJrY-dckVFIYQRyhLtvUzx-wM",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20de%20ropa%20boutique%20souvenirs%20Zona%20Hotelera%20Las%20Glorias%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "tienda de ropa boutique souvenirs Zona Hotelera Las Glorias Puerto Vallarta",
+    "language": "es",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLf8e3AAzmKkEkMbuEF8eCGQER4QEF6uDBdBinleshoubYf82ZAZz5HWmvpbj9OTqpOOvYnK62SUkMo7eJzu_6g78_KOTAC26jXGyarXCanVZW1-C72GbRq_5Ls0SmQrfTbdVBae=w426-h240-k-no",
+    "kgmid": "/g/11by_p850w",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Malecón & Paseo Díaz Ordaz"
+  },
+  {
+    "title": "Casa Ley",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Supermercado",
+    "address": "Av México No. 1150, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "Av México No. 1150",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.casaley.com.mx/",
+    "phone": "+52 667 759 1000",
+    "phoneUnformatted": "+526677591000",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.6174601,
+      "lng": -105.2312324
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.1,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJxU82U1tFIYQRic39mc0-TDI",
+    "categories": [
+      "Supermercado",
+      "Tienda de bebidas alcohólicas"
+    ],
+    "fid": "0x8421455b53364fc5:0x324c3ecd99fdcd89",
+    "cid": "3624340852899171721",
+    "reviewsCount": 6465,
+    "reviewsDistribution": {
+      "oneStar": 296,
+      "twoStar": 313,
+      "threeStar": 1036,
+      "fourStar": 1661,
+      "fiveStar": 3159
+    },
+    "imagesCount": 1824,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:44.662Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "jueves",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "viernes",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "sábado",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "domingo",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "lunes",
+        "hours": "6:30 AM to 12 a.m."
+      },
+      {
+        "day": "martes",
+        "hours": "6:30 AM to 12 a.m."
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Accesibilidad": [
+        {
+          "Entrada accesible para personas en silla de ruedas": true
+        },
+        {
+          "Estacionamiento accesible para personas en silla de ruedas": true
+        },
+        {
+          "Sanitarios accesibles para personas en silla de ruedas": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Casa%20Ley&query_place_id=ChIJxU82U1tFIYQRic39mc0-TDI",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20conveniencia%20minimarket%20plaza%20Zona%20Hotelera%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "tienda conveniencia minimarket plaza Zona Hotelera Puerto Vallarta",
+    "language": "es",
+    "rank": 5,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLdkG2rXG9-bhk4hpEBLJxLqHobuXfzTtbNMvT-xhe6YKsHCLWd9jenSCGjwWODgDXVbszYadog2JfOzTaz1GgH5EeMYTeK9Z5mQCZDx6Rs0Xwy-UHYmfRXzk7pSPVVUKsDw5B3oUQ=w426-h240-k-no",
+    "kgmid": "/g/1td610wn",
+    "businessProfileId": "4101400421651806783",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  },
+  {
+    "title": "Waldo's Puerto Vallarta Centro",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Supermercado de descuentos",
+    "address": "C. Juárez 754, Centro, 48300 Puerto Vallarta, Jal., México",
+    "neighborhood": "Centro",
+    "street": "C. Juárez 754",
+    "city": "Puerto Vallarta",
+    "postalCode": "48300",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "http://www.waldos.com/",
+    "phone": "+52 722 226 1459",
+    "phoneUnformatted": "+527222261459",
+    "claimThisBusiness": true,
+    "location": {
+      "lat": 20.6122029,
+      "lng": -105.232612
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.3,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJjby7CAtFIYQRe2Gi3BA0H2Q",
+    "categories": [
+      "Supermercado de descuentos",
+      "Comercio"
+    ],
+    "fid": "0x8421450b08bbbc8d:0x641f3410dca2617b",
+    "cid": "7214542375096574331",
+    "reviewsCount": 742,
+    "reviewsDistribution": {
+      "oneStar": 37,
+      "twoStar": 17,
+      "threeStar": 69,
+      "fourStar": 146,
+      "fiveStar": 473
+    },
+    "imagesCount": 120,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:32:44.663Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": null,
+    "hotelDescription": null,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [
+      {
+        "day": "miércoles",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "jueves",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "viernes",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "sábado",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "domingo",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "lunes",
+        "hours": "9 AM to 8:30 PM"
+      },
+      {
+        "day": "martes",
+        "hours": "9 AM to 8:30 PM"
+      }
+    ],
+    "wasOpenAtScrapeTime": true,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=Waldo's%20Puerto%20Vallarta%20Centro&query_place_id=ChIJjby7CAtFIYQRe2Gi3BA0H2Q",
+    "searchPageUrl": "https://www.google.com/maps/search/tienda%20conveniencia%20minimarket%20plaza%20Zona%20Hotelera%20Puerto%20Vallarta/@20.61660143276504,-105.26324396604056,16z?hl=es",
+    "searchString": "tienda conveniencia minimarket plaza Zona Hotelera Puerto Vallarta",
+    "language": "es",
+    "rank": 11,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLepJsI_FnIijh12xroKW3-20UOGGMePdbGVwo1enG7a-CexEepc8H2gp9ZHsRVq6GnPZMNRWl6mMrZEub0D5yF7h88zwIyxG4SgcVqi9lNBckxR_m5fMQMNtKIe1pvz1RhxjQ=w408-h306-k-no",
+    "kgmid": "/g/11h6r55j3k",
+    "businessProfileId": null,
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Centro Histórico · 48300"
+  },
+  {
+    "title": "World International Vacation Club - Casa de la Playa",
+    "subTitle": null,
+    "description": null,
+    "ownerDescription": null,
+    "price": null,
+    "categoryName": "Hotel",
+    "address": "Paraguay 1233, 5 de Diciembre, 48350 Puerto Vallarta, Jal., México",
+    "neighborhood": "5 de Diciembre",
+    "street": "Paraguay 1233",
+    "city": "Puerto Vallarta",
+    "postalCode": "48350",
+    "state": "Jalisco",
+    "countryCode": "MX",
+    "website": "https://wivc.com/",
+    "phone": "+52 322 222 4381",
+    "phoneUnformatted": "+523222224381",
+    "claimThisBusiness": false,
+    "location": {
+      "lat": 20.618701,
+      "lng": -105.231996
+    },
+    "locatedIn": null,
+    "floor": null,
+    "plusCode": null,
+    "menu": null,
+    "servicesLink": null,
+    "totalScore": 4.5,
+    "permanentlyClosed": false,
+    "temporarilyClosed": false,
+    "placeId": "ChIJ6xR0RUNFIYQRXxWVyKeR7W0",
+    "categories": [
+      "Hotel"
+    ],
+    "fid": "0x84214543457414eb:0x6ded91a7c895155f",
+    "cid": "7921147469425349983",
+    "reviewsCount": 122,
+    "reviewsDistribution": {
+      "oneStar": 5,
+      "twoStar": 3,
+      "threeStar": 7,
+      "fourStar": 18,
+      "fiveStar": 89
+    },
+    "imagesCount": 239,
+    "imageCategories": [],
+    "scrapedAt": "2026-11-18T16:36:00.110Z",
+    "reserveTableUrl": null,
+    "googleFoodUrl": null,
+    "hotelStars": "Hotel de 3 estrellas",
+    "hotelDescription": null,
+    "checkInDate": "2026-11-25",
+    "checkOutDate": "2026-11-26",
+    "hotelAds": [],
+    "popularTimesLiveText": null,
+    "popularTimesLivePercent": null,
+    "popularTimesHistogram": {},
+    "openingHours": [],
+    "wasOpenAtScrapeTime": null,
+    "peopleAlsoSearch": [],
+    "placesTags": [],
+    "reviewsTags": [],
+    "additionalInfo": {
+      "Amenities": [
+        {
+          "Wi-Fi gratis": true
+        }
+      ]
+    },
+    "gasPrices": [],
+    "url": "https://www.google.com/maps/search/?api=1&query=World%20International%20Vacation%20Club%20-%20Casa%20de%20la%20Playa&query_place_id=ChIJ6xR0RUNFIYQRXxWVyKeR7W0",
+    "searchPageUrl": "https://www.google.com/maps/search/hotel%20resort%20beach%20club%20Conchas%20Chinas%20Puerto%20Vallarta/@20.632678877588344,-105.21171840679189,16z?hl=es",
+    "searchString": "hotel resort beach club Conchas Chinas Puerto Vallarta",
+    "language": "es",
+    "rank": 10,
+    "isAdvertisement": false,
+    "imageUrl": "https://lh3.googleusercontent.com/grass-cs/AABkmLfJMkhBFIEMQ26ZhcqpKL1GMnQASAj4uhUI0hWxQuMePXxojNCnCnidoAYExOkEm848HpTuHH_3KnT8wihTJOpefFfa4-gapm9ICs3pK9cEO3jVhqAw36W-ZChJYh1Pd1F_qMnl=w426-h240-k-no",
+    "kgmid": "/g/11c2lhsyb9",
+    "businessProfileId": "4210824137226599185",
+    "_pv_zone_key": "centro_y_bahia",
+    "_pv_subzona": "Col. 5 de Diciembre / Playa Camarones"
+  }
+]

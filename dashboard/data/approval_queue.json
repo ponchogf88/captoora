@@ -1,0 +1,666 @@
+{
+  "policy": "HUMAN_APPROVAL_REQUIRED_FOR_ALL_EXTERNAL_OR_FINANCIAL_ACTIONS",
+  "items": [
+    {
+      "id": "LUPE-03",
+      "agent_id": "lupe_social",
+      "task_id": "TASK-702",
+      "target_name": "LinkedIn B2B · Carrusel 4:5: Cómo justificar renovación a patrocinadores 2027 con evidencia visual el mismo día",
+      "niche": "Camino 1 + Camino 4 · Corporativos & Clubes",
+      "channel": "LinkedIn B2B (Programación Lupe)",
+      "phone": "",
+      "package_ref": "Conan Brief: Canva (Carrusel 5 láminas 4:5) + Aftershoot -> PDF/Carrusel 4:5 (Coca-Cola FEMSA / Tecate / Poder Judicial NL proof)",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin 'presumir'",
+        "Validado por Marky",
+        "Aprobación Lupe"
+      ],
+      "draft_text": "Las marcas patrocinadoras no renuevan por gratitud: renuevan con evidencia fotográfica limpia el mismo día del evento.\n\nEn Captoora Studio (con experiencia en producciones para Coca-Cola FEMSA, Heineken/Tecate y Poder Judicial de Nuevo León) separamos la entrega digital en vivo de la manufactura artesanal de reconocimientos LED en taller local (3–5 días hábiles), para que el comité directivo proyecte en redes sociales una imagen profesional al nivel de excelencia de su institución.\n\nConoce el formato modular (-35% Temporada) o solicita tu Dossier B2B en https://captoora.studio/sports\n\n#MonterreyBusiness #SanPedroGarzaGarcia #Patrocinios #MarketingDeportivo #B2B",
+      "status": "approved",
+      "created_at": "2026-11-18T10:29:45-06:00",
+      "decided_at": "2026-11-18T10:30:00-06:00"
+    },
+    {
+      "id": "LUPE-02",
+      "agent_id": "lupe_social",
+      "task_id": "TASK-702",
+      "target_name": "TikTok · Video Corto: ¿Tu negocio sale con el carrito de Google Street View?",
+      "niche": "Camino 4 · Small Business 2027 (-35%)",
+      "channel": "TikTok (Programación Lupe)",
+      "phone": "",
+      "package_ref": "Conan Brief: OBS + OpusClip Pro + Captions (9:16) -> Clip vertical 28s comparando Street View vs Vitrina 2027",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin 'presumir'",
+        "Validado por Marky",
+        "Aprobación Lupe"
+      ],
+      "draft_text": "Cuando alguien busca tu clínica, gimnasio o jardín de niños en Monterrey, tu primera impresión pasa en 3 segundos en Google Maps. 📍\n\nSi tu ficha abre con el carrito de Street View o sin teléfono verificado, estás dejando pasar clientes listos para agendar.\n\nCaptoora Small Business 2027 (-35%): sesión editorial en tu negocio + carga directa en Google Maps + Meta Business Portfolio (FB, IG y WA sin bloqueos) desde $3,900 MXN.\nPide tu lámina comparativa Antes vs. Después en captoora.studio/sports 📲\n\n#Monterrey #GoogleMapsPro #GoogleMapsMexico #PymesMonterrey #CaptooraStudio",
+      "status": "approved",
+      "created_at": "2026-11-18T10:29:39-06:00",
+      "decided_at": "2026-11-18T10:29:56-06:00"
+    },
+    {
+      "id": "LUPE-01",
+      "agent_id": "lupe_social",
+      "task_id": "TASK-702",
+      "target_name": "Instagram + Facebook (Meta Business Suite) · Reel: Tu Torneo del Pavo merece trofeos LED y fotos antes de la premiación",
+      "niche": "Camino 1 · Navidad 2026 (-35%)",
+      "channel": "Instagram + Facebook (Meta Business Suite) (Programación Lupe)",
+      "phone": "",
+      "package_ref": "Conan Brief: OpusClip Pro + CapCut (9:16) -> Reel 22s 9:16 con encendido de acrílico LED + acción 1/2000s",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin 'presumir'",
+        "Validado por Marky",
+        "Aprobación Lupe"
+      ],
+      "draft_text": "Encola siguiente pieza Pull en Meta Suite + TikTok para atraer escuelas, gimnasios y clubes en MTY/SPGG\n\n#PadelMonterrey #SanPedroGarzaGarcia #CaptooraSports #TorneoDelPavo #Posada2026",
+      "status": "approved",
+      "created_at": "2026-11-18T10:23:42-06:00",
+      "decided_at": "2026-11-18T10:30:04-06:00"
+    },
+    {
+      "id": "TEST-001",
+      "agent_id": "ventas_outreach",
+      "task_id": null,
+      "target_name": "Autoprueba Personal 1/2 · Saludo Corto (Tu WhatsApp)",
+      "niche": "Autoprueba Interna · Pádel",
+      "channel": "WhatsApp Directo (+52 81 3051 6527)",
+      "phone": "528130516527",
+      "package_ref": "Mensaje 1/2 · Rompehielos Diagnóstico (Sin links ni PDF)",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Máx 3 líneas sin saturar",
+        "Identifica Navidad 2026"
+      ],
+      "draft_text": "Hola 👋, buen día al equipo de Cuatro Padel. Te saluda Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports) 🎾\n\nVimos que se acerca su Torneo del Pavo · Navidad 2026 🎄 y queríamos hacerles una pregunta rápida: ¿ya tienen resuelta la cobertura de fotos el mismo día 📸 y los trofeos personalizados de esta edición 🏆?",
+      "status": "approved",
+      "created_at": "2026-11-15T08:04:00-06:00",
+      "decided_at": "2026-11-18T10:30:06-06:00",
+      "whatsapp_url": "https://wa.me/528130516527?text=Hola%20%F0%9F%91%8B%2C%20buen%20d%C3%ADa%20al%20equipo%20de%20Cuatro%20Padel.%20Te%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29%20%F0%9F%8E%BE%0A%0AVimos%20que%20se%20acerca%20su%20Torneo%20del%20Pavo%20%C2%B7%20Navidad%202026%20%F0%9F%8E%84%20y%20quer%C3%ADamos%20hacerles%20una%20pregunta%20r%C3%A1pida%3A%20%C2%BFya%20tienen%20resuelta%20la%20cobertura%20de%20fotos%20el%20mismo%20d%C3%ADa%20%F0%9F%93%B8%20y%20los%20trofeos%20personalizados%20de%20esta%20edici%C3%B3n%20%F0%9F%8F%86%3F"
+    },
+    {
+      "id": "TEST-002",
+      "agent_id": "ventas_outreach",
+      "task_id": null,
+      "target_name": "Autoprueba Personal 2/2 · Web + Opc A/B + PDF (Tu WhatsApp)",
+      "niche": "Autoprueba Interna · Pádel",
+      "channel": "WhatsApp Directo (+52 81 3051 6527)",
+      "phone": "528130516527",
+      "package_ref": "Mensaje 2/2 · Comparativa Opción A vs B + Dossier 1 Hoja",
+      "financial_impact_mxn": 12500,
+      "estimated_margin_pct": 80.8,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Acrílico LED 2026",
+        "Web + Dossier PDF 1 hoja",
+        "SLA 3-5 días taller MTY/SPGG"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Opción A · Acrílico LED 2026",
+          "path": "assets/mockups/test/Mockup_Prueba_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "Opción B · Editorial 1/2000s + LED",
+          "path": "assets/mockups/test/Mockup_Prueba_OpcB_AccionLED_2026.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Ejecutivo 1 Hoja (PDF)",
+          "path": "assets/mockups/test/Captoora_Dossier_Prueba_Navidad2026.pdf"
+        }
+      ],
+      "draft_text": "✨ Te comparto cómo se vería personalizado para Cuatro Padel en Navidad 2026 (con esquema opcional autofinanciado por sus mismos sponsors):\n\n🌐 Estudio Sports: https://captoora.studio/sports\n🖼️ Galerías en vivo: https://galeria.captoora.studio\n📸 Ig: @captoora.studio\n\n📄 Te adjunto aquí abajo el dossier de 1 hoja en PDF y dos vistas previas (Opc. A: Acrílico LED 2026 · Opc. B: Editorial 1/2000s + LED).*\n\n👇 ¿Con quién de tu equipo lo revisamos esta semana? 🙌\n\n*Entrega digital el mismo día · Acrílico LED en taller MTY/SPGG: 3–5 días hábiles.",
+      "status": "approved",
+      "created_at": "2026-11-15T08:04:00-06:00",
+      "decided_at": "2026-11-16T19:27:20-06:00",
+      "whatsapp_url": "https://wa.me/528130516527?text=%E2%9C%A8%20Te%20comparto%20c%C3%B3mo%20se%20ver%C3%ADa%20personalizado%20para%20Cuatro%20Padel%20en%20Navidad%202026%20%28con%20esquema%20opcional%20autofinanciado%20por%20sus%20mismos%20sponsors%29%3A%0A%0A%F0%9F%8C%90%20Estudio%20Sports%3A%20https%3A//captoora.studio/sports%0A%F0%9F%96%BC%EF%B8%8F%20Galer%C3%ADas%20en%20vivo%3A%20https%3A//galeria.captoora.studio%0A%F0%9F%93%B8%20Ig%3A%20%40captoora.studio%0A%0A%F0%9F%93%84%20Te%20adjunto%20aqu%C3%AD%20abajo%20el%20dossier%20de%201%20hoja%20en%20PDF%20y%20dos%20vistas%20previas%20%28Opc.%20A%3A%20Acr%C3%ADlico%20LED%202026%20%C2%B7%20Opc.%20B%3A%20Editorial%201/2000s%20%2B%20LED%29.%2A%0A%0A%F0%9F%91%87%20%C2%BFCon%20qui%C3%A9n%20de%20tu%20equipo%20lo%20revisamos%20esta%20semana%3F%20%F0%9F%99%8C%0A%0A%2AEntrega%20digital%20el%20mismo%20d%C3%ADa%20%C2%B7%20Acr%C3%ADlico%20LED%20en%20taller%20MTY/SPGG%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-001",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-101",
+      "target_name": "Cuatro Padel (San Pedro Garza García)",
+      "niche": "Pádel & Raqueta",
+      "channel": "WhatsApp Directo (+52 81 2354 5695)",
+      "phone": "528123545695",
+      "package_ref": "4. Torneo del Pavo & Posada Pádel ($12,500 MXN)",
+      "financial_impact_mxn": 12500,
+      "estimated_margin_pct": 80.8,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Diagnóstico no-venta",
+        "Distinción taller LED protegida"
+      ],
+      "draft_text": "Hola, buen día al equipo directivo de Cuatro Padel. Te saluda el equipo de Captoora Sports (producción en cancha 1/2000s y entregas el mismo día). Al revisar el calendario de cierre de año en San Pedro, vimos que se acercan los Torneos del Pavo y Posadas de socios. Queremos hacerles una consulta breve: ¿tienen ya resuelta la entrega de galería el mismo día para proyectar en redes sociales una imagen profesional al nivel de excelencia de su club y un dossier visual para justificar renovación a sus patrocinadores 2027? Armamos un esquema autofinanciado con los mismos sponsors que incluye 4 trofeos escultóricos en acrílico óptico iluminado con base LED cálida (dejando atrás diplomas de papel o piezas anticuadas).* ¿Te puedo compartir el PDF de 1 minuto para revisarlo?\n\n*Cobertura digital el mismo día; manufactura artesanal en taller local: 3 a 5 días hábiles o entrega en ceremonia.",
+      "status": "approved",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": "2026-11-15T07:44:29-06:00",
+      "whatsapp_url": "https://wa.me/528123545695?text=Hola%2C%20buen%20d%C3%ADa%20al%20equipo%20directivo%20de%20Cuatro%20Padel.%20Te%20saluda%20el%20equipo%20de%20Captoora%20Sports%20%28producci%C3%B3n%20en%20cancha%201/2000s%20y%20entregas%20el%20mismo%20d%C3%ADa%29.%20Al%20revisar%20el%20calendario%20de%20cierre%20de%20a%C3%B1o%20en%20San%20Pedro%2C%20vimos%20que%20se%20acercan%20los%20Torneos%20del%20Pavo%20y%20Posadas%20de%20socios.%20Queremos%20hacerles%20una%20consulta%20breve%3A%20%C2%BFtienen%20ya%20resuelta%20la%20entrega%20de%20galer%C3%ADa%20el%20mismo%20d%C3%ADa%20para%20proyectar%20en%20redes%20sociales%20una%20imagen%20profesional%20al%20nivel%20de%20excelencia%20de%20su%20club%20y%20un%20dossier%20visual%20para%20justificar%20renovaci%C3%B3n%20a%20sus%20patrocinadores%202027%3F%20Armamos%20un%20esquema%20autofinanciado%20con%20los%20mismos%20sponsors%20que%20incluye%204%20trofeos%20escult%C3%B3ricos%20en%20acr%C3%ADlico%20%C3%B3ptico%20iluminado%20con%20base%20LED%20c%C3%A1lida%20%28dejando%20atr%C3%A1s%20diplomas%20de%20papel%20o%20piezas%20anticuadas%29.%2A%20%C2%BFTe%20puedo%20compartir%20el%20PDF%20de%201%20minuto%20para%20revisarlo%3F%0A%0A%2ACobertura%20digital%20el%20mismo%20d%C3%ADa%3B%20manufactura%20artesanal%20en%20taller%20local%3A%203%20a%205%20d%C3%ADas%20h%C3%A1biles%20o%20entrega%20en%20ceremonia.",
+      "attachments": [
+        {
+          "type": "pdf",
+          "label": "Dossier Cuatro Padel · Navidad 2026 (PDF)",
+          "path": "assets/mockups/clubs/cuatro_padel/cuatro_padel_Dossier_Navidad2026.pdf"
+        },
+        {
+          "type": "image",
+          "label": "Cuatro Padel Opción A · Acrílico LED",
+          "path": "assets/mockups/clubs/cuatro_padel/cuatro_padel_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "Cuatro Padel Opción B · Editorial + LED",
+          "path": "assets/mockups/clubs/cuatro_padel/cuatro_padel_OpcB_EditorialLED_2026.png"
+        }
+      ]
+    },
+    {
+      "id": "APR-002",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-101",
+      "target_name": "Padel GM (Av. Gómez Morín, San Pedro)",
+      "niche": "Pádel & Raqueta",
+      "channel": "WhatsApp Directo (+52 81 1538 7900)",
+      "phone": "528115387900",
+      "package_ref": "Navidad -35% (3 Opciones Modulares: $3,185 / $5,135 / $7,475 MXN)",
+      "financial_impact_mxn": 7475,
+      "estimated_margin_pct": 67.9,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "-35% Temporada",
+        "3 Opciones + 2do Momento"
+      ],
+      "draft_text": "Hola, buen día al equipo de Padel GM. Les saluda Jesús Gutiérrez de Captoora Sports (producción editorial 1/2000s en tu sede) 🎾\n\nPara su Torneo Navideño y posada anual armamos un formato con -35% Descuento de Temporada y 3 opciones a elegir (además pueden apartar hoy solo lo digital y liquidar acrílicos LED en un 2do momento o vía patrocinador):\n1) Solo Fotografía Digital (Halftime + galería el mismo día): $4,900 -> $3,185 MXN\n2) Foto + Impresión / Marcos Finos: $7,900 -> $5,135 MXN\n3) Suite Completa + Reels Meta Ads + 4 Acrílicos LED cálida y 20 llaveros: $11,500 -> $7,475 MXN*\n\n🌐 Muestra y portafolio: https://captoora.studio/sports\n¿Cuál de las 3 opciones revisamos esta semana para proyectar una imagen profesional al nivel de excelencia de su club?\n\n*Entrega digital el mismo día; piezas acrílicas LED en taller local MTY/SPGG: 3 a 5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": null,
+      "attachments": [
+        {
+          "type": "pdf",
+          "label": "Dossier Padel GM · Navidad 2026 -35% (PDF)",
+          "path": "assets/mockups/clubs/padel_gm/padel_gm_Dossier_Navidad2026.pdf"
+        },
+        {
+          "type": "image",
+          "label": "Padel GM Opción A · Acrílico LED 2026",
+          "path": "assets/mockups/clubs/padel_gm/padel_gm_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "Padel GM Opción B · Editorial 1/2000s + LED",
+          "path": "assets/mockups/clubs/padel_gm/padel_gm_OpcB_EditorialLED_2026.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Auditoría Maps Padel GM 2027 (PDF)",
+          "path": "assets/mockups/small_biz/padel_gm_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "whatsapp_url": "https://wa.me/528115387900?text=Hola%2C%20buen%20d%C3%ADa%20al%20equipo%20de%20Padel%20GM.%20Les%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Sports%20%28producci%C3%B3n%20editorial%201/2000s%20en%20tu%20sede%29%20%F0%9F%8E%BE%0A%0APara%20su%20Torneo%20Navide%C3%B1o%20y%20posada%20anual%20armamos%20un%20formato%20con%20-35%25%20Descuento%20de%20Temporada%20y%203%20opciones%20a%20elegir%20%28adem%C3%A1s%20pueden%20apartar%20hoy%20solo%20lo%20digital%20y%20liquidar%20acr%C3%ADlicos%20LED%20en%20un%202do%20momento%20o%20v%C3%ADa%20patrocinador%29%3A%0A1%29%20Solo%20Fotograf%C3%ADa%20Digital%20%28Halftime%20%2B%20galer%C3%ADa%20el%20mismo%20d%C3%ADa%29%3A%20%244%2C900%20-%3E%20%243%2C185%20MXN%0A2%29%20Foto%20%2B%20Impresi%C3%B3n%20/%20Marcos%20Finos%3A%20%247%2C900%20-%3E%20%245%2C135%20MXN%0A3%29%20Suite%20Completa%20%2B%20Reels%20Meta%20Ads%20%2B%204%20Acr%C3%ADlicos%20LED%20c%C3%A1lida%20y%2020%20llaveros%3A%20%2411%2C500%20-%3E%20%247%2C475%20MXN%2A%0A%0A%F0%9F%8C%90%20Muestra%20y%20portafolio%3A%20https%3A//captoora.studio/sports%0A%C2%BFCu%C3%A1l%20de%20las%203%20opciones%20revisamos%20esta%20semana%20para%20proyectar%20una%20imagen%20profesional%20al%20nivel%20de%20excelencia%20de%20su%20club%3F%0A%0A%2AEntrega%20digital%20el%20mismo%20d%C3%ADa%3B%20piezas%20acr%C3%ADlicas%20LED%20en%20taller%20local%20MTY/SPGG%3A%203%20a%205%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-003",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-102",
+      "target_name": "PADELBOSS (San Pedro Garza García)",
+      "niche": "Pádel & Raqueta",
+      "channel": "WhatsApp Directo (+52 81 8691 7694)",
+      "phone": "528186917694",
+      "package_ref": "Navidad -35% (3 Opciones Modulares: $3,185 / $5,135 / $7,475 MXN)",
+      "financial_impact_mxn": 7475,
+      "estimated_margin_pct": 67.9,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "-35% Temporada",
+        "Nota taller 3-5d protegida"
+      ],
+      "draft_text": "Hola, buen día al equipo de PADELBOSS 👋 Les escribe Jesús Gutiérrez de Captoora Sports (respaldo en producciones para Coca-Cola FEMSA, Heineken y Poder Judicial NL).\n\nPara su Posada y Torneo del Pavo activamos -35% Descuento de Temporada con 3 opciones claras (y pago de trofeos LED diferible en 2do momento o cubierto por sponsors):\n1) Solo Digital (fotos a 1/2000s entregadas el mismo día): $4,900 -> $3,185 MXN\n2) Foto + Impresión / Marcos Finos: $7,900 -> $5,135 MXN\n3) Suite Full + Reels + 4 Trofeos Acrílico Óptico LED cálida + 20 llaveros: $11,500 -> $7,475 MXN*\n\n🌐 Portafolio 3D: https://captoora.studio/sports — ¿cuál de las 3 opciones prefieren que coticemos esta semana?\n\n*Cobertura digital el mismo día; manufactura de acrílicos LED en taller MTY/SPGG: 3 a 5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": null,
+      "attachments": [
+        {
+          "type": "pdf",
+          "label": "Dossier PADELBOSS · Navidad 2026 -35% (PDF)",
+          "path": "assets/mockups/clubs/padelboss/padelboss_Dossier_Navidad2026.pdf"
+        },
+        {
+          "type": "image",
+          "label": "PADELBOSS Opción A · Acrílico LED 2026",
+          "path": "assets/mockups/clubs/padelboss/padelboss_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "PADELBOSS Opción B · Editorial 1/2000s + LED",
+          "path": "assets/mockups/clubs/padelboss/padelboss_OpcB_EditorialLED_2026.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Auditoría Maps PADELBOSS 2027 (PDF)",
+          "path": "assets/mockups/small_biz/padelboss_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "whatsapp_url": "https://wa.me/528186917694?text=Hola%2C%20buen%20d%C3%ADa%20al%20equipo%20de%20PADELBOSS%20%F0%9F%91%8B%20Les%20escribe%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Sports%20%28respaldo%20en%20producciones%20para%20Coca-Cola%20FEMSA%2C%20Heineken%20y%20Poder%20Judicial%20NL%29.%0A%0APara%20su%20Posada%20y%20Torneo%20del%20Pavo%20activamos%20-35%25%20Descuento%20de%20Temporada%20con%203%20opciones%20claras%20%28y%20pago%20de%20trofeos%20LED%20diferible%20en%202do%20momento%20o%20cubierto%20por%20sponsors%29%3A%0A1%29%20Solo%20Digital%20%28fotos%20a%201/2000s%20entregadas%20el%20mismo%20d%C3%ADa%29%3A%20%244%2C900%20-%3E%20%243%2C185%20MXN%0A2%29%20Foto%20%2B%20Impresi%C3%B3n%20/%20Marcos%20Finos%3A%20%247%2C900%20-%3E%20%245%2C135%20MXN%0A3%29%20Suite%20Full%20%2B%20Reels%20%2B%204%20Trofeos%20Acr%C3%ADlico%20%C3%93ptico%20LED%20c%C3%A1lida%20%2B%2020%20llaveros%3A%20%2411%2C500%20-%3E%20%247%2C475%20MXN%2A%0A%0A%F0%9F%8C%90%20Portafolio%203D%3A%20https%3A//captoora.studio/sports%20%E2%80%94%20%C2%BFcu%C3%A1l%20de%20las%203%20opciones%20prefieren%20que%20coticemos%20esta%20semana%3F%0A%0A%2ACobertura%20digital%20el%20mismo%20d%C3%ADa%3B%20manufactura%20de%20acr%C3%ADlicos%20LED%20en%20taller%20MTY/SPGG%3A%203%20a%205%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-004",
+      "agent_id": "embudo_marketing",
+      "task_id": "TASK-201",
+      "target_name": "The Movement Dance Project (Chipinque, San Pedro)",
+      "niche": "Baile & Danza Señoras",
+      "channel": "WhatsApp Directo (+52 81 2721 4413)",
+      "phone": "528127214413",
+      "package_ref": "Gala Navideña Danza -35% ($3,575 / $5,785 / $8,125 MXN) + White-Glove",
+      "financial_impact_mxn": 5785,
+      "estimated_margin_pct": 72.3,
+      "compliance_flags": [
+        "Modelo White-Glove",
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "-35% Temporada"
+      ],
+      "draft_text": "Buenas tardes al equipo de The Movement Dance Project ✨ Les saluda Jesús Gutiérrez de Captoora Studio (iluminación escénica y entrega el mismo día).\n\nAdmiramos el nivel escénico de sus montajes y armamos nuestro esquema White-Glove (donde las familias pueden pre-ordenar en línea su Set Conmemorativo en marco de madera fina o placa LED cálida*) o bien contratar cobertura institucional con -35% Descuento de Temporada:\n1) Solo Fotografía Digital (galería mismo día al brindis): $5,500 -> $3,575 MXN\n2) Foto + Impresión / Marcos (El Marco San Pedro en 2do momento): $8,900 -> $5,785 MXN\n3) Suite Completa Gala + Reels + Placas LED: $12,500 -> $8,125 MXN*\n\nAsí proyectan en redes sociales una imagen profesional al nivel de excelencia de su academia. ¿Revisamos la muestra en https://captoora.studio/sports?\n\n*Galería digital el mismo día; marcos y placas LED en taller artesanal MTY/SPGG: 3 a 5 días hábiles previos a Navidad.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": null,
+      "attachments": [
+        {
+          "type": "pdf",
+          "label": "Dossier The Movement · Gala Navideña 2026 -35% (PDF)",
+          "path": "assets/mockups/clubs/the_movement_dance_project/the_movement_dance_project_Dossier_Navidad2026.pdf"
+        },
+        {
+          "type": "image",
+          "label": "The Movement Opción A · Acrílico LED Danza 2026",
+          "path": "assets/mockups/clubs/the_movement_dance_project/the_movement_dance_project_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "The Movement Opción B · Gala Escenario + LED",
+          "path": "assets/mockups/clubs/the_movement_dance_project/the_movement_dance_project_OpcB_EditorialLED_2026.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Auditoría Maps The Movement 2027 (PDF)",
+          "path": "assets/mockups/small_biz/the_movement_dance_project_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "whatsapp_url": "https://wa.me/528127214413?text=Buenas%20tardes%20al%20equipo%20de%20The%20Movement%20Dance%20Project%20%E2%9C%A8%20Les%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28iluminaci%C3%B3n%20esc%C3%A9nica%20y%20entrega%20el%20mismo%20d%C3%ADa%29.%0A%0AAdmiramos%20el%20nivel%20esc%C3%A9nico%20de%20sus%20montajes%20y%20armamos%20nuestro%20esquema%20White-Glove%20%28donde%20las%20familias%20pueden%20pre-ordenar%20en%20l%C3%ADnea%20su%20Set%20Conmemorativo%20en%20marco%20de%20madera%20fina%20o%20placa%20LED%20c%C3%A1lida%2A%29%20o%20bien%20contratar%20cobertura%20institucional%20con%20-35%25%20Descuento%20de%20Temporada%3A%0A1%29%20Solo%20Fotograf%C3%ADa%20Digital%20%28galer%C3%ADa%20mismo%20d%C3%ADa%20al%20brindis%29%3A%20%245%2C500%20-%3E%20%243%2C575%20MXN%0A2%29%20Foto%20%2B%20Impresi%C3%B3n%20/%20Marcos%20%28El%20Marco%20San%20Pedro%20en%202do%20momento%29%3A%20%248%2C900%20-%3E%20%245%2C785%20MXN%0A3%29%20Suite%20Completa%20Gala%20%2B%20Reels%20%2B%20Placas%20LED%3A%20%2412%2C500%20-%3E%20%248%2C125%20MXN%2A%0A%0AAs%C3%AD%20proyectan%20en%20redes%20sociales%20una%20imagen%20profesional%20al%20nivel%20de%20excelencia%20de%20su%20academia.%20%C2%BFRevisamos%20la%20muestra%20en%20https%3A//captoora.studio/sports%3F%0A%0A%2AGaler%C3%ADa%20digital%20el%20mismo%20d%C3%ADa%3B%20marcos%20y%20placas%20LED%20en%20taller%20artesanal%20MTY/SPGG%3A%203%20a%205%20d%C3%ADas%20h%C3%A1biles%20previos%20a%20Navidad."
+    },
+    {
+      "id": "APR-005",
+      "agent_id": "social_content",
+      "task_id": "TASK-301",
+      "target_name": "Instagram Reels & LinkedIn B2B (@captoora)",
+      "niche": "Marca & Bucle Viral",
+      "channel": "Publicación Orgánica 9:16",
+      "phone": "",
+      "package_ref": "Posicionamiento Temporada -35% + Embudo Invisible",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Enfoque lujo/estatus",
+        "-35% Temporada",
+        "Nota fina 3-5 días"
+      ],
+      "draft_text": "GUIÓN REEL (18s): Plano detalle de acrílico óptico encendiéndose con base LED cálida sobre madera en escritorio ejecutivo + corte rápido a acción congelada a 1/2000s.\n\nCAPTION: Un diploma de papel o una carpeta olvidada en Drive no reflejan el nivel de su torneo ni el valor de sus patrocinadores. Entrega digital el mismo día para proyectar en redes sociales una imagen profesional al nivel de excelencia de su club, y piezas escultóricas de colección en acrílico óptico iluminado para quienes conquistan la cancha.*\n\n🎄 Temporada Fin de Año con -35% OFF activo: paquetes Solo Digital desde $3,185 MXN o Suite LED en 2 momentos ($7,475 MXN).\n*Cobertura digital en vivo el mismo día; manufactura de acrílicos LED y enmarcado fino en taller local de San Pedro/MTY: 3 a 5 días hábiles.\nAgenda abierta: @captoora.studio · https://captoora.studio/sports",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "APR-006",
+      "agent_id": "ops_talleres_legal",
+      "task_id": "TASK-502",
+      "target_name": "Orden de Servicio Estándar & Checklist Talleres NL",
+      "niche": "Operación Interna",
+      "channel": "Documento Legal + Taller Local",
+      "phone": "",
+      "package_ref": "Blindaje Contractual + Foco Lab / El Marco San Pedro",
+      "financial_impact_mxn": 0,
+      "estimated_margin_pct": 100.0,
+      "compliance_flags": [
+        "50% anticipo",
+        "Derechos morales Captoora",
+        "Ventana 3-5 días talleres"
+      ],
+      "draft_text": "CLÁUSULA LISTA PARA ENVIAR AL PRIMER 'SÍ':\n1) Anticipo 50% para bloqueo firme de fecha en calendario Nov–Dic y 50% contra entrega de galería digital.\n2) Entrega digital el mismo día (Halftime Blitz + galería curada) garantizada directamente por Captoora Sports.\n3) Piezas físicas (acrílicos ópticos con base LED cálida en Foco Lab / marcos de madera maciza en El Marco San Pedro): producción artesanal de 3 a 5 días hábiles posteriores a selección final.\n4) Captoora conserva derechos morales de autoría y licencia de portafolio conforme a guía legal interna.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T05:54:00-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "TEST-003",
+      "agent_id": "ventas_outreach",
+      "task_id": null,
+      "target_name": "Autoprueba Completa 35% OFF · Navidad + Biogen Beta + Small Business 2027 (Tu WhatsApp & Email)",
+      "niche": "Autoprueba Interna · Suite Completa 4 Caminos",
+      "channel": "WhatsApp (+52 81 3051 6527) + Mail (ponchogf88@me.com)",
+      "phone": "528130516527",
+      "package_ref": "3 Opciones -35% + Biogen Beta ($1,268/m) + Small Business ($3,900/$6,890)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "-35% Descuento de Temporada",
+        "3 Modos A/B/C en paralelo",
+        "Antes/Después + Dossiers PDF"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Small Business Antes vs Después 2027 (PNG)",
+          "path": "assets/mockups/test/Captoora_SmallBusiness_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Small Business 2027 (PDF)",
+          "path": "assets/mockups/test/Captoora_SmallBusiness_Dossier_2027.pdf"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Navidad 2026 -35% (PDF)",
+          "path": "assets/mockups/test/Captoora_Dossier_Prueba_Navidad2026.pdf"
+        },
+        {
+          "type": "image",
+          "label": "Opción A · Acrílico LED 2026",
+          "path": "assets/mockups/test/Mockup_Prueba_OpcA_Navidad2026.png"
+        },
+        {
+          "type": "image",
+          "label": "Opción B · Editorial 1/2000s + LED",
+          "path": "assets/mockups/test/Mockup_Prueba_OpcB_AccionLED_2026.png"
+        }
+      ],
+      "draft_text": "🚀 AUTOPRUEBA COMPLETA CAPTOORA 2026–2027 (-35% DESCUENTO DE TEMPORADA)\n\n1️⃣ Navidad 2026 (3 Opciones + pago físico diferible en 2do momento):\n• Opción 1 Solo Digital: $4,900 -> $3,185 MXN\n• Opción 2 Foto + Impresión/Marcos: $7,900 -> $5,135 MXN\n• Opción 3 Suite Full + Ads & 4 Acrílicos LED: $11,500 -> $7,475 MXN*\n\n2️⃣ Captoora Biogen (Beta · -35%):\n• Documentación fotográfica escultórica de progreso físico en estudio (semanal/quincenal/mensual/bimestral · 3 a 60 meses): $1,950 -> $1,268 MXN/mes.\n\n3️⃣ Captoora Small Business ('Arranca 2027 · Google Maps + Meta Business Portfolio sin bloqueos'):\n• SMB Maps 2027: $6,000 -> $3,900 MXN\n• SMB Suite Total: $10,600 -> $6,890 MXN\n• SMB Posicionamiento + Placa LED QR: $16,000 -> $10,400 MXN*\n\n🌐 Portal 3D & Portafolio: https://captoora.studio/sports | 🖼️ Galerías: https://galeria.captoora.studio\n*Digital el mismo día/48h; acrílicos LED en taller MTY/SPGG: 3–5 días hábiles.",
+      "status": "approved",
+      "created_at": "2026-11-15T18:05:00-06:00",
+      "decided_at": "2026-11-16T19:32:29-06:00",
+      "whatsapp_url": "https://wa.me/528130516527?text=%F0%9F%9A%80%20AUTOPRUEBA%20COMPLETA%20CAPTOORA%202026%E2%80%932027%20%28-35%25%20DESCUENTO%20DE%20TEMPORADA%29%0A%0A1%EF%B8%8F%E2%83%A3%20Navidad%202026%20%283%20Opciones%20%2B%20pago%20f%C3%ADsico%20diferible%20en%202do%20momento%29%3A%0A%E2%80%A2%20Opci%C3%B3n%201%20Solo%20Digital%3A%20%244%2C900%20-%3E%20%243%2C185%20MXN%0A%E2%80%A2%20Opci%C3%B3n%202%20Foto%20%2B%20Impresi%C3%B3n/Marcos%3A%20%247%2C900%20-%3E%20%245%2C135%20MXN%0A%E2%80%A2%20Opci%C3%B3n%203%20Suite%20Full%20%2B%20Ads%20%26%204%20Acr%C3%ADlicos%20LED%3A%20%2411%2C500%20-%3E%20%247%2C475%20MXN%2A%0A%0A2%EF%B8%8F%E2%83%A3%20Captoora%20Biogen%20%28Beta%20%C2%B7%20-35%25%29%3A%0A%E2%80%A2%20Documentaci%C3%B3n%20fotogr%C3%A1fica%20escult%C3%B3rica%20de%20progreso%20f%C3%ADsico%20en%20estudio%20%28semanal/quincenal/mensual/bimestral%20%C2%B7%203%20a%2060%20meses%29%3A%20%241%2C950%20-%3E%20%241%2C268%20MXN/mes.%0A%0A3%EF%B8%8F%E2%83%A3%20Captoora%20Small%20Business%20%28%27Arranca%202027%20%C2%B7%20Google%20Maps%20%2B%20Meta%20Business%20Portfolio%20sin%20bloqueos%27%29%3A%0A%E2%80%A2%20SMB%20Maps%202027%3A%20%246%2C000%20-%3E%20%243%2C900%20MXN%0A%E2%80%A2%20SMB%20Suite%20Total%3A%20%2410%2C600%20-%3E%20%246%2C890%20MXN%0A%E2%80%A2%20SMB%20Posicionamiento%20%2B%20Placa%20LED%20QR%3A%20%2416%2C000%20-%3E%20%2410%2C400%20MXN%2A%0A%0A%F0%9F%8C%90%20Portal%203D%20%26%20Portafolio%3A%20https%3A//captoora.studio/sports%20%7C%20%F0%9F%96%BC%EF%B8%8F%20Galer%C3%ADas%3A%20https%3A//galeria.captoora.studio%0A%2ADigital%20el%20mismo%20d%C3%ADa/48h%3B%20acr%C3%ADlicos%20LED%20en%20taller%20MTY/SPGG%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-007",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-604",
+      "target_name": "Modo A Directo Visual · Pádel del Norte (Street View detectado)",
+      "niche": "Captoora Small Business 2027",
+      "channel": "Entrega Presencial / Instagram DM (Sin Teléfono en Google Maps)",
+      "phone": "",
+      "package_ref": "SMB-TOTAL Suite Small Business 2027 ($6,890 MXN · -35%)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "Modo A Directo Visual",
+        "-35% Temporada",
+        "0% mención IA",
+        "Nota taller 3-5d"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Comparativa Antes vs Después Pádel del Norte (PNG)",
+          "path": "assets/mockups/small_biz/padel_del_norte_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Pádel del Norte 2027 (PDF)",
+          "path": "assets/mockups/small_biz/padel_del_norte_Dossier_SMB_2027.pdf"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Pádel del Norte · Navidad 2026 (PDF)",
+          "path": "assets/mockups/clubs/padel_del_norte/padel_del_norte_Dossier_Navidad2026.pdf"
+        }
+      ],
+      "draft_text": "Hola equipo de Pádel del Norte 👋, te saluda Jesús Gutiérrez de Captoora Studio.\n\nAl revisar fichas locales en Google Maps vimos que hoy su perfil abre con la vista automática de calle (Street View) y sin número directo ni catálogo enlazado, cuando sus canchas merecen proyectar una imagen profesional de primer nivel para 2027.\n\nLes compartimos su comparativa 'Antes vs. Después' con -35% Descuento de Temporada activo:\n1) Impulso Google Maps 2027: $6,000 -> $3,900 MXN (sesión editorial + carga directa en ficha Maps).\n2) Suite Small Business Total: $10,600 -> $6,890 MXN (foto + Reels + Maps + Meta Business Portfolio FB+IG+WA en regla sin bloqueos).\n3) Posicionamiento + Placa QR LED (pago físico en 2do momento): $16,000 -> $10,400 MXN.*\n\n¿Cuál de las 3 opciones revisamos esta semana? https://captoora.studio/sports\n\n*Entrega digital en 48–72h (mismo día en eventos); placa acrílica LED en taller MTY/SPGG: 3–5 días hábiles.",
+      "status": "approved",
+      "created_at": "2026-11-15T18:05:00-06:00",
+      "decided_at": "2026-11-16T19:32:27-06:00"
+    },
+    {
+      "id": "APR-008",
+      "agent_id": "embudo_marketing",
+      "task_id": "TASK-604",
+      "target_name": "Club Deportivo Colinas (Deportivo San Jerónimo) · Tel Verificado",
+      "niche": "Captoora Small Business 2027",
+      "channel": "WhatsApp Directo (+52 81 8347 4477)",
+      "phone": "528183474477",
+      "package_ref": "Small Business 2027 ($3,900/$6,890/$10,400) + Torneos -35% ($3,185/$5,135/$7,475)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 85.9,
+      "compliance_flags": [
+        "Tel verificado Apify",
+        "0% mención IA",
+        "-35% Temporada",
+        "Antes/Después + PDF"
+      ],
+      "draft_text": "Hola equipo de Club Deportivo Colinas 👋, soy Jesús Gutiérrez, de Captoora Studio (producción editorial en tu sede).\n\nPreparamos una vista previa gratuita 'Antes vs. Después' para sus instalaciones rumbo a las posadas de cierre de año y renovación visual 2027, con -35% Descuento de Temporada:\n• Eventos/Posadas: desde $3,185 MXN (Solo Digital mismo día) hasta $7,475 MXN (Suite + 4 Acrílicos LED en 2do momento).\n• Small Business 2027 (Portada Google Maps + Reels + Meta Business Portfolio sin bloqueos): $3,900 a $6,890 MXN.*\n\n¿Te comparto su lámina comparativa por aquí o prefieres revisarlo 5 minutos? 🌐 https://captoora.studio/sports\n\n*Entrega digital en mismo día/48h; acrílicos LED en taller local MTY/SPGG: 3–5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T18:05:00-06:00",
+      "decided_at": null,
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Antes vs Después Club Deportivo Colinas (PNG)",
+          "path": "assets/mockups/small_biz/club_deportivo_colinas_deportivo_san_jeronimo_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Club Deportivo Colinas 2027 (PDF)",
+          "path": "assets/mockups/small_biz/club_deportivo_colinas_deportivo_san_jeronimo_Dossier_SMB_2027.pdf"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Posadas & Torneos Club Colinas 2026 (PDF)",
+          "path": "assets/mockups/clubs/club_deportivo_colinas_deportivo_san_jeronimo/club_deportivo_colinas_deportivo_san_jeronimo_Dossier_Navidad2026.pdf"
+        }
+      ],
+      "whatsapp_url": "https://wa.me/528183474477?text=Hola%20equipo%20de%20Club%20Deportivo%20Colinas%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%2C%20de%20Captoora%20Studio%20%28producci%C3%B3n%20editorial%20en%20tu%20sede%29.%0A%0APreparamos%20una%20vista%20previa%20gratuita%20%27Antes%20vs.%20Despu%C3%A9s%27%20para%20sus%20instalaciones%20rumbo%20a%20las%20posadas%20de%20cierre%20de%20a%C3%B1o%20y%20renovaci%C3%B3n%20visual%202027%2C%20con%20-35%25%20Descuento%20de%20Temporada%3A%0A%E2%80%A2%20Eventos/Posadas%3A%20desde%20%243%2C185%20MXN%20%28Solo%20Digital%20mismo%20d%C3%ADa%29%20hasta%20%247%2C475%20MXN%20%28Suite%20%2B%204%20Acr%C3%ADlicos%20LED%20en%202do%20momento%29.%0A%E2%80%A2%20Small%20Business%202027%20%28Portada%20Google%20Maps%20%2B%20Reels%20%2B%20Meta%20Business%20Portfolio%20sin%20bloqueos%29%3A%20%243%2C900%20a%20%246%2C890%20MXN.%2A%0A%0A%C2%BFTe%20comparto%20su%20l%C3%A1mina%20comparativa%20por%20aqu%C3%AD%20o%20prefieres%20revisarlo%205%20minutos%3F%20%F0%9F%8C%90%20https%3A//captoora.studio/sports%0A%0A%2AEntrega%20digital%20en%20mismo%20d%C3%ADa/48h%3B%20acr%C3%ADlicos%20LED%20en%20taller%20local%20MTY/SPGG%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-009",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-601",
+      "target_name": "11:11 Fitness TOP Obispado (TotalPass · Biogen Beta + Maps)",
+      "niche": "Fitness, TotalPass & Biogen Beta",
+      "channel": "WhatsApp Directo (+52 81 3553 2373)",
+      "phone": "528135532373",
+      "package_ref": "Captoora Biogen Beta ($1,268/m) + SMB Suite Total ($6,890)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "1-a-1 Real TotalPass",
+        "Biogen Beta -35%",
+        "0% mención IA",
+        "Antes/Después + PDF"
+      ],
+      "draft_text": "Hola equipo de 11:11 Fitness TOP Obispado 👋, les saluda Jesús Gutiérrez de Captoora Studio (producción editorial en tu sede).\n\nAbrimos dos propuestas paralelas para su gimnasio con -35% Descuento de Temporada:\n1) Piloto Captoora Biogen (Beta): bitácora fotográfica escultórica de progreso físico para sus socios en estudio (semanal, quincenal o mensual · 3 a 60 meses) desde $1,950 -> $1,268 MXN/mes.\n2) Small Business TotalPass 2027: sesión editorial en instalaciones, actualización directa en Google Maps/TotalPass y Meta Business Portfolio (FB+IG+WA sin bloqueos) de $10,600 -> $6,890 MXN.*\n\nLes adjunto la vista previa de 11:11 Fitness y nuestro portal: https://captoora.studio/sports — ¿qué opción revisamos esta semana?\n\n*Digital en 48–72h; placas QR LED de mostrador en taller MTY/SPGG: 3–5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-15T18:05:00-06:00",
+      "decided_at": null,
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Comparativa Antes vs Después 11:11 Fitness (PNG)",
+          "path": "assets/mockups/small_biz/11_11_fitness_top_obispado_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier 11:11 Fitness TOP Obispado (PDF)",
+          "path": "assets/mockups/small_biz/11_11_fitness_top_obispado_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "whatsapp_url": "https://wa.me/528135532373?text=Hola%20equipo%20de%2011%3A11%20Fitness%20TOP%20Obispado%20%F0%9F%91%8B%2C%20les%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28producci%C3%B3n%20editorial%20en%20tu%20sede%29.%0A%0AAbrimos%20dos%20propuestas%20paralelas%20para%20su%20gimnasio%20con%20-35%25%20Descuento%20de%20Temporada%3A%0A1%29%20Piloto%20Captoora%20Biogen%20%28Beta%29%3A%20bit%C3%A1cora%20fotogr%C3%A1fica%20escult%C3%B3rica%20de%20progreso%20f%C3%ADsico%20para%20sus%20socios%20en%20estudio%20%28semanal%2C%20quincenal%20o%20mensual%20%C2%B7%203%20a%2060%20meses%29%20desde%20%241%2C950%20-%3E%20%241%2C268%20MXN/mes.%0A2%29%20Small%20Business%20TotalPass%202027%3A%20sesi%C3%B3n%20editorial%20en%20instalaciones%2C%20actualizaci%C3%B3n%20directa%20en%20Google%20Maps/TotalPass%20y%20Meta%20Business%20Portfolio%20%28FB%2BIG%2BWA%20sin%20bloqueos%29%20de%20%2410%2C600%20-%3E%20%246%2C890%20MXN.%2A%0A%0ALes%20adjunto%20la%20vista%20previa%20de%2011%3A11%20Fitness%20y%20nuestro%20portal%3A%20https%3A//captoora.studio/sports%20%E2%80%94%20%C2%BFqu%C3%A9%20opci%C3%B3n%20revisamos%20esta%20semana%3F%0A%0A%2ADigital%20en%2048%E2%80%9372h%3B%20placas%20QR%20LED%20de%20mostrador%20en%20taller%20MTY/SPGG%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-010",
+      "agent_id": "lupe_social",
+      "task_id": "TASK-702",
+      "target_name": "TikTok + Meta Business Suite (FB/IG) · Auditoría Google Maps Antes vs. Después",
+      "niche": "Marca & Small Business 2027",
+      "channel": "TikTok + Instagram Reels + Facebook (Programación Lupe)",
+      "phone": "",
+      "package_ref": "Conan Pieza: OBS + OpusClip Pro + Captions (9:16)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 88.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "-35% Descuento Temporada",
+        "Supervisado por Marky"
+      ],
+      "draft_text": "¿Tu clínica, gimnasio o jardín de niños en Monterrey sigue abriendo en Google Maps con el carrito de Street View o sin teléfono verificado? 📍\n\nPreparamos comparativas reales 'Antes vs. Después' para que tu vitrina digital proyecte una imagen profesional al nivel de excelencia de tu negocio desde el primer clic.\n\n🎄 -35% Temporada Arranca 2027:\n• Impulso Google Maps: $3,900 MXN (antes $6,000)\n• Suite Total (Foto + Reels + Maps + Meta Business Portfolio sin bloqueos): $6,890 MXN (antes $10,600)\n• Posicionamiento + Placa QR LED*: $10,400 MXN\n\nPide tu muestra en captoora.studio/sports o WhatsApp +52 81 4005 0088.\n*Digital en 48–72h; placa LED en taller local MTY/SPGG: 3–5 días hábiles.\n\n#Monterrey #SanPedroGarzaGarcia #GoogleMapsPro #GoogleMapsMexico #CaptooraStudio",
+      "status": "pending_trigger",
+      "created_at": "2026-11-16T03:16:00-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "APR-011",
+      "agent_id": "lupe_social",
+      "task_id": "TASK-702",
+      "target_name": "LinkedIn B2B · Evidencia el mismo día para Patrocinadores 2027",
+      "niche": "Corporativo, Pádel & Danza (-35%)",
+      "channel": "LinkedIn B2B (Programación Lupe)",
+      "phone": "",
+      "package_ref": "Conan Pieza: Canva Carrusel 4:5 + Aftershoot",
+      "financial_impact_mxn": 7475,
+      "estimated_margin_pct": 67.9,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "SLA Mismo Día vs 3-5d LED"
+      ],
+      "draft_text": "En torneos deportivos, galas escolares y posadas corporativas en Nuevo León, los patrocinadores no renuevan por promesas: renuevan cuando reciben evidencia visual impecable el mismo día.\n\nCon respaldo en producciones para Coca-Cola FEMSA, Heineken/Tecate y Poder Judicial de Nuevo León, en Captoora Studio entregamos galería curada a 1/2000s en vivo y fabricamos reconocimientos en acrílico óptico con luz LED cálida en taller local (3–5 días hábiles, liquidables en 2do momento).\n\nAgenda Nov–Dic con -35% Descuento de Temporada desde $3,185 MXN (Solo Digital) en https://captoora.studio/sports\n\n#MonterreyBusiness #SanPedroGarzaGarcia #PatrociniosDeportivos #CaptooraStudio",
+      "status": "pending_trigger",
+      "created_at": "2026-11-16T03:16:00-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "APR-012",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-601",
+      "target_name": "Body X Gym San Jerónimo (Sin Sitio Web · Biogen + Maps)",
+      "niche": "Fitness, TotalPass & Biogen Beta",
+      "channel": "WhatsApp Directo (+52 81 8315 1079)",
+      "phone": "528183151079",
+      "package_ref": "SMB Suite Total ($6,890) + Biogen Beta ($1,268/m)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 85.0,
+      "compliance_flags": [
+        "Tel verificado Apify",
+        "Flag SIN SITIO WEB",
+        "Biogen Beta -35%",
+        "0% mención IA"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Antes vs Después Body X Gym San Jerónimo (PNG)",
+          "path": "assets/mockups/small_biz/body_x_gym_san_jeronimo_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Body X Gym San Jerónimo (PDF)",
+          "path": "assets/mockups/small_biz/body_x_gym_san_jeronimo_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "draft_text": "Hola equipo de Body X Gym San Jerónimo 👋, soy Jesús Gutiérrez, de Captoora Studio (producción editorial en tu sede).\n\nAl revisar su ficha en Google Maps vimos gran potencial pero aún aparece sin enlace directo a sitio o catálogo WhatsApp. Preparamos su comparativa 'Antes vs. Después' con -35% Descuento de Temporada:\n1) Impulso Google Maps & Portada: $6,000 -> $3,900 MXN.\n2) Suite Total (Fotos + Reels + Maps + Meta Business Portfolio sin bloqueos): $10,600 -> $6,890 MXN.\n3) Convenio Captoora Biogen (Beta) para seguimiento físico escultórico de socios en estudio desde $1,268 MXN/mes.*\n\nLes comparto el PDF/lámina de muestra y nuestro portal https://captoora.studio/sports — ¿lo platicamos 5 min?\n\n*Digital en 48–72h; placa acrílica QR LED en taller local: 3–5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-16T09:46:38-06:00",
+      "decided_at": null,
+      "whatsapp_url": "https://wa.me/528183151079?text=Hola%20equipo%20de%20Body%20X%20Gym%20San%20Jer%C3%B3nimo%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%2C%20de%20Captoora%20Studio%20%28producci%C3%B3n%20editorial%20en%20tu%20sede%29.%0A%0AAl%20revisar%20su%20ficha%20en%20Google%20Maps%20vimos%20gran%20potencial%20pero%20a%C3%BAn%20aparece%20sin%20enlace%20directo%20a%20sitio%20o%20cat%C3%A1logo%20WhatsApp.%20Preparamos%20su%20comparativa%20%27Antes%20vs.%20Despu%C3%A9s%27%20con%20-35%25%20Descuento%20de%20Temporada%3A%0A1%29%20Impulso%20Google%20Maps%20%26%20Portada%3A%20%246%2C000%20-%3E%20%243%2C900%20MXN.%0A2%29%20Suite%20Total%20%28Fotos%20%2B%20Reels%20%2B%20Maps%20%2B%20Meta%20Business%20Portfolio%20sin%20bloqueos%29%3A%20%2410%2C600%20-%3E%20%246%2C890%20MXN.%0A3%29%20Convenio%20Captoora%20Biogen%20%28Beta%29%20para%20seguimiento%20f%C3%ADsico%20escult%C3%B3rico%20de%20socios%20en%20estudio%20desde%20%241%2C268%20MXN/mes.%2A%0A%0ALes%20comparto%20el%20PDF/l%C3%A1mina%20de%20muestra%20y%20nuestro%20portal%20https%3A//captoora.studio/sports%20%E2%80%94%20%C2%BFlo%20platicamos%205%20min%3F%0A%0A%2ADigital%20en%2048%E2%80%9372h%3B%20placa%20acr%C3%ADlica%20QR%20LED%20en%20taller%20local%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-013",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-604",
+      "target_name": "Reino Encantado (San Jerónimo · Street View + Sin Reclamar)",
+      "niche": "Colegios & Jardines de Niños (-35%)",
+      "channel": "WhatsApp Directo (+52 81 8333 7053)",
+      "phone": "528183337053",
+      "package_ref": "SMB Suite Total 2027 ($6,890 MXN) / Impulso Maps ($3,900)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 90.0,
+      "compliance_flags": [
+        "CARRITO STREET VIEW",
+        "SIN RECLAMAR",
+        "0% mención IA",
+        "-35% Temporada"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Antes vs Después Reino Encantado (PNG)",
+          "path": "assets/mockups/small_biz/reino_encantado_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Reino Encantado 2027 (PDF)",
+          "path": "assets/mockups/small_biz/reino_encantado_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "draft_text": "Hola equipo directivo de Reino Encantado 👋, les saluda Jesús Gutiérrez de Captoora Studio.\n\nNotamos que en Google Maps su perfil aún muestra el aviso de 'Reclamar este negocio', vista automática de calle (Street View) y 1 sola foto, cuando las familias buscan confianza inmediata desde la primera búsqueda.\n\nPreparamos gratuitamente su comparativa 'Antes vs. Después' con -35% Descuento de Temporada:\n1) Impulso Google Maps (sesión en instalaciones + reclamo oficial + subida directa): $6,000 -> $3,900 MXN.\n2) Suite Total Small Business (Fotos + Reels + Maps + Meta Business Portfolio FB/IG/WA en regla): $10,600 -> $6,890 MXN.\n3) Posicionamiento + Placa QR de Reseñas LED cálida (diferible en 2do momento): $16,000 -> $10,400 MXN.*\n\nLes adjunto la muestra visual de Reino Encantado (también cubrimos festivales navideños). ¿Cuál opción prefieren revisar? https://captoora.studio/sports\n\n*Digital en 48–72h (mismo día en festivales); placa acrílica LED en taller local: 3–5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-16T09:46:38-06:00",
+      "decided_at": null,
+      "whatsapp_url": "https://wa.me/528183337053?text=Hola%20equipo%20directivo%20de%20Reino%20Encantado%20%F0%9F%91%8B%2C%20les%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio.%0A%0ANotamos%20que%20en%20Google%20Maps%20su%20perfil%20a%C3%BAn%20muestra%20el%20aviso%20de%20%27Reclamar%20este%20negocio%27%2C%20vista%20autom%C3%A1tica%20de%20calle%20%28Street%20View%29%20y%201%20sola%20foto%2C%20cuando%20las%20familias%20buscan%20confianza%20inmediata%20desde%20la%20primera%20b%C3%BAsqueda.%0A%0APreparamos%20gratuitamente%20su%20comparativa%20%27Antes%20vs.%20Despu%C3%A9s%27%20con%20-35%25%20Descuento%20de%20Temporada%3A%0A1%29%20Impulso%20Google%20Maps%20%28sesi%C3%B3n%20en%20instalaciones%20%2B%20reclamo%20oficial%20%2B%20subida%20directa%29%3A%20%246%2C000%20-%3E%20%243%2C900%20MXN.%0A2%29%20Suite%20Total%20Small%20Business%20%28Fotos%20%2B%20Reels%20%2B%20Maps%20%2B%20Meta%20Business%20Portfolio%20FB/IG/WA%20en%20regla%29%3A%20%2410%2C600%20-%3E%20%246%2C890%20MXN.%0A3%29%20Posicionamiento%20%2B%20Placa%20QR%20de%20Rese%C3%B1as%20LED%20c%C3%A1lida%20%28diferible%20en%202do%20momento%29%3A%20%2416%2C000%20-%3E%20%2410%2C400%20MXN.%2A%0A%0ALes%20adjunto%20la%20muestra%20visual%20de%20Reino%20Encantado%20%28tambi%C3%A9n%20cubrimos%20festivales%20navide%C3%B1os%29.%20%C2%BFCu%C3%A1l%20opci%C3%B3n%20prefieren%20revisar%3F%20https%3A//captoora.studio/sports%0A%0A%2ADigital%20en%2048%E2%80%9372h%20%28mismo%20d%C3%ADa%20en%20festivales%29%3B%20placa%20acr%C3%ADlica%20LED%20en%20taller%20local%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    },
+    {
+      "id": "APR-014",
+      "agent_id": "ventas_outreach",
+      "task_id": "TASK-604",
+      "target_name": "Dr. César Garza Ponce Consultorio Dental (Street View · MTY)",
+      "niche": "Clínicas & Consultorios (-35%)",
+      "channel": "WhatsApp Directo (+52 81 1669 2593)",
+      "phone": "528116692593",
+      "package_ref": "SMB Suite Total 2027 ($6,890 MXN) / Impulso Maps ($3,900)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 90.0,
+      "compliance_flags": [
+        "CARRITO STREET VIEW",
+        "<=5 FOTOS",
+        "0% mención IA",
+        "-35% Temporada"
+      ],
+      "attachments": [
+        {
+          "type": "image",
+          "label": "Antes vs Después Dr. César Garza Ponce (PNG)",
+          "path": "assets/mockups/small_biz/dr_cesar_garza_ponce_consultorio_dental_AntesDespues_2027.png"
+        },
+        {
+          "type": "pdf",
+          "label": "Dossier Consultorio Dr. Garza Ponce (PDF)",
+          "path": "assets/mockups/small_biz/dr_cesar_garza_ponce_consultorio_dental_Dossier_SMB_2027.pdf"
+        }
+      ],
+      "draft_text": "Buenas tardes Dr. César Garza Ponce y equipo 👋, les saluda Jesús Gutiérrez de Captoora Studio (producción editorial en tu sede).\n\nRevisamos fichas médicas locales en Google Maps y vimos que hoy su consultorio abre con la vista automática de Street View y solo 2 fotos, por lo que armamos su comparativa personalizada 'Antes vs. Después' para proyectar la calidad clínica real ante pacientes nuevos.\n\nTenemos activo -35% Descuento de Temporada Arranca 2027:\n1) Impulso Google Maps (sesión consultorio + retratos + carga directa): $6,000 -> $3,900 MXN.\n2) Suite Total (Fotos + Reels + Maps + Meta Business Portfolio FB/IG/WA sin bloqueos): $10,600 -> $6,890 MXN.\n3) Posicionamiento + Placa QR de Reseñas LED en recepción (pago físico diferible): $16,000 -> $10,400 MXN.*\n\nLes adjunto la vista previa de su consultorio y nuestro portal: https://captoora.studio/sports — ¿cuál de las 3 opciones revisamos esta semana?\n\n*Digital en 48–72h; placa acrílica QR LED en taller local MTY/SPGG: 3–5 días hábiles.",
+      "status": "pending_trigger",
+      "created_at": "2026-11-16T09:46:38-06:00",
+      "decided_at": null,
+      "whatsapp_url": "https://wa.me/528116692593?text=Buenas%20tardes%20Dr.%20C%C3%A9sar%20Garza%20Ponce%20y%20equipo%20%F0%9F%91%8B%2C%20les%20saluda%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28producci%C3%B3n%20editorial%20en%20tu%20sede%29.%0A%0ARevisamos%20fichas%20m%C3%A9dicas%20locales%20en%20Google%20Maps%20y%20vimos%20que%20hoy%20su%20consultorio%20abre%20con%20la%20vista%20autom%C3%A1tica%20de%20Street%20View%20y%20solo%202%20fotos%2C%20por%20lo%20que%20armamos%20su%20comparativa%20personalizada%20%27Antes%20vs.%20Despu%C3%A9s%27%20para%20proyectar%20la%20calidad%20cl%C3%ADnica%20real%20ante%20pacientes%20nuevos.%0A%0ATenemos%20activo%20-35%25%20Descuento%20de%20Temporada%20Arranca%202027%3A%0A1%29%20Impulso%20Google%20Maps%20%28sesi%C3%B3n%20consultorio%20%2B%20retratos%20%2B%20carga%20directa%29%3A%20%246%2C000%20-%3E%20%243%2C900%20MXN.%0A2%29%20Suite%20Total%20%28Fotos%20%2B%20Reels%20%2B%20Maps%20%2B%20Meta%20Business%20Portfolio%20FB/IG/WA%20sin%20bloqueos%29%3A%20%2410%2C600%20-%3E%20%246%2C890%20MXN.%0A3%29%20Posicionamiento%20%2B%20Placa%20QR%20de%20Rese%C3%B1as%20LED%20en%20recepci%C3%B3n%20%28pago%20f%C3%ADsico%20diferible%29%3A%20%2416%2C000%20-%3E%20%2410%2C400%20MXN.%2A%0A%0ALes%20adjunto%20la%20vista%20previa%20de%20su%20consultorio%20y%20nuestro%20portal%3A%20https%3A//captoora.studio/sports%20%E2%80%94%20%C2%BFcu%C3%A1l%20de%20las%203%20opciones%20revisamos%20esta%20semana%3F%0A%0A%2ADigital%20en%2048%E2%80%9372h%3B%20placa%20acr%C3%ADlica%20QR%20LED%20en%20taller%20local%20MTY/SPGG%3A%203%E2%80%935%20d%C3%ADas%20h%C3%A1biles."
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "updated_at": "2026-11-19T08:41:23-06:00",
+  "territory": "Puerto Vallarta, Jalisco (Solo PV)",
+  "zones": {
+    "zona_romantica": {
+      "updated_at": "2026-11-18T13:15:06-06:00",
+      "total_leads": 54,
+      "total_audited": 54,
+      "deficient_count": 17,
+      "captured_count": 54,
+      "streetview_count": 0,
+      "zero_photos_count": 0,
+      "unclaimed_count": 5,
+      "prototypes_count": 54,
+      "no_own_website_count": 16
+    },
+    "zona_hotelera": {
+      "updated_at": "2026-11-18T13:17:12-06:00",
+      "total_leads": 73,
+      "total_audited": 73,
+      "deficient_count": 32,
+      "captured_count": 73,
+      "streetview_count": 3,
+      "zero_photos_count": 1,
+      "unclaimed_count": 6,
+      "prototypes_count": 73,
+      "no_own_website_count": 31
+    },
+    "centro_y_bahia": {
+      "updated_at": "2026-11-18T12:48:38-06:00",
+      "total_leads": 40,
+      "total_audited": 40,
+      "deficient_count": 21,
+      "captured_count": 40,
+      "streetview_count": 0,
+      "zero_photos_count": 0,
+      "unclaimed_count": 7,
+      "prototypes_count": 40,
+      "no_own_website_count": 18
+    }
+  },
+  "excluded_out_of_perimeter_count": 8,
+  "excluded_sample": [
+    {
+      "nombre": "Clinica Dental SPA",
+      "direccion": "C. González Gallo 141, Vida Vallarta, 48318 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJ7bhwgutPIYQRPUPYyQWhtAk"
+    },
+    {
+      "nombre": "Vinos y Licores Abarrotes Angelita",
+      "direccion": "Cl. Fco. I. Madero 148, Centro Pitillal, 48290 Puerto Vallarta, Jal., México",
+      "razon": "Fuera de Puerto Vallarta (Nayarit/Periferia)",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJWRn3935PIYQRP7BvpNN1fgc"
+    },
+    {
+      "nombre": "KYU PADEL CLUB",
+      "direccion": "Av. México 1285, Agua Zarca, 48315 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJT5FC9ktFIYQRgPTHqrXk_-0"
+    },
+    {
+      "nombre": "Hoja Santa PV",
+      "direccion": "Avenida 208, El Toro, 48296 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJdXm3DgtPIYQRsXl8fJJl9Uk"
+    },
+    {
+      "nombre": "My Jardín",
+      "direccion": "C. Revolucion 500, Colonia del toro, 48296 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJ75BFTXtFIYQRpB7gMTx_jT8"
+    },
+    {
+      "nombre": "Restaurant Café Lukumbé",
+      "direccion": "De Los Tules 449, Jardines, 48328 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJr_GvNIZPIYQR525aymnKfpo"
+    },
+    {
+      "nombre": "Bocado - Restaurante de Desayunos y Brunch Comida Mexicana",
+      "direccion": "Sta. María 280, Ojo de Agua, 48344 Puerto Vallarta, Jal., México",
+      "razon": "Otra Colonia Fuera de las 3 Zonas PV",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJV8nlHPJPIYQRKeOjszhCyfE"
+    },
+    {
+      "nombre": "Cova café & brunch",
+      "direccion": "Palma Datilera - Pisis 120A, Del Villar, 48290 Puerto Vallarta, Jal., México",
+      "razon": "Fuera de Puerto Vallarta (Nayarit/Periferia)",
+      "corrida_origen": "centro_y_bahia",
+      "place_id": "ChIJH_DGQABPIYQRA3qqaMwvWc0"
+    }
+  ]
+}

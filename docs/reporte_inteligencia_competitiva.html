@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictamen Pericial e Inteligencia Competitiva · Captoora Sports Studio</title>
+  
+  <!-- REFINED LUXURY TYPOGRAPHY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       EXECUTIVE PRINT & SCREEN STYLING (DARK LUXURY EDITORIAL ATHLETIC THEME)
+       ========================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --bg-dark: #07060b;
+      --bg-card: #0e0d16;
+      --bg-surface: #151421;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --cyan: #00f0ff;
+      --lime: #00ff88;
+      --text-main: #f5f4f8;
+      --text-muted: #9c9aa8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(212, 175, 55, 0.3);
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 13px;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .report-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    /* PAGE BREAK UTILITIES */
+    .page-break {
+      page-break-after: always;
+      break-after: page;
+      margin-bottom: 40px;
+    }
+
+    @media print {
+      body {
+        background-color: #07060b !important;
+        color: #f5f4f8 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .report-wrapper {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+      .page-break {
+        page-break-after: always !important;
+        break-after: page !important;
+        margin-bottom: 0 !important;
+        padding-top: 20px;
+      }
+      @page {
+        size: letter;
+        margin: 14mm 14mm 14mm 14mm;
+      }
+    }
+
+    /* HEADER & FOOTER MARKS */
+    .doc-header-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-gold);
+      margin-bottom: 24px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gold);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .doc-footer-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 30px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--text-muted);
+    }
+
+    /* COVER PAGE */
+    .cover-container {
+      min-height: 850px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 40px 0;
+      position: relative;
+    }
+
+    .cover-hero-brand {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cover-wolf-logo {
+      width: 110px;
+      height: auto;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.4));
+    }
+
+    .cover-brand-title {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .cover-brand-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+
+    .cover-main-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+
+    .cover-title-block {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cover-main-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .cover-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .cover-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 30px 0;
+    }
+
+    .cover-spec-card {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .cover-spec-num {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .cover-spec-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .cover-meta-table {
+      width: 100%;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* TYPOGRAPHY HEADINGS */
+    h2.section-heading {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2.section-heading::before {
+      content: '';
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      background: var(--cyan);
+      border-radius: 2px;
+    }
+
+    h3.sub-heading {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cyan);
+      margin: 18px 0 8px 0;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #d1cfe0;
+      font-size: 12.5px;
+      text-align: justify;
+    }
+
+    /* CALLOUT BOXES */
+    .callout-box {
+      background: rgba(0, 240, 255, 0.05);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+    }
+
+    .callout-box.gold {
+      background: rgba(212, 175, 55, 0.08);
+      border-left-color: var(--gold);
+    }
+
+    .callout-box.lime {
+      background: rgba(0, 255, 136, 0.06);
+      border-left-color: var(--lime);
+    }
+
+    .callout-title {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      color: var(--cyan);
+    }
+
+    .callout-box.gold .callout-title { color: var(--gold); }
+    .callout-box.lime .callout-title { color: var(--lime); }
+
+    /* COMPETITOR PROFILES GRID */
+    .competitors-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 16px 0;
+    }
+
+    .competitor-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+      position: relative;
+    }
+
+    .competitor-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+
+    .competitor-name {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold-light);
+    }
+
+    .competitor-type {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      color: var(--cyan);
+    }
+
+    .comp-field {
+      font-size: 11px;
+      margin-bottom: 4px;
+      color: #ccc;
+    }
+
+    .comp-field strong {
+      color: var(--text-main);
+    }
+
+    .comp-gap {
+      margin-top: 8px;
+      padding: 6px 10px;
+      background: rgba(255, 59, 48, 0.08);
+      border-left: 2px solid #ff453a;
+      border-radius: 0 4px 4px 0;
+      font-size: 10.5px;
+      color: #ff9f97;
+    }
+
+    /* COMPARISON MATRIX TABLE */
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 10.5px;
+    }
+
+    .matrix-table th {
+      background: var(--bg-surface);
+      color: var(--gold);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 10px 8px;
+      text-align: left;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .matrix-table td {
+      padding: 9px 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: #dedee8;
+      vertical-align: middle;
+    }
+
+    .matrix-table tr:nth-child(even) {
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .matrix-table tr.highlight-captoora {
+      background: rgba(0, 240, 255, 0.07);
+      font-weight: 600;
+    }
+
+    .matrix-table tr.highlight-captoora td {
+      color: #ffffff;
+      border-top: 1px solid var(--cyan);
+      border-bottom: 1px solid var(--cyan);
+    }
+
+    .badge-captoora {
+      display: inline-block;
+      padding: 3px 8px;
+      background: var(--cyan);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 700;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* TECHNICAL HARDWARE SPEC GRID */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .tech-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px;
+      border-top: 3px solid var(--cyan);
+    }
+
+    .tech-card.gold { border-top-color: var(--gold); }
+    .tech-card.lime { border-top-color: var(--lime); }
+
+    .tech-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .tech-spec {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* CALENDAR 30 DAYS GRID */
+    .calendar-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .week-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .week-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .week-title {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .week-badge {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(0, 240, 255, 0.12);
+      color: var(--cyan);
+      border: 1px solid var(--cyan);
+    }
+
+    .days-list {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+    }
+
+    .day-pill {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 8px 6px;
+      font-size: 9.5px;
+      text-align: center;
+    }
+
+    .day-pill strong {
+      display: block;
+      color: var(--gold-light);
+      font-family: var(--font-mono);
+      margin-bottom: 2px;
+    }
+
+    .day-pill span {
+      color: #a09ea9;
+      display: block;
+      line-height: 1.3;
+    }
+
+    /* SIGNATURE BLOCK */
+    .sign-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-gold);
+    }
+
+    .sign-col {
+      text-align: center;
+      width: 260px;
+    }
+
+    .sign-line {
+      border-bottom: 1px solid var(--gold);
+      height: 40px;
+      margin-bottom: 8px;
+    }
+
+    .sign-name {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .sign-role {
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      color: var(--cyan);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="report-wrapper">
+
+    <!-- ====================================================================
+         PAGE 1: COVER PAGE
+         ==================================================================== -->
+    <section class="cover-container page-break">
+      <div class="doc-header-strip">
+        <span>Confidencial · Dictamen Pericial N° CP-2026-NL</span>
+        <span>Monterrey, Nuevo León</span>
+      </div>
+
+      <div class="cover-hero-brand">
+        <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora Wolf Emblem" class="cover-wolf-logo">
+        <h1 class="cover-brand-title">CAPTOORA</h1>
+        <div class="cover-brand-sub">Estudio Fotográfico // Sports Engineering</div>
+        <div class="cover-main-badge">Reporte de Inteligencia de Mercado & Dictamen Pericial</div>
+      </div>
+
+      <div class="cover-title-block">
+        <h2 class="cover-main-title">
+          ANÁLISIS DE LA COMPETENCIA &<br>
+          DICTAMEN PERICIAL EN FOTOGRAFÍA DEPORTIVA<br>
+          DE ALTO RENDIMIENTO
+        </h2>
+        <p class="cover-subtitle">
+          Auditoría de 10 competidores clave en Nuevo León, radiografía de brechas de mercado no cubiertas, protocolo técnico de duela/cancha a velocidades de 1/1250s+ y calendario maestro de 30 días para captura de clientes de élite.
+        </p>
+      </div>
+
+      <div class="cover-specs-grid">
+        <div class="cover-spec-card">
+          <div class="cover-spec-num">10</div>
+          <div class="cover-spec-label">Competidores Auditados</div>
+        </div>
+        <div class="cover-spec-card">
+          <div class="cover-spec-num">1/2000s</div>
+          <div class="cover-spec-label">Velocidad Quirúrgica</div>
+        </div>
+        <div class="cover-spec-card">
+          <div class="cover-spec-num">15 MIN</div>
+          <div class="cover-spec-label">In-Game Halftime Delivery</div>
+        </div>
+      </div>
+
+      <div class="cover-meta-table">
+        <div><strong>Emisor:</strong> Captoora Sports Studio</div>
+        <div><strong>Sede Operativa:</strong> San Jerónimo, Monterrey, N.L.</div>
+        <div><strong>WhatsApp Oficial:</strong> +52 81 4005 0088</div>
+        <div><strong>Web:</strong> captoora.studio</div>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 2: EXECUTIVE SUMMARY & STRATEGIC POSITIONING
+         ==================================================================== -->
+    <section class="page-break">
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 01 / Resumen Ejecutivo</span>
+      </div>
+
+      <h2 class="section-heading">01. Resumen Ejecutivo & Contexto Estratégico</h2>
+      
+      <p>
+        El estado de Nuevo León representa el epicentro más dinámico y competitivo del deporte en México. Con la presencia de franquicias profesionales (Rayados y Tigres en fútbol soccer; Fuerza Regia en baloncesto LNBP; Sultanes en béisbol LMB), las dos máximas potencias del fútbol americano colegial en México (Borregos del Tecnológico de Monterrey y Auténticos Tigres de la UANL), así como el circuito formativo juvenil más influyente del país (Monterrey Football League - MFL con clubes de alta plusvalía en San Pedro Garza García y San Nicolás), <strong>la necesidad de captura visual de alta calidad es exponencial.</strong>
+      </p>
+
+      <p>
+        Sin embargo, la investigación paralela realizada sobre el mercado revela una anomalía comercial crítica: <strong>la oferta fotográfica actual en Nuevo León está polarizada en dos extremos ineficientes</strong>:
+      </p>
+
+      <div class="callout-box gold">
+        <div class="callout-title">La Doble Falla del Mercado en Nuevo León</div>
+        <p style="margin-bottom:0;">
+          <strong>1. Las grandes agencias de prensa</strong> (Imago7, Mexsport, Jam Media) atienden únicamente a medios de comunicación y periódicos; ignoran a los atletas individuales, a las academias juveniles y a las marcas patrocinadoras.<br>
+          <strong>2. Los fotógrafos locales y monopolios de ligas</strong> (FotosMFL, freelancers) operan con cámaras de gama media, velocidades de obturación lentas (1/500s que generan fotos borrosas), entregas tardías de hasta 7 días hábiles y carpetas desnudas de Google Drive sin prestigio ni valor estético.
+        </p>
+      </div>
+
+      <h3 class="sub-heading">El Posicionamiento No Negociable de Captoora Sports</h3>
+      <p>
+        Captoora Sports no compite como un fotógrafo social ni como un practicante amateur. Captoora es una <strong>firma de ingeniería fotográfica de alta velocidad</strong> diseñada para congelar la acción con precisión de quirófano (1/1250s a 1/2000s), entregar material editado al medio tiempo del partido (en menos de 15 minutos) y alojar las obras en una plataforma web interactiva 3D propietaria (<code>captoora.studio</code>).
+      </p>
+
+      <div class="callout-box lime">
+        <div class="callout-title">Ventaja Competitiva Confidencial</div>
+        <p style="margin-bottom:0;">
+          Captoora acelera sus entregas y eleva la calidad a estándares editoriales de revista mediante un <strong>Pipeline Computacional de Calibración Óptica y Supresión Cromática en Tiempo Real</strong>. De cara al cliente y en materiales de ventas, <strong>jamás se mencionan los términos "IA" o "Inteligencia Artificial"</strong>, evitando cualquier sesgo o percepción de devaluación del arte fotográfico profesional.
+        </p>
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · San Jerónimo, Monterrey, N.L.</span>
+        <span>Página 2</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 3: 10 KEY COMPETITORS IN NUEVO LEÓN
+         ==================================================================== -->
+    <section class="page-break">
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 02 / Inteligencia de Competidores</span>
+      </div>
+
+      <h2 class="section-heading">02. Radiografía de 10 Competidores Clave en Nuevo León</h2>
+      <p>
+        A continuación se desglosan los perfiles, modelos de captación y vacíos operativos de los 10 agentes más relevantes del mercado en Monterrey y su zona metropolitana:
+      </p>
+
+      <div class="competitors-grid">
+        
+        <!-- COMP 1 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">1. Imago7</span>
+            <span class="competitor-type">Agencia Nacional Prensa</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> imago7.com.mx · @imago7mx</div>
+          <div class="comp-field"><strong>Clientes:</strong> Medios masivos, periódicos, televisoras.</div>
+          <div class="comp-field"><strong>Captación/Cobro:</strong> Licenciamiento editorial anual.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Cero atención a atletas particulares, familias, colegios o patrocinios de marca privada.</div>
+        </div>
+
+        <!-- COMP 2 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">2. Mexsport</span>
+            <span class="competitor-type">Agencia Decana</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> mexsport.net · @mexsport</div>
+          <div class="comp-field"><strong>Clientes:</strong> Prensa deportiva tradicional y federaciones.</div>
+          <div class="comp-field"><strong>Entrega:</strong> Catálogo web en 2 a 4 horas.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Estética fotográfica documental plana; nula interactividad digital o formatos verticales 9:16.</div>
+        </div>
+
+        <!-- COMP 3 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">3. Jam Media (Getty)</span>
+            <span class="competitor-type">Distribución Global</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> agenciajammedia.com · Getty Images</div>
+          <div class="comp-field"><strong>Clientes:</strong> Cadenas internacionales y ligas globales.</div>
+          <div class="comp-field"><strong>Entrega:</strong> Feed satelital/web directo.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Tarifas astronómicas en dólares; desatienden al 99% de los clubes deportivos locales de Nuevo León.</div>
+        </div>
+
+        <!-- COMP 4 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">4. Straffon Images</span>
+            <span class="competitor-type">Prensa Editorial</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> simageslive.com · @straffonimages</div>
+          <div class="comp-field"><strong>Clientes:</strong> Portales web deportivos y diarios locales.</div>
+          <div class="comp-field"><strong>Entrega:</strong> Sistema de abonados de prensa.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Enfoque 100% en fútbol soccer profesional; nula cobertura de americano juvenil o básquetbol.</div>
+        </div>
+
+        <!-- COMP 5 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">5. FotosMFL</span>
+            <span class="competitor-type">Monopolio Oficial MFL</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> fotosmfl.com · ligamfl.com</div>
+          <div class="comp-field"><strong>Clientes:</strong> Padres de familia de Avispones, Pumas, Toros.</div>
+          <div class="comp-field"><strong>Entrega:</strong> 3 a 7 días hábiles vía web protegida.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Calidad amateur a 1/500s con desenfoque de movimiento; entrega tardía; cero paquetes individuales.</div>
+        </div>
+
+        <!-- COMP 6 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">6. Estudio BOOX</span>
+            <span class="competitor-type">Estudio Fitness Comercial</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> boox.mx · @boox.mx (Centro Mty)</div>
+          <div class="comp-field"><strong>Clientes:</strong> Coaches, marcas de ropa, yoga, CrossFit.</div>
+          <div class="comp-field"><strong>Tarifas:</strong> Desde $2,700 MXN / hora en estudio.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Limitados a estudio cerrado; no operan en canchas en vivo ni poseen teleobjetivos 400mm f/2.8.</div>
+        </div>
+
+        <!-- COMP 7 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">7. OEE Media</span>
+            <span class="competitor-type">Productora Local</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> oeemedia.net (Roberto González)</div>
+          <div class="comp-field"><strong>Clientes:</strong> Atletas independientes y torneos locales.</div>
+          <div class="comp-field"><strong>Entrega:</strong> 48 a 72 hrs por Google Drive.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Operación unipersonal sin capacidad para transmisiones en vivo ni presentación web inmersiva.</div>
+        </div>
+
+        <!-- COMP 8 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">8. Abner García</span>
+            <span class="competitor-type">Freelance MMA & Motor</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> @abgarciafdz (LUX Fight League)</div>
+          <div class="comp-field"><strong>Clientes:</strong> Artes marciales, motocross, Liga MX Femenil.</div>
+          <div class="comp-field"><strong>Entrega:</strong> 24 a 48 hrs post-evento.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> No atiende deportes de equipo colegiales ni cuenta con plataforma web de comercialización.</div>
+        </div>
+
+        <!-- COMP 9 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">9. Emotions in Motion</span>
+            <span class="competitor-type">Documental Deportivo</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> Sergio Garza · San Pedro Garza García</div>
+          <div class="comp-field"><strong>Clientes:</strong> Corredores particulares y triatletas.</div>
+          <div class="comp-field"><strong>Entrega:</strong> 3 a 5 días hábiles.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Enfoque exclusivamente documental suave; carece de estética cinematográfica y luz de alto impacto.</div>
+        </div>
+
+        <!-- COMP 10 -->
+        <div class="competitor-card">
+          <div class="competitor-header">
+            <span class="competitor-name">10. FotoSportMX</span>
+            <span class="competitor-type">Masivo Maratones</span>
+          </div>
+          <div class="comp-field"><strong>Web/Redes:</strong> fotosportmx.com (NorthSports)</div>
+          <div class="comp-field"><strong>Clientes:</strong> Participantes de carreras de ruta y maratones.</div>
+          <div class="comp-field"><strong>Entrega:</strong> Venta por número de dorsal en 48 hrs.</div>
+          <div class="comp-gap"><strong>Hueco Crítico:</strong> Fotografía automatizada genérica; ángulos fijos sin valor artístico ni seguimiento de héroe.</div>
+        </div>
+
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · Dictamen de Inteligencia Competitiva</span>
+        <span>Página 3</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 4: COMPARISON MATRIX
+         ==================================================================== -->
+    <section class="page-break">
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 03 / Matriz de Brechas</span>
+      </div>
+
+      <h2 class="section-heading">03. Matriz Comparativa y Vacíos de Mercado</h2>
+      <p>
+        Comparativa directa entre las ofertas convencionales en Nuevo León frente al estándar de ingeniería visual de Captoora Sports:
+      </p>
+
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>Parámetro Operativo</th>
+            <th>Agencias Prensa</th>
+            <th>FotosMFL (Juvenil)</th>
+            <th>Estudios Fitness</th>
+            <th>Freelancers Locales</th>
+            <th style="color:var(--cyan);">CAPTOORA SPORTS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Público Objetivo</strong></td>
+            <td>Diarios y cadenas TV</td>
+            <td>Padres MFL cautivos</td>
+            <td>Coaches e influencers</td>
+            <td>Particulares</td>
+            <td><span class="badge-captoora">Atletas, Universidades, Clubes MFL & Patrocinadores</span></td>
+          </tr>
+          <tr>
+            <td><strong>Tiempo de Entrega</strong></td>
+            <td>2-4 hrs (Solo prensa)</td>
+            <td>3 a 7 días hábiles</td>
+            <td>5 a 10 días hábiles</td>
+            <td>48 a 72 hrs (Drive)</td>
+            <td><span class="badge-captoora">In-Game Medio Tiempo (15m) + Galería &lt; 2 hrs</span></td>
+          </tr>
+          <tr>
+            <td><strong>Velocidad de Disparo</strong></td>
+            <td>1/1000s</td>
+            <td>1/500s (Desenfoque)</td>
+            <td>1/250s (Estudio)</td>
+            <td>1/640s - 1/800s</td>
+            <td><span class="badge-captoora">1/1250s a 1/2000s (Congelamiento Quirúrgico)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Tecnología de Sensor</strong></td>
+            <td>BSI CMOS Estándar</td>
+            <td>Sensores recortados APS-C</td>
+            <td>Full Frame estándar</td>
+            <td>DSLRs antiguas</td>
+            <td><span class="badge-captoora">Global Shutter (A9 III) + BSI Apilado (R3/Z9)</span></td>
+          </tr>
+          <tr>
+            <td><strong>Parque Óptico</strong></td>
+            <td>70-200mm / 400mm</td>
+            <td>Zooms de kit oscuros f/5.6</td>
+            <td>24-70mm f/2.8</td>
+            <td>Lentes f/4 estándar</td>
+            <td><span class="badge-captoora">Primes y Teleobjetivos f/2.8 GM II / RF L</span></td>
+          </tr>
+          <tr>
+            <td><strong>Plataforma Entrega</strong></td>
+            <td>Servidor FTP Wire</td>
+            <td>Portal web con bloqueos</td>
+            <td>Pixieset / WeTransfer</td>
+            <td>Enlace Google Drive</td>
+            <td><span class="badge-captoora">captoora.studio · Túnel 3D + Cromos Holográficos</span></td>
+          </tr>
+          <tr>
+            <td><strong>Reporte Patrocinador</strong></td>
+            <td>No disponible</td>
+            <td>Inexistente</td>
+            <td>No aplica</td>
+            <td>Inexistente</td>
+            <td><span class="badge-captoora">Sponsor Proof: Exposición métrica de marca</span></td>
+          </tr>
+          <tr>
+            <td><strong>Procesamiento Óptico</strong></td>
+            <td>Básico de cámara</td>
+            <td>JPG plano de cámara</td>
+            <td>Retoque manual lento</td>
+            <td>Presets de Lightroom</td>
+            <td><span class="badge-captoora">Pipeline Propietario de Calibración Acelerada</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-box gold">
+        <div class="callout-title">Conclusión de la Matriz de Vacíos</div>
+        <p style="margin-bottom:0;">
+          Ningún competidor en Nuevo León ofrece simultáneamente: <strong>(1) Calidad de sensor de obturación global a 1/1250s+, (2) Entrega inmediata durante el descanso de medio tiempo para redes sociales, y (3) Plataforma web de lujo interactiva 3D con reporte de retorno para patrocinadores.</strong> Captoora Sports posee una ventaja de océano azul indisputable.
+        </p>
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · Dictamen Pericial e Inteligencia Competitiva</span>
+        <span>Página 4</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 5: TECHNICAL DOSSIER (NFL / NBA / NCAA STANDARDS)
+         ==================================================================== -->
+    <section class="page-break">
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 04 / Dictamen Técnico</span>
+      </div>
+
+      <h2 class="section-heading">04. Dictamen Pericial: Estándar Técnico NFL, NBA & NCAA</h2>
+      <p>
+        Para garantizar nitidez quirúrgica sin aberraciones cromáticas ni distorsión por movimiento a velocidades extremas de <strong>1/1250s a 1/2000s</strong>, se emite el presente dictamen técnico de equipamiento y calibración:
+      </p>
+
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-title">01. Cuerpos Global Shutter</div>
+          <div class="tech-spec">
+            <strong>Sony Alpha 9 III:</strong> Sensor Full-Frame con lectura simultánea de píxeles (Global Shutter). Ráfaga continua de 120 fps sin blackout, cero deformación de balones en rotación espiral y sincronización flash hasta 1/80,000s.<br><br>
+            <strong>Canon R3 / Nikon Z9:</strong> Sensores apilados BSI de lectura ultra-rápida (1/280s) con algoritmos predictivos de seguimiento ocular.
+          </div>
+        </div>
+
+        <div class="tech-card gold">
+          <div class="tech-title">02. Ópticas f/2.8 Ultrarrápidas</div>
+          <div class="tech-spec">
+            <strong>70-200mm f/2.8 GM II / RF:</strong> El estándar innegociable para la duela de básquetbol y la zona roja de anotación en emparrillados.<br><br>
+            <strong>300mm / 400mm f/2.8:</strong> Máxima compresión de perspectiva para aislar al atleta del graderío con un desenfoque bokeh cinematográfico tridimensional.<br><br>
+            <strong>14-24mm f/2.8:</strong> Gran angular rasante bajo el tablero para clavadas y celebraciones.
+          </div>
+        </div>
+
+        <div class="tech-card lime">
+          <div class="tech-title">03. Iluminación HSS & Rigs</div>
+          <div class="tech-spec">
+            <strong>Flashes Profoto B10X / Godox AD600Pro:</strong> Modos High-Speed Sync (HSS) hasta 1/8000s para dominar el sol quemante de mediodía en Monterrey y congelar partículas de sudor.<br><br>
+            <strong>Disparadores PocketWizard MultiMAX II / Raven:</strong> Frecuencia segura de 340 MHz sin interferencias de redes de estadio para sincronizar cámaras remotas en postes de gol.
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Protocolo de Exposición y Calibración en Campo</h3>
+      <div class="callout-box">
+        <div class="callout-title">Ajustes Quirúrgicos en Cámara (No Negociables)</div>
+        <p style="margin-bottom:0;">
+          • <strong>Velocidad de Obturación:</strong> 1/1250s mínimo para fútbol americano y soccer; 1/1600s a 1/2000s en básquetbol para congelar costuras de balón y sudor.<br>
+          • <strong>Apertura:</strong> f/2.8 constante en toda la cobertura para máxima entrada de luz y separación de sujeto.<br>
+          • <strong>Balance de Blancos:</strong> Kelvin Manual Fijo (4800K a 5200K según luminaria de estadio) para evitar saltos cromáticos entre disparos de una misma ráfaga.<br>
+          • <strong>Modo de Enfoque:</strong> AF-C con tracking expandido y sensibilidad ajustada en "Firme/Locked On" para evitar que árbitros o bloqueadores roben el punto de enfoque.<br>
+          • <strong>Transmisión Inmediata:</strong> Conexión Gigabit Ethernet directa desde el cuerpo de la cámara hacia hotspot 5G para subida inmediata a la mesa editorial.
+        </p>
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · Dictamen Pericial e Inteligencia Competitiva</span>
+        <span>Página 5</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 6: 30-DAY MASTER CALENDARIZATION
+         ==================================================================== -->
+    <section class="page-break">
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 05 / Plan de 30 Días</span>
+      </div>
+
+      <h2 class="section-heading">05. Calendario Maestro de 30 Días para Conquista de Mercado</h2>
+      <p>
+        Estrategia cronológica estructurada en 4 fases de despliegue comercial y operativo en Nuevo León:
+      </p>
+
+      <div class="calendar-timeline">
+
+        <!-- WEEK 1 -->
+        <div class="week-block">
+          <div class="week-header">
+            <span class="week-title">Semana 1 (Días 01 - 07): Desembarco de Alto Nivel y los "Cinco Gigantes"</span>
+            <span class="week-badge">Fase Institucional</span>
+          </div>
+          <div class="days-list">
+            <div class="day-pill"><strong>DÍA 01</strong><span>Auditoría de equipo y calibración presets</span></div>
+            <div class="day-pill"><strong>DÍA 02</strong><span>Propuesta piloto a Borregos Tec ITESM</span></div>
+            <div class="day-pill"><strong>DÍA 03</strong><span>Contacto directo Auténticos Tigres UANL</span></div>
+            <div class="day-pill"><strong>DÍA 04</strong><span>Fuerzas Básicas Rayados & Tigres</span></div>
+            <div class="day-pill"><strong>DÍA 05</strong><span>Acreditaciones Fuerza Regia & Capitanes</span></div>
+            <div class="day-pill"><strong>DÍA 06</strong><span>Outreach Colegios Privados (AIM/ASFM)</span></div>
+            <div class="day-pill"><strong>DÍA 07</strong><span>Revisión de métricas Scouting Hub</span></div>
+          </div>
+        </div>
+
+        <!-- WEEK 2 -->
+        <div class="week-block">
+          <div class="week-header">
+            <span class="week-title">Semana 2 (Días 08 - 14): Infiltración en Ecosistema MFL y Emparrillados Juveniles</span>
+            <span class="week-badge">Fase Emparrillados</span>
+          </div>
+          <div class="days-list">
+            <div class="day-pill"><strong>DÍA 08</strong><span>Club Avispones San Pedro (Presencial)</span></div>
+            <div class="day-pill"><strong>DÍA 09</strong><span>Pumas San Pedro & Halcones (Demo 3D)</span></div>
+            <div class="day-pill"><strong>DÍA 10</strong><span>Toros San Nicolás & Potros Santa Catarina</span></div>
+            <div class="day-pill"><strong>DÍA 11</strong><span>Lanzamiento Hero Coverage Individual</span></div>
+            <div class="day-pill"><strong>DÍA 12</strong><span>Cobertura Friday Night Lights MFL</span></div>
+            <div class="day-pill"><strong>DÍA 13</strong><span>Flag Football & Porrismo Sabatino</span></div>
+            <div class="day-pill"><strong>DÍA 14</strong><span>Cierre ventas jornada y entrega &lt; 2 hrs</span></div>
+          </div>
+        </div>
+
+        <!-- WEEK 3 -->
+        <div class="week-block">
+          <div class="week-header">
+            <span class="week-title">Semana 3 (Días 15 - 21): Conquista del Circuito Fitness, CrossFit & Clubes de Pádel</span>
+            <span class="week-badge">Fase Rendimiento</span>
+          </div>
+          <div class="days-list">
+            <div class="day-pill"><strong>DÍA 15</strong><span>Mapeo Boxes CrossFit San Pedro / Jerónimo</span></div>
+            <div class="day-pill"><strong>DÍA 16</strong><span>Sesión Demo HSS 1/8000s Levantamiento</span></div>
+            <div class="day-pill"><strong>DÍA 17</strong><span>Propuesta mensual marcas ropa/suplementos</span></div>
+            <div class="day-pill"><strong>DÍA 18</strong><span>Pádel Chipinque & Club Campestre</span></div>
+            <div class="day-pill"><strong>DÍA 19</strong><span>Integración sesiones al Túnel 3D</span></div>
+            <div class="day-pill"><strong>DÍA 20</strong><span>Paquetes atletas clasificatorios Hyrox</span></div>
+            <div class="day-pill"><strong>DÍA 21</strong><span>Optimización conversiones por WhatsApp</span></div>
+          </div>
+        </div>
+
+        <!-- WEEK 4 -->
+        <div class="week-block">
+          <div class="week-header">
+            <span class="week-title">Semana 4 (Días 22 - 30): Activación de Patrocinadores Comerciales y Cierre Retainers</span>
+            <span class="week-badge">Fase Cierre Retainers</span>
+          </div>
+          <div class="days-list">
+            <div class="day-pill"><strong>DÍA 22</strong><span>Presentación reporte Sponsor Proof a marcas</span></div>
+            <div class="day-pill"><strong>DÍA 23</strong><span>Negociación esquemas Retainer mensual</span></div>
+            <div class="day-pill"><strong>DÍA 24</strong><span>Firma primer contrato exclusivo club juvenil</span></div>
+            <div class="day-pill"><strong>DÍA 25</strong><span>Protocolo transmisión juegos post-temporada</span></div>
+            <div class="day-pill"><strong>DÍA 26</strong><span>Boletín de prensa tecnológico Captoora</span></div>
+            <div class="day-pill"><strong>DÍA 27</strong><span>Lanzamiento paquetes Media Day estudio</span></div>
+            <div class="day-pill"><strong>DÍA 28-30</strong><span>Auditoría financiera y cierre de mes</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · Dictamen Pericial e Inteligencia Competitiva</span>
+        <span>Página 6</span>
+      </div>
+    </section>
+
+
+    <!-- ====================================================================
+         PAGE 7: VERDICT & AUTHORIZATION
+         ==================================================================== -->
+    <section>
+      <div class="doc-header-strip">
+        <span>Captoora Sports · Dictamen Pericial</span>
+        <span>Sección 06 / Veredicto y Emisión</span>
+      </div>
+
+      <h2 class="section-heading">06. Veredicto Final & Emisión Pericial</h2>
+      <p>
+        El presente dictamen concluye fehacientemente que la brecha existente en el mercado deportivo de Nuevo León no es de demanda, sino de <strong>capacidad tecnológica y velocidad de respuesta de la oferta</strong>. Al implementar el flujo de trabajo de alta ingeniería fotográfica, la entrega en medio tiempo (Halftime Blitz), el alojamiento inmersivo en <code>captoora.studio</code> y la auditoría métrica para patrocinadores, Captoora Sports cuenta con todos los elementos técnicos y comerciales para dominar la captación de clientes de élite en Nuevo León y en el circuito nacional.
+      </p>
+
+      <div class="callout-box lime">
+        <div class="callout-title">Aprobación Operativa</div>
+        <p style="margin-bottom:0;">
+          El plan de 30 días se encuentra listo para su despliegue inmediato. Los activos digitales, el Scouting Hub de prospección y las plantillas de contacto se encuentran enlazados a la sede operativa de San Jerónimo, Monterrey, Nuevo León.
+        </p>
+      </div>
+
+      <div class="sign-block">
+        <div class="sign-col">
+          <div class="sign-line"></div>
+          <div class="sign-name">Captoora Sports Studio</div>
+          <div class="sign-role">Dirección de Operaciones Fotográficas</div>
+        </div>
+
+        <div style="text-align: center;">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora Emblem" style="width: 50px; opacity: 0.8;">
+          <div style="font-family: var(--font-mono); font-size: 8px; color: var(--gold); margin-top: 4px;">CERTIFICADO DE EXCELENCIA</div>
+        </div>
+
+        <div class="sign-col">
+          <div class="sign-line"></div>
+          <div class="sign-name">Peritaje Técnico Deportivo</div>
+          <div class="sign-role">Canchas y Duelas · Estándar NFL / NBA</div>
+        </div>
+      </div>
+
+      <div class="doc-footer-strip">
+        <span>Captoora Sports · San Jerónimo, Monterrey, N.L. · +52 81 4005 0088</span>
+        <span>Fin del Informe</span>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

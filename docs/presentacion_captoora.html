@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAPTOORA · Playbook Visual & Embudo Invisible 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050608;
+      --surface: #0b0e14;
+      --surface-2: #111622;
+      --border: rgba(255, 255, 255, 0.09);
+      --border-gold: rgba(201, 162, 63, 0.34);
+      --gold: #c9a23f;
+      --gold-bright: #ecd28a;
+      --volt: #c6ff00;
+      --cyan: #38bdf8;
+      --coral: #fb7185;
+      --emerald: #34d399;
+      --text: #f5f4ef;
+      --muted: #98a2b3;
+      --font-display: "Cinzel", Georgia, serif;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: #020304;
+      color: var(--text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+
+    /* Top Chrome Bar (hidden in print) */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 52px;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      background: rgba(5, 6, 8, 0.86);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-mini {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--gold-bright);
+    }
+    .brand-mini img { height: 26px; width: 26px; object-fit: contain; }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--surface-2);
+      color: var(--text);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: border-color 0.2s, transform 0.15s, background 0.2s;
+      text-decoration: none;
+    }
+    .btn:hover { border-color: var(--gold); background: #161c2b; transform: translateY(-1px); }
+    .btn.primary { border-color: rgba(198, 255, 0, 0.45); color: var(--volt); }
+    .btn.gold { border-color: var(--border-gold); color: var(--gold-bright); }
+
+    .slide-counter {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding: 0 8px;
+    }
+
+    /* Scroll-Snap Deck Viewport */
+    .deck {
+      height: 100vh;
+      width: 100vw;
+      padding-top: 52px;
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .slide-wrap {
+      height: calc(100vh - 52px);
+      width: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+    }
+
+    /* Fixed 16:9 infographic stage that scales smoothly inside viewport */
+    .slide {
+      position: relative;
+      width: min(100%, calc((100vh - 80px) * 16 / 9), 1320px);
+      aspect-ratio: 16 / 9;
+      background:
+        radial-gradient(circle at 86% 14%, rgba(201, 162, 63, 0.11), transparent 44%),
+        radial-gradient(circle at 12% 88%, rgba(56, 189, 248, 0.08), transparent 46%),
+        var(--bg);
+      border: 1px solid var(--border-gold);
+      border-radius: 18px;
+      overflow: hidden;
+      padding: 28px 34px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, 0.85);
+    }
+
+    /* Dot Rail */
+    .dot-rail {
+      position: fixed;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 55;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      background: rgba(11, 14, 20, 0.72);
+      padding: 10px 7px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+    .dot-rail button {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 0;
+      background: rgba(255, 255, 255, 0.24);
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .dot-rail button[aria-current="step"] {
+      background: var(--volt);
+      transform: scale(1.42);
+      box-shadow: 0 0 10px rgba(198, 255, 0, 0.7);
+    }
+
+    /* Common Header & Footer inside every 16:9 slide */
+    .s-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .s-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.25vw, 29px);
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      color: var(--text);
+    }
+    .s-title span { color: var(--gold-bright); }
+    .s-title .volt { color: var(--volt); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      white-space: nowrap;
+    }
+    .chip.volt { border-color: rgba(198, 255, 0, 0.45); color: var(--volt); background: rgba(198, 255, 0, 0.07); }
+    .chip.gold { border-color: var(--border-gold); color: var(--gold-bright); background: rgba(201, 162, 63, 0.09); }
+    .chip.cyan { border-color: rgba(56, 189, 248, 0.4); color: var(--cyan); background: rgba(56, 189, 248, 0.07); }
+    .chip.coral { border-color: rgba(251, 113, 133, 0.45); color: var(--coral); background: rgba(251, 113, 133, 0.08); }
+
+    .s-body {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 12px 0 8px;
+    }
+
+    .s-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    /* Utility Grids & Cards */
+    .grid-2 { display: grid; gap: 16px; height: 100%; min-height: 0; }
+    .col-55-45 { grid-template-columns: 1.2fr 1fr; }
+    .col-60-40 { grid-template-columns: 1.45fr 1fr; }
+    .col-48-52 { grid-template-columns: 1fr 1.08fr; }
+    .col-50-50 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+
+    .card {
+      background: linear-gradient(160deg, rgba(17, 22, 34, 0.92), rgba(8, 10, 15, 0.96));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 0;
+    }
+    .card.gold { border-color: var(--border-gold); }
+    .card.volt { border-color: rgba(198, 255, 0, 0.36); }
+    .card.cyan { border-color: rgba(56, 189, 248, 0.34); }
+
+    .big-num {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 2.7vw, 36px);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--gold-bright);
+    }
+    .big-num.volt { color: var(--volt); }
+    .big-num.cyan { color: var(--cyan); }
+
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+    .sublabel {
+      font-size: 10.5px;
+      color: var(--muted);
+      line-height: 1.25;
+    }
+
+    /* Interactive Screenshot / Photo Frames */
+    .media-frame {
+      position: relative;
+      background: #07090d;
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+    }
+    .media-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .media-frame.contain img { object-fit: contain; background: #050608; }
+    .media-frame:hover img { transform: scale(1.02); }
+    .media-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(5, 6, 8, 0.86);
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold-bright);
+      backdrop-filter: blur(6px);
+    }
+    .media-tag.top { bottom: auto; top: 8px; }
+    .media-tag.volt { border-color: rgba(198,255,0,0.45); color: var(--volt); }
+
+    /* Browser Bar chrome */
+    .browser-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      background: rgba(12, 15, 22, 0.94);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 10px;
+      z-index: 2;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
+      color: var(--muted);
+    }
+    .dot-rgb { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+    .browser-frame { padding-top: 24px; }
+
+    /* Icon circle */
+    .ico-box {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(201, 162, 63, 0.14);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-bright);
+      flex-shrink: 0;
+    }
+    .ico-box.volt { background: rgba(198, 255, 0, 0.1); border-color: rgba(198, 255, 0, 0.4); color: var(--volt); }
+    .ico-box.cyan { background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.4); color: var(--cyan); }
+    .ico-box.coral { background: rgba(251, 113, 133, 0.1); border-color: rgba(251, 113, 133, 0.4); color: var(--coral); }
+
+    .row-ico { display: flex; align-items: center; gap: 10px; }
+
+    /* Progress bar row */
+    .bar-row { display: grid; grid-template-columns: 128px 1fr 44px; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .bar-track { height: 9px; border-radius: 999px; background: rgba(255,255,255,0.07); overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--gold), var(--gold-bright)); }
+    .bar-fill.volt { background: linear-gradient(90deg, #9ad900, var(--volt)); }
+    .bar-fill.cyan { background: linear-gradient(90deg, #0284c7, var(--cyan)); }
+
+    /* Slide 1 Hero Specific */
+    .cover-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 20px;
+      height: 100%;
+      min-height: 0;
+      align-items: center;
+    }
+    .journey-ribbon {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .step-pill {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 9px 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .step-pill:not(:last-child)::after {
+      content: "›";
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--volt);
+      font-weight: 800;
+      font-size: 16px;
+      z-index: 3;
+    }
+    .step-pill.active { border-color: rgba(198, 255, 0, 0.45); background: rgba(198, 255, 0, 0.05); }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(2, 3, 5, 0.92);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 86vh;
+      border-radius: 12px;
+      border: 1px solid var(--border-gold);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.9);
+      object-fit: contain;
+    }
+    .lightbox-cap {
+      position: fixed;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--gold-bright);
+      background: rgba(11, 14, 20, 0.92);
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border-gold);
+    }
+
+    /* Grid Overview Mode */
+    .deck.grid-mode {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(360px, 1fr));
+      gap: 18px;
+      padding: 72px 28px 36px;
+      scroll-snap-type: none;
+    }
+    .deck.grid-mode .slide-wrap { height: auto; padding: 0; }
+    .deck.grid-mode .slide { width: 100%; cursor: pointer; }
+
+    /* Print / PDF 16:9 Export */
+    @page {
+      size: 13.333in 7.5in;
+      margin: 0;
+    }
+    @media print {
+      html, body {
+        height: auto !important;
+        overflow: visible !important;
+        background: #050608 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .topbar, .dot-rail, .lightbox { display: none !important; }
+      .deck {
+        height: auto !important;
+        width: auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        scroll-snap-type: none !important;
+        display: block !important;
+      }
+      .slide-wrap {
+        width: 13.333in !important;
+        height: 7.5in !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        page-break-after: always !important;
+        break-after: page !important;
+      }
+      .slide-wrap:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .slide {
+        width: 13.333in !important;
+        height: 7.5in !important;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Top Toolbar -->
+  <header class="topbar">
+    <div class="brand-mini">
+      <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+      <span>CAPTOORA · PLAYBOOK INFOGRAFICO</span>
+    </div>
+    <div class="nav-controls">
+      <span class="slide-counter" id="slideCounter">01 / 10</span>
+      <button class="btn" type="button" id="prevBtn" title="Slide anterior (←)">← Ant</button>
+      <button class="btn" type="button" id="nextBtn" title="Siguiente slide (→)">Sig →</button>
+      <button class="btn gold" type="button" id="gridBtn" title="Vista mosaico (G)">Mosaico</button>
+      <button class="btn" type="button" id="fsBtn" title="Pantalla completa (F)">Fullscreen</button>
+      <button class="btn primary" type="button" onclick="window.print()">Exportar PDF 16:9</button>
+    </div>
+  </header>
+
+  <!-- Right Dot Navigation -->
+  <nav class="dot-rail" id="dotRail" aria-label="Navegación de diapositivas"></nav>
+
+  <!-- 10 Infographic Slides -->
+  <main class="deck" id="deck">
+
+    <!-- ==================== SLIDE 1: PORTADA ==================== -->
+    <section class="slide-wrap" data-slide="1">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">
+              <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="" style="height:18px;width:18px;object-fit:contain;">
+              CAPTOORA STUDIO · PLAYBOOK VISUAL MAESTRO
+            </div>
+            <h1 class="s-title">DE <span>CAPITANES CDMX</span> A MÁQUINA DE CRECIMIENTO <span class="volt">EN MONTERREY</span></h1>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <span class="chip gold">141 LEADS AUDITADOS</span>
+            <span class="chip volt">EMBUDO INVISIBLE + SKILL</span>
+          </div>
+        </div>
+
+        <div class="s-body">
+          <div class="cover-grid">
+            <div>
+              <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+                <img src="../assets/CAPTOORA_LOGO_TRANSPARENT.png" alt="Captoora Logo" style="height:54px;object-fit:contain;" />
+                <div>
+                  <div class="big-num volt">10 SLIDES · 0 MUROS DE TEXTO</div>
+                  <div class="sublabel" style="font-size:12px;">Investigación deportiva ➔ Scraping Apify ➔ Capturas Maps ➔ 10 Agentes ➔ Flujo Semanal</div>
+                </div>
+              </div>
+
+              <div class="grid-3" style="margin-bottom:12px;">
+                <div class="card gold">
+                  <div class="big-num">141</div>
+                  <div class="label">Google Maps + PDFs</div>
+                  <div class="sublabel">9 nichos MTY &amp; SPGG</div>
+                </div>
+                <div class="card volt">
+                  <div class="big-num volt">57</div>
+                  <div class="label">Kits Clubes Navidad</div>
+                  <div class="sublabel">114 láminas Opc A + B</div>
+                </div>
+                <div class="card cyan">
+                  <div class="big-num cyan">10</div>
+                  <div class="label">Agentes Nativos</div>
+                  <div class="sublabel">Cero Grokbot · $0 tokens locales</div>
+                </div>
+              </div>
+
+              <!-- 6-Stage Visual Journey -->
+              <div class="journey-ribbon">
+                <div class="step-pill">
+                  <div class="ico-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg></div>
+                  <div class="label">1 · CDMX</div>
+                  <div class="sublabel">Capitanes &amp; Imago7</div>
+                </div>
+                <div class="step-pill">
+                  <div class="ico-box cyan"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="3"/></svg></div>
+                  <div class="label">2 · Radar NL</div>
+                  <div class="sublabel">10 Rivales + Portal 3D</div>
+                </div>
+                <div class="step-pill">
+                  <div class="ico-box gold"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg></div>
+                  <div class="label">3 · Navidad</div>
+                  <div class="sublabel">-35% Acrílicos LED</div>
+                </div>
+                <div class="step-pill">
+                  <div class="ico-box volt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                  <div class="label">4 · Maps CDP</div>
+                  <div class="sublabel">141 Antes / Después</div>
+                </div>
+                <div class="step-pill">
+                  <div class="ico-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+                  <div class="label">5 · 10 Bots</div>
+                  <div class="sublabel">Marky · Lupe · Conan</div>
+                </div>
+                <div class="step-pill active">
+                  <div class="ico-box volt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg></div>
+                  <div class="label">6 · Skill + 7M</div>
+                  <div class="sublabel">Embudo Semanal</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="media-frame" data-zoom="../assets/hero-portrait.png" data-caption="Identidad Captoora Sports · Sony 1/2000s Global Shutter">
+              <img src="../assets/hero-portrait.png" alt="Atleta Captoora Sports" style="object-position:center top;" />
+              <span class="media-tag volt">1/2000s · ESTÉTICA DE ÉLITE MONTERREY</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>CAPTOORA STUDIO · JESÚS GUTIÉRREZ · CHUY@CAPTOORA.STUDIO</span>
+          <span>SLIDE 01 / 10 · CLICK EN CUALQUIER CAPTURA PARA ZOOM</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 2: ORIGEN CAPITANES CDMX ==================== -->
+    <section class="slide-wrap" data-slide="2">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE 01 · PUNTO DE PARTIDA REAL</div>
+            <h2 class="s-title">EL ORIGEN: <span>CAPITANES CDMX</span> &amp; BÁSQUETBOL VARONIL</h2>
+          </div>
+          <span class="chip gold">NBA G LEAGUE · ARENA CDMX</span>
+        </div>
+
+        <div class="s-body">
+          <div class="grid-2 col-55-45">
+            <div class="media-frame" data-zoom="../assets/presentation/capitanes_court_hero.jpg" data-caption="Duela Arena CDMX · Alta velocidad 1/2000s &amp; Luz Dramática">
+              <img src="../assets/presentation/capitanes_court_hero.jpg" alt="Duela Basquetbol Arena CDMX" />
+              <span class="media-tag top gold">TIP-OFF · ARENA CDMX</span>
+              <span class="media-tag volt">HALFTIME BLITZ · ENTREGA EN CANCHA 15 MIN</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px;justify-content:space-between;">
+              <div class="card gold">
+                <div class="row-ico" style="margin-bottom:8px;">
+                  <div class="ico-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                  <div>
+                    <div class="label">ECOSISTEMA DETECTADO EN DUELA</div>
+                    <div class="sublabel">4 puertas de entrada mapeadas desde día 1</div>
+                  </div>
+                </div>
+                <div class="grid-2 col-50-50" style="gap:8px;height:auto;">
+                  <div class="card" style="padding:8px 10px;">
+                    <div class="label" style="color:var(--gold-bright);">IMAGO7</div>
+                    <div class="sublabel">Cobertura oficial · Shadowing</div>
+                  </div>
+                  <div class="card" style="padding:8px 10px;">
+                    <div class="label" style="color:var(--gold-bright);">GETTY / NBA</div>
+                    <div class="sublabel">Feed internacional G League</div>
+                  </div>
+                  <div class="card" style="padding:8px 10px;">
+                    <div class="label" style="color:var(--cyan);">ZIGNIA LIVE</div>
+                    <div class="sublabel">Acreditación venue Arena CDMX</div>
+                  </div>
+                  <div class="card" style="padding:8px 10px;">
+                    <div class="label" style="color:var(--volt);">ADO · CALIENTE</div>
+                    <div class="sublabel">Marcas BTL patrocinadoras</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SVG Pivot Arrow -->
+              <div class="card volt" style="padding:12px 14px;">
+                <svg viewBox="0 0 460 112" width="100%" height="106" aria-label="Pivote estratégico a Monterrey">
+                  <defs>
+                    <linearGradient id="gArrow" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#c9a23f"/>
+                      <stop offset="100%" stop-color="#c6ff00"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="4" y="12" width="136" height="86" rx="12" fill="#0d111a" stroke="rgba(201,162,63,0.45)"/>
+                  <text x="72" y="44" text-anchor="middle" fill="#ecd28a" font-size="12" font-weight="700" font-family="Inter,sans-serif">SOLO PRENSA</text>
+                  <text x="72" y="64" text-anchor="middle" fill="#98a2b3" font-size="10.5" font-family="Inter,sans-serif">Ticket cerrado</text>
+                  <text x="72" y="80" text-anchor="middle" fill="#98a2b3" font-size="10.5" font-family="Inter,sans-serif">Acreditación lenta</text>
+
+                  <path d="M150 55 L196 55" stroke="url(#gArrow)" stroke-width="4" stroke-linecap="round"/>
+                  <polygon points="194,47 210,55 194,63" fill="#c6ff00"/>
+                  <text x="178" y="39" text-anchor="middle" fill="#c6ff00" font-size="9.5" font-weight="700" font-family="JetBrains Mono,monospace">PIVOTE</text>
+
+                  <rect x="216" y="8" width="240" height="94" rx="12" fill="rgba(198,255,0,0.08)" stroke="rgba(198,255,0,0.55)"/>
+                  <text x="336" y="34" text-anchor="middle" fill="#c6ff00" font-size="13" font-weight="800" font-family="Inter,sans-serif">MOTOR B2B NUEVO LEÓN</text>
+                  <text x="336" y="55" text-anchor="middle" fill="#f5f4ef" font-size="11" font-weight="600" font-family="Inter,sans-serif">Mismo ADN 1/2000s ➔ Dinero Rápido</text>
+                  <text x="336" y="74" text-anchor="middle" fill="#ecd28a" font-size="10.5" font-family="JetBrains Mono,monospace">Pádel · Danza · Gyms · Clínicas</text>
+                  <text x="336" y="90" text-anchor="middle" fill="#34d399" font-size="10.5" font-weight="700" font-family="JetBrains Mono,monospace">MARGEN 68%–93% · PAGO 50/50</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>FUENTE: AGENCIAS_Y_PRACTICAS.MD · SCHEDULE CAP-001..CAP-007</span>
+          <span>SLIDE 02 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 3: RADAR NL & PORTAL 3D ==================== -->
+    <section class="slide-wrap" data-slide="3">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE 02 · INTELIGENCIA COMPETITIVA Y PORTAL DE AUTORIDAD</div>
+            <h2 class="s-title">RADAR <span>10 COMPETIDORES NL</span> &amp; PORTAL 3D EN VIVO</h2>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center;">
+            <span style="background:rgba(245,244,239,0.92);padding:3px 7px;border-radius:7px;display:inline-flex;align-items:center;"><img src="../assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos" style="height:22px;object-fit:contain;" /></span>
+            <img src="../assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Tigres" style="height:24px;object-fit:contain;" />
+            <img src="../assets/logos_partnerships/farmasi_transparent.png" alt="Farmasi" style="height:20px;object-fit:contain;" />
+            <span class="chip cyan">78 FOTOS AUTORIZADAS</span>
+          </div>
+        </div>
+
+        <div class="s-body">
+          <div class="grid-2 col-60-40">
+            <div class="media-frame browser-frame contain" data-zoom="../assets/presentation/screen_portal_3d.png" data-caption="Portal Captoora Sports · Túnel Scrolltide 3D + Galerías">
+              <div class="browser-bar">
+                <span class="dot-rgb" style="background:#ef4444"></span>
+                <span class="dot-rgb" style="background:#f59e0b"></span>
+                <span class="dot-rgb" style="background:#10b981"></span>
+                <span style="margin-left:8px;">captoora_sports.html · Túnel 3D Scrolltide · 78 Signature Moments</span>
+              </div>
+              <img src="../assets/presentation/screen_portal_3d.png" alt="Pantallazo Portal 3D Captoora" />
+              <span class="media-tag volt">PANTALLAZO REAL · /CAPTOORA_SPORTS.HTML</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px;justify-content:space-between;">
+              <div class="card gold">
+                <div class="label" style="color:var(--gold-bright);margin-bottom:8px;">BENCHMARK VS. 10 RIVALES NUEVO LEÓN</div>
+                <div class="bar-row">
+                  <span class="sublabel" style="color:var(--text);">Imago7 / Mexsport</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:45%;opacity:.6"></div></div>
+                  <span class="sublabel" style="text-align:right;">Prensa</span>
+                </div>
+                <div class="bar-row">
+                  <span class="sublabel" style="color:var(--text);">Jam / Straffon / MFL</span>
+                  <div class="bar-track"><div class="bar-fill cyan" style="width:58%;opacity:.75"></div></div>
+                  <span class="sublabel" style="text-align:right;">Drive 72h</span>
+                </div>
+                <div class="bar-row">
+                  <span class="sublabel" style="color:var(--text);">BOOX / OEE / Abner</span>
+                  <div class="bar-track"><div class="bar-fill cyan" style="width:65%;opacity:.8"></div></div>
+                  <span class="sublabel" style="text-align:right;">B2B Lento</span>
+                </div>
+                <div class="bar-row">
+                  <span class="sublabel" style="color:var(--text);">Emotions / FotoSport</span>
+                  <div class="bar-track"><div class="bar-fill" style="width:52%;opacity:.7"></div></div>
+                  <span class="sublabel" style="text-align:right;">Masivo</span>
+                </div>
+                <div class="bar-row" style="margin-bottom:0;">
+                  <span class="label" style="color:var(--volt);">CAPTOORA SPORTS</span>
+                  <div class="bar-track"><div class="bar-fill volt" style="width:100%;"></div></div>
+                  <span class="label" style="color:var(--volt);text-align:right;">100%</span>
+                </div>
+              </div>
+
+              <div class="grid-3">
+                <div class="card gold" style="padding:10px;">
+                  <div class="big-num" style="font-size:26px;">1/2000<span style="font-size:18px;font-family:var(--font-mono);">s</span></div>
+                  <div class="label">Global Shutter</div>
+                  <div class="sublabel">Cero barrido en acción</div>
+                </div>
+                <div class="card cyan" style="padding:10px;">
+                  <div class="big-num cyan">15m</div>
+                  <div class="label">Halftime Blitz</div>
+                  <div class="sublabel">Entrega digital mismo día</div>
+                </div>
+                <div class="card volt" style="padding:10px;">
+                  <div class="big-num volt">78</div>
+                  <div class="label">Portfolio 3D</div>
+                  <div class="sublabel">Coca-Cola · Tec · Tigres</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>DICTAMEN PERICIAL NL (10 COMPETIDORES) · 68%–93% MARGEN</span>
+          <span>SLIDE 03 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 4: NAVIDAD 2026 & ACRÍLICOS LED ==================== -->
+    <section class="slide-wrap" data-slide="4">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE 03 · OFERTA AUTOFINANCIABLE SIN FRICCIÓN</div>
+            <h2 class="s-title">NAVIDAD 2026 <span class="volt">(-35%)</span> · ACRÍLICOS LED &amp; WHITE-GLOVE</h2>
+          </div>
+          <span class="chip volt">57 CLUBES · 114 MOCKUPS PERSONALIZADOS</span>
+        </div>
+
+        <div class="s-body">
+          <div style="display:grid;grid-template-columns:0.92fr 1.16fr 0.92fr;gap:14px;height:100%;min-height:0;">
+            <!-- Left Real Mockup -->
+            <div class="media-frame contain" data-zoom="../assets/mockups/clubs/padel_gm/padel_gm_OpcB_EditorialLED_2026.png" data-caption="Padel GM · Opción B Editorial + Trofeo Acrílico LED Patrocinado">
+              <img src="../assets/mockups/clubs/padel_gm/padel_gm_OpcB_EditorialLED_2026.png" alt="Mockup Padel GM LED" />
+              <span class="media-tag volt">PÁDEL · TORNEO DEL PAVO LED</span>
+            </div>
+
+            <!-- Center Iconographic Mechanics -->
+            <div style="display:flex;flex-direction:column;justify-content:space-between;gap:10px;">
+              <div class="card gold">
+                <div class="row-ico">
+                  <div class="ico-box volt"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg></div>
+                  <div>
+                    <div class="label" style="color:var(--volt);">PIEZA ESCULTÓRICA ILUMINADA</div>
+                    <div class="sublabel">Acrílico óptico láser + nogal LED en escritorio 5–10 años = anuncio perpetuo</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card cyan">
+                <div class="row-ico">
+                  <div class="ico-box cyan"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+                  <div>
+                    <div class="label" style="color:var(--cyan);">CERO COSTO AL CLUB / ACADEMIA</div>
+                    <div class="sublabel">Pádel: lo financia patrocinador · Danza: preventa voluntaria White-Glove</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card gold">
+                <div class="label" style="color:var(--gold-bright);margin-bottom:8px;">3 OPCIONES MODULARES · REGLA SLA REAL</div>
+                <div class="grid-3" style="gap:8px;">
+                  <div class="card" style="padding:8px;text-align:center;">
+                    <div class="sublabel">OPC 1 · DIGITAL</div>
+                    <div class="big-num" style="font-size:18px;">$3,185</div>
+                    <div class="sublabel" style="color:var(--volt);">Mismo Día</div>
+                  </div>
+                  <div class="card volt" style="padding:8px;text-align:center;">
+                    <div class="sublabel">OPC 2 · MARCOS</div>
+                    <div class="big-num volt" style="font-size:18px;">$5,135</div>
+                    <div class="sublabel">Preventa / Print</div>
+                  </div>
+                  <div class="card gold" style="padding:8px;text-align:center;">
+                    <div class="sublabel">OPC 3 · SUITE LED</div>
+                    <div class="big-num" style="font-size:18px;">$7,475</div>
+                    <div class="sublabel" style="color:var(--gold-bright);">Taller 3–5d</div>
+                  </div>
+                </div>
+                <div class="sublabel" style="margin-top:8px;text-align:center;color:var(--gold-bright);">
+                  ⏱ Pago de físicos diferible a 2do momento · Entrega digital inmediata el mismo día
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Real Mockup -->
+            <div class="media-frame contain" data-zoom="../assets/mockups/clubs/the_movement_dance_project/the_movement_dance_project_OpcA_Navidad2026.png" data-caption="The Movement Dance Project · Acrílico LED Gala Navideña">
+              <img src="../assets/mockups/clubs/the_movement_dance_project/the_movement_dance_project_OpcA_Navidad2026.png" alt="Mockup Danza Navidad LED" />
+              <span class="media-tag gold">DANZA · GALA WHITE-GLOVE</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>57 CLUBES (OPC A + OPC B) · SIN CLONACIÓN CUATRO PADEL · MARGEN 68–93%</span>
+          <span>SLIDE 04 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 5: FÁBRICA GOOGLE MAPS 141/141 ==================== -->
+    <section class="slide-wrap" data-slide="5">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE 04 · SCRAPING APIFY + AUDITORÍA VISUAL CHROME CDP</div>
+            <h2 class="s-title">FÁBRICA <span class="volt">141/141</span> · LÁMINAS ANTES VS. DESPUÉS GOOGLE MAPS</h2>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <span class="chip coral">68 DEFICIENTES</span>
+            <span class="chip gold">24 SIN RECLAMAR · 19 STREET VIEW</span>
+          </div>
+        </div>
+
+        <div class="s-body">
+          <div class="grid-2 col-60-40">
+            <!-- 2x2 Real Antes/Despues Mockups -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;height:100%;min-height:0;">
+              <div class="media-frame contain" data-zoom="../assets/mockups/small_biz/11_11_fitness_top_obispado_AntesDespues_2027.png" data-caption="11:11 Fitness TOP Obispado · Con Logo + TotalPass">
+                <img src="../assets/mockups/small_biz/11_11_fitness_top_obispado_AntesDespues_2027.png" alt="11:11 Fitness Antes Despues" />
+                <span class="media-tag volt">FITNESS · 11:11 OBISPADO</span>
+              </div>
+              <div class="media-frame contain" data-zoom="../assets/mockups/small_biz/reino_encantado_AntesDespues_2027.png" data-caption="Reino Encantado · Guardería / Kinder San Jerónimo">
+                <img src="../assets/mockups/small_biz/reino_encantado_AntesDespues_2027.png" alt="Reino Encantado Antes Despues" />
+                <span class="media-tag gold">KINDER · REINO ENCANTADO</span>
+              </div>
+              <div class="media-frame contain" data-zoom="../assets/mockups/small_biz/dr_cesar_garza_ponce_consultorio_dental_AntesDespues_2027.png" data-caption="Dr. César Garza Ponce · Clínica Dental San Jerónimo">
+                <img src="../assets/mockups/small_biz/dr_cesar_garza_ponce_consultorio_dental_AntesDespues_2027.png" alt="Dental Antes Despues" />
+                <span class="media-tag cyan">CLÍNICA · DR. GARZA PONCE</span>
+              </div>
+              <div class="media-frame contain" data-zoom="../assets/mockups/small_biz/alchemy_coffee_lab_AntesDespues_2027.png" data-caption="Alchemy Coffee Lab · Gastronomía & Menú Maps">
+                <img src="../assets/mockups/small_biz/alchemy_coffee_lab_AntesDespues_2027.png" alt="Alchemy Coffee Antes Despues" />
+                <span class="media-tag gold">CAFÉ · ALCHEMY COFFEE LAB</span>
+              </div>
+            </div>
+
+            <!-- Right Funnel + 9 Niches Verified Bars -->
+            <div style="display:flex;flex-direction:column;gap:10px;justify-content:space-between;">
+              <div class="grid-3">
+                <div class="card gold" style="padding:9px;text-align:center;">
+                  <div class="big-num">141</div>
+                  <div class="sublabel">Capturas CDP</div>
+                </div>
+                <div class="card coral" style="padding:9px;text-align:center;border-color:rgba(251,113,133,0.4);">
+                  <div class="big-num" style="color:var(--coral);">68</div>
+                  <div class="sublabel">Dolor Maps</div>
+                </div>
+                <div class="card volt" style="padding:9px;text-align:center;">
+                  <div class="big-num volt">141</div>
+                  <div class="sublabel">PNG + PDFs</div>
+                </div>
+              </div>
+
+              <div class="card gold" style="flex:1;justify-content:space-around;">
+                <div class="label" style="color:var(--gold-bright);margin-bottom:4px;">9 NICHOS VERIFICADOS EN MTY &amp; SPGG (TOTAL: 141)</div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Fitness &amp; CrossFit</span><div class="bar-track"><div class="bar-fill volt" style="width:100%"></div></div><span class="label" style="text-align:right">48</span></div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Baile &amp; Danza</span><div class="bar-track"><div class="bar-fill" style="width:42%"></div></div><span class="label" style="text-align:right">20</span></div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Clínicas &amp; Dental</span><div class="bar-track"><div class="bar-fill cyan" style="width:31%"></div></div><span class="label" style="text-align:right">15</span></div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Colegios Élite</span><div class="bar-track"><div class="bar-fill" style="width:29%"></div></div><span class="label" style="text-align:right">14</span></div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Pádel &amp; Raqueta</span><div class="bar-track"><div class="bar-fill volt" style="width:27%"></div></div><span class="label" style="text-align:right">13</span></div>
+                <div class="bar-row"><span class="sublabel" style="color:var(--text);">Small Biz &amp; Cafés</span><div class="bar-track"><div class="bar-fill cyan" style="width:42%"></div></div><span class="label" style="text-align:right">20</span></div>
+                <div class="bar-row" style="margin-bottom:0;"><span class="sublabel" style="color:var(--text);">Alto Rend. &amp; Kinders</span><div class="bar-track"><div class="bar-fill" style="width:23%"></div></div><span class="label" style="text-align:right">11</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>APIFY COMPASS~CRAWLER-GOOGLE-PLACES + CHROME CDP + WEASYPRINT · TICKETS -35%: $3,900 · $6,890 · $10,400 MXN</span>
+          <span>SLIDE 05 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 6: 10 AGENTES & ZERO GROKBOT ==================== -->
+    <section class="slide-wrap" data-slide="6">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE 05 · ARQUITECTURA DE AGENTES + EXPLOTACIÓN DE SUSCRIPCIONES</div>
+            <h2 class="s-title"><span class="volt">CERO GROKBOT</span> · EQUIPO NATIVO DE 10 AGENTES + 2X GOOGLE PRO</h2>
+          </div>
+          <span class="chip volt">MARKY · LUPE · CONAN REVIVIDOS EN LOCALHOST</span>
+        </div>
+
+        <div class="s-body">
+          <div class="grid-2 col-55-45">
+            <div class="media-frame browser-frame contain" data-zoom="../assets/presentation/screen_studio_hq_10agentes.png" data-caption="Estudio Captoora HQ · Mapa 2D Interactivo de 10 Agentes">
+              <div class="browser-bar">
+                <span class="dot-rgb" style="background:#ef4444"></span>
+                <span class="dot-rgb" style="background:#f59e0b"></span>
+                <span class="dot-rgb" style="background:#10b981"></span>
+                <span style="margin-left:8px;">dashboard/index.html#agentes-ia · Modo Videojuego + Organigrama</span>
+              </div>
+              <img src="../assets/presentation/screen_studio_hq_10agentes.png" alt="Centro de Mando 10 Agentes" />
+              <span class="media-tag volt">GROKBOT 0% · $0 CUOTA EXTERNA</span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px;justify-content:space-between;">
+              <!-- SVG Compact Org Chart -->
+              <div class="card gold" style="padding:10px 12px;">
+                <svg viewBox="0 0 460 158" width="100%" height="148" aria-label="Organigrama 10 Agentes">
+                  <rect x="135" y="4" width="190" height="34" rx="8" fill="rgba(201,162,63,0.18)" stroke="#c9a23f"/>
+                  <text x="230" y="25" text-anchor="middle" fill="#ecd28a" font-size="11.5" font-weight="800" font-family="Inter,sans-serif">#1 CHIEF OF STAFF</text>
+                  <path d="M230 38 L230 52 M85 52 L365 52 M85 52 L85 62 M230 52 L230 62 M365 52 L365 62" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+
+                  <rect x="6" y="62" width="158" height="88" rx="10" fill="#0d111a" stroke="rgba(56,189,248,0.4)"/>
+                  <text x="85" y="80" text-anchor="middle" fill="#38bdf8" font-size="10.5" font-weight="800">OPS &amp; VENTAS (#2–#7)</text>
+                  <text x="85" y="97" text-anchor="middle" fill="#f5f4ef" font-size="9.5">#2 Scouting · #3 Embudo</text>
+                  <text x="85" y="113" text-anchor="middle" fill="#f5f4ef" font-size="9.5">#4 Redes · #5 Ventas 72h</text>
+                  <text x="85" y="129" text-anchor="middle" fill="#f5f4ef" font-size="9.5">#6 Finanzas · #7 Ops/Legal</text>
+
+                  <rect x="174" y="62" width="128" height="88" rx="10" fill="rgba(198,255,0,0.08)" stroke="rgba(198,255,0,0.55)"/>
+                  <text x="238" y="84" text-anchor="middle" fill="#c6ff00" font-size="11" font-weight="800">#8 MARKY</text>
+                  <text x="238" y="102" text-anchor="middle" fill="#f5f4ef" font-size="9.5">Dir. Marketing</text>
+                  <text x="238" y="120" text-anchor="middle" fill="#ecd28a" font-size="9">2x Google AI Pro</text>
+                  <text x="238" y="136" text-anchor="middle" fill="#34d399" font-size="9">Explota Stack Mensual</text>
+
+                  <rect x="312" y="62" width="144" height="40" rx="8" fill="#0d111a" stroke="rgba(201,162,63,0.45)"/>
+                  <text x="384" y="80" text-anchor="middle" fill="#ecd28a" font-size="10.5" font-weight="800">#9 LUPE</text>
+                  <text x="384" y="94" text-anchor="middle" fill="#98a2b3" font-size="9">Meta · TikTok · LI · DMs</text>
+
+                  <rect x="312" y="110" width="144" height="40" rx="8" fill="#0d111a" stroke="rgba(198,255,0,0.45)"/>
+                  <text x="384" y="128" text-anchor="middle" fill="#c6ff00" font-size="10.5" font-weight="800">#10 CONAN</text>
+                  <text x="384" y="142" text-anchor="middle" fill="#98a2b3" font-size="9">OpusClip · Captions · OBS</text>
+                </svg>
+              </div>
+
+              <!-- Subscription Stack Chips -->
+              <div class="grid-4" style="gap:8px;">
+                <div class="card volt" style="padding:8px;"><div class="label" style="color:var(--volt);">AI Pro #1</div><div class="sublabel">$395 · Código/B2B</div></div>
+                <div class="card volt" style="padding:8px;"><div class="label" style="color:var(--volt);">AI Pro #2</div><div class="sublabel">$99 · Veo/Whisk</div></div>
+                <div class="card coral" style="padding:8px;border-color:rgba(251,113,133,0.45);"><div class="label" style="color:var(--coral);">OpusClip Pro</div><div class="sublabel">25–30 Clips ya</div></div>
+                <div class="card gold" style="padding:8px;"><div class="label">Captions + CapCut</div><div class="sublabel">Reels 9:16</div></div>
+                <div class="card gold" style="padding:8px;"><div class="label">Canva Mac</div><div class="sublabel">Carrusel 4:5</div></div>
+                <div class="card cyan" style="padding:8px;"><div class="label" style="color:var(--cyan);">Aftershoot+Evoto</div><div class="sublabel">Cancha + Retoque</div></div>
+                <div class="card cyan" style="padding:8px;"><div class="label" style="color:var(--cyan);">Meta Muse</div><div class="sublabel">Brief en móvil</div></div>
+                <div class="card" style="padding:8px;"><div class="label" style="color:var(--emerald);">Motor :8765</div><div class="sublabel">$0 tokens locales</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>SIN CUOTAS DE GROKBOT · CARRILES A (PONCHO) + B (YARI) + C (PYTHON LOCAL)</span>
+          <span>SLIDE 06 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 7: EL EMBUDO INVISIBLE MOTOR DUAL ==================== -->
+    <section class="slide-wrap" data-slide="7">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">ARQUITECTURA ESTRATÉGICA · PROSPECTOS QUE PIDEN CONTRATARTE</div>
+            <h2 class="s-title">EL <span class="volt">EMBUDO INVISIBLE</span>: MOTOR DUAL (<span style="color:var(--cyan);">PUSH QUIRÚRGICO</span> + <span>PULL OMNICANAL</span>)</h2>
+          </div>
+          <span class="chip volt">DOBLE IMPACTO · CERO SENSACIÓN DE VENTA FRÍA</span>
+        </div>
+
+        <div class="s-body">
+          <!-- Full Slide Infographic SVG Dual-Lane Flow -->
+          <svg viewBox="0 0 1180 470" width="100%" height="100%" aria-label="Diagrama Embudo Invisible Dual Push y Pull">
+            <defs>
+              <linearGradient id="pushGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.06"/>
+              </linearGradient>
+              <linearGradient id="pullGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c9a23f" stop-opacity="0.22"/>
+                <stop offset="100%" stop-color="#c6ff00" stop-opacity="0.16"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Lane 1 Background: PUSH -->
+            <rect x="8" y="8" width="840" height="204" rx="18" fill="url(#pushGrad)" stroke="rgba(56,189,248,0.45)" stroke-width="1.5"/>
+            <text x="30" y="38" fill="#38bdf8" font-size="13" font-weight="800" font-family="JetBrains Mono,monospace">CARRIL A · PUSH QUIRÚRGICO ("CONSIGO CLIENTE CON EVIDENCIA VISUAL")</text>
+
+            <!-- Push Boxes -->
+            <g transform="translate(26,56)">
+              <rect width="142" height="132" rx="12" fill="#090d14" stroke="rgba(56,189,248,0.4)"/>
+              <circle cx="30" cy="30" r="15" fill="rgba(56,189,248,0.16)"/>
+              <text x="30" y="35" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">1</text>
+              <text x="16" y="68" fill="#f5f4ef" font-size="13" font-weight="700">APIFY SCRAPE</text>
+              <text x="16" y="88" fill="#98a2b3" font-size="11">50–100 leads</text>
+              <text x="16" y="104" fill="#98a2b3" font-size="11">MTY / SPGG</text>
+              <text x="16" y="121" fill="#38bdf8" font-size="10" font-family="JetBrains Mono,monospace">google-places</text>
+            </g>
+            <path d="M174 122 L192 122" stroke="#38bdf8" stroke-width="3"/><polygon points="189,116 201,122 189,128" fill="#38bdf8"/>
+
+            <g transform="translate(204,56)">
+              <rect width="142" height="132" rx="12" fill="#090d14" stroke="rgba(56,189,248,0.4)"/>
+              <circle cx="30" cy="30" r="15" fill="rgba(56,189,248,0.16)"/>
+              <text x="30" y="35" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">2</text>
+              <text x="16" y="68" fill="#f5f4ef" font-size="13" font-weight="700">AUDITORÍA CDP</text>
+              <text x="16" y="88" fill="#fb7185" font-size="11">Street View / 0 fotos</text>
+              <text x="16" y="104" fill="#fb7185" font-size="11">Sin reclamar ficha</text>
+              <text x="16" y="121" fill="#38bdf8" font-size="10" font-family="JetBrains Mono,monospace">Score visual</text>
+            </g>
+            <path d="M352 122 L370 122" stroke="#38bdf8" stroke-width="3"/><polygon points="367,116 379,122 367,128" fill="#38bdf8"/>
+
+            <g transform="translate(382,56)">
+              <rect width="142" height="132" rx="12" fill="#090d14" stroke="rgba(201,162,63,0.55)"/>
+              <circle cx="30" cy="30" r="15" fill="rgba(201,162,63,0.18)"/>
+              <text x="30" y="35" text-anchor="middle" fill="#ecd28a" font-size="13" font-weight="800">3</text>
+              <text x="16" y="68" fill="#ecd28a" font-size="13" font-weight="700">REGALO ESPEJO</text>
+              <text x="16" y="88" fill="#f5f4ef" font-size="11">Antes/Después PNG</text>
+              <text x="16" y="104" fill="#f5f4ef" font-size="11">+ PDF 1 pág o LED</text>
+              <text x="16" y="121" fill="#c9a23f" font-size="10" font-family="JetBrains Mono,monospace">mockups.py</text>
+            </g>
+            <path d="M530 122 L548 122" stroke="#38bdf8" stroke-width="3"/><polygon points="545,116 557,122 545,128" fill="#38bdf8"/>
+
+            <g transform="translate(560,56)">
+              <rect width="268" height="132" rx="12" fill="#090d14" stroke="rgba(198,255,0,0.45)"/>
+              <circle cx="30" cy="30" r="15" fill="rgba(198,255,0,0.16)"/>
+              <text x="30" y="35" text-anchor="middle" fill="#c6ff00" font-size="13" font-weight="800">4</text>
+              <text x="54" y="35" fill="#c6ff00" font-size="12" font-weight="800">SECUENCIA SEGURA (SIN SPAM)</text>
+              <text x="16" y="64" fill="#f5f4ef" font-size="11.5" font-weight="700">Día 1: Zoho chuy@ + WhatsApp c/ Imagen</text>
+              <text x="16" y="84" fill="#98a2b3" font-size="11">Topes sanos: 20–30 mails + 15–20 WA/día</text>
+              <text x="16" y="104" fill="#f5f4ef" font-size="11.5">Día 2 (48h) + Día 4 (72h): Audio / Oferta -35%</text>
+              <text x="16" y="122" fill="#34d399" font-size="10" font-family="JetBrains Mono,monospace">Último Trigger Humano + GHL CRM</text>
+            </g>
+
+            <!-- Lane 2 Background: PULL EMBUDO INVISIBLE -->
+            <rect x="8" y="232" width="840" height="228" rx="18" fill="url(#pullGrad)" stroke="rgba(198,255,0,0.5)" stroke-width="1.5"/>
+            <text x="30" y="262" fill="#c6ff00" font-size="13" font-weight="800" font-family="JetBrains Mono,monospace">CARRIL B · PULL OMNICANAL ("LO VEO EN TODOS LADOS · LO QUIERO YA")</text>
+
+            <g transform="translate(26,280)">
+              <rect width="186" height="160" rx="12" fill="#090d14" stroke="rgba(201,162,63,0.45)"/>
+              <text x="16" y="30" fill="#ecd28a" font-size="13" font-weight="800">OBS + CAPTIONS</text>
+              <text x="16" y="54" fill="#f5f4ef" font-size="11.5">3 Videos Pilar / Sem</text>
+              <text x="16" y="74" fill="#98a2b3" font-size="11">• Teardown Google Maps</text>
+              <text x="16" y="92" fill="#98a2b3" font-size="11">• Encendido Acrílico LED</text>
+              <text x="16" y="110" fill="#98a2b3" font-size="11">• Retrato 1/2000s / Biogen</text>
+              <text x="16" y="142" fill="#c6ff00" font-size="10.5" font-family="JetBrains Mono,monospace">30 MIN GRABACIÓN</text>
+            </g>
+            <path d="M218 360 L234 360" stroke="#c6ff00" stroke-width="3"/><polygon points="231,354 243,360 231,366" fill="#c6ff00"/>
+
+            <g transform="translate(246,280)">
+              <rect width="186" height="160" rx="12" fill="#090d14" stroke="rgba(198,255,0,0.5)"/>
+              <text x="16" y="30" fill="#c6ff00" font-size="13" font-weight="800">OPUSCLIP ➔ 20 CLIPS</text>
+              <text x="16" y="54" fill="#f5f4ef" font-size="11.5">Conan + Lupe Reparten</text>
+              <text x="16" y="74" fill="#98a2b3" font-size="11">• Instagram Reels + Stories</text>
+              <text x="16" y="92" fill="#98a2b3" font-size="11">• TikTok + YouTube Shorts</text>
+              <text x="16" y="110" fill="#98a2b3" font-size="11">• LinkedIn Carrusel 4:5</text>
+              <text x="16" y="142" fill="#ecd28a" font-size="10.5" font-family="JetBrains Mono,monospace">2–3 PIEZAS DIARIAS</text>
+            </g>
+            <path d="M438 360 L454 360" stroke="#c6ff00" stroke-width="3"/><polygon points="451,354 463,360 451,366" fill="#c6ff00"/>
+
+            <g transform="translate(466,280)">
+              <rect width="176" height="160" rx="12" fill="#090d14" stroke="rgba(201,162,63,0.45)"/>
+              <text x="16" y="30" fill="#ecd28a" font-size="13" font-weight="800">SEO #1 + PORTAL 3D</text>
+              <text x="16" y="54" fill="#f5f4ef" font-size="11.5">Prueba Irrefutable</text>
+              <text x="16" y="74" fill="#98a2b3" font-size="11">• Búsqueda "fotógrafo MTY"</text>
+              <text x="16" y="92" fill="#98a2b3" font-size="11">• Google Maps Caso Éxito</text>
+              <text x="16" y="110" fill="#98a2b3" font-size="11">• Retargeting Visual</text>
+              <text x="16" y="142" fill="#38bdf8" font-size="10.5" font-family="JetBrains Mono,monospace">CAPTOORA.STUDIO</text>
+            </g>
+            <path d="M648 360 L664 360" stroke="#c6ff00" stroke-width="3"/><polygon points="661,354 673,360 661,366" fill="#c6ff00"/>
+
+            <g transform="translate(676,280)">
+              <rect width="152" height="160" rx="12" fill="#090d14" stroke="rgba(198,255,0,0.5)"/>
+              <text x="14" y="30" fill="#c6ff00" font-size="12.5" font-weight="800">BUCLE FÍSICO</text>
+              <text x="14" y="54" fill="#f5f4ef" font-size="11.5">Acrílico LED en</text>
+              <text x="14" y="72" fill="#f5f4ef" font-size="11.5">IG Stories del club</text>
+              <text x="14" y="96" fill="#ecd28a" font-size="11">"¿Quién te hizo ese</text>
+              <text x="14" y="112" fill="#ecd28a" font-size="11">trofeo y las fotos?"</text>
+              <text x="14" y="142" fill="#34d399" font-size="10" font-family="JetBrains Mono,monospace">VIRALIDAD INBOUND</text>
+            </g>
+
+            <!-- Convergence Bridge to Right -->
+            <path d="M848 112 C900 112, 888 226, 922 232" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+            <path d="M848 354 C900 354, 888 242, 922 236" fill="none" stroke="#c6ff00" stroke-width="3.5"/>
+            <polygon points="916,225 934,234 916,243" fill="#c6ff00"/>
+
+            <!-- Right Conversion Box -->
+            <rect x="938" y="32" width="234" height="404" rx="20" fill="#0b1018" stroke="#c6ff00" stroke-width="2"/>
+            <text x="1055" y="72" text-anchor="middle" fill="#c6ff00" font-size="13" font-weight="800" font-family="JetBrains Mono,monospace">CONVERGENCIA</text>
+            <text x="1055" y="102" text-anchor="middle" fill="#f5f4ef" font-size="20" font-weight="800" font-family="Cinzel,serif">EL CLIENTE</text>
+            <text x="1055" y="128" text-anchor="middle" fill="#ecd28a" font-size="20" font-weight="800" font-family="Cinzel,serif">TE BUSCA</text>
+
+            <rect x="958" y="152" width="194" height="62" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(201,162,63,0.4)"/>
+            <text x="1055" y="177" text-anchor="middle" fill="#ecd28a" font-size="12" font-weight="700">"Lo vi en Reels y Maps,</text>
+            <text x="1055" y="196" text-anchor="middle" fill="#ecd28a" font-size="12" font-weight="700">¿cuándo pueden venir?"</text>
+
+            <rect x="958" y="232" width="194" height="58" rx="12" fill="rgba(56,189,248,0.1)" stroke="rgba(56,189,248,0.45)"/>
+            <text x="1055" y="257" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">LINK CALENDLY 15M</text>
+            <text x="1055" y="275" text-anchor="middle" fill="#f5f4ef" font-size="11">Agenda Directa + KYC</text>
+
+            <rect x="958" y="308" width="194" height="62" rx="12" fill="rgba(198,255,0,0.12)" stroke="#c6ff00"/>
+            <text x="1055" y="335" text-anchor="middle" fill="#c6ff00" font-size="15" font-weight="800">ANTICIPO 50%</text>
+            <text x="1055" y="355" text-anchor="middle" fill="#f5f4ef" font-size="11">50% Entrega · Factura CFDI</text>
+
+            <text x="1055" y="408" text-anchor="middle" fill="#98a2b3" font-size="10.5" font-family="JetBrains Mono,monospace">REPLICABLE SEMANA A SEMANA</text>
+          </svg>
+        </div>
+
+        <div class="s-foot">
+          <span>EMBUDO INVISIBLE = PULL (CONTENIDO/PRUEBA) + PUSH (MOCKUP PERSONALIZADO EN SU INBOX)</span>
+          <span>SLIDE 07 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 8: CALENDARIO HORARIO + PROYECCIÓN ==================== -->
+    <section class="slide-wrap" data-slide="8">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">IMPLEMENTACIÓN · HORARIOS EXACTOS CST MONTERREY &amp; CURVA DE RESPUESTA</div>
+            <h2 class="s-title">RELOJ SEMANAL <span>POR HORA</span> &amp; <span class="volt">PROYECCIÓN DE RESPUESTAS</span></h2>
+          </div>
+          <span class="chip volt">ARRANCA HOY MIÉ 18 NOV · 10:00 AM CST</span>
+        </div>
+
+        <div class="s-body" style="justify-content:space-between;gap:14px;">
+          <!-- Row 1: Launch Today + Weekly Clock -->
+          <div style="display:grid;grid-template-columns:1fr 1.05fr 1.05fr 1fr 1fr;gap:10px;flex:1;min-height:0;">
+            <div class="card volt" style="padding:12px 13px;justify-content:flex-start;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="chip volt" style="font-size:9.5px;padding:3px 7px;">HOY MIÉ 18 NOV</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c6ff00" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9z"/></svg>
+              </div>
+              <div class="label" style="color:var(--volt);margin-top:2px;">DESBLOQUEO + OLA 1</div>
+              <div class="sublabel"><b style="color:var(--text);">10:00–12:00</b> · Claves <code style="color:var(--volt);">.env</code> + 3 Videos OBS ➔ OpusClip (25 clips)</div>
+              <div class="sublabel"><b style="color:var(--text);">12:00–14:00</b> · Dispatch Ola 1 Zoho + WA (20–30 envíos)</div>
+              <div class="sublabel"><b style="color:var(--text);">16:00–18:00</b> · Lupe programa 20 piezas Meta/TT/LI</div>
+            </div>
+
+            <div class="card gold" style="padding:12px 13px;justify-content:flex-start;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="chip gold" style="font-size:9.5px;padding:3px 7px;">LUNES · FÁBRICA</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ecd28a" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              </div>
+              <div class="label" style="color:var(--gold-bright);margin-top:2px;">SCRAPE + MOCKUPS + CLIPS</div>
+              <div class="sublabel"><b style="color:var(--text);">08:00–10:30</b> · Apify Nuevo Nicho + CDP Maps + SEO #1</div>
+              <div class="sublabel"><b style="color:var(--text);">10:30–13:00</b> · Motor genera 50–100 PNG/PDF</div>
+              <div class="sublabel"><b style="color:var(--text);">13:00–15:00</b> · OpusClip + Captions + Canva (20 clips)</div>
+            </div>
+
+            <div class="card cyan" style="padding:12px 13px;justify-content:flex-start;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="chip cyan" style="font-size:9.5px;padding:3px 7px;">MAR–JUE · DISPARO</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </div>
+              <div class="label" style="color:var(--cyan);margin-top:2px;">OUTBOUND CONTROLADO</div>
+              <div class="sublabel"><b style="color:var(--text);">09:00–10:15</b> · Zoho Mail (20–30/día) c/ PDF</div>
+              <div class="sublabel"><b style="color:var(--text);">10:15–11:30</b> · WhatsApp + IG DM (15–20/día) c/ Antes/Después</div>
+              <div class="sublabel"><b style="color:var(--text);">13–14 &amp; 17:30–19h</b> · Calendly 15m + Toque 48h</div>
+            </div>
+
+            <div class="card" style="padding:12px 13px;justify-content:flex-start;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="chip" style="font-size:9.5px;padding:3px 7px;">VIERNES · CIERRE</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ecd28a" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </div>
+              <div class="label" style="color:var(--gold-bright);margin-top:2px;">FOLLOW-UP + CEO REPORT</div>
+              <div class="sublabel"><b style="color:var(--text);">09:30–12:00</b> · Toque 72h (-35% / 2do Momento)</div>
+              <div class="sublabel"><b style="color:var(--text);">16:00–18:00</b> · Reporte Ventas, % Clips Ganadores &amp; Foco Sem.</div>
+            </div>
+
+            <div class="card" style="padding:12px 13px;justify-content:flex-start;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span class="chip" style="font-size:9.5px;padding:3px 7px;">SÁBADO · CAMPO</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <div class="label" style="color:var(--emerald);margin-top:2px;">PRODUCCIÓN &amp; BUCLE</div>
+              <div class="sublabel"><b style="color:var(--text);">09:00–14:00</b> · Sesiones / Torneos + Halftime Blitz</div>
+              <div class="sublabel"><b style="color:var(--text);">B-Roll</b> · Graba entregas LED ➔ Clips del próximo Lunes</div>
+            </div>
+          </div>
+
+          <!-- Row 2: Visual Projection Curve SVG -->
+          <div class="card gold" style="padding:12px 16px;flex:1.1;min-height:0;justify-content:space-between;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+              <div class="label" style="color:var(--gold-bright);">PROYECCIÓN OPERATIVA DE RESPUESTAS &amp; CIERRES (REFERENCIAL SUJETA A EJECUCIÓN DE LOTES)</div>
+              <span class="sublabel">Herramientas: Apify · Chrome CDP · Zoho SMTP · WA Business · OpusClip · Meta Suite · Calendly · GHL</span>
+            </div>
+            <svg viewBox="0 0 1140 176" width="100%" height="100%" aria-label="Curva de proyección temporal">
+              <!-- Timeline Track -->
+              <line x1="60" y1="30" x2="1080" y2="30" stroke="rgba(255,255,255,0.14)" stroke-width="3"/>
+              <path d="M60 132 C260 124, 430 100, 610 82 C790 62, 920 34, 1080 18" fill="none" stroke="#c6ff00" stroke-width="3.5"/>
+
+              <!-- Milestone 1 -->
+              <circle cx="150" cy="30" r="9" fill="#38bdf8"/>
+              <rect x="30" y="48" width="240" height="114" rx="12" fill="#090d14" stroke="rgba(56,189,248,0.45)"/>
+              <text x="46" y="72" fill="#38bdf8" font-size="12" font-weight="800" font-family="JetBrains Mono,monospace">HORAS 2–24H (HOY PM–JUE AM)</text>
+              <text x="46" y="96" fill="#f5f4ef" font-size="15.5" font-weight="800">3 – 5 Respuestas WA/DM</text>
+              <text x="46" y="118" fill="#98a2b3" font-size="11.5">~10–18% tasa en Street View</text>
+              <text x="46" y="136" fill="#98a2b3" font-size="11.5">Curiosidad por lámina Antes/Después</text>
+
+              <!-- Milestone 2 -->
+              <circle cx="430" cy="30" r="9" fill="#ecd28a"/>
+              <rect x="310" y="48" width="240" height="114" rx="12" fill="#090d14" stroke="rgba(201,162,63,0.5)"/>
+              <text x="326" y="72" fill="#ecd28a" font-size="12" font-weight="800" font-family="JetBrains Mono,monospace">DÍAS 2–4 (JUE 19–SÁB 21 NOV)</text>
+              <text x="326" y="96" fill="#f5f4ef" font-size="15.5" font-weight="800">8 – 14 Pláticas + Calendly</text>
+              <text x="326" y="118" fill="#98a2b3" font-size="11.5">Toque 48h + primer impacto</text>
+              <text x="326" y="136" fill="#98a2b3" font-size="11.5">de Reels/TikTok en su feed</text>
+
+              <!-- Milestone 3 -->
+              <circle cx="710" cy="30" r="9" fill="#c6ff00"/>
+              <rect x="590" y="48" width="240" height="114" rx="12" fill="#090d14" stroke="rgba(198,255,0,0.5)"/>
+              <text x="606" y="72" fill="#c6ff00" font-size="12" font-weight="800" font-family="JetBrains Mono,monospace">DÍAS 5–10 (SEM 2 · 23–27 NOV)</text>
+              <text x="606" y="96" fill="#c6ff00" font-size="15.5" font-weight="800">1 – 4 Cierres (50% Anticipo)</text>
+              <text x="606" y="118" fill="#f5f4ef" font-size="11.5">Small Biz ($3.9K–$6.89K)</text>
+              <text x="606" y="136" fill="#f5f4ef" font-size="11.5">Torneos / Galas (-35%)</text>
+
+              <!-- Milestone 4 -->
+              <circle cx="990" cy="30" r="9" fill="#34d399"/>
+              <rect x="870" y="48" width="240" height="114" rx="12" fill="rgba(198,255,0,0.06)" stroke="#34d399"/>
+              <text x="886" y="72" fill="#34d399" font-size="12" font-weight="800" font-family="JetBrains Mono,monospace">DÍAS 21–30 (COMPUESTO)</text>
+              <text x="886" y="96" fill="#f5f4ef" font-size="15.5" font-weight="800">Pull Inbound Constante</text>
+              <text x="886" y="118" fill="#98a2b3" font-size="11.5">Clientes presumen LED en Stories</text>
+              <text x="886" y="136" fill="#98a2b3" font-size="11.5">80+ clips + SEO #1 traen DMs solos</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>PROTECCIÓN DE DOMINIO &amp; WHATSAPP: LOTES CONTROLADOS · SIN BLOQUEOS META</span>
+          <span>SLIDE 08 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 9: TABLERO EN VIVO ==================== -->
+    <section class="slide-wrap" data-slide="9">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">EVIDENCIA DE EJECUCIÓN · SERVIDOR LOCALHOST:8765</div>
+            <h2 class="s-title">OPERACIÓN HOY: <span>DASHBOARD EN VIVO</span> &amp; COLA DE ÚLTIMO TRIGGER</h2>
+          </div>
+          <span class="chip volt">ZOHO SMTP CHUY@CAPTOORA.STUDIO INTEGRADO</span>
+        </div>
+
+        <div class="s-body" style="justify-content:space-between;gap:12px;">
+          <div class="grid-2 col-50-50" style="height:70%;">
+            <div class="media-frame browser-frame contain" data-zoom="../assets/presentation/screen_dashboard_trigger.png" data-caption="Dashboard Sprint de Cierre · KPIs y Semáforo de Cuota">
+              <div class="browser-bar">
+                <span class="dot-rgb" style="background:#ef4444"></span><span class="dot-rgb" style="background:#f59e0b"></span><span class="dot-rgb" style="background:#10b981"></span>
+                <span style="margin-left:8px;">127.0.0.1:8765/dashboard/index.html · Sprint Martes &amp; Trigger</span>
+              </div>
+              <img src="../assets/presentation/screen_dashboard_trigger.png" alt="Pantallazo Dashboard Sprint" />
+              <span class="media-tag volt">SPRINT &amp; SEMÁFORO LIVE</span>
+            </div>
+
+            <div class="media-frame browser-frame contain" data-zoom="../assets/presentation/screen_small_biz_grid.png" data-caption="Tab Small Business 2027 · 3 Pilares y Tarifa -35%">
+              <div class="browser-bar">
+                <span class="dot-rgb" style="background:#ef4444"></span><span class="dot-rgb" style="background:#f59e0b"></span><span class="dot-rgb" style="background:#10b981"></span>
+                <span style="margin-left:8px;">127.0.0.1:8765/dashboard/index.html#small-business</span>
+              </div>
+              <img src="../assets/presentation/screen_small_biz_grid.png" alt="Pantallazo Small Biz 2027" />
+              <span class="media-tag gold">VITRINA SMALL BIZ &amp; MAPS</span>
+            </div>
+          </div>
+
+          <div class="grid-6">
+            <div class="card gold" style="padding:10px;text-align:center;"><div class="big-num">141</div><div class="sublabel">Capturas Maps</div></div>
+            <div class="card volt" style="padding:10px;text-align:center;"><div class="big-num volt">141</div><div class="sublabel">PDFs + PNGs SMB</div></div>
+            <div class="card gold" style="padding:10px;text-align:center;"><div class="big-num">114</div><div class="sublabel">Láminas Clubes</div></div>
+            <div class="card cyan" style="padding:10px;text-align:center;"><div class="big-num cyan">17</div><div class="sublabel">Cola (4 Aprob · 13)</div></div>
+            <div class="card" style="padding:10px;text-align:center;"><div class="big-num" style="color:var(--emerald);">18</div><div class="sublabel">Tareas Asana</div></div>
+            <div class="card volt" style="padding:10px;text-align:center;"><div class="big-num volt" style="font-family:var(--font-mono);font-size:24px;">.env</div><div class="sublabel">Protegido .gitignore</div></div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>BACKEND FASTAPI + PYTEST EN VERDE · REPO LOCAL PROTEGIDO</span>
+          <span>SLIDE 09 / 10</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- ==================== SLIDE 10: 7 MOTORES + SKILL ==================== -->
+    <section class="slide-wrap" data-slide="10">
+      <article class="slide">
+        <div class="s-head">
+          <div>
+            <div class="eyebrow">FASE FINAL · ESCALAMIENTO AUTOMATIZADO SEMANA A SEMANA</div>
+            <h2 class="s-title">LOS <span class="volt">7 MOTORES EJECUTIVOS</span> + <span style="color:var(--cyan);">SKILL REPLICABLE</span></h2>
+          </div>
+          <span class="chip gold">.AGENTS/SKILLS/CAPTOORA-GROWTH-PLAYBOOK</span>
+        </div>
+
+        <div class="s-body">
+          <div class="grid-2 col-55-45">
+            <!-- Left 7 Engines Modular Grid filled vertically -->
+            <div class="card gold" style="padding:14px;justify-content:space-between;gap:10px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <div class="label" style="color:var(--gold-bright);">SUITE DE 7 MOTORES CONECTADOS (.ENV + WEBHOOKS)</div>
+                <span class="chip volt" style="font-size:9.5px;">PLAN LISTO</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:10px;flex:1;min-height:0;">
+                <div class="card volt" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box volt"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5 1 6.5L12 17l-5.5 3 1-6.5L3 9l6-1z"/></svg></div><div><div class="label" style="color:var(--volt);">1 · CEO PERSONAL</div><div class="sublabel">Planea semana, foco &amp; hooks</div></div></div></div>
+                <div class="card volt" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box volt"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><div><div class="label" style="color:var(--volt);">2 · SEO #1 + 20 CLIPS</div><div class="sublabel">Tendencias + transformación viral</div></div></div></div>
+                <div class="card cyan" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box cyan"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div><div class="label" style="color:var(--cyan);">3 · REPORTES AUTO</div><div class="sublabel">Ventas semana + ROI campañas</div></div></div></div>
+                <div class="card cyan" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box cyan"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="label" style="color:var(--cyan);">4 · MAIL MARKETING</div><div class="sublabel">Campañas ofertas vía Zoho</div></div></div></div>
+                <div class="card gold" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><div class="label" style="color:var(--gold-bright);">5 · AGENDA INTELIGENTE</div><div class="sublabel">Orden diario + recordatorios</div></div></div></div>
+                <div class="card gold" style="padding:11px 12px;"><div class="row-ico"><div class="ico-box"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><div><div class="label" style="color:var(--gold-bright);">6 · CONTROL CALENDLY</div><div class="sublabel">Crea y manda enlaces auto</div></div></div></div>
+              </div>
+              <div class="card cyan" style="padding:12px;">
+                <div class="row-ico">
+                  <div class="ico-box cyan"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+                  <div>
+                    <div class="label" style="color:var(--cyan);">7 · BUSCADOR APIFY + GOHIGHLEVEL CRM / KYC + MAILERFIND MCP</div>
+                    <div class="sublabel">Peina nuevas zonas, enriquece correos Google Drive/Gmail y mueve pipeline</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Reusable Skill Card filled nicely -->
+            <div style="display:flex;flex-direction:column;gap:12px;justify-content:space-between;height:100%;">
+              <div class="card volt" style="flex:1;padding:16px;justify-content:space-between;">
+                <div>
+                  <div class="eyebrow" style="margin-bottom:4px;">SKILL CREADA PARA REPLICAR EN CUALQUIER NICHO</div>
+                  <div class="label" style="font-size:17px;color:var(--volt);font-family:var(--font-mono);">captoora-growth-playbook</div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:11px;margin-top:8px;">
+                  <div class="row-ico"><span class="chip gold">PASO 1</span><span class="sublabel" style="color:var(--text);font-size:11.5px;">Elige nuevo nicho/ciudad (ej. Médicos, Bodas, Inmobiliaria)</span></div>
+                  <div class="row-ico"><span class="chip cyan">PASO 2</span><span class="sublabel" style="color:var(--text);font-size:11.5px;">Scrape Apify + Capturas Chrome CDP Google Maps</span></div>
+                  <div class="row-ico"><span class="chip gold">PASO 3</span><span class="sublabel" style="color:var(--text);font-size:11.5px;">Fábrica 100% visual (Antes/Después PNG + PDF + LED)</span></div>
+                  <div class="row-ico"><span class="chip volt">PASO 4</span><span class="sublabel" style="color:var(--text);font-size:11.5px;">Push Zoho/WA + Pull Embudo Invisible (20 Clips + SEO)</span></div>
+                </div>
+              </div>
+
+              <div class="card gold" style="padding:14px 16px;gap:8px;">
+                <div class="label" style="color:var(--gold-bright);">SIGUIENTE MOVIMIENTO INMEDIATO</div>
+                <div class="row-ico">
+                  <div class="ico-box volt"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2l-2 2m-7.6 7.6a5 5 0 1 1-7.1 7.1 5 5 0 0 1 7.1-7.1L15 8l4-4 2 2-4 4"/></svg></div>
+                  <div class="sublabel" style="color:var(--text);font-size:11.5px;">Pega claves reales en <code style="color:var(--volt);">.env</code> (Zoho, Apify, GHL, Calendly)</div>
+                </div>
+                <div class="row-ico">
+                  <div class="ico-box cyan"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+                  <div class="sublabel" style="color:var(--text);font-size:11.5px;">Aprueba el Plan de Implementación para activar los 7 Motores</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s-foot">
+          <span>CAPTOORA STUDIO · SAN JERÓNIMO, MONTERREY · @CAPTOORA.STUDIO</span>
+          <span>SLIDE 10 / 10 · FIN DEL DECK</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Zoom Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+    <img id="lbImg" src="" alt="" />
+    <div class="lightbox-cap" id="lbCap"></div>
+  </div>
+
+  <script>
+    (function () {
+      const deck = document.getElementById('deck');
+      const wraps = Array.from(document.querySelectorAll('.slide-wrap'));
+      const counter = document.getElementById('slideCounter');
+      const dotRail = document.getElementById('dotRail');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const gridBtn = document.getElementById('gridBtn');
+      const fsBtn = document.getElementById('fsBtn');
+      const lightbox = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbCap = document.getElementById('lbCap');
+      let current = 0;
+
+      // Build dot rail buttons
+      wraps.forEach((w, idx) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.title = `Slide ${idx + 1}`;
+        b.setAttribute('aria-label', `Ir a slide ${idx + 1}`);
+        if (idx === 0) b.setAttribute('aria-current', 'step');
+        b.addEventListener('click', () => goTo(idx));
+        dotRail.appendChild(b);
+      });
+      const dots = Array.from(dotRail.querySelectorAll('button'));
+
+      function updateUI(idx) {
+        current = Math.max(0, Math.min(wraps.length - 1, idx));
+        const num = String(current + 1).padStart(2, '0');
+        const tot = String(wraps.length).padStart(2, '0');
+        counter.textContent = `${num} / ${tot}`;
+        dots.forEach((d, i) => {
+          if (i === current) d.setAttribute('aria-current', 'step');
+          else d.removeAttribute('aria-current');
+        });
+      }
+
+      function goTo(idx) {
+        if (deck.classList.contains('grid-mode')) {
+          deck.classList.remove('grid-mode');
+        }
+        const target = wraps[Math.max(0, Math.min(wraps.length - 1, idx))];
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Sync with IntersectionObserver per modern scroll-snap guidance
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+            const idx = wraps.indexOf(entry.target);
+            if (idx !== -1) updateUI(idx);
+          }
+        });
+      }, { root: deck, threshold: [0.55] });
+      wraps.forEach((w) => io.observe(w));
+
+      prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn.addEventListener('click', () => goTo(current + 1));
+      gridBtn.addEventListener('click', () => deck.classList.toggle('grid-mode'));
+      fsBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+        else document.exitFullscreen?.();
+      });
+
+      // Clicking slide in grid mode jumps directly to it
+      wraps.forEach((w, idx) => {
+        w.querySelector('.slide').addEventListener('click', (e) => {
+          if (deck.classList.contains('grid-mode') && !e.target.closest('.media-frame')) {
+            goTo(idx);
+          }
+        });
+      });
+
+      // Lightbox zoom on any screenshot/mockup
+      document.querySelectorAll('.media-frame[data-zoom]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.stopPropagation();
+          lbImg.src = el.getAttribute('data-zoom');
+          lbCap.textContent = el.getAttribute('data-caption') || '';
+          lightbox.classList.add('open');
+        });
+      });
+      lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('open')) {
+          if (e.key === 'Escape') lightbox.classList.remove('open');
+          return;
+        }
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+          e.preventDefault();
+          goTo(current + 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          goTo(current - 1);
+        } else if (e.key === 'g' || e.key === 'G') {
+          deck.classList.toggle('grid-mode');
+        } else if (e.key === 'f' || e.key === 'F') {
+          fsBtn.click();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

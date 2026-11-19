@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captoora Biogen · Propuesta Piloto — El Médico Asesino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050608;
+      --surface: #0b0e14;
+      --surface-2: #111622;
+      --gold: #c9a23f;
+      --gold-bright: #ecd28a;
+      --volt: #c6ff00;
+      --cyan: #38bdf8;
+      --border: rgba(255, 255, 255, 0.1);
+      --border-gold: rgba(201, 162, 63, 0.36);
+      --text: #f5f4ef;
+      --muted: #9aa3b2;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: letter portrait;
+      margin: 0;
+    }
+
+    html, body {
+      background: #030406;
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      padding: 0.42in 0.48in 0.36in;
+      background:
+        radial-gradient(circle at 88% 8%, rgba(201, 162, 63, 0.14), transparent 42%),
+        radial-gradient(circle at 12% 92%, rgba(198, 255, 0, 0.08), transparent 44%),
+        var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      position: relative;
+    }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img { height: 34px; object-fit: contain; }
+    .brand-txt {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      color: var(--gold-bright);
+    }
+    .brand-sub {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border: 1px solid var(--border-gold);
+      color: var(--gold-bright);
+      background: rgba(201, 162, 63, 0.08);
+    }
+    .pill.volt { border-color: rgba(198, 255, 0, 0.48); color: var(--volt); background: rgba(198, 255, 0, 0.08); }
+    .pill.cyan { border-color: rgba(56, 189, 248, 0.45); color: var(--cyan); background: rgba(56, 189, 248, 0.08); }
+
+    .eyebrow {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--volt);
+      margin-bottom: 5px;
+    }
+    h1 {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 27px;
+      line-height: 1.08;
+      letter-spacing: 0.03em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    h1 span { color: var(--gold-bright); }
+    h2 {
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      color: var(--gold-bright);
+      margin-bottom: 8px;
+    }
+    .lead {
+      font-size: 11.8px;
+      line-height: 1.48;
+      color: #d6dbe4;
+    }
+
+    .card {
+      background: linear-gradient(155deg, rgba(17, 22, 34, 0.94), rgba(8, 10, 15, 0.98));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 15px;
+    }
+    .card.gold { border-color: var(--border-gold); }
+    .card.volt { border-color: rgba(198, 255, 0, 0.4); }
+    .card.cyan { border-color: rgba(56, 189, 248, 0.36); }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 16px;
+      align-items: stretch;
+      margin: 12px 0;
+    }
+    .hero-photo {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border-gold);
+      position: relative;
+      background: #06080c;
+      height: 258px;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .photo-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(5, 6, 8, 0.88);
+      border: 1px solid rgba(198, 255, 0, 0.45);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--volt);
+    }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 11px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .k-title {
+      font-size: 11.5px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .k-copy {
+      font-size: 10.6px;
+      line-height: 1.42;
+      color: var(--muted);
+    }
+    .k-copy strong { color: var(--text); }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .g-shot {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      height: 126px;
+      position: relative;
+      background: #07090e;
+    }
+    .g-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .g-cap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 4px 8px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8.5px;
+      background: linear-gradient(transparent, rgba(5, 6, 8, 0.92));
+      color: var(--gold-bright);
+    }
+
+    .partner-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 12px;
+      background: rgba(17, 22, 34, 0.78);
+      border: 1px solid var(--border);
+    }
+    .partner-logos { display: flex; align-items: center; gap: 12px; }
+    .partner-logos img { height: 22px; object-fit: contain; }
+
+    .flow-card {
+      position: relative;
+      padding: 13px;
+      border-radius: 13px;
+      background: #0a0d14;
+      border: 1px solid var(--border-gold);
+    }
+    .step-badge {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #050608;
+      background: var(--volt);
+      padding: 3px 8px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .step-badge.gold { background: var(--gold-bright); }
+    .step-badge.cyan { background: var(--cyan); }
+
+    .cta-box {
+      border: 1px solid rgba(198, 255, 0, 0.45);
+      background: linear-gradient(135deg, rgba(198, 255, 0, 0.08), rgba(201, 162, 63, 0.08));
+      border-radius: 14px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PÁGINA 1: CAPTOORA BIOGEN + PORTAFOLIO CAPITANES ==================== -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">CAPTOORA BIOGEN · PROGRAMA PILOTO</div>
+            <div class="brand-sub">PRODUCCIÓN EDITORIAL DE ALTA VELOCIDAD 1/2000s &amp; VIDEO STUDIO</div>
+          </div>
+        </div>
+        <span class="pill volt">INVITACIÓN PRIVADA · EL MÉDICO ASESINO</span>
+      </div>
+
+      <div class="hero-grid">
+        <div style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div class="eyebrow">ATLETAS DE ALTO RENDIMIENTO &amp; LUCHA LIBRE PROFESIONAL</div>
+            <h1>POTENCIA TU IMAGEN CON <span>LUZ ESCULTURAL</span> Y FLUJO INTEGRAL</h1>
+            <p class="lead">
+              Hola <strong>El Médico Asesino</strong>. Admiramos tu disciplina sobre el cuadrilátero y tu presencia en redes.
+              Te extendemos una invitación directa al <strong>Programa Piloto Captoora Biogen</strong>: <strong>sesiones semanales</strong> de
+              fotografía profesional con iluminación controlada, seguimiento evolutivo de resultados físicos y clips verticales editados en estudio para elevar el impacto
+              de tus <strong>Historias de Instagram, Reels y TikTok</strong>.
+            </p>
+          </div>
+
+          <div class="card gold" style="margin-top:10px;">
+            <div class="k-title" style="color:var(--gold-bright);">TÉCNICA, VELOCIDAD Y PORTAFOLIO DE ÉLITE (MISMO NIVEL PRESENTADO A CAPITANES)</div>
+            <p class="k-copy">
+              Operamos con cámaras de alta velocidad <strong>Global Shutter 1/2000s</strong> (cero barrido en movimiento),
+              iluminación dramática de estudio repetible semana con semana y flujo ágil de edición.
+              Revisa nuestra carta de presentación deportiva en línea:
+              <strong style="color:var(--volt);">https://captoora.studio/sports</strong>
+            </p>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="../assets/hero-portrait.png" alt="Estética Editorial Deportiva Captoora" />
+          <span class="photo-badge">LUZ ESCULTURAL · 1/2000s STUDIO</span>
+        </div>
+      </div>
+
+      <!-- Qué Incluye el Piloto Biogen para el Atleta -->
+      <h2>1. QUÉ RECIBES COMO ATLETA INVITADO AL PILOTO</h2>
+      <div class="grid-3">
+        <div class="card volt">
+          <div class="k-title" style="color:var(--volt);">SEGUIMIENTO SEMANAL PRO</div>
+          <p class="k-copy">
+            <strong>Sesiones semanales en estudio</strong> con esquema de luz escultural controlado, registro visual evolutivo (junto al avance con tu nutriólogo) y retoque editorial de alto impacto.
+          </p>
+        </div>
+        <div class="card cyan">
+          <div class="k-title" style="color:var(--cyan);">CLIPS PARA TODAS TUS REDES</div>
+          <p class="k-copy">
+            Producción y <strong>edición profesional en video vertical 9:16</strong> (transiciones limpias, diseño sonoro y subtítulos editoriales) listos para tus Historias, Reels y TikTok sin perder horas editando.
+          </p>
+        </div>
+        <div class="card gold">
+          <div class="k-title" style="color:var(--gold-bright);">HORARIOS PICO &amp; PATROCINADORES</div>
+          <p class="k-copy">
+            Coordinamos entregas para que publiques en las <strong>horas pico reales de tu audiencia</strong> según estadísticas, elevando tu vitrina comercial frente a promotores y marcas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Portafolio Real Compartido -->
+      <div style="margin-top:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <div class="eyebrow" style="margin:0;">MUESTRA VISUAL DEL PORTAFOLIO PRESENTADO A EQUIPOS PROFESIONALES</div>
+          <span class="brand-sub" style="color:var(--gold-bright);">VER PORTAFOLIO 3D COMPLETO ➔ CAPTOORA.STUDIO/SPORTS</span>
+        </div>
+        <div class="gallery-strip">
+          <div class="g-shot">
+            <img src="../assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Luz Dramática Estudio" style="object-position:center 20%;" />
+            <div class="g-cap">ILUMINACIÓN CONTROLADA EN ESTUDIO</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/presentation/capitanes_court_hero.jpg" alt="Acción Alta Velocidad" />
+            <div class="g-cap">ACCIÓN DEPORTIVA · 1/2000s ARENA</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg" alt="Dirección Editorial" style="object-position:center 20%;" />
+            <div class="g-cap">DIRECCIÓN EDITORIAL &amp; RETRATO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="partner-bar" style="margin-bottom:8px;">
+        <span class="brand-sub" style="color:var(--text);font-weight:700;">RESPALDO &amp; EXPERIENCIA CON:</span>
+        <div class="partner-logos">
+          <span style="background:rgba(245,244,239,0.92);padding:2px 7px;border-radius:6px;display:inline-flex;"><img src="../assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec" /></span>
+          <img src="../assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Tigres UANL" />
+          <img src="../assets/logos_partnerships/farmasi_transparent.png" alt="Farmasi" />
+          <span class="brand-sub" style="color:var(--gold-bright);">COCA-COLA FEMSA · HEINEKEN / TECATE · PODER JUDICIAL NL</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>CAPTOORA BIOGEN · PORTAFOLIO: HTTPS://CAPTOORA.STUDIO/SPORTS</span>
+        <span>PÁGINA 1 DE 2 · EL MÉDICO ASESINO</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PÁGINA 2: ECOSISTEMA NUTRICIÓN + CONTRATO DOBLE + REPRESENTACIÓN ==================== -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">ECOSISTEMA DE RENDIMIENTO · FLUJO NUTRICIÓN + IMAGEN</div>
+            <div class="brand-sub">MODELO DE ALIANZA DOBLE PARA ATLETAS · CAPTOORA BIOGEN</div>
+          </div>
+        </div>
+        <span class="pill cyan">ALIANZAS EN INTEGRACIÓN · PILOTO 2026</span>
+      </div>
+
+      <div style="margin:12px 0 10px;">
+        <div class="eyebrow">2. VISIÓN DE ECOSISTEMA · CONTRATO DOBLE CON MARCAS DE NUTRICIÓN Y MEAL PREP</div>
+        <h1>UN <span>FLOW PROFESIONAL</span> COMPLETO: DIETA + COMIDA + RESULTADO VISUAL</h1>
+        <p class="lead">
+          Además de la colaboración fotográfica y de video semanal con el estudio, estamos integrando activamente alianzas con
+          <strong>nutriólogos deportivos</strong> y <strong>cocinas especializadas en platillos diarios</strong> para que
+          nuestros atletas piloto accedan a un <strong>esquema de colaboración doble</strong> (Estudio + Nutrición/Alimentos),
+          donde todo el proceso y los avances físicos quedan documentados como una producción continua.
+        </p>
+      </div>
+
+      <!-- 3-Step Visual Flow -->
+      <div class="grid-3" style="margin-bottom:12px;">
+        <div class="flow-card">
+          <span class="step-badge cyan">FASE 1 · NUTRIÓLOGO ALIADO</span>
+          <div class="k-title">CONFIGURACIÓN CIENTÍFICA DE DIETA</div>
+          <p class="k-copy">
+            Especialistas en nutrición deportiva diseñan profesionalmente tu protocolo de macronutrientes, consultas de control y objetivos de peso o recomposición.
+            <br><br>
+            <strong style="color:var(--cyan);">Especialista en integración:</strong><br>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:#d6dbe4;">[Nutriólogo Deportivo Aliado — enlace pendiente de confirmación]</span>
+          </p>
+        </div>
+
+        <div class="flow-card">
+          <span class="step-badge gold">FASE 2 · MEAL PREP / RESTAURANTE</span>
+          <div class="k-title">PLATILLOS DIARIOS CON CONTROL</div>
+          <p class="k-copy">
+            Cocinas y restaurantes fitness aliados elaboran y entregan tus comidas diarias calibradas al plan del nutriólogo, cuidando calidad e higiene de ingredientes.
+            <br><br>
+            <strong style="color:var(--gold-bright);">Propuesta inicial de comida:</strong><br>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--volt);">instagram.com/powerfoodsmty/ (@powerfoodsmty)</span>
+          </p>
+        </div>
+
+        <div class="flow-card">
+          <span class="step-badge">FASE 3 · CAPTOORA BIOGEN FLOW</span>
+          <div class="k-title">REGISTRO VISUAL DE AVANCES</div>
+          <p class="k-copy">
+            Documentamos en fotografía y video profesional tanto la evolución física lograda con el nutriólogo como la calidad real de tus platillos diarios, creando un <strong>Flow visual comprobable</strong>.
+            <br><br>
+            <strong style="color:var(--volt);">Frecuencia:</strong> Sesiones semanales en estudio + clips 9:16 listos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Roster / Talento en Piloto -->
+      <div class="card cyan" style="margin-bottom:10px;padding:11px 14px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <div class="k-title" style="color:var(--cyan);margin:0;">3. ELENCO DE CREADORES &amp; ATLETAS INTEGRADOS AL PILOTO</div>
+          <span class="pill volt" style="font-size:8.5px;padding:3px 9px;">COHORTE FUNDADORA 2026</span>
+        </div>
+        <p class="k-copy" style="line-height:1.45;">
+          No arrancas solo: en esta primera cohorte piloto ya colabora activamente con nosotros el creador e influencer
+          <strong style="color:var(--volt);">@soytrev2</strong> (<span style="font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--cyan);">instagram.com/soytrev2/</span>), quien se suma también a documentar su proceso dentro del programa <strong>Captoora Biogen</strong> junto contigo para construir presencia conjunta de atletas, creadores y marcas aliadas.
+        </p>
+      </div>
+
+      <!-- Mecánica del Contrato Doble y Métricas -->
+      <div class="grid-2" style="margin-bottom:10px;">
+        <div class="card volt" style="padding:11px 13px;">
+          <div class="k-title" style="color:var(--volt);">INTERCAMBIO: QUÉ RECIBES VS. TU LABOR</div>
+          <p class="k-copy" style="line-height:1.42;">
+            • <strong>Recibes:</strong> Platillos del programa (<strong style="color:var(--gold-bright);">@powerfoodsmty</strong>), consultas nutricionales y registro semanal en Captoora Biogen con fotos y clips editados.<br>
+            • <strong>Tu Labor en Redes (horarios pico según tus estadísticas):</strong> Historia diaria (mín. 15s) de tus comidas + contenido en entrenamientos + mín. <strong>4 historias/semana</strong> mencionando al nutriólogo + historias el día de tu sesión semanal y fotos en <strong>Collab/etiqueta con @captoora</strong> en todas tus redes + reporte de estadísticas.
+          </p>
+        </div>
+
+        <div class="card gold" style="padding:11px 13px;">
+          <div class="k-title" style="color:var(--gold-bright);">SIGUIENTES PASOS &amp; REPRESENTACIÓN</div>
+          <p class="k-copy" style="line-height:1.45;">
+            Queremos construir esta colaboración con seriedad profesional hacia tu carrera:<br><br>
+            <strong>1. Agencia / Mánager:</strong> ¿Cuentas actualmente con representación o agencia para canalizar formalmente este convenio? Si nos compartes su contacto, enviamos directo el expediente.<br><br>
+            <strong>2. Decisión directa:</strong> Si tú tomas directamente este tipo de acuerdos, nos encantará conocer qué opinas y coordinar la primera sesión semanal en estudio.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Box -->
+      <div class="cta-box">
+        <div>
+          <div class="eyebrow" style="margin-bottom:3px;">ATENTOS A TU RESPUESTA</div>
+          <div style="font-family:'Cinzel',serif;font-size:15px;color:var(--text);">
+            ¿TE SUMAS AL PILOTO <span style="color:var(--volt);">CAPTOORA BIOGEN</span>?
+          </div>
+          <div class="k-copy" style="color:#d6dbe4;margin-top:3px;">
+            Respóndenos directo por <strong>Instagram DM</strong> o WhatsApp con el contacto de tu agencia o tus comentarios iniciales.
+          </div>
+        </div>
+        <div style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.6;">
+          <div style="color:var(--volt);font-weight:700;">@captoora.studio</div>
+          <div style="color:var(--gold-bright);">WA +52 81 4005 0088</div>
+          <div style="color:var(--cyan);">chuy@captoora.studio</div>
+          <div style="color:var(--text);">https://captoora.studio/sports</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>JESÚS GUTIÉRREZ · DIRECTOR EDITORIAL · CAPTOORA STUDIO &amp; BIOGEN</span>
+      <span>PÁGINA 2 DE 2 · PORTAFOLIO: CAPTOORA.STUDIO/SPORTS</span>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+{
+  "currency": "MXN",
+  "tax_regime_note": "Verificar emisión de CFDI 4.0 con constancia de situación fiscal actualizada para clientes corporativos y clubes A.C.",
+  "payment_policy": "50% anticipo obligatorio al reservar fecha + 50% contra entrega de galería digital final.",
+  "packages_catalog": [
+    {
+      "id": "PKG-1",
+      "name": "Gameday Hero (Individual MFL / Colegial)",
+      "price_mxn": 5800,
+      "direct_cost_mxn": 1450,
+      "net_profit_mxn": 4350,
+      "margin_pct": 75.0,
+      "digital_sla": "10 fotos al medio tiempo + galería < 2 horas",
+      "physical_sla": "3 a 5 días hábiles (El Marco San Pedro + Promocionales MTY)"
+    },
+    {
+      "id": "PKG-2",
+      "name": "Team Championship (Plantilla Completa)",
+      "price_mxn": 24000,
+      "direct_cost_mxn": 6200,
+      "net_profit_mxn": 17800,
+      "margin_pct": 74.2,
+      "digital_sla": "Galería interactiva Túnel 3D mismo día",
+      "physical_sla": "5 a 7 días hábiles lote de 30 sets foil + cuadro de honor"
+    },
+    {
+      "id": "PKG-3",
+      "name": "Sponsor Proof & BTL (Marcas y Corporativos)",
+      "price_mxn": 18500,
+      "direct_cost_mxn": 2800,
+      "net_profit_mxn": 15700,
+      "margin_pct": 84.9,
+      "digital_sla": "Selección ejecutiva 24h / mismo día",
+      "physical_sla": "3 a 5 días hábiles (Carbon4 Fine Art + El Marco San Pedro)"
+    },
+    {
+      "id": "PKG-4",
+      "name": "Torneo del Pavo & Posada Pádel (Temporada Nov-Dic)",
+      "price_mxn": 12500,
+      "direct_cost_mxn": 2400,
+      "net_profit_mxn": 10100,
+      "margin_pct": 80.8,
+      "digital_sla": "Halftime Blitz el mismo día en la cena de premiación",
+      "physical_sla": "3 a 5 días hábiles (4 acrílicos LED cálida + 20 llaveros)"
+    },
+    {
+      "id": "PKG-5",
+      "name": "Gala Navideña & Recuerdo de Invierno (Danza)",
+      "price_mxn": 14500,
+      "direct_cost_mxn": 3100,
+      "net_profit_mxn": 11400,
+      "margin_pct": 78.6,
+      "digital_sla": "Archivo editorial en el brindis de clausura",
+      "physical_sla": "3 a 5 días hábiles (15 Marcos Madera Maciza San Pedro)"
+    }
+  ],
+  "subscriptions_watchlist": [
+    {
+      "service": "Google AI Pro #1 (Poncho Principal)",
+      "status": "Activa · $395 MXN/mes",
+      "role": "Antigravity Código/SDK, NotebookLM Comercial B2B y Drive Maestro",
+      "owner_agent": "chief_of_staff"
+    },
+    {
+      "service": "Google AI Pro #2 (Cuenta Yari · Promo)",
+      "status": "Activa · $99/mes (después $395)",
+      "role": "Segunda cuota Antigravity/Flow/Whisk/NotebookLM dedicada a Conan (mismo repo local)",
+      "owner_agent": "marky_marketing"
+    },
+    {
+      "service": "OpusClip Pro (Trial 1 Mes · URGENTE)",
+      "status": "POR VENCER (Meta: 30 clips hoy)",
+      "role": "Conversión rápida de 3 videos largos (OBS/Captions) a 25–30 clips 9:16 con subtítulos",
+      "owner_agent": "conan_content"
+    },
+    {
+      "service": "Canva + Captions App",
+      "status": "Activas (Pagadas)",
+      "role": "Carruseles 4:5, portadas Maps, teleprompter talking-head y subtítulos",
+      "owner_agent": "conan_content"
+    },
+    {
+      "service": "Aftershoot + Evoto + CapCut + OBS",
+      "status": "Activas en Mac Desktop",
+      "role": "Culling Halftime Blitz, retoque Biogen Beta escultural y edición 9:16",
+      "owner_agent": "conan_content"
+    },
+    {
+      "service": "Meta Business Suite + Meta Muse Móvil",
+      "status": "Activa (Enlace Móvil + Desktop)",
+      "role": "Programación FB/IG/WA Business por Lupe + Context Pack móvil con Muse",
+      "owner_agent": "lupe_social"
+    },
+    {
+      "service": "Pixieset Email Campaigns / Galerías",
+      "status": "Activa (Pagada por Captoora)",
+      "role": "Envío B2B trackeable con reporte de aperturas",
+      "owner_agent": "contabilidad_finanzas"
+    },
+    {
+      "service": "Apify Google Maps Scraper",
+      "status": "Activa (Crédito mensual configurado)",
+      "role": "Extracción verificada de 141 clubes/negocios NL",
+      "owner_agent": "scouting_radar"
+    },
+    {
+      "service": "Grokbot (Dado de Baja · Reemplazado)",
+      "status": "ELIMINADO ($0 · Sin Cuotas)",
+      "role": "Reemplazado nativamente en localhost por Marky, Lupe y Conan",
+      "owner_agent": "marky_marketing"
+    }
+  ],
+  "modular_options_matrix": {
+    "policy_note": "Oferta consultiva de 3 opciones ('¿Cuál de los 3 prefieres?') con -35% Descuento de Temporada 2026 activo. El cliente puede elegir solo fotografía digital hoy y liquidar acrílicos LED, marcos o pauta Ads en un segundo momento.",
+    "seasonal_discount_pct": 35,
+    "seasonal_promo_label": "-35% Descuento de Temporada · Navidad & Fin de Año 2026",
+    "tiers": [
+      {
+        "id": "OPT-DIGITAL",
+        "option_num": 1,
+        "title": "Solo Fotografía Digital (Mismo Día / Halftime)",
+        "prices_by_niche": {
+          "padel_gym": 4900,
+          "danza_colegios": 5500,
+          "corp_btl": 6900
+        },
+        "seasonal_prices_35_by_niche": {
+          "padel_gym": 3185,
+          "danza_colegios": 3575,
+          "corp_btl": 4485
+        },
+        "direct_cost_mxn": 350,
+        "margin_pct": 92.9,
+        "seasonal_margin_pct": 89.0,
+        "digital_sla": "10–15 fotos Halftime (15 min) + galería completa mismo día",
+        "physical_sla": "Sin elementos físicos obligatorios (upgrade disponible en cualquier momento)",
+        "deferred_split": {
+          "enabled": false,
+          "phase_1_digital_mxn": 4900,
+          "phase_2_physical_mxn": 0
+        }
+      },
+      {
+        "id": "OPT-PRINT",
+        "option_num": 2,
+        "title": "Fotografía + Impresión / Marcos Finos",
+        "prices_by_niche": {
+          "padel_gym": 7900,
+          "danza_colegios": 8900,
+          "corp_btl": 10500
+        },
+        "seasonal_prices_35_by_niche": {
+          "padel_gym": 5135,
+          "danza_colegios": 5785,
+          "corp_btl": 6825
+        },
+        "direct_cost_mxn": 1600,
+        "margin_pct": 79.7,
+        "seasonal_margin_pct": 68.8,
+        "digital_sla": "Galería en vivo mismo día + reels verticales 9:16",
+        "physical_sla": "3 a 5 días hábiles (El Marco San Pedro / Foco Lab Fine Art o 2 placas LED)",
+        "deferred_split": {
+          "enabled": true,
+          "phase_1_digital_mxn": 4900,
+          "phase_2_physical_mxn": 3000
+        }
+      },
+      {
+        "id": "OPT-FULL-LED",
+        "option_num": 3,
+        "title": "Suite Completa + Ads & Acrílicos LED",
+        "prices_by_niche": {
+          "padel_gym": 11500,
+          "danza_colegios": 12500,
+          "corp_btl": 15900
+        },
+        "seasonal_prices_35_by_niche": {
+          "padel_gym": 7475,
+          "danza_colegios": 8125,
+          "corp_btl": 10335
+        },
+        "direct_cost_mxn": 2400,
+        "margin_pct": 79.1,
+        "seasonal_margin_pct": 67.9,
+        "digital_sla": "Halftime Blitz mismo día + Reels listos para Meta Ads",
+        "physical_sla": "3 a 5 días hábiles (4 acrílicos LED cálida + 20 llaveros; pagaderos en 2do momento)",
+        "deferred_split": {
+          "enabled": true,
+          "phase_1_digital_mxn": 5900,
+          "phase_2_physical_mxn": 5600
+        }
+      }
+    ]
+  },
+  "biogen_pilot_catalog": {
+    "program_name": "Captoora Biogen (Beta)",
+    "positioning": "Bitácora visual de evolución física en estudio (iluminación escultural consistente) para fisicoculturismo, nutrición, atletas, rehabilitación y terapia física. Sin biometría invasiva ni menciones IA.",
+    "seasonal_discount_pct": 35,
+    "cadences": ["semanal", "quincenal", "mensual", "bimestral"],
+    "durations": [
+      { "id": "BIOGEN-3M", "label": "3 Meses (Reto 12 semanas)", "months": 3, "beta_monthly_mxn": 1950, "annual_discount_pct": 0 },
+      { "id": "BIOGEN-6M", "label": "6 Meses (Transformación Semestral)", "months": 6, "beta_monthly_mxn": 1750, "annual_discount_pct": 10 },
+      { "id": "BIOGEN-9M", "label": "9 Meses (Preparación Competencia)", "months": 9, "beta_monthly_mxn": 1600, "annual_discount_pct": 18 },
+      { "id": "BIOGEN-12M", "label": "1 Año / 12 Meses (Ciclo Completo)", "months": 12, "beta_monthly_mxn": 1450, "annual_discount_pct": 25 },
+      { "id": "BIOGEN-24M", "label": "2 Años / 24 Meses (Atleta Pro)", "months": 24, "beta_monthly_mxn": 1290, "annual_discount_pct": 34 },
+      { "id": "BIOGEN-60M", "label": "5 Años / 60 Meses (Membresía Fundador Beta)", "months": 60, "beta_monthly_mxn": 1150, "annual_discount_pct": 41 }
+    ]
+  },
+  "small_business_catalog": {
+    "program_name": "Captoora Small Business",
+    "positioning": "Unidad dedicada a negocios locales, consultorios, gimnasios TotalPass, jardines de niños, restaurantes/cafés y freelancers (separada de Captoora Corp). Arranca 2027 con vitrina impecable en Google Maps + Meta Business Suite sin bloqueos.",
+    "seasonal_discount_pct": 35,
+    "promo_label": "-35% Descuento de Temporada (Fin de Año & Arranque 2027)",
+    "tiers": [
+      {
+        "id": "SMB-MAPS",
+        "option_num": 1,
+        "title": "Impulso Google Maps & Portada 2027",
+        "list_price_mxn": 6000,
+        "seasonal_discount_pct": 35,
+        "promo_price_mxn": 3900,
+        "direct_cost_mxn": 300,
+        "net_profit_mxn": 3600,
+        "margin_pct": 92.3,
+        "digital_sla": "15–20 fotos pro (fachada/interior/equipo) + reclamo y subida directa a Google Maps / TotalPass (48–72h)",
+        "physical_sla": "Sin piezas físicas obligatorias (placa QR acrílica disponible después)",
+        "deferred_split": {
+          "enabled": false,
+          "phase_1_digital_mxn": 3900,
+          "phase_2_physical_mxn": 0
+        }
+      },
+      {
+        "id": "SMB-TOTAL",
+        "option_num": 2,
+        "title": "Suite Small Business Total (Maps + Meta Business)",
+        "list_price_mxn": 10600,
+        "seasonal_discount_pct": 35,
+        "promo_price_mxn": 6890,
+        "direct_cost_mxn": 450,
+        "net_profit_mxn": 6440,
+        "margin_pct": 93.5,
+        "digital_sla": "30–40 fotos pro + 2 Reels 9:16 + optimización Google Maps + Setup completo Meta Business Suite (FB + IG + WA Business + catálogo, cero bloqueos)",
+        "physical_sla": "Entrega digital integral en 72h; placa mostrador QR opcional en 2do momento",
+        "deferred_split": {
+          "enabled": false,
+          "phase_1_digital_mxn": 6890,
+          "phase_2_physical_mxn": 0
+        }
+      },
+      {
+        "id": "SMB-SUITE-2027",
+        "option_num": 3,
+        "title": "Posicionamiento 2027 + Físico QR LED / Biogen Beta",
+        "list_price_mxn": 16000,
+        "seasonal_discount_pct": 35,
+        "promo_price_mxn": 10400,
+        "direct_cost_mxn": 1450,
+        "net_profit_mxn": 8950,
+        "margin_pct": 86.1,
+        "digital_sla": "Todo lo de Suite Total + acceso piloto Captoora Biogen (Beta) o cobertura posada fin de año combinada",
+        "physical_sla": "Placa acrílica LED QR a Reseñas Google / WhatsApp en taller MTY/SPGG (3–5 días hábiles · pago diferido en 2do momento)",
+        "deferred_split": {
+          "enabled": true,
+          "phase_1_digital_mxn": 6890,
+          "phase_2_physical_mxn": 3510
+        }
+      }
+    ]
+  },
+  "sprint_target": {
+    "closed_deals_count": 0,
+    "confirmed_advance_mxn": 0,
+    "pipeline_pending_trigger_mxn": 75580
+  },
+  "fiscal_profile": {
+    "regime_code": "612",
+    "regime_name": "Persona Física con Actividades Empresariales y Profesionales",
+    "rfc": "GUFJ870801NA6",
+    "currency": "MXN",
+    "iva_rate_pct": 16.0,
+    "isr_reserve_pct": 20.0,
+    "pm_isr_retention_pct": 10.0,
+    "pm_iva_retention_pct": 10.67,
+    "ads_reinvestment_pct": 20.0,
+    "ads_rule_note": "$0 MXN autorizados por adelantado. La pauta pagada (Google/Meta/TikTok/MercadoLibre LED) se desbloquea exclusivamente con porcentaje neto de ventas reales cobradas tras restar costos de taller y reserva fiscal SAT."
+  },
+  "cashflow_ledger": {
+    "paid_sales": [],
+    "expenses": [],
+    "ads_spend_log": []
+  }
+}

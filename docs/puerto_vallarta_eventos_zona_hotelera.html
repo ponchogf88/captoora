@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captoora Studio · Eventos PV — Zona Hotelera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07060b;
+      --card: #101018;
+      --surface: #171724;
+      --gold: #d4af37;
+      --champagne: #e8d5a8;
+      --volt: #c6ff00;
+      --danger: #ff6b6b;
+      --text: #f5f4f8;
+      --muted: #9c9aa8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    body {
+      background: radial-gradient(circle at 85% 0%, rgba(198,255,0,0.06), transparent 36%),
+                  radial-gradient(circle at 10% 10%, rgba(212,175,55,0.08), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.5;
+      padding: 28px 20px 64px;
+    }
+    .wrap { max-width: 1320px; margin: 0 auto; }
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      margin-bottom: 18px;
+    }
+    .brand-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--volt);
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+      color: #fff;
+      margin-top: 4px;
+    }
+    .subtitle { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .nav-pill {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(255,255,255,0.03);
+      color: var(--champagne);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nav-pill.active, .nav-pill:hover {
+      border-color: var(--volt);
+      color: #07060b;
+      background: var(--volt);
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .kpi-val { font-size: 1.65rem; font-weight: 800; color: #fff; font-family: 'JetBrains Mono', monospace; }
+    .kpi-val.volt { color: var(--volt); }
+    .kpi-val.gold { color: var(--gold); }
+    .kpi-label { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+    .callout {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.35);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 0.88rem;
+      color: var(--champagne);
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 10px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 900px) { .controls { grid-template-columns: 1fr; } }
+    input, select {
+      width: 100%;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.86rem;
+      font-family: inherit;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-title { font-size: 1.02rem; font-weight: 700; color: #fff; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: 1px solid rgba(212,175,55,0.45);
+      background: rgba(212,175,55,0.12);
+      color: var(--champagne);
+    }
+    .tag.volt {
+      border-color: rgba(198,255,0,0.55);
+      background: rgba(198,255,0,0.1);
+      color: var(--volt);
+    }
+    .meta { font-size: 0.81rem; color: var(--muted); }
+    .meta strong { color: #e2e0ec; }
+    .obs {
+      font-size: 0.8rem;
+      color: #ebe6d7;
+      background: rgba(255,255,255,0.03);
+      border-left: 3px solid var(--gold);
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+    .actions {
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-size: 0.76rem;
+      font-weight: 700;
+      padding: 7px 11px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn.primary { background: var(--volt); color: #07060b; border-color: var(--volt); }
+    .btn.gold { border-color: rgba(212,175,55,0.5); color: var(--champagne); }
+    .shot-thumb {
+      width: 100%;
+      height: 175px;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: left top;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #090910;
+    }
+    dialog {
+      margin: auto;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 16px;
+      max-width: 820px;
+      width: 92vw;
+      padding: 20px;
+    }
+    dialog::backdrop { background: rgba(0,0,0,0.82); }
+    textarea {
+      width: 100%;
+      min-height: 200px;
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      margin: 10px 0;
+    }
+    h2.section-h {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--champagne);
+      margin: 26px 0 12px;
+    }
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div>
+        <div class="brand-eyebrow">CAPTOORA STUDIO · CARTELERA EN VIVO, INVITADOS &amp; COBERTURA PUERTO VALLARTA</div>
+        <h1>Eventos &amp; Oportunidades — Zona Hotelera</h1>
+        <p class="subtitle">Zona Hotelera Norte (Las Glorias / Versalles / Fluvial / CICPV) · Marina Vallarta · Zona Hotelera Sur / Costa Sur · Filtrado estricto fuera de Nayarit / Vidanta / Tepic.</p>
+      </div>
+    </header>
+    <nav class="nav-pills"><a class="nav-pill" href="puerto_vallarta_eventos_zona_romantica.html">Eventos · Zona Romántica</a><a class="nav-pill active" href="puerto_vallarta_eventos_zona_hotelera.html">Eventos · Zona Hotelera</a><a class="nav-pill" href="puerto_vallarta_eventos_centro_bahia.html">Eventos · Centro / Bahía</a><a class="nav-pill" href="puerto_vallarta_influencers_y_cobertura.html">Influencers, Invitados &amp; Cobertura</a><a class="nav-pill" href="puerto_vallarta_proveedores_taller.html">Proveedores Taller PV</a></nav>
+    <section class="kpi-grid">
+      <div class="kpi"><div class="kpi-val">17</div><div class="kpi-label">Eventos en Zona Hotelera</div></div>
+      <div class="kpi"><div class="kpi-val volt">14</div><div class="kpi-label">Sin Fotógrafo Dedicado</div></div>
+      <div class="kpi"><div class="kpi-val gold">3</div><div class="kpi-label">Oportunidad VIP / Marcas</div></div>
+      <div class="kpi"><div class="kpi-val">27</div><div class="kpi-label">Excluidos (Fuera de PV)</div></div>
+    </section>
+    <section class="controls">
+      <input id="qInput" type="search" placeholder="Buscar por evento, artista, chef, DJ, recinto o fecha..." />
+      <select id="subSelect"><option value="all">Todas las subzonas (4)</option><option value="Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV">Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV</option><option value="Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera">Zona Hotelera Norte · Las Glorias &amp; Franja Hotelera</option><option value="Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas">Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas</option><option value="Zona Hotelera · Marina Vallarta &amp; Puerto Mágico">Zona Hotelera · Marina Vallarta &amp; Puerto Mágico</option></select>
+      <select id="catSelect"><option value="all">Todas las categorías (12)</option><option value="Cine al Aire Libre &amp; Mascotas">Cine al Aire Libre &amp; Mascotas</option><option value="Concierto / Fiesta / Networking (Eventbrite)">Concierto / Fiesta / Networking (Eventbrite)</option><option value="Concierto Pop-Rock">Concierto Pop-Rock</option><option value="Deportes / Running">Deportes / Running</option><option value="Deportes / Torneo de Pádel">Deportes / Torneo de Pádel</option><option value="Deportes Alto Ticket / Golf Pro-Am">Deportes Alto Ticket / Golf Pro-Am</option><option value="Gala Navideña / Filantropía">Gala Navideña / Filantropía</option><option value="Gastronomía Internacional">Gastronomía Internacional</option><option value="Gastronomía de Alta Gama / Festival Gourmet">Gastronomía de Alta Gama / Festival Gourmet</option><option value="Mercado Cultural &amp; Arte">Mercado Cultural &amp; Arte</option><option value="Posadas Hoteleras &amp; Eventos Corporativos">Posadas Hoteleras &amp; Eventos Corporativos</option><option value="Torneo Deportivo &amp; Chefs en Vivo">Torneo Deportivo &amp; Chefs en Vivo</option></select>
+    </section>
+    <div style="margin-bottom:12px; color:var(--muted); font-size:0.84rem;" id="countLabel"></div>
+    <main id="cardsGrid" class="grid"></main>
+  </div>
+  <dialog id="scriptModal">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <strong id="modalTitle"></strong>
+      <button class="btn" onclick="document.getElementById('scriptModal').close()">Cerrar</button>
+    </div>
+    <textarea id="modalText"></textarea>
+    <div style="display:flex; justify-content:flex-end; gap:10px;">
+      <button class="btn primary" onclick="copyModal()">Copiar Guion</button>
+    </div>
+  </dialog>
+  <script>
+    const EVENTS = [{"id": "padel-torneo-233-dic2026", "fecha": "03 – 06 Dic 2026", "horario": "Torneo 4 días (7:00 AM – 11:00 PM)", "titulo": "Torneo 233 — Torneo Anual de Pádel & Terraza Savia", "recinto": "Padel 233 (Av. Manuel Lepe 216, Guadalupe Victoria)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Deportes / Torneo de Pádel", "invitados_artistas_lineup": ["Jugadores amateurs y avanzados PV / GDL", "Comunidad @padel233pv y Savia Bistro"], "influencers_relacionados": ["Comunidad pádel Puerto Vallarta & marcas patrocinadoras de cancha"], "cobertura_fotografica_detectada": "Abierta — Sin cobertura editorial 1/2000s ni trofeos acrílicos LED anunciados en sitio web.", "estado_oportunidad_captoora": "Abierta / Nicho Core Captoora (Pádel + Trofeos LED)", "fuente_url": "https://www.padel233.com/", "fuente_portal": "Padel233.com", "resumen": "Torneo confirmado de 4 días en club con 5 canchas techadas y bar/restaurante Savia.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Padel 233 (Av. Manuel Lepe 216, Guadalupe Victoria) (Torneo 233 — Torneo Anual de Pádel & Terraza Savia junto a Jugadores amateurs y avanzados PV / GDL, Comunidad @padel233pv y Savia Bistro · 03 – 06 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos acción deportiva a 1/2000s (cuerpo entero y entregas digitales el mismo día para competidores y marcas). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, trofeos/placas en acrílico óptico con luz LED y logotipo de patrocinadores (listos en 3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "golf-pv-international-proam-dic2026", "fecha": "07 – 12 Dic 2026", "horario": "Torneo semanal + eventos de hospitalidad en hotel sede", "titulo": "37th Puerto Vallarta International Pro-Am (82–84 Equipos · PGA & Senior Tour)", "recinto": "Marriott Puerto Vallarta Resort & Spa (Marina Vallarta) + Marina/Vista Vallarta Golf", "zona": "zona_hotelera", "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico", "categoria": "Deportes Alto Ticket / Golf Pro-Am", "invitados_artistas_lineup": ["82–84 equipos con jugadores PGA Tour y Senior Tour", "Host oficial Marriott Puerto Vallarta Resort & Spa"], "influencers_relacionados": ["Ejecutivos y patrocinadores de alto poder adquisitivo (EUA / Canadá / México)"], "cobertura_fotografica_detectada": "Abierta — Enfocado en operación deportiva internacional; oportunidad premium para retrato corporativo de equipos en campo + placas acrílico/parota de premiación patrocinadas.", "estado_oportunidad_captoora": "Abierta / Alto Ticket B2B", "fuente_url": "https://internationalproam.com/", "fuente_portal": "InternationalProAm.com", "resumen": "37º aniversario con sede exclusiva en Marriott Resort & Spa recién renovado.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Marriott Puerto Vallarta Resort & Spa (Marina Vallarta) + Marina/Vista Vallarta Golf (37th Puerto Vallarta International Pro-Am (82–84 Equipos · PGA & Senior Tour) junto a 82–84 equipos con jugadores PGA Tour y Senior Tour, Host oficial Marriott Puerto Vallarta Resort & Spa · 07 – 12 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos acción deportiva a 1/2000s (cuerpo entero y entregas digitales el mismo día para competidores y marcas). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, trofeos/placas en acrílico óptico con luz LED y logotipo de patrocinadores (listos en 3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "pv-posadas-hoteles-zona-hotelera-dic2026", "fecha": "10 – 24 Dic 2026", "horario": "Vespertino / Nocturno", "titulo": "Temporada de Posadas Corporativas & Cenas Navideñas Hoteleras", "recinto": "Franja Hotelera Norte & Sur (Sheraton, Fiesta Americana, Krystal, Buenaventura, Marriott, Velas, Garza Blanca)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera", "categoria": "Posadas Hoteleras & Eventos Corporativos", "invitados_artistas_lineup": ["Gerencias de Grupos/Banquetes", "Equipos corporativos locales e invitados"], "influencers_relacionados": ["Turistas de fin de año, familias VIP y creadores locales de hospitalidad"], "cobertura_fotografica_detectada": "Abierta — La mayoría de hoteles solo usan fotos casuales de staff y no ofrecen paquetes instantáneos con galería nocturna + porta-menús/placas QR acrílicas para posadas.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos", "fuente_portal": "Temporada Oficial Dic 2026 PV", "resumen": "Ventana prioritaria de posadas corporativas, cenas de Nochebuena y festejos de Fin de Año 2026.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Franja Hotelera Norte & Sur (Sheraton, Fiesta Americana, Krystal, Buenaventura, Marriott, Velas, Garza Blanca) (Temporada de Posadas Corporativas & Cenas Navideñas Hoteleras junto a Gerencias de Grupos/Banquetes, Equipos corporativos locales e invitados · 10 – 24 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos cobertura nocturna con iluminación editorial para cenas de gala, posadas corporativas y celebraciones (galería lista al día siguiente para invitados y prensa). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, porta-menús o displays acrílicos LED grabados con QR directo a Google Maps o galería privada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-31-festival-gourment-international", "fecha": "12-11-2026 al 22-11-2026", "horario": "Consultar sede / ficha oficial", "titulo": "31º Festival Gourmet International", "recinto": "30 restaurantes sede en PV (ver detalle FGI)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Gastronomía Internacional", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Sin crédito de fotógrafo dedicado en ficha oficial FIDETUR.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/31-festival-gourment-international", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " 31º Festival Gourmet International 31º Festival Gourmet International Inicia : 12-11-2026 Finaliza : 22-11-2026 30 extraordinarios restaurantes de Puerto Vallarta y la región presentan menús exclusivos de prestigiosos chefs durante los 10 días del festival. La 31ª edición del Fe", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de 30 restaurantes sede en PV (ver detalle FGI) (31º Festival Gourmet International junto a Talento y anfitriones oficiales del programa PV · 12-11-2026 al 22-11-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos fotografía editorial culinaria, emplatado con iluminación controlada, retratos de chefs y cobertura discreta en mesa VIP el mismo día. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, menús luminosos o placas QR en acrílico óptico y madera sellada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-movie-picnic-2026-2027", "fecha": "12-11-2026 al 27-05-2027", "horario": "Consultar sede / ficha oficial", "titulo": "Movie Picnic 2026-2027", "recinto": "Jardín de la Luna — Hotel Puerto de Luna (Zona Hotelera)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera", "categoria": "Cine al Aire Libre & Mascotas", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Hotel Puerto de Luna sin cobertura editorial nocturna frecuente ni activación patrocinada.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/movie-picnic-2026-2027", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Movie Picnic 2026-2027 Movie Picnic 2026-2027 Inicia : 12-11-2026 Finaliza : 27-05-2027 El jueves 12 de noviembre regresa Movie Picnic en su décimo segunda temporada. En Movie Picnic todos los jueves al atardecer son de cine al aire libre, desde noviembre a mayo, en el Jardín de", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Jardín de la Luna — Hotel Puerto de Luna (Zona Hotelera) (Movie Picnic 2026-2027 junto a Talento y anfitriones oficiales del programa PV · 12-11-2026 al 27-05-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "oapv-christmas-garden-los-mangos", "fecha": "13 Dic 2026", "horario": "Tarde / Jardín", "titulo": "The Christmas Garden Party (Beneficio Vallarta School for Girls)", "recinto": "Biblioteca Los Mangos (Av. Francisco Villa 1001)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Gala Navideña / Filantropía", "invitados_artistas_lineup": ["Comunidad internacional Vallarta School for Girls"], "influencers_relacionados": ["Patronato benéfico PV y prensa comunitaria"], "cobertura_fotografica_detectada": "Abierta — Evento social diurno sin servicio editorial dedicado de retrato para patrocinadores.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://outandaboutpv.com/christmas-in-the-garden-a-vallarta-holiday-tradition-returns/", "fuente_portal": "OutAndAboutPV.com", "resumen": "Tradición navideña anual de recaudación en los jardines de Biblioteca Los Mangos.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Biblioteca Los Mangos (Av. Francisco Villa 1001) (The Christmas Garden Party (Beneficio Vallarta School for Girls) junto a Comunidad internacional Vallarta School for Girls · 13 Dic 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-torneo-de-pesca-deportiva-mismaloya-2026", "fecha": "20-11-2026 al 21-11-2026", "horario": "Consultar sede / ficha oficial", "titulo": "Torneo de Pesca Deportiva Mismaloya 2026", "recinto": "Playa de Mismaloya (Zona Hotelera Sur PV)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas", "categoria": "Torneo Deportivo & Chefs en Vivo", "invitados_artistas_lineup": ["Equipos de pesca deportiva", "Chefs invitados cocinando en vivo en playa"], "influencers_relacionados": ["Audiencia turística y creadores locales de temporada (#VisitaPuertoVallarta)"], "cobertura_fotografica_detectada": "Abierta — Premios en efectivo y chefs en vivo en playa sin fotógrafo comercial asignado en web.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/torneo-de-pesca-deportiva-mismaloya-2026", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Torneo de Pesca Deportiva Mismaloya 2026 Torneo de Pesca Deportiva Mismaloya 2026 Inicia : 20-11-2026 Finaliza : 21-11-2026 El Torneo de Pesca Deportiva Playa de Mismaloya regresa en su séptima edición, a celebrarse el 20 y 21 de noviembre en la playa de Mismaloya, ubicada al su", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa de Mismaloya (Zona Hotelera Sur PV) (Torneo de Pesca Deportiva Mismaloya 2026 junto a Equipos de pesca deportiva, Chefs invitados cocinando en vivo en playa · 20-11-2026 al 21-11-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_laughs_in_spanish", "fecha": "2026-11-20", "horario": "Ver horario en Eventbrite", "titulo": "Laughs in Spanish", "recinto": "American School of Puerto Vallarta (Calle Albatros 129)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["Host / Productora del evento"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.com.mx/e/laughs-in-spanish-tickets-2003241131149", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en American School of Puerto Vallarta, Calle Albatros 129, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de American School of Puerto Vallarta (Calle Albatros 129) (Laughs in Spanish junto a Host / Productora del evento · 2026-11-20), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_el_mejor_juicio_es_el_que_nunca_comi", "fecha": "2026-11-24", "horario": "Ver horario en Eventbrite", "titulo": "El mejor juicio es el que nunca comienza", "recinto": "VALARTE (185 Avenida Fluvial Vallarta)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["Host / Productora del evento"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.com/e/el-mejor-juicio-es-el-que-nunca-comienza-tickets-2004985133507", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en VALARTE, 185 Avenida Fluvial Vallarta, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de VALARTE (185 Avenida Fluvial Vallarta) (El mejor juicio es el que nunca comienza junto a Host / Productora del evento · 2026-11-24), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_sunset_beach_dance", "fecha": "2026-12-06", "horario": "Ver horario en Eventbrite", "titulo": "Sunset Beach Dance", "recinto": "Playa conchas chinas (121 Easy)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Sur · Garza Blanca / Costa Sur / Conchas Chinas", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["Host / Productora del evento"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.com/e/sunset-beach-dance-tickets-2004795765101", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en Playa conchas chinas, 121 Easy, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Playa conchas chinas (121 Easy) (Sunset Beach Dance junto a Host / Productora del evento · 2026-12-06), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_hdays_monthly_meeting_in_puerto_vall", "fecha": "2026-12-07", "horario": "Ver horario en Eventbrite", "titulo": "HDays Monthly Meeting in Puerto Vallarta at Marriott Puerto Vallarta Resort", "recinto": "Marriott Puerto Vallarta Resort & Spa (435 Avenida Paseo de la Marina Norte)", "zona": "zona_hotelera", "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["Host / Productora del evento"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.co.uk/e/hdays-monthly-meeting-in-puerto-vallarta-at-marriott-puerto-vallarta-resort-registration-2003333454290", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en Marriott Puerto Vallarta Resort & Spa, 435 Avenida Paseo de la Marina Norte, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Marriott Puerto Vallarta Resort & Spa (435 Avenida Paseo de la Marina Norte) (HDays Monthly Meeting in Puerto Vallarta at Marriott Puerto Vallarta Resort junto a Host / Productora del evento · 2026-12-07), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "eb_party_boat_80s_bash_2027_puerto_val", "fecha": "2027-01-09", "horario": "Ver horario en Eventbrite", "titulo": "Party Boat! 80s Bash 2027 Puerto Vallarta Edition", "recinto": "Chica Locca Tours (Puerto Magico, Blvd. Francisco Medina Ascencio)", "zona": "zona_hotelera", "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico", "categoria": "Concierto / Fiesta / Networking (Eventbrite)", "invitados_artistas_lineup": ["DJ 80s & Tripulación Chica Locca Tours"], "influencers_relacionados": ["Creadores asistentes, celebridades invitadas (ej. Countess Luann NYE) y público de Eventbrite"], "cobertura_fotografica_detectada": "Abierta — Publicado en Eventbrite sin crédito fotográfico comercial fijo.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://www.eventbrite.com/e/party-boat-80s-bash-2027-puerto-vallarta-edition-tickets-1998160164842", "fuente_portal": "Eventbrite.com", "resumen": "Evento presencial confirmado en Chica Locca Tours, Puerto Magico, Blvd. Francisco Medina Ascencio, Puerto Vallarta.", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Chica Locca Tours (Puerto Magico, Blvd. Francisco Medina Ascencio) (Party Boat! 80s Bash 2027 Puerto Vallarta Edition junto a DJ 80s & Tripulación Chica Locca Tours · 2027-01-09), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-los-claxons", "fecha": "26-11-2026", "horario": "Consultar sede / ficha oficial", "titulo": "Los Claxons", "recinto": "Cuarto de Música (Col. Albatros, Zona Hotelera Norte)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Concierto Pop-Rock", "invitados_artistas_lineup": ["Los Claxons (Gira Cantando + Contando · Latin Grammy nominees)"], "influencers_relacionados": ["Asistentes jóvenes locales, público de conciertos y prensa musical PV"], "cobertura_fotografica_detectada": "Abierta / Oportunidad Vip & Afterparty — Concierto íntimo sin servicio foto-editorial para fans VIP ni contenido para patrocinadores del venue.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/los-claxons", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Los Claxons Los Claxons 26-11-2026 La experiencia musical adquiere una dimensión entrañable cuando la distancia entre el escenario y la audiencia se desvanece por completo. El 26 de noviembre, Los Claxons se presentarán en Cuarto de Música en Puerto Vallarta con su formato exclu", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Cuarto de Música (Col. Albatros, Zona Hotelera Norte) (Los Claxons junto a Los Claxons (Gira Cantando + Contando · Latin Grammy nominees) · 26-11-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos retrato editorial de escenario, camerinos y público en alta sensibilidad nocturna con galería lista esa misma noche o en 24h. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, señalética VIP, stands QR o reconocimientos grabados en taller (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-art-market-marina-vallarta-2026", "fecha": "29-10-2026 al 13-05-2027", "horario": "Consultar sede / ficha oficial", "titulo": "Art & Market Marina Vallarta", "recinto": "Malecón de Marina Vallarta", "zona": "zona_hotelera", "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico", "categoria": "Mercado Cultural & Arte", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["+200 expositores locales y visitantes de yates/hoteles de Marina"], "cobertura_fotografica_detectada": "Abierta — +200 expositores sin fotógrafo editorial compartido ni displays LED QR unificados.", "estado_oportunidad_captoora": "Abierta / Sin fotógrafo dedicado", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/art-market-marina-vallarta-2026", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Art & Market Marina Vallarta Art & Market Marina Vallarta Inicia : 29-10-2026 Finaliza : 13-05-2027 El mercado más famoso de Puerto Vallarta, Art & Market Marina Vallarta, regresa para la temporada 2026-2027. Art & Market Marina Vallarta es un mercadito nocturno en el que partic", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Malecón de Marina Vallarta (Art & Market Marina Vallarta junto a Talento y anfitriones oficiales del programa PV · 29-10-2026 al 13-05-2027), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. No detectamos crédito de cobertura editorial independiente publicada para esta fecha en Zona Hotelera. Trabajamos fotografía documental de exhibición, obra e invitados VIP con colorimetría fiel y entrega inmediata para catálogos y difusión. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, cédulas o señalética museográfica grabada en acrílico óptico (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "vpv-medio-maraton-puerto-vallarta-2026", "fecha": "06-12-2026", "horario": "Consultar sede / ficha oficial", "titulo": "Medio Maratón Puerto Vallarta 2026", "recinto": "Explanada CICPV & Blvd. Medina Ascencio (5K / 21K)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Corredor Versalles / Fluvial / CICPV", "categoria": "Deportes / Running", "invitados_artistas_lineup": ["Talento y anfitriones oficiales del programa PV"], "influencers_relacionados": ["Corredores nacionales/internacionales y clubes running PV/GDL/CDMX"], "cobertura_fotografica_detectada": "Parcial — Foto masiva genérica de meta; alta oportunidad para clubes privados, patrocinadores o paquetes VIP de entrega mismo día.", "estado_oportunidad_captoora": "Parcial / Oportunidad VIP & Marcas", "fuente_url": "https://visitapuertovallarta.com.mx/eventos/medio-maraton-puerto-vallarta-2026", "fuente_portal": "VisitaPuertoVallarta.com.mx (FIDETUR)", "resumen": " Medio Maratón Puerto Vallarta 2026 Medio Maratón Puerto Vallarta 2026 06-12-2026 El segundo Medio Maratón Puerto Vallarta 2026 invita a corredores nacionales e internacionales a recorrer una de las rutas más espectaculares de México, rodeada por el Océano Pacífico, las montañas ", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Explanada CICPV & Blvd. Medina Ascencio (5K / 21K) (Medio Maratón Puerto Vallarta 2026 junto a Talento y anfitriones oficiales del programa PV · 06-12-2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Hotelera. Trabajamos acción deportiva a 1/2000s (cuerpo entero y entregas digitales el mismo día para competidores y marcas). Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, trofeos/placas en acrílico óptico con luz LED y logotipo de patrocinadores (listos en 3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "fgi_marea_brasas_cena_a_4_manos", "fecha": "18, 19 y 20 Nov 2026", "horario": "19:00 h", "titulo": "Marea & Brasas — Cena a 4 Manos (Chef Rogelio Domínguez + Chef Invitado Freddy Monteros)", "recinto": "Restaurante Elena 1927 · Hotel Villa Premiere (Col. 5 de Diciembre / Zona Hotelera Norte)", "zona": "zona_hotelera", "subzona": "Zona Hotelera Norte · Las Glorias & Franja Hotelera", "categoria": "Gastronomía de Alta Gama / Festival Gourmet", "invitados_artistas_lineup": ["Chef Rogelio Domínguez (Elena 1927)", "Chef Invitado Freddy Monteros (Erizo de Mar, Guadalajara · ex Quique Dacosta 3★ Michelin)"], "influencers_relacionados": ["Creadores foodie PV/GDL, prensa gastronómica y sommeliers"], "cobertura_fotografica_detectada": "Parcial — Prensa institucional general del festival; alta demanda individual de restaurantes anfitriones, chefs invitados y bodegas de vino para reels y retrato privado.", "estado_oportunidad_captoora": "Parcial / Oportunidad Chefs & Restaurantes", "fuente_url": "https://festivalgourmet.com.mx/restaurantes/elena-1927/", "fuente_portal": "FestivalGourmet.com.mx (Edición 31)", "resumen": "Programa – Festival Gourmet Internacional Ir al contenido Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Comprar boletos ", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Restaurante Elena 1927 · Hotel Villa Premiere (Col. 5 de Diciembre / Zona Hotelera Norte) (Marea & Brasas — Cena a 4 Manos (Chef Rogelio Domínguez + Chef Invitado Freddy Monteros) junto a Chef Rogelio Domínguez (Elena 1927), Chef Invitado Freddy Monteros (Erizo de Mar, Guadalajara · ex Quique Dacosta 3★ Michelin) · 18, 19 y 20 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Hotelera. Trabajamos fotografía editorial culinaria, emplatado con iluminación controlada, retratos de chefs y cobertura discreta en mesa VIP el mismo día. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, menús luminosos o placas QR en acrílico óptico y madera sellada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}, {"id": "fgi_evento_de_clausura_puerto_vallar", "fecha": "Sábado 21 Nov 2026", "horario": "17:00 h", "titulo": "Evento de Clausura Puerto Vallarta: BBQ & Wine", "recinto": "Hotel Velas Vallarta (Marina Vallarta)", "zona": "zona_hotelera", "subzona": "Zona Hotelera · Marina Vallarta & Puerto Mágico", "categoria": "Gastronomía de Alta Gama / Festival Gourmet", "invitados_artistas_lineup": ["Chef Víctor Howard (Pitmaker BBQ · 4 veces campeón mundial)", "+30 etiquetas de vino Viparmex"], "influencers_relacionados": ["Creadores foodie PV/GDL, prensa gastronómica y sommeliers"], "cobertura_fotografica_detectada": "Parcial — Prensa institucional general del festival; alta demanda individual de restaurantes anfitriones, chefs invitados y bodegas de vino para reels y retrato privado.", "estado_oportunidad_captoora": "Parcial / Oportunidad Chefs & Restaurantes", "fuente_url": "https://festivalgourmet.com.mx/restaurantes/laribera/", "fuente_portal": "FestivalGourmet.com.mx (Edición 31)", "resumen": "Programa – Festival Gourmet Internacional Ir al contenido Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Inicio Programa Tienda Participantes Patrocinadores Galería Blog English Comprar boletos ", "lead_gmaps_vinculado": null, "guion_acercamiento_captoora": "Hola equipo de Hotel Velas Vallarta (Marina Vallarta) (Evento de Clausura Puerto Vallarta: BBQ & Wine junto a Chef Víctor Howard (Pitmaker BBQ · 4 veces campeón mundial), +30 etiquetas de vino Viparmex · Sábado 21 Nov 2026), soy Jesús Gutiérrez, director y fotógrafo en Captoora Studio. Aunque existe cobertura general de prensa, vemos espacio directo para cobertura dedicada a artistas, mesas VIP y marcas aliadas en Zona Hotelera. Trabajamos fotografía editorial culinaria, emplatado con iluminación controlada, retratos de chefs y cobertura discreta en mesa VIP el mismo día. Manejamos cobertura Solo Digital con beneficio de temporada (-35%, galería lista el mismo día para difusión y venta/etiquetado) y, si lo requieren en una segunda etapa, menús luminosos o placas QR en acrílico óptico y madera sellada (3–5 días hábiles). ¿Te comparto 3 muestras de portafolio y opciones por WhatsApp?"}];
+    function esc(s) { return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+    function render() {
+      const q = document.getElementById('qInput').value.trim().toLowerCase();
+      const sub = document.getElementById('subSelect').value;
+      const cat = document.getElementById('catSelect').value;
+      const rows = EVENTS.filter(e => {
+        if (sub !== 'all' && e.subzona !== sub) return false;
+        if (cat !== 'all' && e.categoria !== cat) return false;
+        if (q) {
+          const hay = `${e.titulo} ${e.recinto} ${e.fecha} ${(e.invitados_artistas_lineup||[]).join(' ')} ${(e.influencers_relacionados||[]).join(' ')}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+      document.getElementById('countLabel').textContent = `Mostrando ${rows.length} de ${EVENTS.length} eventos verificados`;
+      document.getElementById('cardsGrid').innerHTML = rows.map(e => {
+        const openCls = String(e.estado_oportunidad_captoora||'').includes('Abierta') ? 'tag volt' : 'tag';
+        const guests = (e.invitados_artistas_lineup||[]).join(' · ') || 'Talento anunciado en ficha';
+        const leadTag = e.lead_gmaps_vinculado ? `<div class="meta"><strong>Ficha Maps vinculada:</strong> ${esc(e.lead_gmaps_vinculado.nombre_gmaps)} (${esc(e.lead_gmaps_vinculado.telefono||'Sin tel')})</div>` : '';
+        return `
+          <article class="card">
+            <div>
+              <div class="card-top">
+                <div class="card-title">${esc(e.titulo)}</div>
+                <span class="${openCls}">${esc(e.estado_oportunidad_captoora)}</span>
+              </div>
+              <div class="meta" style="margin-top:6px;"><strong>Fecha:</strong> ${esc(e.fecha)} · ${esc(e.horario)}</div>
+              <div class="meta"><strong>Recinto:</strong> ${esc(e.recinto)}</div>
+              <div class="meta"><strong>Subzona:</strong> ${esc(e.subzona)} · <strong>Categoría:</strong> ${esc(e.categoria)}</div>
+              <div class="meta"><strong>Invitados / Lineup:</strong> ${esc(guests)}</div>
+              ${leadTag}
+              <div class="obs" style="margin-top:8px;"><strong>Cobertura detectada:</strong> ${esc(e.cobertura_fotografica_detectada)}</div>
+            </div>
+            <div class="actions">
+              <a class="btn" href="${esc(e.fuente_url)}" target="_blank">Fuente en vivo &rarr;</a>
+              <button class="btn primary" onclick="openScript('${esc(e.id)}')">Ver Guion Captoora</button>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+    function openScript(id) {
+      const ev = EVENTS.find(x => x.id === id);
+      if (!ev) return;
+      document.getElementById('modalTitle').textContent = `${ev.titulo} — Guion Neutral`;
+      document.getElementById('modalText').value = ev.guion_acercamiento_captoora || '';
+      document.getElementById('scriptModal').showModal();
+    }
+    function copyModal() {
+      const t = document.getElementById('modalText');
+      t.select();
+      navigator.clipboard.writeText(t.value);
+    }
+    ['qInput','subSelect','catSelect'].forEach(id => {
+      document.getElementById(id).addEventListener('input', render);
+      document.getElementById(id).addEventListener('change', render);
+    });
+    render();
+  </script>
+</body>
+</html>

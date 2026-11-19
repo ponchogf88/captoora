@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Captoora Biogen · Propuesta de Alianza — Cocina Saludable &amp; Meal Prep</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#050608;--surface:#0b0e14;--surface-2:#111622;
+      --gold:#c9a23f;--gold-bright:#ecd28a;--volt:#c6ff00;--cyan:#38bdf8;
+      --border:rgba(255,255,255,.1);--border-gold:rgba(201,162,63,.36);
+      --text:#f5f4ef;--muted:#9aa3b2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    @page{size:letter portrait;margin:0}
+    html,body{background:#030406;color:var(--text);font-family:"Inter",-apple-system,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .page{
+      width:8.5in;height:11in;margin:0 auto;padding:.42in .48in .36in;
+      background:
+        radial-gradient(circle at 88% 8%,rgba(201,162,63,.14),transparent 42%),
+        radial-gradient(circle at 12% 92%,rgba(198,255,0,.08),transparent 44%),
+        var(--bg);
+      display:flex;flex-direction:column;justify-content:space-between;
+      page-break-after:always;break-after:page;overflow:hidden;position:relative;
+    }
+    .page:last-child{page-break-after:auto;break-after:auto}
+    .topbar{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:34px;object-fit:contain}
+    .brand-txt{font-family:"Cinzel",Georgia,serif;font-size:13px;letter-spacing:.14em;color:var(--gold-bright)}
+    .brand-sub{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.12em;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;font-family:"JetBrains Mono",monospace;font-size:9.5px;font-weight:700;letter-spacing:.08em;border:1px solid var(--border-gold);color:var(--gold-bright);background:rgba(201,162,63,.08)}
+    .pill.volt{border-color:rgba(198,255,0,.48);color:var(--volt);background:rgba(198,255,0,.08)}
+    .pill.cyan{border-color:rgba(56,189,248,.45);color:var(--cyan);background:rgba(56,189,248,.08)}
+    .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--volt);margin-bottom:5px}
+    h1{font-family:"Cinzel",Georgia,serif;font-size:26px;line-height:1.09;letter-spacing:.03em;color:var(--text);margin-bottom:8px}
+    h1 span{color:var(--gold-bright)}
+    h2{font-family:"Cinzel",Georgia,serif;font-size:15.5px;letter-spacing:.05em;color:var(--gold-bright);margin-bottom:8px}
+    .lead{font-size:11.6px;line-height:1.48;color:#d6dbe4}
+    .card{background:linear-gradient(155deg,rgba(17,22,34,.94),rgba(8,10,15,.98));border:1px solid var(--border);border-radius:14px;padding:13px 15px}
+    .card.gold{border-color:var(--border-gold)}
+    .card.volt{border-color:rgba(198,255,0,.4)}
+    .card.cyan{border-color:rgba(56,189,248,.36)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:stretch;margin:12px 0}
+    .hero-photo{border-radius:14px;overflow:hidden;border:1px solid var(--border-gold);position:relative;background:#06080c;height:252px}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+    .photo-badge{position:absolute;bottom:8px;left:8px;background:rgba(5,6,8,.88);border:1px solid rgba(198,255,0,.45);border-radius:999px;padding:4px 10px;font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;color:var(--volt)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .k-title{font-size:11.4px;font-weight:800;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:7px}
+    .k-copy{font-size:10.5px;line-height:1.44;color:var(--muted)}
+    .k-copy strong{color:var(--text)}
+    .gallery-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+    .g-shot{border-radius:10px;overflow:hidden;border:1px solid var(--border);height:122px;position:relative;background:#07090e}
+    .g-shot img{width:100%;height:100%;object-fit:cover;display:block}
+    .g-cap{position:absolute;bottom:0;left:0;right:0;padding:4px 8px;font-family:"JetBrains Mono",monospace;font-size:8.5px;background:linear-gradient(transparent,rgba(5,6,8,.92));color:var(--gold-bright)}
+    .partner-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;border-radius:12px;background:rgba(17,22,34,.78);border:1px solid var(--border)}
+    .partner-logos{display:flex;align-items:center;gap:12px}
+    .partner-logos img{height:22px;object-fit:contain}
+    .flow-card{padding:13px;border-radius:13px;background:#0a0d14;border:1px solid var(--border-gold)}
+    .step-badge{font-family:"JetBrains Mono",monospace;font-size:9px;font-weight:700;color:#050608;background:var(--volt);padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:6px}
+    .step-badge.gold{background:var(--gold-bright)}
+    .step-badge.cyan{background:var(--cyan)}
+    .cta-box{border:1px solid rgba(198,255,0,.45);background:linear-gradient(135deg,rgba(198,255,0,.08),rgba(201,162,63,.08));border-radius:14px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .footer{display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid var(--border);font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.08em;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+  <!-- PÁGINA 1 -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">CAPTOORA BIOGEN · ALIANZA COMERCIAL 2027</div>
+            <div class="brand-sub">COCINA SALUDABLE, MEAL PREP &amp; CONTENIDO DIARIO CON ATLETAS</div>
+          </div>
+        </div>
+        <span class="pill volt">CAMPAÑA ENERO 2027 · MONTERREY</span>
+      </div>
+
+      <div class="hero-grid">
+        <div style="display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div class="eyebrow">CONVIERTE ENERO EN TU MEJOR MES DE VENTAS</div>
+            <h1>TU MARCA EN MANOS DE <span>INFLUENCERS FIT</span> TODOS LOS DÍAS</h1>
+            <p class="lead">
+              Enero es la temporada más fuerte del año para comer bien y empezar el gimnasio. En <strong>Captoora Biogen</strong>
+              integramos a una cohorte de atletas y creadores de Monterrey (<strong>8K a 25K+ seguidores</strong>) que documentarán su transformación
+              durante 4 a 12 semanas con fotografía profesional, nutrióloga titular, gimnasio y suplementos.
+              Queremos que <strong>tu cocina sea la alimentación oficial del programa</strong>.
+            </p>
+          </div>
+          <div class="card gold" style="margin-top:10px;">
+            <div class="k-title" style="color:var(--gold-bright);">VALOR DESDE EL DÍA 1 · ANTES DE LA PRIMERA VENTA</div>
+            <p class="k-copy">
+              Antes de arrancar con los creadores, el equipo de <strong>Captoora Studio</strong> va a tu cocina o sucursal para hacer una
+              <strong>sesión fotográfica profesional de tus platillos y espacio</strong>, lista para tu menú, Uber Eats / Rappi / DiDi y redes.
+              Conoce nuestro nivel en: <strong style="color:var(--volt);">https://captoora.studio/sports</strong>
+            </p>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/hero-portrait.png" alt="Producción Captoora Studio" />
+          <span class="photo-badge">FOTOGRAFÍA EDITORIAL · DÍA 1 INCLUIDA</span>
+        </div>
+      </div>
+
+      <h2>1. QUÉ RECIBE TU MARCA EN ESTA ALIANZA</h2>
+      <div class="grid-3">
+        <div class="card volt">
+          <div class="k-title" style="color:var(--volt);">SESIÓN PRO DE TUS PLATILLOS</div>
+          <p class="k-copy">
+            Fotografía editorial con iluminación controlada de tus platillos estrella, empaques y cocina para elevar tu tasa de pedido en apps, Google Maps e Instagram.
+          </p>
+        </div>
+        <div class="card cyan">
+          <div class="k-title" style="color:var(--cyan);">28 A 84 HISTORIAS POR CREADOR</div>
+          <p class="k-copy">
+            Cada influencer publica por contrato <strong>1 historia diaria (mín. 15s)</strong> mostrando sus platillos con etiqueta a tu marca durante las 4 a 12 semanas del reto.
+          </p>
+        </div>
+        <div class="card gold">
+          <div class="k-title" style="color:var(--gold-bright);">CLIENTES DE PAGA (ENERO)</div>
+          <p class="k-copy">
+            Además de los influencers, quienes contratan el programa Captoora Biogen como público general reciben acceso preferencial a tu menú y planes semanales.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <div class="eyebrow" style="margin:0;">ESTÁNDAR VISUAL DEL ESTUDIO (MISMO NIVEL PRESENTADO A CAPITANES)</div>
+          <span class="brand-sub" style="color:var(--gold-bright);">PORTAFOLIO ➔ CAPTOORA.STUDIO/SPORTS</span>
+        </div>
+        <div class="gallery-strip">
+          <div class="g-shot">
+            <img src="../assets/presentation/capitanes_court_hero.jpg" alt="Acción deportiva Captoora" />
+            <div class="g-cap">ALTA VELOCIDAD 1/2000s</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Estudio escultural" style="object-position:center 20%;" />
+            <div class="g-cap">LUZ CONTROLADA EN ESTUDIO</div>
+          </div>
+          <div class="g-shot">
+            <img src="../assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg" alt="Contenido vertical" style="object-position:center 20%;" />
+            <div class="g-cap">CLIPS VERTICALES PARA REDES</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="partner-bar" style="margin-bottom:8px;">
+        <span class="brand-sub" style="color:var(--text);font-weight:700;">RESPALDO COMERCIAL:</span>
+        <div class="partner-logos">
+          <span style="background:rgba(245,244,239,.92);padding:2px 7px;border-radius:6px;display:inline-flex"><img src="../assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec" /></span>
+          <img src="../assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Tigres UANL" />
+          <img src="../assets/logos_partnerships/farmasi_transparent.png" alt="Farmasi" />
+          <span class="brand-sub" style="color:var(--gold-bright);">COCA-COLA FEMSA · TECATE · PODER JUDICIAL NL</span>
+        </div>
+      </div>
+      <div class="footer">
+        <span>CAPTOORA BIOGEN · ALIANZA COCINAS SALUDABLES 2027</span>
+        <span>PÁGINA 1 DE 2</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PÁGINA 2 -->
+  <section class="page">
+    <div>
+      <div class="topbar">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="brand-txt">ORDEN OPERATIVO &amp; FICHA NUTRICIONAL</div>
+            <div class="brand-sub">CÓMO PROTEGEMOS TU COCINA Y GARANTIZAMOS RESULTADOS</div>
+          </div>
+        </div>
+        <span class="pill cyan">ARRANQUE PILOTO · 2 DE ENERO 2027</span>
+      </div>
+
+      <div style="margin:12px 0 10px;">
+        <div class="eyebrow">2. EL INFLUENCER LLEGA CON SU FICHA DE LA NUTRIÓLOGA</div>
+        <h1>CERO IMPROVISACIÓN: <span>NUTRIÓLOGA + FICHA + CONTENIDO</span></h1>
+        <p class="lead">
+          Sabemos que la alimentación es un tema delicado. Por eso ningún creador llega a improvisar qué pedir: la
+          <strong>Nutrióloga Karen</strong> evalúa previamente a cada participante y entrega una <strong>Ficha Nutricional</strong>
+          exacta con su plan y restricciones para que tu cocina prepare únicamente lo indicado.
+        </p>
+      </div>
+
+      <div class="grid-3" style="margin-bottom:12px;">
+        <div class="flow-card">
+          <span class="step-badge cyan">PASO 1 · NUTRIÓLOGA KAREN</span>
+          <div class="k-title">EVALUACIÓN Y FICHA DE ALERGIAS</div>
+          <p class="k-copy">
+            Karen realiza consulta previa, diseña los macros y emite la <strong>Ficha Nutricional</strong> con alergias, intolerancias y selección exacta de platillos de tu menú.
+          </p>
+        </div>
+        <div class="flow-card">
+          <span class="step-badge gold">PASO 2 · TU COCINA ALIADA</span>
+          <div class="k-title">PREPARACIÓN SEGÚN MENÚ</div>
+          <p class="k-copy">
+            Ustedes preparan únicamente los platillos acordados en su menú habitual (sin costo o con tarifa preferente de piloto), en horarios fijos de entrega o recolección.
+          </p>
+        </div>
+        <div class="flow-card">
+          <span class="step-badge">PASO 3 · CAPTOORA + REDES</span>
+          <div class="k-title">PUBLICACIÓN DIARIA Y REPORTE</div>
+          <p class="k-copy">
+            Documentamos la evolución física semanal en estudio. El creador etiqueta a tu cocina todos los días y entrega sus métricas de alcance cada 15/30 días.
+          </p>
+        </div>
+      </div>
+
+      <div class="card cyan" style="margin-bottom:11px;padding:12px 14px;">
+        <div class="k-title" style="color:var(--cyan);">ECOSISTEMA COMPLETO EN OPERACIÓN PARA ENERO 2027</div>
+        <p class="k-copy" style="line-height:1.45;">
+          El programa conecta 4 frentes al mismo tiempo: <strong>Captoora Studio</strong> (registro semanal en foto y video 9:16),
+          <strong>Nutrióloga Karen</strong> (plan, consultas y Ficha Nutricional), <strong>Gimnasios Aliados</strong> (entrenamiento documentado) y
+          <strong>Farmasi · Nutriplus</strong> (suplementación con código de afiliado para el creador). Cada marca opera y responde por su propio producto.
+        </p>
+      </div>
+
+      <div class="grid-2" style="margin-bottom:12px;">
+        <div class="card volt" style="padding:12px 14px;">
+          <div class="k-title" style="color:var(--volt);">QUÉ PEDIMOS VS. QUÉ GARANTIZAMOS</div>
+          <p class="k-copy" style="line-height:1.45;">
+            • <strong>Tu aporte (piloto inicial):</strong> dotación de platillos para 1 a 3 creadores asignados (sin costo o con descuento preferente de alianza) + precio especial a clientes Biogen.<br>
+            • <strong>Nuestro compromiso:</strong> sesión fotográfica profesional de tus platillos desde el Día 1 + contrato formal con el creador donde su incumplimiento suspende beneficios.
+          </p>
+        </div>
+
+        <div class="card gold" style="padding:12px 14px;">
+          <div class="k-title" style="color:var(--gold-bright);">CANDADOS DE CALIDAD PARA TU MARCA</div>
+          <p class="k-copy" style="line-height:1.45;">
+            • <strong>Exclusividad de categoría:</strong> durante el piloto activo, el creador asignado no promociona cocinas competidoras.<br>
+            • <strong>Horarios pico (Insights):</strong> publican sus historias en la ventana real de mayor audiencia de mediodía o cena.<br>
+            • <strong>Cero riesgo operativo:</strong> cada participante conoce su plan y restricciones antes de recibir el primer platillo.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <div>
+          <div class="eyebrow" style="margin-bottom:3px;">ASEGURA TU LUGAR ANTES DEL ARRANQUE DE ENERO</div>
+          <div style="font-family:'Cinzel',serif;font-size:15px;color:var(--text);">
+            ¿AGENDAMOS LA SESIÓN DE TUS PLATILLOS Y EL PILOTO?
+          </div>
+          <div class="k-copy" style="color:#d6dbe4;margin-top:3px;">
+            Escríbenos por WhatsApp o Instagram DM para definir platillos, fechas y creadores asignados a tu zona.
+          </div>
+        </div>
+        <div style="text-align:right;font-family:'JetBrains Mono',monospace;font-size:10px;line-height:1.6;">
+          <div style="color:var(--volt);font-weight:700;">@captoora.studio</div>
+          <div style="color:var(--gold-bright);">WA +52 81 4005 0088</div>
+          <div style="color:var(--cyan);">chuy@captoora.studio</div>
+          <div style="color:var(--text);">https://captoora.studio/sports</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span>JESÚS GUTIÉRREZ · DIRECTOR EDITORIAL · CAPTOORA STUDIO &amp; BIOGEN</span>
+      <span>PÁGINA 2 DE 2 · PORTAFOLIO: CAPTOORA.STUDIO/SPORTS</span>
+    </div>
+  </section>
+
+</body>
+</html>

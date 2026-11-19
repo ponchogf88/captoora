@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bgsb" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1f3a"/>
+      <stop offset="100%" stop-color="#143a66"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="112" height="112" rx="26" fill="url(#bgsb)" stroke="#38bdf8" stroke-width="4"/>
+  <line x1="20" y1="74" x2="100" y2="74" stroke="#38bdf8" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="58" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-style="italic" font-weight="900" font-size="40" letter-spacing="-1" fill="#ffffff">SB</text>
+  <text x="60" y="99" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="13" letter-spacing="2" fill="#c6ff00">PÁDEL</text>
+</svg>

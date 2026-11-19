@@ -1,0 +1,293 @@
+{
+  "sprint": {
+    "name": "Sprint Cierre Martes 12:00 PM: 1 a 3 Clientes Cerrados ('Sí' Firmado + 50% Anticipo)",
+    "started_at": "2026-11-15T05:53:57-06:00",
+    "deadline_at": "2026-11-17T12:00:00-06:00",
+    "tuesday_noon_label": "Martes 17 Nov · 12:00 PM (Monterrey CST)",
+    "target_deals_min": 1,
+    "target_deals_max": 3,
+    "goal_revenue_mxn": 12500,
+    "status": "active"
+  },
+  "projects": [
+    {
+      "id": "proj_sprint_padel",
+      "name": "1. Sprint 72h — Posadas & Torneos del Pavo Pádel",
+      "niche": "Pádel & Raqueta",
+      "owner_agent": "ventas_outreach",
+      "objective": "Cerrar 1 club en San Pedro con paquete Torneo del Pavo ($12,500 MXN) autofinanciable por patrocinador y trofeos LED.",
+      "priority": "Crítica (Deadline 72h)"
+    },
+    {
+      "id": "proj_galas_danza",
+      "name": "2. Galas Navideñas & Preventa White-Glove",
+      "niche": "Baile & Danza Señoras",
+      "owner_agent": "embudo_marketing",
+      "objective": "Activar 2 academias líderes (The Movement / Danz Studio / Freeman) sin gasto directo usando preventa de marcos Fine Art.",
+      "priority": "Alta (Temporada Nov-Dic)"
+    },
+    {
+      "id": "proj_social_embudo",
+      "name": "3. Motor Inbound & Redes (@captoora)",
+      "niche": "Marca & Bucle Viral",
+      "owner_agent": "social_content",
+      "objective": "Publicar piezas visuales mostrando bloques acrílicos iluminados LED y cobertura FEMSA/Tecate/Poder Judicial NL.",
+      "priority": "Alta"
+    },
+    {
+      "id": "proj_corp_b2b",
+      "name": "4. Posadas Corporativas & Sponsor Proof B2B",
+      "niche": "Corporativo / Clubes Élite",
+      "owner_agent": "scouting_radar",
+      "objective": "Mapear posadas deportivas empresariales en San Pedro/Valle Oriente con facturación CFDI formal ($18,500 MXN).",
+      "priority": "Media-Alta"
+    },
+    {
+      "id": "proj_finanzas_ops",
+      "name": "5. Finanzas SAT, Talleres LED & Legal",
+      "niche": "Operación Interna",
+      "owner_agent": "contabilidad_finanzas",
+      "objective": "Asegurar margen >=74%, anticipo 50%, reserva de 3-5 días hábiles en Foco Lab / El Marco San Pedro y contrato limpio.",
+      "priority": "Permanente"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TASK-101",
+      "project_id": "proj_sprint_padel",
+      "title": "Preparar borradores Caballo de Troya (Patrocinador + Acrílicos LED) para Cuatro Padel y Padel GM",
+      "assigned_agent": "ventas_outreach",
+      "status": "done",
+      "priority": "Crítica",
+      "due_label": "Hoy (Día 1 / T-68h)",
+      "depends_on": [],
+      "deliverable_ref": "APR-001, APR-002"
+    },
+    {
+      "id": "TASK-102",
+      "project_id": "proj_sprint_padel",
+      "title": "Preparar acercamiento diagnóstico para PADELBOSS y SB Pádel (Torneo del Pavo $12.5k)",
+      "assigned_agent": "ventas_outreach",
+      "status": "waiting_trigger",
+      "priority": "Crítica",
+      "due_label": "Hoy (Día 1 / T-64h)",
+      "depends_on": [],
+      "deliverable_ref": "APR-003"
+    },
+    {
+      "id": "TASK-103",
+      "project_id": "proj_sprint_padel",
+      "title": "Enriquecer contactos de gerencia/coordinación deportiva de Club Sierra Madre y Deportivo San Agustín",
+      "assigned_agent": "scouting_radar",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Día 2 (T-48h)",
+      "depends_on": [
+        "TASK-101"
+      ],
+      "deliverable_ref": "apify_scraped_leads.json"
+    },
+    {
+      "id": "TASK-104",
+      "project_id": "proj_sprint_padel",
+      "title": "Enviar seguimiento de diagnóstico (regla 24-48h) + propuesta PDF de 1 página con orden de anticipo 50%",
+      "assigned_agent": "chief_of_staff",
+      "status": "backlog",
+      "priority": "Crítica",
+      "due_label": "Día 3 (T-18h)",
+      "depends_on": [
+        "TASK-101",
+        "TASK-102"
+      ],
+      "deliverable_ref": "Orden de Servicio Captoora"
+    },
+    {
+      "id": "TASK-201",
+      "project_id": "proj_galas_danza",
+      "title": "Diseñar borrador White-Glove (Preventa de Marcos sin costo para academia) para The Movement Dance Project y Danz Studio",
+      "assigned_agent": "embudo_marketing",
+      "status": "waiting_trigger",
+      "priority": "Alta",
+      "due_label": "Hoy (Día 1)",
+      "depends_on": [],
+      "deliverable_ref": "APR-004"
+    },
+    {
+      "id": "TASK-202",
+      "project_id": "proj_galas_danza",
+      "title": "Confirmar cupo navideño de molduras de madera maciza con El Marco San Pedro (ventana 3-5 días hábiles)",
+      "assigned_agent": "ops_talleres_legal",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Día 2",
+      "depends_on": [
+        "TASK-201"
+      ],
+      "deliverable_ref": "Checklist Proveedores NL"
+    },
+    {
+      "id": "TASK-301",
+      "project_id": "proj_social_embudo",
+      "title": "Redactar Reel 9:16 y caption 'Proyectando excelencia del club' mostrando entrega mismo día vs acrílico LED",
+      "assigned_agent": "social_content",
+      "status": "waiting_trigger",
+      "priority": "Alta",
+      "due_label": "Día 2",
+      "depends_on": [],
+      "deliverable_ref": "APR-005"
+    },
+    {
+      "id": "TASK-401",
+      "project_id": "proj_corp_b2b",
+      "title": "Preparar campaña Pixieset Email B2B enfocada en Posadas Corporativas San Pedro (respaldo FEMSA / Tecate / PJENL)",
+      "assigned_agent": "embudo_marketing",
+      "status": "backlog",
+      "priority": "Media-Alta",
+      "due_label": "Día 3",
+      "depends_on": [
+        "TASK-103"
+      ],
+      "deliverable_ref": "Pixieset Campaign"
+    },
+    {
+      "id": "TASK-501",
+      "project_id": "proj_finanzas_ops",
+      "title": "Validar tabla de rentabilidad Paquete Torneo del Pavo ($12,500 MXN vs $2,400 MXN maquila = 80.8% margen) + check suscripciones",
+      "assigned_agent": "contabilidad_finanzas",
+      "status": "done",
+      "priority": "Alta",
+      "due_label": "Completado",
+      "depends_on": [],
+      "deliverable_ref": "accounting_ledger.json"
+    },
+    {
+      "id": "TASK-502",
+      "project_id": "proj_finanzas_ops",
+      "title": "Tener lista Orden de Servicio de 1 hoja con cláusula de autoría moral, anticipo 50% y nota de taller 3-5 días hábiles",
+      "assigned_agent": "ops_talleres_legal",
+      "status": "waiting_trigger",
+      "priority": "Alta",
+      "due_label": "Hoy (Día 1)",
+      "depends_on": [
+        "TASK-501"
+      ],
+      "deliverable_ref": "APR-006"
+    },
+    {
+      "id": "TASK-601",
+      "project_id": "proj_sprint_padel",
+      "title": "Camino 2 Paralelo: Contactar Deportivo San Jerónimo, American Gym, 11:11 Fitness y red TotalPass (-35% Temporada)",
+      "assigned_agent": "ventas_outreach",
+      "status": "waiting_trigger",
+      "priority": "Alta",
+      "due_label": "Hoy (Paralelo)",
+      "depends_on": [],
+      "deliverable_ref": "APR-009"
+    },
+    {
+      "id": "TASK-602",
+      "project_id": "proj_social_embudo",
+      "title": "Camino 3 Paralelo: Lanzar piloto Captoora Biogen (Beta) seguimiento físico semanal-bimestral 3-60 meses (-35%)",
+      "assigned_agent": "embudo_marketing",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Lun 16 AM",
+      "depends_on": [],
+      "deliverable_ref": "Simulador Biogen Beta"
+    },
+    {
+      "id": "TASK-603",
+      "project_id": "proj_corp_b2b",
+      "title": "Camino 4 Paralelo: Captura visual Google Maps (Street View / 0 fotos / Sin reclamar) + Láminas Antes vs Después 2027",
+      "assigned_agent": "scouting_radar",
+      "status": "in_progress",
+      "priority": "Crítica",
+      "due_label": "Hoy (Paralelo)",
+      "depends_on": [],
+      "deliverable_ref": "gmaps_audits.json"
+    },
+    {
+      "id": "TASK-604",
+      "project_id": "proj_corp_b2b",
+      "title": "Camino 4 Paralelo: Desplegar Captoora Small Business 2027 (Maps + Meta Business Portfolio) en Modos A, B y C",
+      "assigned_agent": "ventas_outreach",
+      "status": "done",
+      "priority": "Alta",
+      "due_label": "Hoy -> Mar 17",
+      "depends_on": [
+        "TASK-603"
+      ],
+      "deliverable_ref": "APR-007, APR-008"
+    },
+    {
+      "id": "TASK-701",
+      "project_id": "proj_social_embudo",
+      "title": "[Marky · 2x Google Pro] Sincronizar cuota Poncho ($395) + Yari ($99) y activar Brief de Bolsillo Meta Muse móvil",
+      "assigned_agent": "marky_marketing",
+      "status": "in_progress",
+      "priority": "Crítica",
+      "due_label": "Hoy (Cero Grokbot)",
+      "depends_on": [],
+      "deliverable_ref": "marketing_studio.json"
+    },
+    {
+      "id": "TASK-702",
+      "project_id": "proj_social_embudo",
+      "title": "[Lupe · Redes] Programar parrilla semanal Meta Business Suite (FB+IG), TikTok, LinkedIn + respuestas DM (-35%)",
+      "assigned_agent": "lupe_social",
+      "status": "done",
+      "priority": "Alta",
+      "due_label": "Lun–Sáb",
+      "depends_on": [
+        "TASK-703"
+      ],
+      "deliverable_ref": "LUPE-01..03"
+    },
+    {
+      "id": "TASK-703",
+      "project_id": "proj_social_embudo",
+      "title": "[Conan · URGENTE OpusClip Pro] Grabar 3 videos largos (Maps OBS / Navidad LED / Biogen) y extraer 25–30 clips 9:16 antes de fin de prueba",
+      "assigned_agent": "conan_content",
+      "status": "in_progress",
+      "priority": "Crítica",
+      "due_label": "URGENTE · Hoy",
+      "depends_on": [],
+      "deliverable_ref": "BRIEF-001 -> Lupe"
+    },
+    {
+      "id": "TASK-704",
+      "project_id": "proj_social_embudo",
+      "title": "[Conan -> Lupe] Duplicar 5 carruseles 4:5 en Canva y talking-heads en Captions App (Meta Business + Biogen Beta)",
+      "assigned_agent": "conan_content",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Esta Semana",
+      "depends_on": [
+        "TASK-701"
+      ],
+      "deliverable_ref": "BRIEF-002 -> Lupe"
+    },
+    {
+      "id": "TASK-705",
+      "project_id": "proj_social_embudo",
+      "title": "[Muse Móvil] Genera plan vivo de hoy Miércoles 18 Nov para Embudo Invisible (Navidad -35% + Google Maps 141 + OpusClip)",
+      "assigned_agent": "marky_marketing",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Sincronizado de Móvil",
+      "depends_on": [],
+      "deliverable_ref": "Meta Muse Sync"
+    },
+    {
+      "id": "TASK-706",
+      "project_id": "proj_social_embudo",
+      "title": "[Conan · OpusClip Pro + Captions + Canva + CapCut] Prepara brief creativo urgente OpusClip Pro (3 videos OBS -> 25 clips 9:16 Street View y LED) -> entrega para Lupe (IG + TikTok + LinkedIn (Lupe))",
+      "assigned_agent": "conan_content",
+      "status": "in_progress",
+      "priority": "Alta",
+      "due_label": "Sprint Suscripciones",
+      "depends_on": [],
+      "deliverable_ref": "BRIEF-003 (9:16 Reels + 4:5 Carrusel)"
+    }
+  ]
+}

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Captoora Biogen × TotalPass · Propuesta de Alianza 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#050608;--s:#0b0e14;--s2:#111622;
+  --gold:#c9a23f;--gb:#ecd28a;--volt:#c6ff00;--cyan:#38bdf8;
+  --text:#f5f4ef;--muted:#9aa3b2;
+  --bd:rgba(255,255,255,.1);--bdg:rgba(201,162,63,.36)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:13.333in 7.5in;margin:0}
+html,body{background:#020304;color:var(--text);font-family:Inter,-apple-system,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{
+  width:13.333in;height:7.5in;padding:.62in .72in .54in;position:relative;overflow:hidden;
+  page-break-after:always;break-after:page;display:flex;flex-direction:column;justify-content:center;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(201,162,63,.16),transparent 42%),
+    radial-gradient(circle at 10% 92%,rgba(198,255,0,.09),transparent 42%),
+    var(--bg)
+}
+.slide:last-child{page-break-after:auto;break-after:auto}
+.top{
+  position:absolute;top:.28in;left:.72in;right:.72in;display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:8px;border-bottom:1px solid var(--bd);
+  font:700 9.5px "JetBrains Mono",monospace;letter-spacing:.14em;color:var(--muted)
+}
+.top-brand{display:flex;align-items:center;gap:9px}
+.top-brand img{height:24px;object-fit:contain}
+.top-brand b{color:var(--gb);font-family:Cinzel,serif;font-size:12.5px;letter-spacing:.16em}
+.foot{
+  position:absolute;bottom:.24in;left:.72in;right:.72in;display:flex;justify-content:space-between;align-items:center;
+  padding-top:7px;border-top:1px solid var(--bd);
+  font:500 9px "JetBrains Mono",monospace;color:var(--muted);letter-spacing:.1em
+}
+.eyebrow{font:700 10.5px "JetBrains Mono",monospace;letter-spacing:.18em;color:var(--volt);margin-bottom:10px;text-transform:uppercase}
+h1{font:700 46px/1.06 Cinzel,serif;color:var(--text);letter-spacing:.02em}
+h1 span{color:var(--gb)}
+h2{font:700 32px/1.12 Cinzel,serif;color:var(--gb);margin-bottom:16px}
+p.lead{font-size:16px;line-height:1.48;color:#d6dbe4;max-width:7.4in;margin-top:14px}
+.grid{display:grid;gap:14px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.hero-split{display:grid;grid-template-columns:1.25fr 0.75fr;gap:26px;align-items:center}
+.hero-frame{
+  height:4.95in;border-radius:16px;overflow:hidden;border:1px solid var(--bdg);position:relative;background:#07090e
+}
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-badge{
+  position:absolute;bottom:14px;left:14px;background:rgba(5,6,8,.88);border:1px solid rgba(198,255,0,.5);
+  border-radius:999px;padding:6px 13px;font:700 9.5px "JetBrains Mono",monospace;color:var(--volt);letter-spacing:.08em
+}
+.card{background:linear-gradient(155deg,rgba(17,22,34,.95),rgba(8,10,15,.98));border:1px solid var(--bd);border-radius:14px;padding:18px 20px}
+.card.gold{border-color:var(--bdg)}
+.card.volt{border-color:rgba(198,255,0,.42)}
+.card.cyan{border-color:rgba(56,189,248,.38)}
+.card h3{font-size:15.5px;color:var(--gb);margin-bottom:7px}
+.card.volt h3{color:var(--volt)}
+.card.cyan h3{color:var(--cyan)}
+.card p,.card li{font-size:13px;line-height:1.48;color:#c8ccd6}
+.card ul{padding-left:16px;display:flex;flex-direction:column;gap:4px}
+.num{font:700 28px Cinzel,serif;color:var(--volt);margin-bottom:4px}
+.tag{display:inline-block;font:700 9.5px "JetBrains Mono",monospace;letter-spacing:.1em;padding:4px 10px;border-radius:99px;border:1px solid var(--bdg);color:var(--gb);margin-bottom:9px}
+.tag.volt{border-color:rgba(198,255,0,.45);color:var(--volt)}
+.tag.cyan{border-color:rgba(56,189,248,.45);color:var(--cyan)}
+.flow{display:flex;align-items:stretch;gap:8px}
+.flow .card{flex:1;text-align:center;padding:18px 14px}
+.arrow{align-self:center;color:var(--gold);font-size:22px;font-weight:700}
+.gallery3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.shot{height:2.55in;border-radius:12px;overflow:hidden;border:1px solid var(--bdg);position:relative;background:#07090e}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot-cap{position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(transparent,rgba(5,6,8,.94));font:700 9.5px "JetBrains Mono",monospace;color:var(--gb);letter-spacing:.08em}
+.partner-bar{margin-top:14px;padding:10px 16px;border-radius:12px;border:1px solid var(--bd);background:rgba(17,22,34,.82);display:flex;align-items:center;justify-content:space-between}
+.partner-logos{display:flex;align-items:center;gap:14px}
+.partner-logos img{height:24px;object-fit:contain}
+.small{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.45}
+.big{font:700 32px/1.2 Cinzel,serif;color:var(--text)}
+.big em{color:var(--volt);font-style:normal}
+</style>
+</head>
+<body>
+
+<!-- 1 PORTADA -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA STUDIO</b></div>
+    <span>PROPUESTA CONFIDENCIAL · ALIANZA ESTRATÉGICA 2027</span>
+  </div>
+  <div class="hero-split">
+    <div>
+      <div class="eyebrow">CAPTOORA BIOGEN × TOTALPASS MÉXICO</div>
+      <h1>Tu transformación,<br><span>documentada</span> como<br>nunca antes.</h1>
+      <p class="lead">
+        Un nuevo beneficio para la comunidad TotalPass: <strong>registro fotográfico profesional del progreso físico</strong>
+        con luz escultural controlada y clips verticales 9:16, integrado con nutrición clínica, alimentación preparada y suplementación.
+        Diseñado para capturar la temporada más fuerte del año: <strong>enero 2027</strong>.
+      </p>
+      <div class="partner-bar" style="max-width:6.8in;margin-top:20px">
+        <span style="font:700 9px 'JetBrains Mono',monospace;letter-spacing:.1em;color:var(--gb)">PORTAFOLIO &amp; RESPALDO</span>
+        <div class="partner-logos">
+          <span style="background:rgba(245,244,239,.92);padding:2px 7px;border-radius:6px;display:inline-flex"><img src="../assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec" /></span>
+          <img src="../assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Tigres UANL" />
+          <img src="../assets/logos_partnerships/farmasi_transparent.png" alt="Farmasi" />
+          <span style="font:700 9.5px 'JetBrains Mono',monospace;color:var(--volt)">CAPTOORA.STUDIO/SPORTS</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-frame">
+      <img src="../assets/hero-portrait.png" alt="Captoora Studio Iluminación Escultural" />
+      <span class="hero-badge">GLOBAL SHUTTER 1/2000s · ESTUDIO BIOGEN</span>
+    </div>
+  </div>
+  <div class="foot"><span>https://captoora.studio/sports</span><span>Jesús Gutiérrez · Director Editorial · chuy@captoora.studio</span></div>
+</section>
+
+<!-- 2 OPORTUNIDAD -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA BIOGEN</b></div>
+    <span>01 · LA OPORTUNIDAD DE ENERO 2027</span>
+  </div>
+  <div class="eyebrow">EL MOMENTO DEL AÑO PARA RETENCIÓN FITNESS</div>
+  <h2>Todos empiezan en enero.<br>Falta evidencia para quedarse.</h2>
+  <div class="grid g3">
+    <div class="card gold">
+      <div class="tag">PICO DE DEMANDA</div>
+      <h3>Propósito de Año Nuevo</h3>
+      <p>Enero concentra la mayor ola de inscripciones a gimnasios, consultas de nutrición y compra de suplementos del año. Es la ventana ideal para activar nuevas cuentas corporativas y usuarios.</p>
+    </div>
+    <div class="card">
+      <div class="tag">LA BRECHA ACTUAL</div>
+      <h3>Sin prueba visual del avance</h3>
+      <p>La motivación cae en pocas semanas porque el espejo diario y la báscula no muestran el cambio real de composición. El usuario abandona antes de ver sus resultados.</p>
+    </div>
+    <div class="card volt">
+      <div class="tag volt">LA SOLUCIÓN CAPTOORA</div>
+      <h3>Registro profesional semanal</h3>
+      <p>Sesiones de progreso en estudio con el mismo esquema de iluminación escultural y encuadres repetibles, más clips 9:16 listos para que el avance sea visible, medible y compartible.</p>
+    </div>
+  </div>
+  <p class="small">Los indicadores de retención y conversión del piloto se medirán conjuntamente sobre la cohorte seleccionada en enero 2027.</p>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 2 DE 8</span></div>
+</section>
+
+<!-- 3 PORTAFOLIO REAL -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA STUDIO</b></div>
+    <span>02 · NIVEL DE PRODUCCIÓN Y PORTAFOLIO</span>
+  </div>
+  <div class="eyebrow">MISMA CALIDAD EDITORIAL PRESENTADA A EQUIPOS PROFESIONALES</div>
+  <h2>Fotografía de alto rendimiento, no fotos de gimnasio</h2>
+  <div class="gallery3">
+    <div class="shot">
+      <img src="../assets/presentation/capitanes_court_hero.jpg" alt="Cobertura Deportiva Captoora" />
+      <div class="shot-cap">PORTAFOLIO PRESENTADO A CAPITANES · 1/2000s</div>
+    </div>
+    <div class="shot">
+      <img src="../assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg" alt="Luz Dramática Captoora" style="object-position:center 20%" />
+      <div class="shot-cap">ILUMINACIÓN ESCULTURAL CONTROLADA</div>
+    </div>
+    <div class="shot">
+      <img src="../assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg" alt="Dirección Editorial" style="object-position:center 20%" />
+      <div class="shot-cap">DIRECCIÓN EDITORIAL &amp; VIDEO VERTICAL 9:16</div>
+    </div>
+  </div>
+  <div class="card gold" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:20px">
+    <p><strong>Portafolio interactivo 3D en línea:</strong> revisa nuestra producción completa para franquicias deportivas, marcas patrocinadoras (Coca-Cola FEMSA, Tecate, Poder Judicial NL) y atletas en Monterrey.</p>
+    <span style="font:700 12px 'JetBrains Mono',monospace;color:var(--volt);white-space:nowrap">https://captoora.studio/sports</span>
+  </div>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 3 DE 8</span></div>
+</section>
+
+<!-- 4 ECOSISTEMA -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA BIOGEN</b></div>
+    <span>03 · EL ECOSISTEMA COMPLETO</span>
+  </div>
+  <div class="eyebrow">CUATRO ESLABONES CONECTADOS AL ENTRENAMIENTO EN TOTALPASS</div>
+  <h2>TotalPass cubre el gimnasio. Biogen integra el resto.</h2>
+  <div class="grid g4">
+    <div class="card volt">
+      <div class="num">01</div>
+      <h3>Captoora Studio</h3>
+      <p>Sesión fotográfica de progreso y clips 9:16 cada semana o quincena. Coordina la cohorte de creadores y la entrega editorial.</p>
+    </div>
+    <div class="card cyan">
+      <div class="num">02</div>
+      <h3>Nutriología Aliada</h3>
+      <p>Nutrióloga titular (consulta en línea o presencial), plan de alimentación y <strong>Ficha Nutricional</strong> con macros y restricciones de cada participante.</p>
+    </div>
+    <div class="card gold">
+      <div class="num">03</div>
+      <h3>Cocinas Saludables</h3>
+      <p>Platillos preparados diarios calibrados a la Ficha Nutricional del participante con cocinas aliadas locales en Monterrey.</p>
+    </div>
+    <div class="card">
+      <div class="num">04</div>
+      <h3>Farmasi · Nutriplus</h3>
+      <p>Línea de suplementación (proteína, creatina, preentreno) con esquema de afiliados para que los creadores generen ingresos reales.</p>
+    </div>
+  </div>
+  <p class="lead" style="font-size:14.5px;margin-top:14px">
+    <strong style="color:var(--gb)">Rol de TotalPass:</strong> la red oficial de gimnasios y estudios donde los creadores y miembros completan su entrenamiento y documentan el proceso.
+  </p>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 4 DE 8</span></div>
+</section>
+
+<!-- 5 FLUJO USUARIO -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA BIOGEN</b></div>
+    <span>04 · EXPERIENCIA DEL USUARIO</span>
+  </div>
+  <div class="eyebrow">DE ENERO A ABRIL 2027 · FORMATO 4, 8 O 12 SEMANAS</div>
+  <h2>El recorrido de transformación documentado</h2>
+  <div class="flow">
+    <div class="card gold"><h3>Día 0</h3><p>Sesión base en estudio: encuadre y luz estándar + foto inicial de partida.</p></div>
+    <div class="arrow">›</div>
+    <div class="card cyan"><h3>Semana 1</h3><p>Consulta nutricional + Ficha de alergias y macros + arranque en gimnasio TotalPass.</p></div>
+    <div class="arrow">›</div>
+    <div class="card"><h3>Cada semana</h3><p>Check-in visual en estudio + clips verticales de entrenamiento y platillos.</p></div>
+    <div class="arrow">›</div>
+    <div class="card"><h3>Semana 4 / 8</h3><p>Corte comparativo con exactamente la misma luz y ángulo para evidenciar el cambio.</p></div>
+    <div class="arrow">›</div>
+    <div class="card volt"><h3>Cierre</h3><p>Antes y después editorial + caso real compartido en redes y catálogo.</p></div>
+  </div>
+  <p class="small">Cada participante firma consentimiento expreso de imagen antes de que cualquier fotografía comparativa sea exhibida.</p>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 5 DE 8</span></div>
+</section>
+
+<!-- 6 VALOR TOTALPASS -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA BIOGEN</b></div>
+    <span>05 · PROPUESTA DE VALOR PARA TOTALPASS</span>
+  </div>
+  <div class="eyebrow">BENEFICIO EXCLUSIVO SIN INVERSIÓN INICIAL</div>
+  <h2>Por qué suma a TotalPass y a su red de gimnasios</h2>
+  <div class="grid g2">
+    <div class="card volt">
+      <h3>Para TotalPass México</h3>
+      <ul>
+        <li>Servicio único que hoy no existe en el catálogo: fotografía profesional de avances junto a TotalFit y TotalNutri.</li>
+        <li>Campaña orgánica de enero impulsada por una cohorte de atletas y creadores locales entrenando en su red.</li>
+        <li>Material audiovisual auténtico de transformaciones (con autorización escrita) para redes y B2B corporativo.</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h3>Para usuarios y gimnasios aliados</h3>
+      <ul>
+        <li>Los usuarios ven pruebas tangibles de su esfuerzo y mantienen su hábito más allá de febrero.</li>
+        <li>Beneficios y precios preferenciales en nutrición, cocinas saludables y suplementación.</li>
+        <li>Los gimnasios participantes reciben mayor asistencia y visibilidad en las historias diarias de los creadores.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 6 DE 8</span></div>
+</section>
+
+<!-- 7 MODELO PILOTO Y ROLES -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA BIOGEN</b></div>
+    <span>06 · PILOTO ENERO 2027 &amp; ROLES CLAROS</span>
+  </div>
+  <div class="eyebrow">CADA ALIADO OPERA SU ESPECIALIDAD</div>
+  <h2>Estructura del piloto y delimitación operativa</h2>
+  <div class="grid g3" style="margin-bottom:14px">
+    <div class="card volt"><div class="tag volt">FASE 1 · ENERO 2027</div><h3>Piloto en Monterrey</h3><p>Cohorte inicial de creadores (8K–25K seguidores) + primeros usuarios. Acceso a red sin costo financiero inicial para TotalPass.</p></div>
+    <div class="card gold"><div class="tag">FASE 2 · CATÁLOGO</div><h3>Beneficio para miembros</h3><p>Integración de Captoora Biogen como beneficio con tarifa preferente dentro de los planes TotalPass.</p></div>
+    <div class="card cyan"><div class="tag cyan">FASE 3 · ESCALA</div><h3>Expansión nacional</h3><p>Réplica en CDMX, Guadalajara y nuevas plazas con base en métricas verificadas del piloto.</p></div>
+  </div>
+  <div class="grid g4">
+    <div class="card"><h3>Captoora Studio</h3><p>Fotografía, video 9:16 y coordinación editorial del programa.</p></div>
+    <div class="card"><h3>TotalPass</h3><p>Acceso a gimnasios y estudios de su red de aliados.</p></div>
+    <div class="card"><h3>Nutrióloga Aliada</h3><p>Plan, consulta y validación de alergias y restricciones.</p></div>
+    <div class="card"><h3>Comida &amp; Suplementos</h3><p>Cada marca opera y responde directamente por sus productos.</p></div>
+  </div>
+  <div class="foot"><span>CAPTOORA BIOGEN × TOTALPASS</span><span>SLIDE 7 DE 8</span></div>
+</section>
+
+<!-- 8 CIERRE -->
+<section class="slide">
+  <div class="top">
+    <div class="top-brand"><img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" /><b>CAPTOORA STUDIO</b></div>
+    <span>07 · SIGUIENTE PASO</span>
+  </div>
+  <div class="hero-split">
+    <div>
+      <div class="eyebrow">HABLEMOS ESTA SEMANA</div>
+      <div class="big">Lancemos juntos el piloto<br>de <em>enero 2027</em>.</div>
+      <p class="lead">
+        Una reunión de 20 minutos para presentar el portafolio completo, alinear la cohorte piloto de Monterrey y definir el esquema de beneficio para sus usuarios.
+      </p>
+      <div class="card gold" style="max-width:5.8in;margin-top:22px">
+        <h3>Jesús Gutiérrez · Director Editorial</h3>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;color:#e6e9f0">
+          Correo: chuy@captoora.studio<br>
+          WhatsApp: +52 81 4005 0088<br>
+          Portafolio: https://captoora.studio/sports
+        </p>
+      </div>
+    </div>
+    <div class="hero-frame" style="height:4.4in">
+      <img src="../assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg" alt="Captoora Sports Portafolio" />
+      <span class="hero-badge">CAPTOORA BIOGEN · MONTERREY 2027</span>
+    </div>
+  </div>
+  <div class="foot"><span>Documento confidencial para alianzas comerciales</span><span>© 2026 Captoora Studio</span></div>
+</section>
+
+</body>
+</html>

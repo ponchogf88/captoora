@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convenio Fácil Lectura · Colaboración Piloto Captoora Biogen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050608;
+      --surface: #0b0e14;
+      --gold: #c9a23f;
+      --gold-bright: #ecd28a;
+      --volt: #c6ff00;
+      --cyan: #38bdf8;
+      --coral: #fb7185;
+      --border: rgba(255, 255, 255, 0.1);
+      --border-gold: rgba(201, 162, 63, 0.38);
+      --text: #f5f4ef;
+      --muted: #9aa3b2;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: letter portrait; margin: 0; }
+    html, body {
+      background: #030406;
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 8.5in;
+      height: 11in;
+      margin: 0 auto;
+      padding: 0.4in 0.46in 0.34in;
+      background:
+        radial-gradient(circle at 88% 8%, rgba(198, 255, 0, 0.1), transparent 40%),
+        radial-gradient(circle at 12% 92%, rgba(201, 162, 63, 0.12), transparent 44%),
+        var(--bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand img { height: 32px; object-fit: contain; }
+    .title-font { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.05em; }
+    .mono { font-family: "JetBrains Mono", monospace; }
+    .pill {
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      border: 1px solid rgba(198, 255, 0, 0.45);
+      color: var(--volt);
+      background: rgba(198, 255, 0, 0.08);
+    }
+    h1 { font-family: "Cinzel", serif; font-size: 23px; line-height: 1.12; margin: 10px 0 4px; }
+    h1 span { color: var(--volt); }
+    .sub { font-size: 11.2px; color: #d5dae3; line-height: 1.42; margin-bottom: 10px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .card {
+      background: linear-gradient(155deg, rgba(17, 22, 34, 0.94), rgba(8, 10, 15, 0.98));
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      padding: 12px 14px;
+    }
+    .card.volt { border-color: rgba(198, 255, 0, 0.42); }
+    .card.gold { border-color: var(--border-gold); }
+    .card.cyan { border-color: rgba(56, 189, 248, 0.38); }
+    .card.coral { border-color: rgba(251, 113, 133, 0.38); }
+    .hd { font-size: 11.5px; font-weight: 800; margin-bottom: 7px; display: flex; align-items: center; gap: 7px; }
+    .row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 7px; font-size: 10.7px; line-height: 1.38; color: #cbd2de; }
+    .row:last-child { margin-bottom: 0; }
+    .tag {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.08);
+      color: var(--gold-bright);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tag.volt { background: rgba(198,255,0,0.14); color: var(--volt); }
+    .tag.cyan { background: rgba(56,189,248,0.14); color: var(--cyan); }
+    .checklist-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.3px;
+      margin-top: 4px;
+    }
+    .checklist-table th {
+      text-align: left;
+      padding: 7px 8px;
+      border-bottom: 1px solid var(--border-gold);
+      color: var(--gold-bright);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+    }
+    .checklist-table td {
+      padding: 7px 8px;
+      border-bottom: 1px solid var(--border);
+      color: #d6dbe4;
+      vertical-align: top;
+    }
+    .checklist-table tr:last-child td { border-bottom: none; }
+    .sign-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .sign-box {
+      border: 1px dashed var(--border-gold);
+      border-radius: 10px;
+      padding: 12px 14px 10px;
+      font-size: 10px;
+      color: var(--muted);
+    }
+    .line { border-top: 1px solid rgba(255,255,255,0.28); margin-top: 26px; padding-top: 5px; color: var(--text); font-weight: 600; }
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 8.8px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <div>
+      <div class="top">
+        <div class="brand">
+          <img src="../assets/CAPTOORA_WOLF_CLEAN_TRANSPARENT.png" alt="Captoora" />
+          <div>
+            <div class="title-font" style="font-size:12.5px;color:var(--gold-bright);">CAPTOORA BIOGEN · HOJA DE RUTA DEL CREADOR</div>
+            <div class="mono" style="font-size:8.8px;color:var(--muted);">RESUMEN PRÁCTICO DE FÁCIL LECTURA · ACUERDO DE COLABORACIÓN PILOTO</div>
+          </div>
+        </div>
+        <span class="pill">LECTURA EN 60 SEGUNDOS</span>
+      </div>
+
+      <h1>¿CÓMO FUNCIONA TU <span>COLABORACIÓN</span> EN CAPTOORA BIOGEN?</h1>
+      <p class="sub">
+        Esta guía resume de manera clara y sin rodeos qué beneficios recibes cada semana como atleta/creador invitado al piloto y cuáles son tus entregables exactos de contenido y horarios para que el proyecto funcione para ti y para las marcas aliadas.
+      </p>
+
+      <!-- Qué Recibes vs Qué Haces -->
+      <div class="grid-2" style="margin-bottom:10px;">
+        <div class="card volt">
+          <div class="hd" style="color:var(--volt);">LO QUE TÚ RECIBES EN EL PROGRAMA</div>
+          <div class="row"><span class="tag volt">SEMANAL</span><span><strong>1 Sesión Semanal en Captoora Studio:</strong> fotografía editorial con luz escultural controlada, registro visual de avance físico y clips verticales (9:16) editados para tus redes.</span></div>
+          <div class="row"><span class="tag cyan">NUTRICIÓN</span><span><strong>Consultas Nutricionales Profesionales:</strong> seguimiento y ajuste continuo de tu dieta con el especialista aliado.</span></div>
+          <div class="row"><span class="tag">COMIDAS</span><span><strong>Platillos Diarios del Programa:</strong> alimentos preparados y entregados en alianza (ej. <strong>@powerfoodsmty</strong>) acorde a tu plan nutricional.</span></div>
+        </div>
+
+        <div class="card gold">
+          <div class="hd" style="color:var(--gold-bright);">REGLAS DE ORO DEL INTERCAMBIO</div>
+          <div class="row"><span class="tag">SIN NÓMINA</span><span>Es un acuerdo de <strong>colaboración e intercambio en especie</strong> (no eres empleado ni hay relación laboral).</span></div>
+          <div class="row"><span class="tag cyan">HORARIOS</span><span>Publicamos en las <strong>horas pico de tus estadísticas reales</strong> (<em>Insights</em> de seguidores) para exprimir el alcance máximo de cada historia y Reel.</span></div>
+          <div class="row"><span class="tag volt">MÉTRICAS</span><span>Compartes tus capturas de estadísticas (alcance, vistas, interacciones) quincenal/mensualmente para respaldar las alianzas.</span></div>
+        </div>
+      </div>
+
+      <!-- Checklist Semanal de Obligaciones -->
+      <div class="card" style="margin-bottom:10px;border-color:rgba(198,255,0,0.34);">
+        <div class="hd" style="color:var(--text);">TU CHECKLIST DE CONTENIDO SEMANAL (OBLIGACIONES DEL CREADOR)</div>
+        <table class="checklist-table">
+          <thead>
+            <tr>
+              <th>MARCA / ENFOQUE</th>
+              <th>FRECUENCIA EXACTA</th>
+              <th>FORMATO Y REQUISITO MÍNIMO</th>
+              <th>HORA RECOMENDADA (SEGÚN INSIGHTS)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--gold-bright);">Comida / Meal Prep</strong><br><span class="mono" style="font-size:9px;color:var(--muted);">@powerfoodsmty</span></td>
+              <td><strong>TODOS LOS DÍAS</strong><br>(7 de 7 días)</td>
+              <td>Historia de <strong>mínimo 15 segundos</strong> mostrando platillos reales + etiqueta y mención audible/escrita a la marca.</td>
+              <td>Ventana comida / post-entreno de mayor actividad (ej. 13:00–15:00 o 19:00–21:00).</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--cyan);">Nutriólogo Aliado</strong><br><span class="mono" style="font-size:9px;color:var(--muted);">@nutriologo_aliado</span></td>
+              <td><strong>MÍN. 4 POR SEMANA</strong><br>(L–D distribuidas)</td>
+              <td>Mínimo <strong>4 historias semanales</strong> explicando avances de dieta, ajustes o resultados físicos y etiquetando al nutriólogo.</td>
+              <td>En pico diurno o vespertino de tu gráfica de audiencia en Instagram.</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text);">Entrenamientos</strong></td>
+              <td><strong>CONSTANTE</strong><br>(Días de gym/lucha)</td>
+              <td>Historias o clips durante tus sesiones de entrenamiento conectando disciplina física con el proceso semanal del programa.</td>
+              <td>Pre o post-sesión dentro del mismo día.</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--volt);">Captoora Studio</strong><br><span class="mono" style="font-size:9px;color:var(--muted);">@captoora.studio</span></td>
+              <td><strong>1 SESIÓN SEMANAL</strong><br>+ Posts en todas tus redes</td>
+              <td><strong>1) Mismo día de sesión:</strong> menciones e historias en vivo.<br><strong>2) En tu Feed / TikTok:</strong> publicar fotos y clips como <strong>Colaboración (Collab) y con etiqueta</strong> en todas tus redes sociales.</td>
+              <td><strong>Hora pico exacta de tus seguidores</strong> (ej. 18:30–20:30 hrs CST) para detonar alcance inicial.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Transparencia de Continuidad y Derechos -->
+      <div class="grid-3" style="margin-bottom:8px;">
+        <div class="card coral" style="padding:10px 12px;">
+          <div class="hd" style="color:var(--coral);font-size:10.8px;margin-bottom:4px;">SUSPENSIÓN POR FALTA</div>
+          <p style="font-size:10px;line-height:1.38;color:var(--muted);">Si faltas a tu sesión semanal sin avisar con 24h, o acumulas >2 días sin subir historias de comida o sin las 4 menciones al nutriólogo, tras 1 aviso se suspende la dotación y sesiones.</p>
+        </div>
+        <div class="card cyan" style="padding:10px 12px;">
+          <div class="hd" style="color:var(--cyan);font-size:10.8px;margin-bottom:4px;">USO DE FOTOS Y CLIPS</div>
+          <p style="font-size:10px;line-height:1.38;color:var(--muted);">Captoora mantiene autoría y licencia para mostrar tu proceso en portafolio (captoora.studio/sports). Tú usas libremente tu material en redes respetando créditos.</p>
+        </div>
+        <div class="card gold" style="padding:10px 12px;">
+          <div class="hd" style="color:var(--gold-bright);font-size:10.8px;margin-bottom:4px;">EXCLUSIVIDAD PILOTO</div>
+          <p style="font-size:10px;line-height:1.38;color:var(--muted);">Mientras estés recibiendo comidas, consultas y sesiones del programa, evitas promocionar servicios competidores directos de meal prep, nutriólogos o fotografía deportiva.</p>
+        </div>
+      </div>
+
+      <!-- Firmas Rápidas -->
+      <div class="sign-grid">
+        <div class="sign-box">
+          <strong>POR CAPTOORA STUDIO &amp; PROGRAMA BIOGEN</strong>
+          <div class="line">Jesús Gutiérrez · Director Editorial (chuy@captoora.studio)</div>
+        </div>
+        <div class="sign-box">
+          <strong>ACEPTO COMPROMISOS COMO CREADOR / ATLETA PILOTO</strong>
+          <div class="line">Nombre / Firma (@___________________) · Fecha: ___ / ___ / 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot">
+      <span>DOCUMENTO DE FÁCIL LECTURA COMPLEMENTARIO AL CONVENIO FORMAL COMPLETO</span>
+      <span>CAPTOORA BIOGEN · PORTAFOLIO: HTTPS://CAPTOORA.STUDIO/SPORTS</span>
+    </div>
+  </section>
+</body>
+</html>

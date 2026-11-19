@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Town Market · Emiliano Zapata / Zona Romántica — Propuesta Web Express &amp; Google Business Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F7F5F0;
+      --surface: #EAE5DC;
+      --surface-alt: #FFFFFF;
+      --ink: #121212;
+      --muted: #59554D;
+      --accent: #8C6B28;
+      --accent-ink: #FFFFFF;
+      --border: rgba(18, 18, 18, 0.13);
+    }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.55;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; }
+    .wrap { max-width: 1180px; width: 100%; margin: 0 auto; padding: 0 24px; }
+    .studio-ribbon {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(12, 14, 20, 0.94);
+      backdrop-filter: blur(10px);
+      color: #F4F5F2;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 10px 0;
+    }
+    .studio-ribbon-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+    }
+    .studio-tag {
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.08em;
+      color: #E8D5A8;
+      text-transform: uppercase;
+      overflow-wrap: break-word;
+    }
+    .ribbon-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: transform 0.16s ease, opacity 0.16s ease;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-sm { font-size: 0.75rem; padding: 7px 14px; }
+    .btn-accent {
+      background: var(--accent);
+      color: var(--accent-ink);
+      border-color: var(--accent);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+    .btn-gold {
+      background: #C6FF00;
+      color: #090B10;
+      border-color: #C6FF00;
+    }
+    .btn-outline-light {
+      background: rgba(255,255,255,0.06);
+      color: #F4F5F2;
+      border-color: rgba(255,255,255,0.28);
+    }
+    .brand-nav {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .brand-nav-links { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; font-size: 0.88rem; color: var(--muted); }
+    .brand-nav-links a:not(.btn) { color: inherit; text-decoration: none; font-weight: 600; }
+    .brand-nav-links a.btn { text-decoration: none; }
+    .hero {
+      padding: 56px 0 64px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero > *, .info-grid > *, .audit-grid > * { min-width: 0; }
+    @media (max-width: 880px) { .hero { grid-template-columns: 1fr; padding: 36px 0 44px; } }
+    @media (max-width: 640px) {
+      .wrap { padding: 0 16px; }
+      .hero { gap: 24px; padding: 28px 0 36px; }
+      .hero-media, .hero-media img { min-height: 250px; }
+      .hero-caption { flex-wrap: wrap; }
+    }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: inline-block;
+      overflow-wrap: break-word;
+      max-width: 100%;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.85rem, 4.4vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      overflow-wrap: break-word;
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 56ch;
+      margin-bottom: 24px;
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; }
+    .proof-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 0.84rem;
+      color: var(--muted);
+    }
+    .proof-strip strong { color: var(--ink); }
+    .hero-media {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      min-height: 400px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+    }
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(125deg, rgba(10,14,18,0.68) 0%, rgba(10,14,18,0.22) 70%);
+      pointer-events: none;
+    }
+    .hero-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2;
+      background: rgba(15, 20, 26, 0.72);
+      color: #F9F8F4;
+      padding: 12px 16px;
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+    }
+    .section { padding: 64px 0; border-top: 1px solid var(--border); }
+    .section-head { max-width: 68ch; margin-bottom: 32px; }
+    .section-head h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.35rem);
+      line-height: 1.14;
+      margin-bottom: 10px;
+    }
+    .section-head p { color: var(--muted); font-size: 0.96rem; }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    @media (max-width: 820px) { .features-grid { grid-template-columns: 1fr; } }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+    .feature-idx {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .feature-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 820px) { .info-grid { grid-template-columns: 1fr; } }
+    .loc-card {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+    }
+    .loc-row { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+    .loc-row:last-child { border-bottom: none; }
+    .loc-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; text-transform: uppercase; color: var(--muted); display: block; }
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 18px;
+    }
+    .faq-item summary { font-weight: 700; cursor: pointer; font-size: 0.95rem; }
+    .faq-item p { margin-top: 10px; color: var(--muted); font-size: 0.88rem; }
+
+    /* Captoora Studio Backend GBP Audit & -35% Package Sheet */
+    .studio-audit {
+      background: #11161C;
+      color: #F4F5F2;
+      padding: 72px 0;
+      border-top: 3px solid #D4AF37;
+    }
+    .audit-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      color: #C6FF00;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .studio-audit h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.55rem, 2.8vw, 2.3rem);
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    .audit-sub { color: #B4B6C2; max-width: 72ch; margin-bottom: 28px; font-size: 0.95rem; }
+    .audit-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 900px) { .audit-grid { grid-template-columns: 1fr; } }
+    .audit-box {
+      background: #1A212A;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .maps-shot { width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.14); display: block; margin: 12px 0; }
+    .maps-shot-empty {
+      background: rgba(255,255,255,0.04);
+      border: 1px dashed rgba(255,255,255,0.22);
+      border-radius: 12px;
+      padding: 28px 18px;
+      margin: 12px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.86rem;
+      color: #C4C6D0;
+    }
+    .flags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .audit-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.69rem;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: rgba(255, 107, 107, 0.14);
+      border: 1px solid rgba(255, 107, 107, 0.4);
+      color: #FFB6B6;
+    }
+    .audit-pill.ok {
+      background: rgba(198,255,0,0.1);
+      border-color: rgba(198,255,0,0.4);
+      color: #C6FF00;
+    }
+    .task-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+    .task-row {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 3px solid #D4AF37;
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .task-row.is-crit { border-left-color: #C6FF00; }
+    .task-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 0.9rem; }
+    .task-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(212, 175, 55, 0.16);
+      color: #E8D5A8;
+    }
+    .task-row.is-crit .task-badge { background: rgba(198,255,0,0.16); color: #C6FF00; }
+    .task-row p { font-size: 0.84rem; color: #D7D8E0; }
+    .task-impact { display: block; margin-top: 4px; font-size: 0.76rem; color: #9C9FB0; }
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 26px 0;
+    }
+    @media (max-width: 880px) { .tiers-grid { grid-template-columns: 1fr; } }
+    .tier-card {
+      background: #1A212A;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .tier-card.featured { border-color: #C6FF00; box-shadow: 0 0 0 1px rgba(198,255,0,0.25); }
+    .tier-title { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: #E8D5A8; margin-bottom: 8px; }
+    .tier-price { font-size: 1.5rem; margin-bottom: 8px; display: flex; align-items: baseline; gap: 10px; }
+    .tier-price .old { font-size: 0.9rem; text-decoration: line-through; color: #8A8D9E; }
+    .tier-price strong { color: #C6FF00; }
+    .tier-desc { font-size: 0.84rem; color: #C6C8D4; }
+    .studio-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.82rem;
+      color: #A6A8B8;
+    }
+  </style>
+</head>
+<body>
+  <div class="studio-ribbon">
+    <div class="wrap studio-ribbon-inner">
+      <span class="studio-tag">PROTOTIPO WEB EXPRESS &amp; AUDITORÍA GOOGLE MAPS · EMILIANO ZAPATA / ZONA ROMÁNTICA · VITRINA &amp; LOOKBOOK DE GALERÍA</span>
+      <div class="ribbon-links">
+        <a class="btn btn-sm btn-outline-light" href="#diagnostico-gbp">Checklist Google Maps (2 alertas)</a>
+        <a class="btn btn-sm btn-gold" href="https://wa.me/528140050088?text=Hola%20Jes%C3%BAs%20Guti%C3%A9rrez%20%F0%9F%91%8B%20Vi%20la%20propuesta%20Web%20Express%20%2B%20actualizaci%C3%B3n%20Google%20Maps%20para%20Old%20Town%20Market%20%28Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%2C%20-35%25%20temporada%29.%20Me%20interesa%20activarlo." target="_blank">Activar Web + Maps (-35%) &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="wrap brand-nav">
+    <div class="brand-name">Old Town Market</div>
+    <nav class="brand-nav-links">
+      <a href="#experiencia">Servicios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#diagnostico-gbp">Diagnóstico Maps (-35%)</a>
+      <a class="btn btn-sm btn-accent" href="#diagnostico-gbp" target="_self">Consultar Piezas por WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <span class="eyebrow">CURADURÍA &amp; ATENCIÓN EN TIENDA · Emiliano Zapata / Zona Romántica</span>
+        <h1>Old Town Market</h1>
+        <p class="hero-sub">Piezas seleccionadas, asesoría directa por WhatsApp y vitrina verificada para ubicarnos a la primera.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-accent" href="#diagnostico-gbp" target="_self">Consultar Piezas por WhatsApp</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Old%20Town%20Market&amp;query_place_id=ChIJj1aC3epFIYQRjqg4HiFYggY&amp;hl=es-MX" target="_blank">Ver Ubicación en Maps &rarr;</a>
+        </div>
+        <div class="proof-strip">
+          <span><strong>Tienda de alimentación</strong></span>
+          <span>&bull; <strong>4.6 ★ · 167 reseñas verificadas</strong></span>
+          <span>&bull; Emiliano Zapata / Zona Romántica, Puerto Vallarta</span>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="../../../assets/niche_heroes/niche_comercio_boutique.jpg" alt="Old Town Market — propuesta visual editorial en Emiliano Zapata / Zona Romántica" />
+        <div class="hero-caption">
+          <span><strong>Emiliano Zapata / Zona Romántica</strong> · Tienda de alimentación</span>
+          <span>4.6 ★ · 167 reseñas verificadas</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">EXPERIENCIA DIRECTA SIN FRICCIÓN</span>
+          <h2>Diseñada para convertir búsquedas en visitas y reservas reales</h2>
+          <p>En lugar de depender únicamente de redes sociales o portales externos, Old Town Market proyecta identidad propia desde el primer clic en Google Maps.</p>
+        </div>
+        <div class="features-grid">
+          
+        <article class="feature-card">
+          <span class="feature-idx">01</span>
+          <h3>Selección &amp; Novedades</h3>
+          <p>Vitrina curada para conocer estilo, materiales y disponibilidad antes de visitarnos.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-idx">02</span>
+          <h3>Atención Directa &amp; Apartados</h3>
+          <p>Resuelve dudas de medidas, precios y existencia en minutos vía WhatsApp.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-idx">03</span>
+          <h3>Visita en Corredor Comercial</h3>
+          <p>Ubicación exacta y horarios de temporada confirmados en Google Maps.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ubicacion" class="section">
+      <div class="wrap info-grid">
+        <div class="loc-card">
+          <span class="eyebrow">FICHA DE CONTACTO &amp; RUTA OFICIAL</span>
+          <h2 style="font-family:'Cormorant Garamond', Georgia, serif; font-size:1.85rem; margin-bottom:14px;">Visita o contacta a Old Town Market</h2>
+          <div class="loc-row"><span class="loc-label">Dirección verificada</span>Lázaro Cárdenas 315, Zona Romántica, Emiliano Zapata, 48380 Puerto Vallarta, Jal., México</div>
+          <div class="loc-row"><span class="loc-label">Teléfono / WhatsApp comercial</span>Pendiente de verificación oficial en Google Business Profile</div>
+          <div class="loc-row"><span class="loc-label">Zona &amp; Municipio</span>Emiliano Zapata / Zona Romántica · Puerto Vallarta</div>
+          <div class="loc-row"><span class="loc-label">Reputación actual</span>4.6 ★ · 167 reseñas verificadas · 51 fotos</div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:18px;">
+            <a class="btn btn-accent" href="https://www.google.com/maps/search/?api=1&amp;query=Old%20Town%20Market&amp;query_place_id=ChIJj1aC3epFIYQRjqg4HiFYggY&amp;hl=es-MX" target="_blank">Abrir en Google Maps &rarr;</a>
+            <a class="btn btn-ghost" href="#diagnostico-gbp" target="_self">Contacto Directo</a>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">PREGUNTAS FRECUENTES DE CLIENTES</span>
+          <div class="faq-list">
+            
+        <details class="faq-item">
+          <summary>¿Puedo preguntar disponibilidad antes de ir a la tienda?</summary>
+          <p>Sí, escríbenos por WhatsApp para confirmar piezas en existencia, tallas o envíos locales.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cuáles son sus horarios de atención en tienda?</summary>
+          <p>Mantén horarios actualizados tanto aquí como en Google Business Profile para visitas entre semana y fines de semana.</p>
+        </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="diagnostico-gbp" class="studio-audit">
+    <div class="wrap">
+      <div class="audit-kicker">RESPALDO CAPTOORA STUDIO · ACTUALIZACIÓN GOOGLE BUSINESS PROFILE + WEB EXPRESS</div>
+      <h2>Hoja de Ruta Google Maps &amp; Lanzamiento para Old Town Market</h2>
+      <p class="audit-sub">Old Town Market aparece hoy sin página web propia en Google Maps (2 ajustes críticos prioritarios). Prioridad detectada: <strong>Alta (30/100)</strong>.</p>
+
+      <div class="audit-grid">
+        <div class="audit-box">
+          <strong style="font-size:0.98rem;">1. Estado actual detectado en Google Maps</strong>
+          <img class="maps-shot" src="../../../assets/gmaps_audits/puerto_vallarta/zona_romantica/old_town_market.png" alt="Estado actual de Old Town Market en Google Maps" loading="lazy" />
+          <div class="flags-row"><span class="audit-pill">SIN SITIO WEB</span><span class="audit-pill">SIN TELÉFONO</span></div>
+          <p style="font-size:0.8rem; color:#B0B3C2; margin-top:12px;">Entrega digital (Web Express + actualización GBP + fotografía): 48–72h. Display acrílico LED QR en taller artesanal: 3–5 días hábiles.</p>
+        </div>
+        <div class="audit-box">
+          <strong style="font-size:0.98rem;">2. Checklist personalizado de actualización GBP (6 puntos)</strong>
+          <ul class="task-list">
+            
+        <li class="task-row is-opt">
+          <div class="task-head">
+            <span class="task-badge">MEJORA ESTRATÉGICA</span>
+            <strong>Verificación &amp; Categorías Locales</strong>
+          </div>
+          <p>Auditar administradores activos, categoría principal (Tienda de alimentación) y atributos ES/EN en Emiliano Zapata / Zona Romántica para captar búsquedas de alta intención.</p>
+          <span class="task-impact">Impacto: Evita ediciones externas y posiciona la ficha por giro real.</span>
+        </li>
+        <li class="task-row is-crit">
+          <div class="task-head">
+            <span class="task-badge">PRIORIDAD ALTA</span>
+            <strong>Sitio Web Express &amp; Enlace Directo UTM</strong>
+          </div>
+          <p>Publicar Página Web Express propia con catálogo/reservas e insertarla en Google Maps (?utm_source=google_maps) — hoy la ficha no tiene sitio propio.</p>
+          <span class="task-impact">Impacto: Convierte visitas del mapa en mensajes y reservas directas.</span>
+        </li>
+        <li class="task-row is-opt">
+          <div class="task-head">
+            <span class="task-badge">MEJORA ESTRATÉGICA</span>
+            <strong>Portada &amp; Galería Editorial en Maps</strong>
+          </div>
+          <p>Renovar fotografía de portada y servicios estelares con técnica editorial para elevar el porcentaje de clics frente a competidores de Zona Romántica.</p>
+          <span class="task-impact">Impacto: Primera impresión visual sólida en búsquedas locales y turísticas.</span>
+        </li>
+        <li class="task-row is-crit">
+          <div class="task-head">
+            <span class="task-badge">PRIORIDAD ALTA</span>
+            <strong>Teléfono, WhatsApp Business &amp; Horarios</strong>
+          </div>
+          <p>Registrar teléfono comercial verificado en Google Business Profile, activar enlace directo a WhatsApp y cargar horarios extendidos de temporada.</p>
+          <span class="task-impact">Impacto: Elimina llamadas perdidas y dudas de horario en visitantes.</span>
+        </li>
+        <li class="task-row is-opt">
+          <div class="task-head">
+            <span class="task-badge">MEJORA ESTRATÉGICA</span>
+            <strong>Motor de Reseñas 5★ &amp; Display LED QR</strong>
+          </div>
+          <p>Sostener flujo semanal de reseñas 5★ con placa acrílica LED QR en punto de contacto para blindar reputación en Zona Romántica.</p>
+          <span class="task-impact">Impacto: Aumenta relevancia local y confianza antes de reservar.</span>
+        </li>
+        <li class="task-row is-opt">
+          <div class="task-head">
+            <span class="task-badge">MEJORA ESTRATÉGICA</span>
+            <strong>Meta Business Portfolio &amp; Consistencia NAP</strong>
+          </div>
+          <p>Unificar Facebook, Instagram y WhatsApp Business en un solo Meta Business Portfolio con nombre, dirección y teléfono idénticos a Google Maps.</p>
+          <span class="task-impact">Impacto: Operación comercial y publicitaria ordenada sin bloqueos.</span>
+        </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="audit-kicker">ESQUEMAS DISPONIBLES CAPTOORA SMALL BUSINESS · -35% VIGENTE</div>
+      <div class="tiers-grid">
+        
+        <div class="tier-card ">
+          <div class="tier-title">OPCIÓN 1 · IMPULSO GOOGLE MAPS BOUTIQUE (-35%)</div>
+          <div class="tier-price"><span class="old">$6,000</span> <strong>$3,900 MXN</strong></div>
+          <p class="tier-desc">15–20 fotos pro de escaparate, interior y productos clave + verificación oficial y carga directa en Google Maps.</p>
+        </div>
+        <div class="tier-card featured">
+          <div class="tier-title">OPCIÓN 2 · SUITE COMERCIO TOTAL (-35%)</div>
+          <div class="tier-price"><span class="old">$10,600</span> <strong>$6,890 MXN</strong></div>
+          <p class="tier-desc">30–40 fotos + 2 Reels 9:16 de producto/espacio + Google Maps al 100% + Meta Business Portfolio sin bloqueos.</p>
+        </div>
+        <div class="tier-card ">
+          <div class="tier-title">OPCIÓN 3 · COMERCIO + DISPLAY LED QR CAJA (-35%)</div>
+          <div class="tier-price"><span class="old">$16,000</span> <strong>$10,400 MXN</strong></div>
+          <p class="tier-desc">Suite Comercio Total + placa acrílica LED en nogal con QR directo a reseñas 5★ y catálogo (taller artesanal 3–5 días).</p>
+        </div>
+      </div>
+
+      <div class="studio-footer">
+        <div>
+          <strong>Jesús Gutiérrez</strong> · Fotógrafo y Director · Captoora Studio<br>
+          <span>Portafolio, técnica y resultados: <a href="https://captoora.studio/sports" style="color:#E8D5A8;">https://captoora.studio/sports</a> · chuy@captoora.studio · +52 81 4005 0088</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-gold" href="https://wa.me/528140050088?text=Hola%20Jes%C3%BAs%20Guti%C3%A9rrez%20%F0%9F%91%8B%20Vi%20la%20propuesta%20Web%20Express%20%2B%20actualizaci%C3%B3n%20Google%20Maps%20para%20Old%20Town%20Market%20%28Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%2C%20-35%25%20temporada%29.%20Me%20interesa%20activarlo." target="_blank">Activar Página + Google Maps con Jesús Gutiérrez &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
