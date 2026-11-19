@@ -85,3 +85,5 @@
 | `studio-v2.css` | `historico_y_archivos/previews_descartados_2026-11-12/studio-v2.css` | CSS de previews descartados 12 nov 2026 (Zero Delete) |
 | `studio-v2.js` | `historico_y_archivos/previews_descartados_2026-11-12/studio-v2.js` | JS de previews descartados 12 nov 2026 (Zero Delete) |
 | `themes.css` | `historico_y_archivos/previews_descartados_2026-11-12/themes.css` | CSS de temas descartados 12 nov 2026 (Zero Delete) |
+| `proyectos/waters-serie/renders/audio_elevenlabs_v3/EP01_EXT/01_chuy.mp3` | `historico_y_archivos/waters_ep01_audio_previo_2026-11-19/01_chuy.mp3` | Toma previa españolizada antes de `lang=en` (Zero Delete) |
+| `proyectos/waters-serie/renders/audio_elevenlabs_v3/EP01_EXT/02_agy.mp3` | `historico_y_archivos/waters_ep01_audio_previo_2026-11-19/02_agy.mp3` | Toma previa con "Chuy," antes de remover nombre (Zero Delete) |

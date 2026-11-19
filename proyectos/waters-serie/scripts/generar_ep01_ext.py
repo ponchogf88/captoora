@@ -3,13 +3,17 @@
 Genera la versión extendida (>60s para OpusClip + Captions) de EP01 (GTA 6 Récord $3B + Gemini 4 Neon)
 con eleven_v3 (Antonio + Liza) y CERO traslapes garantizados.
 """
+import argparse
 import json
 import math
 import os
+import re
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
+from typing import Optional
 
 ROOT = Path("/Users/imac/Desktop/Projects/CAPTOORA.STUDIO")
 ENV_FILE = ROOT / ".env"
@@ -35,31 +39,59 @@ def load_api_key() -> str:
     return key
 
 
-def tts_to_mp3(text: str, voice_id: str, out_path: Path, api_key: str) -> None:
-    payload = json.dumps(
-        {
-            "text": text,
-            "model_id": "eleven_v3",
-            "voice_settings": {
-                "stability": 0.32,
-                "similarity_boost": 0.78,
-                "style": 0.0,
-                "use_speaker_boost": True,
+def tts_to_mp3(
+    text: str,
+    voice_id: str,
+    out_path: Path,
+    api_key: str,
+    language_code: Optional[str] = None,
+) -> None:
+    def _post(body_dict: dict) -> bytes:
+        req = urllib.request.Request(
+            f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+            data=json.dumps(body_dict).encode("utf-8"),
+            headers={
+                "xi-api-key": api_key,
+                "Content-Type": "application/json",
+                "Accept": "audio/mpeg",
             },
-        }
-    ).encode("utf-8")
-    req = urllib.request.Request(
-        f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
-        data=payload,
-        headers={
-            "xi-api-key": api_key,
-            "Content-Type": "application/json",
-            "Accept": "audio/mpeg",
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            return resp.read()
+
+    body = {
+        "text": text,
+        "model_id": "eleven_v3",
+        "voice_settings": {
+            "stability": 0.32,
+            "similarity_boost": 0.78,
+            "style": 0.0,
+            "use_speaker_boost": True,
         },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        out_path.write_bytes(resp.read())
+    }
+    if language_code:
+        body["language_code"] = language_code
+
+    try:
+        out_path.write_bytes(_post(body))
+    except urllib.error.HTTPError as err:
+        if language_code and err.code in (400, 422):
+            clean_text = re.sub(r"\[[^\]]+\]\s*", "", text).strip()
+            fallback_body = {
+                "text": clean_text,
+                "model_id": "eleven_turbo_v2_5",
+                "language_code": language_code,
+                "voice_settings": {
+                    "stability": 0.32,
+                    "similarity_boost": 0.78,
+                    "style": 0.0,
+                    "use_speaker_boost": True,
+                },
+            }
+            out_path.write_bytes(_post(fallback_body))
+        else:
+            raise
 
 
 def probe_duration(path: Path) -> float:
@@ -74,7 +106,8 @@ def probe_duration(path: Path) -> float:
 EP01_EXT_LINES = [
     {
         "speaker": "chuy",
-        "text": "[gasps] ¡Waters gamers!",
+        "text": "[excited] Waters gamers!",
+        "language_code": "en",
         "kind": "clip",
         "videoFile": "chuy_01_susto_alerta.mp4",
         "topTag": "🚨 ¡WATERS GAMERS!",
@@ -85,7 +118,7 @@ EP01_EXT_LINES = [
     },
     {
         "speaker": "agy",
-        "text": "[serious] ¡Chuy, aguas con el lanzamiento de GTA seis hoy! Nueve punto ocho millones de vistas en horas.",
+        "text": "[serious] ¡Aguas con el lanzamiento de GTA seis hoy! Nueve punto ocho millones de vistas en horas.",
         "kind": "clip_plus_broll",
         "videoFile": "agy_01_solo_explicando.mp4",
         "topTag": "🤖 AGY · ALERTA GTA 6",
@@ -194,12 +227,17 @@ EP01_EXT_LINES = [
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--keep-beats", action="store_true", help="Conserva timings exactos de episodeBeats.json[EP01_EXT]")
+    args = parser.parse_args()
+
     api_key = load_api_key()
     if not api_key:
         print("ERROR: Falta ELEVENLABS_API_KEY", file=sys.stderr)
         return 1
 
     OUT_AUDIO.mkdir(parents=True, exist_ok=True)
+    fixed_starts = [0.00, 2.3333, 9.3333, 14.0667, 26.80, 36.7333, 41.80, 51.10, 55.60, 64.50, 69.9667]
     beats_out = []
     audio_events = []
     current_frame = 0
@@ -208,11 +246,12 @@ def main() -> int:
         mp3_path = OUT_AUDIO / f"{idx:02d}_{item['speaker']}.mp3"
         if not mp3_path.exists():
             vid = CHUY_ID if item["speaker"] == "chuy" else AGY_ID
-            print(f"[EP01_EXT] TTS {idx:02d} ({item['speaker']}): {item['text']}")
-            tts_to_mp3(item["text"], vid, mp3_path, api_key)
+            lang = item.get("language_code")
+            print(f"[EP01_EXT] TTS {idx:02d} ({item['speaker']}, lang={lang}): {item['text']}")
+            tts_to_mp3(item["text"], vid, mp3_path, api_key, language_code=lang)
 
         dur = probe_duration(mp3_path)
-        start_sec = current_frame / FPS
+        start_sec = fixed_starts[idx - 1] if args.keep_beats else (current_frame / FPS)
         audio_events.append((start_sec + 0.08, mp3_path))
 
         # CERO traslapes: el beat siempre dura al menos dur + 0.25s
@@ -295,12 +334,17 @@ def main() -> int:
             current_frame += clip_frames + broll_frames
 
     # Asegurar >= 62s para que OpusClip acepte sin problema (> 1 minuto)
-    if current_frame < 62 * FPS:
+    if args.keep_beats:
+        existing = json.loads(BEATS_JSON.read_text(encoding="utf-8"))
+        total_sec = sum(b["durationInFrames"] for b in existing["EP01_EXT"]) / FPS
+        current_frame = int(round(total_sec * FPS))
+    elif current_frame < 62 * FPS:
         extra = 62 * FPS - current_frame
         beats_out[-1]["durationInFrames"] += extra
         current_frame += extra
-
-    total_sec = current_frame / FPS
+        total_sec = current_frame / FPS
+    else:
+        total_sec = current_frame / FPS
     master_wav = OUT_AUDIO / "EP01_EXT_master.wav"
     inputs = [
         "-f", "lavfi", "-i", "sine=frequency=110:duration=0.40",
@@ -325,9 +369,10 @@ def main() -> int:
         check=True,
     )
 
-    existing = json.loads(BEATS_JSON.read_text(encoding="utf-8")) if BEATS_JSON.exists() else {}
-    existing["EP01_EXT"] = beats_out
-    BEATS_JSON.write_text(json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8")
+    if not args.keep_beats:
+        existing = json.loads(BEATS_JSON.read_text(encoding="utf-8")) if BEATS_JSON.exists() else {}
+        existing["EP01_EXT"] = beats_out
+        BEATS_JSON.write_text(json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"✅ [EP01_EXT] Total frames={current_frame} ({total_sec:.2f}s) | WAV={master_wav}")
     return 0
 
