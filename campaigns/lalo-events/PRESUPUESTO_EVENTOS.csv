@@ -1,0 +1,8 @@
+evento,concepto,categoria,existencia_verificada,cantidad,unidad,costo_unitario_mxn,costo_total_estimado_mxn,costo_real_mxn,autorizacion,estado
+EVT-002,Hojas de arce,material existente,no; declaradas por titular,,pieza,,,,no requiere nueva compra,inventario pendiente
+EVT-002,Calabazas,compra opcional,no,,pieza,,,,no autorizada,no comprar
+EVT-001,Película Instax compatible,consumible,no,,exposición,,,,no autorizada,confirmar cámara y compromiso
+EVT-002,Tiempo de montaje captura y desmontaje,operacion,no,,hora,,,,pendiente,estimar costo
+EVT-002,Edición y entrega comprometidas,operacion,no,,foto,,,,pendiente,inventariar compromisos previos
+EVT-002,Apoyo operativo,personal,no,,hora,,,,no autorizado,primero revisar apoyo disponible
+EVT-002,Publicidad,pauta,no,,,,,,no autorizada,sin campaña activada

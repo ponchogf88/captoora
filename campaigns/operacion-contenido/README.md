@@ -1,3 +1,5 @@
+> Prioridad comercial · 26 octubre: leer y acusar [brief de Ventas → Contenido, primera sesión pagada y Pomelli](VENTAS_A_CONTENIDO_2026-10-26.md). Reutilizar piezas/identidad existentes; cero nuevas gift cards y cero pauta. Este enlace es comunicación compartida solicitada por el titular, no prueba de que otro agente ya lo haya leído.
+
 # Entrada para agentes: producción CAPTOORA
 
 Leer en orden:

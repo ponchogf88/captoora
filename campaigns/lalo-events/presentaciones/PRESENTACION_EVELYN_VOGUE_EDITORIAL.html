@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DOSSIER EDITORIAL BEAUTY // FARMASI x CAPTOORA STUDIO</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    @page {
+      size: letter;
+      margin: 10mm 12mm 10mm 12mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #FDFBF7;
+      color: #1F2421;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.45;
+      font-size: 9.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .page {
+      height: 258mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+    }
+
+    .page:last-child {
+      page-break-after: avoid;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid #D1C7BD;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #111111;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: 7.5pt;
+      color: #8C7851;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5pt;
+      color: #7A7265;
+      line-height: 1.4;
+    }
+
+    .doc-meta span {
+      color: #111111;
+      font-weight: 600;
+    }
+
+    /* HERO BANNER */
+    .hero-banner {
+      background: #F4EFEB;
+      border: 1px solid #E2D9D0;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 16px;
+    }
+
+    .target-tag {
+      font-size: 8pt;
+      font-weight: 700;
+      color: #8C7851;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 20pt;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #111111;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: #8C7851;
+    }
+
+    .hero-desc {
+      font-size: 9.5pt;
+      color: #554E46;
+      line-height: 1.45;
+    }
+
+    /* GRIDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E8E0D7;
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .card-accent {
+      border-left: 3px solid #8C7851;
+      background: #FAF7F2;
+    }
+
+    .card-label {
+      font-size: 7pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #8C7851;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 13pt;
+      font-weight: 700;
+      color: #111111;
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 8.5pt;
+      color: #5A534B;
+      line-height: 1.35;
+    }
+
+    /* SECTION TITLES */
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 13pt;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2 .num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #8C7851;
+      border: 1px solid #D8CFC5;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .time-node {
+      display: grid;
+      grid-template-columns: 95px 1fr;
+      background: #FFFFFF;
+      border: 1px solid #E8E0D7;
+      border-radius: 6px;
+      padding: 8px 12px;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .time-stamp {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #8C7851;
+      font-size: 8.5pt;
+    }
+
+    .time-detail {
+      font-size: 8.5pt;
+      color: #3C3630;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-size: 8.5pt;
+      background: #FFFFFF;
+      border: 1px solid #E8E0D7;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #F4EFEB;
+      color: #111111;
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #E2D9D0;
+    }
+
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #EFEAE3;
+      color: #4A443D;
+      line-height: 1.35;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag-free {
+      background: #EDE6DD;
+      color: #6E5D3E;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 7pt;
+      text-transform: uppercase;
+    }
+
+    .tag-paid {
+      background: #F4E8D7;
+      color: #925C18;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 7pt;
+      text-transform: uppercase;
+    }
+
+    /* VERDICT */
+    .verdict-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #F4EFEB;
+      border: 1px solid #D8CFC5;
+      border-radius: 8px;
+      padding: 12px 18px;
+    }
+
+    .stamp-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 13pt;
+      font-weight: 700;
+      color: #111111;
+      letter-spacing: 0.5px;
+    }
+
+    .stamp-sub {
+      font-size: 7.5pt;
+      color: #7A7265;
+    }
+
+    .stamp-badge {
+      background: #8C7851;
+      color: #FFFFFF;
+      font-size: 8.5pt;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid #D1C7BD;
+      padding-top: 8px;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7.5pt;
+      color: #8A8175;
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div class="page">
+  <div>
+    <div class="header">
+      <div>
+        <div class="brand-title">Captoora Studio</div>
+        <div class="brand-sub">Atelier de Fotografía Editorial // Monterrey</div>
+      </div>
+      <div class="doc-meta">
+        EDICIÓN BEAUTY: <span>FARMASI VIP</span><br>
+        ANFITRIONA: <span>EVELYN & LÍDERES</span><br>
+        SÁBADO 31 DE OCTUBRE // 13:00 HRS
+      </div>
+    </div>
+
+    <div class="hero-banner">
+      <div class="target-tag">Experiencia Privada en Set</div>
+      <h1>Bienvenida Evelyn & Equipo: <em>El Arte de Iluminar tu Belleza y tu Negocio</em></h1>
+      <div class="hero-desc">
+        Captoora Studio abre sus puertas este <strong>sábado 31 de octubre a partir de la 1:00 PM</strong> en Colinas de San Jerónimo para una sesión fotográfica de alta costura, diseñada para elevar el catálogo visual de tus productos Farmasi y empoderar la presencia digital de cada líder de tu equipo.
+      </div>
+    </div>
+
+    <h2><span class="num">01</span> Una Atmósfera Pensada en el Confort Femenino</h2>
+    <div class="grid-3">
+      <div class="card card-accent">
+        <div class="card-label">Dirección en Vivo</div>
+        <div class="card-title">Poses & Iluminación Pro</div>
+        <div class="card-text">
+          Poncho guía cada mirada, ángulo y postura con los cosméticos en mano para lograr un acabado elegante sin rigidez.
+        </div>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Área de Bienvenida</div>
+        <div class="card-title">Lounge & Retoque</div>
+        <div class="card-text">
+          Planta baja climatizada con música suave, café y espejo iluminado para afinar detalles de maquillaje antes de entrar a set.
+        </div>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Detalle Exclusivo</div>
+        <div class="card-title">Retrato Instax Mini</div>
+        <div class="card-text">
+          Cada socia se lleva en sus manos una fotografía instantánea física como recuerdo tangible y personal de su visita.
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="num">02</span> Cronograma Maestro de la Jornada (Apertura 13:00 hrs)</h2>
+    <div class="timeline">
+      <div class="time-node">
+        <div class="time-stamp">13:00 – 13:30</div>
+        <div class="time-detail"><strong>Recepción VIP & Colchón de Llegada:</strong> Arribo de Evelyn, socias e invitadas especiales. Café de bienvenida, selección de productos y revisión de vestuario.</div>
+      </div>
+      <div class="time-node">
+        <div class="time-stamp">13:30 – 14:15</div>
+        <div class="time-detail"><strong>Sesiones Bloque 1 & 2 (10 participantes):</strong> Retrato comercial fluido (8 a 10 minutos por persona). Luz de estudio suave para realzar tonos de piel y labiales.</div>
+      </div>
+      <div class="time-node">
+        <div class="time-stamp">14:15 – 15:15</div>
+        <div class="time-detail"><strong>Sesiones Bloque 3 & 4 (10 participantes):</strong> Continuidad en set principal mientras en el lounge se comparten historias y contenido detrás de cámaras.</div>
+      </div>
+      <div class="time-node">
+        <div class="time-stamp">15:15 – 16:15</div>
+        <div class="time-detail"><strong>Bloque 5 (5 participantes + Influencers):</strong> Set estelar, fotografía editorial y cápsula express en video para plataformas digitales.</div>
+      </div>
+      <div class="time-node">
+        <div class="time-stamp">16:15 – 16:45</div>
+        <div class="time-detail"><strong>Retrato Grupal Oficial & Entrega de Recuerdos:</strong> Fotografía conmemorativa de toda la red Farmasi + entrega de impresiones instantáneas.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Captoora Studio · Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L.</div>
+    <div>Página 1 de 2</div>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+  <div>
+    <div class="header">
+      <div>
+        <div class="brand-title">Captoora Studio</div>
+        <div class="brand-sub">Opciones de Dinámica & Paquetes Editoriales</div>
+      </div>
+      <div class="doc-meta">
+        EXPERIENCIA: <span>A ELECCIÓN DE EVELYN</span><br>
+        COBERTURA: <span>PASADO MAÑANA SÁBADO</span>
+      </div>
+    </div>
+
+    <h2><span class="num">03</span> Dos Formatos a Elección de la Dirección Farmasi</h2>
+    <div class="grid-2">
+      <div class="card card-accent">
+        <div class="card-label">Opción 1 // Dinámica Ágil</div>
+        <div class="card-title">Editorial Express (13:00 a 16:00)</div>
+        <div class="card-text">
+          Pensado para optimizar tiempos. 6 a 8 minutos de disparo continuo por persona, rotación puntual y foto grupal a las 15:45. Ideal para socias con compromisos familiares por la tarde.
+        </div>
+      </div>
+      <div class="card card-accent">
+        <div class="card-label">Opción 2 // Experiencia Integral</div>
+        <div class="card-title">Lounge & Producción VIP (13:00 a 17:00)</div>
+        <div class="card-text">
+          Una tarde completa de convivencia y creación de contenido. 10 a 12 minutos por líder, oportunidad de cambio de labial, fotos de textura de cosméticos y grabación de clips para TikToks.
+        </div>
+      </div>
+    </div>
+
+    <h2><span class="num">04</span> Estructura de Cortesía y Complementos Opcionales</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Paquete</th>
+          <th>Contenido de la Sesión</th>
+          <th>Beneficio Principal</th>
+          <th>Inversión</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Cortesía Oficial</strong><br><span class="tag-free">INCLUIDO $0</span></td>
+          <td>• 3 Fotografías Editadas en Alta Definición (Elegante + Casual + Detalle de Producto)<br>• 1 Retrato Instantáneo Instax Mini</td>
+          <td>Renovación impecable de imagen de perfil y presencia en catálogos oficiales.</td>
+          <td><strong>$0 MXN</strong><br><span style="font-size: 7.5pt; color: #8C7851;">Cortesía de Bienvenida</span></td>
+        </tr>
+        <tr>
+          <td><strong>Upgrade: Marca Personal</strong><br><span class="tag-paid">OPCIONAL</span></td>
+          <td>• <strong>+5 Fotografías Editadas Adicionales</strong> (8 retratos en total)<br>• Dos esquemas de iluminación: Ciclorama Blanco + Fondo Negro</td>
+          <td>Variedad estética para alimentar el feed de Instagram durante todo el mes.</td>
+          <td><strong>$300 MXN</strong><br><span style="font-size: 7.5pt; color: #925C18;">Tarifa Preferencial</span></td>
+        </tr>
+        <tr>
+          <td><strong>Upgrade: Creadora Pro</strong><br><span class="tag-paid">OPCIONAL</span></td>
+          <td>• <strong>+10 Fotografías Editadas Adicionales</strong> (13 retratos en total)<br>• <strong>2 Video-Clips 4K Verticales (10s)</strong> con iluminación de cine</td>
+          <td>Material dinámico para Reels y TikToks diseñado para generar ventas de producto.</td>
+          <td><strong>$500 MXN</strong><br><span style="font-size: 7.5pt; color: #925C18;">Tarifa Preferencial</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="margin-bottom: 12px; background: #FAF7F2; border-left: 3px solid #8C7851;">
+      <p style="font-size: 8.5pt; color: #5A534B; margin: 0;">
+        ✨ <em>Total Libertad:</em> La cortesía oficial de 3 fotografías e Instax está 100% asegurada para todas las asistentes. Los upgrades son una oportunidad voluntaria para quienes deseen aprovechar la iluminación del set en ese instante.
+      </p>
+    </div>
+
+    <div class="verdict-box">
+      <div>
+        <div class="stamp-text">Captoora Studio x Red Farmasi</div>
+        <div class="stamp-sub">Av. Paseo de los Álamos 165, San Jerónimo · Anfitrión: Poncho Gutiérrez</div>
+      </div>
+      <div class="stamp-badge">Listos para Crear</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Captoora Studio · WhatsApp: +52 81 4005 0088 · Colinas de San Jerónimo</div>
+    <div>Página 2 de 2</div>
+  </div>
+</div>
+
+</body>
+</html>

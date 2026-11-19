@@ -1,0 +1,247 @@
+{
+  "sistema": "Captoora Studio — Opus Clip 4.0 Pro Pipeline",
+  "director_ejecutivo": "Agente Eddy💫 (Director de Operaciones)",
+  "fecha_actualizacion": "2026-11-04T11:59:23.152337",
+  "suscripcion": {
+    "tipo": "Opus Clip Pro (Membresía Activa 1 Mes)",
+    "version_engine": "Opus Clip 4.0 (Latest Release)",
+    "plataforma": "https://www.opus.pro",
+    "objetivo": "Maximizar créditos generando lotes de 15 a 30 videos verticales por master"
+  },
+  "configuracion_render_opus_4": {
+    "aspect_ratio": "9:16 (Vertical Fullscreen)",
+    "auto_reframe": "Smart Speaker + Face Focus (Centrado en Poncho y Modelos)",
+    "subtitulos": {
+      "estilo": "Viral Modern Karaoke (Hormozi Style)",
+      "color_base": "#FFFFFF",
+      "color_resaltado": "#DFB15B (Gold Captoora)",
+      "emojis_automaticos": true,
+      "posicion": "Centro-inferior (Safe Zone TikTok/Reels)"
+    },
+    "duracion_clips_preferida": "30s a 60s (Alta Retención)",
+    "umbral_virality_score": 75,
+    "eliminacion_silencios": true
+  },
+  "videos_maestros_disponibles": [
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4",
+      "filename": "CAPTOORA_FARMASI_31_OCT_BTS_MASTER_LONG.mp4",
+      "duration_sec": 1243.8,
+      "duration_human": "20m 43s",
+      "size_mb": 205.77,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 20
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_00_57.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_00_57.mp4",
+      "duration_sec": 45.98,
+      "duration_human": "0m 45s",
+      "size_mb": 7.74,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_13_07.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_13_07.mp4",
+      "duration_sec": 120.65,
+      "duration_human": "2m 0s",
+      "size_mb": 19.86,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_22_50_59.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_22_50_59.mp4",
+      "duration_sec": 17.48,
+      "duration_human": "0m 17s",
+      "size_mb": 2.88,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_09_10.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_09_10.mp4",
+      "duration_sec": 120.61,
+      "duration_human": "2m 0s",
+      "size_mb": 19.89,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_22_54.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_22_54.mp4",
+      "duration_sec": 120.9,
+      "duration_human": "2m 0s",
+      "size_mb": 19.99,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_08_46.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_08_46.mp4",
+      "duration_sec": 22.98,
+      "duration_human": "0m 22s",
+      "size_mb": 3.76,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_49_40.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_10_49_40.mp4",
+      "duration_sec": 43.86,
+      "duration_human": "0m 43s",
+      "size_mb": 7.33,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_06_44.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_06_44.mp4",
+      "duration_sec": 120.9,
+      "duration_human": "2m 0s",
+      "size_mb": 20.04,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_23_59_55.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_23_59_55.mp4",
+      "duration_sec": 70.57,
+      "duration_human": "1m 10s",
+      "size_mb": 11.61,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_10_59_53.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_10_59_53.mp4",
+      "duration_sec": 64.07,
+      "duration_human": "1m 4s",
+      "size_mb": 10.59,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_40_34.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_40_34.mp4",
+      "duration_sec": 120.4,
+      "duration_human": "2m 0s",
+      "size_mb": 19.83,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_52_19.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_52_19.mp4",
+      "duration_sec": 120.73,
+      "duration_human": "2m 0s",
+      "size_mb": 19.91,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_50_21.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_50_21.mp4",
+      "duration_sec": 120.61,
+      "duration_human": "2m 0s",
+      "size_mb": 19.96,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Volumes/Macintosh HD - Data/VIDEOS_BTS_CAMARITA/T8417T0025231D52_2026_10_31_11_11_09.mp4",
+      "filename": "T8417T0025231D52_2026_10_31_11_11_09.mp4",
+      "duration_sec": 120.11,
+      "duration_human": "2m 0s",
+      "size_mb": 19.89,
+      "resolution": "1920x1080",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 1.22.33.mov",
+      "filename": "Screen Recording 2026-10-28 at 1.22.33.mov",
+      "duration_sec": 86.85,
+      "duration_human": "1m 26s",
+      "size_mb": 153.93,
+      "resolution": "4096x2304",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    },
+    {
+      "path": "/Users/imac/Desktop/Capturas_y_Grabaciones_Pantalla/Screen Recording 2026-10-28 at 7.53.06.mov",
+      "filename": "Screen Recording 2026-10-28 at 7.53.06.mov",
+      "duration_sec": 98.21,
+      "duration_human": "1m 38s",
+      "size_mb": 232.92,
+      "resolution": "4096x2304",
+      "codec": "h264",
+      "estimated_opus_shorts": 3
+    }
+  ],
+  "ganchos_y_prompts_eddy": [
+    {
+      "id": "HOOK_01_CEO_BEAUTY",
+      "tema": "Cómo posar como CEO de Belleza",
+      "gancho": "Cómo posar como Directora Ejecutiva en 3 segundos sin verte tiesa 📸💄",
+      "cta": "Comenta FOTO si quieres la guía de poses comerciales de Captoora.",
+      "keywords": [
+        "Farmasi",
+        "Beauty CEO",
+        "Poses de Estudio",
+        "Monterrey"
+      ]
+    },
+    {
+      "id": "HOOK_02_BTS_CAOS_ORDENADO",
+      "tema": "Detrás de Cámaras Real",
+      "gancho": "¿Qué pasa realmente cuando juntas a 25 líderes en un ciclorama? 🥂✨",
+      "cta": "Síguenos para ver la sesión completa con mimosas y alta costura.",
+      "keywords": [
+        "BTS",
+        "Captoora Studio",
+        "Fotografía Comercial",
+        "Vibra"
+      ]
+    },
+    {
+      "id": "HOOK_03_ZERO_CROP_SECRETO",
+      "tema": "Técnica de Fotografía Zero Crop",
+      "gancho": "La razón exacta por la que jamás recortamos una foto en Captoora Studio 📐🎞️",
+      "cta": "Guarda este video si eres creador de contenido o fotógrafo.",
+      "keywords": [
+        "Zero Crop",
+        "Full Frame",
+        "Dirección de Arte",
+        "Iluminación"
+      ]
+    },
+    {
+      "id": "HOOK_04_TESTIMONIOS_PING_PONG",
+      "tema": "Testimonios Dinámicos de Marca",
+      "gancho": "Le preguntamos a 5 directoras qué sintieron al verse en ciclorama puro... 😲✨",
+      "cta": "Visita nuestro perfil para agendar tu fecha comercial.",
+      "keywords": [
+        "Testimonios",
+        "Transformación",
+        "Autoestima",
+        "Marca Personal"
+      ]
+    }
+  ]
+}

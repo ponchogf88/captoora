@@ -1,3 +1,5 @@
+> **FARMASI799 — continuidad vigente4nov2026:** leer primero [FARMASI_799_CONTINUAR_AQUI.md](FARMASI_799_CONTINUAR_AQUI.md). Incluye148prompts históricos completos, recetas locales realmente utilizadas, bitácora,799fuentes y143aprobadas. No usar los antiguos scripts/horarios del repo como autorización para regenerar caras, etiquetas o relanzar la noche.
+
 # 📋 BITÁCORA MAESTRA DEL PROYECTO: ESTUDIO FOTOGRÁFICO CAPTOORA & FOTO_ENGINE
 
 > **Vigencia al 18 oct 2026:** este es el corte técnico histórico de septiembre. El estado conciliado, las conversaciones fechadas y las aclaraciones sobre entregas, dirección, ofertas y horarios están en [BITACORA_CAPTOORA_2026-10-18.md](BITACORA_CAPTOORA_2026-10-18.md). Se conserva el texto original; sus estados no son una certificación operativa actual.
@@ -119,3 +121,38 @@
 
 ---
 *Bitácora generada por Antigravity. Lista para consulta, edición y seguimiento al regreso del usuario.*
+
+
+## Actualización4nov2026 — relevo operativo FARMASI799
+
+El usuario pidió que Antigravity pudiera continuar desde GitHub. Se comprobó que148prompts exactos ya estaban en farmasi/continuidad-edicion-799 pero faltaba el paquete en main, y que su guía de entrada tenía estado nocturno obsoleto. Se publica en main el paquete textual y la entrada raíz, conservando esta bitácora histórica.
+
+- [Prompts completos reales](proyectos/farmasi-799/prompts/EJECUTADOS_EXACTOS.md) y JSON sin alterar.
+- [Métodos vigentes y receta exacta del bebé](proyectos/farmasi-799/prompts/RECETAS_VIGENTES.md): edición local, no generación de caras.
+- [Bitácora específica](proyectos/farmasi-799/BITACORA_FARMASI_799.md) con fallos, cambios de método y aprobaciones.
+- [Registro799](proyectos/farmasi-799/registros/fuentes_799.json):143aprobadas,641pendientes,12rechazadas,3bloqueadas; cero en revisión. Las tres del bebé aceptadas están incorporadas.
+- Aprobadas contiene143JPG y143PNG, una sola versión vigente por fuente/formato. Históricos fuera de entrega. Originales en Drive; ninguna foto añadida a este commit.
+- Prompts históricos no equivalen a un motor masivo ni a fidelidad garantizada en otro modelo. Acceso a Drive y protección real del sujeto siguen siendo requisitos; no instalar/comprar ni usar APIs con cargo sin autorización.
+
+Verificación: ejecutar ambos validadores del paquete y comprobar el commit de main remoto. La publicación de documentación no es producción ni entrega de nuevas fotos.
+
+---
+
+## Actualización 5 nov 2026 — Hito Comercial: Dominio Oficial `captoora.studio`, Ecosistema Pixieset & Airbnb Stock
+
+Se consolidan avances críticos de infraestructura, presencia de marca y estrategia comercial:
+
+1. **Dominio Oficial Adquirido:**
+   * Registro completado de `captoora.studio` en Porkbun con privacidad WHOIS de por vida y protección de datos.
+   * Configuración de subdominio `galeria.captoora.studio` vinculado a Pixieset.
+   * Exportación de logotipo oficial de marca de agua (`CAPTOORA_SIGNATURE_LOGO.png`) y favicon reglamentario de 32x32 px (`CAPTOORA_FAVICON_32x32.png`).
+2. **Reemplazo 100% Comercial en Airbnb:**
+   * Retiradas permanentemente todas las fotos no autorizadas de clientas de los anuncios de Airbnb.
+   * Sustituidas por 8 fotos comerciales de stock (locaciones icónicas de Monterrey y sesiones fotográficas profesionales libres de derechos). Estado verificado: *Enviado* en ambos listados.
+3. **Ecosistema de Ventas Pixieset (Client Gallery, Studio Manager & Email Marketing):**
+   * Límite de 4-5 fotos de cortesía por sesión con tienda de autoservicio (individuales y paquete de 30 fotos).
+   * Dinámica de cupones VIP con captura de leads vía WhatsApp Inbound (respetando políticas de Meta).
+   * Activación de Contratos y Liberación de Imagen (Model Releases) con firma digital desde el móvil.
+   * Estrategia de captura de correos (Email Registration) para eventos escolares y festivales navideños con campañas de carritos abandonados y urgencia.
+   * Blueprint detallado guardado en `docs/BLUEPRINT_CAPTOORA_DOMINIO_PIXIESET_2026.md`.
+

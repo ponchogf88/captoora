@@ -1,0 +1,244 @@
+import csv
+import os
+
+output_csv = "/Users/user/Desktop/Projects/CAPTOORA.STUDIO/CANVA_BULK_CREATE_SHEETS_CAPTOORA.csv"
+
+rows = [
+    # HEADER
+    ["ID", "Categoria", "Titulo_Gancho", "Frase_Principal", "Bajada_O_Detalle", "Call_To_Action", "Paleta_Visual", "Fondo_Canva_Sugerido", "Copy_Caption_Redes"],
+    
+    # 1. FRASES PREMIUM / FILOSOFÍA VISUAL (Aesthetic nocturno, luna, moda, elegancia)
+    [
+        "1", 
+        "Frase Premium", 
+        "FILOSOFÍA CAPTOORA", 
+        "Para ser el amo de la luz, primero tienes que dominar la oscuridad.", 
+        "Un retrato de estudio no nace de alumbrar todo, sino de decidir exactamente dónde vive la sombra.", 
+        "Guarda esta frase si entiendes el valor de los detalles.", 
+        "#0D0D0F (Negro Noche) y #E2E8F0 (Plata)", 
+        "crescent moon dark editorial fashion night moody", 
+        "La luz sin sombra es plana, aburrida y común. En Captoora Studio esculpimos retratos donde la penumbra tiene tanto peso como el destello. Sesiones de estudio en San Jerónimo, Monterrey. 📲 WhatsApp: 81 4005-0088. #CaptooraStudio #RetratoEditorial #MasterOfLight"
+    ],
+    [
+        "2", 
+        "Frase Premium", 
+        "ESTÉTICA PURA", 
+        "La elegancia no compite por atención; la sostiene con silencio.", 
+        "En una era de filtros saturados y ruido visual, un retrato sobrio y perfectamente iluminado es el verdadero lujo.", 
+        "Comenta 'EDITORIAL' si tu marca necesita este nivel.", 
+        "#111111 (Azabache) y #C5A880 (Oro Viejo)", 
+        "minimalist luxury studio portrait elegant dark", 
+        "Tu imagen profesional no necesita trucos ni artificios. Necesita precisión, porte y una iluminación que hable por ti antes de que digas una sola palabra. Agenda tu sesión en San Jerónimo. 📲 81 4005-0088. #MarcaPersonal #LujoSilencioso #RetratoMonterrey"
+    ],
+    [
+        "3", 
+        "Frase Premium", 
+        "VISIÓN DE ESTUDIO", 
+        "El filtro dura 24 horas. Un retrato de autor dura generaciones.", 
+        "La diferencia entre una foto rápida de celular y un disparo de estudio es el respeto por la permanencia de tu legado.", 
+        "¿Cuándo fue la última vez que te hiciste un retrato real?", 
+        "#18181B (Grafito) y #FFFFFF (Blanco Puro)", 
+        "classic monochrome portrait high fashion fine art", 
+        "¿Qué imagen de ti va a quedar para los próximos 10 años? No dejes tu marca profesional en manos de selfies improvisadas. Sesiones privadas en Captoora Studio. #RetratoFemenino #LegadoVisual #Captoora"
+    ],
+    [
+        "4", 
+        "Frase Premium", 
+        "ANATOMÍA DE LA SOMBRA", 
+        "La sombra no es la ausencia de luz; es la que define la forma de tu poder.", 
+        "El rostro plano no transmite carácter. Las facciones cobran autoridad cuando la luz tiene dirección y propósito.", 
+        "Desliza para ver el esquema de luz.", 
+        "#0A0A0A (Obsidiana) y #94A3B8 (Humo)", 
+        "dramatic chiaroscuro portrait studio low key", 
+        "Iluminar de frente es para fotos de pasaporte. En el estudio profesional esculpimos con claroscuro para que tu presencia imponga respeto. 📲 WhatsApp: 81 4005-0088. #FotografiaDeEstudio #Claroscuro #CaptooraStudio"
+    ],
+    [
+        "5", 
+        "Frase Premium", 
+        "NOCTURNO & MODA", 
+        "La noche no apaga tu imagen; revela quién sabe dominar su propia presencia.", 
+        "Estilo sobrio, silueta definida y destellos precisos. La fotografía nocturna y de estudio para marcas que no siguen tendencias.", 
+        "Síguenos para más dirección de estilo.", 
+        "#050505 (Noche Profunda) y #38BDF8 (Azul Neón Suave)", 
+        "night fashion moody moon reflection editorial style", 
+        "La seguridad no se finge frente al lente; se construye con la atmósfera correcta. Creamos el espacio para que tu mejor versión aparezca sin esfuerzo. 📍 San Jerónimo, Monterrey. #EditorialStyle #NightVibes #Captoora"
+    ],
+
+    # 2. TEMAS EDUCACIONALES (Tips de estudio, iluminación, poses y marcas)
+    [
+        "6", 
+        "Educacional", 
+        "EL SECRETO DE $10,000 USD", 
+        "La fórmula de cámara que separa a los aficionados de los profesionales.", 
+        "Modo Manual: 1/160s, ISO 100, f/8. Dispara sin flash: si no sale 100% negro, la luz del cuarto te está arruinando la foto.", 
+        "Guarda este truco para tu próxima sesión.", 
+        "#1E293B (Azul Pizarra) y #38BDF8 (Cian)", 
+        "camera settings dark studio screen photography gear", 
+        "¿Por qué tus fotos se ven 'caseras'? Porque no estás matando la luz del techo. Cuando apagas la luz ambiental y disparas a 1/160s f/8, tu flash Godox se convierte en el único dueño del lienzo. Pruébalo y cuéntame. #TipsFotografia #GodoxLighting #EstudioMonterrey"
+    ],
+    [
+        "7", 
+        "Educacional", 
+        "GUÍA DE POSE #1", 
+        "El truco de los hombros para proyectar autoridad inmediata.", 
+        "Nunca te pares de frente cuadrado a la cámara. Gira tu torso 30 grados, baja el hombro frontal y adelanta levemente la barbilla.", 
+        "Comenta 'POSE' y te mandamos la guía completa.", 
+        "#F8FAFC (Blanco Puro) y #0F172A (Azul Noche)", 
+        "business woman portrait clean backdrop confident pose", 
+        "La cámara amplifica la tensión. Cuando te enseñamos a respirar y a desacoplar los hombros del cuello, tu postura pasa de 'tensa' a 'líder nata' en 2 disparos. En Captoora guiamos cada milímetro de tu pose. #ComoPosar #DireccionDePose #MarcaPersonalMTY"
+    ],
+    [
+        "8", 
+        "Educacional", 
+        "DESMINTIENDO MITOS", 
+        "No existe gente 'no fotogénica'; solo hay mala iluminación.", 
+        "Una luz cenital resalta ojeras y papada. Una luz suave a 45 grados (Rembrandt) esculpe pómulos y mirada magnética.", 
+        "Comparte con alguien que le tenga miedo a la cámara.", 
+        "#F1F5F9 (Gris Suave) y #D97706 (Ámbar)", 
+        "softbox studio light portrait comparison lighting setup", 
+        "Si siempre dices 'salgo mal en las fotos', es porque te han fotografiado con el flash del celular en la cara o con el foco del techo. En un set profesional con softbox de 120cm, todos descubren su mejor ángulo. Garantizado. #RetratoPro #MitosFotografia #CaptooraStudio"
+    ],
+    [
+        "9", 
+        "Educacional", 
+        "EL FONDO PERFECTO", 
+        "Por qué el ciclorama blanco no se compra: se construye con luz.", 
+        "Para tener un blanco puro de revista no basta una pared blanca: necesitas dos flashes apuntando al fondo y uno principal al sujeto.", 
+        "Guarda para diseñar tu propio set.", 
+        "#FFFFFF (Blanco Nieve) y #475569 (Plomo)", 
+        "white seamless studio backdrop behind the scenes", 
+        "El secreto del ciclorama infinito es la física de la luz. Si el fondo no recibe 1 o 2 pasos más de exposición que la persona, saldrá gris y sucio. En Captoora cuidamos la matemática de cada destello. #StudioHacks #CicloramaBlanco #Captoora"
+    ],
+    [
+        "10", 
+        "Educacional", 
+        "MARCA PERSONAL", 
+        "3 señales de que tu foto de WhatsApp o LinkedIn está espantando clientes.", 
+        "1. Es una selfie recortada de una boda. 2. La luz viene de atrás y no se te ven los ojos. 3. Tiene más de 3 años de antigüedad.", 
+        "Escríbenos para renovar tu retrato express.", 
+        "#0284C7 (Azul Corporativo) y #FFFFFF", 
+        "professional headshot modern corporate linkedin style", 
+        "Tu foto de perfil es tu primer apretón de manos digital. Si vendes servicios de $20,000 MXN pero tu foto parece tomada en un antro, la confianza se rompe en el segundo uno. Cámbiala esta semana. 📲 81 4005-0088. #LinkedInTips #FotoDePerfil #CaptooraExpress"
+    ],
+
+    # 3. MEMES FINOS DE ESTUDIO & FOTOGRAFÍA (Humor que conecta)
+    [
+        "11", 
+        "Meme Fino", 
+        "EL CLIENTE EN LA SESIÓN", 
+        "El cliente: 'Pásamelas directas de la cámara hoy en la tarde, no hace falta que las edites'.", 
+        "Yo viendo en la pantalla la pared amarilla, la puerta del clóset, los cables y la cinta canela en el piso: 🤡", 
+        "Si eres fotógrafo, dale like si te ha pasado.", 
+        "#FEF08A (Amarillo Meme) y #18181B (Negro)", 
+        "photographer laughing behind camera funny meme expression", 
+        "La gente cree que la foto sale de la cámara como portada de Vogue. No saben que el 70% del arte ocurre después: planchando cicloramas, cuidando pieles y puliendo la luz. Respeten el proceso del cuarto oscuro digital 😂 #HumorFotografo #MemesFotografia #LaRealidadDelEstudio"
+    ],
+    [
+        "12", 
+        "Meme Fino", 
+        "LA TÍPICA COMPARACIÓN", 
+        "Cuando el prospecto te dice: 'Mi primo tiene una cámara igualita a la tuya y me cobra $200 pesos'.", 
+        "El primo en la sesión disparando con el flash pop-up integrado directo a la frente en modo automático: ⚡️💀", 
+        "Etiqueta a tu amigo que siempre busca al primo.", 
+        "#EF4444 (Rojo Alerta) y #FFFFFF", 
+        "camera flash blast blinding funny face snapshot", 
+        "La cámara no hace al fotógrafo, igual que el sartén no hace al chef con estrella Michelin. El equipo es el 20%; el ojo, la luz y el trato humano son el 80%. No arriesgues tu marca por ahorrarte tres pesos 😂 📲 WhatsApp: 81 4005-0088. #ElPrimoFotografo #MemesCreativos #CaptooraStudio"
+    ],
+    [
+        "13", 
+        "Meme Fino", 
+        "DIRECCIÓN DE POSE", 
+        "Yo: 'Relaja los hombros, respira hondo y sonríe natural'.", 
+        "El cliente automáticamente: 🧍‍♂️ (Entra en modo estatua egipcia de piedra caliza).", 
+        "Todos hemos sido ese cliente al menos una vez.", 
+        "#F87171 (Coral) y #1E293B", 
+        "stiff funny statue pose awkward smile portrait", 
+        "Romper el hielo es el paso más importante de cualquier sesión. En Captoora ponemos música, platicamos y te guiamos para que olvides que hay una cámara enfrente. Cero poses tiesas garantizado. #DetrasDeCamaras #SesionDivertida #RetratoMonterrey"
+    ],
+    [
+        "14", 
+        "Meme Fino", 
+        "FÍSICA CUÁNTICA EN EDICIÓN", 
+        "Quitar un barrito en la frente: 3 segundos. Quitar la manija de la puerta que se coló en la esquina: 4 horas de meditación.", 
+        "Benditas sean las herramientas de IA y los cicloramas infinitos.", 
+        "Comenta qué es lo más raro que has tenido que borrar de una foto.", 
+        "#A855F7 (Morado) y #0F172A", 
+        "photo editing screen zoom in funny detail retouch", 
+        "El cliente nunca se entera de todas las batallas que libramos contra enchufes, reflejos raros y cables rebeldes. Pero cuando ven la foto limpia... vale cada segundo. #RetoqueDigital #EvotoAI #Captoora"
+    ],
+    [
+        "15", 
+        "Meme Fino", 
+        "FOTÓGRAFOS ANÓNIMOS", 
+        "Mi cuenta de banco después de ver el nuevo lente 85mm f/1.4 y el softbox parabólico gigante: 📉🥲", 
+        "'Es una inversión para el negocio, te lo juro' (Yo comprando el quinto difusor idéntico).", 
+        "¿Quién más tiene síndrome de compra compulsiva de equipo?", 
+        "#22C55E (Verde Dólar) y #0F172A", 
+        "empty wallet photography gear funny meme studio", 
+        "La adicción a los fierros fotográficos es real. Pero oye, gracias a eso tus fotos tienen la mejor nitidez de todo San Jerónimo 😂 Ven a estrenar los flashes nuevos este fin de semana. 📲 81 4005-0088. #GAS #GearAddict #CaptooraStudio"
+    ],
+
+    # 4. DE TEMPORADA (Otoño, Halloween, Cierre de año, Preventa Navideña)
+    [
+        "16", 
+        "Temporada", 
+        "OTOÑO EN SAN JERÓNIMO", 
+        "Tonos cobrizos, texturas cálidas y la mejor temporada del año.", 
+        "Abrimos fechas para Mini-Sesiones de Otoño en estudio y exteriores. Ideal para actualizar tu portafolio personal o fotos familiares.", 
+        "Envía 'OTOÑO' por WhatsApp para ver los paquetes.", 
+        "#B45309 (Ámbar Otoño) y #78350F (Café Cálido)", 
+        "autumn aesthetic leaves warm cozy lighting studio", 
+        "El otoño tiene la paleta de color más elegante de todo el año. Diseñamos un set especial con luz dorada en San Jerónimo para que tus fotos se sientan acogedoras y profesionales. Cupos limitados. 📲 WhatsApp: 81 4005-0088. #OtoñoMTY #PumpkinPatchMonterrey #CaptooraStudio"
+    ],
+    [
+        "17", 
+        "Temporada", 
+        "EDICIÓN ESPECIAL HALLOWEEN", 
+        "Retrato 'Spooky Chic': Sombras profundas, elegancia y misterio.", 
+        "Para los que quieren algo diferente este octubre: retratos editoriales con estética de penumbra, humo y carácter cinematográfico.", 
+        "Solo 5 fechas disponibles esta semana.", 
+        "#450A0A (Rojo Quemado) y #09090B (Negro Azabache)", 
+        "dark moody cinematic portrait dramatic smoke halloween editorial", 
+        "No hacemos fotos infantiles de disfraces; hacemos arte editorial oscuro con iluminación cinematográfica. Si tu marca o tu estilo busca algo disruptivo para este fin de mes, esto es para ti. 📲 81 4005-0088. #SpookyChic #EditorialHalloween #Captoora"
+    ],
+    [
+        "18", 
+        "Temporada", 
+        "CIERRE DE AÑO 2026", 
+        "¿Tu foto de marca personal sigue siendo la misma de hace tres años?", 
+        "Termina el año con una imagen que refleje tu verdadero crecimiento profesional. Sesiones ejecutivas y comerciales en estudio.", 
+        "Agenda antes del 15 de noviembre con precio preferencial.", 
+        "#1E3A8A (Azul Ejecutivo) y #E2E8F0", 
+        "executive business woman modern clean office portrait", 
+        "Has cerrado contratos, crecido tu negocio y cambiado tu mentalidad este año. Es momento de que tus clientes vean a la persona que eres hoy. Reserva tu sesión de estudio en San Jerónimo. 📲 WhatsApp: 81 4005-0088. #CierreDeAño #MarcaPersonal2026 #CaptooraStudio"
+    ],
+    [
+        "19", 
+        "Temporada", 
+        "PREVENTA NAVIDAD", 
+        "Anticípate al caos de diciembre: Preventa de Sesiones Navideñas de Estudio.", 
+        "Set minimalista, elegante y sin clichés exagerados. Retratos familiares y de pareja con luz suave que no pasan de moda.", 
+        "Comenta 'NAVIDAD' y recibe acceso a la preventa secreta.", 
+        "#14532D (Verde Pino) y #CA8A04 (Dorado Festivo)", 
+        "elegant christmas studio portrait warm minimal aesthetic", 
+        "En diciembre todos los estudios se saturan y las entregas se retrasan. En Captoora abrimos lista prioritaria para que tengas tus fotos listas antes que nadie para tus tarjetas y regalos. Cupos muy limitados. 📲 81 4005-0088. #NavidadMTY #FotosNavideñasMonterrey #Captoora"
+    ],
+    [
+        "20", 
+        "Temporada", 
+        "REGALO DE MARCA", 
+        "El mejor regalo para tu negocio este cierre de año: Autoridad Visual.", 
+        "Paquete completo: 5 retratos editoriales, 3 adaptaciones para portadas de redes y guía de poses personalizada.", 
+        "Haz clic en el enlace de la bio para cotizar hoy.", 
+        "#312E81 (Índigo Profundo) y #F8FAFC", 
+        "branding kit photoshoot magazine cover style modern", 
+        "Las marcas que ganan no son las que tienen el producto más barato; son las que transmiten mayor seguridad. Invierte en tu activo más valioso: tu propia imagen. 📍 Colinas de San Jerónimo, Monterrey. 📲 81 4005-0088. #BrandingMonterrey #CaptooraStudio #MarcaDePoder"
+    ]
+]
+
+with open(output_csv, mode="w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(rows)
+
+print(f"✓ Archivo CSV para Google Sheets / Canva Bulk Create generado con éxito: {output_csv}")
+print(f"✓ Total de filas generadas: {len(rows)-1} publicaciones listas.")

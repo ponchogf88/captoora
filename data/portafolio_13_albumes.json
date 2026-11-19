@@ -1,0 +1,243 @@
+{
+  "domain": "https://captoora.studio",
+  "updated_at": "2026-11-08",
+  "total_albums": 13,
+  "total_curated_photos": 41,
+  "categories": [
+    {
+      "id": "all",
+      "label": "Todos los Álbumes (13)"
+    },
+    {
+      "id": "estudio",
+      "label": "Estudio & Ciclorama"
+    },
+    {
+      "id": "editorial",
+      "label": "Editorial & Viajes"
+    },
+    {
+      "id": "familia",
+      "label": "Familia & Niños"
+    },
+    {
+      "id": "exteriores",
+      "label": "Exteriores & Bosque"
+    },
+    {
+      "id": "eventos",
+      "label": "Eventos & Celebraciones"
+    }
+  ],
+  "albums": [
+    {
+      "id": "album-01",
+      "number": "01",
+      "slug": "01_Sesion_2025_Personal_Branding",
+      "title": "1- sesión 2025 · Personal Branding",
+      "category": "editorial",
+      "category_label": "Editorial & Branding",
+      "location": "Monterrey, N.L.",
+      "gear": "Nikon Z · 50mm f/1.8 S · Ciclorama Negro & Blanco",
+      "cover": "assets/media_jpg/pf-poncho25-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-poncho25-01.jpg",
+        "assets/media_jpg/pf-poncho25-02.jpg"
+      ]
+    },
+    {
+      "id": "album-02",
+      "number": "02",
+      "slug": "02_Peloni_9_Anos_Gala",
+      "title": "2- peloni 9 años · Gala Infantil",
+      "category": "familia",
+      "category_label": "Familia & Niños",
+      "location": "Monterrey, N.L.",
+      "gear": "Óptica Fija · Retrato Cándido en Acción",
+      "cover": "assets/media_jpg/pf-peloni-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-peloni-01.jpg",
+        "assets/media_jpg/pf-peloni-02.jpg",
+        "assets/media_jpg/pf-peloni-03.jpg"
+      ]
+    },
+    {
+      "id": "album-03",
+      "number": "03",
+      "slug": "03_Parque_Rufino_Tamayo",
+      "title": "3- Rufino Tamayo · Exterior Golden Hour",
+      "category": "exteriores",
+      "category_label": "Exteriores & Bosque",
+      "location": "San Pedro Garza García, N.L.",
+      "gear": "Luz Natural de Tarde · 85mm & 35mm f/1.8 S",
+      "cover": "assets/media_jpg/pf-tamayo-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-tamayo-01.jpg",
+        "assets/media_jpg/pf-tamayo-02.jpg",
+        "assets/media_jpg/pf-tamayo-03.jpg"
+      ]
+    },
+    {
+      "id": "album-04",
+      "number": "04",
+      "slug": "04_Mama_65_Celebracion",
+      "title": "4- Mamá 65 · Celebración Familiar",
+      "category": "eventos",
+      "category_label": "Eventos & Celebraciones",
+      "location": "Monterrey, N.L.",
+      "gear": "Cobertura Documental & Retrato de Gala",
+      "cover": "assets/media_jpg/pf-mama65-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-mama65-01.jpg",
+        "assets/media_jpg/pf-mama65-02.jpg"
+      ]
+    },
+    {
+      "id": "album-05",
+      "number": "05",
+      "slug": "05_Peloni_7_Infantil",
+      "title": "5- peloni 7 · Retrato Infantil",
+      "category": "familia",
+      "category_label": "Familia & Niños",
+      "location": "Monterrey, N.L.",
+      "gear": "Retrato Espontáneo · Luz Natural",
+      "cover": "assets/media_jpg/pf-peloni7-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-peloni7-01.jpg",
+        "assets/media_jpg/pf-peloni7-02.jpg"
+      ]
+    },
+    {
+      "id": "album-06",
+      "number": "06",
+      "slug": "06_Princis_33_Estudio",
+      "title": "6- Princis 33 · Ciclorama Estudio",
+      "category": "estudio",
+      "category_label": "Estudio & Ciclorama",
+      "location": "Captoora Studio · San Jerónimo",
+      "gear": "Iluminación Godox · Contraluz Cálido",
+      "cover": "assets/media_jpg/pf-princis-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-princis-01.jpg"
+      ]
+    },
+    {
+      "id": "album-07",
+      "number": "07",
+      "slug": "07_Barbie_Lulu_Editorial",
+      "title": "7- Barbie Lulú · Set Editorial Físico",
+      "category": "estudio",
+      "category_label": "Estudio & Ciclorama",
+      "location": "Captoora Studio · San Jerónimo",
+      "gear": "Set Físico Construido · Cámara Instax Mini Real",
+      "cover": "assets/media_jpg/pf-barbie-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-barbie-01.jpg",
+        "assets/media_jpg/pf-barbie-02.jpg",
+        "assets/media_jpg/pf-barbie-03.jpg"
+      ]
+    },
+    {
+      "id": "album-08",
+      "number": "08",
+      "slug": "08_Peloni_Retrato_Clasico",
+      "title": "8- Peloni · Retrato Clásico",
+      "category": "familia",
+      "category_label": "Familia & Niños",
+      "location": "Monterrey, N.L.",
+      "gear": "Óptica de Retrato · Piel Real",
+      "cover": "assets/media_jpg/pf-peloni8-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-peloni8-01.jpg",
+        "assets/media_jpg/pf-peloni8-02.jpg"
+      ]
+    },
+    {
+      "id": "album-09",
+      "number": "09",
+      "slug": "09_Mama_64_Conmemorativo",
+      "title": "9- Mamá 64 · Retrato Conmemorativo",
+      "category": "eventos",
+      "category_label": "Eventos & Celebraciones",
+      "location": "Monterrey, N.L.",
+      "gear": "Iluminación Cálida · Retrato Familiar",
+      "cover": "assets/media_jpg/pf-mama64-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-mama64-01.jpg",
+        "assets/media_jpg/pf-mama64-02.jpg"
+      ]
+    },
+    {
+      "id": "album-10",
+      "number": "10",
+      "slug": "10_Abuela_Legado_Familiar",
+      "title": "10- abuela · Legado & Familia",
+      "category": "familia",
+      "category_label": "Familia & Niños",
+      "location": "Monterrey, N.L.",
+      "gear": "Retrato Emotivo · Luz Ambiental Real",
+      "cover": "assets/media_jpg/pf-abuela-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-abuela-01.jpg"
+      ]
+    },
+    {
+      "id": "album-11",
+      "number": "11",
+      "slug": "11_Sierra_de_Chipinque",
+      "title": "11- Chipinque · Bosque & Familia",
+      "category": "exteriores",
+      "category_label": "Exteriores & Bosque",
+      "location": "Parque Ecológico Chipinque, N.L.",
+      "gear": "Nikon Z · 85mm & 35mm f/1.8 S · Luz de Bosque",
+      "cover": "assets/media_jpg/pf-chipinque-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-chipinque-01.jpg",
+        "assets/media_jpg/pf-chipinque-02.jpg",
+        "assets/media_jpg/pf-chipinque-fam.jpg"
+      ]
+    },
+    {
+      "id": "album-12",
+      "number": "12",
+      "slug": "12_Editorial_y_Viajes_Villarreal_Cuba_Texas",
+      "title": "12- Editorial & Viajes · Villarreal, Cuba & Texas",
+      "category": "editorial",
+      "category_label": "Editorial & Branding",
+      "location": "Monterrey · La Habana · Texas",
+      "gear": "Nikon Z · Street & Social Location",
+      "cover": "assets/media_jpg/pf-villarreal-01.jpg",
+      "photos": [
+        "assets/media_jpg/pf-villarreal-01.jpg",
+        "assets/media_jpg/pf-villarreal-02.jpg",
+        "assets/media_jpg/pf-cuba-01.jpg",
+        "assets/media_jpg/pf-texas-01.jpg",
+        "assets/media_jpg/pf-texas-02.jpg"
+      ]
+    },
+    {
+      "id": "album-13",
+      "number": "13",
+      "slug": "13_Farmasi_y_GlowTours_Studio_Pro",
+      "title": "13- Farmasi & GlowTours · Estudio Óptico Real",
+      "category": "estudio",
+      "category_label": "Estudio & Ciclorama",
+      "location": "Captoora Studio · San Jerónimo 11",
+      "gear": "Telón Físico Real de Estudio & Set GlowTours (0% IA)",
+      "cover": "assets/media_jpg/IG_CPT_0550_4x5.jpg",
+      "photos": [
+        "assets/media_jpg/IG_CPT_0550_4x5.jpg",
+        "assets/media_jpg/IG_CPT_0580_4x5.jpg",
+        "assets/media_jpg/IG_CPT_0630_4x5.jpg",
+        "assets/media_jpg/IG_CPT_0700_4x5.jpg",
+        "assets/media_jpg/IG_CPT_0750_4x5.jpg",
+        "assets/media_jpg/IG_CPT_0800_4x5.jpg",
+        "assets/media_jpg/FARMASI_CPT_0845_GRUPAL_4x5.jpg",
+        "assets/media_jpg/pf-glow-cpt_0853.jpg",
+        "assets/media_jpg/pf-glow-cpt_0855.jpg",
+        "assets/media_jpg/pf-glow-cpt_0863.jpg",
+        "assets/media_jpg/pf-glow-cpt_0878.jpg"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CAPTOORA // EL PLAN FREEMIUM EXPLICADO VISUAL</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=JetBrains+Mono:wght@700;800&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #090A0F;
+      color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      width: 1200px;
+      min-height: 1600px;
+      padding: 40px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* TOP BAR */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111420;
+      border: 2px solid #1E293B;
+      padding: 16px 28px;
+      border-radius: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      background: #CCFF00;
+      color: #000;
+      font-weight: 900;
+      font-size: 24px;
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-text span {
+      color: #CCFF00;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 2px;
+    }
+
+    .status-pill {
+      background: rgba(204, 255, 0, 0.15);
+      border: 1px solid #CCFF00;
+      color: #CCFF00;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-pill::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #CCFF00;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #CCFF00;
+    }
+
+    /* BIG HERO PUNCHLINE */
+    .hero {
+      text-align: center;
+      padding: 16px 20px;
+      background: radial-gradient(circle at center, rgba(204, 255, 0, 0.08) 0%, transparent 70%);
+    }
+
+    .hero-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #94A3B8;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+    }
+
+    .hero-title span {
+      color: #CCFF00;
+      text-shadow: 0 0 30px rgba(204, 255, 0, 0.4);
+    }
+
+    /* THE FUNNEL (3 STEPS) */
+    .funnel-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* STEP 1 */
+    .step-card {
+      background: #111522;
+      border: 2px solid #1E293B;
+      border-radius: 20px;
+      padding: 24px 30px;
+      display: grid;
+      grid-template-columns: 140px 1fr 260px;
+      align-items: center;
+      gap: 24px;
+      position: relative;
+    }
+
+    .step-card.glow {
+      border-color: rgba(204, 255, 0, 0.5);
+      background: linear-gradient(90deg, #111522 0%, #151D2A 100%);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .step-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #090B12;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    .step-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px;
+      font-weight: 900;
+      color: #CCFF00;
+      line-height: 1;
+    }
+
+    .step-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    .step-body h2 {
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .step-body p {
+      font-size: 14px;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    .step-stats {
+      background: #090B12;
+      border: 1px solid #1E293B;
+      border-radius: 14px;
+      padding: 14px 18px;
+      text-align: right;
+    }
+
+    .step-stat-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      font-weight: 900;
+      color: #CCFF00;
+    }
+
+    .step-stat-sub {
+      font-size: 11px;
+      color: #64748B;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* DOWN ARROW CONNECTOR */
+    .arrow-divider {
+      text-align: center;
+      font-size: 22px;
+      color: #CCFF00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .arrow-divider::before, .arrow-divider::after {
+      content: '';
+      height: 1px;
+      width: 120px;
+      background: #334155;
+    }
+
+    /* GRID OF UPGRADES (LOOT BOXES) */
+    .loot-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    .loot-box {
+      background: #111522;
+      border: 2px solid #1E293B;
+      border-radius: 18px;
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+
+    .loot-box.highlight {
+      border-color: #CCFF00;
+      background: #131A26;
+      box-shadow: 0 0 20px rgba(204, 255, 0, 0.15);
+    }
+
+    .loot-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748B;
+      margin-bottom: 8px;
+    }
+
+    .loot-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .loot-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 30px;
+      font-weight: 900;
+      color: #CCFF00;
+      margin-bottom: 12px;
+    }
+
+    .loot-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12px;
+      color: #94A3B8;
+      margin-bottom: 16px;
+    }
+
+    .loot-items li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .loot-items li::before {
+      content: '✔';
+      color: #CCFF00;
+      font-weight: 900;
+    }
+
+    .psychology-pill {
+      background: #090B12;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #CBD5E1;
+      font-style: italic;
+      border-left: 3px solid #CCFF00;
+    }
+
+    /* VIRAL FLYWHEEL */
+    .viral-card {
+      background: linear-gradient(135deg, #131828 0%, #0E121E 100%);
+      border: 2px solid #334155;
+      border-radius: 20px;
+      padding: 20px 28px;
+      display: grid;
+      grid-template-columns: 80px 1fr 280px;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .viral-icon {
+      font-size: 44px;
+      text-align: center;
+    }
+
+    .viral-text h3 {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .viral-text p {
+      font-size: 13px;
+      color: #94A3B8;
+      line-height: 1.4;
+    }
+
+    .viral-badge {
+      background: #090B12;
+      border: 1px solid #CCFF00;
+      border-radius: 12px;
+      padding: 12px 18px;
+      text-align: center;
+    }
+
+    .viral-badge .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      color: #CCFF00;
+    }
+
+    .viral-badge .sub {
+      font-size: 10px;
+      color: #94A3B8;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* THE MATH (BOTTOM LINE) */
+    .scoreboard {
+      background: #090B12;
+      border: 3px solid #CCFF00;
+      border-radius: 22px;
+      padding: 24px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 280px;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 0 40px rgba(204, 255, 0, 0.2);
+    }
+
+    .score-item {
+      border-right: 1px solid #1E293B;
+      padding-right: 20px;
+    }
+
+    .score-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #64748B;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 4px;
+    }
+
+    .score-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 26px;
+      font-weight: 900;
+      color: #FFFFFF;
+    }
+
+    .score-val.green {
+      color: #CCFF00;
+      font-size: 32px;
+      text-shadow: 0 0 20px rgba(204, 255, 0, 0.5);
+    }
+
+    .stamp-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .big-stamp {
+      background: #CCFF00;
+      color: #000;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 900;
+      padding: 12px 24px;
+      border-radius: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 25px rgba(204, 255, 0, 0.6);
+      text-align: center;
+      width: 100%;
+    }
+
+    .stamp-sub {
+      font-size: 10px;
+      color: #64748B;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 6px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div class="brand-text">
+        <h1>CAPTOORA STUDIO</h1>
+        <span>ADVANCED CREATIVE OPS // MONTERREY</span>
+      </div>
+    </div>
+    <div class="status-pill">
+      ALGORITMO FREEMIUM: 100% ACTIVO
+    </div>
+  </div>
+
+  <!-- HERO TITLE -->
+  <div class="hero">
+    <div class="hero-badge">GAME THEORY & FIRST PRINCIPLES // APTO PARA CRACKS</div>
+    <div class="hero-title">
+      CÓMO CONVERTIR <span>$0 DE INVERSIÓN</span> EN <span>$10,000 MXN</span> ESTE SÁBADO
+    </div>
+  </div>
+
+  <!-- THE FUNNEL -->
+  <div class="funnel-container">
+
+    <!-- STEP 1: EL CEBO -->
+    <div class="step-card glow">
+      <div class="step-badge">
+        <div class="step-num">01</div>
+        <div class="step-label">EL CEBO</div>
+      </div>
+      <div class="step-body">
+        <h2>🪤 3 FOTOS GRATIS NIVEL HOLLYWOOD</h2>
+        <p>
+          Las invitamos a 25 chicas a tomarse fotos gratis (1 elegante, 1 deportiva, 1 con su producto). <strong>Poncho les dispara con flashes Godox de estudio profesional.</strong> En la pantalla se ven como diosas de portada de revista. La dopamina se dispara al 1000%.
+        </p>
+      </div>
+      <div class="step-stats">
+        <div class="step-stat-val">$0 MXN</div>
+        <div class="step-stat-sub">Costo de Entrada (Cero Fricción)</div>
+      </div>
+    </div>
+
+    <!-- ARROW -->
+    <div class="arrow-divider">
+      ▼ SE DISPARA EL DESEO DE POSEER MÁS (ENDOWMENT EFFECT) ▼
+    </div>
+
+    <!-- STEP 2: EL MENÚ DE DESEO (LOOT BOXES) -->
+    <div class="loot-grid">
+      
+      <!-- LOOT 1 -->
+      <div class="loot-box">
+        <div>
+          <div class="loot-tag">UPGRADE BÁSICO</div>
+          <div class="loot-title">✨ MARCA PERSONAL</div>
+          <div class="loot-price">$300 <span style="font-size: 14px; color: #94A3B8;">MXN</span></div>
+          <ul class="loot-items">
+            <li>+5 Fotos Editadas Extras (8 totales)</li>
+            <li>Fondo Blanco + Fondo Negro</li>
+            <li>Galería Privada Pixieset</li>
+          </ul>
+        </div>
+        <div class="psychology-pill">
+          "Cuesta lo mismo que un café con amigas, me llevo fotos para todo el mes."
+        </div>
+      </div>
+
+      <!-- LOOT 2 (HIGHLIGHT) -->
+      <div class="loot-box highlight">
+        <div>
+          <div class="loot-tag" style="color: #CCFF00;">🔥 EL MÁS DESEADO</div>
+          <div class="loot-title">🚀 CREADORA PRO</div>
+          <div class="loot-price">$500 <span style="font-size: 14px; color: #CCFF00;">MXN</span></div>
+          <ul class="loot-items">
+            <li>+10 Fotos Editadas Extras (13 totales)</li>
+            <li>Ambos fondos iluminados</li>
+            <li><strong>2 Clips de Video 4K (10s)</strong> para TikTok/Reels</li>
+          </ul>
+        </div>
+        <div class="psychology-pill">
+          "Un videógrafo cobra $2,000. Por $500 salgo con video y fotos comerciales."
+        </div>
+      </div>
+
+      <!-- LOOT 3 -->
+      <div class="loot-box">
+        <div>
+          <div class="loot-tag">ACADEMIA CAPTOORA</div>
+          <div class="loot-title">🎓 TALLER CELULAR</div>
+          <div class="loot-price">$500 <span style="font-size: 14px; color: #94A3B8;">(PREVENTA)</span></div>
+          <ul class="loot-items">
+            <li>Aprende a iluminar cosméticos con tu cel</li>
+            <li>Presencial (Max 15 cupos) o Virtual</li>
+            <li>Aparta con solo $200 hoy</li>
+          </ul>
+        </div>
+        <div class="psychology-pill">
+          "La luz de Poncho hace magia. Quiero aprender a hacerlo yo sola en mi casa."
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ARROW -->
+    <div class="arrow-divider">
+      ▼ EL MULTIPLICADOR VIRAL EN REDES ▼
+    </div>
+
+    <!-- STEP 3: VIRAL FLYWHEEL -->
+    <div class="viral-card">
+      <div class="viral-icon">⚡</div>
+      <div class="viral-text">
+        <h3>Ping-Pong con 3-4 Influencers + Colaboración en Instagram</h3>
+        <p>
+          Poncho hace un ping-pong de 40 segundos ("¿Volverías a Captoora?"). Se sube como <strong>Instagram Collab</strong>: el video aparece en el perfil de la influencer Y en el de Captoora al mismo tiempo.
+        </p>
+      </div>
+      <div class="viral-badge">
+        <div class="num">+100,000</div>
+        <div class="sub">Vistas Orgánicas Gratis en MTY</div>
+      </div>
+    </div>
+
+    <!-- STEP 4: SCOREBOARD (THE MONEY) -->
+    <div class="scoreboard">
+      <div class="score-item">
+        <div class="score-label">COSTO DE ANUNCIOS</div>
+        <div class="score-val">$0.00</div>
+      </div>
+      <div class="score-item">
+        <div class="score-label">TIEMPO OPERATIVO</div>
+        <div class="score-val">5 HORAS</div>
+      </div>
+      <div class="score-item">
+        <div class="score-label">DINERO GENERADO</div>
+        <div class="score-val green">$8,600+</div>
+      </div>
+      <div class="stamp-box">
+        <div class="big-stamp">¡A HUEVO, APROBADO!</div>
+        <div class="stamp-sub">ZERO RIESGO // 100% MARGEN</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

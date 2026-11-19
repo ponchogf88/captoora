@@ -1,4 +1,22 @@
 # Captoora Git Ignore
+.env
+.env.*
+!.env.example
+.backup_local/
+.DS_Store
+__pycache__/
+*.pyc
+*.dmg
+ENTREGAS_CLIENTES/
+Entrega_Pharmacy_Event_130926/
+dev_event_curator/
+NikonControlStudio/
+INSPIRACION_VIDEOS_BTS/
+MARCA/
+Album_*.pdf
+ONFRAME_*.pdf
+.grok/
+Captura de pantalla*
 assets/screencapture-*.png
 test_video.mp4
 *.log

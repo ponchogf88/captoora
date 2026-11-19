@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAPTOORA STUDIO · Tablero Operativo Semanal ManyChat // Campaña Navidad 2026</title>
+  <meta name="description" content="Tablero operativo interactivo hora por hora, día por día estilo ManyChat para la Campaña Navideña 2026 de Captoora Studio: producción en estudio, publicaciones, sesiones con creadoras y seguimiento inbound.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #030406;
+      --card-bg: #090c12;
+      --card-inner: #0f141f;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(212, 175, 55, 0.4);
+      --gold: #d4af37;
+      --gold-glow: rgba(212, 175, 55, 0.25);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --cyan: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.2);
+      --pink: #ec4899;
+      --purple: #a855f7;
+      --amber: #f59e0b;
+      --crimson: #ef4444;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+      padding-bottom: 100px;
+    }
+
+    /* TOP DOCK */
+    .board-dock {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(3, 4, 6, 0.94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+
+    .brand-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+
+    .dock-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .dock-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.74rem;
+      padding: 6px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .pill-preventa {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    .pill-wa {
+      background: #25d366;
+      color: #000;
+    }
+    .pill-wa:hover {
+      background: #1eb956;
+      transform: translateY(-1px);
+    }
+
+    .pill-action {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .pill-action:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HERO */
+    .board-hero {
+      padding: 50px 0 30px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--emerald);
+      margin-bottom: 12px;
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 4px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #fff 20%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 860px;
+      margin: 0 auto 30px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    /* FLOW BANNER (MANYCHAT ARCHITECTURE) */
+    .flow-architecture {
+      background: linear-gradient(180deg, #0c1018 0%, #080a0f 100%);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .flow-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .flow-node {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      position: relative;
+    }
+
+    .flow-node-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 4px;
+    }
+
+    .flow-node-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .flow-node-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* FILTERS & DAY SELECTOR (MANYCHAT BOARD CONTROLS) */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 12px 18px;
+    }
+
+    .day-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .day-tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .day-tab-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .day-tab-btn.active {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: rgba(212, 175, 55, 0.35);
+      color: var(--gold);
+    }
+
+    .filter-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .filter-tag-btn {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-tag-btn.active {
+      border-color: #fff;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* SCHEDULE TIMELINE CARDS */
+    .schedule-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .day-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    }
+
+    .day-header {
+      padding: 18px 24px;
+      background: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .day-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .day-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .day-focus {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--gold);
+    }
+
+    .day-meta {
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    .day-hours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 16px;
+      padding: 24px;
+    }
+
+    /* HOUR CARD */
+    .hour-card {
+      background: var(--card-inner);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .hour-card:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .hour-card.type-prod { border-left: 3px solid var(--amber); }
+    .hour-card.type-post { border-left: 3px solid var(--cyan); }
+    .hour-card.type-crm  { border-left: 3px solid var(--emerald); }
+    .hour-card.type-creator { border-left: 3px solid var(--pink); }
+    .hour-card.type-strat { border-left: 3px solid var(--purple); }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hour-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .category-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .pill-prod { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .pill-post { background: rgba(0, 240, 255, 0.15); color: #67e8f9; border: 1px solid rgba(0, 240, 255, 0.3); }
+    .pill-crm  { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .pill-creator { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+    .pill-strat { background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.3); }
+
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .card-action-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+    }
+
+    .action-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .action-text {
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .card-btn-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .btn-micro {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .btn-micro:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-micro.wa {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: rgba(37, 211, 102, 0.4);
+      color: #86efac;
+    }
+    .btn-micro.wa:hover {
+      background: rgba(37, 211, 102, 0.25);
+    }
+
+    /* BENCHMARK COMPARISON TABLE */
+    .benchmark-section {
+      margin-top: 60px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .benchmark-table-wrap {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+
+    .benchmark-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.84rem;
+    }
+
+    .benchmark-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .benchmark-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      vertical-align: top;
+    }
+
+    .benchmark-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* TOAST */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gold);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2000;
+      pointer-events: none;
+    }
+
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* FOOTER */
+    .page-footer {
+      margin-top: 80px;
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.82rem;
+    }
+
+    @media print {
+      body { background: #fff !important; color: #000 !important; }
+      .board-dock, .dock-buttons, .controls-bar, .card-btn-row, .toast-msg { display: none !important; }
+      .day-section, .flow-architecture, .benchmark-section {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .card-title, .hero-title, .day-name { color: #000 !important; -webkit-text-fill-color: initial !important; }
+      .hour-card { background: #fafafa !important; border: 1px solid #eee !important; color: #000 !important; }
+      .action-text, .card-desc { color: #333 !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DOCK -->
+  <header class="board-dock">
+    <a href="campana_navidad_2026.html" class="brand-group">
+      <div class="brand-mark">C</div>
+      <div>
+        <div class="brand-title">CAPTOORA // TABLERO SEMANAL HORA POR HORA</div>
+        <div class="brand-sub">CAMPAÑA NAVIDAD 2026 · FLUJO MANYCHAT</div>
+      </div>
+    </a>
+    <div class="dock-buttons">
+      <div class="dock-pill pill-preventa">
+        ⚡ $500 APARTADO / AHORRA $1,000
+      </div>
+      <button class="dock-pill pill-action" onclick="window.print()">
+        🖨️ Imprimir / PDF
+      </button>
+      <a href="campana_navidad_2026.html" class="dock-pill pill-action">
+        ← Volver al Command Center
+      </a>
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20apartar%20mi%20sesi%C3%B3n%20Navide%C3%B1a%20de%20preventa%20(%24500%20MXN)" target="_blank" class="dock-pill pill-wa">
+        💬 WhatsApp Inbound Oficial
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="board-hero">
+      <div class="hero-eyebrow">RUTINA QUIRÚRGICA DE ESTUDIO · 09:00 A 19:30 HRS</div>
+      <h1 class="hero-title">
+        Tablero Operativo Semanal<br>
+        <span>ManyChat &amp; Palanca de Embajadoras</span>
+      </h1>
+      <p class="hero-subtitle">
+        Plan maestro de producción, publicaciones en redes, sesiones con creadoras (Janet, Montse "La China", 25 líderes de negocio) y seguimiento inbound automatizado para ganar el mercado navideño de San Pedro y Monterrey con $0 en pauta.
+      </p>
+
+      <!-- MANYCHAT FLOW VISUALIZER -->
+      <div class="flow-architecture">
+        <div class="flow-title">
+          <span>⚡</span> Arquitectura del Flujo Automatizado Inbound (ManyChat / WhatsApp)
+        </div>
+        <div class="flow-steps">
+          <div class="flow-node">
+            <div class="flow-node-step">PASO 01 // DISPARADOR</div>
+            <div class="flow-node-title">Keywords en Comentarios</div>
+            <p class="flow-node-desc">
+              Usuario comenta en Reel/Story: <code>NAVIDAD</code>, <code>BEBE</code>, <code>CHINA</code> o <code>LUJO</code>.
+            </p>
+          </div>
+          <div class="flow-node">
+            <div class="flow-node-step">PASO 02 // AUTO-DM</div>
+            <div class="flow-node-title">Entrega de Valor Inmediata</div>
+            <p class="flow-node-desc">
+              Envío instantáneo de foto Full-Frame sin marca + enlace directo a WhatsApp con código de preventa ($500).
+            </p>
+          </div>
+          <div class="flow-node">
+            <div class="flow-node-step">PASO 03 // WHATSAPP</div>
+            <div class="flow-node-title">Calificación con Agente Marco</div>
+            <p class="flow-node-desc">
+              Menú interactivo: Familiar Escandinavo, Signature Gala, Bebés Pop o Posada Corporativa con factura.
+            </p>
+          </div>
+          <div class="flow-node">
+            <div class="flow-node-step">PASO 04 // CONVERSIÓN</div>
+            <div class="flow-node-title">Cierre con Transferencia $500</div>
+            <p class="flow-node-desc">
+              Recepción de comprobante bancario, bloqueo de slot en Calendly y envío de Guía de Vestuario en PDF.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROLS & FILTER BAR -->
+    <div class="controls-bar">
+      <div class="day-tabs" id="dayTabs">
+        <button class="day-tab-btn active" onclick="filterDay('all')">📅 Toda la Semana</button>
+        <button class="day-tab-btn" onclick="filterDay('lunes')">Lunes</button>
+        <button class="day-tab-btn" onclick="filterDay('martes')">Martes</button>
+        <button class="day-tab-btn" onclick="filterDay('miercoles')">Miércoles</button>
+        <button class="day-tab-btn" onclick="filterDay('jueves')">Jueves</button>
+        <button class="day-tab-btn" onclick="filterDay('viernes')">Viernes</button>
+        <button class="day-tab-btn" onclick="filterDay('sabado')">Sábado</button>
+        <button class="day-tab-btn" onclick="filterDay('domingo')">Domingo</button>
+      </div>
+
+      <div class="filter-tags" id="typeFilters">
+        <button class="filter-tag-btn active" onclick="filterType('all')">Todos</button>
+        <button class="filter-tag-btn" onclick="filterType('prod')">🛠️ Estudio</button>
+        <button class="filter-tag-btn" onclick="filterType('post')">📲 Publicaciones</button>
+        <button class="filter-tag-btn" onclick="filterType('crm')">💬 Inbound CRM</button>
+        <button class="filter-tag-btn" onclick="filterType('creator')">👑 Creadoras</button>
+        <button class="filter-tag-btn" onclick="filterType('strat')">🧠 Estrategia</button>
+      </div>
+    </div>
+
+    <!-- SCHEDULE STREAM (MONDAY TO SUNDAY) -->
+    <div class="schedule-stream" id="scheduleStream">
+
+      <!-- ==================== LUNES ==================== -->
+      <section class="day-section" data-day="lunes">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">LUNES</span>
+            <span class="day-focus">Arranque Estratégico &amp; Lanzamiento de Montaje</span>
+          </div>
+          <div class="day-meta">Meta del Día: 6 slots de preventa apartados ($500 c/u)</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 09:00 -->
+          <div class="hour-card type-strat" data-type="strat">
+            <div class="card-top">
+              <span class="hour-badge">09:00 - 10:30</span>
+              <span class="category-pill pill-strat">Estrategia</span>
+            </div>
+            <h3 class="card-title">Planificación Creativa Semanal</h3>
+            <p class="card-desc">
+              Alineación de objetivos de la semana (25 cupos preventa flash). Inventario de set: pino nórdico real, copas de champagne, difusor de té blanco y telas de satín/terciopelo esmeralda.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🎯 Entregable Clave:</div>
+              <div class="action-text">Hoja de ruta diaria y calibración de luces Godox y Nikon Z9.</div>
+            </div>
+          </div>
+
+          <!-- 10:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">10:30 - 11:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories BTS 01: El Set Cobrando Vida</h3>
+            <p class="card-desc">
+              Serie de 3 Stories interactivas mostrando el montaje de luces en penumbra + encuesta: <em>"¿En tu casa quién toma las fotos de Navidad?"</em>
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📲 Formato &amp; Gancho:</div>
+              <div class="action-text">Video 5s de interruptor de luz + Sticker de encuesta de interacción.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('El set navideño está cobrando vida en San Jerónimo. Esta semana abrimos la preventa secreta...')">Copiar Copy</button>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 13:00</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Investigación de Audiencia &amp; Menciones</h3>
+            <p class="card-desc">
+              Monitoreo de menciones y compartidos de las 25 líderes de Farmasi. Extracción de comentarios con preguntas y perfilado de mamás de San Jerónimo / San Pedro.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💬 Acción ManyChat:</div>
+              <div class="action-text">Activación del disparador automático para quien pregunte "¿Dónde fue?".</div>
+            </div>
+          </div>
+
+          <!-- 13:00 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">13:00 - 14:00</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel Maestro 15s: "El Set en Montura"</h3>
+            <p class="card-desc">
+              Publicación del Reel 01 en Instagram y TikTok. Sonidos ASMR de tripiés y tela + llamado a apartar con $500 para congelar precio de $1,500 antes de $2,500.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📢 CTA Principal:</div>
+              <div class="action-text">Comenta <code>NAVIDAD</code> para recibir los horarios disponibles por DM.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('Comenta NAVIDAD y te mandamos los 5 conceptos con precio de preventa ($500 de apartado)')">Copiar CTA</button>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Montaje y Calibración Set Signature</h3>
+            <p class="card-desc">
+              Montura del ciclorama oscuro y terciopelo verde esmeralda. Prueba de balance de blancos para sastrería y satín. Verificación de copas de cristal.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📸 Hardware:</div>
+              <div class="action-text">Nikon Z9 con lente 85mm f/1.4 a f/2.8 para bokeh de luces de fondo.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 18:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Barrido Inbound DMs &amp; WhatsApp</h3>
+            <p class="card-desc">
+              Atención en tiempo real a comentarios del Reel de las 13:00 hrs. Envío de mensajes de voz personalizados y liga de Calendly para apartar slot.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">⚡ Meta:</div>
+              <div class="action-text">Cierre de transferencias bancarias de $500 MXN para slots de fin de semana.</div>
+            </div>
+            <div class="card-btn-row">
+              <a href="https://wa.me/528140050088?text=Hola%2C%20quiero%20apartar%20mi%20preventa%20Navidad" target="_blank" class="btn-micro wa">Simular WA</a>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Post 01 Feed 4:5: "La Preventa Flash"</h3>
+            <p class="card-desc">
+              Foto Full-Frame del set con el copy maestro explicando el ahorro de $1,000 MXN por apartar durante la semana de montaje.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📄 Asset Visual:</div>
+              <div class="action-text">01_navidad_signature_luxury.jpg (896x1200px, 100% Full-Frame).</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== MARTES ==================== -->
+      <section class="day-section" data-day="martes">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">MARTES</span>
+            <span class="day-focus">El Día de Montse "La China" &amp; Captoora Pop Bebés</span>
+          </div>
+          <div class="day-meta">Foco: Ternura Familiar &amp; Viralidad con el Embajador Bebé</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 09:00 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">09:00 - 10:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Preparación Set Nórdico &amp; Mimosas</h3>
+            <p class="card-desc">
+              Acondicionamiento del sofá boucle crema, pino natural aromático y cobijas de lana tejida. Revisión de las muestras del cuadro Fine-Art de Montse y su bebé.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🌸 Experiencia:</div>
+              <div class="action-text">Barra de mimosas con fresas frescas listas y música Lo-Fi navideña.</div>
+            </div>
+          </div>
+
+          <!-- 10:30 -->
+          <div class="hour-card type-creator" data-type="creator">
+            <div class="card-top">
+              <span class="hour-badge">10:30 - 11:30</span>
+              <span class="category-pill pill-creator">Creadoras</span>
+            </div>
+            <h3 class="card-title">Story Colaborativa con Montse "La China"</h3>
+            <p class="card-desc">
+              Repostear historias de Montse compartiendo sus fotos del evento y sus marometas en el estudio. Agregar sticker de enlace: <em>"¿Quieres la sesión de La China? Aparta aquí"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🔥 Audiencia Impactada:</div>
+              <div class="action-text">280,000 seguidores de Montse en Monterrey y México.</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-creator" data-type="creator">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 13:00</span>
+              <span class="category-pill pill-creator">Creadoras</span>
+            </div>
+            <h3 class="card-title">Alianza VIP &amp; Mensaje Personal a La China</h3>
+            <p class="card-desc">
+              Envío del mensaje personalizado por WhatsApp reconociendo a su bebé como <em>Embajador Oficial de Captoora</em> y confirmándole el envío de su cuadro de lujo a casa.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💌 Fidelización:</div>
+              <div class="action-text">Invitación al piloto de Biométricos + Gift Cards para su familia.</div>
+            </div>
+          </div>
+
+          <!-- 13:00 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">13:00 - 14:00</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel 02: "La Primera Navidad de tu Bebé"</h3>
+            <p class="card-desc">
+              Video 15s de Captoora Pop con juguetes de madera clásicos: <em>"Solo van a tener esta edad una sola Navidad en toda su vida"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🧸 Trigger Emocional:</div>
+              <div class="action-text">Comenta <code>BEBE</code> para apartar sesión de 30 minutos sin estrés.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('Comenta BEBE y te apartamos la sesión con juguetes de madera clásicos')">Copiar Keyword</button>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Grabación Campaña Infantil B-Roll</h3>
+            <p class="card-desc">
+              Producción de recursos visuales con trenes de madera, cascanueces y esferas artesanales reflejando las luces cálidas del pino.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📹 Material Generado:</div>
+              <div class="action-text">15 micro-clips 9:16 para historias de urgencia y cuenta regresiva.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 18:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Atención ManyChat Keyword BEBE</h3>
+            <p class="card-desc">
+              Seguimiento directo en WhatsApp a mamás de colegios privados que preguntaron por la sesión infantil. Audio cordial de Agente Marco.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💬 Conversión:</div>
+              <div class="action-text">Reserva de 4 horarios matutinos (ideales para niños sin sueño).</div>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Carrusel 5 Slides: "Guía de Vestuario Infantil"</h3>
+            <p class="card-desc">
+              Publicar carrusel educativo: combinaciones de pana, lana, verde pino y crudo para peques sin parecer disfrazados a la fuerza.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📌 Beneficio:</div>
+              <div class="action-text">Tasa de guardados masiva por parte de mamás jóvenes.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== MIÉRCOLES ==================== -->
+      <section class="day-section" data-day="miercoles">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">MIÉRCOLES</span>
+            <span class="day-focus">La Alianza Directiva: Sesión con Janet &amp; Captoora Corp</span>
+          </div>
+          <div class="day-meta">Foco: Liderazgo Femenino, Posadas VIP &amp; B2B con Factura Deducible</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 09:00 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">09:00 - 10:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Preparar Set Ejecutivo &amp; Gran Mesa</h3>
+            <p class="card-desc">
+              Alineación de la Gran Mesa con copas de cristal y fondo arquitectónico contemporáneo. Configuración de esquema de iluminación clamshell para retratos de autoridad.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💼 Look:</div>
+              <div class="action-text">Beauty CEO &amp; Brindis Corporativo de Cierre 2026.</div>
+            </div>
+          </div>
+
+          <!-- 10:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">10:30 - 11:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories B2B: "Basta de Flyers Genéricos"</h3>
+            <p class="card-desc">
+              Cuestionar las felicitaciones de fin de año hechas con plantillas de Canva: <em>"Tu equipo cerró metas todo el año; muéstralos como los líderes que son"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📊 Caja de Preguntas:</div>
+              <div class="action-text">"¿En tu empresa ya tienen fecha para la foto oficial de cierre?"</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-creator" data-type="creator">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 13:00</span>
+              <span class="category-pill pill-creator">Creadoras</span>
+            </div>
+            <h3 class="card-title">👑 SESIÓN CON JANET EN VIVO (1.5 HORAS)</h3>
+            <p class="card-desc">
+              Rodaje exclusivo con Janet: 45 min de retratos de autoridad y belleza ejecutiva + 20 min con suéter navideño de lujo + 25 min de grabación de entrevista testimonial con micrófono Lavalier.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📸 Dirección:</div>
+              <div class="action-text">Poses soberbias Beauty CEO con Alfonso Gutiérrez en ciclorama blanco y Gran Mesa.</div>
+            </div>
+          </div>
+
+          <!-- 13:00 -->
+          <div class="hour-card type-creator" data-type="creator">
+            <div class="card-top">
+              <span class="hour-badge">13:00 - 14:00</span>
+              <span class="category-pill pill-creator">Creadoras</span>
+            </div>
+            <h3 class="card-title">Brindis con Janet &amp; Video Testimonial</h3>
+            <p class="card-desc">
+              Copa de mimosa, revisión de tomas en la pantalla 4K del estudio y grabación de su recomendación de 30 segundos: <em>"Por qué toda mujer de negocios en MTY tiene que venir a Captoora"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🎥 Video:</div>
+              <div class="action-text">Clip testimonial para pilar "Voces Captoora".</div>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Revelado Express de Janet</h3>
+            <p class="card-desc">
+              Edición y selección de las mejores 5 tomas de Janet con preset `final_calido`. Subida inmediata a su galería privada en Pixieset para que publique hoy mismo.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">⚡ Entrega:</div>
+              <div class="action-text">Link protegido enviado por WhatsApp con copia en alta resolución.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 18:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel 03 Corp: "La Foto de los que Ganaron el 2026"</h3>
+            <p class="card-desc">
+              Publicar Reel para empresas y comités directivos. Servicio en estudio San Jerónimo o In-Company con factura fiscal 100% deducible.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💼 CTA B2B:</div>
+              <div class="action-text">Escribe <code>CORP</code> para cotización formal en PDF.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('Escribe CORP y te enviamos propuesta en PDF deducible de impuestos')">Copiar CTA</button>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Seguimiento a Directores y PyMEs</h3>
+            <p class="card-desc">
+              Envío de cotizaciones corporativas a directores y agencias de Monterrey. Cobertura de posadas VIP y headshots ejecutivos.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💰 Ticket Promedio:</div>
+              <div class="action-text">$6,000 - $14,000 MXN por evento empresarial.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== JUEVES ==================== -->
+      <section class="day-section" data-day="jueves">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">JUEVES</span>
+            <span class="day-focus">La Psicología Regia: "La Mamá Invisible"</span>
+          </div>
+          <div class="day-meta">Foco: Identificación Emocional en San Pedro &amp; Familias Reales</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 09:00 -->
+          <div class="hour-card type-strat" data-type="strat">
+            <div class="card-top">
+              <span class="hour-badge">09:00 - 10:30</span>
+              <span class="category-pill pill-strat">Estrategia</span>
+            </div>
+            <h3 class="card-title">Auditoría de Mitad de Semana</h3>
+            <p class="card-desc">
+              Cruce de slots reservados vs metas. Análisis del embudo: si faltan slots de domingo, se activará el ángulo de rescate familiar.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📈 Métrica Acumulada:</div>
+              <div class="action-text">Objetivo: 14 de 25 slots confirmados con transferencia.</div>
+            </div>
+          </div>
+
+          <!-- 10:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">10:30 - 11:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories: "Mamá Casi Nunca Sale en la Foto"</h3>
+            <p class="card-desc">
+              Historias tocando el dolor universal de la mamá que siempre sostiene el celular. Sticker con voto: <em>"¿En tu carrete cuántas fotos tuyas con tus hijos hay?"</em>
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💔 Ángulo Psicológico:</div>
+              <div class="action-text">Nostalgia preventiva y reivindicación del rol materno.</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 13:00</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Grabación Set Nórdico &amp; Parque Exterior</h3>
+            <p class="card-desc">
+              Tomas de luz natural en el parque anexo al estudio + paneo hacia adentro con la chimenea y luces cálidas. Demostración de dos locaciones sin mover el coche.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🌳 Ventaja Única:</div>
+              <div class="action-text">Paseo de los Álamos 165: parque verde afuera + set adentro.</div>
+            </div>
+          </div>
+
+          <!-- 13:00 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">13:00 - 14:00</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Post 03 Feed Maestro: "¿Cuándo fue la última vez?"</h3>
+            <p class="card-desc">
+              Publicación de la foto familiar en sofá boucle nórdico ([02_navidad_studio_familiar.jpg](assets/navidad_2026/02_navidad_studio_familiar.jpg)) con el copy maestro familiar.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📲 CTA:</div>
+              <div class="action-text">Comenta <code>FAMILIA</code> para recibir la guía de vestuario nórdica.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('Comenta FAMILIA y te mandamos los detalles para apartar tu fecha')">Copiar CTA</button>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Prueba de Set Pet-Friendly en Vivo</h3>
+            <p class="card-desc">
+              Sesión rápida de muestra con perrito en cobija de peluche para documentar que en Captoora las mascotas no son un estorbo, sino parte esencial de la postal.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🐾 Nicho:</div>
+              <div class="action-text">Familias jóvenes de San Jerónimo con 'perrhijos'.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 18:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Gestión de Leads Keyword FAMILIA</h3>
+            <p class="card-desc">
+              Mensajes de voz en WhatsApp a las mamás de San Pedro respondiendo dudas de ropa y horarios: <em>"Hola Mariana, te reservo el sábado a las 11 AM para que tus peques no tengan sueño..."</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">⚡ Cierre:</div>
+              <div class="action-text">5 transferencias de $500 recibidas en la tarde.</div>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel 04: "Voces Reales del Estudio"</h3>
+            <p class="card-desc">
+              Video testimonial de una de las 25 líderes: <em>"Nunca me había gustado cómo salía en fotos hasta que vine a Captoora. Poncho te dice exactamente cómo pararte"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🛡️ Prueba Social:</div>
+              <div class="action-text">Eliminación directa del miedo a "no ser fotogénica".</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== VIERNES ==================== -->
+      <section class="day-section" data-day="viernes">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">VIERNES</span>
+            <span class="day-focus">Captoora Signature: Quiet Luxury &amp; Black Tie</span>
+          </div>
+          <div class="day-meta">Foco: Parejas Elegantes, Retratos de Etiqueta &amp; Ticket Alto</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 09:00 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">09:00 - 10:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Montaje Final Set Black Tie</h3>
+            <p class="card-desc">
+              Calibración de luces direccionales sobre terciopelo esmeralda y negro. Pulido de copas de cristal y preparación de botellas de champán para tomas de autor.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">✨ Look Signature:</div>
+              <div class="action-text">Atmósfera íntima tipo portada de Vanity Fair / Vogue.</div>
+            </div>
+          </div>
+
+          <!-- 10:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">10:30 - 11:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories: "La Navidad No Tiene que Ser Infantil"</h3>
+            <p class="card-desc">
+              Historias con música clásica contemporánea: vestidos de gala, sastrería y una copa de champagne: <em>"Solo abrimos 8 lugares Signature en toda la temporada"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💎 Filtro de Estatus:</div>
+              <div class="action-text">Atrae a recién comprometidos y parejas de alta presencia.</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-creator" data-type="creator">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 13:00</span>
+              <span class="category-pill pill-creator">Creadoras</span>
+            </div>
+            <h3 class="card-title">Colaboración Fitness / Biometrics</h3>
+            <p class="card-desc">
+              Mini-rodaje de 45 minutos con atleta de alto rendimiento: demostración de la iluminación Rim Light dual cyan/oro sobre fondo oscuro puro sin retoque plástico.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🔬 Captoora Biometrics:</div>
+              <div class="action-text">Registro anatómico 2026 antes de las fiestas decembrinas.</div>
+            </div>
+          </div>
+
+          <!-- 13:00 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">13:00 - 14:00</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Post 02 Feed Signature: "Quiet Luxury"</h3>
+            <p class="card-desc">
+              Publicación de la foto de gala verde esmeralda ([01_navidad_signature_luxury.jpg](assets/navidad_2026/01_navidad_signature_luxury.jpg)) con copy de alta costura.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🥂 CTA Signature:</div>
+              <div class="action-text">Comenta <code>LUJO</code> para recibir los requisitos de vestuario.</div>
+            </div>
+            <div class="card-btn-row">
+              <button class="btn-micro" onclick="copySnippet('Comenta LUJO para enviarte la propuesta Signature de autor')">Copiar CTA</button>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-strat" data-type="strat">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-strat">Estrategia</span>
+            </div>
+            <h3 class="card-title">Supervisión Cajas PR de Enmarcado</h3>
+            <p class="card-desc">
+              Revisión con el taller de marcos de madera fina y vidrio antireflejante para las embajadoras. Asegurar que las cajas de unboxing de Montse estén listas para finales de mes.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📦 Control de Calidad:</div>
+              <div class="action-text">Acabado de lujo con sello de cera y carta manuscrita.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 18:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Cierre de Cupos Signature</h3>
+            <p class="card-desc">
+              Atención directa en WhatsApp a parejas de San Pedro. Envío de link de anticipo de $500 congelando la tarifa de preventa de $1,500.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">⚡ Ventas:</div>
+              <div class="action-text">3 sesiones Signature vendidas con anticipo bancario.</div>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel 05: "Luz a 45 Grados sobre Satín"</h3>
+            <p class="card-desc">
+              Video técnico de 15 segundos demostrando el modelado de luz sobre piel y telas finas con la Nikon Z9.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📸 Posicionamiento:</div>
+              <div class="action-text">Autoridad estética: cero fotógrafos improvisados.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SÁBADO ==================== -->
+      <section class="day-section" data-day="sabado">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">SÁBADO</span>
+            <span class="day-focus">Día de Rodaje en Vivo &amp; Prueba Social en Tiempo Real</span>
+          </div>
+          <div class="day-meta">Foco: Familias, Mimosas, Parque Exterior &amp; Generación de FOMO</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 08:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">08:30 - 09:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Apertura VIP: Mimosas &amp; Clima Calefaccionado</h3>
+            <p class="card-desc">
+              Encendido de luces, difusor de aroma, jarras de jugo colado fresco y Prosecco helado para consentir a las familias que van llegando.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">👑 Hospitalidad:</div>
+              <div class="action-text">La anfitriona recibe con copa fresca y popote oro rosa.</div>
+            </div>
+          </div>
+
+          <!-- 09:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">09:30 - 11:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Sesión Familiar 01 (Set + Parque)</h3>
+            <p class="card-desc">
+              Rodaje con familia con 2 niños y perrito. 25 min en sofá boucle navideño + 20 min en el parque arbolado de San Jerónimo con luz dorada.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🌳 Dinámica:</div>
+              <div class="action-text">Dos escenarios completos en una sola visita.</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 12:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories en Tiempo Real (Atmósfera en Vivo)</h3>
+            <p class="card-desc">
+              Compartir fragmentos de risas espontáneas en el parque, el perro jugando y la mamá tomándose una copa feliz en el set interior.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🔥 Impacto:</div>
+              <div class="action-text">Dispara el deseo de reservar de otras mamás en Instagram.</div>
+            </div>
+          </div>
+
+          <!-- 12:30 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">12:30 - 14:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Sesión Familiar 02 (Generacional: Abuelos + Hijos)</h3>
+            <p class="card-desc">
+              Retrato de linaje con tres generaciones reunidas. Iluminación suave envolvente para favorecer la piel madura de los abuelos.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🤍 Legado:</div>
+              <div class="action-text">La fotografía patrimonial que se atesora de por vida.</div>
+            </div>
+          </div>
+
+          <!-- 16:00 -->
+          <div class="hour-card type-prod" data-type="prod">
+            <div class="card-top">
+              <span class="hour-badge">16:00 - 17:30</span>
+              <span class="category-pill pill-prod">Estudio</span>
+            </div>
+            <h3 class="card-title">Sesión Pareja Signature 03 (Atardecer)</h3>
+            <p class="card-desc">
+              Sesión de recién comprometidos con traje y vestido de noche. Luces cálidas doradas entrando por la ventana + flash de autor.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🥂 Brindis:</div>
+              <div class="action-text">Tomas con choque de copas y reflejos de alta costura.</div>
+            </div>
+          </div>
+
+          <!-- 17:30 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:30 - 18:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Alerta de Escasez Real (Scarcity)</h3>
+            <p class="card-desc">
+              Publicar story: <em>"Quedan únicamente 4 horarios disponibles para noviembre al precio especial de preventa ($500 apartado)"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🚨 Urgencia:</div>
+              <div class="action-text">Respuesta inmediata por WhatsApp a quienes interactúen.</div>
+            </div>
+          </div>
+
+          <!-- 18:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">18:30 - 19:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Reel 06: Resumen Sábado en el Estudio</h3>
+            <p class="card-desc">
+              Video dinámico de 15 segundos con choques de copas, abrazos y sonrisas reales del sábado en Paseo de los Álamos 165.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">📈 Viralidad:</div>
+              <div class="action-text">Pico de guardados y comentarios de cierre de semana.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== DOMINGO ==================== -->
+      <section class="day-section" data-day="domingo">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-name">DOMINGO</span>
+            <span class="day-focus">El Gran Cierre de Preventa Flash: Ahorra $1,000 Hoy</span>
+          </div>
+          <div class="day-meta">Foco: Cuenta Regresiva a Medianoche &amp; Rescate de Carritos</div>
+        </div>
+
+        <div class="day-hours-grid">
+          <!-- 10:00 -->
+          <div class="hour-card type-strat" data-type="strat">
+            <div class="card-top">
+              <span class="hour-badge">10:00 - 11:30</span>
+              <span class="category-pill pill-strat">Estrategia</span>
+            </div>
+            <h3 class="card-title">Auditoría Final de Cupos</h3>
+            <p class="card-desc">
+              Revisión de slots pagados (Meta: 21 de 25 ya cerrados). Identificación de los 4 horarios restantes de fin de semana para asignación directa.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🎯 Objetivo Domingo:</div>
+              <div class="action-text">Llegar al 100% SOLD OUT antes de las 23:59 hrs.</div>
+            </div>
+          </div>
+
+          <!-- 11:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">11:30 - 12:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories: Cuenta Regresiva de Medianoche</h3>
+            <p class="card-desc">
+              Sticker de temporizador oficial de Instagram: <em>"Hoy termina la preventa flash de montaje. Apartas con $500 y pagas $1,500. Mañana sube a $2,500"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">⏰ Temporizador:</div>
+              <div class="action-text">Sticker con recordatorio directo a la cuenta de los usuarios.</div>
+            </div>
+          </div>
+
+          <!-- 12:30 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">12:30 - 14:00</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Rescate de DMs &amp; Carritos Incompletos</h3>
+            <p class="card-desc">
+              Mensajes directos a quienes preguntaron entre semana y no transfirieron: <em>"Hola Sofi, estamos cerrando la agenda hoy. Te aparto el último lugar del domingo 22 si confirmas antes de las 6 PM..."</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🔄 Tasa de Éxito:</div>
+              <div class="action-text">Conversión del 35% al 45% de prospectos indecisos.</div>
+            </div>
+          </div>
+
+          <!-- 15:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">15:30 - 17:00</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Post 07 Feed: Las Matemáticas Claras</h3>
+            <p class="card-desc">
+              Carrusel de 4 slides con el contraste matemático inapelable: exactamente la misma calidad, pero con $1,000 MXN más en tu cuenta para tus regalos.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">💰 Argumento:</div>
+              <div class="action-text">Validación del cerebro financiero del cliente regio.</div>
+            </div>
+          </div>
+
+          <!-- 17:00 -->
+          <div class="hour-card type-crm" data-type="crm">
+            <div class="card-top">
+              <span class="hour-badge">17:00 - 19:30</span>
+              <span class="category-pill pill-crm">Inbound CRM</span>
+            </div>
+            <h3 class="card-title">Sprint Final en WhatsApp Business</h3>
+            <p class="card-desc">
+              Guardia activa de respuesta en menos de 3 minutos. Recepción de las últimas transferencias de $500 y envío de bienvenida formal al cliente.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">🏆 Cierre:</div>
+              <div class="action-text">Completar los 25 slots de preventa flash.</div>
+            </div>
+          </div>
+
+          <!-- 19:30 -->
+          <div class="hour-card type-post" data-type="post">
+            <div class="card-top">
+              <span class="hour-badge">19:30 - 20:30</span>
+              <span class="category-pill pill-post">Publicación</span>
+            </div>
+            <h3 class="card-title">Stories: "SOLD OUT PREVENTA FLASH"</h3>
+            <p class="card-desc">
+              Placa de agradecimiento en historias: <em>"Gracias Monterrey. Los 25 espacios de preventa flash están formalmente apartados. Abrimos precio regular a partir de mañana"</em>.
+            </p>
+            <div class="card-action-box">
+              <div class="action-label">👑 Autoridad:</div>
+              <div class="action-text">Efecto arrastre y alta demanda para las semanas de diciembre.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 04. BENCHMARK DE COMPETENCIA EN MONTERREY / SAN PEDRO -->
+    <section class="benchmark-section">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+        <div>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:0.75rem; color:var(--crimson); font-weight:700; letter-spacing:0.1em;">
+            BENCHMARK DE MERCADO REGIO
+          </span>
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-size:1.6rem; font-weight:800; color:#fff; margin-top:4px;">
+            Estudios Tradicionales de SPGG vs. El Ecosistema Captoora
+          </h2>
+        </div>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20conocer%20los%20paquetes%20de%20Navidad%20en%20preventa" target="_blank" class="dock-pill pill-wa">
+          💬 Abrir WhatsApp Comercial
+        </a>
+      </div>
+
+      <div class="benchmark-table-wrap">
+        <table class="benchmark-table">
+          <thead>
+            <tr>
+              <th>Criterio</th>
+              <th>Estudios Tradicionales en San Pedro / MTY</th>
+              <th>El Dolor Oculto del Cliente</th>
+              <th>La Propuesta Superior de Captoora Studio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:700; color:#fff;">Estética del Set</td>
+              <td>Lona vinílica arrugada, renos de plástico y cajas vacías de regalo.</td>
+              <td>Se ve kitsch y barato; no lo cuelgan en su sala.</td>
+              <td style="color:var(--emerald);"><strong>Quiet Luxury &amp; Escandinavo:</strong> Terciopelo esmeralda, copas de cristal, sofá boucle crema y pino natural real.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700; color:#fff;">Experiencia en Sesión</td>
+              <td>Citas apresuradas de 20 min, fotógrafo gritando y niños llorando.</td>
+              <td>Estrés total para mamá y caras tiesas de los peques.</td>
+              <td style="color:var(--emerald);"><strong>Hospitalidad Boutique:</strong> Mimosas con popote oro rosa, música Lo-Fi a 35 dB, juguetes de madera y cero poses forzadas.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700; color:#fff;">Presencia de Mamá</td>
+              <td>Solo enfocan a los niños; mamá sale en una orilla o ni sale.</td>
+              <td>Mamá estuvo detrás de la cámara todo el año.</td>
+              <td style="color:var(--emerald);"><strong>Reina del Linaje:</strong> Dirección de autor para estilizar figura, luz de museo y encuadre 100% Full-Frame.</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700; color:#fff;">Tarifas &amp; Anticipo</td>
+              <td>$3,500 a $6,500 MXN en San Pedro; piden 50% de anticipo.</td>
+              <td>Fricción de compra y desconfianza de entregas tardías.</td>
+              <td style="color:var(--emerald);"><strong>Preventa Flash:</strong> Apartas con <strong>$500 MXN</strong>, sesión total <strong>$1,500</strong> (ahorro de $1,000 frente a regular $2,500).</td>
+            </tr>
+            <tr>
+              <td style="font-weight:700; color:#fff;">Palanca de Autoridad</td>
+              <td>Gastan miles de pesos en anuncios pagados impersonales.</td>
+              <td>Anuncios aburridos que el regio ignora.</td>
+              <td style="color:var(--emerald);"><strong>Orgánico 100%:</strong> 25 líderes, Janet y Montse "La China" (280k) compartiendo su experiencia. <strong>$0 en pauta</strong>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <p style="margin-bottom:6px; font-weight:700; color:#fff;">
+        CAPTOORA STUDIO // SAN JERÓNIMO, MONTERREY, N.L.
+      </p>
+      <p>
+        Av. Paseo de los Álamos 165 · WhatsApp: +52 81 4005 0088 · Tablero ManyChat Campaña Navidad 2026
+      </p>
+    </footer>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-msg" id="toastMsg">
+    ¡Texto copiado al portapapeles!
+  </div>
+
+  <script>
+    // TOAST HELPER
+    function showToast(text) {
+      const toast = document.getElementById('toastMsg');
+      toast.innerText = text;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    // COPY SNIPPET
+    function copySnippet(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("✓ Copiado al portapapeles");
+      });
+    }
+
+    // DAY FILTER
+    function filterDay(dayKey) {
+      const buttons = document.querySelectorAll('#dayTabs .day-tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const sections = document.querySelectorAll('#scheduleStream .day-section');
+      sections.forEach(sec => {
+        if (dayKey === 'all' || sec.getAttribute('data-day') === dayKey) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
+        }
+      });
+    }
+
+    // TYPE FILTER
+    function filterType(typeKey) {
+      const buttons = document.querySelectorAll('#typeFilters .filter-tag-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.hour-card');
+      cards.forEach(card => {
+        if (typeKey === 'all' || card.getAttribute('data-type') === typeKey) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

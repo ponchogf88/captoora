@@ -1,15 +1,15 @@
 {
   "id": "CAL-004",
-  "estado": "montaje_revision",
-  "archivo": "entregables/contenido-captoora/CAL-004/CAL-004_otono_9x16_v001_REVISION.mp4",
-  "bytes": 1538014,
-  "sha256": "f25edc32d8666855026a28635720a20f7b5c4544ebf389621916e312e1555b99",
-  "drive_id": "1nmIr37zaZk3xgvnyXSaG_7ePRUw7B70q",
+  "estado": "listo_para_publicar_version_silenciosa",
+  "archivo": "entregables/contenido-captoora/CAL-004/CAL-004_otono_9x16_v002.mp4",
+  "bytes": 1502125,
+  "sha256": "280f55399eee0487e5233a422b60b6c4ceeec18a1da86f8c40881c6588925c86",
+  "drive_id": "1RnKnQkFXJq3dhlALruVTKmHvV06MzyUW",
   "fuente": "b250519d-07f0-4d75-b078-c408d62e0697",
   "edicion": "FFmpeg local; texto entrada escalonada; sin audio",
   "generacion_adicional_creditos": 0,
   "saldo_antes": null,
   "saldo_despues": null,
-  "revision": "Decodificacion completa 192fotogramas/8s sin errores;720x1280,24fps,sin audio intencional. Secuencia de cuatro muestras revisada; titular yCTA sin corte. Falta identidad gráfica maestra y revisión de entrega final; permanece prueba.",
+  "revision": "11s264frames decodificados;secuencia principal y cierre revisados;CTAcontrastado;sin música/voz;copydeclaraIA;no publicado",
   "publicado": false
 }

@@ -1,0 +1,15 @@
+id,evento,prioridad,tarea,estado,responsable_propuesto,fecha_objetivo,evidencia,siguiente_accion
+LE-001,FARMASI-20261031,P0,Unificar Farmasi coro e Instax,confirmado,Titular,2026-10-25,EVENTO_UNICO_FARMASI_CONFIRMADO.md,no volver a preguntar
+LE-002,FARMASI-20261031,P0,Conciliar capacidad del programa y compromisos existentes,documentado por validar,Asistente + titular,2026-10-26,RECUPERACION_FARMASI_Y_LALO.md,usar 25 invitadas y horarios ya escritos
+LE-003,FARMASI-20261031,P0,Detener nueva producción y oferta de gift cards,registrado,Asistente,2026-10-25,instrucción del titular,no cancelar compromisos anteriores
+LE-004,FARMASI-20261031,P0,Inventario de tarjetas ya entregadas y obligaciones aceptadas,pendiente,Titular,2026-10-26,,solo datos agregados sin datos personales
+LE-005,FARMASI-20261031,P0,Inventariar equipo hojas y fondos físicamente,pendiente,Titular,2026-10-26,,fotos y cantidades de material
+LE-006,FARMASI-20261031,P0,Cerrar oferta pagada disponibilidad reserva y entrega,pendiente,Titular + asistente,2026-10-26,,resolver condiciones contradictorias
+LE-007,FARMASI-20261031,P0,Definir presupuesto máximo y costo de cumplir compromisos,pendiente,Titular,2026-10-26,,completar presupuesto sin comprar
+LE-008,FARMASI-20261031,P1,Confirmar cámara Instax formato película y préstamo,pendiente,Titular,,expediente recuperado,no contactar familia por inferencia
+LE-009,FARMASI-20261031,P1,Montaje y prueba real con material existente,pendiente,Titular,2026-10-29,,espera fotos de espacio para visualización IA
+LE-010,FARMASI-20261031,P1,Probar ruta móvil WhatsApp y agenda,pendiente,Titular + asistente,2026-10-30,,sin imprimir QR hasta probar
+LE-011,FARMASI-20261031,P1,Confirmar responsables de captura bienvenida y consultas,pendiente,Titular,2026-10-30,,no contratar apoyo por inferencia
+LE-012,FARMASI-20261031,P1,Revisar programa y capacidad frente a agenda pagada,preparado,Asistente,2026-10-30,EVENTO_SABADO_2026-10-31.md,ajustar al horario aceptado
+LE-013,FARMASI-20261031,P1,Registrar resultados y entregables al cierre,pendiente,Titular + asistente,2026-10-31,,cobros solo con evidencia
+LE-014,FARMASI-20261031,P0,Preparar ruta de consultas pagadas sin regalos adicionales,preparado,Asistente,2026-10-25,../operacion-comercial/ESTRATEGIA_CERO_PESOS_Y_PREVENTA.md,confirmar oferta y responsable de atención

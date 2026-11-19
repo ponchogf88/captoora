@@ -3,6 +3,9 @@
    Cambia aquí el evento, precios y contacto. Nada más.
    ========================================================= */
 window.CAPTOORA = {
+  domain: "captoora.studio",
+  siteUrl: "https://captoora.studio",
+  galleryUrl: "https://galeria.captoora.studio",
   whatsapp: "528140050088",          // sin + ni espacios
   whatsappLabel: "81 4005 0088",
 
@@ -123,7 +126,7 @@ window.CAPTOORA = {
   // ---- REDES -------------------------------------------------
   social: [
     { label: "Instagram", handle: "@Captoora.studio", url: "https://instagram.com/captoora.studio" },
-    { label: "TikTok", handle: "@captoora.studiomty", url: "https://www.tiktok.com/@captoora.studiomty" },
+    { label: "TikTok", handle: "@captoora.studio", url: "https://www.tiktok.com/@captoora.studio" },
     { label: "X", handle: "@captoora_studio", url: "https://x.com/captoora_studio" }
   ]
 };

@@ -1,0 +1,46 @@
+[
+  {
+    "source_name": "DSC08500.JPG",
+    "file": "DSC08500_blancos_v03.jpg",
+    "png": "DSC08500_blancos_v03.png",
+    "bytes": 3950705,
+    "sha256": "bdc0a776f3d8ec9379cc4ae675bfc09b7a5875926ea62f9a3a535b188d21319f",
+    "baseline_sha256": "5fe83817748d0eae1f1777f969a97392f4440825e45210c4c8f9b5a4ffd024aa",
+    "protected_subject_pixels_changed": 0,
+    "method": "Correccion cromatica y luminancia de baja frecuencia solo fondo neutro; conserva detalle fino y bordes de sombras. Piel/cobre/cabello excluidos y resguardados. Sin nueva generacion.",
+    "status": "en_revision"
+  },
+  {
+    "source_name": "DSC08504.JPG",
+    "file": "DSC08504_blancos_v03.jpg",
+    "png": "DSC08504_blancos_v03.png",
+    "bytes": 4131015,
+    "sha256": "7410c962d7fbe58a6a2904b53155014ce2d6cc8007ac96afb62f44137e6d03cb",
+    "baseline_sha256": "e2a343a5e9aa8d8f53a66667a92b7b6fb5136e1cf8970b3492ff278a4ab673b6",
+    "protected_subject_pixels_changed": 0,
+    "method": "Correccion cromatica y luminancia de baja frecuencia solo fondo neutro; conserva detalle fino y bordes de sombras. Piel/cobre/cabello excluidos y resguardados. Sin nueva generacion.",
+    "status": "en_revision"
+  },
+  {
+    "source_name": "DSC08536.JPG",
+    "file": "DSC08536_blancos_v03.jpg",
+    "png": "DSC08536_blancos_v03.png",
+    "bytes": 3848688,
+    "sha256": "50fd2e5fd18c19bd4b3625d04bf073194a7598ea39dd18f13db1e3d0d3f69fa0",
+    "baseline_sha256": "ee200ad164c7fb7615ee08e470aed278ac531597a48abe0f38e1d3a35d4b09a3",
+    "protected_subject_pixels_changed": 0,
+    "method": "Correccion cromatica y luminancia de baja frecuencia solo fondo neutro; conserva detalle fino y bordes de sombras. Piel/cobre/cabello excluidos y resguardados. Sin nueva generacion.",
+    "status": "en_revision"
+  },
+  {
+    "source_name": "DSC08554.JPG",
+    "file": "DSC08554_blancos_v03.jpg",
+    "png": "DSC08554_blancos_v03.png",
+    "bytes": 3966608,
+    "sha256": "49363c9906c0971f89f96d847328ace5b14015723025c61d443bfff958404875",
+    "baseline_sha256": "3ef114b087c3b19dfdd751a4c8d30a33a30cdb91a1dbed8ae90e31a4b4006dcc",
+    "protected_subject_pixels_changed": 0,
+    "method": "Correccion cromatica y luminancia de baja frecuencia solo fondo neutro; conserva detalle fino y bordes de sombras. Piel/cobre/cabello excluidos y resguardados. Sin nueva generacion.",
+    "status": "en_revision"
+  }
+]

@@ -6,6 +6,7 @@
 
 # Captoora — README para agentes
 
+
 Este archivo es el mapa del repo. Si llegas nuevo: lee `IDENTITY.md` primero, luego esto.
 
 Repo: https://github.com/ponchogf88/captoora
@@ -68,9 +69,10 @@ No empieces por el lente 3D del hero si el miércoles alguien no encuentra la di
 | Canal | Dato | Estado |
 | --- | --- | --- |
 | WhatsApp Business | +52 81 4005 0088 | Conectado en tablero |
-| Sitio staging | github.io/captoora | Vivo |
-| Dominio final | captoora.ai.studio / captoora.mx | Pendiente |
-| Instagram | TBD — preferir `@captoora` o `@captooramty` | Pendiente confirmar disponibilidad |
+| Sitio oficial | https://captoora.studio | Vivo (Porkbun DNS) |
+| Galerías Pixieset | https://galeria.captoora.studio | Vivo |
+| Sitio staging | https://ponchogf88.github.io/captoora/ | Respaldo GitHub Pages |
+| Instagram | `@captoora.studio` | Oficial activo |
 | Facebook Page | TBD | Pendiente |
 | Google Business | TBD | Crítico esta semana |
 | TikTok / Reels | Mismo handle que IG | Después del miércoles si no está |

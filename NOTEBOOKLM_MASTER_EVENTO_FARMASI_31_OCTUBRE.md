@@ -21,6 +21,17 @@ La líder organizadora de Farmasi debe entregar a Captoora Studio el listado con
 2. **Post-evento:** Se les envía una galería de vista previa en miniatura con sello de agua digital de Captoora.
 3. **Liberación de Alta Resolución (4K sin marca):** El contrato legal estipula que la entrega del enlace final descargable en alta resolución queda formalmente condicionada a la verificación de la publicación de la historia y el video (Reel/TikTok) etiquetando a `@captoora` y Alfonso Gutiérrez. En cuanto el equipo verifica la etiqueta, se envía el enlace de descarga oficial.
 
+### C. Estrategia de Selección con Cobro de Fotos Extra (Up-sell / Ticket Promedio)
+*Basada en el archivo técnico "Editores de IA para Fotografía Profesional":*
+1. **Paquete Base Incluido:** La influencer o clienta tiene derecho a seleccionar un límite estricto de imágenes terminadas (ej. 3 fotos oficiales incluidas en el acuerdo de colaboración).
+2. **Candado de Pago Automatizado:** En la galería privada con marca de agua, el sistema les permite marcar sus 3 favoritas. Si desean descargar fotos adicionales o el rollo completo, la plataforma bloquea la descarga en alta resolución y procesa el cobro con tarjeta vía Stripe.
+3. **Plataformas de Automatización Evaluadas:**
+   - **Pixieset (Canónica en Captoora):** Herramientas integradas de prueba (*proofing*), tienda online nativa, entrega en la nube y cobro de descargas digitales o impresiones sin tocar almacenamiento local.
+   - **Aftershoot Galleries:** Galería conectada con tienda que cobra **0% de comisión** sobre ventas, ideal si se utiliza Aftershoot en el culling.
+   - **EscogeTusFotos:** Diseñada específicamente para limitar selecciones, cobrar fotos extra en caliente y liberar descargas en ZIP.
+   - **Arcadina:** Galerías privadas con tienda en línea, pasarelas de pago y facturación automática.
+4. **Cero Fricción para Poncho:** El fotógrafo no cobra manualmente foto por foto ni envía archivos individuales por WhatsApp; el sistema procesa el pago y libera la descarga automáticamente.
+
 ---
 
 ## 3. ARQUITECTURA Y FLUJO FÍSICO DEL ESTUDIO (2 NIVELES)

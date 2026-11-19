@@ -308,12 +308,12 @@
       <!-- SELECTOR DE RETRATO -->
       <div>
         <div style="font-family:'JetBrains Mono',monospace; font-size:0.68rem; color:var(--gold); margin-bottom:8px; letter-spacing:0.1em;">
-          SELECCIÓN EDITORIAL DE AUTOR:
+          SELECCIÓN EDITORIAL DE AUTOR (PORTAFOLIO AUTORIZADO):
         </div>
         <div class="curator-switcher">
-          <button class="btn-curator active" onclick="setSignaturePhoto(0, this)">OBRA I: AMAPOLA 0855</button>
-          <button class="btn-curator" onclick="setSignaturePhoto(1, this)">OBRA II: DINÁMICA 0878</button>
-          <button class="btn-curator" onclick="setSignaturePhoto(2, this)">OBRA III: CHIPINQUE 02</button>
+          <button class="btn-curator active" onclick="setSignaturePhoto(0, this)">OBRA I: RUFINO TAMAYO</button>
+          <button class="btn-curator" onclick="setSignaturePhoto(1, this)">OBRA II: PRINCIS 33</button>
+          <button class="btn-curator" onclick="setSignaturePhoto(2, this)">OBRA III: CHIPINQUE</button>
         </div>
       </div>
 
@@ -325,16 +325,16 @@
 
     <!-- CUADRO DE MUSEO FULL-FRAME -->
     <div class="museum-frame-stage">
-      <img src="assets/media_jpg/pf-glow-cpt_0855.jpg" alt="Captoora Signature Piece" class="museum-photo" id="sigPhoto">
+      <img src="assets/media_jpg/pf-tamayo-01.jpg" alt="Captoora Signature Piece" class="museum-photo" id="sigPhoto">
     </div>
 
   </main>
 
   <script>
     const sigPhotos = [
-      'assets/media_jpg/pf-glow-cpt_0855.jpg',
-      'assets/media_jpg/pf-glow-cpt_0878.jpg',
-      'assets/media_jpg/pf-chipinque-02.jpg'
+      'assets/media_jpg/pf-tamayo-01.jpg',
+      'assets/media_jpg/pf-princis-01.jpg',
+      'assets/media_jpg/pf-chipinque-01.jpg'
     ];
 
     function setSignaturePhoto(idx, btn) {
