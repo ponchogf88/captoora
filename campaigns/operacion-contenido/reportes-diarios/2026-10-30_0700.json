@@ -1,0 +1,46 @@
+{
+  "fecha": "2026-10-30",
+  "ciclo": "07:00",
+  "zona_horaria": "America/Monterrey",
+  "espacio_disponible_gib": 591,
+  "sesion_proveedor_utilizable": false,
+  "saldo_antes": null,
+  "saldo_despues": null,
+  "consumo_creditos": 0,
+  "terminadas": 0,
+  "corregidas": 0,
+  "conservadas_final": 0,
+  "rechazadas": 0,
+  "avances": [
+    {
+      "id": "P13",
+      "titulo": "Altura de cámara",
+      "estado": "avance_preproduccion",
+      "herramienta_real": "Edición de texto local",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-10-30_P13_PROTOCOLO_ALTURA_CAMARA.md",
+      "bytes": 1958,
+      "sha256": "1ddcb293c870c912a1ba3a6c2bed0764c1da9a2e611099e5d95a4dab5325e289"
+    },
+    {
+      "id": "P14",
+      "titulo": "Dirección de luz",
+      "estado": "avance_preproduccion",
+      "herramienta_real": "Edición de texto local",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-10-30_P14_PROTOCOLO_DIRECCION_LUZ.md",
+      "bytes": 1954,
+      "sha256": "13566ee6d87ebd30df59f6b6f79f8a75be45feb2d051f443608bd8180922d394"
+    }
+  ],
+  "registro": {
+    "filas": 22,
+    "ids_unicos": 22,
+    "campos": 13,
+    "filas_invalidas": 0
+  },
+  "bloqueos": [
+    "Sin sesión autenticada utilizable para proveedores externos",
+    "Cuenta, saldo, coste y reinicio en vivo no verificables"
+  ],
+  "siguiente_accion": "A las 08:00 ejecutar revision_diaria.py --limit 8 y consolidar los ciclos 02:00–08:00"
+}
+

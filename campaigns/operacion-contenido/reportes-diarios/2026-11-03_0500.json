@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-03",
+  "ciclo": "05:00",
+  "zona_horaria": "America/Monterrey",
+  "espacio_disponible_gib": 396,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 0,
+  "creditos_consumidos": 0,
+  "proveedores_externos": [],
+  "avances": [
+    {
+      "id": "P15",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_P15_GUION_CORREGIDO.md",
+      "resultado": "Guion A/B corregido sin cifras, garantías ni oferta no confirmada"
+    },
+    {
+      "id": "P16",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_P16_GUION_CORREGIDO.md",
+      "resultado": "Guion de flujo corregido sin descalificaciones ni entregables no confirmados"
+    }
+  ],
+  "publicacion_autorizada": false
+}

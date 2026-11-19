@@ -1,0 +1,11 @@
+# Fotos de sesión permanecen en nube.
+*.jpg
+*.jpeg
+*.png
+*.JPG
+*.PNG
+*.nef
+*.NEF
+*.zip
+.env*
+__pycache__/

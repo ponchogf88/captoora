@@ -1,0 +1,19 @@
+{
+  "solicitadas": 20,
+  "verificadas_drive": 20,
+  "individuales": 10,
+  "grupales_confirmadas_usuario": 10,
+  "conteo_nocturno": 100,
+  "destino": "revision Drive, no aprobadas",
+  "estado799": {
+    "aprobada": 29,
+    "pendiente": 645,
+    "en_revision": 110,
+    "rechazada": 12,
+    "bloqueada_herramienta": 3
+  },
+  "modelo": "integrated_image_gen_model_not_exposed",
+  "prompts_exactos_totales": 148,
+  "comparacion": "20 fuentes y20salidas inspeccionadas; sin garantia pixel a pixel o microtexto; DSC07721 conserva desenfoque movimiento original",
+  "originales": "intactos; orientacion solo derivados"
+}

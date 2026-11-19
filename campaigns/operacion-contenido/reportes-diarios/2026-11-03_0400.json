@@ -1,0 +1,25 @@
+{
+  "fecha": "2026-11-03",
+  "ciclo": "04:00",
+  "zona_horaria": "America/Monterrey",
+  "espacio_disponible_gib": 398,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 0,
+  "creditos_consumidos": 0,
+  "proveedores_externos": [],
+  "avances": [
+    {
+      "id": "LIB-MEDIAJPG",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_BIBLIOTECA_MEDIA_JPG_AUDITORIA.md",
+      "resultado": "57 JPG auditados; legibles; sin duplicados byte a byte; permisos pendientes"
+    },
+    {
+      "id": "P08",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_P08_PRESELECCION_BIBLIOTECA.md",
+      "resultado": "Seis candidatos revisados; ninguno aprobado; dos condicionados y uno excluido"
+    }
+  ],
+  "publicacion_autorizada": false
+}

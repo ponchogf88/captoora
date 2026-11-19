@@ -1,0 +1,67 @@
+Hola — Chuy te envía este depósito completo desde su sesión de Antigravity CLI en la iMac (conversación `82fb8bb2-5453-4b16-a6f5-64cfc8a61599`) para unir todo lo que ya construimos allá con este proyecto **YouTube Channel** (`87017760-1ae0-4367-aeb2-d788b55d4f98`) en Antigravity 2.0 (MacBook Pro) y que él pueda continuarlo desde su celular vía Remote.
+
+---
+
+## 1. QUIÉN ES CHUY & MISIÓN DE LA SERIE «¡WATERS!»
+- **Perfil híbrido:** Abogado mexicano (Monterrey, NL) aprendiendo Ciberseguridad, IA y Legal Engineering porque *"la seguridad también habla de protección y justicia"*. Meta doble: (1) Conseguir empleo en LegalTech/AI (`Harvey.ai`, `Clara`, `Google`, `Microsoft`) demostrando capacidad real (*Proof of Work*) y (2) Generar ingresos paralelos enseñando (cursos y kits digitales accesibles), además de proteger a personas reales (como su mamá) y negocios.
+- **Tono:** Cero arrogancia; preventivo, regio, chispeado, cercano. Inspirado en su hermano `@joseagtzf` (creció de <100 a +40k seguidores con Captions/CapCut) y su cuñada Melyssa Guardia (*Entre clics y condiciones*), pero cerrando **con embudo CTA de palabra clave en comentarios (ManyChat)** para provocar guardado + comentarios y capturar leads.
+- **Regla de Oro Viral:** Combinar palabras activadoras del algoritmo (`Claude`, `Dinero`, `WhatsApp`, `Error 404`, `Evitar perder dinero/tiempo/clientes/trabajo`) con historia inmersiva en 2ª persona estilo `@Abrahamolveraai` (45–55s vertical 9:16).
+- **Firma de Audio Obligatoria en `0:00`:** `[SUSPIRO DRAMÁTICO DE PÁNICO 😱] ➔ ¡¡¡WATERS!!! 🚨` ("Waters" = "Aguas" / "¡Cuidado!" en Nuevo León).
+- **Estructura Visual de Video:** `0:00-0:03` Pose susto en pantalla completa -> `0:04-0:32` Narrativa 2ª persona + desmadre operativo (`Dinero · Tiempo · Trabajo · Clientes · Juicios`) con PiP/capturas -> `0:32-0:42` Blindaje legal/técnico real -> `0:42-0:52` Cierre con guiño + CTA de palabra clave.
+- **Modelo de Monetización y Hub (`soyvibecoder.com`):** Embudos circulares de impulso:
+  1. **Serie Reels "¡WATERS!"** -> CTA palabra clave -> DM automático.
+  2. **La Fábrica ¡WATERS!** -> Pipeline local en Python + FFmpeg (`1080x1920`, subtítulos estilo Hormozi `#DFB15B`/`#FF4D4D`).
+  3. **Kit de Blindaje IA & Manual Tribunal Virtual PJENL ($200 MXN):** System prompts anti-alucinación, guía CPCNL Arts. 44–87, checklist Red Team, tabla EU AI Act.
+  4. **Curso 3 Niveles ($400 MXN):** Nivel 1 (Familia/Ciudadano), Nivel 2 (Negocios/Bots), Nivel 3 (Abogados/Legal Engineering).
+  5. **CV Modular Legal Engineer** (1 página filtrada por rol, sin PDFs planos de 5 hojas).
+- **Copy Descripción Instagram (estilo `@jarvis_crea_y_vende`):** `Comenta "[PALABRA]" y te mando la guía ↓` + contraste **`𝗘𝗟 𝗡𝗢𝗩𝗔𝗧𝗢 🔒`** vs **`𝗘𝗟 𝗣𝗥𝗢 🌙`** + 3 pasos (`1️⃣ TIEMPO`, `2️⃣ SEGURIDAD`, `3️⃣ ACCIÓN`) + Disclaimer legal educativo obligatorio al cierre.
+
+---
+
+## 2. PILARES TEMÁTICOS Y HALLAZGOS VERIFICADOS INCLUIDOS
+
+1. **Pilar Agentes IA, WhatsApp Business & Claude (Dinero · Tiempo · Trabajo · Clientes):**
+   - Captura real del botón de WhatsApp Business *"Agente de IA: la IA escribe y envía mensajes por ti"* vs *"Sugerencias: la IA sugiere, tú envías"*. Peligros civiles/mercantiles: promesas de descuento vinculantes, confesiones en juicio, violación de secreto profesional/LFPDPPP, Prompt Injection por contrapartes y falta de personalidad jurídica del robot ("es buenísimo si le sabes, muy peligroso si lo prendes sin saber").
+   - Peligros de Claude/LLMs sin anonimización (fuga de NDA/PII), APIs sin Hard Limit ($2,000 USD en bucle nocturno), jurisprudencias alucinadas, y multas del EU AI Act (hasta 35M EUR / 7% en alto riesgo o biometría emocional prohibida).
+
+2. **Pilar Estrella: Secretos del Tribunal Virtual PJENL (Lo que NO está en el manual 404):**
+   - **Por qué no hay manual público único:** El manual operativo es de administración interna (`Acuerdo General Conjunto 4-II/2014`). Para litigantes rige el **Segundo Título Especial del CPCNL (Arts. 44–87)**, `TVConvenio.pdf`, `TVPrivacidad.pdf` y Dirección de Informática (`cst@pjenl.gob.mx`, Tel. `81-2020-7751`).
+   - **Enlaces 404 vs reales:** `/Instituto/micrositio-tutoriales.html` marca `404`; los videos MP4 vigentes están en `pjenl.gob.mx/Instituto/Tutoriales/`, `SiC@Vi` y `@PJENL`.
+   - *"Dialoga"* no figura en reglamentos publicados; la mediación electrónica oficial opera bajo **IMASC** (`8/2017`, `16/2017`, `2/2019`, `10/2022`, `13/2022`, enlace UMC `14/2017`).
+   - **10 Superpoderes Verificados (`CPCNL 44–87` + Acuerdos 2011–2025):**
+     1) Sobre Electrónico de Posiciones (`Acuerdo 2-II/2025`, `02/07/2025`).
+     2) FEJUD (`1-II/2025`) + e.firma (`7/2017`).
+     3) Oficios electrónicos de pensión alimenticia directos a empleadores y bancos NO partes (`7/2022`, `8/2022`).
+     4) Escudo de salvamento de términos por caída del portal (`Art. 75` + bitácora `Art. 53 CPCNL`).
+     5) Desbloqueo directo con el Administrador tras auto favorable (`Art. 64 CPCNL`).
+     6) Autorización total vs. doble clave para promover y certificación de jornada del Secretario (`Arts. 61, 70, 74`).
+     7) Exhortos e incompetencias mercantiles con expediente electrónico independiente (`Arts. 79–80`, `5-II/2013`, `2-II/2017`, `7-II/2021`).
+     8) Copias Certificadas en Formato Electrónico (`3-II/2015`).
+     9) Penal Acusatorio, Adolescentes y Laboral (`15/2011`, `5/2018`, `16/2022`).
+     10) UMC en Línea, Cabinas Virtuales y Citas UAPA (`1-II/2024` + WhatsApp `81-8366-6781`).
+
+3. **Pilar Ciberseguridad & Red Team (`legaltech-innovation-lab`, 81 Pytest en verde):**
+   - Los 4 parches reales implementados y listos para videos/entrevistas:
+     1) Scrubbing `RFC`/`CURP` con `re.IGNORECASE` (contra `XAXX010101000`/`XEXX010101000`) y detección `CLABE` 18 dígitos con espacios/guiones.
+     2) Protección DoS en `do_POST` limitando `Content-Length` a `1 MiB` (`413`) + enteros válidos (`400`).
+     3) Eliminación de `CORS *`; allowlist estricta (`localhost`, `127.0.0.1`, `https://ponchogf88.github.io`, `403` resto) + token `LEGAL_LAB_API_TOKEN`.
+     4) Cadena de auditoría `SHA-256` con bloqueo exclusivo multi-proceso (`fcntl.flock` / `msvcrt.locking`).
+
+---
+
+## 3. QUÉ YA QUEDÓ CONSTRUIDO EN LA IMAC (LISTO PARA SINCRONIZAR POR GITHUB)
+- Ubicación actual en iMac: `/Users/imac/Desktop/Projects/CAPTOORA.STUDIO/proyectos/waters-serie/`
+  - `index.html`: Hub OS autocontenido (`file://` + HTTP) con Casting de 8 versiones de personaje, Spotlight de los 10 videos del Tribunal Virtual + Copy Novato vs Pro, Carrusel acordeón OpusClip, Calendario de 30 días, Buscador de 100 situaciones, Radiografía PJENL/Red Team y CV Modular.
+  - `CALENDARIO_MAESTRO_30_DIAS_WATERS.md` y `calendario_30_dias.json`: 30 guiones cronometrados completos (`45–52s`).
+  - `100_SITUACIONES_WATERS.csv`: 100 capítulos categorizados + `scripts/generar_100_waters.py`.
+  - `fabrica_waters.py`: Render local 9:16 con `--dia N`, `--lote 1-30`, `--solo-video` (sin voz robótica) y `--audio` (para conectar voz real de Chuy / ElevenLabs).
+  - `assets/`: 4 poses consistentes de plastilina clásico (`pose_01_susto_waters.jpg` a `pose_04_cierre_cta.jpg`).
+  - `assets/casting/`: **7 versiones nuevas del personaje** (`v01_legal_engineer_hoodie.jpg`, `v02_pixar_3d_cinematic.jpg`, `v03_vinyl_designer_toy.jpg`, `v04_felt_puppet_artisan.jpg`, `v05_2d_ink_in_3d_world.jpg`, `v06_clay_regio_norteno_tech.jpg`, `v07_lego_minifig_cinematic.jpg`) para que Chuy elija al ganador.
+  - **Créditos ElevenLabs:** Confirmado **0 créditos consumidos** (los 3 MP4 en `renders/` usaron solo prueba local o pista silenciosa; los reproductores inician en `muted`).
+  - **Confirmación GitHub `ponchogf88`:** NO existe aún ningún repo llamado `youtube-channel` / `YouTube-Channel`; existen `soul-youtube`, `faceless-streaming-24-7`, `captoora`, `cv-card-board`, `legaltech-innovation-lab`.
+
+---
+
+## 4. TAREA INMEDIATA PARA TI EN ESTA CONVERSACIÓN (`87017760`)
+1. Fusiona todo este contexto y calendario **"¡WATERS!"** con los cuadernos, métodos y fórmulas de viralización que ya trabajamos aquí en el proyecto **YouTube Channel** en la MacBook Pro.
+2. En cuanto Chuy confirme en qué repositorio de GitHub quiere unificar (`captoora`, `soul-youtube`, `faceless-streaming-24-7` o un repo nuevo `youtube-channel`), jalamos (`git pull`) la carpeta `proyectos/waters-serie/` aquí y seguimos la producción con la versión de personaje (`Opción 00` o `V01–V07`) y el audio real de ElevenLabs/Chuy que él apruebe.

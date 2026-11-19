@@ -1,0 +1,19 @@
+{
+  "fecha": "2026-11-04",
+  "ciclo": "04:00",
+  "zona_horaria": "America/Monterrey",
+  "espacio_disponible_gib": 457,
+  "proveedores_usados": [],
+  "saldo_antes": null,
+  "saldo_despues": null,
+  "creditos_consumidos": 0,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_editoriales": ["LP_03", "LP_04", "LP_05"],
+  "evidencias": [
+    "campaigns/operacion-contenido/avances/2026-11-04_LA_PEQUENA_INVENTARIO.md",
+    "campaigns/operacion-contenido/avances/2026-11-04_LA_PEQUENA_CONTROL_EDITORIAL.md"
+  ],
+  "publicacion_autorizada": false
+}

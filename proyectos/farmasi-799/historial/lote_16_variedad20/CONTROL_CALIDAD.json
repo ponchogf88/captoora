@@ -1,0 +1,10 @@
+{
+  "estado": "bloqueado_por_calidad_del_metodo_local_no_por_cuota",
+  "motivo": "Prueba de relleno poligonal produce bordes visibles e invade rostro en DSC00863. Ninguna prueba cuenta como foto entregada.",
+  "fuentes_nuevas_verificadas": 0,
+  "siguiente": "No usar estas mascaras. Preservar veinte fuentes seleccionadas y procesar con proteccion manual de sujeto y revision individual.",
+  "solicitadas": 20,
+  "seleccionadas": 20,
+  "entregadas": 0,
+  "aprobacion_anterior": "DSC07706_v04 verificada en aprobadas JPG y PNG"
+}

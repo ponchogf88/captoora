@@ -1,0 +1,40 @@
+{
+  "cycle_at": "2026-10-30T06:00:00-06:00",
+  "timezone": "America/Monterrey",
+  "disk_available_gib": 589,
+  "provider_session_verified": false,
+  "credits_before": null,
+  "credits_after": null,
+  "credits_consumed": 0,
+  "finished": 0,
+  "useful_advances": 2,
+  "corrected": 0,
+  "rejected": 0,
+  "advances": [
+    {
+      "id": "P11",
+      "title": "Fondo blanco",
+      "status": "avance_preproduccion",
+      "real_tool": "Edición de texto local",
+      "file": "campaigns/operacion-contenido/avances/2026-10-30_P11_PROTOCOLO_FONDO_BLANCO.md",
+      "bytes": 2096,
+      "sha256": "b27e84110c0f692f4a1b0818f6499b552c6cc923146c7ee876b07c7c6d966886",
+      "credits": 0
+    },
+    {
+      "id": "P12",
+      "title": "Reflejos en lentes",
+      "status": "avance_preproduccion",
+      "real_tool": "Edición de texto local",
+      "file": "campaigns/operacion-contenido/avances/2026-10-30_P12_PROTOCOLO_REFLEJOS_LENTES.md",
+      "bytes": 2165,
+      "sha256": "9159be0948672c0b4bc2d7e2575b0cf8e52781312bb9ebf7f7e0b060b5bf8c40",
+      "credits": 0
+    }
+  ],
+  "register_rows": 20,
+  "register_unique_ids": 20,
+  "premature_0800_report_preserved": true,
+  "daily_revision_executed": false,
+  "publication_authorized": false
+}

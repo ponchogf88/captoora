@@ -1,0 +1,476 @@
+{
+  "EP01": [
+    {
+      "kind": "clip",
+      "durationInFrames": 77,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "🚨 ¡WATERS GAMERS!",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12,
+      "shakeIntro": true
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 96,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "🤖 AGY · ALERTA GTA 6",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 113,
+      "topTag": "🎮 LANZAMIENTO VIRAL",
+      "monitorTitle": "TRENDING · X / TIKTOK",
+      "headline": "GTA 6: 9.8M VISTAS",
+      "lines": [
+        "> tráfico masivo buscando descargas",
+        "> hackers aprovechando el hype HOY",
+        "! AGUAS CON LINKS FALSOS"
+      ],
+      "ctaText": null,
+      "accentColor": "#38BDF8"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_04_escucha_atento.mp4",
+      "topTag": "💬 CHUY × AGY",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 96,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "⚠️ VIBE HACKING + IA",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 146,
+      "topTag": "🤖 CLAUDE · TERMINAL",
+      "monitorTitle": "ANTHROPIC · CLAUDE TERMINAL",
+      "headline": "INGENIERÍA INVERSA IA",
+      "lines": [
+        "$ vibe-hacking --target=gta6-hype",
+        "> generando phishing + cracks falsos",
+        "! VELOCIDAD 10X CON IA"
+      ],
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 116,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😰 ¿PIERDO MI CUENTA?",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.1,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 225,
+      "topTag": "☠️ TRAMPA INFOSTEALER",
+      "monitorTitle": "SECURITY ALERT · MALWARE",
+      "headline": "ROBO EN SEGUNDOS",
+      "lines": [
+        "[!] Crack falso ➔ Infostealer activo",
+        "[!] Extrayendo tarjetas y tokens...",
+        "[X] CUENTA PSN / XBOX / STEAM ROBADA"
+      ],
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 93,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😱 ¡NO MANCHES!",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.18,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 223,
+      "topTag": "🛡️ GEMINI 4 NEON",
+      "monitorTitle": "ANTIGRAVITY · SHIELD ON",
+      "headline": "BLINDAJE CON NEON",
+      "lines": [
+        "✓ Analizando links sospechosos",
+        "✓ Verificando 2FA + contraseñas",
+        "✓ CUENTAS GAMER PROTEGIDAS"
+      ],
+      "ctaText": null,
+      "accentColor": "#DFB15B"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 116,
+      "videoFile": "chuy_06_feliz_celebrando.mp4",
+      "topTag": "🎉 ¡CUENTA BLINDADA!",
+      "accentColor": "#22C55E",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 54,
+      "videoFile": "agy_03_solo_feliz_guino.mp4",
+      "topTag": "🚀 AGY · ANTIGRAVITY",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 60,
+      "topTag": "📩 GUÍA GRATIS",
+      "monitorTitle": "CAPTOORA × ANTIGRAVITY",
+      "headline": "PROTEGE TU CUENTA HOY",
+      "lines": [
+        "> Checklist anti-infostealers",
+        "> Prompts de verificación en Neon"
+      ],
+      "ctaText": "COMENTA: NEON 🚀",
+      "accentColor": "#DFB15B"
+    }
+  ],
+  "EP02": [
+    {
+      "kind": "clip",
+      "durationInFrames": 86,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "🚨 ¡WATERS CREADORES!",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12,
+      "shakeIntro": true
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 96,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😫 INFIERNO EN META",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 129,
+      "topTag": "⚠️ CUENTA COMERCIAL TRABADA",
+      "monitorTitle": "META BUSINESS SUITE",
+      "headline": "ERROR AL ENLAZAR IG + FB",
+      "lines": [
+        "[!] Business Manager viejo detectado",
+        "[!] Permisos bloqueados / sin acceso",
+        "[X] FORMULARIOS SIN RESPUESTA"
+      ],
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 116,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "🤖 AGY · IA AGÉNTICA",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 96,
+      "videoFile": "chuy_04_escucha_atento.mp4",
+      "topTag": "📱 CASO REAL INFLUENCER",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 108,
+      "topTag": "🔁 SEGUIMIENTO AUTOMÁTICO",
+      "monitorTitle": "GOOGLE AGENTIC WORKFLOW",
+      "headline": "EL AGENTE NO SUELTA EL CASO",
+      "lines": [
+        "> Redactando apelación formal...",
+        "> Seguimiento automático al ticket",
+        "✓ RESPUESTA REAL DE SOPORTE"
+      ],
+      "ctaText": null,
+      "accentColor": "#38BDF8"
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 144,
+      "topTag": "✅ CUENTAS ENLAZADAS",
+      "monitorTitle": "META STATUS · VERIFICADO",
+      "headline": "FB + IG RECUPERADOS",
+      "lines": [
+        "✓ Cuenta comercial antigua resuelta",
+        "✓ Cuenta de influencer restaurada",
+        "✓ AÑOS DE TRABAJO A SALVO"
+      ],
+      "ctaText": null,
+      "accentColor": "#22C55E"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 86,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😲 ¿SIN CIEN CORREOS?",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.16,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 116,
+      "videoFile": "chuy_06_feliz_celebrando.mp4",
+      "topTag": "🎉 ¡VICTORIA TOTAL!",
+      "accentColor": "#22C55E",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 54,
+      "videoFile": "agy_03_solo_feliz_guino.mp4",
+      "topTag": "🤖 AGY · MODO HÉROE",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 60,
+      "topTag": "🚀 RECUPERA TU CUENTA",
+      "monitorTitle": "CAPTOORA × ANTIGRAVITY",
+      "headline": "¿CUENTA BLOQUEADA?",
+      "lines": [
+        "> Flujo agéntico de apelación",
+        "> Blindaje para creadores"
+      ],
+      "ctaText": "COMENTA: AGENTE 🚀",
+      "accentColor": "#DFB15B"
+    }
+  ],
+  "EP01_EXT": [
+    {
+      "kind": "clip",
+      "durationInFrames": 70,
+      "videoFile": "chuy_01_susto_alerta.mp4",
+      "topTag": "🚨 ¡WATERS GAMERS!",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.12,
+      "shakeIntro": true
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "🤖 AGY · ALERTA GTA 6",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 105,
+      "topTag": "🎮 LANZAMIENTO VIRAL",
+      "monitorTitle": "TRENDING · X / TIKTOK",
+      "headline": "GTA 6: 9.8M VISTAS",
+      "lines": [
+        "> 9.8 millones de vistas en horas",
+        "> tráfico masivo buscando el juego",
+        "! EL BLANCO #1 DE HACKERS HOY"
+      ],
+      "ctaText": null,
+      "accentColor": "#38BDF8"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_04_escucha_atento.mp4",
+      "topTag": "💬 CHUY × AGY",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 37,
+      "videoFile": "chuy_04_escucha_atento.mp4",
+      "topTag": "💬 CHUY × AGY",
+      "accentColor": "#38BDF8",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.2,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "agy_01_solo_explicando.mp4",
+      "topTag": "💰 RÉCORD HISTÓRICO",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 277,
+      "topTag": "📈 CIFRA RÉCORD MUNDIAL",
+      "monitorTitle": "MARKET DATA · GTA 6",
+      "headline": "$3,000M USD ESTIMADOS",
+      "lines": [
+        "> +$1,000M USD en pura preventa",
+        "> $3,000M USD antes de fin de año",
+        "★ SUPERÓ A CINE, SERIES Y JUEGOS"
+      ],
+      "ctaText": null,
+      "accentColor": "#DFB15B"
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 298,
+      "topTag": "⚠️ VIBE HACKING + IA",
+      "monitorTitle": "ANTHROPIC · CLAUDE TERMINAL",
+      "headline": "INGENIERÍA INVERSA IA",
+      "lines": [
+        "$ vibe-hacking --target=gta6-hype",
+        "> generando phishing + cracks falsos",
+        "! VELOCIDAD 10X CON IA"
+      ],
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😰 ¿PIERDO MI CUENTA?",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 47,
+      "videoFile": "chuy_02_angustia_sudor.mp4",
+      "topTag": "😰 ¿PIERDO MI CUENTA?",
+      "accentColor": "#FF4D4D",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.2,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 279,
+      "topTag": "☠️ TRAMPA INFOSTEALER",
+      "monitorTitle": "SECURITY ALERT · MALWARE",
+      "headline": "ROBO EN SEGUNDOS",
+      "lines": [
+        "[!] Crack falso ➔ Infostealer activo",
+        "[!] Extrayendo tarjetas y tokens...",
+        "[X] CUENTA PSN / XBOX / STEAM ROBADA"
+      ],
+      "ctaText": null,
+      "accentColor": "#FF4D4D"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😱 ¡NO MANCHES!",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 30,
+      "videoFile": "chuy_03_sorpresa_silla.mp4",
+      "topTag": "😱 ¡NO MANCHES!",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.2,
+      "shakeIntro": false
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 267,
+      "topTag": "🛡️ GEMINI 4 NEON",
+      "monitorTitle": "ANTIGRAVITY · SHIELD ON",
+      "headline": "BLINDAJE CON NEON",
+      "lines": [
+        "✓ Analizando links sospechosos",
+        "✓ Verificando 2FA + contraseñas",
+        "✓ CUENTAS GAMER PROTEGIDAS"
+      ],
+      "ctaText": null,
+      "accentColor": "#DFB15B"
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 105,
+      "videoFile": "chuy_06_feliz_celebrando.mp4",
+      "topTag": "🎉 ¡CUENTA BLINDADA!",
+      "accentColor": "#22C55E",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 59,
+      "videoFile": "chuy_06_feliz_celebrando.mp4",
+      "topTag": "🎉 ¡CUENTA BLINDADA!",
+      "accentColor": "#22C55E",
+      "zoomStart": 1.12,
+      "zoomEnd": 1.2,
+      "shakeIntro": false
+    },
+    {
+      "kind": "clip",
+      "durationInFrames": 73,
+      "videoFile": "agy_03_solo_feliz_guino.mp4",
+      "topTag": "🚀 AGY · ANTIGRAVITY",
+      "accentColor": "#DFB15B",
+      "zoomStart": 1.0,
+      "zoomEnd": 1.08
+    },
+    {
+      "kind": "broll",
+      "durationInFrames": 74,
+      "topTag": "📩 GUÍA GRATIS",
+      "monitorTitle": "CAPTOORA × ANTIGRAVITY",
+      "headline": "PROTEGE TU CUENTA HOY",
+      "lines": [
+        "> Checklist anti-infostealers",
+        "> Prompts de verificación en Neon"
+      ],
+      "ctaText": "COMENTA: NEON 🚀",
+      "accentColor": "#DFB15B"
+    }
+  ]
+}

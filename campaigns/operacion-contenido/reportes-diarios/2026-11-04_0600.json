@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-11-04",
+  "ciclo": "06:00",
+  "zona_horaria": "America/Monterrey",
+  "inicio_real": "2026-11-04T06:02:11-06:00",
+  "espacio_disponible_gib": 310,
+  "proveedores_usados": [],
+  "saldo_antes": null,
+  "saldo_despues": null,
+  "creditos_consumidos": 0,
+  "piezas_terminadas": 0,
+  "piezas_corregidas_audiovisuales": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 0,
+  "evidencias": [
+    "campaigns/operacion-contenido/avances/2026-11-04_LP10_PILOTO_LUZ_MANZANA.md",
+    "campaigns/operacion-contenido/avances/2026-11-04_CONCILIACION_LA_PEQUENA_LIKINYA.md"
+  ],
+  "publicacion_autorizada": false
+}

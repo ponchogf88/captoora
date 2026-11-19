@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-11-03T03:01:58-06:00",
+  "cycle": "0300",
+  "free_space_gib": 398,
+  "finished_count": 0,
+  "corrected_count": 0,
+  "advanced_count": 2,
+  "conditioned_assets_count": 1,
+  "rejected_count": 0,
+  "advanced_ids": ["P06", "MEDIA-721"],
+  "external_services_used": [],
+  "credits_consumed": 0,
+  "evidence": [
+    "campaigns/operacion-contenido/avances/2026-11-03_P06_CONTROL_AUDIO_CONTINUIDAD.md",
+    "campaigns/operacion-contenido/avances/2026-11-03_MEDIA_721_AUDITORIA.md"
+  ],
+  "daily_revision_due": "2026-11-03T08:00:00-06:00"
+}

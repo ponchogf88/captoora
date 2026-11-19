@@ -1,0 +1,14 @@
+{
+  "fecha": "2026-11-03",
+  "ciclo": "07:00",
+  "inicio_real": "2026-11-03T07:03:04-06:00",
+  "espacio_libre_gib": 395,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 0,
+  "creditos_consumidos": 0,
+  "proveedores_externos": [],
+  "ids": ["GBP-KIT-07", "RELEASE-TFP"],
+  "publicacion_autorizada": false
+}

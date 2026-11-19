@@ -1,0 +1,27 @@
+{
+  "fecha": "2026-10-30",
+  "hora": "04:00",
+  "zona_horaria": "America/Monterrey",
+  "espacio_disponible_gib": 589,
+  "sesion_proveedor_utilizable": false,
+  "saldo_en_vivo": null,
+  "creditos_consumidos": 0,
+  "piezas_terminadas": 0,
+  "avances_utiles": 2,
+  "candidatos_no_aprobados": 4,
+  "avances": [
+    {
+      "id": "P06",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-10-30_P06_AUDITORIA_MEDIOS.md",
+      "resultado": "Un candidato de estudio conservado de forma condicionada; faltan procedencia, autorización y tres planos."
+    },
+    {
+      "id": "P08",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-10-30_P08_AUDITORIA_DERECHOS.md",
+      "resultado": "Cuatro candidatos revisados; ninguno aprobado por derechos, contexto o resolución."
+    }
+  ],
+  "publicado": false,
+  "compras": false,
+  "revision_diaria_ejecutada": false
+}

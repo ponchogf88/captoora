@@ -1,0 +1,508 @@
+{
+  "files": [
+    {
+      "source_name": "DSC02119.JPG",
+      "source_id": "1xhmaBu73R2MBnCuEvgiT00usP81v64AB",
+      "source_url": "https://drive.google.com/file/d/1xhmaBu73R2MBnCuEvgiT00usP81v64AB/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02119.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-50d4539a-e9fe-4100-940b-ff8bcc47378c.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+        "title": "DSC02119_v02.jpg",
+        "id": "1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v",
+        "mime_type": "image/jpeg",
+        "size": "518056",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:55.429Z",
+        "updated_at": "2026-11-04T09:36:55.429Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02119_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "5e27b186286ecad862346a342ef13c0fd3871c5970764a670aa0065bc692533e",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02118.JPG",
+      "source_id": "1TA9E7X4aG13aH1CTGOAjoHAzaFl7AsUT",
+      "source_url": "https://drive.google.com/file/d/1TA9E7X4aG13aH1CTGOAjoHAzaFl7AsUT/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02118.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-80b456bc-a8e1-4293-8d30-c67006d6aecf.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+        "title": "DSC02118_v02.jpg",
+        "id": "1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ",
+        "mime_type": "image/jpeg",
+        "size": "488457",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:50.896Z",
+        "updated_at": "2026-11-04T09:36:50.896Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02118_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "b7a8b522152f7ad639775fcca436a894fb86c520e330f0e0982eb082b8b76e30",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02132.JPG",
+      "source_id": "1o8Iyen6daUmlc3MNlylj4eknzLviQ6v2",
+      "source_url": "https://drive.google.com/file/d/1o8Iyen6daUmlc3MNlylj4eknzLviQ6v2/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02132.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-1aa3163f-329b-40c9-8cf0-ecf4d31bfa2b.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+        "title": "DSC02132_v02.jpg",
+        "id": "12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo",
+        "mime_type": "image/jpeg",
+        "size": "518190",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:48.881Z",
+        "updated_at": "2026-11-04T09:36:48.881Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02132_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "a567d5ab16764ff83f69d6cfe58f8681cbafdd323d23a2ec7bafddbd224b6627",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02146.JPG",
+      "source_id": "1OT81LhpaUFvZcKL19yRXI14ZLKlB765J",
+      "source_url": "https://drive.google.com/file/d/1OT81LhpaUFvZcKL19yRXI14ZLKlB765J/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02146.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-b6431468-54fa-4ca7-86ab-042e8ea62443.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+        "title": "DSC02146_v02.jpg",
+        "id": "1EDVzlGqt-N36nRvCagwavWDyufep66_M",
+        "mime_type": "image/jpeg",
+        "size": "442894",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:56.713Z",
+        "updated_at": "2026-11-04T09:33:56.713Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02146_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "99c384264c9e25ced027d0830783e2e698e46b55394c1d4a9a84a2d1d99d8780",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02149.JPG",
+      "source_id": "17tmHF9Lj2gMY7HCVlp41-p3k44_1LxP3",
+      "source_url": "https://drive.google.com/file/d/17tmHF9Lj2gMY7HCVlp41-p3k44_1LxP3/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Preserve this adult woman's white/lilac sportswear and standing pose. Exact source DSC02149.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-f09d1476-18b1-4e32-a552-ead696bab605.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+        "title": "DSC02149_v02.jpg",
+        "id": "14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl",
+        "mime_type": "image/jpeg",
+        "size": "420617",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:48.638Z",
+        "updated_at": "2026-11-04T09:33:48.638Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02149_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "c0dbd21f899a0e2baf79265c95ff2028965e8c21bdde4efe4320bcf77ff618a3",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02141.JPG",
+      "source_id": "14TljLujPfbEWcjtRsDMNNlvmPOBHxvxS",
+      "source_url": "https://drive.google.com/file/d/14TljLujPfbEWcjtRsDMNNlvmPOBHxvxS/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02141.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-9fe836e1-10a2-49f8-9ee0-2397e25dfe7a.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+        "title": "DSC02141_v02.jpg",
+        "id": "1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8",
+        "mime_type": "image/jpeg",
+        "size": "418829",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:43.455Z",
+        "updated_at": "2026-11-04T09:33:43.455Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02141_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "5997a8c8b938595cb341478ef54bdee1f56296631c5bf31978465e0220a871a6",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02140.JPG",
+      "source_id": "1yDcz9Y3GvlBV8BzlP3FKP35dfjfWqPn-",
+      "source_url": "https://drive.google.com/file/d/1yDcz9Y3GvlBV8BzlP3FKP35dfjfWqPn-/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02140.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-8a291d49-7429-45c8-ac4b-fb1c902247cb.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+        "title": "DSC02140_v02.jpg",
+        "id": "167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty",
+        "mime_type": "image/jpeg",
+        "size": "488785",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:40.181Z",
+        "updated_at": "2026-11-04T09:33:40.181Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02140_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "def9f5c8cf42c34674a6a5d9c7a663f5ea67dd54f5166e1bfbbebbcdc4dde8c7",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02126.JPG",
+      "source_id": "1bCVhK0xdBmmLp6OlfB_i30LjeYCYwh-A",
+      "source_url": "https://drive.google.com/file/d/1bCVhK0xdBmmLp6OlfB_i30LjeYCYwh-A/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02126.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-ed55abea-37a4-4755-9c6b-08aaf8a2f938.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+        "title": "DSC02126_v02.jpg",
+        "id": "1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU",
+        "mime_type": "image/jpeg",
+        "size": "520503",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:34.951Z",
+        "updated_at": "2026-11-04T09:33:34.951Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02126_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "740c0af722ac0997539779fddf1aaac867fcafd1eef170a5e39a499c75e3d134",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02136.JPG",
+      "source_id": "1seeFWjCv9dlVhnWdchT9rrNb9CaKj_zO",
+      "source_url": "https://drive.google.com/file/d/1seeFWjCv9dlVhnWdchT9rrNb9CaKj_zO/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02136.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-1899cd81-6e56-40c2-8ef2-3a7977c6ef9e.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+        "title": "DSC02136_v02.jpg",
+        "id": "1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ",
+        "mime_type": "image/jpeg",
+        "size": "414620",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:15.293Z",
+        "updated_at": "2026-11-04T09:27:15.293Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02136_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "b863611fbb466342ac785dde16e41858349f4ecd6da1664202b322754a8c47fd",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02134.JPG",
+      "source_id": "1N2_0Pw4ren_6obbjJYxJyJLGk5Tb5x8R",
+      "source_url": "https://drive.google.com/file/d/1N2_0Pw4ren_6obbjJYxJyJLGk5Tb5x8R/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_12_individuales_negro_0300",
+      "prompt": "Precise background-only edit of this exact adult male portrait. Keep his exact real face, features, beard, expression, gaze, skin texture, hairstyle, body proportions, pose, hands/fingers, burgundy shirt, trousers, watch, jewelry and every held product/phone unchanged. Retain exact crop, camera angle, subject scale and original aspect ratio. Replace only the makeshift room/backdrop with elegant dimensional charcoal black studio, extremely subtle soft diffuse amber glow (not strong orange beam), preserve natural warm rim light without reshaping or beautifying the face. If floor is visible use almost flat short black micro-pile velvet with natural contact shadows, never thick fluffy fur or glossy water. Two small discreet cropped LED panels at far edges may be visible, no assistant hands/arms/people. Do not zoom out, add floor when cropped, invent limbs, alter product labels or add text/watermarks. Preserve individual hair edges and natural shadows, no cutout halo. Exact source DSC02134.JPG.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-3167ef34-8b1e-43f1-afe4-38bdb3771acb.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+        "title": "DSC02134_v02.jpg",
+        "id": "1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ",
+        "mime_type": "image/jpeg",
+        "size": "468638",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:12.957Z",
+        "updated_at": "2026-11-04T09:27:12.957Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02134_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "e20172a54cd5012c9841970f2fe368a8123c78f7bf82b2b048eb260435d93114",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    }
+  ],
+  "readback": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+        "title": "DSC02119_v02.jpg",
+        "id": "1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v",
+        "mime_type": "image/jpeg",
+        "size": "518056",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:55.429Z",
+        "updated_at": "2026-11-04T09:36:55.429Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02119_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+        "title": "DSC02118_v02.jpg",
+        "id": "1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ",
+        "mime_type": "image/jpeg",
+        "size": "488457",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:50.896Z",
+        "updated_at": "2026-11-04T09:36:50.896Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02118_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+        "title": "DSC02132_v02.jpg",
+        "id": "12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo",
+        "mime_type": "image/jpeg",
+        "size": "518190",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:48.881Z",
+        "updated_at": "2026-11-04T09:36:48.881Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02132_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+        "title": "DSC02146_v02.jpg",
+        "id": "1EDVzlGqt-N36nRvCagwavWDyufep66_M",
+        "mime_type": "image/jpeg",
+        "size": "442894",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:56.713Z",
+        "updated_at": "2026-11-04T09:33:56.713Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02146_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+        "title": "DSC02149_v02.jpg",
+        "id": "14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl",
+        "mime_type": "image/jpeg",
+        "size": "420617",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:48.638Z",
+        "updated_at": "2026-11-04T09:33:48.638Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02149_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+        "title": "DSC02141_v02.jpg",
+        "id": "1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8",
+        "mime_type": "image/jpeg",
+        "size": "418829",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:43.455Z",
+        "updated_at": "2026-11-04T09:33:43.455Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02141_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+        "title": "DSC02140_v02.jpg",
+        "id": "167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty",
+        "mime_type": "image/jpeg",
+        "size": "488785",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:40.181Z",
+        "updated_at": "2026-11-04T09:33:40.181Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02140_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+        "title": "DSC02126_v02.jpg",
+        "id": "1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU",
+        "mime_type": "image/jpeg",
+        "size": "520503",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:34.951Z",
+        "updated_at": "2026-11-04T09:33:34.951Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02126_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+        "title": "DSC02136_v02.jpg",
+        "id": "1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ",
+        "mime_type": "image/jpeg",
+        "size": "414620",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:15.293Z",
+        "updated_at": "2026-11-04T09:27:15.293Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02136_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+        "title": "DSC02134_v02.jpg",
+        "id": "1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ",
+        "mime_type": "image/jpeg",
+        "size": "468638",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:12.957Z",
+        "updated_at": "2026-11-04T09:27:12.957Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02134_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1N2FKQVfXqniGLVG6UH4szYER5DwW0_nx"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "conversation_url": "https://chatgpt.com/share/6aec4bd5-9504-83e8-81b4-132778368d8b",
+  "read_status": "mensajes_usuario_leidos_en_Chrome_autenticado;respuestas_asistente_no_cargan",
+  "scope": "Despues de la modelo lila, preparar composiciones de madre y bebe mirando ambos a camara usando recortes de originales de tomas compatibles, sin generacion ni modificacion de rostros. No redibujar ojos, boca, expresion ni piel. Comparar perspectiva, postura, luz y oclusiones; si no hay pareja compatible registrar limite. Mostrar originales donantes y montaje a revision, sin aprobacion automatica.",
+  "user_requirement_quotes": [
+    "En unas fotografias la chava esta viendo a la camara y en otras fotografias el bebe esta viendo a la camara, pero no coinciden",
+    "No quiero que se modifiquen los rostros. Simplemente quiero que se recorte."
+  ],
+  "references": [
+    {
+      "source_id": "16waWCEAXtppX6UgzKFmkARz-VcoCgQxa",
+      "source_name": "DSC08219.JPG",
+      "source_url": "https://drive.google.com/file/d/16waWCEAXtppX6UgzKFmkARz-VcoCgQxa/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1LT7oNGHYdSgpRv-v44teYJ5nlwMLl56V",
+      "source_name": "DSC08224.JPG",
+      "source_url": "https://drive.google.com/file/d/1LT7oNGHYdSgpRv-v44teYJ5nlwMLl56V/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "13SWUvfRrbK7lK5kN6j5B2NhikKUOuHB0",
+      "source_name": "DSC08230.JPG",
+      "source_url": "https://drive.google.com/file/d/13SWUvfRrbK7lK5kN6j5B2NhikKUOuHB0/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1EarTvPVXvOVJlzCx8Hh4qxvCBlGO_oc-",
+      "source_name": "DSC08233.JPG",
+      "source_url": "https://drive.google.com/file/d/1EarTvPVXvOVJlzCx8Hh4qxvCBlGO_oc-/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1u4Xjg4vIbuS4OX-csHlhXH-xcgCfa0xs",
+      "source_name": "DSC08235.JPG",
+      "source_url": "https://drive.google.com/file/d/1u4Xjg4vIbuS4OX-csHlhXH-xcgCfa0xs/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1UJRjxB9bZdrqy-c-f8G-tJowC4KZoIUU",
+      "source_name": "DSC08246.JPG",
+      "source_url": "https://drive.google.com/file/d/1UJRjxB9bZdrqy-c-f8G-tJowC4KZoIUU/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1I5Hb64hGn0RvOXJ2VeWtYyW31egvvZl5",
+      "source_name": "DSC08258.JPG",
+      "source_url": "https://drive.google.com/file/d/1I5Hb64hGn0RvOXJ2VeWtYyW31egvvZl5/view",
+      "estado_registro": "aprobada"
+    },
+    {
+      "source_id": "1qIPsRZbqtoYxng_53X6vWqGdo_-wMA5P",
+      "source_name": "DSC08261.JPG",
+      "source_url": "https://drive.google.com/file/d/1qIPsRZbqtoYxng_53X6vWqGdo_-wMA5P/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "17EP9H9goNroeBeH5lPgmrFjNcjUfMfx-",
+      "source_name": "DSC08272.JPG",
+      "source_url": "https://drive.google.com/file/d/17EP9H9goNroeBeH5lPgmrFjNcjUfMfx-/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1JPxNCAfTnHiIqHmOdu05lIPoPkGnTgTA",
+      "source_name": "DSC08276 2.JPG",
+      "source_url": "https://drive.google.com/file/d/1JPxNCAfTnHiIqHmOdu05lIPoPkGnTgTA/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1mJKyRAMDSijm1mi2-nxZF7Zb5De3Gs8h",
+      "source_name": "DSC08282 2.JPG",
+      "source_url": "https://drive.google.com/file/d/1mJKyRAMDSijm1mi2-nxZF7Zb5De3Gs8h/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1KPYGI3BjLi85a4lsJSltxKh5Wsuki42L",
+      "source_name": "DSC08283 2.JPG",
+      "source_url": "https://drive.google.com/file/d/1KPYGI3BjLi85a4lsJSltxKh5Wsuki42L/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1uvFPKEZSP4EDLdhrOU5zV88kka14wOOz",
+      "source_name": "DSC08284.JPG",
+      "source_url": "https://drive.google.com/file/d/1uvFPKEZSP4EDLdhrOU5zV88kka14wOOz/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1TTwa6ETNbS1EMyrhPavhN25kieu9NXnF",
+      "source_name": "DSC08290 2.JPG",
+      "source_url": "https://drive.google.com/file/d/1TTwa6ETNbS1EMyrhPavhN25kieu9NXnF/view",
+      "estado_registro": "aprobada"
+    },
+    {
+      "source_id": "1vNCWWD6M9bQ2IWdV8UH-HysLGmT12S2P",
+      "source_name": "DSC08294 2.JPG",
+      "source_url": "https://drive.google.com/file/d/1vNCWWD6M9bQ2IWdV8UH-HysLGmT12S2P/view",
+      "estado_registro": "pendiente"
+    },
+    {
+      "source_id": "1mVSALPROjUUfBaYXOP23apS49c8vvmBo",
+      "source_name": "DSC08295.JPG",
+      "source_url": "https://drive.google.com/file/d/1mVSALPROjUUfBaYXOP23apS49c8vvmBo/view",
+      "estado_registro": "aprobada"
+    }
+  ],
+  "status": "solicitado;referencias_registradas;no_producido",
+  "priority": "despues de concluir pendientes modelo lila; no desplaza trabajo actual"
+}

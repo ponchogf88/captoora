@@ -1,0 +1,29 @@
+{
+  "fecha": "2026-11-03",
+  "ciclo": "02:00",
+  "inicio_real": "2026-11-03T02:01:29-06:00",
+  "espacio_disponible_gib": 398,
+  "proveedores_externos_utilizados": [],
+  "creditos_consumidos": 0,
+  "terminadas": 0,
+  "corregidas": 0,
+  "avances": 2,
+  "rechazos_nuevos": 0,
+  "items": [
+    {
+      "id": "WEB-REF-SCROLLTIDE",
+      "estado": "referencia",
+      "decision": "conservar",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_SCROLLTIDE_CAPTURAS_AUDITORIA.md",
+      "herramientas": ["inspeccion visual local", "file", "sips", "stat", "SHA-256"]
+    },
+    {
+      "id": "WEB-CATALOGO-76",
+      "estado": "revision",
+      "decision": "conservar",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-03_CATALOGO_RECURSOS_WEB_AUDITORIA.md",
+      "herramientas": ["pdfinfo", "pypdf", "lectura local", "stat", "SHA-256"]
+    }
+  ],
+  "publicacion_autorizada_o_realizada": false
+}

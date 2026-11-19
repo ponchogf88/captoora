@@ -1,0 +1,14 @@
+{
+  "fecha": "2026-11-03",
+  "ciclo": "06:00",
+  "inicio_real": "2026-11-03T06:02:23-06:00",
+  "espacio_libre_gib": 396,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 1,
+  "creditos_consumidos": 0,
+  "proveedores_externos": [],
+  "ids": ["EVENTO-4PASOS", "GBP-KIT-07"],
+  "publicacion_autorizada": false
+}

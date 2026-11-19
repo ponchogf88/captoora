@@ -1,0 +1,32 @@
+{
+  "cycle_at": "2026-10-30T02:02:00-06:00",
+  "local_free_gib": 589,
+  "browser_production_sessions": 0,
+  "live_balances_verified": false,
+  "credits_consumed": 0,
+  "finished_pieces": 0,
+  "useful_advances": 2,
+  "advances": [
+    {
+      "id": "P04",
+      "status": "en_produccion",
+      "kind": "preproduccion",
+      "tool": "Edición de texto local (2026-10-30)",
+      "evidence": "campaigns/operacion-contenido/avances/2026-10-30_P04_PROTOCOLO_LUZ_VENTANA.md",
+      "bytes": 1335,
+      "sha256": "e3470498cf283057b21adb7d2f48a84a53c236b33dae55853a266735f49efba0"
+    },
+    {
+      "id": "P07",
+      "status": "en_produccion",
+      "kind": "preproduccion",
+      "tool": "Edición de texto local (2026-10-30)",
+      "evidence": "campaigns/operacion-contenido/avances/2026-10-30_P07_STORYBOARD_PRODUCTO.md",
+      "bytes": 1612,
+      "sha256": "081205f7a35c20947419eb7e316550f3d1d18f40ea6cd67947431094632e61d4"
+    }
+  ],
+  "publishing_or_external_side_effects": false,
+  "daily_revision_ran_early": true,
+  "daily_revision_must_run_again_at_0800": true
+}

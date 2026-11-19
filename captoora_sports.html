@@ -1,0 +1,2419 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAPTOORA SPORTS // Fotografía Deportiva 1/2000s & Túnel 3D</title>
+  <meta name="description" content="Captoora Sports · Fotografía deportiva a 1/2000s, entrega el mismo día, Túnel 3D interactivo y trofeos en acrílico LED · Monterrey y SPGG.">
+  <link rel="canonical" href="https://captoora.studio/sports">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CAPTOORA SPORTS // Fotografía Deportiva & Túnel 3D">
+  <meta property="og:description" content="Cobertura cinematográfica a 1/2000s el mismo día, Túnel 3D interactivo y trofeos acrílicos LED · San Jerónimo, Monterrey.">
+  <meta property="og:url" content="https://captoora.studio/sports">
+  <meta property="og:image" content="https://captoora.studio/assets/hero-portrait.png">
+  <link rel="icon" type="image/png" href="assets/CAPTOORA_FAVICON_512x512.png">
+
+  <!-- REFINED LUXURY TYPOGRAPHY (CINZEL, CORMORANT, PLUS JAKARTA, JETBRAINS MONO) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       JJETTAS LUXURY ATHLETIC EDITORIAL - REFINED ELEGANT TYPOGRAPHY
+       ========================================================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --color-ink-deep: #060509;
+      --color-ink: #0c0b11;
+      --color-ink-card: #13121b;
+      --color-bone: #f7f4ef;
+      --color-bone-muted: rgba(247, 244, 239, 0.65);
+      --color-bone-subtle: rgba(247, 244, 239, 0.14);
+      
+      --cyan: #00f0ff;
+      --cyan-glow: rgba(0, 240, 255, 0.4);
+      --lime: #CCFF00;
+      --lime-glow: rgba(204, 255, 0, 0.4);
+      --gold: #d4af37;
+      
+      --font-serif-luxury: 'Cormorant Garamond', serif;
+      --font-display-refined: 'Cinzel', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    ::selection {
+      background: var(--lime);
+      color: #000;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--color-ink-deep);
+    }
+
+    body {
+      background-color: var(--color-ink-deep);
+      color: var(--color-bone);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* SUBTLE PEBBLE GRAIN TEXTURE */
+    .jj-pebble-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* ==========================================================================
+       JJETTAS INTRO LOADER (0% -> 100%)
+       ========================================================================== */
+    .jj-loader-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background-color: var(--color-ink-deep);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .jj-loader-screen.loaded {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-100%);
+    }
+
+    .jj-loader-mark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .jj-loader-logo {
+      width: 74px;
+      height: auto;
+      filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.5));
+      animation: pulseLogo 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulseLogo {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.08); opacity: 1; }
+    }
+
+    .jj-loader-counter {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 5px;
+      color: var(--color-bone);
+      opacity: 0.7;
+    }
+
+    /* ==========================================================================
+       TOP FIXED NAVIGATION (CENTERED TRANSPARENT LOGO + REFINED TYPOGRAPHY)
+       ========================================================================== */
+    .jj-site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 134px;
+      padding: 0 clamp(20px, 4.5vw, 64px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      background: rgba(6, 5, 9, 0.85);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+      border-bottom: 1px solid var(--color-bone-subtle);
+    }
+
+    .nav-left-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-link-refined {
+      color: var(--color-bone-muted);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .nav-link-refined:hover {
+      color: var(--color-bone);
+    }
+
+    /* CENTERED CAPTOORA EMBLEM & TYPOGRAPHY UNDERNEATH (1.5X PROMINENT) */
+    .brand-centered-lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      gap: 5px;
+    }
+
+    .brand-logo-img {
+      height: 96px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 24px rgba(0, 229, 255, 0.35)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+      transition: transform 0.3s ease;
+    }
+
+    .brand-centered-lockup:hover .brand-logo-img {
+      transform: scale(1.06);
+    }
+
+    .brand-title-decent {
+      font-family: var(--font-display-refined);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: 8px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+      line-height: 1;
+      margin-top: 4px;
+    }
+
+    .brand-subtitle-decent {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+    }
+
+    .nav-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-left-links { display: none; }
+      .brand-centered-lockup { position: static; transform: none; align-items: flex-start; }
+    }
+
+    .nav-cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 20px var(--lime-glow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .nav-cta-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(204, 255, 0, 0.65);
+    }
+
+    /* ==========================================================================
+       HERO EDITORIAL STAGE (REAL TOUCHDOWN VIDEO + ATHLETE WITH SUNGLASSES)
+       ========================================================================== */
+    .hero-editorial-stage {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      padding-top: 144px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    /* GENERIC FOOTBALL TOUCHDOWN RUN VIDEO (REPLACING PREVIOUS USER VIDEO) */
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.25;
+      filter: saturate(130%) contrast(115%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 45%, transparent 25%, var(--color-ink-deep) 88%),
+                  linear-gradient(to top, var(--color-ink-deep) 12%, transparent 60%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* KINETIC BACKGROUND MARQUEES */
+    .hero-marquees {
+      position: absolute;
+      top: 18%;
+      left: 0; width: 100%;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0.08;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .marquee-track {
+      display: flex;
+      white-space: nowrap;
+      width: max-content;
+      user-select: none;
+    }
+
+    .track-left {
+      animation: runMarqueeLeft 50s linear infinite;
+    }
+
+    .track-right {
+      animation: runMarqueeRight 55s linear infinite;
+    }
+
+    .marquee-text {
+      font-family: var(--font-display-refined);
+      font-size: clamp(80px, 14vw, 180px);
+      font-weight: 600;
+      letter-spacing: 4px;
+      line-height: 0.9;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--color-bone);
+      text-transform: uppercase;
+      margin-right: 64px;
+    }
+
+    @keyframes runMarqueeLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes runMarqueeRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    /* CENTERPIECE ATHLETE (THE PLAYER WITH WHITE SUNGLASSES) */
+    .hero-athlete-portrait-wrap {
+      position: relative;
+      width: min(95%, 1150px);
+      height: clamp(520px, 78vh, 880px);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .hero-athlete-img {
+      position: relative;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: bottom center;
+      filter: drop-shadow(0 25px 70px rgba(0, 0, 0, 0.98));
+      -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+    }
+
+    /* DUAL EDITORIAL FLANKERS (JJETTAS LAYOUT) */
+    .hero-flankers-container {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 1420px;
+      margin: 0 auto;
+      pointer-events: none;
+      z-index: 5;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 clamp(20px, 4vw, 60px) 70px clamp(20px, 4vw, 60px);
+    }
+
+    .hero-flanker-left {
+      pointer-events: auto;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-flanker-right {
+      pointer-events: auto;
+      max-width: 360px;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: flex-end;
+    }
+
+    @media (max-width: 960px) {
+      .hero-flankers-container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 32px;
+        padding-bottom: 40px;
+      }
+      .hero-flanker-left, .hero-flanker-right {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    /* 3D HOLOGRAPHIC ROOKIE TRADING CARD */
+    .jj-card-perspective-stage {
+      perspective: 1500px;
+      width: 100%;
+    }
+
+    .jj-holo-card {
+      position: relative;
+      width: 195px;
+      aspect-ratio: 1036 / 1519;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--scale, 1));
+      transition: transform 0.15s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.25s ease;
+      background: var(--color-ink-card);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.15);
+    }
+
+    .jj-holo-card:hover {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--cyan-glow), 0 0 0 1.5px var(--lime);
+    }
+
+    .jj-holo-card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .jj-holo-prism {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        115deg,
+        rgba(255, 0, 128, 0.25) 0%,
+        rgba(0, 240, 255, 0.35) 30%,
+        rgba(204, 255, 0, 0.28) 60%,
+        rgba(138, 43, 226, 0.3) 100%
+      );
+      mix-blend-mode: color-dodge;
+      opacity: var(--foil-op, 0.2);
+      transition: opacity 0.25s ease;
+    }
+
+    .jj-holo-flare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        105deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.3) 48%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.3) 52%,
+        transparent 65%
+      );
+      background-size: 260% 100%;
+      background-position-x: calc(var(--mx, 0.5) * 100%);
+      mix-blend-mode: screen;
+      opacity: var(--flare-op, 0.15);
+      transition: opacity 0.25s ease;
+    }
+
+    .jj-holo-card:hover .jj-holo-prism { opacity: 0.85; }
+    .jj-holo-card:hover .jj-holo-flare { opacity: 0.95; }
+
+    .jj-card-caption {
+      font-size: 0.82rem;
+      color: var(--color-bone-muted);
+      line-height: 1.6;
+    }
+
+    .hero-editorial-statement {
+      font-family: var(--font-serif-luxury);
+      font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+      font-style: italic;
+      color: var(--color-bone);
+      line-height: 1.5;
+    }
+
+    .hero-btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 28px;
+      border-radius: 999px;
+      background: var(--color-bone);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(247, 244, 239, 0.2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hero-btn-cta:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      box-shadow: 0 14px 40px rgba(0, 240, 255, 0.35);
+    }
+
+    /* ==========================================================================
+       SIGNATURE MOMENTS STAGE (HORIZONTAL FLUID TRACK WITH YARDLINES)
+       ========================================================================== */
+    .signature-moments-stage {
+      position: relative;
+      background: var(--color-ink);
+      border-top: 1px solid var(--color-bone-subtle);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      padding: 90px 0;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .signature-moments-header {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4.5vw, 64px) 36px clamp(20px, 4.5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .signature-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+
+    .signature-headline {
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.4rem, 5.5vw, 5rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-bone);
+    }
+
+    .yardlines-bar {
+      width: 100%;
+      height: 70px;
+      border-top: 1px solid var(--color-bone-subtle);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(20px, 4vw, 80px);
+      user-select: none;
+      margin-bottom: 48px;
+      opacity: 0.45;
+    }
+
+    .yard-num {
+      font-family: var(--font-display-refined);
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--color-bone);
+    }
+
+    .yard-tick {
+      width: 1.5px;
+      height: 16px;
+      background: var(--color-bone);
+    }
+
+    .moments-cards-track-wrap {
+      width: 100%;
+      overflow-x: auto;
+      padding: 20px clamp(20px, 4.5vw, 64px) 40px clamp(20px, 4.5vw, 64px);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      scrollbar-color: var(--cyan) rgba(255, 255, 255, 0.05);
+    }
+
+    .moments-cards-track {
+      display: flex;
+      gap: 32px;
+      width: max-content;
+    }
+
+    .moment-card-box {
+      width: 350px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .moment-trading-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1036 / 1519;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--color-ink-card);
+      transform-style: preserve-3d;
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) scale(var(--scale, 1));
+      transition: transform 0.15s ease-out, box-shadow 0.25s ease;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.14);
+    }
+
+    .moment-trading-card:hover {
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9), 0 0 40px var(--cyan-glow), 0 0 0 1.5px var(--lime);
+    }
+
+    .moment-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .moment-trading-card:hover .moment-img {
+      transform: scale(1.05);
+    }
+
+    .moment-info-dock {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .moment-tag-label {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--lime);
+      text-transform: uppercase;
+    }
+
+    .moment-title-text {
+      font-family: var(--font-display-refined);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-bone);
+    }
+
+    .moment-desc-text {
+      font-size: 0.88rem;
+      color: var(--color-bone-muted);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       PARTNERSHIPS STAGE (WITH INFINITE TRANSITIONAL LOGOS CAROUSEL)
+       ========================================================================== */
+    .partnerships-stage {
+      position: relative;
+      padding: clamp(90px, 12vw, 150px) 0;
+      background: var(--color-ink-deep);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .partnerships-inner {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4.5vw, 64px);
+    }
+
+    .partnerships-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .partnerships-supertitle {
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--color-bone);
+      margin-bottom: 16px;
+    }
+
+    .partnerships-sublead {
+      font-family: var(--font-serif-luxury);
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--color-bone-muted);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* INFINITE TRANSITIONAL LOGO CAROUSEL */
+    .partners-carousel-viewport {
+      width: 100%;
+      overflow: hidden;
+      padding: 30px 0;
+      margin-bottom: 64px;
+      mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+    }
+
+    .partners-carousel-track {
+      display: flex;
+      gap: 40px;
+      width: max-content;
+      animation: carouselScroll 28s linear infinite;
+    }
+
+    .partners-carousel-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes carouselScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .carousel-partner-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px 32px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--color-bone-subtle);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .carousel-partner-item:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 240, 255, 0.15);
+    }
+
+    .carousel-partner-img {
+      height: 48px;
+      width: auto;
+      max-width: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+    }
+
+    .carousel-partner-name {
+      font-family: var(--font-display-refined);
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+    }
+
+    /* PARTNERS DETAILED GRID BELOW CAROUSEL */
+    .partners-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 28px;
+    }
+
+    .partner-detail-card {
+      background: var(--color-ink);
+      border: 1px solid var(--color-bone-subtle);
+      border-radius: 18px;
+      padding: 34px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .partner-detail-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--lime);
+      box-shadow: 0 20px 45px rgba(204, 255, 0, 0.12);
+    }
+
+    .partner-card-header {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin-bottom: 20px;
+    }
+
+    .partner-card-logo-img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.12));
+    }
+
+    .partner-card-titles h3 {
+      font-family: var(--font-display-refined);
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+    }
+
+    .partner-card-titles span {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--cyan);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .partner-card-desc {
+      font-size: 0.9rem;
+      color: var(--color-bone-muted);
+      line-height: 1.6;
+    }
+
+    .partner-category-badge {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 20px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--color-bone-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--color-bone);
+      letter-spacing: 1px;
+    }
+
+    /* ==========================================================================
+       QUOTE MANIFESTO SECTION
+       ========================================================================== */
+    .quote-manifesto-stage {
+      position: relative;
+      padding: 120px clamp(20px, 4.5vw, 64px);
+      background: var(--color-ink);
+      text-align: center;
+      border-bottom: 1px solid var(--color-bone-subtle);
+      z-index: 10;
+    }
+
+    .quote-manifesto-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .quote-text-large {
+      font-family: var(--font-serif-luxury);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.3;
+      color: var(--color-bone);
+      margin-bottom: 28px;
+    }
+
+    .quote-text-large span {
+      color: var(--cyan);
+      font-style: normal;
+    }
+
+    .quote-author-tag {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      letter-spacing: 4px;
+      color: var(--lime);
+      text-transform: uppercase;
+    }
+
+    /* ==========================================================================
+       COMPLETE 78-PHOTO BIO GENETICS ARCHIVE
+       ========================================================================== */
+    .archive-stage {
+      position: relative;
+      padding: clamp(80px, 10vw, 130px) clamp(20px, 4.5vw, 64px);
+      z-index: 10;
+    }
+
+    .archive-inner {
+      max-width: 1420px;
+      margin: 0 auto;
+    }
+
+    .archive-bar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+
+    .archive-title-h2 {
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--color-bone);
+    }
+
+    .archive-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .archive-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--color-bone-subtle);
+      color: var(--color-bone-muted);
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .archive-pill:hover {
+      border-color: var(--cyan);
+      color: var(--color-bone);
+    }
+
+    .archive-pill.active {
+      background: var(--cyan);
+      border-color: var(--cyan);
+      color: #000;
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .archive-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .archive-card-item {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--color-ink-card);
+      border: 1px solid var(--color-bone-subtle);
+      cursor: pointer;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .archive-card-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--lime);
+    }
+
+    .archive-card-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .archive-card-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .archive-item-dock {
+      position: absolute;
+      bottom: 0; left: 0; width: 100%;
+      padding: 16px;
+      background: linear-gradient(to top, rgba(6, 5, 9, 0.95) 0%, rgba(6, 5, 9, 0.5) 75%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .archive-item-info h4 {
+      font-family: var(--font-display-refined);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--color-bone);
+      text-transform: uppercase;
+    }
+
+    .archive-item-info span {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--cyan);
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* ==========================================================================
+       MAKE-A-PLAY / FOOTER STAGE
+       ========================================================================== */
+    .make-a-play-stage {
+      position: relative;
+      padding: clamp(90px, 12vw, 160px) clamp(20px, 4.5vw, 64px);
+      background: linear-gradient(180deg, var(--color-ink) 0%, var(--color-ink-deep) 100%);
+      border-top: 1px solid var(--color-bone-subtle);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .make-a-play-headline {
+      font-family: var(--font-display-refined);
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: 1;
+      color: var(--color-bone);
+      margin-bottom: 24px;
+    }
+
+    .make-a-play-headline span {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px var(--color-bone);
+      margin-top: 8px;
+    }
+
+    .make-a-play-desc {
+      font-size: 1.1rem;
+      color: var(--color-bone-muted);
+      max-width: 640px;
+      margin: 0 auto 40px auto;
+      line-height: 1.6;
+    }
+
+    .make-a-play-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 44px;
+      border-radius: 999px;
+      background: var(--lime);
+      color: #000;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      box-shadow: 0 0 35px var(--lime-glow);
+      transition: all 0.25s ease;
+    }
+
+    .make-a-play-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 0 55px rgba(204, 255, 0, 0.7);
+    }
+
+    /* LIGHTBOX MODAL */
+    .lightbox-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(6, 5, 9, 0.95);
+      backdrop-filter: blur(24px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 0 1px var(--color-bone-subtle);
+    }
+
+    .lightbox-dock {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -48px;
+      right: 0;
+      background: transparent;
+      border: none;
+      color: var(--color-bone);
+      font-size: 2.2rem;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid var(--color-bone-subtle);
+      padding: 44px clamp(20px, 4.5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--color-bone-muted);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       SCROLLTIDE 3D IMAGE TUNNEL (#c-image-tunnel)
+       "An endless CSS 3D corridor with pictures hung on all four walls and a fine wireframe,
+       gliding toward you forever. Click to stop it, hold to rush ahead; it turns slightly toward the pointer."
+       ========================================================================== */
+    .image-tunnel-stage {
+      position: relative;
+      width: 100%;
+      min-height: 92vh;
+      background: #020307;
+      overflow: hidden;
+      border-top: 1px solid var(--color-bone-subtle);
+      border-bottom: 1px solid var(--color-bone-subtle);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+    }
+
+    .tunnel-header-bar {
+      position: absolute;
+      top: 24px;
+      left: 0;
+      right: 0;
+      padding: 0 clamp(20px, 4.5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      z-index: 30;
+      pointer-events: none;
+    }
+
+    .tunnel-header-left, .tunnel-header-right {
+      pointer-events: auto;
+    }
+
+    .tunnel-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      color: var(--cyan);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tunnel-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--cyan);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--cyan);
+      animation: pulseDot 1.8s infinite;
+    }
+
+    .tunnel-headline {
+      font-family: var(--font-display-refined);
+      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--color-bone);
+      margin-top: 4px;
+      line-height: 1.1;
+    }
+
+    .tunnel-subheadline {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--color-bone-muted);
+      margin-top: 6px;
+      max-width: 500px;
+    }
+
+    /* 3D SCENE PERSPECTIVE VIEWPORT */
+    .tunnel-scene-viewport {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      perspective: 750px;
+      perspective-origin: 50% 50%;
+      overflow: hidden;
+      cursor: grab;
+    }
+
+    .tunnel-scene-viewport:active {
+      cursor: grabbing;
+    }
+
+    /* VANISHING POINT HORIZON GLOW */
+    .tunnel-vanishing-point {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 320px;
+      height: 320px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.45) 0%, rgba(204, 255, 0, 0.12) 30%, rgba(0, 229, 255, 0.04) 55%, transparent 75%);
+      filter: blur(20px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .tunnel-reticle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 44px;
+      height: 44px;
+      transform: translate(-50%, -50%);
+      border: 1px dashed rgba(0, 229, 255, 0.4);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 2;
+      animation: spinReticle 24s linear infinite;
+    }
+
+    .tunnel-reticle::before, .tunnel-reticle::after {
+      content: '';
+      position: absolute;
+      background: var(--cyan);
+    }
+    .tunnel-reticle::before { top: 50%; left: -6px; right: -6px; height: 1px; transform: translateY(-50%); }
+    .tunnel-reticle::after { left: 50%; top: -6px; bottom: -6px; width: 1px; transform: translateX(-50%); }
+
+    @keyframes spinReticle {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* 3D CORRIDOR RIG */
+    .tunnel-corridor-rig {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    /* TUNNEL SEGMENT (REPEATING SECTION ALONG Z-AXIS) */
+    .tunnel-segment {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      transform-style: preserve-3d;
+    }
+
+    /* THE FOUR WALLS */
+    .tunnel-wall {
+      position: absolute;
+      box-sizing: border-box;
+      background-color: rgba(4, 6, 12, 0.82);
+      background-image: 
+        linear-gradient(to right, rgba(0, 229, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 229, 255, 0.08) 1px, transparent 1px);
+      background-size: 80px 80px;
+      border: 1px solid rgba(0, 229, 255, 0.15);
+      backface-visibility: visible;
+      transform-style: preserve-3d;
+    }
+
+    /* LEFT WALL */
+    .wall-left {
+      width: 1200px;
+      height: 600px;
+      left: -420px;
+      top: -300px;
+      transform-origin: left center;
+      transform: rotateY(90deg);
+      border-right: 1.5px solid rgba(0, 229, 255, 0.3);
+    }
+
+    /* RIGHT WALL */
+    .wall-right {
+      width: 1200px;
+      height: 600px;
+      right: -420px;
+      top: -300px;
+      transform-origin: right center;
+      transform: rotateY(-90deg);
+      border-left: 1.5px solid rgba(0, 229, 255, 0.3);
+    }
+
+    /* CEILING (TOP WALL) */
+    .wall-ceiling {
+      width: 840px;
+      height: 1200px;
+      left: -420px;
+      top: -300px;
+      transform-origin: center top;
+      transform: rotateX(-90deg);
+      border-bottom: 1.5px solid rgba(0, 229, 255, 0.25);
+    }
+
+    /* FLOOR (BOTTOM WALL) */
+    .wall-floor {
+      width: 840px;
+      height: 1200px;
+      left: -420px;
+      bottom: -300px;
+      transform-origin: center bottom;
+      transform: rotateX(90deg);
+      border-top: 1.5px solid rgba(204, 255, 0, 0.3);
+      background-image: 
+        linear-gradient(to right, rgba(204, 255, 0, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(204, 255, 0, 0.07) 1px, transparent 1px);
+    }
+
+    /* HUNG PICTURE FRAMES */
+    .tunnel-frame {
+      position: absolute;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 255, 255, 0.16);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      background: #080c14;
+      pointer-events: auto;
+    }
+
+    .tunnel-frame:hover {
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.95), 0 0 28px var(--cyan-glow), 0 0 0 2px var(--lime);
+      transform: translateZ(28px) scale(1.04);
+      z-index: 50;
+    }
+
+    .tunnel-frame-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    .tunnel-frame:hover .tunnel-frame-img {
+      filter: brightness(1.15) contrast(1.08);
+    }
+
+    .tunnel-frame-hud {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, transparent 60%);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    .tunnel-frame:hover .tunnel-frame-hud {
+      opacity: 1;
+    }
+
+    .tunnel-frame-title {
+      font-family: var(--font-display-refined);
+      font-size: 0.74rem;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .tunnel-frame-tag {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    /* MOTION BLUR & WARP SPEED LINES (ACTIVE WHEN HOLDING) */
+    .tunnel-warp-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: radial-gradient(circle at center, transparent 30%, rgba(0, 229, 255, 0.08) 70%, rgba(0, 229, 255, 0.22) 100%);
+      mix-blend-mode: screen;
+      z-index: 10;
+    }
+
+    .tunnel-warp-active .tunnel-warp-overlay {
+      opacity: 1;
+    }
+
+    /* BOTTOM CONTROLS HUD */
+    .tunnel-hud-bottom {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      padding: 0 clamp(20px, 4.5vw, 64px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      z-index: 30;
+      pointer-events: none;
+    }
+
+    .tunnel-hud-group {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .tunnel-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--color-bone-subtle);
+      color: var(--color-bone);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .tunnel-pill-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--cyan);
+      box-shadow: 0 0 16px var(--cyan-glow);
+    }
+
+    .tunnel-pill-btn.active {
+      background: var(--cyan);
+      color: #000;
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px var(--cyan-glow);
+    }
+
+    .tunnel-pill-rush {
+      background: rgba(204, 255, 0, 0.12);
+      border-color: rgba(204, 255, 0, 0.35);
+      color: var(--lime);
+    }
+
+    .tunnel-pill-rush:hover, .tunnel-warp-active .tunnel-pill-rush {
+      background: var(--lime);
+      color: #000;
+      box-shadow: 0 0 24px var(--lime-glow);
+    }
+
+    .tunnel-status-readout {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--color-bone-muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: rgba(6, 5, 9, 0.7);
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--color-bone-subtle);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- JJ PEBBLE OVERLAY -->
+  <div class="jj-pebble-overlay"></div>
+
+  <!-- LOADER SCREEN -->
+  <div class="jj-loader-screen" id="jj-loader">
+    <div class="jj-loader-mark">
+      <img src="assets/CAPTOORA_FAVICON_512x512.png" alt="Captoora Emblem" class="jj-loader-logo">
+      <div class="jj-loader-counter" id="loader-counter">0%</div>
+    </div>
+  </div>
+
+  <!-- TOP FIXED NAVIGATION WITH CENTERED TRANSPARENT CAPTOORA LOGO -->
+  <header class="jj-site-nav">
+    <nav class="nav-left-links">
+      <a href="#signature-moments" class="nav-link-refined">Signature Moments</a>
+      <a href="#image-tunnel" class="nav-link-refined" style="color: var(--cyan);">3D Tunnel</a>
+      <a href="#partnerships" class="nav-link-refined">Partnerships</a>
+      <a href="#archive" class="nav-link-refined">Archivo</a>
+    </nav>
+
+    <!-- CENTERED CAPTOORA EMBLEM & ELEGANT TYPOGRAPHY UNDERNEATH -->
+    <a href="#" class="brand-centered-lockup">
+      <img src="assets/CAPTOORA_FAVICON_512x512.png" alt="Captoora Emblem" class="brand-logo-img">
+      <span class="brand-title-decent">CAPTOORA</span>
+      <span class="brand-subtitle-decent">ESTUDIO FOTOGRÁFICO // SPORTS</span>
+    </a>
+
+    <div class="nav-right-actions">
+      <a href="https://captoora.studio/captoora_hub.html" class="nav-link-refined">Hub</a>
+      <a href="https://galeria.captoora.studio" target="_blank" rel="noopener noreferrer" class="nav-link-refined" style="color: var(--cyan);">Galerías</a>
+      <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20cotizar%20cobertura%20deportiva" target="_blank" class="nav-cta-pill">
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO EDITORIAL STAGE (REAL FOOTBALL TOUCHDOWN RUN VIDEO + ATHLETE WITH SUNGLASSES) -->
+    <section class="hero-editorial-stage">
+      <!-- GENERIC FOOTBALL TOUCHDOWN RUN VIDEO LOOP -->
+      <video class="hero-video-bg" autoplay loop muted playsinline preload="auto">
+        <source src="assets/video/football_run_touchdown.mp4" type="video/mp4">
+      </video>
+
+      <!-- DARK VIGNETTE OVERLAY -->
+      <div class="hero-vignette"></div>
+
+      <!-- KINETIC MARQUEE RUNNERS -->
+      <div class="hero-marquees" aria-hidden="true">
+        <div class="marquee-track track-left">
+          <span class="marquee-text">CAPTOORA SPORTS · COURTSIDE ACTION · 1/1000s HIGH SPEED · BIO GENETICS ·</span>
+          <span class="marquee-text">CAPTOORA SPORTS · COURTSIDE ACTION · 1/1000s HIGH SPEED · BIO GENETICS ·</span>
+        </div>
+        <div class="marquee-track track-right">
+          <span class="marquee-text">MONTERREY · ARENA CDMX · BORREGOS TEC · TOROS AMERICANO ·</span>
+          <span class="marquee-text">MONTERREY · ARENA CDMX · BORREGOS TEC · TOROS AMERICANO ·</span>
+        </div>
+      </div>
+
+      <!-- CENTERPIECE ATHLETE (THE PLAYER WITH WHITE SUNGLASSES & RED #11 JERSEY) -->
+      <div class="hero-athlete-portrait-wrap">
+        <img src="assets/hero-portrait.png" alt="Athlete with Visor Sunglasses and Jersey #11" class="hero-athlete-img">
+      </div>
+
+      <!-- DUAL EDITORIAL FLANKERS -->
+      <div class="hero-flankers-container">
+        <!-- LEFT FLANKER: 3D HOLOGRAPHIC ROOKIE TRADING CARD -->
+        <div class="hero-flanker-left">
+          <div class="jj-card-perspective-stage">
+            <div class="jj-holo-card" id="hero-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.44.25.png', 'Potros Campeón Invicto #11', 'Visor Blanco & Césped · 1/1000s f/2.8 · Holo Edition 01')">
+              <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.44.25.png" alt="Rookie Trading Card" class="jj-holo-card-img">
+              <div class="jj-holo-prism"></div>
+              <div class="jj-holo-flare"></div>
+            </div>
+          </div>
+          <p class="jj-card-caption">
+            <strong>Potros Campeón Invicto #11</strong> — La tarjeta coleccionable que inmortalizó el campeonato con lentes de velocidad y postura implacable.
+          </p>
+        </div>
+
+        <!-- RIGHT FLANKER: EDITORIAL STATEMENT -->
+        <div class="hero-flanker-right">
+          <p class="hero-editorial-statement">
+            "Desde San Jerónimo, Monterrey hasta la duela de Arena CDMX. Cada disparo lleva la velocidad quirúrgica y la historia que no se ve desde las gradas."
+          </p>
+          <a href="#signature-moments" class="hero-btn-cta">
+            Ver Signature Moments &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE MOMENTS STAGE (STICKY HORIZONTAL YARDLINES SCROLLER) -->
+    <section class="signature-moments-stage" id="signature-moments">
+      <div class="signature-moments-header">
+        <div>
+          <div class="signature-eyebrow">// SIGNATURE SERIES</div>
+          <h2 class="signature-headline">Signature Moments</h2>
+        </div>
+        <p style="color: var(--color-bone-muted); max-width: 440px; font-size: 0.95rem;">
+          Desliza horizontalmente a través de las yardas para explorar los momentos cumbre capturados con física holográfica 3D.
+        </p>
+      </div>
+
+      <!-- YARDLINES BAR -->
+      <div class="yardlines-bar" aria-hidden="true">
+        <span class="yard-num">10</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">20</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">30</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">40</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num" style="color: var(--cyan);">50</span>
+        <div class="yard-tick" style="background: var(--cyan);"></div>
+        <span class="yard-num">40</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">30</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">20</span>
+        <div class="yard-tick"></div>
+        <span class="yard-num">10</span>
+      </div>
+
+      <!-- HORIZONTAL CARDS TRACK -->
+      <div class="moments-cards-track-wrap">
+        <div class="moments-cards-track">
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.43.11.png', 'Humo Rojo y Corona Ganadora', 'El atleta con sombrero tejano y casco de combate, envuelto en humo cinemático. La firma indomable de Monterrey. · 1/1000s · f/2.8 · ISO 400')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.43.11.png" alt="Humo Rojo y Corona Ganadora" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #01 // POTROS INVICTOS</span>
+              <h3 class="moment-title-text">Humo Rojo y Corona Ganadora</h3>
+              <p class="moment-desc-text">El atleta con sombrero tejano y casco de combate, envuelto en humo cinemático. La firma indomable de Monterrey.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1000s · f/2.8 · ISO 400</span>
+            </div>
+          </div>
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.43.55.png', 'Colisión de Agua a 1/1250s', 'Gotas de agua suspendidas en el aire alrededor de las hombreras y guantes Jordan. Cero desenfoque de movimiento. · 1/1250s · f/2.8 · ISO 800')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.43.55.png" alt="Colisión de Agua a 1/1250s" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #02 // HYDRAULIC SPEED</span>
+              <h3 class="moment-title-text">Colisión de Agua a 1/1250s</h3>
+              <p class="moment-desc-text">Gotas de agua suspendidas en el aire alrededor de las hombreras y guantes Jordan. Cero desenfoque de movimiento.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1250s · f/2.8 · ISO 800</span>
+            </div>
+          </div>
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.42.48.png', 'Mirada de Acero en Casco', 'Retrato en blanco y negro de ultra alto contraste. La concentración del jugador a escasos segundos de salir al campo. · 1/1000s · f/2.8 · B&W Pro')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.42.48.png" alt="Mirada de Acero en Casco" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #03 // VISOR DE HIERRO</span>
+              <h3 class="moment-title-text">Mirada de Acero en Casco</h3>
+              <p class="moment-desc-text">Retrato en blanco y negro de ultra alto contraste. La concentración del jugador a escasos segundos de salir al campo.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1000s · f/2.8 · B&W Pro</span>
+            </div>
+          </div>
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.44.25.png', 'Lentes Futuristas & Césped', 'El atleta en reposo sobre el pasto con gafas de velocidad, casco Toros y jersey rojo #11. Pura actitud de campeonato. · 1/1000s · f/2.8 · Studio Void')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.44.25.png" alt="Lentes Futuristas & Césped" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #04 // COURTSIDE VISOR</span>
+              <h3 class="moment-title-text">Lentes Futuristas & Césped</h3>
+              <p class="moment-desc-text">El atleta en reposo sobre el pasto con gafas de velocidad, casco Toros y jersey rojo #11. Pura actitud de campeonato.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1000s · f/2.8 · Studio Void</span>
+            </div>
+          </div>
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.47.46.png', 'El Balón hacia la Lente', 'Perspectiva forzada con niebla densa. El balón extendido directamente al espectador con profundidad de campo quirúrgica. · 1/1000s · f/2.8 · Smoke Rig')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.47.46.png" alt="El Balón hacia la Lente" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #05 // THE GRIDIRON EXTENSION</span>
+              <h3 class="moment-title-text">El Balón hacia la Lente</h3>
+              <p class="moment-desc-text">Perspectiva forzada con niebla densa. El balón extendido directamente al espectador con profundidad de campo quirúrgica.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1000s · f/2.8 · Smoke Rig</span>
+            </div>
+          </div>
+
+          <div class="moment-card-box">
+            <div class="jj-card-perspective-stage">
+              <div class="moment-trading-card" onclick="openLightbox('assets/signature_moments/Screen Shot 2026-11-12 at 7.42.28.png', 'Escultura de Luz de Duela', 'Iluminación de recorte lateral en fondo negro absoluto. El uniforme y los detalles de las costuras resaltan con nitidez máxima. · 1/1000s · f/2.8 · Rim Light')">
+                <img src="assets/signature_moments/Screen Shot 2026-11-12 at 7.42.28.png" alt="Escultura de Luz de Duela" class="moment-img" loading="lazy">
+                <div class="jj-holo-prism"></div>
+                <div class="jj-holo-flare"></div>
+              </div>
+            </div>
+            <div class="moment-info-dock">
+              <span class="moment-tag-label">MOMENT #06 // ARMADURA ROJA</span>
+              <h3 class="moment-title-text">Escultura de Luz de Duela</h3>
+              <p class="moment-desc-text">Iluminación de recorte lateral en fondo negro absoluto. El uniforme y los detalles de las costuras resaltan con nitidez máxima.</p>
+              <span style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--cyan);">1/1000s · f/2.8 · Rim Light</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERSHIPS STAGE (OFFICIAL TRANSPARENT LOGOS CAROUSEL + DETAIL CARDS) -->
+    <section class="partnerships-stage" id="partnerships">
+      <div class="partnerships-inner">
+        <div class="partnerships-header">
+          <h2 class="partnerships-supertitle">Partnerships</h2>
+          <p class="partnerships-sublead">
+            Colaboraciones oficiales, cobertura de alto rendimiento y alianzas estratégicas con franquicias deportivas, instituciones académicas y marcas de prestigio.
+          </p>
+        </div>
+      </div>
+
+      <!-- INFINITE TRANSITIONAL LOGOS CAROUSEL -->
+      <div class="partners-carousel-viewport">
+        <div class="partners-carousel-track">
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Club Tigres UANL</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Borregos Tec de Monterrey</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Toros de San Nicolás</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">FARMASI Nutriplus</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">MANTAMAR Luxury Resort</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Multimedios Televisión</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Club Tigres UANL</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Borregos Tec de Monterrey</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Toros de San Nicolás</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">FARMASI Nutriplus</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">MANTAMAR Luxury Resort</span>
+          </div>
+
+          <div class="carousel-partner-item">
+            <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="carousel-partner-img">
+            <span class="carousel-partner-name">Multimedios Televisión</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="partnerships-inner">
+        <!-- DETAILED PARTNERS GRID BELOW CAROUSEL -->
+        <div class="partners-detail-grid">
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/tigres_uanl_transparent.svg" alt="Club Tigres UANL Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>Club Tigres UANL</h3>
+                  <span>San Nicolás de los Garza // Liga MX</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Cobertura de velocidad pura, duelos aéreos y pasión auriazul en el Estadio Universitario (El Volcán).</p>
+            </div>
+            <span class="partner-category-badge">Fútbol Profesional</span>
+          </div>
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/borregos_tec_transparent.png" alt="Borregos Tec de Monterrey Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>Borregos Tec de Monterrey</h3>
+                  <span>Campus Monterrey // ONEFA & Liga ABE</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Fotografía oficial de emparrillado en Estadio Banorte y duela de básquetbol División 1.</p>
+            </div>
+            <span class="partner-category-badge">Deporte Colegial de Élite</span>
+          </div>
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/toros_san_nicolas.svg" alt="Toros de San Nicolás Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>Toros de San Nicolás</h3>
+                  <span>San Nicolás de los Garza // MFL Football</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Impacto a ras de césped, tacleadas en línea de golpeo y coberturas completas de temporada invicta.</p>
+            </div>
+            <span class="partner-category-badge">Fútbol Americano Juvenil & Pro</span>
+          </div>
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/farmasi_transparent.png" alt="FARMASI Nutriplus Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>FARMASI Nutriplus</h3>
+                  <span>Nutrición, Bienestar & Suplementos</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Alianzas de nutrición, suplementación biomecánica y cobertura visual de eventos de bienestar.</p>
+            </div>
+            <span class="partner-category-badge">Rendimiento y Salud Deportiva</span>
+          </div>
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/mantamar.svg" alt="MANTAMAR Luxury Resort Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>MANTAMAR Luxury Resort</h3>
+                  <span>Beach Club & Luxury Hotel // Puerto Vallarta</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Producción fotográfica de estilo de vida de lujo, estética atlética y experiencias costeras de alto nivel.</p>
+            </div>
+            <span class="partner-category-badge">Hospitalidad & Alto Estilo</span>
+          </div>
+
+          <div class="partner-detail-card">
+            <div>
+              <div class="partner-card-header">
+                <img src="assets/logos_partnerships/multimedios_telediario.svg" alt="Multimedios Televisión Logo Oficial" class="partner-card-logo-img">
+                <div class="partner-card-titles">
+                  <h3>Multimedios Televisión</h3>
+                  <span>Telediario Deportes // Canal 6 Monterrey</span>
+                </div>
+              </div>
+              <p class="partner-card-desc">Suministro de material gráfico de alta velocidad para emisiones en vivo, noticieros estelares y coberturas.</p>
+            </div>
+            <span class="partner-category-badge">Medios de Comunicación & TV</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE & EDITORIAL MANIFESTO -->
+    <section class="quote-manifesto-stage">
+      <div class="quote-manifesto-inner">
+        <p class="quote-text-large">
+          "Quiero que nos recuerden por más que un clic de cámara — <span>congelamos el alma y la velocidad</span> del atleta de élite."
+        </p>
+        <div class="quote-author-tag">
+          // CAPTOORA STUDIO · SAN JERÓNIMO, MONTERREY & ARENA CDMX
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         SCROLLTIDE 3D IMAGE TUNNEL STAGE (#c-image-tunnel / FLOW TUNNEL)
+         ========================================================================== -->
+    <section class="image-tunnel-stage" id="image-tunnel">
+      <!-- TOP HUD BAR -->
+      <div class="tunnel-header-bar">
+        <div class="tunnel-header-left">
+          <div class="tunnel-eyebrow">// 3D IMMERSIVE EXPERIENCE · SCROLLTIDE FLOW</div>
+          <h2 class="tunnel-headline">The Sports Action Tunnel</h2>
+          <p class="tunnel-subheadline">
+            Un corredor infinito en 3D que vuela hacia un punto de fuga iluminado. Haz clic para detenerte, mantén presionado para acelerar a velocidad warp, y mueve el cursor para girar la perspectiva.
+          </p>
+        </div>
+
+        <div class="tunnel-header-right">
+          <a href="#archive" class="tunnel-pill-btn">
+            ▦ Ver Cuadrícula &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- 3D PERSPECTIVE VIEWPORT -->
+      <div class="tunnel-scene-viewport" id="tunnel-viewport">
+        <!-- VANISHING POINT HORIZON -->
+        <div class="tunnel-vanishing-point"></div>
+        <div class="tunnel-reticle"></div>
+
+        <!-- 3D RIG CARRIER -->
+        <div class="tunnel-corridor-rig" id="tunnel-rig">
+          <!-- Dynamically generated 3D segments and wall frames -->
+        </div>
+
+        <!-- WARP SPEED OVERLAY -->
+        <div class="tunnel-warp-overlay" id="tunnel-warp-overlay"></div>
+      </div>
+
+      <!-- BOTTOM CONTROLS HUD -->
+      <div class="tunnel-hud-bottom">
+        <div class="tunnel-hud-group">
+          <button class="tunnel-pill-btn" id="btn-tunnel-pause" onclick="toggleTunnelPause()">
+            <span id="tunnel-pause-icon">⏸️</span> <span id="tunnel-pause-label">Pausar</span>
+          </button>
+          <button class="tunnel-pill-btn tunnel-pill-rush" id="btn-tunnel-rush" onmousedown="startRush()" onmouseup="stopRush()" onmouseleave="stopRush()" ontouchstart="startRush()" ontouchend="stopRush()">
+            ⚡ Mantén: Rush Ahead
+          </button>
+          <button class="tunnel-pill-btn" onclick="reverseTunnelDirection()">
+            🔄 Invertir
+          </button>
+        </div>
+
+        <div class="tunnel-hud-group">
+          <div class="tunnel-status-readout" id="tunnel-status">
+            CRUCERO: <span style="color: var(--cyan);">1.0X</span> · 78 DISPAROS
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE 78-PHOTO BIO GENETICS ARCHIVE -->
+    <section class="archive-stage" id="archive">
+      <div class="archive-inner">
+        <div class="archive-bar-flex">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 2px; color: var(--lime); margin-bottom: 8px;">// REPOSITORIO AUTORIZADO</div>
+            <h2 class="archive-title-h2">El Archivo Completo (78)</h2>
+          </div>
+
+          <!-- DYNAMIC FILTER BUTTONS -->
+          <div class="archive-filters">
+            <button class="archive-pill active" onclick="filterArchive('all', this)">Todos (78)</button>
+            <button class="archive-pill" onclick="filterArchive('toros', this)">Toros Americano (21)</button>
+            <button class="archive-pill" onclick="filterArchive('tec', this)">Borregos Tec (16)</button>
+            <button class="archive-pill" onclick="filterArchive('soccer', this)">Soccer Pro (12)</button>
+            <button class="archive-pill" onclick="filterArchive('nidos', this)">Nidos Colinas (12)</button>
+            <button class="archive-pill" onclick="filterArchive('football', this)">Fútbol Americano (7)</button>
+            <button class="archive-pill" onclick="filterArchive('sports', this)">Atletas & Fitness (5)</button>
+            <button class="archive-pill" onclick="filterArchive('cheer', this)">Acrobacia & Porras (5)</button>
+          </div>
+        </div>
+
+        <div class="archive-photo-grid" id="archive-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- MAKE-A-PLAY / FINALE STAGE -->
+    <section class="make-a-play-stage">
+      <div style="max-width: 900px; margin: 0 auto;">
+        <h2 class="make-a-play-headline">
+          RECORDS WERE MADE
+          <span>TO BE BROKEN</span>
+        </h2>
+        <p class="make-a-play-desc">
+          Disponible para acreditaciones courtside NBA G League, LNBP, torneos nacionales ONEFA y producciones de marca de alta velocidad.
+        </p>
+        <a href="https://wa.me/528140050088?text=Hola%20Captoora%2C%20quiero%20agendar%20cobertura%20deportiva%20profesional" target="_blank" class="make-a-play-cta">
+          Contactar por WhatsApp &rarr;
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox(event)">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+      <img src="" id="lightbox-img" alt="Foto Ampliada" class="lightbox-img">
+      <div class="lightbox-dock">
+        <div>
+          <strong id="lightbox-title" style="color: var(--color-bone); font-family: var(--font-display-refined); font-size: 1.15rem; text-transform: uppercase;"></strong>
+          <p id="lightbox-desc" style="color: var(--cyan); font-family: var(--font-mono); font-size: 0.8rem; margin-top: 4px;"></p>
+        </div>
+        <a id="lightbox-wa-btn" href="#" target="_blank" style="padding: 10px 24px; border-radius: 999px; background: var(--lime); color: #000; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; text-decoration: none;">
+          Cotizar Toma en WhatsApp &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <strong style="color: var(--color-bone);">JESÚS GUTIÉRREZ · CAPTOORA STUDIO</strong>
+      <p style="margin-top: 4px; opacity: 0.65;">Av. Paseo de los Álamos 165, Colinas de San Jerónimo, Monterrey, N.L. · Lunes a domingo, 8:00 AM a 11:00 PM</p>
+    </div>
+    <div style="text-align: right;">
+      <span style="color: var(--cyan);">WhatsApp: +52 81 4005 0088 · chuy@captoora.studio</span>
+      <p style="margin-top: 4px; opacity: 0.7;">
+        <a href="https://captoora.studio/sports" style="color: inherit; text-decoration: none;">captoora.studio/sports</a> ·
+        <a href="https://galeria.captoora.studio" style="color: inherit; text-decoration: none;" target="_blank" rel="noopener">galeria.captoora.studio</a> ·
+        <a href="https://instagram.com/captoora.studio" style="color: inherit; text-decoration: none;" target="_blank" rel="noopener">@captoora.studio</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ANTIGRAVITY DANCING CONSTELLATION PARTICLES SCRIPT -->
+  <script src="assets/js/antigravity-halo-cursor.js"></script>
+
+  <script>
+    // 78 AUTHORIZED HIGH-SPEED PHOTOS MANIFEST
+    const PORTFOLIO_DATA = [{"src": "assets/portfolio/toros/676704073_1479726187278408_3571250205910652904_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #01", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677644373_1479726513945042_2013935375144154777_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #02", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677708515_1479725427278484_5852371895596882984_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #03", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/677738259_1479725460611814_1925484060004680783_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #04", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/678182162_1479726390611721_1041437285977639823_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #05", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679032001_1479725397278487_1778779679956027721_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #06", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679355354_1479726220611738_5123412448722861594_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #07", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679482366_1479726277278399_638955856787533988_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #08", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679546800_1479725997278427_4758216151910064887_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #09", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679696619_1479725777278449_4932572657458311860_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #10", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/679997578_1479726313945062_2156854633067351568_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #11", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680108916_1479725297278497_7996712751285532717_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #12", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680159749_1479726467278380_5663217748501807034_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #13", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680213467_1479725177278509_6200865164776676250_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #14", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/680913372_1479725370611823_7857427391737919501_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #15", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/686309762_1487892973128396_3868545345411523833_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #16", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/686850558_1487892509795109_3820985867456060862_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #17", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/687040771_1487892376461789_8355474222589097343_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #18", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/688819878_1487892649795095_4700011729839992034_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #19", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/689016181_1487892876461739_1812629713595802980_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #20", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/toros/689017760_1487893013128392_3712963149749542936_n.jpg", "category": "toros", "title": "Fútbol Americano Toros #21", "exif": "1/1000s · f/2.8 · Toros Pro", "sport": "Fútbol Americano Toros"}, {"src": "assets/portfolio/football/855502680_1699091181735389_7034572351783518089_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #01", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/855758154_1108959031534984_5768774677711228409_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #02", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/856573723_1119742207235109_8731702464069294673_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #03", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/856758745_1103549915411804_4727521283894208774_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #04", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/857903183_1797465984844351_173169939120361270_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #05", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/858073012_1785250692751583_6686968200130636931_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #06", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/football/858304559_1905666907072399_2767893787422264998_n.jpeg", "category": "football", "title": "Fútbol Americano Acción #07", "exif": "1/1000s · f/2.8 · Campo", "sport": "Fútbol Americano Acción"}, {"src": "assets/portfolio/tec/768145092_1070993905564137_1513861794575341866_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #01", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/768969703_1305211175024340_8307725908012634732_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #02", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/770609167_1064467706533654_1202849407051191142_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #03", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/772217945_1372901260903772_7417548735303576169_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #04", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/772840266_2283984202434096_1377683369381118596_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #05", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773209447_1043517221984592_2093275934461052880_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #06", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773403051_1598756012042882_5743022164566353534_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #07", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/773820969_1498337018978567_8314157241462720454_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #08", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/774042553_1548590752914350_774506131605767687_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #09", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/856541738_1411740047607853_3890008977788640504_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #10", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/857627166_1376091040988199_174100290534674604_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #11", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/857766639_1083992544632613_8937529420473652816_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #12", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/858381128_1806092637203035_6874152236326226085_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #13", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/858402572_1849296656489851_5827583528022263709_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #14", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/860336465_2617296365405412_5934298755636718878_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #15", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/tec/861128466_2097268267631854_6774852041908776207_n.jpeg", "category": "tec", "title": "Borregos Tec de Monterrey #16", "exif": "1/1000s · f/2.8 · Borregos", "sport": "Borregos Tec de Monterrey"}, {"src": "assets/portfolio/soccer/885451140_29181705734782347_8831359719326675937_n.jpeg", "category": "soccer", "title": "Soccer Profesional #01", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/894460907_2381487825988096_446495948368352994_n.jpeg", "category": "soccer", "title": "Soccer Profesional #02", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/899586673_4441953739401806_7931847891125075556_n.jpeg", "category": "soccer", "title": "Soccer Profesional #03", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/901372616_1480737527303547_3659607846776129579_n.jpeg", "category": "soccer", "title": "Soccer Profesional #04", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/902005588_1376463047707876_6199171546584619212_n.jpeg", "category": "soccer", "title": "Soccer Profesional #05", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/902045737_2278770549370725_2831775999497768946_n.jpeg", "category": "soccer", "title": "Soccer Profesional #06", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903424327_4676146702635836_8928731957007542516_n.jpeg", "category": "soccer", "title": "Soccer Profesional #07", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903424555_2191611561435339_4966008600155840142_n.jpeg", "category": "soccer", "title": "Soccer Profesional #08", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903439407_1856658052008099_3056953155906166379_n.jpeg", "category": "soccer", "title": "Soccer Profesional #09", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903697778_1859229231754405_754701717164378651_n.jpeg", "category": "soccer", "title": "Soccer Profesional #10", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/903701785_3117857935234538_1461484447841871997_n.jpeg", "category": "soccer", "title": "Soccer Profesional #11", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/soccer/904220793_1115688038115108_2314397900334641541_n.jpeg", "category": "soccer", "title": "Soccer Profesional #12", "exif": "1/1250s · f/2.8 · Velocidad", "sport": "Soccer Profesional"}, {"src": "assets/portfolio/sports/496000687_1341723721287948_8301822650273103516_n.jpg", "category": "sports", "title": "Atletas & Fitness #01", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497046863_1343142764479377_9109709224242277206_n.jpg", "category": "sports", "title": "Atletas & Fitness #02", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497230380_1343142761146044_3003690679777942792_n.jpg", "category": "sports", "title": "Atletas & Fitness #03", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497507226_1343142787812708_6277491493293629452_n.jpg", "category": "sports", "title": "Atletas & Fitness #04", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/sports/497576130_1343142781146042_3870341899245466729_n.jpg", "category": "sports", "title": "Atletas & Fitness #05", "exif": "1/800s · f/2.8 · Bio Genetics", "sport": "Atletas & Fitness"}, {"src": "assets/portfolio/cheer/855294486_2264275124158889_410146105259851496_n.jpeg", "category": "cheer", "title": "Animación & Porristas #01", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/855655058_1458095346386297_7735575010540799118_n.jpeg", "category": "cheer", "title": "Animación & Porristas #02", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/856911053_2630040657416605_1969096425608777617_n.jpeg", "category": "cheer", "title": "Animación & Porristas #03", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/857378097_29132204053058349_6679366774907787712_n.jpeg", "category": "cheer", "title": "Animación & Porristas #04", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/cheer/858366255_1344046794339036_550093106872114621_n.jpeg", "category": "cheer", "title": "Animación & Porristas #05", "exif": "1/1000s · f/2.8 · Acrobacia", "sport": "Animación & Porristas"}, {"src": "assets/portfolio/nidos/470215850_17956179929850613_8859799692486523034_n.jpg", "category": "nidos", "title": "Nidos Colinas #01", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480312433_590978247099800_8721015503281072349_n.jpg", "category": "nidos", "title": "Nidos Colinas #02", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480432327_590996427097982_1339764515609095699_n.jpg", "category": "nidos", "title": "Nidos Colinas #03", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480629167_590996420431316_7771585021352249142_n.jpg", "category": "nidos", "title": "Nidos Colinas #04", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480785230_597086143155677_5514808034673151394_n.jpg", "category": "nidos", "title": "Nidos Colinas #05", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480906721_597086083155683_2705458490996950253_n.jpg", "category": "nidos", "title": "Nidos Colinas #06", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/480916421_593857220145236_7727516625176960838_n.jpg", "category": "nidos", "title": "Nidos Colinas #07", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481007476_593856846811940_9211345882332971007_n.jpg", "category": "nidos", "title": "Nidos Colinas #08", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481153870_597086149822343_4827554235976732958_n.jpg", "category": "nidos", "title": "Nidos Colinas #09", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481192777_597086236489001_1159088362017179627_n.jpg", "category": "nidos", "title": "Nidos Colinas #10", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481237533_593857210145237_4172278252608781976_n.jpg", "category": "nidos", "title": "Nidos Colinas #11", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}, {"src": "assets/portfolio/nidos/481668079_597086306488994_9097893005352945634_n.jpg", "category": "nidos", "title": "Nidos Colinas #12", "exif": "1/1000s · f/2.8 · Liga Colinas", "sport": "Nidos Colinas"}];
+
+    // LOADER ANIMATION (0% to 100%)
+    let progress = 0;
+    const counterEl = document.getElementById('loader-counter');
+    const loaderEl = document.getElementById('jj-loader');
+
+    const loaderInterval = setInterval(() => {
+      progress += Math.floor(Math.random() * 8) + 4;
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(loaderInterval);
+        counterEl.innerText = '100%';
+        setTimeout(() => {
+          loaderEl.classList.add('loaded');
+        }, 300);
+      } else {
+        counterEl.innerText = `${progress}%`;
+      }
+    }, 45);
+
+    // 3D HOLOGRAPHIC TILT CONTROLLER
+    function initTiltEffect(card) {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        
+        const rx = -((y - cy) / cy) * 15;
+        const ry = ((x - cx) / cx) * 15;
+        const mx = x / rect.width;
+
+        card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+        card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+        card.style.setProperty('--mx', mx.toFixed(3));
+        card.style.setProperty('--scale', '1.04');
+        card.style.setProperty('--foil-op', '0.85');
+        card.style.setProperty('--flare-op', '0.9');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+        card.style.setProperty('--scale', '1');
+        card.style.setProperty('--foil-op', '0.2');
+        card.style.setProperty('--flare-op', '0.15');
+      });
+    }
+
+    document.querySelectorAll('.jj-holo-card, .moment-trading-card').forEach(initTiltEffect);
+
+    // ARCHIVE RENDERER
+    function renderArchive(filter = 'all') {
+      const grid = document.getElementById('archive-grid');
+      grid.innerHTML = '';
+
+      const filtered = (filter === 'all')
+        ? PORTFOLIO_DATA
+        : PORTFOLIO_DATA.filter(item => item.category === filter);
+
+      filtered.forEach((item) => {
+        const card = document.createElement('div');
+        card.className = 'archive-card-item';
+        card.setAttribute('data-category', item.category);
+
+        card.innerHTML = `
+          <img src="${item.src}" alt="${item.title}" loading="lazy">
+          <div class="archive-item-dock">
+            <div class="archive-item-info">
+              <h4>${item.title}</h4>
+              <span>${item.sport} · ${item.exif}</span>
+            </div>
+            <div style="font-size: 1.1rem; color: var(--color-bone);">⤢</div>
+          </div>
+        `;
+
+        card.addEventListener('click', () => {
+          openLightbox(item.src, item.title, `${item.sport} · ${item.exif}`);
+        });
+
+        grid.appendChild(card);
+      });
+    }
+
+    function filterArchive(cat, btn) {
+      document.querySelectorAll('.archive-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      renderArchive(cat);
+    }
+
+    // LIGHTBOX
+    function openLightbox(src, title, desc) {
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      document.getElementById('lightbox-title').innerText = title;
+      document.getElementById('lightbox-desc').innerText = desc;
+
+      const waBtn = document.getElementById('lightbox-wa-btn');
+      const waMsg = encodeURIComponent(`Hola Captoora, vi esta foto (${title} - ${desc}) y quiero cotizar.`);
+      waBtn.href = `https://wa.me/528140050088?text=${waMsg}`;
+
+      document.getElementById('lightbox-modal').classList.add('active');
+    }
+
+    function closeLightbox(e) {
+      if (e.target.id === 'lightbox-modal' || e.target.classList.contains('lightbox-close')) {
+        document.getElementById('lightbox-modal').classList.remove('active');
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox-modal').classList.remove('active');
+      }
+    });
+
+    // Initialize archive
+    document.addEventListener('DOMContentLoaded', () => {
+      renderArchive('all');
+    });
+  
+    // ==========================================================================
+    // SCROLLTIDE 3D IMAGE TUNNEL ENGINE (#c-image-tunnel)
+    // ==========================================================================
+    (function initImageTunnel() {
+      const viewport = document.getElementById('tunnel-viewport');
+      const rig = document.getElementById('tunnel-rig');
+      const warpOverlay = document.getElementById('tunnel-warp-overlay');
+      const pauseIcon = document.getElementById('tunnel-pause-icon');
+      const pauseLabel = document.getElementById('tunnel-pause-label');
+      const statusEl = document.getElementById('tunnel-status');
+      if (!viewport || !rig) return;
+
+      const SEGMENT_DEPTH = 1200; // Depth of each repeating segment in px
+      const NUM_SEGMENTS = 7;     // 7 segments = 8400px of visible 3D tunnel depth
+      const TOTAL_DEPTH = SEGMENT_DEPTH * NUM_SEGMENTS;
+
+      let currentZ = 0;
+      let targetZ = 0;
+      let cruisingSpeed = 2.4;
+      let currentSpeed = 2.4;
+      let targetSpeed = 2.4;
+      let isPaused = false;
+      let direction = 1; // 1 = forward, -1 = reverse
+      let isRushing = false;
+
+      // Pointer Parallax Angles
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetRotX = 0;
+      let targetRotY = 0;
+      let camRotX = 0;
+      let camRotY = 0;
+
+      // Segment Objects array
+      const segments = [];
+
+      // Generate the 3D tunnel segments
+      let photoIndex = 0;
+      for (let s = 0; s < NUM_SEGMENTS; s++) {
+        const segEl = document.createElement('div');
+        segEl.className = 'tunnel-segment';
+        segEl.style.transform = `translate3d(0, 0, ${-s * SEGMENT_DEPTH}px)`;
+
+        // Wall: Left
+        const wallLeft = document.createElement('div');
+        wallLeft.className = 'tunnel-wall wall-left';
+
+        // Wall: Right
+        const wallRight = document.createElement('div');
+        wallRight.className = 'tunnel-wall wall-right';
+
+        // Wall: Ceiling
+        const wallCeil = document.createElement('div');
+        wallCeil.className = 'tunnel-wall wall-ceiling';
+
+        // Wall: Floor
+        const wallFloor = document.createElement('div');
+        wallFloor.className = 'tunnel-wall wall-floor';
+
+        // Populate pictures on walls
+        function createFrame(pData, w, h, top, left, rot = 0) {
+          const frame = document.createElement('div');
+          frame.className = 'tunnel-frame';
+          frame.style.width = w + 'px';
+          frame.style.height = h + 'px';
+          frame.style.top = top + 'px';
+          frame.style.left = left + 'px';
+          if (rot) frame.style.transform = `rotate(${rot}deg)`;
+
+          frame.innerHTML = `
+            <img src="${pData.src}" alt="${pData.title}" class="tunnel-frame-img" loading="lazy">
+            <div class="tunnel-frame-hud">
+              <span class="tunnel-frame-title">${pData.title}</span>
+              <span class="tunnel-frame-tag">${pData.exif || '1/1250s · f/2.8'}</span>
+            </div>
+          `;
+          frame.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openLightbox(pData.src, pData.title, `${pData.sport} · ${pData.exif || '1/1250s f/2.8'}`);
+          });
+          return frame;
+        }
+
+        // Left wall frames
+        const p1 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        const p2 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        wallLeft.appendChild(createFrame(p1, 320, 220, 190, 180));
+        wallLeft.appendChild(createFrame(p2, 340, 230, 180, 680));
+
+        // Right wall frames
+        const p3 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        const p4 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        wallRight.appendChild(createFrame(p3, 330, 220, 190, 190));
+        wallRight.appendChild(createFrame(p4, 320, 230, 180, 690));
+
+        // Ceiling frames
+        const p5 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        wallCeil.appendChild(createFrame(p5, 260, 180, 510, 290, 180));
+
+        // Floor frames
+        const p6 = PORTFOLIO_DATA[photoIndex++ % PORTFOLIO_DATA.length];
+        wallFloor.appendChild(createFrame(p6, 280, 190, 480, 280));
+
+        segEl.appendChild(wallLeft);
+        segEl.appendChild(wallRight);
+        segEl.appendChild(wallCeil);
+        segEl.appendChild(wallFloor);
+
+        rig.appendChild(segEl);
+
+        segments.push({
+          element: segEl,
+          baseZ: -s * SEGMENT_DEPTH
+        });
+      }
+
+      // Pointer Steering ("turns slightly toward the pointer")
+      viewport.addEventListener('mousemove', (e) => {
+        const rect = viewport.getBoundingClientRect();
+        mouseX = (e.clientX - rect.left) / rect.width - 0.5;
+        mouseY = (e.clientY - rect.top) / rect.height - 0.5;
+        targetRotY = mouseX * 16;  // Yaw up to +/- 8 deg
+        targetRotX = -mouseY * 12; // Pitch up to +/- 6 deg
+      });
+
+      viewport.addEventListener('mouseleave', () => {
+        targetRotX = 0;
+        targetRotY = 0;
+      });
+
+      // Mouse Wheel Scrubbing
+      viewport.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        targetZ += e.deltaY * 1.6;
+      }, { passive: false });
+
+      // Click to Pause / Play
+      viewport.addEventListener('click', (e) => {
+        // If clicking a frame or HUD, handled separately
+        if (e.target.closest('.tunnel-frame') || e.target.closest('.tunnel-hud-bottom') || e.target.closest('.tunnel-header-bar')) return;
+        toggleTunnelPause();
+      });
+
+      // Global Rush Ahead helpers
+      window.startRush = function() {
+        isRushing = true;
+        targetSpeed = 14.0;
+        viewport.classList.add('tunnel-warp-active');
+        if (statusEl) statusEl.innerHTML = 'RUSH AHEAD: <span style="color: var(--lime);">WARP 5.8X</span> · HIPERVELOCIDAD';
+      };
+
+      window.stopRush = function() {
+        isRushing = false;
+        targetSpeed = cruisingSpeed;
+        viewport.classList.remove('tunnel-warp-active');
+        if (statusEl) statusEl.innerHTML = isPaused ? 'ESTADO: <span style="color: var(--amber);">PAUSADO</span>' : 'CRUCERO: <span style="color: var(--cyan);">1.0X</span> · 78 DISPAROS';
+      };
+
+      window.toggleTunnelPause = function() {
+        isPaused = !isPaused;
+        if (isPaused) {
+          if (pauseIcon) pauseIcon.innerText = '▶️';
+          if (pauseLabel) pauseLabel.innerText = 'Reanudar';
+          if (statusEl) statusEl.innerHTML = 'ESTADO: <span style="color: #fbbf24;">EN PAUSA</span> (Clic para reanudar)';
+        } else {
+          if (pauseIcon) pauseIcon.innerText = '⏸️';
+          if (pauseLabel) pauseLabel.innerText = 'Pausar';
+          if (statusEl) statusEl.innerHTML = 'CRUCERO: <span style="color: var(--cyan);">1.0X</span> · 78 DISPAROS';
+        }
+      };
+
+      window.reverseTunnelDirection = function() {
+        direction *= -1;
+      };
+
+      // Animation Loop
+      function renderTunnel() {
+        // Smooth speed interpolation
+        const effTarget = isPaused ? 0 : (targetSpeed * direction);
+        currentSpeed += (effTarget - currentSpeed) * 0.12;
+        targetZ += currentSpeed;
+
+        // Smooth Z tracking
+        currentZ += (targetZ - currentZ) * 0.2;
+
+        // Smooth camera tilt
+        camRotX += (targetRotX - camRotX) * 0.08;
+        camRotY += (targetRotY - camRotY) * 0.08;
+
+        // Update each segment with modulo wrapping for endless tunnel
+        segments.forEach(seg => {
+          // Calculate relative position to camera
+          let segZ = (seg.baseZ + currentZ) % TOTAL_DEPTH;
+          if (segZ > SEGMENT_DEPTH) {
+            segZ -= TOTAL_DEPTH;
+          } else if (segZ < -TOTAL_DEPTH + SEGMENT_DEPTH) {
+            segZ += TOTAL_DEPTH;
+          }
+
+          // Optional depth fog opacity
+          const dist = Math.abs(segZ);
+          seg.element.style.transform = `translate3d(0, 0, ${segZ}px)`;
+        });
+
+        // Apply camera rig tilt and subtle roll
+        rig.style.transform = `rotateX(${camRotX}deg) rotateY(${camRotY}deg)`;
+
+        requestAnimationFrame(renderTunnel);
+      }
+
+      requestAnimationFrame(renderTunnel);
+    })();
+
+  </script>
+</body>
+</html>

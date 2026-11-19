@@ -1,0 +1,771 @@
+{
+  "fecha_local": "2026-11-04",
+  "timezone": "America/Mexico_City",
+  "limite_nuevas": 200,
+  "objetivos_acumulados": {
+    "01:00": 40,
+    "03:00": 80,
+    "05:00": 120,
+    "07:00": 160,
+    "09:00": 200
+  },
+  "primeras20": {
+    "grupales": [
+      {
+        "source_name": "DSC02254.JPG",
+        "source_id": "14RZCvqdwCVE-aj6uxf1Zo8I8BNXGfRE_",
+        "source_url": "https://drive.google.com/file/d/14RZCvqdwCVE-aj6uxf1Zo8I8BNXGfRE_/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02256.JPG",
+        "source_id": "1yPeQIhZfbKOaDZiKAYOq_cD6uhYAAUum",
+        "source_url": "https://drive.google.com/file/d/1yPeQIhZfbKOaDZiKAYOq_cD6uhYAAUum/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02259.JPG",
+        "source_id": "1eHE-fI8-bYzWpwAjPPCcucBXRnPfBDLL",
+        "source_url": "https://drive.google.com/file/d/1eHE-fI8-bYzWpwAjPPCcucBXRnPfBDLL/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02260.JPG",
+        "source_id": "1feGUVl-j5E5KdkLVspM4iaXz6hNcmcxB",
+        "source_url": "https://drive.google.com/file/d/1feGUVl-j5E5KdkLVspM4iaXz6hNcmcxB/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02267.JPG",
+        "source_id": "1ko_uWORLl2RhdOtWTBEYGZKnAn4PhmXm",
+        "source_url": "https://drive.google.com/file/d/1ko_uWORLl2RhdOtWTBEYGZKnAn4PhmXm/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02269.JPG",
+        "source_id": "1AnRbR4SeAkm03ilHbhSenjLack-wTG15",
+        "source_url": "https://drive.google.com/file/d/1AnRbR4SeAkm03ilHbhSenjLack-wTG15/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02275.JPG",
+        "source_id": "1Lh_tTN0nmJGnvLkfipjVndPydZzssh7M",
+        "source_url": "https://drive.google.com/file/d/1Lh_tTN0nmJGnvLkfipjVndPydZzssh7M/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02278.JPG",
+        "source_id": "1bptIcG_etalr7rJWQ9mNczW8l4099tLA",
+        "source_url": "https://drive.google.com/file/d/1bptIcG_etalr7rJWQ9mNczW8l4099tLA/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02279.JPG",
+        "source_id": "1wOqJlTyW8srM4YniEuexffhOd3x-w8Ce",
+        "source_url": "https://drive.google.com/file/d/1wOqJlTyW8srM4YniEuexffhOd3x-w8Ce/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC02280.JPG",
+        "source_id": "1NdosqiTxmfFeUeGDAXMPBlg2ndqZI_Ad",
+        "source_url": "https://drive.google.com/file/d/1NdosqiTxmfFeUeGDAXMPBlg2ndqZI_Ad/view?usp=drivesdk",
+        "estado": "pendiente"
+      }
+    ],
+    "otra_chica": [
+      {
+        "source_name": "DSC00623.JPG",
+        "source_id": "1BqwcOZxGdnGK9MTBBEVrOTZpeeiuP950",
+        "source_url": "https://drive.google.com/file/d/1BqwcOZxGdnGK9MTBBEVrOTZpeeiuP950/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00628.JPG",
+        "source_id": "1TMdyfHSye4nN6Sz5KWjucNMCJxZ5XxU3",
+        "source_url": "https://drive.google.com/file/d/1TMdyfHSye4nN6Sz5KWjucNMCJxZ5XxU3/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00629.JPG",
+        "source_id": "1PGnqrQkowFUHDZ8mP7v-L2X28vT-xHkO",
+        "source_url": "https://drive.google.com/file/d/1PGnqrQkowFUHDZ8mP7v-L2X28vT-xHkO/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00634.JPG",
+        "source_id": "1jOW7ioSDQO08vdMSqv2nfU7Uxlz7_6Uy",
+        "source_url": "https://drive.google.com/file/d/1jOW7ioSDQO08vdMSqv2nfU7Uxlz7_6Uy/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00678.JPG",
+        "source_id": "1uo2jbG6YlLvaUCHGlocAMxaRE1xkPDkm",
+        "source_url": "https://drive.google.com/file/d/1uo2jbG6YlLvaUCHGlocAMxaRE1xkPDkm/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00681.JPG",
+        "source_id": "1iCvm7VNMLivAz44CFbTbZR6lSUl0SntT",
+        "source_url": "https://drive.google.com/file/d/1iCvm7VNMLivAz44CFbTbZR6lSUl0SntT/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00688.JPG",
+        "source_id": "1SIPejJrnx36ikPk6VoGR2aenKFalFUU-",
+        "source_url": "https://drive.google.com/file/d/1SIPejJrnx36ikPk6VoGR2aenKFalFUU-/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00722.JPG",
+        "source_id": "1iP-Sz_66W7dCHY55kV4hlyfkEkd2eeDb",
+        "source_url": "https://drive.google.com/file/d/1iP-Sz_66W7dCHY55kV4hlyfkEkd2eeDb/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00752.JPG",
+        "source_id": "1DQ4c1ufmUaL3POpu7Xijq8iwoeSv_BHV",
+        "source_url": "https://drive.google.com/file/d/1DQ4c1ufmUaL3POpu7Xijq8iwoeSv_BHV/view?usp=drivesdk",
+        "estado": "pendiente"
+      },
+      {
+        "source_name": "DSC00769.JPG",
+        "source_id": "1zgP7dJ7JsDI6yAkrST6IKwd1Ia2GEMy5",
+        "source_url": "https://drive.google.com/file/d/1zgP7dJ7JsDI6yAkrST6IKwd1Ia2GEMy5/view?usp=drivesdk",
+        "estado": "pendiente"
+      }
+    ]
+  },
+  "completadas": [
+    {
+      "source_name": "DSC00623.JPG",
+      "drive_id": "1OyrS9mZe76AGwrDu6jaRUBQZXh6SrZM1",
+      "drive_url": "https://drive.google.com/file/d/1OyrS9mZe76AGwrDu6jaRUBQZXh6SrZM1/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00628.JPG",
+      "drive_id": "14VSVVnpzMeQUmvNcpTxL76Dr7h9fN7vz",
+      "drive_url": "https://drive.google.com/file/d/14VSVVnpzMeQUmvNcpTxL76Dr7h9fN7vz/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00629.JPG",
+      "drive_id": "1Dp5R5pQMULQ-0nfvFP1n-b-t7Qp9TmDY",
+      "drive_url": "https://drive.google.com/file/d/1Dp5R5pQMULQ-0nfvFP1n-b-t7Qp9TmDY/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00634.JPG",
+      "drive_id": "1DmRuLThJXsp_2WTGtx2ydzkMkbm1nr73",
+      "drive_url": "https://drive.google.com/file/d/1DmRuLThJXsp_2WTGtx2ydzkMkbm1nr73/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00678.JPG",
+      "drive_id": "1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr",
+      "drive_url": "https://drive.google.com/file/d/1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00681.JPG",
+      "drive_id": "1dodsTsBsT8L7GWwHmVcwG0i1-VDeRFfH",
+      "drive_url": "https://drive.google.com/file/d/1dodsTsBsT8L7GWwHmVcwG0i1-VDeRFfH/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00688.JPG",
+      "drive_id": "1hRAmhsjxzIokejjB85X9y-GE_SoSSgGF",
+      "drive_url": "https://drive.google.com/file/d/1hRAmhsjxzIokejjB85X9y-GE_SoSSgGF/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00722.JPG",
+      "drive_id": "1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-",
+      "drive_url": "https://drive.google.com/file/d/1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00752.JPG",
+      "drive_id": "1zPesCdzTZfVk9f2u2wqR3nOnuWLp1Hlh",
+      "drive_url": "https://drive.google.com/file/d/1zPesCdzTZfVk9f2u2wqR3nOnuWLp1Hlh/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC00769.JPG",
+      "drive_id": "1TXUj7jQURxAwqPhnOusXnWqWgC8XyRgt",
+      "drive_url": "https://drive.google.com/file/d/1TXUj7jQURxAwqPhnOusXnWqWgC8XyRgt/view?usp=drivesdk",
+      "lote": "07_otra_chica"
+    },
+    {
+      "source_name": "DSC02254.JPG",
+      "drive_id": "1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g",
+      "drive_url": "https://drive.google.com/file/d/1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02256.JPG",
+      "drive_id": "1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP",
+      "drive_url": "https://drive.google.com/file/d/1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02259.JPG",
+      "drive_id": "1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K",
+      "drive_url": "https://drive.google.com/file/d/1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02260.JPG",
+      "drive_id": "18BhrprPJAzB4rhuNK-ceMpHCfM4DhyrT",
+      "drive_url": "https://drive.google.com/file/d/18BhrprPJAzB4rhuNK-ceMpHCfM4DhyrT/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02267.JPG",
+      "drive_id": "1Xp4HmUstmPF6k8SiD1jDFU63j4kgIMqc",
+      "drive_url": "https://drive.google.com/file/d/1Xp4HmUstmPF6k8SiD1jDFU63j4kgIMqc/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02269.JPG",
+      "drive_id": "1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM",
+      "drive_url": "https://drive.google.com/file/d/1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02275.JPG",
+      "drive_id": "1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL",
+      "drive_url": "https://drive.google.com/file/d/1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02278.JPG",
+      "drive_id": "1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm",
+      "drive_url": "https://drive.google.com/file/d/1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02279.JPG",
+      "drive_id": "1xqcadPdFr4tchSqpB6bfSZCEXa4ZYKvb",
+      "drive_url": "https://drive.google.com/file/d/1xqcadPdFr4tchSqpB6bfSZCEXa4ZYKvb/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02280.JPG",
+      "drive_id": "1cQ_of4DfzYcaOKh-R1gjim_tP74BbvjP",
+      "drive_url": "https://drive.google.com/file/d/1cQ_of4DfzYcaOKh-R1gjim_tP74BbvjP/view?usp=drivesdk",
+      "lote": "06_grupales"
+    },
+    {
+      "source_name": "DSC02297.JPG",
+      "drive_id": "1U6oqXudXu4Y2Xxe0Iv9yG6IbVxfQ-8-K",
+      "drive_url": "https://drive.google.com/file/d/1U6oqXudXu4Y2Xxe0Iv9yG6IbVxfQ-8-K/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02296.JPG",
+      "drive_id": "16NEKcRGVwhBFZnucT7jESLvtTFUM18CP",
+      "drive_url": "https://drive.google.com/file/d/16NEKcRGVwhBFZnucT7jESLvtTFUM18CP/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02292.JPG",
+      "drive_id": "1ZaDu3c_AceM7K8D7SGIFLsVkzjzom5t3",
+      "drive_url": "https://drive.google.com/file/d/1ZaDu3c_AceM7K8D7SGIFLsVkzjzom5t3/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02291.JPG",
+      "drive_id": "162sos6j5ohpbDKZryjeinUvG2VNNd0QI",
+      "drive_url": "https://drive.google.com/file/d/162sos6j5ohpbDKZryjeinUvG2VNNd0QI/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02288.JPG",
+      "drive_id": "1W75BVWtCcAdXpIrbM6J2EoftqJNU7xYP",
+      "drive_url": "https://drive.google.com/file/d/1W75BVWtCcAdXpIrbM6J2EoftqJNU7xYP/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02285.JPG",
+      "drive_id": "1kLRftodbHkMG0sacF3m2clCRPxFcxGMQ",
+      "drive_url": "https://drive.google.com/file/d/1kLRftodbHkMG0sacF3m2clCRPxFcxGMQ/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02281.JPG",
+      "drive_id": "10k_hk-1BnyMr-UQCINSjYKWegOtiGrOt",
+      "drive_url": "https://drive.google.com/file/d/10k_hk-1BnyMr-UQCINSjYKWegOtiGrOt/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC00936.JPG",
+      "drive_id": "17MfD8FKVew9z-9g-n5P_myZzufVGbHhi",
+      "drive_url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00925.JPG",
+      "drive_id": "12_JGm2aos0bkLixVwoVl5Pka2z57q1v3",
+      "drive_url": "https://drive.google.com/file/d/12_JGm2aos0bkLixVwoVl5Pka2z57q1v3/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00921.JPG",
+      "drive_id": "1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz",
+      "drive_url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00920.JPG",
+      "drive_id": "15K68bv6wfVVKDPV78L33nmAlu7CDThTE",
+      "drive_url": "https://drive.google.com/file/d/15K68bv6wfVVKDPV78L33nmAlu7CDThTE/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00919.JPG",
+      "drive_id": "1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P",
+      "drive_url": "https://drive.google.com/file/d/1swg_7Zzjtwy0GK00xlFqWetex0g6KC4P/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00916.JPG",
+      "drive_id": "1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7",
+      "drive_url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00896.JPG",
+      "drive_id": "1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C",
+      "drive_url": "https://drive.google.com/file/d/1n0-LZO_ErAPaHCDcYRyjZdwmRpcpXv3C/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00913.JPG",
+      "drive_id": "1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK",
+      "drive_url": "https://drive.google.com/file/d/1ExTwsrOt4KzWh7kSwBRfMJUEiDPESTjK/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00910.JPG",
+      "drive_id": "1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx",
+      "drive_url": "https://drive.google.com/file/d/1j0edRMxGVhp7dzIHeDSBEjYWsuz1uSpx/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC00893.JPG",
+      "drive_id": "1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6",
+      "drive_url": "https://drive.google.com/file/d/1bErvjv9MMFcvAny2sVTrRLrxPYZTLiq6/view?usp=drivesdk",
+      "lote": "lote_09_otra_persona_0100"
+    },
+    {
+      "source_name": "DSC02317.JPG",
+      "drive_id": "1u3c5rBVbt16zdL84l4PL6VybUnlnaI43",
+      "drive_url": "https://drive.google.com/file/d/1u3c5rBVbt16zdL84l4PL6VybUnlnaI43/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02314.JPG",
+      "drive_id": "1asFKFOvemnwBsKHcoc2Md-g0FhyZvwzC",
+      "drive_url": "https://drive.google.com/file/d/1asFKFOvemnwBsKHcoc2Md-g0FhyZvwzC/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02309.JPG",
+      "drive_id": "1HccdTYKGZyZ43FtGfmI7ZhymrawbveQ3",
+      "drive_url": "https://drive.google.com/file/d/1HccdTYKGZyZ43FtGfmI7ZhymrawbveQ3/view?usp=drivesdk",
+      "lote": "lote_08_grupales_0100"
+    },
+    {
+      "source_name": "DSC02370.JPG",
+      "drive_id": "1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS",
+      "drive_url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC01067.JPG",
+      "drive_id": "1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp",
+      "drive_url": "https://drive.google.com/file/d/1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01080.JPG",
+      "drive_id": "1QZuFKypb5noapU4llEj24vkC4jgmsjAz",
+      "drive_url": "https://drive.google.com/file/d/1QZuFKypb5noapU4llEj24vkC4jgmsjAz/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01084.JPG",
+      "drive_id": "1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l",
+      "drive_url": "https://drive.google.com/file/d/1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC02136.JPG",
+      "drive_id": "1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ",
+      "drive_url": "https://drive.google.com/file/d/1uLtZviwkt2eetgnADIIyMpYHwYcGegCZ/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02134.JPG",
+      "drive_id": "1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ",
+      "drive_url": "https://drive.google.com/file/d/1dFP3N2SUpf_O1Xo8fCqCNoMVL_E7R3pZ/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC01812.JPG",
+      "drive_id": "1i4u6enwEdhLQ3CReWRzATcpGWL_JCUET",
+      "drive_url": "https://drive.google.com/file/d/1i4u6enwEdhLQ3CReWRzATcpGWL_JCUET/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01819.JPG",
+      "drive_id": "1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp",
+      "drive_url": "https://drive.google.com/file/d/1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC02354.JPG",
+      "drive_id": "1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca",
+      "drive_url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02340.JPG",
+      "drive_id": "19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86",
+      "drive_url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02324.JPG",
+      "drive_id": "1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2",
+      "drive_url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02326.JPG",
+      "drive_id": "1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi",
+      "drive_url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02358.JPG",
+      "drive_id": "1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv",
+      "drive_url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02405.JPG",
+      "drive_id": "13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG",
+      "drive_url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02400.JPG",
+      "drive_id": "1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX",
+      "drive_url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02352.JPG",
+      "drive_id": "197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ",
+      "drive_url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC02363.JPG",
+      "drive_id": "1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd",
+      "drive_url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+      "lote": "lote_10_grupales_0300"
+    },
+    {
+      "source_name": "DSC01077.JPG",
+      "drive_id": "176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA",
+      "drive_url": "https://drive.google.com/file/d/176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01073.JPG",
+      "drive_id": "1dedvFCvTRd3KWf__TWp-gARb9E1onpAM",
+      "drive_url": "https://drive.google.com/file/d/1dedvFCvTRd3KWf__TWp-gARb9E1onpAM/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01088.JPG",
+      "drive_id": "1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t",
+      "drive_url": "https://drive.google.com/file/d/1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01063.JPG",
+      "drive_id": "1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz",
+      "drive_url": "https://drive.google.com/file/d/1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01003.JPG",
+      "drive_id": "1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf",
+      "drive_url": "https://drive.google.com/file/d/1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01027.JPG",
+      "drive_id": "1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g",
+      "drive_url": "https://drive.google.com/file/d/1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC01051.JPG",
+      "drive_id": "166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo",
+      "drive_url": "https://drive.google.com/file/d/166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo/view?usp=drivesdk",
+      "lote": "lote_11_rizos_blanco_0300"
+    },
+    {
+      "source_name": "DSC02119.JPG",
+      "drive_id": "1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v",
+      "drive_url": "https://drive.google.com/file/d/1EMbhZ6p59oZSi5MpqtHPVcF_wyu-h8-v/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02118.JPG",
+      "drive_id": "1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ",
+      "drive_url": "https://drive.google.com/file/d/1NNdLBA87_W5njU_YO-HzVDv2HVjbwovJ/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02132.JPG",
+      "drive_id": "12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo",
+      "drive_url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02146.JPG",
+      "drive_id": "1EDVzlGqt-N36nRvCagwavWDyufep66_M",
+      "drive_url": "https://drive.google.com/file/d/1EDVzlGqt-N36nRvCagwavWDyufep66_M/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02149.JPG",
+      "drive_id": "14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl",
+      "drive_url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02141.JPG",
+      "drive_id": "1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8",
+      "drive_url": "https://drive.google.com/file/d/1HQBp8UCL38aAodvPBb-qIqjCOYHR77i8/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02140.JPG",
+      "drive_id": "167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty",
+      "drive_url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC02126.JPG",
+      "drive_id": "1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU",
+      "drive_url": "https://drive.google.com/file/d/1bY0luq5Wzhn4IlRJeXGXsn9qu9VzezRU/view?usp=drivesdk",
+      "lote": "lote_12_individuales_negro_0300"
+    },
+    {
+      "source_name": "DSC01859.JPG",
+      "drive_id": "1ejMBBpOUCxw6zht10GYrySvG58CSLZfv",
+      "drive_url": "https://drive.google.com/file/d/1ejMBBpOUCxw6zht10GYrySvG58CSLZfv/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01857.JPG",
+      "drive_id": "1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4",
+      "drive_url": "https://drive.google.com/file/d/1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01866.JPG",
+      "drive_id": "1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw",
+      "drive_url": "https://drive.google.com/file/d/1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01865.JPG",
+      "drive_id": "1EvB8voJj1zAsDK88jmJHkv42AcibpPyB",
+      "drive_url": "https://drive.google.com/file/d/1EvB8voJj1zAsDK88jmJHkv42AcibpPyB/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01817.JPG",
+      "drive_id": "1B2N-5x_ZKywRGD9v1r_V_cS_X4iwSMpU",
+      "drive_url": "https://drive.google.com/file/d/1B2N-5x_ZKywRGD9v1r_V_cS_X4iwSMpU/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01833.JPG",
+      "drive_id": "1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J",
+      "drive_url": "https://drive.google.com/file/d/1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01822.JPG",
+      "drive_id": "1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei",
+      "drive_url": "https://drive.google.com/file/d/1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC01855.JPG",
+      "drive_id": "1GB86QftoctO_4WochQYZQeRbsjAtIXa6",
+      "drive_url": "https://drive.google.com/file/d/1GB86QftoctO_4WochQYZQeRbsjAtIXa6/view?usp=drivesdk",
+      "lote": "lote_13_otra_persona_0300"
+    },
+    {
+      "source_name": "DSC07721.JPG",
+      "drive_id": "10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii",
+      "drive_url": "https://drive.google.com/file/d/10n364XGPz9JrPyb5bQb3FHzYIqmM92Ii/view?usp=drivesdk",
+      "lote": "lote_14_chica07722_sola"
+    },
+    {
+      "source_name": "DSC07734.JPG",
+      "drive_id": "1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG",
+      "drive_url": "https://drive.google.com/file/d/1e7DvG7vlpltzwRxwI9mtd6eFzbh9mpIG/view?usp=drivesdk",
+      "lote": "lote_14_chica07722_sola"
+    },
+    {
+      "source_name": "DSC07706.JPG",
+      "drive_id": "1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR",
+      "drive_url": "https://drive.google.com/file/d/1TpWLuQ7MjVy2ZrxGXGobv8CW8L1ne4KR/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC07733.JPG",
+      "drive_id": "1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p",
+      "drive_url": "https://drive.google.com/file/d/1z4WhBjQTek2zSb7YaXoQjlxRscAfDc1p/view?usp=drivesdk",
+      "lote": "lote_14_chica07722_sola"
+    },
+    {
+      "source_name": "DSC07732.JPG",
+      "drive_id": "1L3HCz8bUArYeuas2riB22op9EyJzmCRQ",
+      "drive_url": "https://drive.google.com/file/d/1L3HCz8bUArYeuas2riB22op9EyJzmCRQ/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC07724.JPG",
+      "drive_id": "1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q",
+      "drive_url": "https://drive.google.com/file/d/1rASHaNDXluTMO-8C5XT4LY2mUruLKZ5Q/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC07726.JPG",
+      "drive_id": "1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh",
+      "drive_url": "https://drive.google.com/file/d/1UxCPPXVbSveQt5yLcWBYpgNQtXYzMdqh/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC08457.JPG",
+      "drive_id": "1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx",
+      "drive_url": "https://drive.google.com/file/d/1Pyg5lu-UvkxFrM6wMM9OVopS3LFDBcJx/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC07720.JPG",
+      "drive_id": "1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy",
+      "drive_url": "https://drive.google.com/file/d/1x5cMFoNw5Gh9WXCB_LaMPbyOksry3JZy/view?usp=drivesdk",
+      "lote": "lote_14_chica07722_sola"
+    },
+    {
+      "source_name": "DSC07731.JPG",
+      "drive_id": "1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF",
+      "drive_url": "https://drive.google.com/file/d/1gD2c4HU9wjXaO1xYOv865tXC3UMnEqgF/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC07722.JPG",
+      "drive_id": "1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB",
+      "drive_url": "https://drive.google.com/file/d/1mRMvPY8Qy2ZOWg-RTVssXOMnp8Ix1JAB/view?usp=drivesdk",
+      "lote": "lote_14_chica07722_sola"
+    },
+    {
+      "source_name": "DSC08454.JPG",
+      "drive_id": "1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT",
+      "drive_url": "https://drive.google.com/file/d/1BXw4zv5ZLef37ZC93P9l_-L2RMpD1COT/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC08484.JPG",
+      "drive_id": "127up9vjISarVa-9S0Oql5F9ThMMDIBZF",
+      "drive_url": "https://drive.google.com/file/d/127up9vjISarVa-9S0Oql5F9ThMMDIBZF/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC08456.JPG",
+      "drive_id": "1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP",
+      "drive_url": "https://drive.google.com/file/d/1U8_19XHzqMWn4atM8VODQAsp5jy-_VcP/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC08481.JPG",
+      "drive_id": "1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1",
+      "drive_url": "https://drive.google.com/file/d/1DALY9OZwjuTnrpdB2Z5gOg0fY-lAb5Z1/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC08477.JPG",
+      "drive_id": "133DCqJZHogOeHZ4ioRCCJvTuX05btzcn",
+      "drive_url": "https://drive.google.com/file/d/133DCqJZHogOeHZ4ioRCCJvTuX05btzcn/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC08459.JPG",
+      "drive_id": "1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q",
+      "drive_url": "https://drive.google.com/file/d/1kTl9VYBFOpgzJDdlvH_mNNM1HMURPZ0Q/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    },
+    {
+      "source_name": "DSC08479.JPG",
+      "drive_id": "17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0",
+      "drive_url": "https://drive.google.com/file/d/17tX-NuWNN4FZzd6oVdGd6ENBZ4bSWPL0/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC08471.JPG",
+      "drive_id": "1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0",
+      "drive_url": "https://drive.google.com/file/d/1Kee7NCah9pRuMnxq7VdO3Fd6P7pm65H0/view?usp=drivesdk",
+      "lote": "correcciones_rostros_textos_v03/entrega_final"
+    },
+    {
+      "source_name": "DSC08466.JPG",
+      "drive_id": "1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw",
+      "drive_url": "https://drive.google.com/file/d/1Gny5HFQQ_kUdCVDTav5HE6CFbiYv5Stw/view?usp=drivesdk",
+      "lote": "lote_15_chica07722_grupo"
+    }
+  ],
+  "bloqueadas": [],
+  "estado": "programado_activo",
+  "regla": "Contar solo salidas nuevas revisadas, guardadas y verificadas en Drive; originales y versiones anteriores no cuentan; ninguna nueva se aprueba automaticamente; no duplicar tareas activas.",
+  "cierre": "10:00",
+  "automation_id": "farmasi-producci-n-nocturna-hasta-200-4-nov",
+  "trabajo_en_curso": null,
+  "producidas_verificadas": 100,
+  "restantes_hasta_limite": 100,
+  "ultima_entrega": "v03:7rostros+1etiqueta en8fuentes existentes,8JPG+8PNG verificados. No son nuevas:contador100/200. 2limitaciones de fuente declaradas, pendientes revision.",
+  "prioridad_usuario": "20 solicitadas terminadas en revision, pendientes aprobacion",
+  "puerta_calidad": "Correcciones v03 finales8fuentes entregables para revision. No reiniciar generacion integral de caras/textos. Auditoria global pendiente; etiqueta necesita referencia de misma impresion yDSC08479 fuente enfocada para mayor nitidez. Mantener revision por lotes y originales.",
+  "ultima_correccion_cabello": {
+    "source": "DSC07706.JPG",
+    "version": "v04",
+    "estado": "en_revision",
+    "fuentes_nuevas": 0
+  },
+  "solicitud_directa_lote16": {
+    "solicitadas": 20,
+    "seleccion": "lote_16_variedad20/SELECCION_20.json",
+    "nuevas_entregadas": 0,
+    "estado": "pendiente_resolver_limpieza_sin_alterar_personas",
+    "no_contar_pruebas_internas": true
+  },
+  "aprobacion_total_usuario": {
+    "fecha": "2026-11-04",
+    "fuentes_aprobadas": 140,
+    "en_revision": 0,
+    "no_es_produccion_nueva": true,
+    "evidencia": "aprobacion_total_revision_2026-11-04/RESULTADO.json"
+  }
+}

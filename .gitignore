@@ -3,3 +3,16 @@ assets/screencapture-*.png
 test_video.mp4
 *.log
 videos/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+*.env
+*.env.txt
+*apikey*
+
+# Dependencies & OS/temp artifacts
+node_modules/
+.DS_Store
+tmp/

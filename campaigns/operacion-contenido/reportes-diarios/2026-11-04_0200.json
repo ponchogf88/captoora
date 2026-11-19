@@ -1,0 +1,29 @@
+{
+  "fecha": "2026-11-04",
+  "ciclo": "02:00",
+  "inicio_real": "2026-11-04T02:01:38-06:00",
+  "espacio_disponible_gib": 425,
+  "proveedores_externos_utilizados": [],
+  "creditos_consumidos": 0,
+  "terminadas": 0,
+  "corregidas": 0,
+  "avances": 2,
+  "rechazos_nuevos": 0,
+  "items": [
+    {
+      "id": "NB-FUENTES-05",
+      "estado": "revision",
+      "decision": "conservar",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-04_NOTEBOOKLM_FUENTES_AUDITORIA.md",
+      "herramientas": ["lectura e inspeccion local", "wc", "shasum SHA-256"]
+    },
+    {
+      "id": "BRAND-ARCH-05",
+      "estado": "en_produccion",
+      "decision": "conservar",
+      "evidencia": "campaigns/operacion-contenido/avances/2026-11-04_ARQUITECTURA_CINCO_MARCAS.md",
+      "herramientas": ["edicion de texto local"]
+    }
+  ],
+  "publicacion_autorizada_o_realizada": false
+}

@@ -1,0 +1,35 @@
+{
+  "fecha": "2026-11-04",
+  "hora": "03:00",
+  "zona": "America/Monterrey",
+  "inicio_real": "2026-11-04T03:00:41-06:00",
+  "espacio_disponible_gib": 425,
+  "proveedores_externos_usados": [],
+  "saldo_antes": null,
+  "saldo_despues": null,
+  "creditos_consumidos": 0,
+  "piezas_terminadas": 0,
+  "piezas_corregidas": 0,
+  "avances_utiles": 2,
+  "rechazos_nuevos": 0,
+  "avances": [
+    {
+      "id": "BRAND-CLAIMS-05",
+      "archivo": "campaigns/operacion-contenido/avances/2026-11-04_MATRIZ_VALIDACION_CINCO_MARCAS.md",
+      "bytes": 4425,
+      "sha256": "79735d46a1ba86dfca91abefdb6c71e6790eca82ccb202fb81310f7e4d05791a"
+    },
+    {
+      "id": "BRAND-DECISION-05",
+      "archivo": "campaigns/operacion-contenido/avances/2026-11-04_FORMULARIO_DECISION_CINCO_MARCAS.md",
+      "bytes": 2480,
+      "sha256": "bbd7c9fbae76df77efd2d8e81cae4394ef5b3b2c20f79bb7932e00158716ef75"
+    }
+  ],
+  "bloqueos": [
+    "No existe sesión expuesta para certificar cuenta, saldo, coste o reinicio en vivo.",
+    "La arquitectura y oferta de las cinco marcas no están aprobadas.",
+    "Biometrics requiere revisión técnica, jurídica y de privacidad."
+  ],
+  "publicacion_autorizada": false
+}

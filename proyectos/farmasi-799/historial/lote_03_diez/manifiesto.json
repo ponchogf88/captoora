@@ -1,0 +1,296 @@
+[
+  {
+    "numero": 1,
+    "source_name": "DSC00013.JPG",
+    "source_id": "16FPxsVJ1O31mrBaQ8vQHOdddxoxJvDtB",
+    "source_url": "https://drive.google.com/file/d/16FPxsVJ1O31mrBaQ8vQHOdddxoxJvDtB/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Keep cake/board/bows/berries/ALL candles exactly, same mouth expression and cake position, no zooming out or inventing body parts outside original crop.",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za",
+      "title": "DSC00013_v02.jpg",
+      "file_name": "DSC00013_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za",
+        "title": "DSC00013_v02.jpg",
+        "file_name": "DSC00013_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 2,
+    "source_name": "DSC00017.JPG",
+    "source_id": "1-Z_JUlxE6Y_jDbHzRySIo0KGFXU3ukUp",
+    "source_url": "https://drive.google.com/file/d/1-Z_JUlxE6Y_jDbHzRySIo0KGFXU3ukUp/view?usp=drivesdk",
+    "estado": "aprobada",
+    "lote": 1,
+    "decision_usuario": "aprobada",
+    "edited_drive_id": "1v5961KA6RRut2V30brczlwu-WPGAzvBs",
+    "edited_drive_url": "https://drive.google.com/file/d/1v5961KA6RRut2V30brczlwu-WPGAzvBs/view?usp=drivesdk",
+    "motivo": "Rechazado por usuario: bordes artificiales, cabello y contorno corporal mal integrados. Rehacer con editor nativo de imágenes y revisión ampliada, respetando identidad y dimensiones.",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Keep cake/board/bows/berries/ALL candles exactly, same mouth expression and cake position, no zooming out or inventing body parts outside original crop.",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI",
+      "title": "DSC00017_v02.jpg",
+      "file_name": "DSC00017_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI",
+        "title": "DSC00017_v02.jpg",
+        "file_name": "DSC00017_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1heSjmekvIbNKUU0iRF26DaPKoGwgFmPI/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    }
+  },
+  {
+    "numero": 3,
+    "source_name": "DSC00019.JPG",
+    "source_id": "1Cvfr4hi6mk6SETyHahGVhYYDdmpIbSNc",
+    "source_url": "https://drive.google.com/file/d/1Cvfr4hi6mk6SETyHahGVhYYDdmpIbSNc/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Keep cake/board/bows/berries/ALL candles exactly, same mouth expression and cake position, no zooming out or inventing body parts outside original crop.",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C",
+      "title": "DSC00019_v02.jpg",
+      "file_name": "DSC00019_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C",
+        "title": "DSC00019_v02.jpg",
+        "file_name": "DSC00019_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1IFnRozv6zgBsrRmerIFTpawdzXQj9x2C/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 4,
+    "source_name": "DSC00020.JPG",
+    "source_id": "1YY386OyN6gDs7VoiV1OamPxm_yW-qcve",
+    "source_url": "https://drive.google.com/file/d/1YY386OyN6gDs7VoiV1OamPxm_yW-qcve/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq",
+      "title": "DSC00020_v02.jpg",
+      "file_name": "DSC00020_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq",
+        "title": "DSC00020_v02.jpg",
+        "file_name": "DSC00020_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 5,
+    "source_name": "DSC00024.JPG",
+    "source_id": "1LcO9J1eZZ7V-BoN5s56B3QwbJ71mOj3Y",
+    "source_url": "https://drive.google.com/file/d/1LcO9J1eZZ7V-BoN5s56B3QwbJ71mOj3Y/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_",
+      "title": "DSC00024_v02.jpg",
+      "file_name": "DSC00024_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_",
+        "title": "DSC00024_v02.jpg",
+        "file_name": "DSC00024_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 6,
+    "source_name": "DSC00025.JPG",
+    "source_id": "1swgLjom9sbrxfU0cTcbWeE76uGVvnVmd",
+    "source_url": "https://drive.google.com/file/d/1swgLjom9sbrxfU0cTcbWeE76uGVvnVmd/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P",
+      "title": "DSC00025_v02.jpg",
+      "file_name": "DSC00025_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P",
+        "title": "DSC00025_v02.jpg",
+        "file_name": "DSC00025_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 7,
+    "source_name": "DSC00027.JPG",
+    "source_id": "1j0Y2dhM9O40dsSHzCbIQo1UD8RtoJ5vs",
+    "source_url": "https://drive.google.com/file/d/1j0Y2dhM9O40dsSHzCbIQo1UD8RtoJ5vs/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1",
+      "title": "DSC00027_v02.jpg",
+      "file_name": "DSC00027_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1",
+        "title": "DSC00027_v02.jpg",
+        "file_name": "DSC00027_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 8,
+    "source_name": "DSC00029.JPG",
+    "source_id": "1eN9sLzoOWVJFTGxHMFNs5cZYjR1bj209",
+    "source_url": "https://drive.google.com/file/d/1eN9sLzoOWVJFTGxHMFNs5cZYjR1bj209/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3",
+      "title": "DSC00029_v02.jpg",
+      "file_name": "DSC00029_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3",
+        "title": "DSC00029_v02.jpg",
+        "file_name": "DSC00029_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 9,
+    "source_name": "DSC00033.JPG",
+    "source_id": "1PD09--xK3tBCYjJK0N2MjF9gDIysBRHW",
+    "source_url": "https://drive.google.com/file/d/1PD09--xK3tBCYjJK0N2MjF9gDIysBRHW/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. ",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi",
+      "title": "DSC00033_v02.jpg",
+      "file_name": "DSC00033_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi",
+        "title": "DSC00033_v02.jpg",
+        "file_name": "DSC00033_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  },
+  {
+    "numero": 10,
+    "source_name": "DSC00043.JPG",
+    "source_id": "1pv59lDKM90KqNUyci_IJoDi3vBOKP_W5",
+    "source_url": "https://drive.google.com/file/d/1pv59lDKM90KqNUyci_IJoDi3vBOKP_W5/view?usp=drivesdk",
+    "estado": "aprobada",
+    "prompt": "Background-only precise retouch of this EXACT original photograph. Preserve the subject as photographed: EXACT facial features, expression and gaze including asymmetry, real skin texture, original body dimensions and proportions, pose, all hands/fingers, dress and fabric folds, jewelry, shoes and every original hair curl or flyaway. Do not beautify, reshape or re-pose. Lock original framing, perspective and subject position and size. Remove ONLY distracting domestic set: visible white walls/baseboards, cables, printed floor sheets, bystander body parts/hands/shoes and clutter. Extend a refined dark charcoal studio backdrop with dimensional soft shadows, almost imperceptible diffuse amber background light. Preserve/enhance very gently the existing natural golden hair rim light without inventing or clipping curls. Visible floor: very subtle BLACK MICRO-PILE velvet/plush, virtually flat tiny fibers and natural contact shadows, not long fur, no glossy reflection. Keep just a small discreet cropped sliver of LED panel at extreme upper-left edge, no hands or arms supporting it, no obvious floating huge lights. Natural photographic subject edges, no halos, no hard cutout, no distortion. Single portrait, no words or watermark. Preserve original red dress waist cutouts, gold brooch, gold shoes, necklace and watch; exact hand and leg pose. Keep each individual curl and original facial expression. Retain original walking pose, gaze downward, hand motion and crop, do not turn into static standing portrait.",
+    "output": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK",
+      "title": "DSC00043_v02.jpg",
+      "file_name": "DSC00043_v02.jpg",
+      "mime_type": "image/jpeg",
+      "url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
+      "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK",
+        "title": "DSC00043_v02.jpg",
+        "file_name": "DSC00043_v02.jpg",
+        "mime_type": "image/jpeg",
+        "url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
+        "parent_id": "1sw3F07wWdTeI36HBlit4nB71JFSLaOtV"
+      }
+    },
+    "decision_usuario": "aprobada"
+  }
+]

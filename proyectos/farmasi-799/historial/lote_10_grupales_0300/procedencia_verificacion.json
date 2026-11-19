@@ -1,0 +1,513 @@
+{
+  "files": [
+    {
+      "source_name": "DSC02354.JPG",
+      "source_id": "1oo4riE4cJmc3pYqMzTF5e3AypMGOGo45",
+      "source_url": "https://drive.google.com/file/d/1oo4riE4cJmc3pYqMzTF5e3AypMGOGo45/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Change only the tiny clutter area on the far LEFT floor beside the standing woman's ankles: remove the loose unworn spare sneakers and the stray tall yellow/purple bottle standing with those shoes, replacing their footprint seamlessly with the same white plush rug. Keep ALL five foreground people absolutely unchanged, faces, curls, expressions, poses, worn shoes, body sizes, crop, lighting. Preserve all intentional Farmasi products arranged in the foreground center/bottom and man's dumbbell. No other edits, no new objects, no beautification.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-f88d9827-c025-4021-9060-215e33907b4f.png",
+      "correccion": "Retirar objetos personales residuales; ejecucion previa preservada.",
+      "output": {
+        "url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+        "title": "DSC02354_v02.jpg",
+        "id": "1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca",
+        "mime_type": "image/jpeg",
+        "size": "504209",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:38.948Z",
+        "updated_at": "2026-11-04T09:36:38.948Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02354_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "9ee3f58d5b9ee2e41d34c9ae17b0bfce82584402d8a28069b5768966fe79e580",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02340.JPG",
+      "source_id": "15qCnRhr6o2apfme_mqL8wzMetITchDtt",
+      "source_url": "https://drive.google.com/file/d/15qCnRhr6o2apfme_mqL8wzMetITchDtt/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Edit only residual personal clutter on the far LEFT floor edge of this already retouched group portrait: remove the pink personal bag if present, the loose unworn shoes/footwear and stray small yellow/purple bottle beside those shoes. Replace that small area seamlessly with matching white plush rug. Preserve the actual foreground Farmasi product display along the bottom center. Keep all FIVE foreground adults exactly unchanged: faces, expressions, hair, poses, hands, clothes, worn shoes, body dimensions, scale, crop. Keep man's dumbbell and all existing soft white studio shadows and lighting. No redesign, beautification, new objects or crop change.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-4b0b67c0-9aea-40aa-a8e1-251ce143ee6c.png",
+      "correccion": "Retirar objetos personales residuales; ejecucion previa preservada.",
+      "output": {
+        "url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+        "title": "DSC02340_v02.jpg",
+        "id": "19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86",
+        "mime_type": "image/jpeg",
+        "size": "523301",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:36.219Z",
+        "updated_at": "2026-11-04T09:36:36.219Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02340_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "b35b696e1bb20eaf78ae1587ff79ffba0b2147cc5a6f36d395cd3b4eefb6a09c",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02324.JPG",
+      "source_id": "1I5st8BQfYE96b_9QqM0xMxH5-8D2FYbd",
+      "source_url": "https://drive.google.com/file/d/1I5st8BQfYE96b_9QqM0xMxH5-8D2FYbd/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Edit only residual personal clutter on the far LEFT floor edge of this already retouched group portrait: remove the pink personal bag if present, the loose unworn shoes/footwear and stray small yellow/purple bottle beside those shoes. Replace that small area seamlessly with matching white plush rug. Preserve the actual foreground Farmasi product display along the bottom center. Keep all FIVE foreground adults exactly unchanged: faces, expressions, hair, poses, hands, clothes, worn shoes, body dimensions, scale, crop. Keep man's dumbbell and all existing soft white studio shadows and lighting. No redesign, beautification, new objects or crop change.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-169b733a-5708-48d2-bb0d-1a429eefae10.png",
+      "correccion": "Retirar objetos personales residuales; ejecucion previa preservada.",
+      "output": {
+        "url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+        "title": "DSC02324_v02.jpg",
+        "id": "1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2",
+        "mime_type": "image/jpeg",
+        "size": "470777",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:34.088Z",
+        "updated_at": "2026-11-04T09:36:34.088Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02324_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "b952644fc495c88d79eadcb1d1bc3840decc4a6130bae78e644407f5b8fbbad2",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02326.JPG",
+      "source_id": "1dBv5nxMuwHjbzw88_33O4FxwLqII2JGi",
+      "source_url": "https://drive.google.com/file/d/1dBv5nxMuwHjbzw88_33O4FxwLqII2JGi/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Edit only residual personal clutter on the far LEFT floor edge of this already retouched group portrait: remove the pink personal bag if present, the loose unworn shoes/footwear and stray small yellow/purple bottle beside those shoes. Replace that small area seamlessly with matching white plush rug. Preserve the actual foreground Farmasi product display along the bottom center. Keep all FIVE foreground adults exactly unchanged: faces, expressions, hair, poses, hands, clothes, worn shoes, body dimensions, scale, crop. Keep man's dumbbell and all existing soft white studio shadows and lighting. No redesign, beautification, new objects or crop change.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-65f5fb70-122e-4293-ac73-cf4e1d10ad95.png",
+      "correccion": "Retirar objetos personales residuales; ejecucion previa preservada.",
+      "output": {
+        "url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+        "title": "DSC02326_v02.jpg",
+        "id": "1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi",
+        "mime_type": "image/jpeg",
+        "size": "500453",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:31.378Z",
+        "updated_at": "2026-11-04T09:36:31.378Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02326_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "db1a257485a6507bca2ff5ec8dfbf6c79adf5e10e323278239a6b3db9e62c7c4",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02358.JPG",
+      "source_id": "18gTKUmTnx_s1XqG8kbFX-T0Nf8E5h2YK",
+      "source_url": "https://drive.google.com/file/d/18gTKUmTnx_s1XqG8kbFX-T0Nf8E5h2YK/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC02358.JPG. Preserve the actual foreground group count (five adults in first five pictures, four in remaining), poses and full product arrangement. Remove mirror reflections only, never foreground people.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-299ff5ce-eb2e-4160-b021-e14936e2610b.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+        "title": "DSC02358_v02.jpg",
+        "id": "1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv",
+        "mime_type": "image/jpeg",
+        "size": "524649",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:17.359Z",
+        "updated_at": "2026-11-04T09:33:17.359Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02358_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "c7ca10a047b8a7980443511f9e7444c60dbb80e766849ee9a7c918cb0c5c30bc",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02405.JPG",
+      "source_id": "1Zo-BNBNJlqU4TPTLQA8oVP9eJzfYUpMO",
+      "source_url": "https://drive.google.com/file/d/1Zo-BNBNJlqU4TPTLQA8oVP9eJzfYUpMO/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC02405.JPG. Preserve the actual foreground group count (five adults in first five pictures, four in remaining), poses and full product arrangement. Remove mirror reflections only, never foreground people.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-c90c99ff-1845-4b6f-af52-1fac5fb7eb41.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+        "title": "DSC02405_v02.jpg",
+        "id": "13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG",
+        "mime_type": "image/jpeg",
+        "size": "645343",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:15.034Z",
+        "updated_at": "2026-11-04T09:33:15.034Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02405_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "d0869f3824420005649bf2684d3cf0b48c2d8173f6092d9a24aa530dd4634120",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02400.JPG",
+      "source_id": "1p0q8kQSvjdFzGDOAY7LkzVCHtMFeGcxS",
+      "source_url": "https://drive.google.com/file/d/1p0q8kQSvjdFzGDOAY7LkzVCHtMFeGcxS/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC02400.JPG. Preserve the actual foreground group count (five adults in first five pictures, four in remaining), poses and full product arrangement. Remove mirror reflections only, never foreground people.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-1aebebe2-7dbb-4af1-bdba-a4e93de58b2e.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+        "title": "DSC02400_v02.jpg",
+        "id": "1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX",
+        "mime_type": "image/jpeg",
+        "size": "520267",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:12.715Z",
+        "updated_at": "2026-11-04T09:33:12.715Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02400_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "1cc17aa7669ef3880b4d10eabc3153352c3d9741a5241b5c4d19ec3f7c020306",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02352.JPG",
+      "source_id": "1O9vFWy4bZTUmOZ3qQJOu1ltWV9uVTRsf",
+      "source_url": "https://drive.google.com/file/d/1O9vFWy4bZTUmOZ3qQJOu1ltWV9uVTRsf/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Edit only the background clutter in this already retouched photograph. Remove the pink personal open bag at the far left floor edge and the small stray footwear/loose personal items immediately beside it; replace their area seamlessly with the same white plush rug. Keep all five foreground adults EXACTLY unchanged including faces, hair, expressions, poses, clothing, hands, scale, cropping. Keep the intentional foreground Farmasi product arrangement and the man's dumbbell. Preserve white studio soft shadows and existing lighting. Do not redraw or beautify people, do not crop or change anything else.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-d0197079-7d95-46c2-b080-cf1db29df7a0.png",
+      "correccion": "Retirar bolsa personal residual; ejecucion previa preservada.",
+      "output": {
+        "url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+        "title": "DSC02352_v02.jpg",
+        "id": "197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ",
+        "mime_type": "image/jpeg",
+        "size": "473880",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:10.158Z",
+        "updated_at": "2026-11-04T09:33:10.158Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02352_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "80b7d2e10d27b796974a1fc153bc5f20f381401ae7a3a03c6effe09ab951c514",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02363.JPG",
+      "source_id": "16l981CdJxUYDps66CBz-WBF086s3XYOK",
+      "source_url": "https://drive.google.com/file/d/16l981CdJxUYDps66CBz-WBF086s3XYOK/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC02363.JPG. Preserve the actual foreground group count (five adults in first five pictures, four in remaining), poses and full product arrangement. Remove mirror reflections only, never foreground people.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-95f19f1f-8e95-4498-b397-09b951b43fcd.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+        "title": "DSC02363_v02.jpg",
+        "id": "1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd",
+        "mime_type": "image/jpeg",
+        "size": "463877",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:07.841Z",
+        "updated_at": "2026-11-04T09:33:07.841Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02363_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "f3d5d639fbddc5286b272b71a982d3271251e5a974d3644015b9792b6228ecbe",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    },
+    {
+      "source_name": "DSC02370.JPG",
+      "source_id": "17FJ86VoQLmc8FOLJg4MTKTGdV8X0D13Y",
+      "source_url": "https://drive.google.com/file/d/17FJ86VoQLmc8FOLJg4MTKTGdV8X0D13Y/view?usp=drivesdk",
+      "estado": "en_revision",
+      "folder": "lote_10_grupales_0300",
+      "prompt": "Precise background-only retouch of this exact adult studio photograph. Preserve each REAL person's exact identity, facial features, expression, smile, gaze, skin texture, hair/flyaways/curls, body dimensions/proportions, original pose, hands/fingers, clothes, shoes, tattoos and jewelry. Keep original crop, scale, camera angle, subject position and aspect ratio; landscape stays landscape. Preserve every held and foreground Farmasi container, packaging, labels, shaker, dumbbells and their original positions; no invented printed text or altered products. Remove domestic room edges, wall/baseboard, acoustic foam, mirrors/reflected bystanders and stands/cables outside intended set. Extend refined WHITE studio backdrop with original soft cast shadows and subtle corner shading, faint natural warmth only, not flat catalog cutout or beige painted wall. Where visible keep/extend fine white plush rug into exposed room floor, dreamy softly diffused distant fibers and realistic contact shadows. Never zoom out to invent floor. Natural hair boundaries, no halos or erosion, no reshaping/beautification or changing teeth. No extra people, words or watermark. Exact source DSC02370.JPG. Preserve the actual foreground group count (five adults in first five pictures, four in remaining), poses and full product arrangement. Remove mirror reflections only, never foreground people.",
+      "model": "integrated_image_gen_model_not_exposed",
+      "generated_path": "/Users/user/.codex/generated_images/01a14fe0-4cdf-7f82-b1a8-050045f40b43/exec-ed1eee1b-e554-4ee9-b144-b78d00607dda.png",
+      "output": {
+        "url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+        "title": "DSC02370_v02.jpg",
+        "id": "1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS",
+        "mime_type": "image/jpeg",
+        "size": "641957",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:03.752Z",
+        "updated_at": "2026-11-04T09:27:03.752Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02370_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      "sha256_jpg": "a90177da2399907f7fa19f49825009bcf674a2ba2a8c2f1ecb2a4afd29cc7f8a",
+      "revision_visual": "Inspeccionada contra fuente; pendiente aprobacion cliente; no certificacion pixel a pixel o microtexto."
+    }
+  ],
+  "readback": {
+    "results": [
+      {
+        "url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+        "title": "DSC02354_v02.jpg",
+        "id": "1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca",
+        "mime_type": "image/jpeg",
+        "size": "504209",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:38.948Z",
+        "updated_at": "2026-11-04T09:36:38.948Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02354_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1H9iR6HNkyiB2Wl0cTsqFYOVvkOIJVUca/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+        "title": "DSC02340_v02.jpg",
+        "id": "19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86",
+        "mime_type": "image/jpeg",
+        "size": "523301",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:36.219Z",
+        "updated_at": "2026-11-04T09:36:36.219Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02340_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/19x-xSRT-ugLKjtUzGpzTSguDP-g4aR86/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+        "title": "DSC02324_v02.jpg",
+        "id": "1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2",
+        "mime_type": "image/jpeg",
+        "size": "470777",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:34.088Z",
+        "updated_at": "2026-11-04T09:36:34.088Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02324_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1o9qEwKVinc9jSkM97T-IwWE8thbj0jR2/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+        "title": "DSC02326_v02.jpg",
+        "id": "1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi",
+        "mime_type": "image/jpeg",
+        "size": "500453",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:36:31.378Z",
+        "updated_at": "2026-11-04T09:36:31.378Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02326_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1Gc4OCnvNKoGixbsuLbWQYx-l5NV19wFi/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+        "title": "DSC02358_v02.jpg",
+        "id": "1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv",
+        "mime_type": "image/jpeg",
+        "size": "524649",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:17.359Z",
+        "updated_at": "2026-11-04T09:33:17.359Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02358_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1VA-lb0GyQuhauTsIg0XRUcLnREN6Vzrv/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+        "title": "DSC02405_v02.jpg",
+        "id": "13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG",
+        "mime_type": "image/jpeg",
+        "size": "645343",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:15.034Z",
+        "updated_at": "2026-11-04T09:33:15.034Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02405_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+        "title": "DSC02400_v02.jpg",
+        "id": "1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX",
+        "mime_type": "image/jpeg",
+        "size": "520267",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:12.715Z",
+        "updated_at": "2026-11-04T09:33:12.715Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02400_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+        "title": "DSC02352_v02.jpg",
+        "id": "197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ",
+        "mime_type": "image/jpeg",
+        "size": "473880",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:10.158Z",
+        "updated_at": "2026-11-04T09:33:10.158Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02352_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/197GY9DQWDAFURnXb1DUgPzWE-lp8JkfZ/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+        "title": "DSC02363_v02.jpg",
+        "id": "1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd",
+        "mime_type": "image/jpeg",
+        "size": "463877",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:33:07.841Z",
+        "updated_at": "2026-11-04T09:33:07.841Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02363_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1n5QtxI4lI-SMicaxIrQkaiyDlzPTG3wd/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      },
+      {
+        "url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+        "title": "DSC02370_v02.jpg",
+        "id": "1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS",
+        "mime_type": "image/jpeg",
+        "size": "641957",
+        "file_or_folder": "file",
+        "created_at": "2026-11-04T09:27:03.752Z",
+        "updated_at": "2026-11-04T09:27:03.752Z",
+        "viewedByMeTime": null,
+        "display_title": "DSC02370_v02.jpg",
+        "display_url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+        "parent_ids": [
+          "1Of3avzyPDWUzdRFfPwIzA1NhOZDjsONR"
+        ],
+        "shared": false,
+        "can_download": true,
+        "can_list_children": false
+      }
+    ]
+  }
+}

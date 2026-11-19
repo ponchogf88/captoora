@@ -1,0 +1,35 @@
+{
+  "fecha": "2026-11-02",
+  "ciclo": "07:00",
+  "ejecucion": "2026-11-02T07:03:00-06:00",
+  "zona": "America/Monterrey",
+  "espacio_disponible_gib": 523,
+  "sesion_externa_utilizable": false,
+  "saldo_antes": null,
+  "saldo_despues": null,
+  "creditos_consumidos": 0,
+  "herramientas_reales": ["Poppler/pdftoppm", "metadatos locales", "SHA-256", "inspeccion visual"],
+  "terminadas": 0,
+  "corregidas": 0,
+  "avances_utiles": 2,
+  "conservadas_final": 0,
+  "rechazos_nuevos": 0,
+  "avances": [
+    {
+      "id": "FARMASI-DECK-RIGHTS",
+      "archivo": "campaigns/operacion-contenido/avances/2026-11-02_FARMASI_MANIFIESTO_DERECHOS.csv",
+      "sha256": "7e49bb3696fc8bcf7b1590af8a19c148f70d478f777cef11cac1803f3ec8cfd9",
+      "decision": "15 archivos inventariados; 14 visuales unicos; uso bloqueado hasta acreditar derechos y consentimientos"
+    },
+    {
+      "id": "FARMASI-DECK-COMPARE",
+      "archivo": "campaigns/operacion-contenido/avances/2026-11-02_FARMASI_COMPARATIVA_VARIANTES.md",
+      "sha256": "03c0d8e12df0d0d5d14a703641c9b14c7d9591923d35d9663555f2163ccd5cc8",
+      "decision": "EDITORIAL_EVELYN_V2 es solo base estructural; ninguna variante esta lista para envio"
+    }
+  ],
+  "publicado": false,
+  "programado": false,
+  "compras": false,
+  "permisos_drive_modificados": false
+}

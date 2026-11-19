@@ -1,0 +1,19 @@
+{
+  "cycle_at": "2026-11-02T06:02:05-06:00",
+  "timezone": "America/Monterrey",
+  "disk_available_gib": 523,
+  "provider_session_verified": false,
+  "credits_before": null,
+  "credits_after": null,
+  "credits_consumed": 0,
+  "finished": 0,
+  "corrected": 0,
+  "useful_advances": 2,
+  "rejected": 0,
+  "advanced_ids": ["P15", "P16", "FARMASI-DECK"],
+  "external_tools_executed": [],
+  "published": false,
+  "scheduled": false,
+  "purchases": false,
+  "permissions_changed": false
+}

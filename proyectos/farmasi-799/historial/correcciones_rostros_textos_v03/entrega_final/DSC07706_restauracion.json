@@ -1,0 +1,93 @@
+{
+  "source_name": "DSC07706.JPG",
+  "source_id": "1ZpzivGn-VHnWmfNDPFzEaVGdLxj335gf",
+  "source_url": "https://drive.google.com/file/d/1ZpzivGn-VHnWmfNDPFzEaVGdLxj335gf/view?usp=drivesdk",
+  "folder_anterior": "lote_14_chica07722_sola",
+  "version": "v03",
+  "method": "restauracion_local_pixeles_originales_autorizada_sin_generacion",
+  "original_sha256": "6e104a8a7003ab3ebb3fe787f6f80834a60367db4b05ac03c0eec06e2ec86ff5",
+  "base_v02_sha256": "360a9cf7474da5ee5a2dc25c9eee29101a7dc856e470fc1330583dc8e227a039",
+  "size": [
+    6192,
+    4128
+  ],
+  "base": "v02 escalada Lanczos a resolucion del original; sin cambiar encuadre",
+  "outside_mask_changed_pixels": 0,
+  "regions": [
+    {
+      "role": "rostro",
+      "polygon_output_v02": [
+        [
+          711,
+          257
+        ],
+        [
+          745,
+          241
+        ],
+        [
+          768,
+          243
+        ],
+        [
+          778,
+          258
+        ],
+        [
+          779,
+          282
+        ],
+        [
+          766,
+          305
+        ],
+        [
+          741,
+          326
+        ],
+        [
+          721,
+          333
+        ],
+        [
+          702,
+          320
+        ],
+        [
+          690,
+          306
+        ],
+        [
+          691,
+          286
+        ]
+      ],
+      "similarity": [
+        [
+          0.9962924074715289,
+          0.004163463718876494,
+          0.8971555712918821
+        ],
+        [
+          -0.004163463718876494,
+          0.9962924074715289,
+          3.8841586067453
+        ]
+      ],
+      "registration_inliers": 29,
+      "light_gain": 1.5,
+      "light_offset_rgb": [
+        -129.5,
+        -140.0,
+        -140.0
+      ],
+      "original_near_white_fraction": 0.10118145257276019,
+      "pixels_covered": 118465
+    }
+  ],
+  "estado": "correccion_marcada_en_revision",
+  "limitations": "No inventa texto/rasgos: detalles quemados o desenfocados en JPG original no son recuperables. Fondo ampliado no adquiere detalle optico nuevo.",
+  "scope": "Solo zonas de captura usuario; no restauracion general de envases no marcados",
+  "limitacion": null,
+  "png_sha256": "a75ff788b3bebccf8a42e1454c1897dfb7bf9dfe592b1889713aaf1844372cdf"
+}

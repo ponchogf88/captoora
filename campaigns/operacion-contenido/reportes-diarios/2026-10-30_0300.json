@@ -1,0 +1,33 @@
+{
+  "cycle_at": "2026-10-30T03:00:00-06:00",
+  "local_free_gib": 589,
+  "browser_production_sessions": 0,
+  "live_balances_verified": false,
+  "credits_consumed": 0,
+  "finished_pieces": 0,
+  "useful_advances": 2,
+  "advances": [
+    {
+      "id": "P05",
+      "status": "en_produccion",
+      "kind": "preproduccion",
+      "tool": "Edición de texto local (2026-10-30)",
+      "evidence": "campaigns/operacion-contenido/avances/2026-10-30_P05_MICROACCIONES_MANOS.md",
+      "bytes": 2104,
+      "sha256": "7dbfa8a693e9cac62aa3c4245027175b25fe028070daed36544ba13d2ca84ef8"
+    },
+    {
+      "id": "P08",
+      "status": "en_produccion",
+      "kind": "preproduccion",
+      "tool": "Edición de texto local (2026-10-30)",
+      "evidence": "campaigns/operacion-contenido/avances/2026-10-30_P08_SECUENCIA_REGALO.md",
+      "bytes": 2476,
+      "sha256": "01996130de865c2b55974c95acc98f636dab083bb7ab1748f9bf730b35acbcf3"
+    }
+  ],
+  "publishing_or_external_side_effects": false,
+  "daily_revision_ran": false,
+  "daily_revision_due_at_0800": true
+}
+

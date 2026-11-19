@@ -1,0 +1,30 @@
+{
+  "cycle": "2026-10-30T05:00:00-06:00",
+  "checked_at": "2026-10-30T05:03:04-06:00",
+  "local_free_gib": 590,
+  "live_provider_session": false,
+  "credits_consumed": 0,
+  "finished": [],
+  "advances": [
+    {
+      "id": "P09",
+      "status": "preproduction",
+      "tool": "Edición de texto local",
+      "file": "campaigns/operacion-contenido/avances/2026-10-30_P09_PROTOCOLO_BALANCE_BLANCO.md",
+      "bytes": 2100,
+      "sha256": "b44ca1a499f457a3374b832a13c5e4179028ef6f46678e1caace952206c34fd6"
+    },
+    {
+      "id": "P10",
+      "status": "preproduction",
+      "tool": "Edición de texto local",
+      "file": "campaigns/operacion-contenido/avances/2026-10-30_P10_PROTOCOLO_BORDES.md",
+      "bytes": 2181,
+      "sha256": "2010cb7cc0c69b10de81fab197c840d961cfaeed13542badd2a824b61dbe8aa7"
+    }
+  ],
+  "corrected": [],
+  "rejected": [],
+  "register_rows": 18,
+  "next": "Grabar prueba propia controlada; corregir EP01 solo con sesión Canva/CapCut y saldo verificados; ejecutar revision_diaria.py --limit 8 a las 08:00."
+}
