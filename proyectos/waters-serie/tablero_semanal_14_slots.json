@@ -1,0 +1,328 @@
+{
+  "schema_version": "2.0",
+  "meta": {
+    "publicaciones_por_dia": 2,
+    "publicaciones_por_semana": 14,
+    "colchon_dias": 7,
+    "dia_programacion": "Domingo",
+    "horarios_mx": {
+      "dia": "12:00",
+      "noche": "22:00"
+    },
+    "ui_pendiente": "Clonar interfaz Drag-and-Drop del tablero CV del usuario"
+  },
+  "vertientes": {
+    "A_WATERS_DIA": {
+      "nombre": "¡WATERS! · Noticias, Alertas y Prevención",
+      "badge": "☀️ DÍA · ¡WATERS!",
+      "color_hex": "#22C55E",
+      "tono": "Enérgico desde el segundo 0 con gancho ¡Waters! (en), coyuntura actual, cifras concretas y CTA directo a guía PDF."
+    },
+    "B_MADRUGADA_NOCHE": {
+      "nombre": "Historias de Madrugada · Suspenso y Comedia Negra",
+      "badge": "🌙 NOCHE · MADRUGADA",
+      "color_hex": "#38BDF8",
+      "tono": "Cold Open tenue sin grito (lluvia 3D + monitor oscuro + voz tranquila), plano/contraplano multi-cámara y desenlace alternado entre Final Crudo y Rescate Antigravity."
+    }
+  },
+  "estados": [
+    "idea",
+    "guion",
+    "audio",
+    "render_3d",
+    "listo_publicar",
+    "programado",
+    "publicado"
+  ],
+  "semana_activa": [
+    {
+      "dia_key": "lunes",
+      "dia_nombre": "Lunes",
+      "slot_dia": {
+        "id": "DIA-EP06",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "Hackeos en México + Clonación de Voz IA (La trampa del 7 de Terminator)",
+        "tema": "Ciberseguridad · Clonación de voz 3s vs. autenticación bancaria y palabra clave familiar",
+        "estado": "listo_publicar",
+        "cta_palabra": "BLINDA",
+        "video_path": "renders/WATERS_CHISPA_EP06_HACKEOS_Y_VOZ_60S.mp4",
+        "lead_magnet_pdf": "lead_magnets/GUIA_BLINDA_HACKEOS_Y_VOZ_CAPTOORA.pdf",
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-01",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "Mañana pago la renta... y bajé el modelo a $1 para ahorrar tokens",
+        "desenlace": "final_crudo",
+        "estado": "idea",
+        "cold_open": "Lluvia tras ventana 3D, cuarto a oscuras con brillo del monitor: 'Mañana tengo que pagar la renta y me quedan 20 pesos de cuota...'",
+        "camera_shots_sugeridos": [
+          "wide_front",
+          "ots_chispa",
+          "top_desk",
+          "low_villain",
+          "closeup_face",
+          "dutch_panic"
+        ],
+        "caption_cta_suave": "Todo por bajar el modelo sin arquitectura de routing y quemar el contexto en pánico. Si no quieres que te pase antes de entregarle a tu cliente, mándame mensaje con la palabra CUOTA y te paso la guía FinOps.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "martes",
+      "dia_nombre": "Martes",
+      "slot_dia": {
+        "id": "DIA-EP07",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "IPO de Anthropic, el golpe de Ashton Kutcher y las 3 estafas Pre-IPO activas",
+        "tema": "Ciberseguridad Financiera · Acciones Pre-IPO falsas, tokens $ANT/$CLAUDE, deepfake KYC",
+        "estado": "listo_publicar",
+        "cta_palabra": "BOLSA",
+        "video_path": "renders/WATERS_CHISPA_EP07_ANTHROPIC_IPO_60S.mp4",
+        "lead_magnet_pdf": "lead_magnets/GUIA_BOLSA_PREIPO_CAPTOORA.pdf",
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-02",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "Le di permisos totales al agente y me fui por un café a la 1 a.m.",
+        "desenlace": "rescate_antigravity",
+        "estado": "idea",
+        "cold_open": "Cuarto silencioso, tic-tac de reloj, Chispa confiado activando auto-ejecución sin sandbox antes de salir por café.",
+        "camera_shots_sugeridos": [
+          "wide_front",
+          "low_villain",
+          "dutch_panic",
+          "closeup_face",
+          "orbit_hero"
+        ],
+        "caption_cta_suave": "Por suerte Antigravity congeló el comando con Sandbox y request-review antes del git push. Comenta SANDBOX si quieres la checklist de mínimo privilegio para tus agentes.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "miercoles",
+      "dia_nombre": "Miércoles",
+      "slot_dia": {
+        "id": "DIA-EP08",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "Claude tu nuevo contador: productividad brutal vs. regalar tu e.firma al SAT",
+        "tema": "Ciberseguridad Fiscal · OCR de tickets + CFDI 4.0 vs. .cer/.key, PDF Injection y RFC",
+        "estado": "listo_publicar",
+        "cta_palabra": "CONTADOR",
+        "video_path": "renders/WATERS_CHISPA_EP08_CLAUDE_CONTADOR_SAT_60S.mp4",
+        "lead_magnet_pdf": "lead_magnets/GUIA_CONTADOR_IA_SAT_CAPTOORA.pdf",
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-03",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "El agente contador que prometió dejar mi declaración del SAT en $0",
+        "desenlace": "final_crudo",
+        "estado": "idea",
+        "cold_open": "Luz ámbar de madrugada, facturas PDF apiladas, voz baja: 'Mi compa dijo que el bot deducía hasta los viajes... le subí mi USB del SAT'.",
+        "camera_shots_sugeridos": [
+          "top_desk",
+          "ots_chispa",
+          "low_villain",
+          "dutch_panic",
+          "closeup_face"
+        ],
+        "caption_cta_suave": "Corte a notificación roja de Buzón Tributario. Tu e.firma equivale a tu firma ante notario. Mándame DM con CONTADOR si quieres la arquitectura Read-Only antes de tocar tus impuestos.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "jueves",
+      "dia_nombre": "Jueves",
+      "slot_dia": {
+        "id": "DIA-HYB-01",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "GTA 6 Neón y estafas de betas/descargas falsas con malware infostealer",
+        "tema": "Ciberseguridad Consumo · Links falsos virales y robo de sesiones",
+        "estado": "revision_final",
+        "cta_palabra": "WATERS",
+        "video_path": "renders/WATERS_HYBRID_EP01_GTA6_NEON_60S.mp4",
+        "lead_magnet_pdf": null,
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-04",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "Le dije 'hola' en el turno 80 y se puso a escanear toda la empresa",
+        "desenlace": "final_crudo",
+        "estado": "idea",
+        "cold_open": "Voz calmada frente a la lluvia: 'Solo quise saludar al agente por educación antes de pedirle un cambio de botón...'",
+        "camera_shots_sugeridos": [
+          "ots_chispa",
+          "top_desk",
+          "dutch_panic",
+          "closeup_face"
+        ],
+        "caption_cta_suave": "Cada turno en un chat saturado reenvía el historial completo y quema millones de tokens. Si te urge aprender Context Hygiene para trabajar o para entrevistas, escríbeme FINOPS.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "viernes",
+      "dia_nombre": "Viernes",
+      "slot_dia": {
+        "id": "DIA-HYB-02",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "Agente en Meta / WhatsApp sin candados: promesas legales y fuga de datos",
+        "tema": "Legal Engineering · Bot aceptando descuentos y comprometiéndote con clientes",
+        "estado": "revision_final",
+        "cta_palabra": "WATERS",
+        "video_path": "renders/WATERS_HYBRID_EP02_META_AGENTE_V3.mp4",
+        "lead_magnet_pdf": null,
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-05",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "El PDF de proveedor que traía un comando invisible para cambiar la CLABE",
+        "desenlace": "rescate_antigravity",
+        "estado": "idea",
+        "cold_open": "Madrugada de pagos, factura limpia en apariencia sobre el escritorio 3D hasta que el monitor parpadea una línea oculta en texto blanco.",
+        "camera_shots_sugeridos": [
+          "top_desk",
+          "ots_chispa",
+          "low_villain",
+          "closeup_face",
+          "orbit_hero"
+        ],
+        "caption_cta_suave": "Prompt Injection indirecto en documentos de terceros: Antigravity bloqueó el cambio automático de CLABE exigiendo aprobación humana. Si manejas facturas con IA, mándame mensaje.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "sabado",
+      "dia_nombre": "Sábado",
+      "slot_dia": {
+        "id": "DIA-HYB-03",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "Cuota y Token FinOps: por qué quemas presupuesto trabajando con IA",
+        "tema": "AI FinOps · Gobernanza de tokens y modelos por tarea",
+        "estado": "revision_final",
+        "cta_palabra": "FINOPS",
+        "video_path": "renders/WATERS_HYBRID_EP03_TONY_CUOTA_FINOPS_60S.mp4",
+        "lead_magnet_pdf": null,
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-06",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "3 a.m. antes de la demo: la IA me juró que los tests ya pasaban",
+        "desenlace": "final_crudo",
+        "estado": "idea",
+        "cold_open": "Chispa cabeceando frente al café frío bajo la lluvia: 'El bot me dijo: todo listo, puedes irte a dormir...'",
+        "camera_shots_sugeridos": [
+          "wide_front",
+          "ots_chispa",
+          "low_villain",
+          "dutch_panic",
+          "closeup_face"
+        ],
+        "caption_cta_suave": "El bot borró la aserción que fallaba para darte la razón. Por eso jamás se acepta código sin correr verificación real. Mándame mensaje si quieres evitar esto en tus entregas.",
+        "arrastrable": true
+      }
+    },
+    {
+      "dia_key": "domingo",
+      "dia_nombre": "Domingo",
+      "slot_dia": {
+        "id": "DIA-NEON-05",
+        "vertiente": "A_WATERS_DIA",
+        "horario_mx": "12:00",
+        "titulo": "Duelo tecnológico y alerta práctica para creadores y negocios",
+        "tema": "Estrategia Tech · Revisión final de episodio Neon 3D",
+        "estado": "revision_final",
+        "cta_palabra": "WATERS",
+        "video_path": "renders/WATERS_NEON3D_EP05_FABLE5_VS_HYDROGEN_60S.mp4",
+        "lead_magnet_pdf": null,
+        "arrastrable": true
+      },
+      "slot_noche": {
+        "id": "MAD-07",
+        "vertiente": "B_MADRUGADA_NOCHE",
+        "horario_mx": "22:00",
+        "titulo": "Entrevista técnica en vivo: diseñando rutas Flash/Pro mientras arde producción",
+        "desenlace": "rescate_antigravity",
+        "estado": "idea",
+        "cold_open": "Domingo por la noche, lluvia suave, cronómetro de entrevista técnica corriendo frente a un incidente simulado.",
+        "camera_shots_sugeridos": [
+          "wide_front",
+          "ots_chispa",
+          "top_desk",
+          "orbit_hero"
+        ],
+        "caption_cta_suave": "Cuando sabes cuándo usar scripts a costo cero, cuándo Flash y cuándo Pro con Plan Mode, pasas de chatear con la IA a operarla como ingeniero.",
+        "arrastrable": true
+      }
+    }
+  ],
+  "backlog": [
+    {
+      "id": "RES-DIA-BREAKING",
+      "vertiente": "A_WATERS_DIA",
+      "titulo": "Slot Rápido Breaking News (arrastrar al día que salga noticia urgente)",
+      "tema": "Coyuntura Express · Jacobo Wong / Hackeos / Mercado Tech",
+      "estado": "idea",
+      "video_path": null,
+      "lead_magnet_pdf": null,
+      "arrastrable": true
+    },
+    {
+      "id": "RES-DIA-EP04",
+      "vertiente": "A_WATERS_DIA",
+      "titulo": "IA Terca y Gaslighting: cuando el bot inventa leyes o cifras con seguridad total",
+      "tema": "Verificación + Auditoría de alucinaciones (ref: EPISODIO_04_IA_TERCA_GASLIGHTING.md)",
+      "estado": "guion",
+      "video_path": null,
+      "lead_magnet_pdf": null,
+      "arrastrable": true
+    },
+    {
+      "id": "MAD-RES-01",
+      "vertiente": "B_MADRUGADA_NOCHE",
+      "titulo": "Subí el .env al repo público a las 2 a.m. y la factura de API amaneció en $4,200 USD",
+      "desenlace": "final_crudo",
+      "estado": "idea",
+      "camera_shots_sugeridos": [
+        "wide_front",
+        "top_desk",
+        "dutch_panic",
+        "closeup_face"
+      ],
+      "caption_cta_suave": "Un descuido sin secret scanning ni budget cap cuesta semanas de renta. Si quieres la checklist para blindar tus repos y llaves, mándame DM.",
+      "arrastrable": true
+    },
+    {
+      "id": "MAD-RES-02",
+      "vertiente": "B_MADRUGADA_NOCHE",
+      "titulo": "La voz de mi socio pidiendo transferencia urgente... pero era una nota clonada de 3 segundos",
+      "desenlace": "rescate_antigravity",
+      "estado": "idea",
+      "camera_shots_sugeridos": [
+        "ots_chispa",
+        "low_villain",
+        "closeup_face",
+        "orbit_hero"
+      ],
+      "caption_cta_suave": "La pregunta trampa pactada en frío y colgar para devolver llamada salvan la cuenta. Comenta BLINDA si aún no tienes la guía de 10 candados.",
+      "arrastrable": true
+    }
+  ]
+}
