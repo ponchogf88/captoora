@@ -1,8 +1,10 @@
 # Continuidad Total de Conversación y Proyecto Captoora Studio (Mac -> Windows)
 
 > **Rama oficial en GitHub:** `puerto-vallarta-3-zonas-web-gbp-2026` en `https://github.com/ponchogf88/captoora`  
-> **Última actualización sincronizada:** `2026-11-19`  
-> **Conversación completa palabra por palabra:** [HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md](HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md)
+> **Última actualización sincronizada:** `2026-11-20`  
+> **Conversación Puerto Vallarta completa:** [HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md](HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md)  
+> **Conversación MTY, Contador PFAE 612, 7 Motores, Médico Asesino & Claves:** [HISTORIAL_COMPLETO_SESION_CRECIMIENTO_MTY_2026_11.md](HISTORIAL_COMPLETO_SESION_CRECIMIENTO_MTY_2026_11.md) · [HANDOFF_WINDOWS_MTY_CRECIMIENTO_2026_11.md](HANDOFF_WINDOWS_MTY_CRECIMIENTO_2026_11.md)  
+> **Continuidad Biogen 2027 & Omnicanal:** [HANDOFF_WINDOWS_BIOGEN_2027.md](HANDOFF_WINDOWS_BIOGEN_2027.md)
 
 ---
 
@@ -11,7 +13,7 @@
 Cuando abras Antigravity (o Claude / Gemini CLI / Codex) en tu computadora de **Windows**, escribe este prompt exacto:
 
 ```text
-Lee completos los archivos docs/CONTINUIDAD_CONVERSACION_WINDOWS.md, docs/HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md y .agents/skills/captoora-growth-playbook/SKILL.md. Ejecuta `uv run pytest -v` para confirmar entorno y retomemos exactamente donde nos quedamos en Puerto Vallarta respetando todas las reglas de marca, copy y separación por zonas.
+Lee completos los archivos docs/CONTINUIDAD_CONVERSACION_WINDOWS.md, docs/HANDOFF_WINDOWS_MTY_CRECIMIENTO_2026_11.md, docs/HANDOFF_WINDOWS_BIOGEN_2027.md, docs/HISTORIAL_COMPLETO_SESION_CRECIMIENTO_MTY_2026_11.md, docs/HISTORIAL_COMPLETO_SESION_PV_2026_11_18.md y .agents/skills/captoora-growth-playbook/SKILL.md. Ejecuta `uv sync` y `uv run pytest -v` para confirmar el entorno en Windows y retomemos exactamente donde nos quedamos respetando todas las reglas de marca, copy, PFAE 612 ($0 Ads) y separación por zonas.
 ```
 
 ---
