@@ -9,7 +9,17 @@ import {
 import { ThreeCanvas } from '@remotion/three';
 import { useThree } from '@react-three/fiber';
 import * as THREE from 'three';
-import { NeonBot3D, NeonExpression } from '../components/NeonBot3D';
+import {
+  ChispaAstronaut3D,
+  ChispaExpression,
+} from '../components/ChispaAstronaut3D';
+import {
+  FloatingHouseDiorama3D,
+  GoldenKitBox3D,
+  Gta6ViceCityDiorama3D,
+  SilverLaptop3D,
+  StudioFloor3D,
+} from '../components/ChispaStageProps3D';
 import {
   ClaudeStarburstLogo,
   GeminiSparkleLogo,
@@ -26,12 +36,28 @@ export type NeonCardType =
   | 'three_secrets'
   | 'cta_wink';
 
+export type StagePropType =
+  | 'none'
+  | 'laptop'
+  | 'floating_house'
+  | 'gta6_city'
+  | 'kit_box';
+
 export interface NeonBeatItem {
   durationInFrames: number;
   topTag: string;
   accentColor: string;
-  expression: NeonExpression;
+  /** Maps both legacy 5 expressions and new 8 Chispa expressions seamlessly */
+  expression: ChispaExpression | string;
   cardType: NeonCardType;
+  stageProp?: StagePropType;
+  stepBadge?: string;
+  pillText?: string;
+  headlinePrefix?: string;
+  headlineFocus?: string;
+  headlineSuffix?: string;
+  terminalCmd?: string;
+  terminalSub?: string;
   heroTitle?: string;
   heroSubtitle?: string;
   speaking?: boolean;
@@ -42,460 +68,695 @@ export interface Neon3DEpisodeProps {
   beats: NeonBeatItem[];
 }
 
-const NeonParticles: React.FC<{ frame: number; accentColor: string }> = ({
+function mapExpression(expr: string): ChispaExpression {
+  const valid: ChispaExpression[] = [
+    'happy_open',
+    'sad_cloud',
+    'determined_hacker',
+    'happy_arcs',
+    'wink',
+    'zen_proud',
+    'shock_sweat',
+    'star_eyes',
+  ];
+  if (valid.includes(expr as ChispaExpression)) {
+    return expr as ChispaExpression;
+  }
+  switch (expr) {
+    case 'shock':
+      return 'shock_sweat';
+    case 'skeptic':
+      return 'sad_cloud';
+    case 'laser_focus':
+      return 'determined_hacker';
+    case 'happy_wink':
+      return 'wink';
+    default:
+      return 'happy_open';
+  }
+}
+
+const POP_FRAMES = [2, 8, 24, 36, 48];
+
+const StudioBackdropParticles: React.FC<{ frame: number; accentColor: string }> = ({
   frame,
   accentColor,
 }) => {
-  const stars = useMemo(() => {
-    const arr: { pos: [number, number, number]; size: number; alt: boolean }[] = [];
-    for (let i = 0; i < 85; i++) {
-      const s1 = Math.sin(i * 19.31) * 43758.5453;
-      const s2 = Math.sin(i * 73.17) * 43758.5453;
-      const s3 = Math.sin(i * 41.89) * 43758.5453;
+  const dots = useMemo(() => {
+    const arr: { pos: [number, number, number]; size: number; gold: boolean }[] = [];
+    for (let i = 0; i < 42; i++) {
+      const s1 = Math.sin(i * 23.17) * 43758.5453;
+      const s2 = Math.sin(i * 61.91) * 43758.5453;
+      const s3 = Math.sin(i * 11.43) * 43758.5453;
       arr.push({
         pos: [
-          (s1 - Math.floor(s1) - 0.5) * 16,
-          (s2 - Math.floor(s2) - 0.5) * 20,
-          -1.5 - (s3 - Math.floor(s3)) * 12,
+          (s1 - Math.floor(s1) - 0.5) * 9,
+          (s2 - Math.floor(s2)) * 5.8 - 0.3,
+          -2.5 - (s3 - Math.floor(s3)) * 5,
         ],
-        size: 0.02 + (i % 4) * 0.012,
-        alt: i % 3 === 0,
+        size: 0.018 + (i % 3) * 0.012,
+        gold: i % 2 === 0,
       });
     }
     return arr;
   }, []);
 
-  const drift = (frame * 0.01) % 6;
+  const floatOffset = ((frame * 0.008) % 2) - 1;
 
   return (
-    <group position={[0, -drift * 0.2, 0]}>
-      {stars.map((s, idx) => (
-        <mesh key={idx} position={s.pos}>
-          <sphereGeometry args={[s.size, 8, 8]} />
-          <meshBasicMaterial color={s.alt ? accentColor : '#94A3B8'} />
+    <group position={[0, floatOffset * 0.25, 0]}>
+      {dots.map((d, idx) => (
+        <mesh key={idx} position={d.pos}>
+          <sphereGeometry args={[d.size, 8, 8]} />
+          <meshBasicMaterial
+            color={d.gold ? '#FACC15' : accentColor}
+            transparent
+            opacity={0.55}
+          />
         </mesh>
       ))}
     </group>
   );
 };
 
-const NeonScene3D: React.FC<{
+const ChispaScene3D: React.FC<{
   beat: NeonBeatItem;
+  beatIndex: number;
   localFrame: number;
-}> = ({ beat, localFrame }) => {
+}> = ({ beat, beatIndex, localFrame }) => {
   const globalFrame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const { camera } = useThree();
   const t = globalFrame / fps;
 
-  const isHeroCenter =
-    beat.cardType === 'alert_intro' || beat.cardType === 'cta_wink';
+  const chispaExpr = mapExpression(beat.expression);
+  const propType: StagePropType =
+    beat.stageProp ??
+    (beat.cardType === 'vs_duel'
+      ? 'floating_house'
+      : beat.cardType === 'gta6_build'
+      ? 'gta6_city'
+      : beat.cardType === 'cta_wink'
+      ? 'kit_box'
+      : beat.cardType === 'bench_race' || beat.cardType === 'three_secrets'
+      ? 'laptop'
+      : 'none');
 
-  const camX = isHeroCenter
-    ? Math.sin(t * 1.1) * 0.4 +
-      (beat.expression === 'shock' && localFrame < 14
-        ? Math.sin(localFrame * 3.1) * 0.1
-        : 0)
-    : Math.sin(t * 0.85) * 0.65;
-  const camY = isHeroCenter ? 0.45 : -0.25;
-  const camZ = isHeroCenter
-    ? interpolate(localFrame, [0, 18], [8.2, 6.8], { extrapolateRight: 'clamp' })
-    : 8.7;
-  const targetY = isHeroCenter ? -0.32 : -1.2;
-
+  // Dynamic gentle studio camera motion — close juicy designer-toy framing above 260px safe zone
+  const shockShake =
+    chispaExpr === 'shock_sweat' && localFrame < 14
+      ? Math.sin(localFrame * 3.1) * 0.07
+      : 0;
+  const camX = Math.sin(t * 0.72) * 0.24 + shockShake;
+  const camY = 1.50;
+  const camZ = 10.15;
   camera.position.set(camX, camY, camZ);
-  camera.lookAt(new THREE.Vector3(0, targetY, 0));
+  camera.lookAt(new THREE.Vector3(0, 1.15, 0));
+
+  // Floor color adapts subtly per mood (cool obsidian slate vs warm oak studio desk on CTA/kit beats)
+  const floorColor =
+    propType === 'kit_box'
+      ? '#483226'
+      : propType === 'laptop' || propType === 'gta6_city'
+      ? '#252B39'
+      : '#2B313F';
+
+  // Character X placement balances with side prop on the floor without touching
+  let charX = 0;
+  let charRotY = 0;
+  if (propType === 'floating_house' || propType === 'gta6_city' || propType === 'laptop') {
+    charX = -0.90;
+    charRotY = 0.22;
+  } else if (propType === 'kit_box') {
+    charX = 0.82;
+    charRotY = -0.22;
+  }
+
+  const charY = -0.22; // Soles of moon-boots rest right on floorY = -1.05
+  const jumpHeight = Math.abs(Math.sin(t * 4.5)) * 0.08;
 
   return (
     <>
-      <color attach="background" args={['#020308']} />
-      <fog attach="fog" args={['#020308', 9, 22]} />
+      <color attach="background" args={['#02040A']} />
+      <fog attach="fog" args={['#02040A', 13, 26]} />
 
-      <ambientLight intensity={0.95} />
-      <directionalLight position={[4, 7, 6]} intensity={2.3} color="#FFFFFF" />
-      <directionalLight position={[-5, 4, 2]} intensity={2.2} color={beat.accentColor} />
-      <directionalLight position={[5, -2, -3]} intensity={1.8} color="#38BDF8" />
-      <pointLight position={[0, 1.8, 3.6]} intensity={2.8} color={beat.accentColor} />
+      {/* Warm Studio Key + Cool Rim + Accent Fill */}
+      <ambientLight intensity={1.05} />
+      <directionalLight position={[4, 8, 6]} intensity={2.2} color="#FFFDF7" castShadow />
+      <directionalLight position={[-5, 5, 3]} intensity={1.6} color="#93C5FD" />
+      <pointLight position={[0, 1.5, 4.5]} intensity={1.9} color={beat.accentColor} />
 
-      <NeonParticles frame={globalFrame} accentColor={beat.accentColor} />
+      <StudioBackdropParticles frame={globalFrame} accentColor={beat.accentColor} />
 
-      <gridHelper
-        args={[20, 24, beat.accentColor, '#0A1020']}
-        position={[0, -1.65, 0]}
+      <StudioFloor3D
+        floorColor={floorColor}
+        charPos={[charX, charY, 0.15]}
+        charJumpHeight={jumpHeight}
+        floorY={-1.05}
       />
 
-      <NeonBot3D
+      <ChispaAstronaut3D
         frame={globalFrame}
+        localFrame={localFrame}
         fps={fps}
-        expression={beat.expression}
+        expression={chispaExpr}
         accentColor={beat.accentColor}
+        position={[charX, charY, 0.15]}
+        rotationY={charRotY}
+        scale={1.02}
         speaking={beat.speaking ?? true}
-        scale={isHeroCenter ? 1.05 : 0.96}
+        popFrames={POP_FRAMES}
       />
 
-      {beat.expression === 'shock' &&
-        [0, 1, 2].map((i) => {
-          const p = ((localFrame + i * 20) % 60) / 60;
-          const s = 0.85 + p * 2.5;
-          return (
-            <mesh key={i} position={[0, 0.55, -0.45]} scale={[s, s, 1]}>
-              <torusGeometry args={[1, 0.025, 12, 48]} />
-              <meshBasicMaterial
-                color={beat.accentColor}
-                transparent
-                opacity={(1 - p) * 0.85}
-              />
-            </mesh>
-          );
-        })}
+      {propType === 'laptop' && (
+        <SilverLaptop3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[0.88, -1.04, -0.06]}
+          rotationY={-0.38}
+          scale={0.92}
+          accentColor={beat.accentColor}
+        />
+      )}
+
+      {propType === 'floating_house' && (
+        <FloatingHouseDiorama3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[0.92, -0.04, -0.15]}
+          scale={0.88}
+        />
+      )}
+
+      {propType === 'gta6_city' && (
+        <Gta6ViceCityDiorama3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[0.94, -0.54, -0.18]}
+          scale={0.78}
+        />
+      )}
+
+      {propType === 'kit_box' && (
+        <GoldenKitBox3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[-0.86, -0.57, -0.04]}
+        />
+      )}
+
+      {/* Subtle golden glow light in key beats */}
+      {beatIndex >= 2 && (
+        <pointLight position={[0.9, 0.5, 2.5]} intensity={0.9} color="#FDE68A" />
+      )}
     </>
   );
 };
 
-const CardShell: React.FC<{
-  accentColor: string;
-  headerRight: string;
-  title: string;
+/**
+ * Elastic spring Pop-In container synchronized cleanly to exact SFX frames
+ */
+const PopBox: React.FC<{
+  localFrame: number;
+  popFrame: number;
   children: React.ReactNode;
-}> = ({ accentColor, headerRight, title, children }) => {
-  const frame = useCurrentFrame();
+  style?: React.CSSProperties;
+}> = ({ localFrame, popFrame, children, style }) => {
   const { fps } = useVideoConfig();
-  const pop = spring({ frame, fps, config: { damping: 14, stiffness: 120 } });
-
+  if (localFrame < popFrame) {
+    return (
+      <div
+        style={{
+          ...style,
+          opacity: 0,
+          transform: 'scale(0.65) translateY(12px)',
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
+  const s = spring({
+    frame: localFrame - popFrame,
+    fps,
+    config: { damping: 10, stiffness: 260, mass: 0.72 },
+  });
   return (
     <div
       style={{
-        width: '100%',
-        transform: `scale(${interpolate(pop, [0, 1], [0.92, 1])})`,
-        background: 'rgba(4, 7, 16, 0.88)',
-        border: `3px solid ${accentColor}`,
-        borderRadius: 32,
-        padding: '28px 32px',
-        boxShadow: `0 24px 70px rgba(0,0,0,0.9), 0 0 42px ${accentColor}44`,
+        ...style,
+        opacity: interpolate(s, [0, 0.35], [0, 1], { extrapolateRight: 'clamp' }),
+        transform: `scale(${s})`,
+        transformOrigin: 'center center',
       }}
     >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          borderBottom: `2px solid ${accentColor}44`,
-          paddingBottom: 14,
-          marginBottom: 20,
-        }}
-      >
-        <div style={{ display: 'flex', gap: 10 }}>
-          <div style={{ width: 14, height: 14, borderRadius: 99, background: '#FF5F56' }} />
-          <div style={{ width: 14, height: 14, borderRadius: 99, background: '#FFBD2E' }} />
-          <div style={{ width: 14, height: 14, borderRadius: 99, background: '#27C93F' }} />
-        </div>
-        <span
-          style={{
-            fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
-            fontSize: 20,
-            fontWeight: 800,
-            color: accentColor,
-            letterSpacing: 1.1,
-          }}
-        >
-          {headerRight}
-        </span>
-      </div>
-      <div
-        style={{
-          fontFamily: 'system-ui, -apple-system, sans-serif',
-          fontWeight: 900,
-          fontSize: 44,
-          lineHeight: 1.1,
-          color: '#FFFFFF',
-          marginBottom: 22,
-          textShadow: `0 0 22px ${accentColor}55`,
-        }}
-      >
-        {title}
-      </div>
       {children}
     </div>
   );
 };
 
-const VsDuelCard: React.FC<{ localFrame: number }> = ({ localFrame }) => {
-  const progress = interpolate(localFrame, [4, 52], [0, 1], {
+/**
+ * Typewriter component synced to mechanical keyboard ASMR frames [startFrame..endFrame]
+ */
+function typedSlice(
+  text: string,
+  localFrame: number,
+  startFrame: number,
+  endFrame: number
+): { shown: string; isTyping: boolean } {
+  if (localFrame < startFrame) {
+    return { shown: '', isTyping: false };
+  }
+  const progress = interpolate(localFrame, [startFrame, endFrame], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
-  const fableCost = (19.0 * progress).toFixed(2);
-  const hydroCost = (1.5 * progress).toFixed(2);
-  const fableMin = Math.round(45 * progress);
-  const hydroMin = Math.round(12 * progress);
+  const count = Math.max(1, Math.floor(progress * text.length));
+  return {
+    shown: text.slice(0, count),
+    isTyping: count < text.length,
+  };
+}
+
+/**
+ * Subtle terminal log rain behind upper canvas — mirrors @lynxstudiosbcn frames
+ */
+const FaintTerminalWallpaper: React.FC<{ localFrame: number }> = ({ localFrame }) => {
+  const scroll = (localFrame * 1.4) % 90;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        top: -scroll,
+        left: 28,
+        right: 28,
+        height: 820,
+        overflow: 'hidden',
+        opacity: 0.13,
+        fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+        fontSize: 23,
+        lineHeight: 1.65,
+        color: '#22C55E',
+        pointerEvents: 'none',
+        userSelect: 'none',
+      }}
+    >
+      <div>uses · 41.2k tokens · model=gemini-4-hydrogen</div>
+      <div>&gt; reasoning_effort=xhigh · mode=MAX · 1M context</div>
+      <div>Task(vice-city-3d) running... 57.0% Terminal Bench</div>
+      <div>✓ floating_house: $1.50 USD (12 min) vs $19.00 (45 min)</div>
+      <div>&gt; route google.com --tab=modo-ia --quota=unlimited</div>
+      <div>uses · 41.2k tokens · cache_read=10x_efficiency</div>
+      <div>$ dispatch 20_agents --parallel --cost=$0.00</div>
+      <div>✓ API free tier active: 5 RPM · 250k TPM · gemini-4-hydrogen</div>
+    </div>
+  );
+};
+
+/**
+ * Top Kinetic Headline with @lynxstudiosbcn Blue Selection Box + 4 White Corner Handles
+ */
+const KineticSelectionHeadline: React.FC<{
+  prefix: string;
+  focus: string;
+  suffix?: string;
+  localFrame: number;
+}> = ({ prefix, focus, suffix = '', localFrame }) => {
+  const { fps } = useVideoConfig();
+  const fullPrefix = typedSlice(prefix, localFrame, 0, 5).shown;
+  const showFocus = localFrame >= 5;
+  const focusPop = showFocus
+    ? spring({
+        frame: localFrame - 5,
+        fps,
+        config: { damping: 11, stiffness: 250 },
+      })
+    : 0;
 
   return (
-    <CardShell
-      accentColor="#00F5D4"
-      headerRight="DUELO · MISMA ANIMACIÓN 3D"
-      title="MISMO VIDEO... FRACCIÓN DE PRECIO"
+    <div
+      style={{
+        textAlign: 'center',
+        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+        fontSize: 44,
+        fontWeight: 800,
+        lineHeight: 1.24,
+        color: '#CBD5E1',
+        letterSpacing: -0.6,
+        marginBottom: 18,
+        minHeight: 72,
+      }}
     >
-      <div style={{ display: 'flex', gap: 18, marginBottom: 20 }}>
-        {/* Fable 5.2 Card */}
-        <div
+      <span>{fullPrefix} </span>
+      {showFocus && (
+        <span
           style={{
-            flex: 1,
-            background: '#0A0D16',
-            border: '2px solid #D97757',
-            borderRadius: 22,
-            padding: 20,
+            display: 'inline-block',
+            position: 'relative',
+            background: '#050811',
+            color: '#FFFFFF',
+            fontWeight: 900,
+            padding: '2px 14px 4px 14px',
+            margin: '0 4px',
+            border: '2.5px solid #3B82F6',
+            boxShadow: '0 0 18px rgba(59, 130, 246, 0.45)',
+            transform: `scale(${focusPop})`,
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-            <ClaudeStarburstLogo size={42} />
-            <div>
-              <div style={{ color: '#D97757', fontWeight: 900, fontSize: 22, fontFamily: 'system-ui, sans-serif' }}>
-                FABLE 5.2
-              </div>
-              <div style={{ color: '#94A3B8', fontSize: 16, fontFamily: 'ui-monospace, monospace' }}>
-                Anthropic API
-              </div>
-            </div>
-          </div>
-          <div style={{ fontFamily: 'ui-monospace, monospace', fontWeight: 900, fontSize: 52, color: '#FF4D4D', fontVariantNumeric: 'tabular-nums' }}>
-            ${fableCost}
-          </div>
-          <div style={{ color: '#CBD5E1', fontSize: 22, fontWeight: 700, marginTop: 6, fontFamily: 'ui-monospace, monospace' }}>
-            ⏱ +{fableMin} MINUTOS
-          </div>
-          <div style={{ height: 12, background: '#1E293B', borderRadius: 99, marginTop: 12, overflow: 'hidden' }}>
-            <div style={{ width: `${Math.round(progress * 100)}%`, height: '100%', background: '#FF4D4D' }} />
-          </div>
-          <div style={{ color: '#94A3B8', fontSize: 16, marginTop: 12, fontFamily: 'ui-monospace, monospace' }}>
-            API: $10 IN / $50 OUT
-          </div>
-        </div>
+          {focus}
+          {/* 4 White Square Corner Selection Handles */}
+          {[
+            { top: -4, left: -4 },
+            { top: -4, right: -4 },
+            { bottom: -4, left: -4 },
+            { bottom: -4, right: -4 },
+          ].map((pos, idx) => (
+            <span
+              key={idx}
+              style={{
+                position: 'absolute',
+                width: 7,
+                height: 7,
+                background: '#FFFFFF',
+                border: '1px solid #1E293B',
+                ...pos,
+              }}
+            />
+          ))}
+        </span>
+      )}
+      {localFrame >= 11 && suffix && <span> {suffix}</span>}
+    </div>
+  );
+};
 
-        {/* Gemini 4 Hydrogen Card */}
-        <div
-          style={{
-            flex: 1,
-            background: '#05151C',
-            border: '3px solid #00F5D4',
-            borderRadius: 22,
-            padding: 20,
-            boxShadow: '0 0 28px rgba(0, 245, 212, 0.25)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
-            <GeminiSparkleLogo size={42} />
-            <div>
-              <div style={{ color: '#00F5D4', fontWeight: 900, fontSize: 22, fontFamily: 'system-ui, sans-serif' }}>
-                GEMINI 4 HYDRO
-              </div>
-              <div style={{ color: '#7DD3FC', fontSize: 16, fontFamily: 'ui-monospace, monospace' }}>
-                Google AI / Gratis
-              </div>
-            </div>
-          </div>
-          <div style={{ fontFamily: 'ui-monospace, monospace', fontWeight: 900, fontSize: 52, color: '#22C55E', fontVariantNumeric: 'tabular-nums' }}>
-            ${hydroCost}
-          </div>
-          <div style={{ color: '#E2E8F0', fontSize: 22, fontWeight: 700, marginTop: 6, fontFamily: 'ui-monospace, monospace' }}>
-            ⚡ {hydroMin} MINUTOS
-          </div>
-          <div style={{ height: 12, background: '#1E293B', borderRadius: 99, marginTop: 12, overflow: 'hidden' }}>
-            <div style={{ width: `${Math.round(progress * 27)}%`, height: '100%', background: '#22C55E' }} />
-          </div>
-          <div style={{ color: '#7DD3FC', fontSize: 16, marginTop: 12, fontFamily: 'ui-monospace, monospace' }}>
-            API: $1.50 / $7.50 (o $0)
-          </div>
-        </div>
-      </div>
-
+/**
+ * Green Numbered Step Pill (@lynxstudiosbcn signature style)
+ */
+const NumberedGreenPill: React.FC<{
+  badge: string;
+  text: string;
+  localFrame: number;
+  accentColor: string;
+}> = ({ badge, text, localFrame }) => (
+  <PopBox
+    localFrame={localFrame}
+    popFrame={2}
+    style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}
+  >
+    <div
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: 12,
+        background: 'rgba(4, 15, 10, 0.94)',
+        border: '2.5px solid #22C55E',
+        borderRadius: 999,
+        padding: '10px 26px 10px 12px',
+        boxShadow: '0 0 26px rgba(34, 197, 94, 0.35)',
+      }}
+    >
       <div
         style={{
-          background: 'linear-gradient(90deg, #00F5D4 0%, #22C55E 100%)',
-          color: '#020308',
-          borderRadius: 18,
-          padding: '16px 20px',
-          textAlign: 'center',
+          width: 40,
+          height: 40,
+          borderRadius: 999,
+          background: '#22C55E',
+          color: '#030805',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
           fontFamily: 'system-ui, sans-serif',
           fontWeight: 900,
-          fontSize: 30,
+          fontSize: 22,
         }}
       >
-        🚀 10X MÁS BARATO · 3.75X MÁS RÁPIDO
+        {badge}
       </div>
-    </CardShell>
-  );
-};
+      <span
+        style={{
+          fontFamily: 'system-ui, -apple-system, sans-serif',
+          fontWeight: 800,
+          fontSize: 28,
+          color: '#FFFFFF',
+          letterSpacing: -0.3,
+        }}
+      >
+        {text}
+      </span>
+    </div>
+  </PopBox>
+);
 
-const BenchRaceCard: React.FC<{ localFrame: number }> = ({ localFrame }) => {
-  const benchVal = interpolate(localFrame, [4, 58], [18.2, 57.0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  }).toFixed(1);
+/**
+ * Live Typing Terminal Window + Dynamic Popping Result Cards inside upper stage
+ */
+const TerminalPopWindow: React.FC<{
+  beat: NeonBeatItem;
+  beatIndex: number;
+  localFrame: number;
+}> = ({ beat, beatIndex, localFrame }) => {
+  const cmd =
+    beat.terminalCmd ??
+    '$ run gemini-4-hydrogen --mode MAX --reasoning xhigh';
+  const sub =
+    beat.terminalSub ??
+    '> Output: 3.75x faster · 10x cheaper ($1.50 vs $19.00)';
+
+  const cmdState = typedSlice(cmd, localFrame, 9, 32);
+  const subState = typedSlice(sub, localFrame, 24, 46);
+  const cursorVisible = Math.floor(localFrame / 6) % 2 === 0;
 
   return (
-    <CardShell
-      accentColor="#38BDF8"
-      headerRight="TERMINAL BENCH 4.1 · TOP #5"
-      title="SALTO DE 18.2% A 57.0% EN CÓDIGO"
-    >
+    <PopBox localFrame={localFrame} popFrame={8}>
       <div
         style={{
-          background: '#050A14',
-          border: '2px solid #38BDF8',
-          borderRadius: 20,
-          padding: '18px 22px',
-          marginBottom: 18,
+          width: '100%',
+          background: 'rgba(6, 10, 18, 0.94)',
+          border: `2.5px solid ${beat.accentColor}`,
+          borderRadius: 24,
+          padding: '18px 24px 20px 24px',
+          boxShadow: `0 22px 60px rgba(0,0,0,0.85), 0 0 34px ${beat.accentColor}38`,
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-            <GeminiSparkleLogo size={38} />
-            <span style={{ color: '#FFFFFF', fontWeight: 900, fontSize: 28, fontFamily: 'system-ui, sans-serif' }}>
-              GEMINI 4 HYDROGEN
-            </span>
+        {/* macOS Window Bar */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            paddingBottom: 12,
+            marginBottom: 12,
+            borderBottom: '1.5px solid rgba(148, 163, 184, 0.22)',
+          }}
+        >
+          <div style={{ display: 'flex', gap: 9 }}>
+            <div style={{ width: 13, height: 13, borderRadius: 99, background: '#FF5F56' }} />
+            <div style={{ width: 13, height: 13, borderRadius: 99, background: '#FFBD2E' }} />
+            <div style={{ width: 13, height: 13, borderRadius: 99, background: '#27C93F' }} />
           </div>
-          <span style={{ color: '#00F5D4', fontWeight: 900, fontSize: 48, fontFamily: 'ui-monospace, monospace', fontVariantNumeric: 'tabular-nums' }}>
-            {benchVal}%
+          <span
+            style={{
+              fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+              fontSize: 18,
+              color: '#94A3B8',
+              fontWeight: 700,
+            }}
+          >
+            {beat.topTag}
           </span>
         </div>
-        <div style={{ height: 18, borderRadius: 99, background: '#1E293B', overflow: 'hidden' }}>
-          <div
-            style={{
-              width: `${benchVal}%`,
-              height: '100%',
-              background: 'linear-gradient(90deg, #38BDF8 0%, #00F5D4 100%)',
-            }}
-          />
-        </div>
-        <div style={{ color: '#94A3B8', fontSize: 18, marginTop: 10, fontFamily: 'ui-monospace, monospace' }}>
-          Anterior 3.8 Flash: 18.2% ➔ 2.5x más veloz · Contexto 1M
-        </div>
-      </div>
 
-      <div style={{ display: 'flex', gap: 12 }}>
-        <div style={{ flex: 1, background: '#090D18', border: '2px solid #D97757', borderRadius: 16, padding: 14, display: 'flex', alignItems: 'center', gap: 10 }}>
-          <ClaudeStarburstLogo size={32} />
-          <div>
-            <div style={{ color: '#FFFFFF', fontWeight: 800, fontSize: 18, fontFamily: 'system-ui, sans-serif' }}>Fable 5.1</div>
-            <div style={{ color: '#D97757', fontSize: 15, fontFamily: 'ui-monospace, monospace' }}>SUPERADO ✓</div>
+        {/* Mechanical Keyboard Live Typing Command */}
+        <div
+          style={{
+            fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+            fontSize: 22,
+            lineHeight: 1.45,
+            marginBottom: 14,
+            minHeight: 68,
+          }}
+        >
+          <div style={{ color: '#22C55E', fontWeight: 700 }}>
+            {cmdState.shown}
+            {(cmdState.isTyping || (!subState.shown && cursorVisible)) && (
+              <span style={{ color: '#FFFFFF', marginLeft: 3 }}>▋</span>
+            )}
           </div>
+          {localFrame >= 24 && (
+            <div style={{ color: '#38BDF8', fontWeight: 600, marginTop: 4 }}>
+              {subState.shown}
+              {(subState.isTyping || cursorVisible) && (
+                <span style={{ color: '#00F5D4', marginLeft: 3 }}>▋</span>
+              )}
+            </div>
+          )}
         </div>
-        <div style={{ flex: 1, background: '#090D18', border: '2px solid #10A37F', borderRadius: 16, padding: 14, display: 'flex', alignItems: 'center', gap: 10 }}>
-          <OpenAILogo size={32} />
-          <div>
-            <div style={{ color: '#FFFFFF', fontWeight: 800, fontSize: 18, fontFamily: 'system-ui, sans-serif' }}>GPT Astra 6</div>
-            <div style={{ color: '#10A37F', fontSize: 15, fontFamily: 'ui-monospace, monospace' }}>SUPERADO ✓</div>
+
+        {/* POPPING SUB-CARDS AT FRAMES 24, 36, 48 */}
+        {beat.cardType === 'alert_intro' && (
+          <div style={{ display: 'flex', gap: 14 }}>
+            <PopBox localFrame={localFrame} popFrame={24} style={{ flex: 1 }}>
+              <div style={{ background: '#130A10', border: '2px solid #D97757', borderRadius: 16, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12 }}>
+                <ClaudeStarburstLogo size={38} />
+                <div>
+                  <div style={{ color: '#FFFFFF', fontWeight: 900, fontSize: 22, fontFamily: 'system-ui, sans-serif' }}>Fable 5.2</div>
+                  <div style={{ color: '#FF4D4D', fontWeight: 800, fontSize: 20, fontFamily: 'ui-monospace, monospace' }}>$19.00 · 45m</div>
+                </div>
+              </div>
+            </PopBox>
+            <PopBox localFrame={localFrame} popFrame={36} style={{ flex: 1 }}>
+              <div style={{ background: '#06191D', border: '2.5px solid #00F5D4', borderRadius: 16, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12 }}>
+                <GeminiSparkleLogo size={38} />
+                <div>
+                  <div style={{ color: '#FFFFFF', fontWeight: 900, fontSize: 22, fontFamily: 'system-ui, sans-serif' }}>Gemini 4 Hydro</div>
+                  <div style={{ color: '#22C55E', fontWeight: 800, fontSize: 20, fontFamily: 'ui-monospace, monospace' }}>$1.50 / $0 · 12m</div>
+                </div>
+              </div>
+            </PopBox>
           </div>
-        </div>
-        <div style={{ flex: 1, background: '#090D18', border: '2px solid #DFB15B', borderRadius: 16, padding: 14, display: 'flex', alignItems: 'center', gap: 10 }}>
-          <GeminiSparkleLogo size={32} />
-          <div>
-            <div style={{ color: '#FFFFFF', fontWeight: 800, fontSize: 18, fontFamily: 'system-ui, sans-serif' }}>4 Argon</div>
-            <div style={{ color: '#DFB15B', fontSize: 15, fontFamily: 'ui-monospace, monospace' }}>SUPERADO ✓</div>
+        )}
+
+        {beat.cardType === 'vs_duel' && (
+          <div style={{ display: 'flex', gap: 14 }}>
+            <PopBox localFrame={localFrame} popFrame={24} style={{ flex: 1 }}>
+              <div style={{ background: '#14090E', border: '2px solid #D97757', borderRadius: 16, padding: '14px 16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                  <ClaudeStarburstLogo size={32} />
+                  <span style={{ color: '#D97757', fontWeight: 900, fontSize: 20, fontFamily: 'system-ui, sans-serif' }}>FABLE 5.2</span>
+                </div>
+                <div style={{ color: '#FF4D4D', fontWeight: 900, fontSize: 38, fontFamily: 'ui-monospace, monospace' }}>$19.00</div>
+                <div style={{ color: '#CBD5E1', fontSize: 18, fontFamily: 'ui-monospace, monospace' }}>⏱ 45 min · $10/$50 API</div>
+              </div>
+            </PopBox>
+            <PopBox localFrame={localFrame} popFrame={36} style={{ flex: 1 }}>
+              <div style={{ background: '#05191A', border: '2.5px solid #22C55E', borderRadius: 16, padding: '14px 16px', boxShadow: '0 0 22px rgba(34,197,94,0.22)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                  <GeminiSparkleLogo size={32} />
+                  <span style={{ color: '#00F5D4', fontWeight: 900, fontSize: 20, fontFamily: 'system-ui, sans-serif' }}>HYDROGEN</span>
+                </div>
+                <div style={{ color: '#22C55E', fontWeight: 900, fontSize: 38, fontFamily: 'ui-monospace, monospace' }}>$1.50 / $0</div>
+                <div style={{ color: '#FFFFFF', fontSize: 18, fontFamily: 'ui-monospace, monospace' }}>⚡ 12 min · 10x MÁS BARATO</div>
+              </div>
+            </PopBox>
           </div>
-        </div>
+        )}
+
+        {beat.cardType === 'bench_race' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {[
+              { name: 'Gemini 4 Hydrogen', pct: 57, col: '#00F5D4', pop: 24, note: '57.0% · TOP #5 (Antes 18.2%)', Icon: GeminiSparkleLogo },
+              { name: 'Claude Fable 5.1', pct: 46, col: '#D97757', pop: 36, note: 'Superado · $10/$50 API', Icon: ClaudeStarburstLogo },
+              { name: 'GPT Astra 6', pct: 44, col: '#10A37F', pop: 48, note: 'Superado · Contexto menor', Icon: OpenAILogo },
+            ].map((row, ri) => {
+              const barP = interpolate(localFrame, [row.pop, row.pop + 18], [0, row.pct], {
+                extrapolateLeft: 'clamp',
+                extrapolateRight: 'clamp',
+              });
+              return (
+                <PopBox key={ri} localFrame={localFrame} popFrame={row.pop}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 12, background: '#0B1220', borderRadius: 14, padding: '10px 14px', border: `1.5px solid ${row.col}55` }}>
+                    <row.Icon size={30} />
+                    <div style={{ flex: 1 }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'system-ui, sans-serif', fontWeight: 800, fontSize: 19, color: '#FFFFFF', marginBottom: 5 }}>
+                        <span>{row.name}</span>
+                        <span style={{ color: row.col, fontFamily: 'ui-monospace, monospace' }}>{row.note}</span>
+                      </div>
+                      <div style={{ height: 9, background: '#1E293B', borderRadius: 99, overflow: 'hidden' }}>
+                        <div style={{ width: `${Math.min(100, barP * 1.55)}%`, height: '100%', background: row.col, borderRadius: 99 }} />
+                      </div>
+                    </div>
+                  </div>
+                </PopBox>
+              );
+            })}
+          </div>
+        )}
+
+        {beat.cardType === 'gta6_build' && (
+          <div style={{ display: 'flex', gap: 12 }}>
+            <PopBox localFrame={localFrame} popFrame={24} style={{ flex: 1 }}>
+              <div style={{ background: '#160B11', border: '2px solid #FF4D4D', borderRadius: 16, padding: '12px 16px' }}>
+                <div style={{ color: '#FF4D4D', fontWeight: 900, fontSize: 19, fontFamily: 'system-ui, sans-serif', marginBottom: 4 }}>gemini.google.com ❌</div>
+                <div style={{ color: '#CBD5E1', fontSize: 17, fontFamily: 'ui-monospace, monospace' }}>Nivel Bajo: Mapa vacío</div>
+              </div>
+            </PopBox>
+            <PopBox localFrame={localFrame} popFrame={36} style={{ flex: 1.25 }}>
+              <div style={{ background: '#061B15', border: '2.5px solid #DFB15B', borderRadius: 16, padding: '12px 16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 4 }}>
+                  <GoogleGLogo size={24} />
+                  <span style={{ color: '#DFB15B', fontWeight: 900, fontSize: 19, fontFamily: 'system-ui, sans-serif' }}>AI Studio · MODO MAX ✅</span>
+                </div>
+                <div style={{ color: '#FFFFFF', fontSize: 17, fontFamily: 'ui-monospace, monospace' }}>10 min: Coches, aviones, lancha y 1ra persona</div>
+              </div>
+            </PopBox>
+          </div>
+        )}
+
+        {beat.cardType === 'three_secrets' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <PopBox localFrame={localFrame} popFrame={24}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, background: '#061A12', border: '2px solid #22C55E', borderRadius: 14, padding: '10px 16px' }}>
+                <GoogleGLogo size={30} />
+                <div style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 800, fontSize: 20, color: '#FFFFFF' }}>
+                  1. <span style={{ color: '#22C55E' }}>google.com ➔ MODO IA</span> (Sin límite 5h/semanal)
+                </div>
+              </div>
+            </PopBox>
+            <PopBox localFrame={localFrame} popFrame={36}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, background: '#081322', border: '2px solid #38BDF8', borderRadius: 14, padding: '10px 16px' }}>
+                <GeminiSparkleLogo size={30} />
+                <div style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 800, fontSize: 20, color: '#FFFFFF' }}>
+                  2. <span style={{ color: '#38BDF8' }}>aistudio.google.com</span> (Modo MAX · Extra Alto)
+                </div>
+              </div>
+            </PopBox>
+            <PopBox localFrame={localFrame} popFrame={48}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12, background: '#110D1D', border: '2px solid #A855F7', borderRadius: 14, padding: '10px 16px' }}>
+                <TerminalHarnessLogo size={30} />
+                <div style={{ fontFamily: 'ui-monospace, monospace', fontWeight: 800, fontSize: 19, color: '#E2E8F0' }}>
+                  3. API Gratis: <span style={{ color: '#C084FC' }}>gemini-4-hydrogen</span>
+                </div>
+              </div>
+            </PopBox>
+          </div>
+        )}
+
+        {beat.cardType === 'cta_wink' && (
+          <PopBox localFrame={localFrame} popFrame={beatIndex === 9 ? 24 : 36}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                background: '#FFFFFF',
+                borderRadius: 999,
+                padding: '10px 16px 10px 14px',
+                boxShadow: '0 12px 30px rgba(0,0,0,0.45)',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
+                <div style={{ width: 42, height: 42, borderRadius: 999, background: '#2563EB', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 18, fontFamily: 'system-ui, sans-serif' }}>
+                  TÚ
+                </div>
+                <span style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 900, fontSize: 28, color: '#0F172A' }}>
+                  {beatIndex === 9 ? '¡WATERS! 🌊' : 'HYDROGEN'}
+                </span>
+              </div>
+              <div style={{ width: 42, height: 42, borderRadius: 999, background: '#22C55E', color: '#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 22 }}>
+                ✓
+              </div>
+            </div>
+          </PopBox>
+        )}
       </div>
-    </CardShell>
+    </PopBox>
   );
 };
-
-const GtaBuildCard: React.FC<{ localFrame: number }> = ({ localFrame }) => {
-  const minVal = Math.round(
-    interpolate(localFrame, [4, 52], [0, 10], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })
-  );
-  return (
-    <CardShell
-      accentColor="#DFB15B"
-      headerRight="GOOGLE AI STUDIO · MODO MAX"
-      title="CLON 3D DE GTA 6 EN 10 MINUTOS"
-    >
-      <div style={{ display: 'flex', gap: 16, marginBottom: 18 }}>
-        <div style={{ flex: 1, background: '#14080C', border: '2px solid #FF4D4D', borderRadius: 18, padding: 18 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-            <GeminiSparkleLogo size={30} />
-            <span style={{ color: '#FF4D4D', fontWeight: 900, fontSize: 20, fontFamily: 'system-ui, sans-serif' }}>
-              gemini.google.com
-            </span>
-          </div>
-          <div style={{ color: '#CBD5E1', fontSize: 20, fontFamily: 'ui-monospace, monospace', lineHeight: 1.45 }}>
-            • Nivel Bajo por defecto
-            <br />• Mapa vacío ❌
-            <br />• Sin coches ni aviones
-          </div>
-        </div>
-
-        <div style={{ flex: 1, background: '#0B1610', border: '2px solid #DFB15B', borderRadius: 18, padding: 18 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10 }}>
-            <GoogleGLogo size={30} />
-            <span style={{ color: '#DFB15B', fontWeight: 900, fontSize: 20, fontFamily: 'system-ui, sans-serif' }}>
-              AI Studio · EXTRA ALTO
-            </span>
-          </div>
-          <div style={{ color: '#FFFFFF', fontSize: 20, fontFamily: 'ui-monospace, monospace', lineHeight: 1.45 }}>
-            • Modo MAX activado ✅
-            <br />• Motos, aviones, barcos
-            <br />• Grúas + 1ra persona
-          </div>
-        </div>
-      </div>
-
-      <div style={{ background: '#040710', border: '2px solid #DFB15B88', borderRadius: 18, padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ color: '#CBD5E1', fontWeight: 800, fontSize: 22, fontFamily: 'ui-monospace, monospace' }}>
-          ANTES: 30-40 MIN ➔ AHORA:
-        </span>
-        <span style={{ color: '#DFB15B', fontWeight: 900, fontSize: 40, fontFamily: 'ui-monospace, monospace' }}>
-          {minVal} MIN ⚡
-        </span>
-      </div>
-    </CardShell>
-  );
-};
-
-const ThreeSecretsCard: React.FC = () => (
-  <CardShell
-    accentColor="#22C55E"
-    headerRight="ZERO CUOTA · ECOSISTEMA GOOGLE"
-    title="3 TRUCOS PARA USARLO GRATIS"
-  >
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16, background: '#051510', border: '2px solid #22C55E', borderRadius: 18, padding: '16px 20px' }}>
-        <GoogleGLogo size={40} />
-        <div>
-          <div style={{ color: '#22C55E', fontWeight: 900, fontSize: 24, fontFamily: 'system-ui, sans-serif' }}>
-            1. google.com ➔ Pestaña MODO IA
-          </div>
-          <div style={{ color: '#FFFFFF', fontSize: 20, fontFamily: 'ui-monospace, monospace' }}>
-            ¡Ya usa Gemini 4 Hydrogen ILIMITADO! (Sin freno 5h/semanal)
-          </div>
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16, background: '#070F1C', border: '2px solid #38BDF8', borderRadius: 18, padding: '16px 20px' }}>
-        <GeminiSparkleLogo size={40} />
-        <div>
-          <div style={{ color: '#38BDF8', fontWeight: 900, fontSize: 24, fontFamily: 'system-ui, sans-serif' }}>
-            2. aistudio.google.com ➔ MODO MAX
-          </div>
-          <div style={{ color: '#E2E8F0', fontSize: 20, fontFamily: 'ui-monospace, monospace' }}>
-            Desbloquea 4to nivel: Razonamiento Extra Alto (xhigh)
-          </div>
-        </div>
-      </div>
-
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16, background: '#0F0D18', border: '2px solid #A855F7', borderRadius: 18, padding: '16px 20px' }}>
-        <TerminalHarnessLogo size={40} />
-        <div>
-          <div style={{ color: '#C084FC', fontWeight: 900, fontSize: 24, fontFamily: 'system-ui, sans-serif' }}>
-            3. API Gratis (5 RPM / 250K TPM / 20 RPD)
-          </div>
-          <div style={{ color: '#E2E8F0', fontSize: 20, fontFamily: 'ui-monospace, monospace' }}>
-            ID oculto en agentes: gemini-4-hydrogen
-          </div>
-        </div>
-      </div>
-    </div>
-  </CardShell>
-);
 
 export const WatersNeon3DEpisode: React.FC<Neon3DEpisodeProps> = ({
   episodeLabel,
@@ -506,10 +767,13 @@ export const WatersNeon3DEpisode: React.FC<Neon3DEpisodeProps> = ({
 
   let acc = 0;
   let activeBeat = beats[0];
+  let beatIndex = 0;
   let localFrame = 0;
-  for (const b of beats) {
+  for (let i = 0; i < beats.length; i++) {
+    const b = beats[i];
     if (frame >= acc && frame < acc + b.durationInFrames) {
       activeBeat = b;
+      beatIndex = i;
       localFrame = frame - acc;
       break;
     }
@@ -517,112 +781,66 @@ export const WatersNeon3DEpisode: React.FC<Neon3DEpisodeProps> = ({
   }
 
   return (
-    <AbsoluteFill style={{ backgroundColor: '#020308' }}>
+    <AbsoluteFill style={{ backgroundColor: '#02040A' }}>
       <ThreeCanvas
         width={width}
         height={height}
-        camera={{ position: [0, 0.35, 4.4], fov: 42 }}
+        camera={{ position: [0, 1.68, 11.4], fov: 40 }}
+        shadows
       >
-        <NeonScene3D beat={activeBeat} localFrame={localFrame} />
+        <ChispaScene3D
+          beat={activeBeat}
+          beatIndex={beatIndex}
+          localFrame={localFrame}
+        />
       </ThreeCanvas>
 
-      {/* TOP HUD PILL */}
-      <AbsoluteFill style={{ pointerEvents: 'none', padding: '56px 40px' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            background: 'rgba(2, 3, 8, 0.82)',
-            border: `2px solid ${activeBeat.accentColor}`,
-            borderRadius: 999,
-            padding: '14px 26px',
-            boxShadow: `0 0 28px ${activeBeat.accentColor}55`,
-          }}
-        >
-          <span
-            style={{
-              fontFamily: 'system-ui, -apple-system, sans-serif',
-              fontWeight: 900,
-              fontSize: 24,
-              color: '#FFFFFF',
-              letterSpacing: 1.1,
-            }}
-          >
-            {activeBeat.topTag}
-          </span>
-          <span
-            style={{
-              fontFamily: 'system-ui, -apple-system, sans-serif',
-              fontWeight: 800,
-              fontSize: 20,
-              color: activeBeat.accentColor,
-            }}
-          >
-            {episodeLabel}
-          </span>
-        </div>
-      </AbsoluteFill>
+      {/* FAINT CODE LOG RAIN + UPPER UI OVERLAYS (0px..845px, completely above 3D stage!) */}
+      <FaintTerminalWallpaper localFrame={localFrame} />
 
-      {/* MIDDLE HOLOGRAPHIC OVERLAY ZONE (leaves top for 3D bot & bottom 260px clean for Captions) */}
       <AbsoluteFill
         style={{
           pointerEvents: 'none',
-          justifyContent: 'flex-end',
-          alignItems: 'center',
-          padding: '0 44px 260px 44px',
+          padding: '84px 44px 0 44px',
+          justifyContent: 'flex-start',
         }}
       >
-        {(activeBeat.cardType === 'alert_intro' || activeBeat.cardType === 'cta_wink') &&
-          activeBeat.heroTitle && (
-            <div
-              style={{
-                width: '100%',
-                background: 'rgba(2, 3, 8, 0.88)',
-                border: `3px solid ${activeBeat.accentColor}`,
-                borderRadius: 28,
-                padding: '24px 32px',
-                textAlign: 'center',
-                boxShadow: `0 0 42px ${activeBeat.accentColor}55`,
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 18, marginBottom: 10 }}>
-                <ClaudeStarburstLogo size={46} />
-                <span style={{ color: '#94A3B8', fontSize: 28, fontWeight: 900, fontFamily: 'system-ui, sans-serif' }}>VS</span>
-                <GeminiSparkleLogo size={46} />
-              </div>
-              <div
-                style={{
-                  fontFamily: 'system-ui, -apple-system, sans-serif',
-                  fontWeight: 900,
-                  fontSize: 48,
-                  color: activeBeat.accentColor,
-                  lineHeight: 1.1,
-                }}
-              >
-                {activeBeat.heroTitle}
-              </div>
-              {activeBeat.heroSubtitle && (
-                <div
-                  style={{
-                    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
-                    fontWeight: 800,
-                    fontSize: 24,
-                    color: '#FFFFFF',
-                    marginTop: 8,
-                  }}
-                >
-                  {activeBeat.heroSubtitle}
-                </div>
-              )}
-            </div>
-          )}
+        <KineticSelectionHeadline
+          prefix={activeBeat.headlinePrefix ?? 'Gemini 4 Hydrogen'}
+          focus={activeBeat.headlineFocus ?? activeBeat.heroTitle ?? '10X AHORRO'}
+          suffix={activeBeat.headlineSuffix ?? ''}
+          localFrame={localFrame}
+        />
 
-        {activeBeat.cardType === 'vs_duel' && <VsDuelCard localFrame={localFrame} />}
-        {activeBeat.cardType === 'bench_race' && <BenchRaceCard localFrame={localFrame} />}
-        {activeBeat.cardType === 'gta6_build' && <GtaBuildCard localFrame={localFrame} />}
-        {activeBeat.cardType === 'three_secrets' && <ThreeSecretsCard />}
+        <NumberedGreenPill
+          badge={activeBeat.stepBadge ?? String(beatIndex + 1)}
+          text={activeBeat.pillText ?? activeBeat.topTag}
+          localFrame={localFrame}
+          accentColor={activeBeat.accentColor}
+        />
+
+        <TerminalPopWindow
+          beat={activeBeat}
+          beatIndex={beatIndex}
+          localFrame={localFrame}
+        />
       </AbsoluteFill>
+
+      {/* SUBTLE EPISODE WATERMARK TOP CORNER */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 32,
+          right: 40,
+          fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace',
+          fontSize: 16,
+          fontWeight: 700,
+          color: 'rgba(148, 163, 184, 0.55)',
+          pointerEvents: 'none',
+        }}
+      >
+        {episodeLabel}
+      </div>
     </AbsoluteFill>
   );
 };

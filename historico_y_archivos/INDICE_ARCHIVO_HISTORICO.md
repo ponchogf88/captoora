@@ -87,3 +87,4 @@
 | `themes.css` | `historico_y_archivos/previews_descartados_2026-11-12/themes.css` | CSS de temas descartados 12 nov 2026 (Zero Delete) |
 | `proyectos/waters-serie/renders/audio_elevenlabs_v3/EP01_EXT/01_chuy.mp3` | `historico_y_archivos/waters_ep01_audio_previo_2026-11-19/01_chuy.mp3` | Toma previa españolizada antes de `lang=en` (Zero Delete) |
 | `proyectos/waters-serie/renders/audio_elevenlabs_v3/EP01_EXT/02_agy.mp3` | `historico_y_archivos/waters_ep01_audio_previo_2026-11-19/02_agy.mp3` | Toma previa con "Chuy," antes de remover nombre (Zero Delete) |
+| `proyectos/waters-serie/renders/WATERS_NEON3D_EP05_FABLE5_VS_HYDROGEN_60S.mp4` | `historico_y_archivos/waters_ep05_render_previo_2026-11-19/WATERS_NEON3D_EP05_FABLE5_VS_HYDROGEN_60S_v1_bot3d.mp4` | Render v1 de EP05 con NeonBot3D previo al rediseño Astronautita Chispa + ASMR teclado + Pops UI (Zero Delete) |
