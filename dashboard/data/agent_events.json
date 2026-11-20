@@ -1,7 +1,57 @@
 {
   "studio_mode": "idle_ready",
-  "active_agent": "chief_of_staff",
+  "active_agent": "ventas_outreach",
   "events": [
+    {
+      "id": "EVT-049-444",
+      "timestamp": "2026-11-20T10:00:44-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Despertó Seguimientos 24–48h",
+      "detail": "Detector 24–48h: 0 seguimientos CRM y 21 triggers en cola.",
+      "source": "scheduler"
+    },
+    {
+      "id": "EVT-048-5044",
+      "timestamp": "2026-11-20T08:30:44-06:00",
+      "agent_id": "chief_of_staff",
+      "target_agent": null,
+      "zone": "mesa_directiva",
+      "action": "Actualizó Plan CEO",
+      "detail": "Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad hasta cobrar el 1er anticipo 50% y libe",
+      "source": "human_ui"
+    },
+    {
+      "id": "EVT-047-2840",
+      "timestamp": "2026-11-19T18:00:40-06:00",
+      "agent_id": "chief_of_staff",
+      "target_agent": null,
+      "zone": "mesa_directiva",
+      "action": "Recordatorio Agenda Mañana",
+      "detail": "4 bloques ordenados.",
+      "source": "human_ui"
+    },
+    {
+      "id": "EVT-046-4839",
+      "timestamp": "2026-11-19T13:00:39-06:00",
+      "agent_id": "marky_marketing",
+      "target_agent": null,
+      "zone": "estudio_marky",
+      "action": "Corte Pull & SEO 13:00",
+      "detail": "Corte Pull & SEO: Cimientos SEO + AEO listos localmente. Sube sitemap.xml/robots.txt/llms.txt a captoora.studio y verifica Search Console ",
+      "source": "scheduler"
+    },
+    {
+      "id": "EVT-045-4037",
+      "timestamp": "2026-11-19T10:00:37-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Despertó Seguimientos 24–48h",
+      "detail": "Detector 24–48h: 0 seguimientos CRM y 12 triggers en cola.",
+      "source": "scheduler"
+    },
     {
       "id": "EVT-044-8636",
       "timestamp": "2026-11-19T08:30:36-06:00",

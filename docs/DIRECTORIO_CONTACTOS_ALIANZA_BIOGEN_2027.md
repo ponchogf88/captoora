@@ -37,3 +37,32 @@
 | Plan Uno | info@elplanuno.com · +52 81 8024 1183 | Mitras Centro |
 | Somos Healthy | +52 81 3099 4533 | San Nicolás, Guadalupe, Apodaca |
 | Fitpack | ventas@fitpack.com.mx · 812 873 9852 | |
+
+---
+
+## Wellhub (antes Gympass) México — Alternativa directa a TotalPass
+- **Miguel de Apellaniz**: VP de SS Latam y Head de México, Argentina y Chile (mexicobusiness.news)
+- **Santiago Grigera**: Director Senior de Alianzas Estratégicas / Partnerships (wellhub.com)
+- **Sebastian Bonnett**: Director Senior de Alianzas LATAM (mercadofitness.com)
+
+## Corporativos Monterrey (RH / Bienestar Laboral para "Reto Enero 2027")
+- **FEMSA**: **Sara Robles Romero** (Dirección de RH desde ene-2026) · **José Antonio Fernández Garza-Lagüera** (CEO) — *Coca-Cola FEMSA ya está en portafolio Captoora*
+- **Heineken México**: **Yadira Sepúlveda Cavazos** (VP de RH desde jun-2026) · **Oriol Bonaclocha** (CEO) — *Tecate ya está en portafolio Captoora*
+- **CEMEX**: **Luis Hernández** (VP Ejecutivo Organización y RH) · **Jaime Muguiro Domínguez** (CEO)
+- **Arca Continental** (**Arturo Gutiérrez Hernández**, DG) & **Banorte**: buscar gerencias de Bienestar / Beneficios / Cultura en LinkedIn (filtro Monterrey)
+
+## Otras marcas de suplementos en México (además de Farmasi · Nutriplus)
+- **Birdman**: **David Elías Rabling** (Fundador & CEO) — alianzas activas con atletas y códigos
+- **You Matter (`youmatter.mx`)**: **Aránzazu (Aranxa) Gómez Vivanco** (CEO) — alianzas con nutriólogos y especialistas
+- **B Life**: **Luis Pérez** (Director de RR. PP.) — programa de afiliados y micro-influencers
+- **Meta Nutrition** (`meta-nutrition.com`), **GNC México** y **Vidafull** (`vidafull.mx`)
+
+## Agencias deportivas, talento y marketing (para Fase 2 Captoora Talent y patrocinios)
+- **Neta Agencia Deportiva**: **Alejandra Maffey Tarazona** (Directora y Fundadora, atletas olímpicos y *Deportium*)
+- **Sports Marketing Monterrey / FCB México**: **Jorge Villalobos** (CEO Sports Marketing MTY) · **Rafael Pérez-Toribio** (CEO FCB México)
+- **Onze Sports** (`onzesports.com.mx`) · **Bionic Collective** · **The Innfluencers / Innglobal** · **Posición Uno**
+
+## Comunidades presenciales y activos ya en este repo
+- **HYROX Monterrey** (Cintermex, `@hyroxmex`) · **Muungano Running Team** (`@muungano.rt`) · **Regio Runners** (`@regiorunners`) · **ACCNL** (`correnl.com`)
+- **Clínicas de Fisioterapia ya scrapeadas en `dashboard/data/apify_scraped_leads.json`** (San Pedro): REHABILITA Terapia Física (`+52 81 1771 7777`), SOMA Fisioterapia (`+52 81 1923 4853`), Terafiq (`+52 81 2878 8225`), Fisio Active (`+52 81 4008 0314`), Dr. Hernán Flores (`drhernanflores.com`)
+- **Clubes de Pádel (13) y Academias de Baile (20)** ya en `dashboard/data/apify_scraped_leads.json` y **Cocinas/Gimnasios MTY (67)** en [DIRECTORIO_COCINAS_Y_GIMNASIOS_MTY_2027.md](file:///Users/imac/Documents/antigravity/epic-bohr/docs/DIRECTORIO_COCINAS_Y_GIMNASIOS_MTY_2027.md)

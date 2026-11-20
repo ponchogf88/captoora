@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T08:30:36-06:00",
+  "updated_at": "2026-11-20T08:30:44-06:00",
   "tracking_ids": {
     "ga4_id": "",
     "meta_pixel_id": "",
@@ -28,7 +28,7 @@
     "generated_links": []
   },
   "ceo_plan": {
-    "updated_at": "2026-11-19T08:30:36-06:00",
+    "updated_at": "2026-11-20T08:30:44-06:00",
     "week_focus": "Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad hasta cobrar el 1er anticipo 50% y liberar Ads.",
     "primary_kpis": [
       "Primer 'Sí' cobrado (50%)",
@@ -361,6 +361,12 @@
     ],
     "tomorrow_reminders_log": [
       {
+        "triggered_at": "2026-11-19T18:00:40-06:00",
+        "blocks_count": 4,
+        "email_result": null,
+        "text": "Agenda de Mañana Captoora Studio:\n- 08:30 | Despertador 24/7: Resumen CEO & Cola Follow-up 48h (Scheduler)\n- 09:30 | Rutas presenciales confirmadas (Mapa MTY Optimizado) (Mapa Rutas)\n- 12:00 | Corte Seguimientos 72h (-35% / 2do Momento) (WA / Zoho)\n- 17:00 | Publicación Reel / Collab hora pico según Insights (IG / TikTok)"
+      },
+      {
         "triggered_at": "2026-11-18T18:00:33-06:00",
         "blocks_count": 4,
         "email_result": null,
@@ -374,10 +380,12 @@
   "apify_sweeps_log": [],
   "scheduler": {
     "enabled": true,
-    "last_tick": "2026-11-19T08:44:37-06:00",
+    "last_tick": "2026-11-20T12:28:45-06:00",
     "ran_slots_today": {
-      "18_00_tomorrow": "2026-11-18",
-      "08_30_ceo": "2026-11-19"
+      "18_00_tomorrow": "2026-11-19",
+      "08_30_ceo": "2026-11-20",
+      "10_00_followups": "2026-11-20",
+      "13_00_pull": "2026-11-19"
     },
     "slots": [
       {
@@ -447,10 +455,10 @@
       }
     ],
     "last_executed_slot": {
-      "slot_id": "08_30_ceo",
-      "at": "2026-11-19T08:30:37-06:00",
+      "slot_id": "10_00_followups",
+      "at": "2026-11-20T10:00:44-06:00",
       "manual": false,
-      "detail": "CEO Briefing despertado: Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad"
+      "detail": "Detector 24–48h: 0 seguimientos CRM y 21 triggers en cola."
     }
   }
 }

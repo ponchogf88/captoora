@@ -2,6 +2,846 @@
   "policy": "HUMAN_APPROVAL_REQUIRED_FOR_ALL_EXTERNAL_OR_FINANCIAL_ACTIONS",
   "items": [
     {
+      "id": "PV-ZR-01",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Dental Care Center (Zona Romántica · Corredor Basilio Badillo)",
+      "niche": "Clínicas & Consultorios",
+      "channel": "WhatsApp Directo (+52 322 223 2025)",
+      "phone": "523222232025",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Dental Care Center)",
+          "path": "docs/demos_pv/zona_romantica/dental_care_center.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Dental Care Center)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/dental_care_center.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Dental Care Center 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Corredor Basilio Badillo (4.6 ★ y 19 reseñas), detectamos 2 ajustes clave en portada y verificación y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222232025?text=Hola%20equipo%20de%20Dental%20Care%20Center%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Basilio%20Badillo%20%284.6%20%E2%98%85%20y%2019%20rese%C3%B1as%29%2C%20detectamos%202%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-02",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Minisuper Gp (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 222 1017)",
+      "phone": "523222221017",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Minisuper Gp)",
+          "path": "docs/demos_pv/zona_romantica/minisuper_gp.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Minisuper Gp)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/minisuper_gp.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Minisuper Gp 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (3.2 ★ y 15 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222221017?text=Hola%20equipo%20de%20Minisuper%20Gp%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%283.2%20%E2%98%85%20y%2015%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-03",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Isla del Rio Cuale (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Small Business & Comercios",
+      "channel": "WhatsApp Directo (+52 322 118 7036)",
+      "phone": "523221187036",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Isla del Rio Cuale)",
+          "path": "docs/demos_pv/zona_romantica/isla_del_rio_cuale.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Isla del Rio Cuale)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/isla_del_rio_cuale.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Isla del Rio Cuale 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.7 ★ y 11 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221187036?text=Hola%20equipo%20de%20Isla%20del%20Rio%20Cuale%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.7%20%E2%98%85%20y%2011%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-04",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Mi Cafe Restaurant & Coffee Shop (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 222 1584)",
+      "phone": "523222221584",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Mi Cafe Restaurant & Coffee Shop)",
+          "path": "docs/demos_pv/zona_romantica/mi_cafe_restaurant_coffee_shop.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Mi Cafe Restaurant & Coffee Shop)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/mi_cafe_restaurant_coffee_shop.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Mi Cafe Restaurant & Coffee Shop 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.8 ★ y 752 reseñas), vimos que su ficha enlaza solo a red social y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222221584?text=Hola%20equipo%20de%20Mi%20Cafe%20Restaurant%20%26%20Coffee%20Shop%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.8%20%E2%98%85%20y%20752%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20enlaza%20solo%20a%20red%20social%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-05",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Creperie House (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 138 9516)",
+      "phone": "523221389516",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Creperie House)",
+          "path": "docs/demos_pv/zona_romantica/creperie_house.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Creperie House)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/creperie_house.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Creperie House 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.9 ★ y 464 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221389516?text=Hola%20equipo%20de%20Creperie%20House%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.9%20%E2%98%85%20y%20464%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-06",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Los Mercados Puerto Vallarta (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 222 0383)",
+      "phone": "523222220383",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Los Mercados Puerto Vallarta)",
+          "path": "docs/demos_pv/zona_romantica/los_mercados_puerto_vallarta.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Los Mercados Puerto Vallarta)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/los_mercados_puerto_vallarta.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Los Mercados Puerto Vallarta 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.6 ★ y 208 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222220383?text=Hola%20equipo%20de%20Los%20Mercados%20Puerto%20Vallarta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.6%20%E2%98%85%20y%20208%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-07",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "The Fit Club (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Fitness & CrossFit",
+      "channel": "WhatsApp Directo (+52 322 223 0063)",
+      "phone": "523222230063",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (The Fit Club)",
+          "path": "docs/demos_pv/zona_romantica/the_fit_club.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (The Fit Club)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/the_fit_club.png"
+        }
+      ],
+      "draft_text": "Hola equipo de The Fit Club 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.2 ★ y 190 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222230063?text=Hola%20equipo%20de%20The%20Fit%20Club%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.2%20%E2%98%85%20y%20190%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZR-08",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "El Coyul Licorería / Basilio Badillo (Zona Romántica · Emiliano Zapata / Zona Romántica)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 113 0270)",
+      "phone": "523221130270",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Romántica"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (El Coyul Licorería / Basilio Badillo)",
+          "path": "docs/demos_pv/zona_romantica/el_coyul_licoreria_basilio_badillo.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (El Coyul Licorería / Basilio Badillo)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_romantica/el_coyul_licoreria_basilio_badillo.png"
+        }
+      ],
+      "draft_text": "Hola equipo de El Coyul Licorería / Basilio Badillo 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Emiliano Zapata / Zona Romántica (4.2 ★ y 26 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221130270?text=Hola%20equipo%20de%20El%20Coyul%20Licorer%C3%ADa%20/%20Basilio%20Badillo%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.2%20%E2%98%85%20y%2026%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-01",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Artesanías y Novedades (Zona Hotelera · Corredor Versalles / Fluvial (Zona Hotelera Norte))",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 293 4565)",
+      "phone": "523222934565",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Artesanías y Novedades)",
+          "path": "docs/demos_pv/zona_hotelera/artesanias_y_novedades.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Artesanías y Novedades)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/artesanias_y_novedades.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Artesanías y Novedades 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Corredor Versalles / Fluvial (Zona Hotelera Norte) (5 ★ y 2 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222934565?text=Hola%20equipo%20de%20Artesan%C3%ADas%20y%20Novedades%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%285%20%E2%98%85%20y%202%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-02",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Departamento en hotel resort and spa (Zona Hotelera · Zona Hotelera Norte · Las Glorias)",
+      "niche": "Hoteles, Resorts & Beach Clubs",
+      "channel": "WhatsApp Directo (+52 322 285 3817)",
+      "phone": "523222853817",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Departamento en hotel resort and spa)",
+          "path": "docs/demos_pv/zona_hotelera/departamento_en_hotel_resort_and_spa.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Departamento en hotel resort and spa)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/departamento_en_hotel_resort_and_spa.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Departamento en hotel resort and spa 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Zona Hotelera Norte · Las Glorias (0 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222853817?text=Hola%20equipo%20de%20Departamento%20en%20hotel%20resort%20and%20spa%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20%C2%B7%20Las%20Glorias%20%280%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-03",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Esthetic Dentistry Puerto Vallarta (Zona Hotelera · Corredor Versalles / Fluvial (Zona Hotelera Norte))",
+      "niche": "Clínicas & Consultorios",
+      "channel": "WhatsApp Directo (33 2101 2530)",
+      "phone": "523321012530",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Esthetic Dentistry Puerto Vallarta)",
+          "path": "docs/demos_pv/zona_hotelera/esthetic_dentistry_puerto_vallarta.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Esthetic Dentistry Puerto Vallarta)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/esthetic_dentistry_puerto_vallarta.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Esthetic Dentistry Puerto Vallarta 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Corredor Versalles / Fluvial (Zona Hotelera Norte) (5 ★ y 180 reseñas), vimos que su ficha aparece sin sitio web propio y tiene pocas fotografías curadas. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523321012530?text=Hola%20equipo%20de%20Esthetic%20Dentistry%20Puerto%20Vallarta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%285%20%E2%98%85%20y%20180%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-04",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Brisa Marina (Zona Hotelera · Zona Hotelera Norte · Las Glorias)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 224 5862)",
+      "phone": "523222245862",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Brisa Marina)",
+          "path": "docs/demos_pv/zona_hotelera/brisa_marina.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Brisa Marina)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/brisa_marina.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Brisa Marina 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Zona Hotelera Norte · Las Glorias (4.2 ★ y 5 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222245862?text=Hola%20equipo%20de%20Brisa%20Marina%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20%C2%B7%20Las%20Glorias%20%284.2%20%E2%98%85%20y%205%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-05",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Bar Terraza del Colonial (Zona Hotelera · Gateway 5 de Diciembre · Corredor Hotelero)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 208 1560)",
+      "phone": "523222081560",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Bar Terraza del Colonial)",
+          "path": "docs/demos_pv/zona_hotelera/bar_terraza_del_colonial.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Bar Terraza del Colonial)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/bar_terraza_del_colonial.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Bar Terraza del Colonial 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Gateway 5 de Diciembre · Corredor Hotelero (4.2 ★ y 107 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222081560?text=Hola%20equipo%20de%20Bar%20Terraza%20del%20Colonial%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Gateway%205%20de%20Diciembre%20%C2%B7%20Corredor%20Hotelero%20%284.2%20%E2%98%85%20y%20107%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-06",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Pirates of the Bay Boutiques MARINA (Zona Hotelera · Zona Hotelera Norte / Medina Ascencio)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 221 2564)",
+      "phone": "523222212564",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Pirates of the Bay Boutiques MARINA)",
+          "path": "docs/demos_pv/zona_hotelera/pirates_of_the_bay_boutiques_marina.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Pirates of the Bay Boutiques MARINA)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/pirates_of_the_bay_boutiques_marina.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Pirates of the Bay Boutiques MARINA 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Zona Hotelera Norte / Medina Ascencio (4.6 ★ y 103 reseñas), vimos que su ficha enlaza solo a red social y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222212564?text=Hola%20equipo%20de%20Pirates%20of%20the%20Bay%20Boutiques%20MARINA%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20/%20Medina%20Ascencio%20%284.6%20%E2%98%85%20y%20103%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20enlaza%20solo%20a%20red%20social%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-07",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "dental center by dra. Karla Rangel (Zona Hotelera · Corredor Versalles / Fluvial (Zona Hotelera Norte))",
+      "niche": "Clínicas & Consultorios",
+      "channel": "WhatsApp Directo (+52 322 224 5585)",
+      "phone": "523222245585",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (dental center by dra. Karla Rangel)",
+          "path": "docs/demos_pv/zona_hotelera/dental_center_by_dra_karla_rangel.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (dental center by dra. Karla Rangel)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/dental_center_by_dra_karla_rangel.png"
+        }
+      ],
+      "draft_text": "Hola equipo de dental center by dra. Karla Rangel 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Corredor Versalles / Fluvial (Zona Hotelera Norte) (4.5 ★ y 44 reseñas), vimos que su ficha aparece sin sitio web propio y tiene pocas fotografías curadas. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222245585?text=Hola%20equipo%20de%20dental%20center%20by%20dra.%20Karla%20Rangel%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%284.5%20%E2%98%85%20y%2044%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-ZH-08",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Dental PV - una sonrisa perfecta (Zona Hotelera · Corredor Versalles / Fluvial (Zona Hotelera Norte))",
+      "niche": "Clínicas & Consultorios",
+      "channel": "WhatsApp Directo (+52 322 120 0593)",
+      "phone": "523221200593",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Zona Hotelera"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Dental PV - una sonrisa perfecta)",
+          "path": "docs/demos_pv/zona_hotelera/dental_pv_una_sonrisa_perfecta.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Dental PV - una sonrisa perfecta)",
+          "path": "assets/gmaps_audits/puerto_vallarta/zona_hotelera/dental_pv_una_sonrisa_perfecta.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Dental PV - una sonrisa perfecta 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Corredor Versalles / Fluvial (Zona Hotelera Norte) (4.2 ★ y 33 reseñas), vimos que su ficha aparece sin sitio web propio y tiene pocas fotografías curadas. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221200593?text=Hola%20equipo%20de%20Dental%20PV%20-%20una%20sonrisa%20perfecta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%284.2%20%E2%98%85%20y%2033%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-01",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Boutique D' Paola (Centro / Bahía · Centro Histórico · 48300)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 222 1120)",
+      "phone": "523222221120",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Boutique D' Paola)",
+          "path": "docs/demos_pv/centro_y_bahia/boutique_d_paola.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Boutique D' Paola)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/boutique_d_paola.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Boutique D' Paola 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Centro Histórico · 48300 (5 ★ y 3 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222221120?text=Hola%20equipo%20de%20Boutique%20D%27%20Paola%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%285%20%E2%98%85%20y%203%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-02",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Bar Océano (Centro / Bahía · Malecón & Paseo Díaz Ordaz)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 222 4294)",
+      "phone": "523222224294",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Bar Océano)",
+          "path": "docs/demos_pv/centro_y_bahia/bar_oceano.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Bar Océano)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/bar_oceano.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Bar Océano 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Malecón & Paseo Díaz Ordaz (4.3 ★ y 804 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222224294?text=Hola%20equipo%20de%20Bar%20Oc%C3%A9ano%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.3%20%E2%98%85%20y%20804%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-03",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Rolling Stones Leather (Centro / Bahía · Malecón & Paseo Díaz Ordaz)",
+      "niche": "Small Business & Comercios",
+      "channel": "WhatsApp Directo (+52 322 223 1769)",
+      "phone": "523222231769",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Rolling Stones Leather)",
+          "path": "docs/demos_pv/centro_y_bahia/rolling_stones_leather.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Rolling Stones Leather)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/rolling_stones_leather.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Rolling Stones Leather 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Malecón & Paseo Díaz Ordaz (4.6 ★ y 111 reseñas), vimos que su ficha aparece sin sitio web propio y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222231769?text=Hola%20equipo%20de%20Rolling%20Stones%20Leather%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.6%20%E2%98%85%20y%20111%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-04",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Zoo Bar (Centro / Bahía · Malecón & Paseo Díaz Ordaz)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 150 4152)",
+      "phone": "523221504152",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Zoo Bar)",
+          "path": "docs/demos_pv/centro_y_bahia/zoo_bar.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Zoo Bar)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/zoo_bar.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Zoo Bar 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Malecón & Paseo Díaz Ordaz (3.9 ★ y 758 reseñas), detectamos 1 ajustes clave en portada y verificación y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221504152?text=Hola%20equipo%20de%20Zoo%20Bar%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%283.9%20%E2%98%85%20y%20758%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-05",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Waldo's Puerto Vallarta Centro (Centro / Bahía · Centro Histórico · 48300)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 722 226 1459)",
+      "phone": "527222261459",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Waldo's Puerto Vallarta Centro)",
+          "path": "docs/demos_pv/centro_y_bahia/waldo_s_puerto_vallarta_centro.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Waldo's Puerto Vallarta Centro)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/waldo_s_puerto_vallarta_centro.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Waldo's Puerto Vallarta Centro 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Centro Histórico · 48300 (4.3 ★ y 742 reseñas), detectamos 1 ajustes clave en portada y verificación y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/527222261459?text=Hola%20equipo%20de%20Waldo%27s%20Puerto%20Vallarta%20Centro%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.3%20%E2%98%85%20y%20742%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-06",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "María de Guadalajara (Centro / Bahía · Centro Histórico · 48300)",
+      "niche": "Tiendas, Boutiques & Comercios",
+      "channel": "WhatsApp Directo (+52 322 222 2387)",
+      "phone": "523222222387",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (María de Guadalajara)",
+          "path": "docs/demos_pv/centro_y_bahia/maria_de_guadalajara.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (María de Guadalajara)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/maria_de_guadalajara.png"
+        }
+      ],
+      "draft_text": "Hola equipo de María de Guadalajara 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Centro Histórico · 48300 (4.9 ★ y 30 reseñas), detectamos 1 ajustes clave en portada y verificación y sigue marcada para verificación oficial ('Reclamar este negocio'). Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523222222387?text=Hola%20equipo%20de%20Mar%C3%ADa%20de%20Guadalajara%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.9%20%E2%98%85%20y%2030%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-07",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Moments Café & Bar (Centro / Bahía · Centro Histórico · 48300)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 108 5015)",
+      "phone": "523221085015",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Moments Café & Bar)",
+          "path": "docs/demos_pv/centro_y_bahia/moments_cafe_bar.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Moments Café & Bar)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/moments_cafe_bar.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Moments Café & Bar 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Centro Histórico · 48300 (4.5 ★ y 1403 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221085015?text=Hola%20equipo%20de%20Moments%20Caf%C3%A9%20%26%20Bar%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.5%20%E2%98%85%20y%201403%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
+      "id": "PV-CB-08",
+      "agent_id": "ventas_outreach",
+      "task_id": "PV-CIERRE-2TRATOS",
+      "target_name": "Oasis Bay Malecón (Centro / Bahía · Malecón & Paseo Díaz Ordaz)",
+      "niche": "Restaurantes & Cafés Boutique",
+      "channel": "WhatsApp Directo (+52 322 151 8063)",
+      "phone": "523221518063",
+      "package_ref": "SMB-TOTAL Web Express + GBP + Foto (-35% · $6,890 MXN / Opc 1 $3,900 MXN)",
+      "financial_impact_mxn": 6890,
+      "estimated_margin_pct": 84.0,
+      "compliance_flags": [
+        "0% mención IA",
+        "Sin palabra 'presumir'",
+        "Zero origen MTY/San Jerónimo",
+        "Zona separada: Centro / Bahía"
+      ],
+      "attachments": [
+        {
+          "type": "html",
+          "label": "Prototipo Web Express (Oasis Bay Malecón)",
+          "path": "docs/demos_pv/centro_y_bahia/oasis_bay_malecon.html"
+        },
+        {
+          "type": "image",
+          "label": "Captura Google Maps (Oasis Bay Malecón)",
+          "path": "assets/gmaps_audits/puerto_vallarta/centro_y_bahia/oasis_bay_malecon.png"
+        }
+      ],
+      "draft_text": "Hola equipo de Oasis Bay Malecón 👋, soy Jesús Gutiérrez de Captoora Studio (Portafolio: https://captoora.studio/sports).\n\nRevisando su ficha en Google Maps en Malecón & Paseo Díaz Ordaz (4.1 ★ y 1293 reseñas), vimos que su ficha aparece sin sitio web propio. Preparamos sin costo una vista previa de su Página Web Express + checklist de actualización para Google Business Profile con -35% de temporada (entrega en 48–72h).\n\n¿Se las comparto por aquí para que la revisen en 1 minuto?",
+      "whatsapp_url": "https://wa.me/523221518063?text=Hola%20equipo%20de%20Oasis%20Bay%20Malec%C3%B3n%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.1%20%E2%98%85%20y%201293%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F",
+      "status": "pending_trigger",
+      "created_at": "2026-11-20T17:39:09-06:00",
+      "decided_at": null
+    },
+    {
       "id": "LUPE-03",
       "agent_id": "lupe_social",
       "task_id": "TASK-702",

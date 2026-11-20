@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disparo Rápido 24 Prospectos PV · Meta 2 Tratos Cerrados</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #07060b; color: #f5f4f8; font-family: system-ui, -apple-system, sans-serif; padding: 24px 16px 60px; }
+    .wrap { max-width: 1180px; margin: 0 auto; }
+    header { border-bottom: 1px solid rgba(212,175,55,0.4); padding-bottom: 16px; margin-bottom: 20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; align-items:center; }
+    h1 { font-size: 1.55rem; color: #fff; }
+    .sub { color: #a4a2b2; font-size: 0.9rem; margin-top: 4px; }
+    .counter { background: #141420; border: 1px solid #c6ff00; color: #c6ff00; padding: 8px 14px; border-radius: 999px; font-weight: 700; font-size: 0.88rem; }
+    .filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+    .fbtn { background:#141420; color:#e8d5a8; border:1px solid rgba(212,175,55,0.4); padding:8px 14px; border-radius:999px; cursor:pointer; font-weight:600; font-size:0.82rem; }
+    .fbtn.active { background:#c6ff00; color:#090b10; border-color:#c6ff00; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap:14px; }
+    .card { background:#101018; border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:8px; }
+    .card.is-sent { opacity: 0.55; border-color: rgba(198,255,0,0.4); }
+    .card-top { display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; }
+    .badge { background:rgba(212,175,55,0.14); color:#e8d5a8; padding:3px 9px; border-radius:999px; font-weight:700; }
+    .score { color:#c6ff00; font-weight:700; }
+    h3 { font-size:1.05rem; color:#fff; }
+    .meta { font-size:0.82rem; color:#a4a2b2; }
+    .flags { font-size:0.74rem; color:#ffb3b3; }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:6px; }
+    .btn { font-size:0.8rem; font-weight:700; padding:8px 12px; border-radius:8px; text-decoration:none; border:1px solid rgba(255,255,255,0.18); background:#181826; color:#fff; }
+    .btn.primary { background:#c6ff00; color:#090b10; border-color:#c6ff00; }
+    .chk { font-size:0.78rem; color:#c8c6d4; display:inline-flex; align-items:center; gap:5px; margin-left:auto; cursor:pointer; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Disparo Rápido WhatsApp · 24 Prospectos Puerto Vallarta</h1>
+        <p class="sub">8 por cada zona separada · Mensaje corto prellenado (0% IA, sin origen MTY) · Meta: 2 tratos cerrados.</p>
+      </div>
+      <div class="counter" id="sentCounter">Enviados hoy: 0 / 24</div>
+    </header>
+    <div class="filters">
+      <button class="fbtn active" onclick="filterZone('all', this)">Todos (24)</button>
+      <button class="fbtn" onclick="filterZone('zona_romantica', this)">Zona Romántica (8)</button>
+      <button class="fbtn" onclick="filterZone('zona_hotelera', this)">Zona Hotelera (8)</button>
+      <button class="fbtn" onclick="filterZone('centro_y_bahia', this)">Centro / Bahía (8)</button>
+    </div>
+    <main class="grid">
+      
+    <article class="card" data-id="PV-ZR-01" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-01 · Zona Romántica</span>
+        <span class="score">Dolor 48/100</span>
+      </div>
+      <h3>Dental Care Center</h3>
+      <p class="meta">Clínicas &amp; Consultorios · Corredor Basilio Badillo · 4.6 ★ y 19 reseñas</p>
+      <p class="flags">&lt;=5 FOTOS · SIN RECLAMAR</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222232025?text=Hola%20equipo%20de%20Dental%20Care%20Center%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Basilio%20Badillo%20%284.6%20%E2%98%85%20y%2019%20rese%C3%B1as%29%2C%20detectamos%202%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-01')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/dental_care_center.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-01" onchange="toggleSent('PV-ZR-01')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-02" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-02 · Zona Romántica</span>
+        <span class="score">Dolor 44/100</span>
+      </div>
+      <h3>Minisuper Gp</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Emiliano Zapata / Zona Romántica · 3.2 ★ y 15 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222221017?text=Hola%20equipo%20de%20Minisuper%20Gp%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%283.2%20%E2%98%85%20y%2015%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-02')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/minisuper_gp.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-02" onchange="toggleSent('PV-ZR-02')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-03" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-03 · Zona Romántica</span>
+        <span class="score">Dolor 44/100</span>
+      </div>
+      <h3>Isla del Rio Cuale</h3>
+      <p class="meta">Small Business &amp; Comercios · Emiliano Zapata / Zona Romántica · 4.7 ★ y 11 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221187036?text=Hola%20equipo%20de%20Isla%20del%20Rio%20Cuale%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.7%20%E2%98%85%20y%2011%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-03')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/isla_del_rio_cuale.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-03" onchange="toggleSent('PV-ZR-03')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-04" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-04 · Zona Romántica</span>
+        <span class="score">Dolor 41/100</span>
+      </div>
+      <h3>Mi Cafe Restaurant &amp; Coffee Shop</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Emiliano Zapata / Zona Romántica · 4.8 ★ y 752 reseñas</p>
+      <p class="flags">SIN RECLAMAR · RED PERSONAL EN RIESGO</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222221584?text=Hola%20equipo%20de%20Mi%20Cafe%20Restaurant%20%26%20Coffee%20Shop%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.8%20%E2%98%85%20y%20752%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20enlaza%20solo%20a%20red%20social%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-04')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/mi_cafe_restaurant_coffee_shop.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-04" onchange="toggleSent('PV-ZR-04')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-05" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-05 · Zona Romántica</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>Creperie House</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Emiliano Zapata / Zona Romántica · 4.9 ★ y 464 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221389516?text=Hola%20equipo%20de%20Creperie%20House%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.9%20%E2%98%85%20y%20464%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-05')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/creperie_house.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-05" onchange="toggleSent('PV-ZR-05')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-06" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-06 · Zona Romántica</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>Los Mercados Puerto Vallarta</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Emiliano Zapata / Zona Romántica · 4.6 ★ y 208 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222220383?text=Hola%20equipo%20de%20Los%20Mercados%20Puerto%20Vallarta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.6%20%E2%98%85%20y%20208%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-06')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/los_mercados_puerto_vallarta.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-06" onchange="toggleSent('PV-ZR-06')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-07" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-07 · Zona Romántica</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>The Fit Club</h3>
+      <p class="meta">Fitness &amp; CrossFit · Emiliano Zapata / Zona Romántica · 4.2 ★ y 190 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222230063?text=Hola%20equipo%20de%20The%20Fit%20Club%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.2%20%E2%98%85%20y%20190%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-07')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/the_fit_club.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-07" onchange="toggleSent('PV-ZR-07')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZR-08" data-zone="zona_romantica">
+      <div class="card-top">
+        <span class="badge">PV-ZR-08 · Zona Romántica</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>El Coyul Licorería / Basilio Badillo</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Emiliano Zapata / Zona Romántica · 4.2 ★ y 26 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221130270?text=Hola%20equipo%20de%20El%20Coyul%20Licorer%C3%ADa%20/%20Basilio%20Badillo%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Emiliano%20Zapata%20/%20Zona%20Rom%C3%A1ntica%20%284.2%20%E2%98%85%20y%2026%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZR-08')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_romantica/el_coyul_licoreria_basilio_badillo.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZR-08" onchange="toggleSent('PV-ZR-08')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-01" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-01 · Zona Hotelera</span>
+        <span class="score">Dolor 100/100</span>
+      </div>
+      <h3>Artesanías y Novedades</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Corredor Versalles / Fluvial (Zona Hotelera Norte) · 5 ★ y 2 reseñas</p>
+      <p class="flags">CARRITO STREET VIEW · &lt;=5 FOTOS · SIN RECLAMAR · SIN SITIO WEB · POCAS RESEÑAS</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222934565?text=Hola%20equipo%20de%20Artesan%C3%ADas%20y%20Novedades%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%285%20%E2%98%85%20y%202%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-01')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/artesanias_y_novedades.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-01" onchange="toggleSent('PV-ZH-01')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-02" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-02 · Zona Hotelera</span>
+        <span class="score">Dolor 100/100</span>
+      </div>
+      <h3>Departamento en hotel resort and spa</h3>
+      <p class="meta">Hoteles, Resorts &amp; Beach Clubs · Zona Hotelera Norte · Las Glorias · 0 reseñas</p>
+      <p class="flags">CARRITO STREET VIEW · &lt;=5 FOTOS · SIN RECLAMAR · SIN SITIO WEB · POCAS RESEÑAS</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222853817?text=Hola%20equipo%20de%20Departamento%20en%20hotel%20resort%20and%20spa%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20%C2%B7%20Las%20Glorias%20%280%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-02')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/departamento_en_hotel_resort_and_spa.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-02" onchange="toggleSent('PV-ZH-02')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-03" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-03 · Zona Hotelera</span>
+        <span class="score">Dolor 53/100</span>
+      </div>
+      <h3>Esthetic Dentistry Puerto Vallarta</h3>
+      <p class="meta">Clínicas &amp; Consultorios · Corredor Versalles / Fluvial (Zona Hotelera Norte) · 5 ★ y 180 reseñas</p>
+      <p class="flags">0 FOTOS · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523321012530?text=Hola%20equipo%20de%20Esthetic%20Dentistry%20Puerto%20Vallarta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%285%20%E2%98%85%20y%20180%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-03')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/esthetic_dentistry_puerto_vallarta.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-03" onchange="toggleSent('PV-ZH-03')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-04" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-04 · Zona Hotelera</span>
+        <span class="score">Dolor 50/100</span>
+      </div>
+      <h3>Brisa Marina</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Zona Hotelera Norte · Las Glorias · 4.2 ★ y 5 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB · POCAS RESEÑAS</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222245862?text=Hola%20equipo%20de%20Brisa%20Marina%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20%C2%B7%20Las%20Glorias%20%284.2%20%E2%98%85%20y%205%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-04')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/brisa_marina.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-04" onchange="toggleSent('PV-ZH-04')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-05" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-05 · Zona Hotelera</span>
+        <span class="score">Dolor 44/100</span>
+      </div>
+      <h3>Bar Terraza del Colonial</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Gateway 5 de Diciembre · Corredor Hotelero · 4.2 ★ y 107 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222081560?text=Hola%20equipo%20de%20Bar%20Terraza%20del%20Colonial%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Gateway%205%20de%20Diciembre%20%C2%B7%20Corredor%20Hotelero%20%284.2%20%E2%98%85%20y%20107%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-05')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/bar_terraza_del_colonial.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-05" onchange="toggleSent('PV-ZH-05')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-06" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-06 · Zona Hotelera</span>
+        <span class="score">Dolor 41/100</span>
+      </div>
+      <h3>Pirates of the Bay Boutiques MARINA</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Zona Hotelera Norte / Medina Ascencio · 4.6 ★ y 103 reseñas</p>
+      <p class="flags">SIN RECLAMAR · RED PERSONAL EN RIESGO</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222212564?text=Hola%20equipo%20de%20Pirates%20of%20the%20Bay%20Boutiques%20MARINA%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Zona%20Hotelera%20Norte%20/%20Medina%20Ascencio%20%284.6%20%E2%98%85%20y%20103%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20enlaza%20solo%20a%20red%20social%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-06')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/pirates_of_the_bay_boutiques_marina.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-06" onchange="toggleSent('PV-ZH-06')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-07" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-07 · Zona Hotelera</span>
+        <span class="score">Dolor 40/100</span>
+      </div>
+      <h3>dental center by dra. Karla Rangel</h3>
+      <p class="meta">Clínicas &amp; Consultorios · Corredor Versalles / Fluvial (Zona Hotelera Norte) · 4.5 ★ y 44 reseñas</p>
+      <p class="flags">&lt;=5 FOTOS · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222245585?text=Hola%20equipo%20de%20dental%20center%20by%20dra.%20Karla%20Rangel%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%284.5%20%E2%98%85%20y%2044%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-07')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/dental_center_by_dra_karla_rangel.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-07" onchange="toggleSent('PV-ZH-07')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-ZH-08" data-zone="zona_hotelera">
+      <div class="card-top">
+        <span class="badge">PV-ZH-08 · Zona Hotelera</span>
+        <span class="score">Dolor 40/100</span>
+      </div>
+      <h3>Dental PV - una sonrisa perfecta</h3>
+      <p class="meta">Clínicas &amp; Consultorios · Corredor Versalles / Fluvial (Zona Hotelera Norte) · 4.2 ★ y 33 reseñas</p>
+      <p class="flags">&lt;=5 FOTOS · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221200593?text=Hola%20equipo%20de%20Dental%20PV%20-%20una%20sonrisa%20perfecta%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Corredor%20Versalles%20/%20Fluvial%20%28Zona%20Hotelera%20Norte%29%20%284.2%20%E2%98%85%20y%2033%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20tiene%20pocas%20fotograf%C3%ADas%20curadas.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-ZH-08')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/zona_hotelera/dental_pv_una_sonrisa_perfecta.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-ZH-08" onchange="toggleSent('PV-ZH-08')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-01" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-01 · Centro / Bahía</span>
+        <span class="score">Dolor 50/100</span>
+      </div>
+      <h3>Boutique D&#x27; Paola</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Centro Histórico · 48300 · 5 ★ y 3 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB · POCAS RESEÑAS</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222221120?text=Hola%20equipo%20de%20Boutique%20D%27%20Paola%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%285%20%E2%98%85%20y%203%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-01')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/boutique_d_paola.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-01" onchange="toggleSent('PV-CB-01')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-02" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-02 · Centro / Bahía</span>
+        <span class="score">Dolor 44/100</span>
+      </div>
+      <h3>Bar Océano</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Malecón &amp; Paseo Díaz Ordaz · 4.3 ★ y 804 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222224294?text=Hola%20equipo%20de%20Bar%20Oc%C3%A9ano%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.3%20%E2%98%85%20y%20804%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-02')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/bar_oceano.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-02" onchange="toggleSent('PV-CB-02')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-03" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-03 · Centro / Bahía</span>
+        <span class="score">Dolor 44/100</span>
+      </div>
+      <h3>Rolling Stones Leather</h3>
+      <p class="meta">Small Business &amp; Comercios · Malecón &amp; Paseo Díaz Ordaz · 4.6 ★ y 111 reseñas</p>
+      <p class="flags">SIN RECLAMAR · SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222231769?text=Hola%20equipo%20de%20Rolling%20Stones%20Leather%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.6%20%E2%98%85%20y%20111%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-03')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/rolling_stones_leather.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-03" onchange="toggleSent('PV-CB-03')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-04" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-04 · Centro / Bahía</span>
+        <span class="score">Dolor 26/100</span>
+      </div>
+      <h3>Zoo Bar</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Malecón &amp; Paseo Díaz Ordaz · 3.9 ★ y 758 reseñas</p>
+      <p class="flags">SIN RECLAMAR</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221504152?text=Hola%20equipo%20de%20Zoo%20Bar%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%283.9%20%E2%98%85%20y%20758%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-04')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/zoo_bar.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-04" onchange="toggleSent('PV-CB-04')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-05" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-05 · Centro / Bahía</span>
+        <span class="score">Dolor 26/100</span>
+      </div>
+      <h3>Waldo&#x27;s Puerto Vallarta Centro</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Centro Histórico · 48300 · 4.3 ★ y 742 reseñas</p>
+      <p class="flags">SIN RECLAMAR</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/527222261459?text=Hola%20equipo%20de%20Waldo%27s%20Puerto%20Vallarta%20Centro%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.3%20%E2%98%85%20y%20742%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-05')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/waldo_s_puerto_vallarta_centro.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-05" onchange="toggleSent('PV-CB-05')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-06" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-06 · Centro / Bahía</span>
+        <span class="score">Dolor 26/100</span>
+      </div>
+      <h3>María de Guadalajara</h3>
+      <p class="meta">Tiendas, Boutiques &amp; Comercios · Centro Histórico · 48300 · 4.9 ★ y 30 reseñas</p>
+      <p class="flags">SIN RECLAMAR</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523222222387?text=Hola%20equipo%20de%20Mar%C3%ADa%20de%20Guadalajara%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.9%20%E2%98%85%20y%2030%20rese%C3%B1as%29%2C%20detectamos%201%20ajustes%20clave%20en%20portada%20y%20verificaci%C3%B3n%20y%20sigue%20marcada%20para%20verificaci%C3%B3n%20oficial%20%28%27Reclamar%20este%20negocio%27%29.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-06')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/maria_de_guadalajara.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-06" onchange="toggleSent('PV-CB-06')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-07" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-07 · Centro / Bahía</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>Moments Café &amp; Bar</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Centro Histórico · 48300 · 4.5 ★ y 1403 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221085015?text=Hola%20equipo%20de%20Moments%20Caf%C3%A9%20%26%20Bar%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Centro%20Hist%C3%B3rico%20%C2%B7%2048300%20%284.5%20%E2%98%85%20y%201403%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-07')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/moments_cafe_bar.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-07" onchange="toggleSent('PV-CB-07')" /> Enviado</label>
+      </div>
+    </article>
+    <article class="card" data-id="PV-CB-08" data-zone="centro_y_bahia">
+      <div class="card-top">
+        <span class="badge">PV-CB-08 · Centro / Bahía</span>
+        <span class="score">Dolor 18/100</span>
+      </div>
+      <h3>Oasis Bay Malecón</h3>
+      <p class="meta">Restaurantes &amp; Cafés Boutique · Malecón &amp; Paseo Díaz Ordaz · 4.1 ★ y 1293 reseñas</p>
+      <p class="flags">SIN SITIO WEB</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/523221518063?text=Hola%20equipo%20de%20Oasis%20Bay%20Malec%C3%B3n%20%F0%9F%91%8B%2C%20soy%20Jes%C3%BAs%20Guti%C3%A9rrez%20de%20Captoora%20Studio%20%28Portafolio%3A%20https%3A//captoora.studio/sports%29.%0A%0ARevisando%20su%20ficha%20en%20Google%20Maps%20en%20Malec%C3%B3n%20%26%20Paseo%20D%C3%ADaz%20Ordaz%20%284.1%20%E2%98%85%20y%201293%20rese%C3%B1as%29%2C%20vimos%20que%20su%20ficha%20aparece%20sin%20sitio%20web%20propio.%20Preparamos%20sin%20costo%20una%20vista%20previa%20de%20su%20P%C3%A1gina%20Web%20Express%20%2B%20checklist%20de%20actualizaci%C3%B3n%20para%20Google%20Business%20Profile%20con%20-35%25%20de%20temporada%20%28entrega%20en%2048%E2%80%9372h%29.%0A%0A%C2%BFSe%20las%20comparto%20por%20aqu%C3%AD%20para%20que%20la%20revisen%20en%201%20minuto%3F" target="_blank" onclick="markSent('PV-CB-08')">1. Enviar WhatsApp &rarr;</a>
+        <a class="btn" href="demos_pv/centro_y_bahia/oasis_bay_malecon.html" target="_blank">2. Ver Web Demo</a>
+        <label class="chk"><input type="checkbox" id="chk-PV-CB-08" onchange="toggleSent('PV-CB-08')" /> Enviado</label>
+      </div>
+    </article>
+    </main>
+  </div>
+  <script>
+    const KEY = 'captoora_pv_sent_24';
+    let sentMap = JSON.parse(localStorage.getItem(KEY) || '{}');
+    function syncUI() {
+      let cnt = 0;
+      document.querySelectorAll('.card').forEach(el => {
+        const id = el.dataset.id;
+        const isSent = Boolean(sentMap[id]);
+        el.classList.toggle('is-sent', isSent);
+        const cb = document.getElementById('chk-' + id);
+        if (cb) cb.checked = isSent;
+        if (isSent) cnt++;
+      });
+      document.getElementById('sentCounter').textContent = `Enviados hoy: ${cnt} / 24`;
+    }
+    function markSent(id) { sentMap[id] = true; localStorage.setItem(KEY, JSON.stringify(sentMap)); syncUI(); }
+    function toggleSent(id) {
+      const cb = document.getElementById('chk-' + id);
+      sentMap[id] = Boolean(cb && cb.checked);
+      localStorage.setItem(KEY, JSON.stringify(sentMap));
+      syncUI();
+    }
+    function filterZone(z, btn) {
+      document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.card').forEach(el => {
+        el.style.display = (z === 'all' || el.dataset.zone === z) ? 'flex' : 'none';
+      });
+    }
+    syncUI();
+  </script>
+</body>
+</html>
