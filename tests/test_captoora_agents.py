@@ -697,9 +697,10 @@ def test_puerto_vallarta_zone_separation_and_origin_neutral_copy(tmp_path: Path,
     assert nl_summary["total_leads"] == 141
 
 
-def test_pv_events_suppliers_three_zones_and_copy_guardrails(isolated_workspace: Path):
+def test_pv_events_suppliers_three_zones_and_copy_guardrails(isolated_workspace: Path, monkeypatch: pytest.MonkeyPatch):
     """Verify strict 3-zone PV event separation (ZR / ZH / Centro-Bahía), Nayarit/Vidanta exclusion, supplier scoring, and copy guardrails."""
     from captoora_agents import gmaps_auditor
+    from scripts import scrape_pv_suppliers
     from scripts.scrape_pv_events_and_influencers import (
         FORBIDDEN_ORIGIN_TERMS,
         _build_event_outreach_script,
@@ -707,6 +708,8 @@ def test_pv_events_suppliers_three_zones_and_copy_guardrails(isolated_workspace:
         classify_event_zone,
     )
     from scripts.scrape_pv_suppliers import classify_pv_corridor, process_suppliers
+
+    monkeypatch.setattr(scrape_pv_suppliers, "SUPPLIERS_JSON", isolated_workspace / "proveedores_taller_pv.json")
 
     # 1. Strict 3-zone event routing inside PV & Vidanta/Nayarit rejection
     assert classify_event_zone("Brawny Bear Weekend", "Mantamar Beach Club, Zona Romántica")[0] == "zona_romantica"
