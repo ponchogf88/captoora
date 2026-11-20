@@ -5,15 +5,20 @@ import {
   BeatItem,
   WatersHybridEpisode,
 } from './compositions/WatersHybridEpisode';
+import {
+  NeonBeatItem,
+  WatersNeon3DEpisode,
+} from './compositions/WatersNeon3DEpisode';
 import beatsData from './episodeBeats.json';
 
 const EP01_BEATS = (beatsData as Record<string, BeatItem[]>).EP01;
 const EP02_BEATS = (beatsData as Record<string, BeatItem[]>).EP02;
 const EP01_EXT_BEATS = (beatsData as Record<string, BeatItem[]>).EP01_EXT ?? EP01_BEATS;
 const EP03_BEATS = (beatsData as Record<string, BeatItem[]>).EP03_TONY_CUOTA ?? EP01_BEATS;
+const EP05_BEATS = (beatsData as Record<string, NeonBeatItem[]>).EP05_FABLE_HYDROGEN ?? [];
 
-const sumFrames = (beats: BeatItem[]) =>
-  beats.reduce((acc, b) => acc + b.durationInFrames, 0);
+const sumFrames = (beats: { durationInFrames: number }[]) =>
+  Math.max(1, beats.reduce((acc, b) => acc + b.durationInFrames, 0));
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -72,6 +77,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           episodeLabel: 'EP. 03 · 0% CUOTA IA',
           beats: EP03_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersNeon3DEp05"
+        component={WatersNeon3DEpisode}
+        durationInFrames={sumFrames(EP05_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'EP. 05 · FABLE vs HYDROGEN',
+          beats: EP05_BEATS,
         }}
       />
     </>

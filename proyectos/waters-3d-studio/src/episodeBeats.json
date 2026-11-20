@@ -721,5 +721,93 @@
       "zoomEnd": 1.12,
       "shakeIntro": true
     }
+  ],
+  "EP05_FABLE_HYDROGEN": [
+    {
+      "durationInFrames": 54,
+      "topTag": "🚨 ¡WATERS · FABLE 5 vs GEMINI 4!",
+      "accentColor": "#FF3B3B",
+      "expression": "shock",
+      "cardType": "alert_intro",
+      "speaking": true,
+      "heroTitle": "FABLE 5.2 vs GEMINI 4",
+      "heroSubtitle": "¿$19 USD ó $1.50 USD / GRATIS?"
+    },
+    {
+      "durationInFrames": 230,
+      "topTag": "💸 $19 USD · 45 MINUTOS",
+      "accentColor": "#FF4D4D",
+      "expression": "skeptic",
+      "cardType": "vs_duel",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 345,
+      "topTag": "⚡ GEMINI 4 HYDROGEN · 12 MIN",
+      "accentColor": "#00F5D4",
+      "expression": "star_eyes",
+      "cardType": "vs_duel",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 146,
+      "topTag": "📊 PRECIO REAL POR 1M TOKENS",
+      "accentColor": "#00F5D4",
+      "expression": "shock",
+      "cardType": "vs_duel",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 554,
+      "topTag": "🏆 TERMINAL BENCH 4.1 · TOP #5",
+      "accentColor": "#38BDF8",
+      "expression": "star_eyes",
+      "cardType": "bench_race",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 254,
+      "topTag": "🎮 CLON 3D GTA 6 · 10 MIN",
+      "accentColor": "#DFB15B",
+      "expression": "shock",
+      "cardType": "gta6_build",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 508,
+      "topTag": "⚙️ TRUCO: AI STUDIO · MODO MAX",
+      "accentColor": "#DFB15B",
+      "expression": "laser_focus",
+      "cardType": "gta6_build",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 395,
+      "topTag": "♾️ MODO IA GOOGLE · SIN LÍMITES",
+      "accentColor": "#22C55E",
+      "expression": "star_eyes",
+      "cardType": "three_secrets",
+      "speaking": true
+    },
+    {
+      "durationInFrames": 273,
+      "topTag": "🚀 COMENTA: HYDROGEN",
+      "accentColor": "#00F5D4",
+      "expression": "happy_wink",
+      "cardType": "cta_wink",
+      "speaking": true,
+      "heroTitle": "COMENTA: HYDROGEN 🚀",
+      "heroSubtitle": "3 Links + ID Oculto gemini-4-hydrogen"
+    },
+    {
+      "durationInFrames": 134,
+      "topTag": "🌊 ¡WATERS!",
+      "accentColor": "#00F5D4",
+      "expression": "happy_wink",
+      "cardType": "cta_wink",
+      "speaking": true,
+      "heroTitle": "¡WATERS! 🌊🔥",
+      "heroSubtitle": "10X Más Barato · 3.75X Más Rápido"
+    }
   ]
 }
