@@ -1015,7 +1015,10 @@ def test_phase4_growth_geo_accountant_and_scheduler(isolated_workspace: Path, mo
     assert wa_res.json()["supervisor"]["sent_today"] == 1
 
     # 24/7 Scheduler idempotent slot trigger (08:35 CST Friday -> runs 08_30_ceo once)
-    test_dt = datetime(2026, 11, 20, 8, 35, tzinfo=config.MONTERREY_TZ)
+    gstate = growth_suite.get_or_init_growth_state()
+    gstate.setdefault("scheduler", {})["ran_slots_today"] = {}
+    config.write_json(config.FILES["growth_suite"], gstate)
+    test_dt = datetime(2027, 1, 15, 8, 35, tzinfo=config.MONTERREY_TZ)
     tick1 = scheduler.tick_scheduler(now_dt=test_dt)
     assert len(tick1["executed"]) == 1
     assert tick1["executed"][0]["slot_id"] == "08_30_ceo"
