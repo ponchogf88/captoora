@@ -61,7 +61,8 @@ La versión v1 demostró que el personaje 3D conecta con la audiencia, pero mant
 6. **Referencias visuales registradas:**
    - `@vibecoder_es` (ritmo de comedia-suspenso con modelos de IA).
    - `@daybi_ai` (*"Claude Aguantaaa"*, captura en sesión): encuadre `3/4` lateral cerrado + letrero neón desenfocado al fondo + partículas nocturnas sin banners superiores.
-   - Reel de referencia de cámara lateral con zoom continuo: `https://www.instagram.com/reel/Df8WJlYRy21/` *(acceso público bloqueado por login de Instagram; si se desea desglose cuadro a cuadro con FFmpeg, guardar el `.mp4` en `proyectos/waters-serie/referencias/`)*.
+   - Reel de referencia de cámara lateral con zoom continuo: `https://www.instagram.com/reel/Df8WJlYRy21/` *(acceso público bloqueado por login de Instagram; guardar clip/captura en `referencias/inbox/` para desglose cuadro a cuadro)*.
+   - Reel de referencia de atmósfera íntima (`https://www.instagram.com/reels/DedIkqJla4G/`): sonido suave de fondo, susurros cercanos (tono íntimo/ASMR), zooms dinámicos, variedad de encuadres y fondos con profundidad *(depositar clip o grabación de pantalla en `referencias/inbox/` para estudio cuadro a cuadro)*.
 
 ---
 
@@ -81,7 +82,7 @@ La versión v1 demostró que el personaje 3D conecta con la audiencia, pero mant
 
 ## 4. Arquitectura del Tablero Drag-and-Drop (Esquema Desacoplado)
 
-> **Estado de la interfaz:** La UI visual en HTML/JS queda **pendiente de clonar** exactamente desde el tablero Drag-and-Drop que ya usas para armar tus currículums dinámicos (en cuanto compartas ese código en un chat nuevo).
+> **Estado de la interfaz:** **ACTIVA** en [`tablero_calendario_waters.html`](file:///Users/imac/Desktop/Projects/CAPTOORA.STUDIO/proyectos/waters-serie/tablero_calendario_waters.html) — replicada fielmente de `ponchogf88/cv-card-board` (mesa verde de estudio, cartas crema con animación hover tipo Opus Clip, arrastre Pointer Events con intercambio automático de slots, modales `<dialog>` nativos, filtros por vertiente, tray dominical `0/14`, guardado en `localStorage` y exportación/importación JSON).
 
 Mientras tanto, la estructura de datos oficial ya queda viva en [`tablero_semanal_14_slots.json`](file:///Users/imac/Desktop/Projects/CAPTOORA.STUDIO/proyectos/waters-serie/tablero_semanal_14_slots.json):
 

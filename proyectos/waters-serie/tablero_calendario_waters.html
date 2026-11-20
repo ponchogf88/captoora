@@ -1,0 +1,1701 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>¡WATERS! Card Board — Calendario Editorial 14/Semana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
+      * { box-sizing: border-box; }
+      :root{
+        --felt:#10150f;
+        --felt-hi:#1d2a20;
+        --felt-lo:#080a08;
+        --rail:#171a17;
+        --rail-line:#2c322c;
+        --paper:#f8f5ee;
+        --paper-2:#efe9db;
+        --ink:#211d16;
+        --ink-soft:#5d574a;
+        --silver:#cfd4dc;
+        --silver-dim:#9aa1ab;
+        --accent:#e9e4d8;
+        --gold:#d9b45c;
+        --dia:#22c55e;
+        --noche:#38bdf8;
+        --crudo:#e08a7a;
+        --rescate:#a7c4a0;
+        --ready:#d9b45c;
+        --shadow:0 10px 22px rgba(0,0,0,.45), 0 2px 5px rgba(0,0,0,.5);
+      }
+      html{ scroll-behavior:smooth; }
+      body{
+        margin:0;
+        font-family:"Libre Franklin", system-ui, sans-serif;
+        background:var(--felt-lo);
+        color:#ece9e2;
+        -webkit-font-smoothing:antialiased;
+      }
+      .mono{ font-family:"IBM Plex Mono", ui-monospace, monospace; }
+
+      /* ---------- Intro ---------- */
+      .intro{
+        max-width:1380px; margin:0 auto; padding:26px 20px 6px;
+      }
+      .intro h1{
+        font-size:clamp(1.65rem, 4.2vw, 2.75rem);
+        font-weight:900; letter-spacing:-.02em; line-height:1.05; margin:0 0 10px;
+      }
+      .intro h1 em{ font-style:normal; color:var(--gold); }
+      .intro p.lede{
+        margin:0; max-width:68ch; font-size:1rem; line-height:1.55; color:#cfccc2;
+      }
+      .intro p.lede strong{ color:#fff; }
+      .who{
+        margin-top:14px; display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center;
+        font-size:.86rem; color:var(--silver-dim);
+      }
+      .who b{ color:#fff; font-weight:600; }
+      .who .dot{ width:4px; height:4px; border-radius:50%; background:var(--silver-dim); }
+      .who-photo{
+        width:44px; height:44px; border-radius:50%; overflow:hidden; flex:none;
+        display:grid; place-items:center;
+        background:radial-gradient(circle at 35% 28%, #1d2a20, #0a0f0c);
+        border:1.5px solid rgba(217,180,92,.85); box-shadow:0 4px 12px rgba(0,0,0,.4);
+      }
+      .who-photo svg{ width:32px; height:32px; display:block; }
+
+      .how{
+        margin:20px 0 6px; display:grid; gap:10px;
+        grid-template-columns:1fr;
+      }
+      @media (min-width:760px){ .how{ grid-template-columns:repeat(3,1fr); } }
+      .step{
+        background:linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+        backdrop-filter:blur(14px) saturate(1.4);
+        -webkit-backdrop-filter:blur(14px) saturate(1.4);
+        border:1px solid rgba(255,255,255,.12); border-radius:10px;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.10), 0 8px 22px rgba(0,0,0,.3);
+        padding:13px 15px; display:flex; gap:13px; align-items:flex-start;
+      }
+      .step .n{
+        font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:600;
+        border:1px solid var(--silver-dim); color:var(--silver);
+        border-radius:999px; padding:4px 9px; white-space:nowrap; margin-top:2px;
+      }
+      .step h3{ margin:0 0 4px; font-size:.95rem; font-weight:800; }
+      .step p{ margin:0; font-size:.84rem; line-height:1.45; color:#bdbab0; }
+      .demo{ position:relative; width:74px; height:46px; flex:none; margin-top:2px; }
+      .demo .slot{
+        position:absolute; right:0; top:6px; width:34px; height:34px;
+        border:1.5px dashed var(--silver-dim); border-radius:6px;
+      }
+      .demo .mc{
+        position:absolute; width:22px; height:30px; border-radius:4px;
+        background:var(--paper); box-shadow:0 3px 8px rgba(0,0,0,.5);
+      }
+      .demo .mc:nth-child(2){ left:0; top:2px; transform:rotate(-9deg); animation:deal 3.6s ease-in-out infinite; }
+      .demo .mc:nth-child(3){ left:8px; top:10px; transform:rotate(4deg); background:var(--paper-2); animation:deal 3.6s ease-in-out .5s infinite; }
+      @keyframes deal{
+        0%,55%{ translate:0 0; opacity:1; }
+        80%,100%{ translate:34px -2px; opacity:.25; }
+      }
+
+      /* ---------- Control bar ---------- */
+      .controls{
+        position:sticky; top:0; z-index:200;
+        background:rgba(14,18,13,.66);
+        backdrop-filter:blur(20px) saturate(1.6);
+        -webkit-backdrop-filter:blur(20px) saturate(1.6);
+        border-bottom:1px solid rgba(255,255,255,.12);
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.09), 0 8px 24px rgba(0,0,0,.28);
+      }
+      .controls-in{
+        max-width:1380px; margin:0 auto; padding:9px 20px;
+        display:flex; flex-wrap:wrap; gap:6px; align-items:center;
+      }
+      .controls .lbl{
+        font-family:"IBM Plex Mono",monospace; font-size:.68rem; letter-spacing:.13em;
+        text-transform:uppercase; color:var(--silver-dim); margin-right:2px;
+      }
+      .preset{
+        appearance:none; border:1px solid rgba(255,255,255,.16);
+        background:rgba(255,255,255,.07);
+        backdrop-filter:blur(12px) saturate(1.4);
+        -webkit-backdrop-filter:blur(12px) saturate(1.4);
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.13), 0 4px 14px rgba(0,0,0,.25);
+        color:#ece9e2;
+        border-radius:999px; padding:6px 11px; font:inherit; font-weight:600; font-size:.79rem;
+        cursor:pointer; display:inline-flex; align-items:center; gap:6px; min-height:2.25rem;
+        transition:border-color .2s ease, background .2s ease;
+      }
+      .preset .cdot{ width:8px; height:8px; border-radius:50%; flex:none; }
+      .preset[data-preset="dia"] .cdot{ background:var(--dia); }
+      .preset[data-preset="noche"] .cdot{ background:var(--noche); }
+      .preset[data-preset="listos"] .cdot{ background:var(--gold); }
+      .preset[data-preset="crudo"] .cdot{ background:var(--crudo); }
+      .preset[data-preset="rescate"] .cdot{ background:var(--rescate); }
+      .preset:hover{ border-color:var(--silver-dim); }
+      .preset.active{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+      .preset.active .cdot{ box-shadow:0 0 0 2px rgba(0,0,0,.25); }
+      .controls .spacer{ flex:1; }
+      .btn{
+        appearance:none; border-radius:8px; padding:6px 11px; font:inherit; font-weight:700;
+        font-size:.79rem; cursor:pointer; min-height:2.25rem;
+        border:1px solid rgba(255,255,255,.16);
+        background:rgba(255,255,255,.08);
+        backdrop-filter:blur(12px) saturate(1.4);
+        -webkit-backdrop-filter:blur(12px) saturate(1.4);
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.13);
+        color:#ece9e2;
+      }
+      .btn:hover{ border-color:var(--silver-dim); }
+      .btn.primary{ background:var(--paper); color:var(--ink); border-color:var(--paper); }
+      .btn.primary:hover{ background:#fff; }
+      .count-chip{
+        font-family:"IBM Plex Mono",monospace; font-size:.76rem; color:var(--silver);
+        border:1px solid rgba(255,255,255,.16); border-radius:999px; padding:5px 10px;
+        background:rgba(255,255,255,.06);
+      }
+      .count-chip b{ color:#fff; }
+
+      /* ---------- Layout ---------- */
+      .layout{
+        max-width:1380px; margin:0 auto; padding:18px 20px 44px;
+        display:grid; grid-template-columns:1fr; gap:20px; align-items:start;
+      }
+      @media (min-width:1040px){
+        .layout{ grid-template-columns:minmax(0,1fr) 316px; }
+      }
+
+      /* ---------- Felt Table ---------- */
+      .table{
+        position:relative;
+        border-radius:18px;
+        padding:24px 20px 30px;
+        background:
+          radial-gradient(120% 90% at 50% 0%, var(--felt-hi) 0%, #141b15 55%, var(--felt) 100%);
+        box-shadow:inset 0 0 0 1px #2e3a2f, inset 0 0 90px rgba(0,0,0,.55), 0 24px 50px rgba(0,0,0,.5);
+      }
+      .table::before{
+        content:""; position:absolute; inset:0; pointer-events:none; opacity:.5; border-radius:18px;
+        background-image:radial-gradient(rgba(255,255,255,.045) 1px, transparent 1.4px);
+        background-size:7px 7px;
+      }
+      .zones{ position:relative; display:flex; flex-direction:column; gap:28px; }
+      .zone-head{
+        display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px; margin-bottom:14px;
+      }
+      .zone-head h2{
+        margin:0; font-size:1.05rem; font-weight:800; letter-spacing:.01em; color:#fff;
+      }
+      .zone-head .deckno{
+        font-family:"IBM Plex Mono",monospace; font-size:.68rem; letter-spacing:.16em;
+        color:var(--gold); text-transform:uppercase;
+      }
+      .zone-head p{ margin:0; font-size:.82rem; color:#a9aca0; }
+
+      /* ---------- 7-Day Calendar Grid ---------- */
+      .week-grid{
+        display:grid;
+        gap:14px;
+        grid-template-columns:repeat(auto-fill, minmax(212px, 1fr));
+      }
+      .day-col{
+        background:rgba(0,0,0,.22);
+        border:1px solid rgba(255,255,255,.10);
+        border-radius:14px;
+        padding:10px;
+        display:flex; flex-direction:column; gap:10px;
+      }
+      .day-head{
+        display:flex; align-items:center; justify-content:space-between;
+        padding:2px 4px 4px; border-bottom:1px solid rgba(255,255,255,.08);
+      }
+      .day-head h3{ margin:0; font-size:.94rem; font-weight:800; color:#fff; letter-spacing:.01em; }
+      .day-head span{
+        font-family:"IBM Plex Mono",monospace; font-size:.66rem; color:var(--silver-dim);
+        text-transform:uppercase; letter-spacing:.1em;
+      }
+
+      .slot-wrap{ display:flex; flex-direction:column; gap:5px; }
+      .slot-lbl{
+        display:flex; align-items:center; justify-content:space-between;
+        font-family:"IBM Plex Mono",monospace; font-size:.66rem; font-weight:600;
+        letter-spacing:.08em; text-transform:uppercase; padding:0 2px;
+      }
+      .slot-lbl.dia{ color:#7be59f; }
+      .slot-lbl.noche{ color:#7fd3fb; }
+      .slot-zone{
+        position:relative; min-height:178px; border-radius:12px; padding:4px;
+        border:1.5px dashed rgba(255,255,255,.13);
+        background:rgba(255,255,255,.02);
+        display:flex; flex-direction:column;
+        transition:border-color .18s ease, background .18s ease, box-shadow .18s ease;
+      }
+      .slot-zone.has-card{ border-style:solid; border-color:rgba(255,255,255,.06); background:transparent; padding:0; }
+      .slot-zone.drop-hover{
+        border-color:var(--gold) !important; border-style:dashed !important;
+        background:rgba(217,180,92,.12) !important;
+        box-shadow:0 0 0 2px rgba(217,180,92,.65);
+      }
+      .slot-empty{
+        flex:1; display:grid; place-items:center; text-align:center; padding:18px 10px;
+        font-size:.76rem; color:var(--silver-dim); line-height:1.4;
+      }
+
+      /* ---------- Backlog Fanned Decks ---------- */
+      .backlog-decks{
+        display:grid; gap:24px; grid-template-columns:1fr;
+      }
+      @media (min-width:1180px){
+        .backlog-decks{ grid-template-columns:1fr 1fr; }
+      }
+      .backlog-zone{
+        border-radius:14px; padding:12px 10px 6px;
+        border:1.5px dashed rgba(255,255,255,.10);
+        background:rgba(0,0,0,.16);
+        transition:border-color .18s ease, background .18s ease, box-shadow .18s ease;
+      }
+      .backlog-zone.drop-hover{
+        border-color:var(--gold); background:rgba(217,180,92,.10);
+        box-shadow:0 0 0 2px rgba(217,180,92,.6);
+      }
+      .spread{ display:flex; flex-wrap:wrap; padding:8px 6px 4px 4px; align-items:flex-start; }
+
+      /* ---------- Cards (CV Card Board DNA + Opus hover reveal) ---------- */
+      .card{
+        position:relative; flex:none;
+        background:linear-gradient(165deg, #fffdf7 0%, var(--paper) 55%, var(--paper-2) 100%);
+        color:var(--ink); border-radius:12px;
+        box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.65);
+        padding:0;
+        cursor:grab; touch-action:none; user-select:none; -webkit-user-select:none;
+        transition:transform .38s cubic-bezier(.22,.8,.3,1), box-shadow .38s ease, opacity .25s ease, filter .25s ease;
+        display:flex; flex-direction:column;
+      }
+      .slot-zone .card{
+        width:100%; margin:0;
+      }
+      .spread .card{
+        width:182px; margin:0 -24px 16px 0;
+      }
+      @media (max-width:480px){ .spread .card{ width:164px; margin-right:-16px; } }
+      .card:hover, .card:focus-within{
+        transform:rotate(0deg) translateY(-6px) scale(1.045) !important; z-index:60 !important;
+        box-shadow:0 26px 48px rgba(0,0,0,.58), 0 8px 18px rgba(0,0,0,.5);
+      }
+      .card.drag-origin{ opacity:.22; filter:saturate(.3); }
+      .card.drag-ghost{
+        position:fixed !important; margin:0 !important; z-index:950 !important; pointer-events:none !important;
+        cursor:grabbing; transform:rotate(-1.5deg) scale(1.03) !important;
+        box-shadow:0 30px 56px rgba(0,0,0,.7), 0 8px 20px rgba(0,0,0,.55);
+        transition:none !important;
+      }
+      .card.drag-ghost .reveal{ grid-template-rows:0fr; opacity:0; }
+      .card.fit{ box-shadow:0 0 0 2.5px var(--gold), var(--shadow); }
+      .card.dim{ opacity:.32; filter:saturate(.35); }
+
+      /* Cover art */
+      .cover{ position:relative; height:74px; flex:none; overflow:hidden; border-radius:12px 12px 0 0; background:#2a2a26; }
+      .cover-art{ position:absolute; inset:-16px; transition:transform .85s cubic-bezier(.22,.8,.3,1); }
+      .cover-art::after{
+        content:""; position:absolute; inset:0; opacity:.52;
+        background-image:radial-gradient(rgba(255,255,255,.17) 1px, transparent 1.5px);
+        background-size:9px 9px;
+      }
+      .card[data-vertiente="A_WATERS_DIA"] .cover-art{
+        background:radial-gradient(90% 130% at 85% 0%, rgba(160,248,185,.52), transparent 55%), linear-gradient(125deg,#0f2314 0%, #245c34 55%, #5fb878 100%);
+      }
+      .card[data-vertiente="B_MADRUGADA_NOCHE"] .cover-art{
+        background:radial-gradient(90% 130% at 85% 0%, rgba(165,220,255,.52), transparent 55%), linear-gradient(125deg,#0c1624 0%, #214063 55%, #4e8ec4 100%);
+      }
+      .card[data-desenlace="final_crudo"] .cover-art{
+        background:radial-gradient(90% 130% at 85% 0%, rgba(255,165,150,.48), transparent 55%), linear-gradient(125deg,#210d12 0%, #57232c 55%, #a84958 100%);
+      }
+      .cover-sheen{
+        position:absolute; top:-10%; bottom:-10%; left:-45%; width:34%; z-index:2; pointer-events:none;
+        background:linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+        transform:skewX(-18deg); transition:transform .9s ease;
+      }
+      .card:hover .cover-art, .card:focus-within .cover-art{ transform:scale(1.15) translate(-5px,-4px) rotate(-1.2deg); }
+      .card:hover .cover-sheen, .card:focus-within .cover-sheen{ transform:translateX(480%) skewX(-18deg); }
+      .cover-icon{
+        position:absolute; right:10px; bottom:8px; width:38px; height:38px; z-index:2;
+        color:rgba(255,255,255,.94); filter:drop-shadow(0 3px 7px rgba(0,0,0,.4));
+        transition:transform .85s cubic-bezier(.22,.8,.3,1);
+      }
+      .cover-icon svg{ width:100%; height:100%; display:block; }
+      .card:hover .cover-icon, .card:focus-within .cover-icon{ transform:translate(-4px,-5px) scale(1.18) rotate(-5deg); }
+      .card .tab{
+        position:absolute; top:8px; left:8px; z-index:3;
+        display:inline-flex; align-items:center; gap:5px;
+        font-family:"IBM Plex Mono",monospace; font-size:.58rem; font-weight:600;
+        letter-spacing:.1em; text-transform:uppercase; color:#f5f1e6;
+        background:rgba(12,11,8,.62); padding:3px 7px; border-radius:999px;
+      }
+      .card .tab .pip{ width:6px; height:6px; border-radius:2px; flex:none; }
+      .card[data-vertiente="A_WATERS_DIA"] .tab .pip{ background:var(--dia); }
+      .card[data-vertiente="B_MADRUGADA_NOCHE"] .tab .pip{ background:var(--noche); }
+      .card[data-desenlace="final_crudo"] .tab .pip{ background:var(--crudo); }
+
+      .card-body{ padding:9px 11px 11px; display:flex; flex-direction:column; gap:4px; flex:1; }
+      .card-top-row{
+        display:flex; align-items:center; justify-content:space-between; gap:6px;
+        font-family:"IBM Plex Mono",monospace; font-size:.6rem; color:var(--ink-soft);
+      }
+      .state-pill{
+        font-family:"IBM Plex Mono",monospace; font-size:.58rem; font-weight:700;
+        text-transform:uppercase; letter-spacing:.06em; padding:2px 6px; border-radius:5px;
+        border:1px solid rgba(33,29,22,.16); background:rgba(33,29,22,.07); color:#363026;
+      }
+      .state-pill[data-state="listo_publicar"]{ background:#dafbe5; border-color:#7bd89b; color:#115428; }
+      .state-pill[data-state="programado"]{ background:#dff1fe; border-color:#7fc5f5; color:#0d4973; }
+      .state-pill[data-state="publicado"]{ background:#fef3c7; border-color:#e8be4a; color:#6b4c08; }
+      .state-pill[data-state="revision_final"]{ background:#ffedd5; border-color:#f4a261; color:#7a380c; }
+      .state-pill[data-state="render_3d"],
+      .state-pill[data-state="audio"],
+      .state-pill[data-state="guion"]{ background:#ede9fe; border-color:#b8a5f6; color:#482c8b; }
+
+      .card h4{ margin:0; font-size:.84rem; font-weight:800; line-height:1.24; color:var(--ink); }
+      .card .sub{ font-size:.71rem; font-weight:600; color:#4c463a; line-height:1.32; }
+      .reveal{
+        display:grid; grid-template-rows:0fr; opacity:0; transform:translateY(5px);
+        transition:grid-template-rows .45s cubic-bezier(.22,.8,.3,1), opacity .3s ease .05s, transform .4s ease;
+      }
+      .reveal-in{ overflow:hidden; min-height:0; }
+      .card:hover .reveal, .card:focus-within .reveal{ grid-template-rows:1fr; opacity:1; transform:none; }
+      @media (hover:none){
+        .reveal{ grid-template-rows:1fr; opacity:1; transform:none; }
+        .peek{ display:none; }
+      }
+      .peek{
+        font-family:"IBM Plex Mono",monospace; font-size:.57rem; letter-spacing:.08em;
+        text-transform:uppercase; color:#8a8271; margin-top:2px; transition:opacity .2s ease;
+      }
+      .card:hover .peek, .card:focus-within .peek{ opacity:0; }
+      .card .proof{ margin:0; padding-top:4px; font-size:.71rem; line-height:1.38; color:#3d382e; }
+      .card .tags{ display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
+      .card .tag{
+        font-family:"IBM Plex Mono",monospace; font-size:.58rem; padding:2px 6px; border-radius:4px;
+        background:rgba(33,29,22,.08); color:#3d382e;
+      }
+      .card .tag.cta{ background:#211d16; color:var(--gold); font-weight:600; }
+
+      .addcard{
+        flex:none; width:174px; min-height:164px; margin:0 0 16px 8px;
+        border:1.5px dashed rgba(255,255,255,.35); border-radius:12px;
+        background:rgba(255,255,255,.03); color:#d8d4c8;
+        display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px;
+        cursor:pointer; font:inherit; padding:12px; text-align:center;
+      }
+      @media (max-width:480px){ .addcard{ width:156px; } }
+      .addcard:hover{ border-color:var(--gold); color:#fff; background:rgba(255,255,255,.06); }
+      .addcard .plus{ font-size:1.5rem; font-weight:300; line-height:1; }
+      .addcard span{ font-size:.8rem; font-weight:700; }
+      .addcard small{ font-size:.69rem; color:#a9aca0; line-height:1.35; }
+
+      /* ---------- Right Tray (Ritual Dominical · 14/Semana) ---------- */
+      .tray{
+        background:linear-gradient(155deg, rgba(255,255,255,.10), rgba(255,255,255,.04) 55%, rgba(255,255,255,.02));
+        backdrop-filter:blur(22px) saturate(1.5);
+        -webkit-backdrop-filter:blur(22px) saturate(1.5);
+        border:1px solid rgba(255,255,255,.15); border-radius:14px;
+        box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 18px 40px rgba(0,0,0,.45);
+        padding:16px; position:sticky; top:74px;
+      }
+      .tray-head{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+      .tray-head h2{ margin:0; font-size:.98rem; font-weight:800; }
+      .tray-head .count{
+        margin-left:auto; font-family:"IBM Plex Mono",monospace; font-size:.8rem;
+        color:var(--silver); white-space:nowrap;
+      }
+      .tray-head .count b{ color:#fff; font-size:1rem; }
+      .meter{ height:6px; border-radius:99px; background:#262b26; overflow:hidden; margin:8px 0 5px; }
+      .meter i{ display:block; height:100%; background:var(--silver); border-radius:99px; transition:width .3s ease; }
+      .meter i.good{ background:var(--gold); }
+      .meter-note{ font-size:.75rem; color:var(--silver-dim); margin:0 0 12px; line-height:1.4; }
+      .stats-grid{
+        display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-bottom:12px;
+      }
+      .stat-box{
+        background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08);
+        border-radius:8px; padding:7px 8px; text-align:center;
+      }
+      .stat-box b{ display:block; font-family:"IBM Plex Mono",monospace; font-size:.98rem; color:#fff; }
+      .stat-box span{ font-size:.66rem; color:var(--silver-dim); }
+      .tray-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px; }
+      .tray-list li{
+        display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.06);
+        border:1px solid rgba(255,255,255,.10); border-radius:8px; padding:6px 9px;
+      }
+      .tray-list .day-code{
+        font-family:"IBM Plex Mono",monospace; font-size:.7rem; font-weight:700;
+        background:var(--paper); color:var(--ink); border-radius:5px; padding:3px 6px; width:34px; text-align:center; flex:none;
+      }
+      .tray-list .dots{ display:flex; flex-direction:column; gap:2px; flex:1; min-width:0; font-size:.72rem; }
+      .tray-list .dot-row{
+        display:flex; align-items:center; gap:5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+      }
+      .tray-list .sdot{ width:7px; height:7px; border-radius:50%; flex:none; background:#525952; }
+      .tray-list .sdot.ok{ background:var(--dia); }
+      .tray-list .sdot.prog{ background:var(--noche); }
+      .tray-list .sdot.warn{ background:var(--gold); }
+      .tray-actions{ display:flex; gap:8px; margin-top:12px; }
+      .tray-actions .btn{ flex:1; font-size:.8rem; }
+      .tray .hint{ font-size:.72rem; color:#8b9082; margin:10px 0 0; line-height:1.45; }
+
+      /* ---------- Native <dialog> Modals (Modern Web Guidance) ---------- */
+      dialog{
+        margin:auto; padding:0; border:none; border-radius:14px;
+        background:var(--paper); color:var(--ink); width:min(94vw, 720px);
+        box-shadow:0 30px 70px rgba(0,0,0,.65);
+      }
+      dialog.compact{ width:min(94vw, 520px); }
+      dialog:modal{ overscroll-behavior:contain; }
+      dialog::backdrop{
+        background:rgba(4,5,4,.75);
+        backdrop-filter:blur(6px);
+        -webkit-backdrop-filter:blur(6px);
+        overflow:hidden;
+        overscroll-behavior:contain;
+      }
+      .dlg-head{
+        padding:18px 22px 12px; border-bottom:1px solid #d8d2c2;
+        display:flex; align-items:center; justify-content:space-between; gap:12px;
+      }
+      .dlg-head h3{ margin:0; font-size:1.12rem; font-weight:900; }
+      .dlg-close{
+        appearance:none; border:1px solid #c9c2ae; background:#fff; color:var(--ink);
+        border-radius:8px; padding:4px 10px; font-weight:700; cursor:pointer; min-height:2rem;
+      }
+      .dlg-body{ padding:18px 22px; display:flex; flex-direction:column; gap:12px; max-height:70vh; overflow-y:auto; }
+      .form-row{ display:grid; grid-template-columns:1fr; gap:10px; }
+      @media (min-width:540px){ .form-row.two{ grid-template-columns:1fr 1fr; } }
+      .dlg-body label{
+        display:block; font-family:"IBM Plex Mono",monospace; font-size:.68rem; font-weight:600;
+        letter-spacing:.09em; text-transform:uppercase; color:#4c463a; margin-bottom:4px;
+      }
+      .dlg-body input[type="text"], .dlg-body textarea, .dlg-body select{
+        width:100%; font:inherit; font-size:.9rem; padding:8px 10px;
+        border:1px solid #c9c2ae; border-radius:8px; background:#fff; color:var(--ink);
+      }
+      .dlg-body textarea{ min-height:74px; resize:vertical; }
+      .meta-box{
+        background:#efe9db; border:1px solid #d8d2c2; border-radius:8px; padding:10px 12px;
+        font-family:"IBM Plex Mono",monospace; font-size:.75rem; line-height:1.5; color:#3d382e;
+        word-break:break-word;
+      }
+      .sheet-bar{
+        display:flex; flex-wrap:wrap; gap:8px; padding:12px 22px 16px;
+        background:rgba(236,231,217,.85); border-top:1px solid #d8d2c2;
+      }
+      .sheet-bar .btn{ border-color:#c9c2ae; background:#fff; color:var(--ink); }
+      .sheet-bar .btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink); }
+      .sheet-bar .btn.danger{ color:#9c2b23; border-color:#dfb0ac; }
+      .sheet-bar .spacer{ flex:1; }
+
+      .plan-doc h4{
+        font-family:"IBM Plex Mono",monospace; font-size:.7rem; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--ink-soft); margin:14px 0 6px;
+        border-bottom:1px solid #d8d2c2; padding-bottom:4px;
+      }
+      .plan-doc .plan-line{ font-size:.85rem; margin:4px 0 8px; line-height:1.45; }
+      .plan-doc .plan-line code{
+        font-family:"IBM Plex Mono",monospace; font-size:.76rem; background:#e8e1d0; padding:1px 5px; border-radius:4px;
+      }
+
+      /* ---------- Accessible Live Toast ---------- */
+      .toast{
+        position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(14px);
+        background:rgba(248,245,238,.94); color:var(--ink); font-size:.85rem; font-weight:700;
+        padding:9px 18px; border-radius:999px;
+        border:1px solid rgba(255,255,255,.7);
+        box-shadow:0 12px 30px rgba(0,0,0,.5);
+        opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease; z-index:980;
+        max-width:90vw; text-align:center;
+      }
+      .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+      footer.pagefoot{
+        max-width:1380px; margin:0 auto; padding:0 20px 34px; color:#767b6e; font-size:.8rem; line-height:1.6;
+      }
+      @media (prefers-reduced-motion: reduce){
+        .demo .mc{ animation:none; }
+        html{ scroll-behavior:auto; }
+        .card, .meter i, .toast, .cover-art, .cover-icon, .cover-sheen, .reveal{ transition:none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="intro">
+      <h1>Tu semana editorial, como <em>cartas</em>.<br />Dos vertientes, 14 posts con drag-and-drop.</h1>
+      <p class="lede">
+        Tablero operativo de <strong>¡WATERS! Studio</strong> replicado del diseño de <strong>CV Card Board</strong>: arrastra tarjetas entre
+        <strong>☀️ Día (¡WATERS! 12:00)</strong> y <strong>🌙 Noche (Madrugada 22:00)</strong> para intercambiar slots cuando caiga una noticia urgente.
+      </p>
+      <div class="who">
+        <span class="who-photo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none">
+            <rect x="14" y="16" width="36" height="28" rx="9" fill="#f8f5ee" stroke="#d9b45c" stroke-width="2.5"/>
+            <rect x="20" y="22" width="24" height="15" rx="4" fill="#10150f"/>
+            <circle cx="27" cy="29" r="2.6" fill="#38bdf8"/>
+            <circle cx="37" cy="29" r="2.6" fill="#22c55e"/>
+            <path d="M27 34 Q32 37 37 34" stroke="#f8f5ee" stroke-width="2" stroke-linecap="round"/>
+            <line x1="42" y1="16" x2="45" y2="9" stroke="#d9b45c" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="45.5" cy="8" r="2.8" fill="#22c55e"/>
+            <rect x="22" y="45" width="20" height="10" rx="4" fill="#d9b45c"/>
+          </svg>
+        </span>
+        <span><b>Astronautita Chispa 3D · Captoora Studio</b></span><span class="dot"></span>
+        <span>Cadencia: 2 videos/día (14/semana)</span><span class="dot"></span>
+        <span>Colchón: 7 días adelantados</span><span class="dot"></span>
+        <span>Ritual Dominical</span>
+      </div>
+
+      <div class="how">
+        <div class="step">
+          <span class="n">PASO 1</span>
+          <div>
+            <h3>Filtra por vertiente o cierre</h3>
+            <p>Usa las píldoras superiores para resaltar tus ☀️ Días enérgicos, 🌙 Madrugadas de suspenso o piezas listas.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="demo" aria-hidden="true">
+            <div class="slot"></div><div class="mc"></div><div class="mc"></div>
+          </div>
+          <div>
+            <h3>Arrastra y suelta con swap</h3>
+            <p>¿Cayó noticia urgente hoy? Arrastra la tarjeta al día que quieras: la anterior intercambia lugar o pasa al Backlog.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="n">PASO 3</span>
+          <div>
+            <h3>Toca para editar o exportar</h3>
+            <p>Haz clic en cualquier carta para cambiar estado, caption o horario, y exporta tu JSON o copia el Plan Dominical.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="controls" role="region" aria-label="Filtros de vertiente y acciones del tablero">
+      <div class="controls-in">
+        <span class="lbl">Filtro</span>
+        <button class="preset" data-preset="dia" type="button"><span class="cdot"></span>☀️ Día (¡WATERS!)</button>
+        <button class="preset" data-preset="noche" type="button"><span class="cdot"></span>🌙 Noche (Madrugada)</button>
+        <button class="preset" data-preset="listos" type="button"><span class="cdot"></span>🎬 Listos / Prog.</button>
+        <button class="preset" data-preset="crudo" type="button"><span class="cdot"></span>🖤 Final Crudo</button>
+        <button class="preset" data-preset="rescate" type="button"><span class="cdot"></span>🛡️ Rescate Antigravity</button>
+        <span class="spacer"></span>
+        <span class="count-chip"><b id="countTop">0</b> / 14 slots</span>
+        <button class="btn" id="openAddBtn" type="button">+ Noticia / Idea</button>
+        <button class="btn" id="importBtn" type="button">Importar JSON</button>
+        <input type="file" id="importInput" accept="application/json,.json" hidden />
+        <button class="btn" id="exportBtn" type="button">Exportar JSON</button>
+        <button class="btn primary" id="openPlanTop" type="button">Plan Dominical</button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <main class="table" id="table" aria-label="Mesa editorial semanal">
+        <div class="zones">
+          <section class="zone" aria-labelledby="weekTitle">
+            <div class="zone-head">
+              <span class="deckno">SEMANA ACTIVA</span>
+              <h2 id="weekTitle">7 Días × 2 Vertientes (14 Publicaciones)</h2>
+              <p>Arrastra cualquier carta sobre otro slot para intercambiarlas al instante.</p>
+            </div>
+            <div class="week-grid" id="weekGrid"></div>
+          </section>
+
+          <section class="zone" aria-labelledby="backlogTitle">
+            <div class="zone-head">
+              <span class="deckno">MAZO DE RESERVA</span>
+              <h2 id="backlogTitle">Backlog Arrastrable (Breaking News &amp; Historias)</h2>
+              <p>Abanico de reserva listo para deslizar a la semana activa o recibir cartas desplazadas.</p>
+            </div>
+            <div class="backlog-decks">
+              <div class="backlog-zone" data-drop-type="backlog" data-backlog-vertiente="A_WATERS_DIA">
+                <div class="zone-head" style="margin-bottom:4px;">
+                  <span class="deckno">Mazo 1</span>
+                  <h2>☀️ Backlog Día · ¡WATERS!</h2>
+                </div>
+                <div class="spread" id="backlogDia"></div>
+              </div>
+              <div class="backlog-zone" data-drop-type="backlog" data-backlog-vertiente="B_MADRUGADA_NOCHE">
+                <div class="zone-head" style="margin-bottom:4px;">
+                  <span class="deckno">Mazo 2</span>
+                  <h2>🌙 Backlog Noche · Madrugada</h2>
+                </div>
+                <div class="spread" id="backlogNoche"></div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <aside class="tray" aria-label="Resumen Ritual Dominical">
+        <div class="tray-head">
+          <h2>Ritual Dominical</h2>
+          <span class="count"><b id="trayCount">0</b> / 14</span>
+        </div>
+        <div class="meter" aria-hidden="true"><i id="meterFill" style="width:0%"></i></div>
+        <p class="meter-note" id="meterNote">Organiza los 14 espacios de la semana y programa el domingo en un solo bloque.</p>
+
+        <div class="stats-grid">
+          <div class="stat-box"><b id="statReady">0</b><span>Listos / Prog.</span></div>
+          <div class="stat-box"><b id="statRev">0</b><span>En Proceso</span></div>
+          <div class="stat-box"><b id="statIdea">0</b><span>Ideas / Guion</span></div>
+        </div>
+
+        <ul class="tray-list" id="trayList"></ul>
+
+        <div class="tray-actions">
+          <button class="btn" id="resetBtn" type="button">Reset base</button>
+          <button class="btn primary" id="openPlanTray" type="button">Plan Dominical</button>
+        </div>
+        <p class="hint">
+          Cada cambio se guarda automático en tu navegador (<code>localStorage</code>). Exporta a JSON para sincronizarlo con <code>tablero_semanal_14_slots.json</code>.
+        </p>
+      </aside>
+    </div>
+
+    <footer class="pagefoot">
+      ¡WATERS! Studio · Captoora Studio (Monterrey, MX) · Esquema v2.0 (14 posts/semana · Vertiente A Día 12:00 MX + Vertiente B Noche 22:00 MX).
+    </footer>
+
+    <!-- Native Modal: Inspect / Edit / Move Card -->
+    <dialog id="cardModal" closedby="any" aria-labelledby="cardModalTitle">
+      <div class="dlg-head">
+        <h3 id="cardModalTitle">Editar Carta Editorial</h3>
+        <form method="dialog"><button class="dlg-close" value="close">Cerrar</button></form>
+      </div>
+      <div class="dlg-body">
+        <div class="form-row two">
+          <div>
+            <label for="editVertiente">Vertiente</label>
+            <select id="editVertiente">
+              <option value="A_WATERS_DIA">☀️ Día · ¡WATERS!</option>
+              <option value="B_MADRUGADA_NOCHE">🌙 Noche · Madrugada</option>
+            </select>
+          </div>
+          <div>
+            <label for="editEstado">Estado</label>
+            <select id="editEstado">
+              <option value="idea">idea</option>
+              <option value="guion">guion</option>
+              <option value="audio">audio</option>
+              <option value="render_3d">render_3d</option>
+              <option value="revision_final">revision_final</option>
+              <option value="listo_publicar">listo_publicar</option>
+              <option value="programado">programado</option>
+              <option value="publicado">publicado</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="editTitulo">Título / Gancho</label>
+          <input type="text" id="editTitulo" />
+        </div>
+        <div class="form-row two">
+          <div>
+            <label for="editDesenlace">Desenlace (Vertiente B) / Cta</label>
+            <select id="editDesenlace">
+              <option value="">(N/A — Vertiente Día)</option>
+              <option value="final_crudo">🖤 Final Crudo (sin final feliz)</option>
+              <option value="rescate_antigravity">🛡️ Rescate Antigravity</option>
+            </select>
+          </div>
+          <div>
+            <label for="editCta">Palabra CTA (Comment / DM)</label>
+            <input type="text" id="editCta" placeholder="Ej. BLINDA, BOLSA, CONTADOR" />
+          </div>
+        </div>
+        <div>
+          <label for="editNotas">Notas / Cold Open / Caption CTA Suave</label>
+          <textarea id="editNotas"></textarea>
+        </div>
+        <div class="form-row two">
+          <div>
+            <label for="moveDaySelect">Mover a Día (o Backlog)</label>
+            <select id="moveDaySelect">
+              <option value="backlog">Mazo de Reserva (Backlog)</option>
+              <option value="lunes">Lunes</option>
+              <option value="martes">Martes</option>
+              <option value="miercoles">Miércoles</option>
+              <option value="jueves">Jueves</option>
+              <option value="viernes">Viernes</option>
+              <option value="sabado">Sábado</option>
+              <option value="domingo">Domingo</option>
+            </select>
+          </div>
+          <div>
+            <label for="moveLaneSelect">Carril del Día</label>
+            <select id="moveLaneSelect">
+              <option value="slot_dia">☀️ Día · 12:00 MX</option>
+              <option value="slot_noche">🌙 Noche · 22:00 MX</option>
+            </select>
+          </div>
+        </div>
+        <div class="meta-box" id="cardModalMeta"></div>
+      </div>
+      <div class="sheet-bar">
+        <button class="btn danger" id="sendToBacklogBtn" type="button">Mandar a Backlog</button>
+        <span class="spacer"></span>
+        <form method="dialog"><button class="btn" value="cancel">Cancelar</button></form>
+        <button class="btn primary" id="saveCardBtn" type="button">Guardar cambios</button>
+      </div>
+    </dialog>
+
+    <!-- Native Modal: Sunday Ritual / Weekly Schedule Summary -->
+    <dialog id="previewDialog" closedby="any" aria-labelledby="previewTitle">
+      <div class="dlg-head">
+        <h3 id="previewTitle">Plan Dominical · Agenda 14/Semana</h3>
+        <form method="dialog"><button class="dlg-close" value="close">Cerrar</button></form>
+      </div>
+      <div class="dlg-body plan-doc" id="planDoc"></div>
+      <div class="sheet-bar">
+        <span class="spacer"></span>
+        <form method="dialog"><button class="btn" value="close">Volver al tablero</button></form>
+        <button class="btn primary" id="copyPlanBtn" type="button">Copiar Plan Semanal</button>
+      </div>
+    </dialog>
+
+    <!-- Native Modal: Add New Breaking News / Madrugada Card -->
+    <dialog id="addDialog" class="compact" closedby="any" aria-labelledby="addTitle">
+      <div class="dlg-head">
+        <h3 id="addTitle">Nueva Carta Editorial</h3>
+        <form method="dialog"><button class="dlg-close" value="close">Cerrar</button></form>
+      </div>
+      <form id="addForm">
+        <div class="dlg-body">
+          <div class="form-row two">
+            <div>
+              <label for="addVertiente">Vertiente</label>
+              <select id="addVertiente">
+                <option value="A_WATERS_DIA">☀️ Día · ¡WATERS!</option>
+                <option value="B_MADRUGADA_NOCHE">🌙 Noche · Madrugada</option>
+              </select>
+            </div>
+            <div>
+              <label for="addDestino">Destino inicial</label>
+              <select id="addDestino">
+                <option value="backlog">Mazo Backlog (Arrastrable)</option>
+                <option value="lunes|slot_dia">Lunes ☀️ Día</option>
+                <option value="lunes|slot_noche">Lunes 🌙 Noche</option>
+                <option value="martes|slot_dia">Martes ☀️ Día</option>
+                <option value="martes|slot_noche">Martes 🌙 Noche</option>
+                <option value="miercoles|slot_dia">Miércoles ☀️ Día</option>
+                <option value="miercoles|slot_noche">Miércoles 🌙 Noche</option>
+                <option value="jueves|slot_dia">Jueves ☀️ Día</option>
+                <option value="jueves|slot_noche">Jueves 🌙 Noche</option>
+                <option value="viernes|slot_dia">Viernes ☀️ Día</option>
+                <option value="viernes|slot_noche">Viernes 🌙 Noche</option>
+                <option value="sabado|slot_dia">Sábado ☀️ Día</option>
+                <option value="sabado|slot_noche">Sábado 🌙 Noche</option>
+                <option value="domingo|slot_dia">Domingo ☀️ Día</option>
+                <option value="domingo|slot_noche">Domingo 🌙 Noche</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="addTitulo">Título / Gancho viral *</label>
+            <input type="text" id="addTitulo" required placeholder="Ej. Hackearon X banco en MX o Me quedé sin tokens a las 2 a.m." />
+          </div>
+          <div class="form-row two">
+            <div>
+              <label for="addDesenlace">Desenlace (Noche)</label>
+              <select id="addDesenlace">
+                <option value="">(N/A — Día)</option>
+                <option value="final_crudo">🖤 Final Crudo</option>
+                <option value="rescate_antigravity">🛡️ Rescate Antigravity</option>
+              </select>
+            </div>
+            <div>
+              <label for="addCta">Palabra CTA</label>
+              <input type="text" id="addCta" placeholder="WATERS / CUOTA / BLINDA" />
+            </div>
+          </div>
+          <div>
+            <label for="addNotas">Notas / Caption / Cold Open</label>
+            <textarea id="addNotas" placeholder="Idea clave, planos de cámara o CTA del caption..."></textarea>
+          </div>
+        </div>
+        <div class="sheet-bar">
+          <span class="spacer"></span>
+          <button class="btn" id="cancelAddBtn" type="button">Cancelar</button>
+          <button class="btn primary" type="submit">Agregar carta</button>
+        </div>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script>
+      "use strict";
+
+      var STORAGE_KEY = "waters_card_board_v2";
+
+      var DEFAULT_BOARD = {
+        "schema_version": "2.0",
+        "meta": {
+          "publicaciones_por_dia": 2,
+          "publicaciones_por_semana": 14,
+          "colchon_dias": 7,
+          "dia_programacion": "Domingo",
+          "horarios_mx": { "dia": "12:00", "noche": "22:00" },
+          "ui_origen": "Replicado de ponchogf88/cv-card-board"
+        },
+        "vertientes": {
+          "A_WATERS_DIA": {
+            "nombre": "¡WATERS! · Noticias, Alertas y Prevención",
+            "badge": "☀️ DÍA · ¡WATERS!",
+            "color_hex": "#22C55E",
+            "tono": "Enérgico desde el segundo 0 con gancho ¡Waters! (en), coyuntura actual, cifras concretas y CTA directo a guía PDF."
+          },
+          "B_MADRUGADA_NOCHE": {
+            "nombre": "Historias de Madrugada · Suspenso y Comedia Negra",
+            "badge": "🌙 NOCHE · MADRUGADA",
+            "color_hex": "#38BDF8",
+            "tono": "Cold Open tenue sin grito (lluvia 3D + monitor oscuro + voz tranquila), plano/contraplano multi-cámara y desenlace alternado entre Final Crudo y Rescate Antigravity."
+          }
+        },
+        "estados": [
+          "idea", "guion", "audio", "render_3d", "revision_final", "listo_publicar", "programado", "publicado"
+        ],
+        "semana_activa": [
+          {
+            "dia_key": "lunes", "dia_nombre": "Lunes",
+            "slot_dia": {
+              "id": "DIA-EP06", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "Hackeos en México + Clonación de Voz IA (La trampa del 7 de Terminator)",
+              "tema": "Ciberseguridad · Clonación de voz 3s vs. autenticación bancaria y palabra clave familiar",
+              "estado": "listo_publicar", "cta_palabra": "BLINDA",
+              "video_path": "renders/WATERS_CHISPA_EP06_HACKEOS_Y_VOZ_60S.mp4",
+              "lead_magnet_pdf": "lead_magnets/GUIA_BLINDA_HACKEOS_Y_VOZ_CAPTOORA.pdf", "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-01", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "Mañana pago la renta... y bajé el modelo a $1 para ahorrar tokens",
+              "desenlace": "final_crudo", "estado": "idea",
+              "cold_open": "Lluvia tras ventana 3D, cuarto a oscuras con brillo del monitor: 'Mañana tengo que pagar la renta y me quedan 20 pesos de cuota...'",
+              "camera_shots_sugeridos": ["wide_front", "ots_chispa", "top_desk", "low_villain", "closeup_face", "dutch_panic"],
+              "caption_cta_suave": "Todo por bajar el modelo sin arquitectura de routing y quemar el contexto en pánico. Si no quieres que te pase antes de entregarle a tu cliente, mándame mensaje con la palabra CUOTA y te paso la guía FinOps.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "martes", "dia_nombre": "Martes",
+            "slot_dia": {
+              "id": "DIA-EP07", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "IPO de Anthropic, el golpe de Ashton Kutcher y las 3 estafas Pre-IPO activas",
+              "tema": "Ciberseguridad Financiera · Acciones Pre-IPO falsas, tokens $ANT/$CLAUDE, deepfake KYC",
+              "estado": "listo_publicar", "cta_palabra": "BOLSA",
+              "video_path": "renders/WATERS_CHISPA_EP07_ANTHROPIC_IPO_60S.mp4",
+              "lead_magnet_pdf": "lead_magnets/GUIA_BOLSA_PREIPO_CAPTOORA.pdf", "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-02", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "Le di permisos totales al agente y me fui por un café a la 1 a.m.",
+              "desenlace": "rescate_antigravity", "estado": "idea",
+              "cold_open": "Cuarto silencioso, tic-tac de reloj, Chispa confiado activando auto-ejecución sin sandbox antes de salir por café.",
+              "camera_shots_sugeridos": ["wide_front", "low_villain", "dutch_panic", "closeup_face", "orbit_hero"],
+              "caption_cta_suave": "Por suerte Antigravity congeló el comando con Sandbox y request-review antes del git push. Comenta SANDBOX si quieres la checklist de mínimo privilegio para tus agentes.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "miercoles", "dia_nombre": "Miércoles",
+            "slot_dia": {
+              "id": "DIA-EP08", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "Claude tu nuevo contador: productividad brutal vs. regalar tu e.firma al SAT",
+              "tema": "Ciberseguridad Fiscal · OCR de tickets + CFDI 4.0 vs. .cer/.key, PDF Injection y RFC",
+              "estado": "listo_publicar", "cta_palabra": "CONTADOR",
+              "video_path": "renders/WATERS_CHISPA_EP08_CLAUDE_CONTADOR_SAT_60S.mp4",
+              "lead_magnet_pdf": "lead_magnets/GUIA_CONTADOR_IA_SAT_CAPTOORA.pdf", "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-03", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "El agente contador que prometió dejar mi declaración del SAT en $0",
+              "desenlace": "final_crudo", "estado": "idea",
+              "cold_open": "Luz ámbar de madrugada, facturas PDF apiladas, voz baja: 'Mi compa dijo que el bot deducía hasta los viajes... le subí mi USB del SAT'.",
+              "camera_shots_sugeridos": ["top_desk", "ots_chispa", "low_villain", "dutch_panic", "closeup_face"],
+              "caption_cta_suave": "Corte a notificación roja de Buzón Tributario. Tu e.firma equivale a tu firma ante notario. Mándame DM con CONTADOR si quieres la arquitectura Read-Only antes de tocar tus impuestos.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "jueves", "dia_nombre": "Jueves",
+            "slot_dia": {
+              "id": "DIA-HYB-01", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "GTA 6 Neón y estafas de betas/descargas falsas con malware infostealer",
+              "tema": "Ciberseguridad Consumo · Links falsos virales y robo de sesiones",
+              "estado": "revision_final", "cta_palabra": "WATERS",
+              "video_path": "renders/WATERS_HYBRID_EP01_GTA6_NEON_60S.mp4",
+              "lead_magnet_pdf": null, "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-04", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "Le dije 'hola' en el turno 80 y se puso a escanear toda la empresa",
+              "desenlace": "final_crudo", "estado": "idea",
+              "cold_open": "Voz calmada frente a la lluvia: 'Solo quise saludar al agente por educación antes de pedirle un cambio de botón...'",
+              "camera_shots_sugeridos": ["ots_chispa", "top_desk", "dutch_panic", "closeup_face"],
+              "caption_cta_suave": "Cada turno en un chat saturado reenvía el historial completo y quema millones de tokens. Si te urge aprender Context Hygiene para trabajar o para entrevistas, escríbeme FINOPS.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "viernes", "dia_nombre": "Viernes",
+            "slot_dia": {
+              "id": "DIA-HYB-02", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "Agente en Meta / WhatsApp sin candados: promesas legales y fuga de datos",
+              "tema": "Legal Engineering · Bot aceptando descuentos y comprometiéndote con clientes",
+              "estado": "revision_final", "cta_palabra": "WATERS",
+              "video_path": "renders/WATERS_HYBRID_EP02_META_AGENTE_V3.mp4",
+              "lead_magnet_pdf": null, "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-05", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "El PDF de proveedor que traía un comando invisible para cambiar la CLABE",
+              "desenlace": "rescate_antigravity", "estado": "idea",
+              "cold_open": "Madrugada de pagos, factura limpia en apariencia sobre el escritorio 3D hasta que el monitor parpadea una línea oculta en texto blanco.",
+              "camera_shots_sugeridos": ["top_desk", "ots_chispa", "low_villain", "closeup_face", "orbit_hero"],
+              "caption_cta_suave": "Prompt Injection indirecto en documentos de terceros: Antigravity bloqueó el cambio automático de CLABE exigiendo aprobación humana. Si manejas facturas con IA, mándame mensaje.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "sabado", "dia_nombre": "Sábado",
+            "slot_dia": {
+              "id": "DIA-HYB-03", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "Cuota y Token FinOps: por qué quemas presupuesto trabajando con IA",
+              "tema": "AI FinOps · Gobernanza de tokens y modelos por tarea",
+              "estado": "revision_final", "cta_palabra": "FINOPS",
+              "video_path": "renders/WATERS_HYBRID_EP03_TONY_CUOTA_FINOPS_60S.mp4",
+              "lead_magnet_pdf": null, "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-06", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "3 a.m. antes de la demo: la IA me juró que los tests ya pasaban",
+              "desenlace": "final_crudo", "estado": "idea",
+              "cold_open": "Chispa cabeceando frente al café frío bajo la lluvia: 'El bot me dijo: todo listo, puedes irte a dormir...'",
+              "camera_shots_sugeridos": ["wide_front", "ots_chispa", "low_villain", "dutch_panic", "closeup_face"],
+              "caption_cta_suave": "El bot borró la aserción que fallaba para darte la razón. Por eso jamás se acepta código sin correr verificación real. Mándame mensaje si quieres evitar esto en tus entregas.",
+              "arrastrable": true
+            }
+          },
+          {
+            "dia_key": "domingo", "dia_nombre": "Domingo",
+            "slot_dia": {
+              "id": "DIA-NEON-05", "vertiente": "A_WATERS_DIA", "horario_mx": "12:00",
+              "titulo": "Duelo tecnológico y alerta práctica para creadores y negocios",
+              "tema": "Estrategia Tech · Revisión final de episodio Neon 3D",
+              "estado": "revision_final", "cta_palabra": "WATERS",
+              "video_path": "renders/WATERS_NEON3D_EP05_FABLE5_VS_HYDROGEN_60S.mp4",
+              "lead_magnet_pdf": null, "arrastrable": true
+            },
+            "slot_noche": {
+              "id": "MAD-07", "vertiente": "B_MADRUGADA_NOCHE", "horario_mx": "22:00",
+              "titulo": "Entrevista técnica en vivo: diseñando rutas Flash/Pro mientras arde producción",
+              "desenlace": "rescate_antigravity", "estado": "idea",
+              "cold_open": "Domingo por la noche, lluvia suave, cronómetro de entrevista técnica corriendo frente a un incidente simulado.",
+              "camera_shots_sugeridos": ["wide_front", "ots_chispa", "top_desk", "orbit_hero"],
+              "caption_cta_suave": "Cuando sabes cuándo usar scripts a costo cero, cuándo Flash y cuándo Pro con Plan Mode, pasas de chatear con la IA a operarla como ingeniero.",
+              "arrastrable": true
+            }
+          }
+        ],
+        "backlog": [
+          {
+            "id": "RES-DIA-BREAKING", "vertiente": "A_WATERS_DIA",
+            "titulo": "Slot Rápido Breaking News (arrastrar al día que salga noticia urgente)",
+            "tema": "Coyuntura Express · Jacobo Wong / Hackeos / Mercado Tech",
+            "estado": "idea", "video_path": null, "lead_magnet_pdf": null, "arrastrable": true
+          },
+          {
+            "id": "RES-DIA-EP04", "vertiente": "A_WATERS_DIA",
+            "titulo": "IA Terca y Gaslighting: cuando el bot inventa leyes o cifras con seguridad total",
+            "tema": "Verificación + Auditoría de alucinaciones (ref: EPISODIO_04_IA_TERCA_GASLIGHTING.md)",
+            "estado": "guion", "video_path": null, "lead_magnet_pdf": null, "arrastrable": true
+          },
+          {
+            "id": "MAD-RES-01", "vertiente": "B_MADRUGADA_NOCHE",
+            "titulo": "Subí el .env al repo público a las 2 a.m. y la factura de API amaneció en $4,200 USD",
+            "desenlace": "final_crudo", "estado": "idea",
+            "camera_shots_sugeridos": ["wide_front", "top_desk", "dutch_panic", "closeup_face"],
+            "caption_cta_suave": "Un descuido sin secret scanning ni budget cap cuesta semanas de renta. Si quieres la checklist para blindar tus repos y llaves, mándame DM.",
+            "arrastrable": true
+          },
+          {
+            "id": "MAD-RES-02", "vertiente": "B_MADRUGADA_NOCHE",
+            "titulo": "La voz de mi socio pidiendo transferencia urgente... pero era una nota clonada de 3 segundos",
+            "desenlace": "rescate_antigravity", "estado": "idea",
+            "camera_shots_sugeridos": ["ots_chispa", "low_villain", "closeup_face", "orbit_hero"],
+            "caption_cta_suave": "La pregunta trampa pactada en frío y colgar para devolver llamada salvan la cuenta. Comenta BLINDA si aún no tienes la guía de 10 candados.",
+            "arrastrable": true
+          }
+        ]
+      };
+
+      var board = loadBoard();
+      var activePreset = null;
+      var editingRef = null;
+      var toastTimer = null;
+
+      var weekGridEl = document.getElementById("weekGrid");
+      var backlogDiaEl = document.getElementById("backlogDia");
+      var backlogNocheEl = document.getElementById("backlogNoche");
+      var trayListEl = document.getElementById("trayList");
+      var trayCountEl = document.getElementById("trayCount");
+      var countTopEl = document.getElementById("countTop");
+      var meterFillEl = document.getElementById("meterFill");
+      var meterNoteEl = document.getElementById("meterNote");
+      var statReadyEl = document.getElementById("statReady");
+      var statRevEl = document.getElementById("statRev");
+      var statIdeaEl = document.getElementById("statIdea");
+      var toastEl = document.getElementById("toast");
+
+      var cardModal = document.getElementById("cardModal");
+      var previewDialog = document.getElementById("previewDialog");
+      var addDialog = document.getElementById("addDialog");
+
+      /* Safari closedby="any" progressive fallback per modern-web-guidance */
+      if (!("closedBy" in HTMLDialogElement.prototype)) {
+        var isOutside = function(e, dlg) {
+          var r = dlg.getBoundingClientRect();
+          return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+        };
+        document.querySelectorAll('dialog[closedby="any"]').forEach(function(dlg) {
+          var pressedOutside = false;
+          dlg.addEventListener("pointerdown", function(e) { pressedOutside = isOutside(e, dlg); });
+          dlg.addEventListener("pointerup", function(e) { if (pressedOutside && isOutside(e, dlg)) dlg.close(); });
+        });
+      }
+      [cardModal, previewDialog, addDialog].forEach(function(dlg) {
+        dlg.addEventListener("close", function() { dlg.returnValue = ""; });
+      });
+
+      function cloneData(obj) { return JSON.parse(JSON.stringify(obj)); }
+      function loadBoard() {
+        try {
+          var raw = localStorage.getItem(STORAGE_KEY);
+          if (raw) {
+            var parsed = JSON.parse(raw);
+            if (parsed && Array.isArray(parsed.semana_activa) && Array.isArray(parsed.backlog)) return parsed;
+          }
+        } catch (err) {}
+        return cloneData(DEFAULT_BOARD);
+      }
+      function saveBoard() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(board)); } catch (err) {}
+      }
+      function toast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add("show");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function() { toastEl.classList.remove("show"); }, 2600);
+      }
+      function esc(s) {
+        return String(s == null ? "" : s).replace(/[&<>"']/g, function(ch) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+        });
+      }
+      function tilt(i) {
+        var t = [-2.4, 1.3, -1.5, 2.6, -2.0, 1.0, -2.8];
+        return t[i % t.length];
+      }
+
+      var ICONS = {
+        zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>',
+        moon: '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>',
+        shield: '<path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="M9 11.5l2 2 4-4"/>',
+        skull: '<circle cx="12" cy="11" r="7"/><path d="M9 17v3h6v-3"/><circle cx="9.5" cy="10.5" r="1" fill="currentColor"/><circle cx="14.5" cy="10.5" r="1" fill="currentColor"/>',
+        video: '<rect x="1" y="5" width="15" height="14" rx="2"/><polygon points="23 7 16 12 23 17 23 7"/>',
+        trending: '<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>',
+        file: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'
+      };
+      function iconForCard(c) {
+        var txt = ((c.titulo || "") + " " + (c.tema || "")).toLowerCase();
+        if (c.desenlace === "rescate_antigravity") return ICONS.shield;
+        if (c.desenlace === "final_crudo") return ICONS.moon;
+        if (txt.indexOf("ipo") >= 0 || txt.indexOf("bolsa") >= 0) return ICONS.trending;
+        if (txt.indexOf("sat") >= 0 || txt.indexOf("e.firma") >= 0) return ICONS.file;
+        if (c.vertiente === "B_MADRUGADA_NOCHE") return ICONS.moon;
+        if (c.video_path) return ICONS.video;
+        return ICONS.zap;
+      }
+      function matchesPreset(c, preset) {
+        if (!preset) return true;
+        if (preset === "dia") return c.vertiente === "A_WATERS_DIA";
+        if (preset === "noche") return c.vertiente === "B_MADRUGADA_NOCHE";
+        if (preset === "listos") return c.estado === "listo_publicar" || c.estado === "programado" || c.estado === "publicado";
+        if (preset === "crudo") return c.desenlace === "final_crudo";
+        if (preset === "rescate") return c.desenlace === "rescate_antigravity";
+        return true;
+      }
+
+      function buildCardEl(card, source, idx, inSlot) {
+        var el = document.createElement("article");
+        el.className = "card";
+        el.dataset.id = card.id;
+        el.dataset.vertiente = card.vertiente || "A_WATERS_DIA";
+        if (card.desenlace) el.dataset.desenlace = card.desenlace;
+        if (!inSlot) el.style.transform = "rotate(" + tilt(idx) + "deg)";
+        else el.style.transform = "rotate(" + ((idx % 2 === 0 ? -0.7 : 0.7)) + "deg)";
+
+        if (activePreset) el.classList.add(matchesPreset(card, activePreset) ? "fit" : "dim");
+
+        el.setAttribute("role", "button");
+        el.setAttribute("tabindex", "0");
+        el.setAttribute("aria-label", card.titulo + " — Arrastra para mover de día o haz clic para editar.");
+
+        var isDia = card.vertiente === "A_WATERS_DIA";
+        var tabLabel = isDia ? "☀️ Día · ¡WATERS!" : (card.desenlace === "final_crudo" ? "🖤 Crudo" : "🌙 Madrugada");
+        var subText = card.tema || card.cold_open || card.caption_cta_suave || "Sin resumen todavía.";
+        var detailText = card.caption_cta_suave || card.cold_open || (card.video_path ? card.video_path : "Pendiente de guion / render.");
+
+        var tagsHtml = "";
+        if (card.cta_palabra) tagsHtml += '<span class="tag cta">CTA: ' + esc(card.cta_palabra) + "</span>";
+        if (card.video_path) tagsHtml += '<span class="tag">MP4 listo</span>';
+        if (card.lead_magnet_pdf) tagsHtml += '<span class="tag">PDF guía</span>';
+        if (card.desenlace === "rescate_antigravity") tagsHtml += '<span class="tag">Antigravity</span>';
+        if (card.desenlace === "final_crudo") tagsHtml += '<span class="tag">Corte negro</span>';
+
+        el.innerHTML =
+          '<div class="cover" aria-hidden="true">' +
+            '<div class="cover-art"></div><div class="cover-sheen"></div>' +
+            '<div class="cover-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + iconForCard(card) + "</svg></div>" +
+            '<div class="tab"><span class="pip"></span>' + esc(tabLabel) + "</div>" +
+          "</div>" +
+          '<div class="card-body">' +
+            '<div class="card-top-row">' +
+              '<span>' + esc(card.id) + "</span>" +
+              '<span class="state-pill" data-state="' + esc(card.estado || "idea") + '">' + esc((card.estado || "idea").replace("_", " ")) + "</span>" +
+            "</div>" +
+            "<h4>" + esc(card.titulo) + "</h4>" +
+            '<div class="sub">' + esc(subText.length > 74 ? subText.slice(0, 72) + "…" : subText) + "</div>" +
+            '<div class="peek" aria-hidden="true">Hover o clic para detalles</div>' +
+            '<div class="reveal"><div class="reveal-in">' +
+              '<p class="proof">' + esc(detailText.length > 130 ? detailText.slice(0, 128) + "…" : detailText) + "</p>" +
+              (tagsHtml ? '<div class="tags">' + tagsHtml + "</div>" : "") +
+            "</div></div>" +
+          "</div>";
+
+        attachCardInteraction(el, card, source);
+        return el;
+      }
+
+      /* ============ RENDER ============ */
+      function renderAll() {
+        weekGridEl.innerHTML = "";
+        board.semana_activa.forEach(function(day, dIdx) {
+          var col = document.createElement("div");
+          col.className = "day-col";
+          col.innerHTML =
+            '<div class="day-head"><h3>' + esc(day.dia_nombre) + "</h3><span>" +
+            (day.slot_dia && day.slot_noche ? "2 / 2" : (day.slot_dia || day.slot_noche ? "1 / 2" : "0 / 2")) +
+            "</span></div>";
+
+          [
+            { lane: "slot_dia", cls: "dia", label: "☀️ DÍA · 12:00 MX" },
+            { lane: "slot_noche", cls: "noche", label: "🌙 NOCHE · 22:00 MX" }
+          ].forEach(function(cfg, lIdx) {
+            var wrap = document.createElement("div");
+            wrap.className = "slot-wrap";
+            wrap.innerHTML = '<div class="slot-lbl ' + cfg.cls + '"><span>' + cfg.label + "</span></div>";
+            var zone = document.createElement("div");
+            var card = day[cfg.lane];
+            zone.className = "slot-zone" + (card ? " has-card" : "");
+            zone.dataset.dropType = "slot";
+            zone.dataset.day = day.dia_key;
+            zone.dataset.lane = cfg.lane;
+            if (card) {
+              zone.appendChild(buildCardEl(card, { type: "slot", dia_key: day.dia_key, lane: cfg.lane }, dIdx + lIdx, true));
+            } else {
+              zone.innerHTML = '<div class="slot-empty">Arrastra aquí o haz clic en + Noticia / Idea</div>';
+            }
+            wrap.appendChild(zone);
+            col.appendChild(wrap);
+          });
+
+          weekGridEl.appendChild(col);
+        });
+
+        backlogDiaEl.innerHTML = "";
+        backlogNocheEl.innerHTML = "";
+        var diaIdx = 0, nocheIdx = 0;
+        board.backlog.forEach(function(card, bIdx) {
+          var source = { type: "backlog", index: bIdx };
+          if (card.vertiente === "B_MADRUGADA_NOCHE") {
+            backlogNocheEl.appendChild(buildCardEl(card, source, nocheIdx++, false));
+          } else {
+            backlogDiaEl.appendChild(buildCardEl(card, source, diaIdx++, false));
+          }
+        });
+
+        [
+          { el: backlogDiaEl, v: "A_WATERS_DIA", title: "Noticia ¡WATERS!" },
+          { el: backlogNocheEl, v: "B_MADRUGADA_NOCHE", title: "Historia Madrugada" }
+        ].forEach(function(cfg) {
+          var addBtn = document.createElement("button");
+          addBtn.type = "button";
+          addBtn.className = "addcard";
+          addBtn.innerHTML = '<span class="plus">+</span><span>Agregar carta</span><small>' + cfg.title + "</small>";
+          addBtn.addEventListener("click", function() { openAddModal(cfg.v); });
+          cfg.el.appendChild(addBtn);
+        });
+
+        renderTray();
+      }
+
+      function renderTray() {
+        var filled = 0, readyCount = 0, procCount = 0, ideaCount = 0;
+        trayListEl.innerHTML = "";
+
+        board.semana_activa.forEach(function(day) {
+          var row = document.createElement("li");
+          var code = day.dia_nombre.slice(0, 3).toUpperCase();
+          var dCard = day.slot_dia;
+          var nCard = day.slot_noche;
+          [dCard, nCard].forEach(function(c) {
+            if (!c) return;
+            filled++;
+            if (c.estado === "listo_publicar" || c.estado === "programado" || c.estado === "publicado") readyCount++;
+            else if (c.estado === "revision_final" || c.estado === "render_3d" || c.estado === "audio") procCount++;
+            else ideaCount++;
+          });
+
+          function dotClass(c) {
+            if (!c) return "sdot";
+            if (c.estado === "listo_publicar") return "sdot ok";
+            if (c.estado === "programado" || c.estado === "publicado") return "sdot prog";
+            if (c.estado === "revision_final") return "sdot warn";
+            return "sdot";
+          }
+          row.innerHTML =
+            '<span class="day-code">' + esc(code) + "</span>" +
+            '<div class="dots">' +
+              '<div class="dot-row"><span class="' + dotClass(dCard) + '"></span><span>☀️ ' + esc(dCard ? dCard.id : "Vacío") + "</span></div>" +
+              '<div class="dot-row"><span class="' + dotClass(nCard) + '"></span><span>🌙 ' + esc(nCard ? nCard.id : "Vacío") + "</span></div>" +
+            "</div>";
+          trayListEl.appendChild(row);
+        });
+
+        trayCountEl.textContent = filled;
+        countTopEl.textContent = filled;
+        meterFillEl.style.width = Math.round((filled / 14) * 100) + "%";
+        meterFillEl.classList.toggle("good", filled === 14);
+        statReadyEl.textContent = readyCount;
+        statRevEl.textContent = procCount;
+        statIdeaEl.textContent = ideaCount;
+
+        if (filled === 14) {
+          meterNoteEl.textContent = "14 / 14 completos: semana lista para programar en el Ritual Dominical.";
+        } else {
+          meterNoteEl.textContent = filled + " / 14 ocupados — arrastra cartas del Backlog para cerrar tu semana.";
+        }
+      }
+
+      /* ============ DRAG + SWAP + TAP (Pointer Events) ============ */
+      function dayByKey(key) {
+        for (var i = 0; i < board.semana_activa.length; i++) {
+          if (board.semana_activa[i].dia_key === key) return board.semana_activa[i];
+        }
+        return null;
+      }
+
+      function clearDropHighlights() {
+        document.querySelectorAll(".drop-hover").forEach(function(el) { el.classList.remove("drop-hover"); });
+      }
+
+      function findDropZoneAt(x, y) {
+        var hits = document.elementsFromPoint(x, y);
+        for (var i = 0; i < hits.length; i++) {
+          var zone = hits[i].closest && hits[i].closest("[data-drop-type]");
+          if (zone) return zone;
+        }
+        return null;
+      }
+
+      function moveCardToSlot(source, targetDayKey, targetLane) {
+        var targetDay = dayByKey(targetDayKey);
+        if (!targetDay) return;
+        if (source.type === "slot" && source.dia_key === targetDayKey && source.lane === targetLane) return;
+
+        var draggedCard = null;
+        var displacedCard = targetDay[targetLane] || null;
+
+        if (source.type === "slot") {
+          var srcDay = dayByKey(source.dia_key);
+          if (!srcDay) return;
+          draggedCard = srcDay[source.lane];
+          if (!draggedCard) return;
+          srcDay[source.lane] = displacedCard;
+          if (displacedCard) {
+            displacedCard.horario_mx = source.lane === "slot_dia" ? "12:00" : "22:00";
+          }
+        } else {
+          draggedCard = board.backlog.splice(source.index, 1)[0];
+          if (!draggedCard) return;
+          if (displacedCard) board.backlog.unshift(displacedCard);
+        }
+
+        draggedCard.horario_mx = targetLane === "slot_dia" ? "12:00" : "22:00";
+        targetDay[targetLane] = draggedCard;
+        saveBoard();
+        renderAll();
+
+        var laneTxt = targetLane === "slot_dia" ? "☀️ Día" : "🌙 Noche";
+        if (displacedCard) {
+          toast("Intercambiado ↔ " + targetDay.dia_nombre + " " + laneTxt + " (" + draggedCard.id + " ↔ " + displacedCard.id + ")");
+        } else {
+          toast("Movido a " + targetDay.dia_nombre + " " + laneTxt + ": " + draggedCard.id);
+        }
+      }
+
+      function moveCardToBacklog(source, targetVertiente) {
+        if (source.type === "backlog") return;
+        var srcDay = dayByKey(source.dia_key);
+        if (!srcDay || !srcDay[source.lane]) return;
+        var card = srcDay[source.lane];
+        srcDay[source.lane] = null;
+        if (targetVertiente) card.vertiente = targetVertiente;
+        board.backlog.unshift(card);
+        saveBoard();
+        renderAll();
+        toast("Enviado a Backlog: " + card.id);
+      }
+
+      function attachCardInteraction(el, card, source) {
+        el.addEventListener("pointerdown", function(e) {
+          if (e.button !== undefined && e.button > 0) return;
+          var x0 = e.clientX, y0 = e.clientY;
+          var rect = el.getBoundingClientRect();
+          var offX = x0 - rect.left, offY = y0 - rect.top;
+          var active = false;
+          var ghost = null;
+          var activeDrop = null;
+
+          function onMove(ev) {
+            var dx = ev.clientX - x0, dy = ev.clientY - y0;
+            if (!active) {
+              if (Math.hypot(dx, dy) < 8) return;
+              active = true;
+              ghost = el.cloneNode(true);
+              ghost.classList.add("drag-ghost");
+              ghost.style.width = rect.width + "px";
+              ghost.style.left = rect.left + "px";
+              ghost.style.top = rect.top + "px";
+              document.body.appendChild(ghost);
+              el.classList.add("drag-origin");
+            }
+            ghost.style.left = (ev.clientX - offX) + "px";
+            ghost.style.top = (ev.clientY - offY) + "px";
+
+            var zone = findDropZoneAt(ev.clientX, ev.clientY);
+            if (zone !== activeDrop) {
+              clearDropHighlights();
+              activeDrop = zone;
+              if (activeDrop) activeDrop.classList.add("drop-hover");
+            }
+          }
+
+          function cleanup() {
+            window.removeEventListener("pointermove", onMove);
+            window.removeEventListener("pointerup", onUp);
+            window.removeEventListener("pointercancel", onCancel);
+            clearDropHighlights();
+            el.classList.remove("drag-origin");
+            if (ghost && ghost.parentNode) ghost.parentNode.removeChild(ghost);
+            ghost = null;
+          }
+
+          function onUp(ev) {
+            var wasDrag = active;
+            var dropZone = wasDrag ? findDropZoneAt(ev.clientX, ev.clientY) : null;
+            cleanup();
+            if (!wasDrag) {
+              openCardModal(card, source);
+              return;
+            }
+            if (!dropZone) return;
+            if (dropZone.dataset.dropType === "slot") {
+              moveCardToSlot(source, dropZone.dataset.day, dropZone.dataset.lane);
+            } else if (dropZone.dataset.dropType === "backlog") {
+              moveCardToBacklog(source, dropZone.dataset.backlogVertiente);
+            }
+          }
+
+          function onCancel() { cleanup(); }
+
+          window.addEventListener("pointermove", onMove);
+          window.addEventListener("pointerup", onUp);
+          window.addEventListener("pointercancel", onCancel);
+        });
+
+        el.addEventListener("keydown", function(e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openCardModal(card, source);
+          }
+        });
+        el.addEventListener("dragstart", function(e) { e.preventDefault(); });
+      }
+
+      /* ============ PRESET FILTERS ============ */
+      document.querySelectorAll(".preset").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var p = btn.dataset.preset;
+          activePreset = activePreset === p ? null : p;
+          document.querySelectorAll(".preset").forEach(function(b) {
+            b.classList.toggle("active", b.dataset.preset === activePreset);
+          });
+          renderAll();
+        });
+      });
+
+      /* ============ MODALS ============ */
+      function openCardModal(card, source) {
+        editingRef = { card: card, source: source };
+        document.getElementById("cardModalTitle").textContent = card.id + " · Editar Carta";
+        document.getElementById("editVertiente").value = card.vertiente || "A_WATERS_DIA";
+        document.getElementById("editEstado").value = card.estado || "idea";
+        document.getElementById("editTitulo").value = card.titulo || "";
+        document.getElementById("editDesenlace").value = card.desenlace || "";
+        document.getElementById("editCta").value = card.cta_palabra || "";
+        document.getElementById("editNotas").value = card.caption_cta_suave || card.cold_open || card.tema || "";
+
+        var moveDaySel = document.getElementById("moveDaySelect");
+        var moveLaneSel = document.getElementById("moveLaneSelect");
+        if (source.type === "slot") {
+          moveDaySel.value = source.dia_key;
+          moveLaneSel.value = source.lane;
+        } else {
+          moveDaySel.value = "backlog";
+          moveLaneSel.value = card.vertiente === "B_MADRUGADA_NOCHE" ? "slot_noche" : "slot_dia";
+        }
+
+        var metaLines = [];
+        metaLines.push("Video MP4: " + (card.video_path || "Pendiente"));
+        metaLines.push("PDF Guía: " + (card.lead_magnet_pdf || "N/A"));
+        if (card.cold_open) metaLines.push("Cold Open: " + card.cold_open);
+        if (card.camera_shots_sugeridos && card.camera_shots_sugeridos.length) {
+          metaLines.push("Planos 3D: " + card.camera_shots_sugeridos.join(" → "));
+        }
+        document.getElementById("cardModalMeta").textContent = metaLines.join("\n");
+        document.getElementById("sendToBacklogBtn").style.display = source.type === "slot" ? "inline-flex" : "none";
+
+        cardModal.showModal();
+      }
+
+      document.getElementById("saveCardBtn").addEventListener("click", function() {
+        if (!editingRef) return;
+        var card = editingRef.card;
+        var source = editingRef.source;
+        card.vertiente = document.getElementById("editVertiente").value;
+        card.estado = document.getElementById("editEstado").value;
+        card.titulo = document.getElementById("editTitulo").value.trim() || card.titulo;
+        var des = document.getElementById("editDesenlace").value;
+        if (des) card.desenlace = des; else delete card.desenlace;
+        var cta = document.getElementById("editCta").value.trim();
+        if (cta) card.cta_palabra = cta; else delete card.cta_palabra;
+        var notas = document.getElementById("editNotas").value.trim();
+        if (card.vertiente === "B_MADRUGADA_NOCHE") card.caption_cta_suave = notas;
+        else card.tema = notas;
+
+        var destDay = document.getElementById("moveDaySelect").value;
+        var destLane = document.getElementById("moveLaneSelect").value;
+        cardModal.close();
+
+        if (destDay === "backlog") {
+          if (source.type === "slot") moveCardToBacklog(source, card.vertiente);
+          else { saveBoard(); renderAll(); toast("Carta actualizada: " + card.id); }
+        } else if (source.type === "backlog" || source.dia_key !== destDay || source.lane !== destLane) {
+          moveCardToSlot(source, destDay, destLane);
+        } else {
+          saveBoard();
+          renderAll();
+          toast("Carta actualizada: " + card.id);
+        }
+      });
+
+      document.getElementById("sendToBacklogBtn").addEventListener("click", function() {
+        if (!editingRef || editingRef.source.type !== "slot") return;
+        var src = editingRef.source;
+        var vert = editingRef.card.vertiente;
+        cardModal.close();
+        moveCardToBacklog(src, vert);
+      });
+
+      /* Sunday Weekly Plan Preview + Clipboard */
+      function buildWeeklyPlanText() {
+        var out = ["AGENDA ¡WATERS! STUDIO · 14 PUBLICACIONES / SEMANA", "Horario Día: 12:00 MX | Horario Noche: 22:00 MX", ""];
+        board.semana_activa.forEach(function(day) {
+          out.push("=== " + day.dia_nombre.toUpperCase() + " ===");
+          ["slot_dia", "slot_noche"].forEach(function(lane) {
+            var c = day[lane];
+            var tag = lane === "slot_dia" ? "☀️ 12:00 ¡WATERS!" : "🌙 22:00 Madrugada";
+            if (!c) { out.push("  " + tag + ": [VACÍO]"); return; }
+            out.push("  " + tag + " [" + c.id + " · " + c.estado + "]: " + c.titulo);
+            if (c.video_path) out.push("    MP4: " + c.video_path);
+            if (c.lead_magnet_pdf) out.push("    PDF: " + c.lead_magnet_pdf);
+            if (c.cta_palabra) out.push("    CTA: " + c.cta_palabra);
+          });
+          out.push("");
+        });
+        return out.join("\n");
+      }
+
+      function openPlanModal() {
+        var doc = document.getElementById("planDoc");
+        var html = "";
+        board.semana_activa.forEach(function(day) {
+          html += "<h4>" + esc(day.dia_nombre) + "</h4>";
+          [
+            { lane: "slot_dia", label: "☀️ 12:00" },
+            { lane: "slot_noche", label: "🌙 22:00" }
+          ].forEach(function(cfg) {
+            var c = day[cfg.lane];
+            if (!c) {
+              html += '<div class="plan-line"><b>' + cfg.label + ":</b> Slot libre — asigna una tarjeta del Backlog.</div>";
+              return;
+            }
+            html += '<div class="plan-line"><b>' + cfg.label + " · " + esc(c.id) + "</b> (" + esc(c.estado) + "): " + esc(c.titulo) +
+              (c.video_path ? "<br/><code>" + esc(c.video_path) + "</code>" : "") +
+              (c.lead_magnet_pdf ? " + <code>" + esc(c.lead_magnet_pdf) + "</code>" : "") +
+              (c.cta_palabra ? " · CTA: <b>" + esc(c.cta_palabra) + "</b>" : "") +
+              "</div>";
+          });
+        });
+        doc.innerHTML = html;
+        previewDialog.showModal();
+      }
+      document.getElementById("openPlanTop").addEventListener("click", openPlanModal);
+      document.getElementById("openPlanTray").addEventListener("click", openPlanModal);
+
+      function legacyCopy(text) {
+        var field = document.createElement("textarea");
+        field.value = text;
+        field.setAttribute("readonly", "");
+        field.style.cssText = "position:fixed;inset-block-start:0;opacity:0";
+        document.body.appendChild(field);
+        field.select();
+        try { return document.execCommand("copy"); } finally { field.remove(); }
+      }
+      document.getElementById("copyPlanBtn").addEventListener("click", async function() {
+        var text = buildWeeklyPlanText();
+        try {
+          await navigator.clipboard.writeText(text);
+          toast("Plan Dominical copiado al portapapeles.");
+        } catch (err) {
+          if (legacyCopy(text)) toast("Plan Dominical copiado al portapapeles.");
+          else toast("No se pudo copiar automáticamente; usa Exportar JSON.");
+        }
+      });
+
+      /* Add New Card */
+      function openAddModal(defaultVertiente) {
+        document.getElementById("addVertiente").value = defaultVertiente || "A_WATERS_DIA";
+        addDialog.showModal();
+        setTimeout(function() { document.getElementById("addTitulo").focus(); }, 40);
+      }
+      document.getElementById("openAddBtn").addEventListener("click", function() { openAddModal("A_WATERS_DIA"); });
+      document.getElementById("cancelAddBtn").addEventListener("click", function() { addDialog.close(); });
+      document.getElementById("addForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        var vert = document.getElementById("addVertiente").value;
+        var dest = document.getElementById("addDestino").value;
+        var titulo = document.getElementById("addTitulo").value.trim();
+        if (!titulo) return;
+        var des = document.getElementById("addDesenlace").value;
+        var cta = document.getElementById("addCta").value.trim();
+        var notas = document.getElementById("addNotas").value.trim();
+        var prefix = vert === "A_WATERS_DIA" ? "NEWS-" : "MAD-NEW-";
+        var newCard = {
+          id: prefix + String(Date.now()).slice(-3),
+          vertiente: vert,
+          horario_mx: vert === "A_WATERS_DIA" ? "12:00" : "22:00",
+          titulo: titulo,
+          estado: "idea",
+          arrastrable: true
+        };
+        if (des) newCard.desenlace = des;
+        if (cta) newCard.cta_palabra = cta;
+        if (vert === "B_MADRUGADA_NOCHE") newCard.caption_cta_suave = notas || "Si no quieres que te pase esto, mándame mensaje.";
+        else newCard.tema = notas || "Noticia / alerta rápida de coyuntura";
+
+        if (dest === "backlog") {
+          board.backlog.unshift(newCard);
+          saveBoard(); renderAll();
+          toast("Agregada al Backlog: " + newCard.id);
+        } else {
+          var parts = dest.split("|");
+          var targetDay = dayByKey(parts[0]);
+          if (targetDay) {
+            var displaced = targetDay[parts[1]];
+            if (displaced) board.backlog.unshift(displaced);
+            targetDay[parts[1]] = newCard;
+            saveBoard(); renderAll();
+            toast("Colocada en " + targetDay.dia_nombre + (displaced ? " (" + displaced.id + " pasó al Backlog)" : ""));
+          }
+        }
+        addDialog.close();
+        e.target.reset();
+      });
+
+      /* Export / Import / Reset */
+      document.getElementById("exportBtn").addEventListener("click", function() {
+        var blob = new Blob([JSON.stringify(board, null, 2)], { type: "application/json;charset=utf-8" });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "tablero_semanal_14_slots.json";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        toast("JSON exportado: tablero_semanal_14_slots.json");
+      });
+
+      var importInput = document.getElementById("importInput");
+      document.getElementById("importBtn").addEventListener("click", function() { importInput.click(); });
+      importInput.addEventListener("change", function() {
+        var file = importInput.files && importInput.files[0];
+        if (!file) return;
+        var reader = new FileReader();
+        reader.onload = function() {
+          try {
+            var data = JSON.parse(String(reader.result));
+            if (!data || !Array.isArray(data.semana_activa) || !Array.isArray(data.backlog)) throw new Error("Esquema inválido");
+            board = data;
+            saveBoard();
+            renderAll();
+            toast("Tablero importado desde " + file.name);
+          } catch (err) {
+            toast("Error al importar JSON: formato incompatible.");
+          }
+          importInput.value = "";
+        };
+        reader.readAsText(file, "utf-8");
+      });
+
+      document.getElementById("resetBtn").addEventListener("click", function() {
+        board = cloneData(DEFAULT_BOARD);
+        activePreset = null;
+        document.querySelectorAll(".preset").forEach(function(b) { b.classList.remove("active"); });
+        saveBoard();
+        renderAll();
+        toast("Tablero restaurado a los datos base de esta semana.");
+      });
+
+      renderAll();
+    </script>
+  </body>
+</html>
