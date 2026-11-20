@@ -21,6 +21,8 @@ const EP01_EXT_BEATS = (beatsData as Record<string, BeatItem[]>).EP01_EXT ?? EP0
 const EP03_BEATS = (beatsData as Record<string, BeatItem[]>).EP03_TONY_CUOTA ?? EP01_BEATS;
 const EP05_BEATS = (beatsData as Record<string, NeonBeatItem[]>).EP05_FABLE_HYDROGEN ?? [];
 const EP06_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP06_HACKEOS_Y_VOZ ?? [];
+const EP07_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP07_ANTHROPIC_IPO ?? [];
+const EP08_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP08_AGENTE_CONTABLE ?? [];
 
 const sumFrames = (beats: { durationInFrames: number }[]) =>
   Math.max(1, beats.reduce((acc, b) => acc + b.durationInFrames, 0));
@@ -106,6 +108,30 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           episodeLabel: 'EP. 06 · ¡WATERS! VOZ & DATOS',
           beats: EP06_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersChispaEp07"
+        component={WatersChispaCyberEpisode}
+        durationInFrames={sumFrames(EP07_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'EP. 07 · ANTHROPIC IPO',
+          beats: EP07_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersChispaEp08"
+        component={WatersChispaCyberEpisode}
+        durationInFrames={sumFrames(EP08_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'EP. 08 · CLAUDE CONTADOR SAT',
+          beats: EP08_BEATS,
         }}
       />
     </>

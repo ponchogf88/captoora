@@ -1249,5 +1249,720 @@
       "speaking": true,
       "stepTitle": "¡WATERS! 🛡️"
     }
+  ],
+  "EP07_ANTHROPIC_IPO": [
+    {
+      "durationInFrames": 50,
+      "topTag": "NASDAQ: ANT · RÉCORD $81.3B",
+      "accentColor": "#22C55E",
+      "expression": "star_eyes",
+      "cardType": "dual_cards",
+      "stageProp": "stock_chart",
+      "stepBadge": "🚀",
+      "pillText": "Anthropic debutó en Nasdaq hoy",
+      "headlinePrefix": "Crearon",
+      "headlineFocus": "5,100 millonarios",
+      "headlineSuffix": "en 1 día",
+      "terminalCmd": "$ quote NASDAQ:ANT --ipo 83.00 --open 111.50",
+      "terminalSub": "✓ Récord histórico $81.3B USD · 96% equipo >$1M",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "NASDAQ: ANT",
+          "sub": "$83 ➔ $111.50",
+          "color": "#22C55E"
+        },
+        {
+          "title": "5,100 STAFF",
+          "sub": "Millonarios (papel)",
+          "color": "#DFB15B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 194,
+      "topTag": "SALIDA EN BOLSA · CLAUDE",
+      "accentColor": "#22C55E",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "stock_chart",
+      "stepBadge": "1",
+      "pillText": "De $83 a $111.50 USD por acción",
+      "headlinePrefix": "Los dueños de Claude en",
+      "headlineFocus": "Wall Street",
+      "headlineSuffix": "📈",
+      "terminalCmd": "$ stats --company Anthropic --employees 5100",
+      "terminalSub": "✓ Ojo: riqueza en acciones sujeta a lock-up",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "CLAUDE IPO",
+          "sub": "$81.3 Mil M recaudados",
+          "color": "#22C55E"
+        },
+        {
+          "title": "EQUIPO 96%",
+          "sub": "5,100 con >$1M USD",
+          "color": "#DFB15B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 211,
+      "topTag": "SOUND VENTURES · ASHTON KUTCHER",
+      "accentColor": "#DFB15B",
+      "expression": "star_eyes",
+      "cardType": "dual_cards",
+      "stageProp": "stock_chart",
+      "stepBadge": "💰",
+      "pillText": "Cómo lo logró Ashton de verdad",
+      "headlinePrefix": "Ashton convirtió $435M en",
+      "headlineFocus": "$10,000M",
+      "headlineSuffix": "",
+      "terminalCmd": "$ trace --fund SoundVentures --year 2023 --round private",
+      "terminalSub": "✓ Fondo VC acreditado 3 años antes de bolsa",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "2023 · PRIVADO",
+          "sub": "$435M (Fondo VC)",
+          "color": "#DFB15B"
+        },
+        {
+          "title": "2026 · NASDAQ",
+          "sub": "~$7B–$10B estimados",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 283,
+      "topTag": "EL ERROR FOMO · TRAMPA ACTIVA",
+      "accentColor": "#FF3B3B",
+      "expression": "sad_cloud",
+      "cardType": "dual_cards",
+      "stageProp": "laptop",
+      "stepBadge": "⚠",
+      "pillText": "Anuncios falsos de 'Pre-IPO VIP'",
+      "headlinePrefix": "El anzuelo en redes:",
+      "headlineFocus": "Pre-IPO por DM",
+      "headlineSuffix": "❌",
+      "terminalCmd": "$ detect --scam 'Compra Claude Pre-IPO hoy por WhatsApp'",
+      "terminalSub": "! Nadie vende acciones privadas reales por Instagram",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "ANUNCIO FAKE",
+          "sub": "'Invierte como Ashton'",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "REALIDAD SEC",
+          "sub": "Solo fondos cerrados",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 286,
+      "topTag": "EL GIRO CRÍTICO · FOMO",
+      "accentColor": "#00F5D4",
+      "expression": "shock_sweat",
+      "cardType": "giro_punch",
+      "stageProp": "laptop",
+      "stepBadge": "⚡",
+      "pillText": "La regla de oro en inversiones",
+      "headlinePrefix": "En links milagrosos,",
+      "headlineFocus": "tú eres el negocio",
+      "headlineSuffix": "",
+      "terminalCmd": "$ audit --promise 'x10 garantizado en 48h'",
+      "terminalSub": "⚠ Si viene de un DM o link en comentarios: ES ESTAFA",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "giroTop": "LINK MILAGROSO = TRAMPA",
+      "giroBottom": "⚠ El negocio NO son las acciones: ERES TÚ"
+    },
+    {
+      "durationInFrames": 360,
+      "topTag": "3 ESTAFAS CLONADAS CON IA",
+      "accentColor": "#FF3B3B",
+      "expression": "determined_hacker",
+      "cardType": "triple_cards",
+      "stageProp": "terminator",
+      "stepBadge": "3",
+      "pillText": "Las 3 trampas tras el IPO",
+      "headlinePrefix": "Cuidado con estas",
+      "headlineFocus": "3 trampas",
+      "headlineSuffix": "de hoy",
+      "terminalCmd": "$ threat-intel --campaign ant_ipo_scams",
+      "terminalSub": "! Roban tu depósito, tu INE (KYC) y tu e.firma SAT",
+      "pops": [
+        2,
+        8,
+        16,
+        26,
+        36
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "PRE-IPO / TOKEN",
+          "sub": "$ANT / $CLAUDE fake",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "DEEPFAKE KYC",
+          "sub": "Pide foto INE + selfie",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "CONTADOR FAKE",
+          "sub": "Roba tu e.firma SAT",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 163,
+      "topTag": "CANDADO · PASO 1 DE 4",
+      "accentColor": "#22C55E",
+      "expression": "happy_open",
+      "cardType": "step_single",
+      "stageProp": "shield_vault",
+      "stepBadge": "1",
+      "pillText": "Cero compras en chats o links",
+      "headlinePrefix": "Paso 1: cero compras por",
+      "headlineFocus": "DM o WhatsApp",
+      "headlineSuffix": "",
+      "terminalCmd": "$ block --source telegram,whatsapp,ig_dm --asset pre_ipo",
+      "terminalSub": "✓ No existe venta minorista pre-IPO ni token oficial",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "1. Cero Acciones por DM",
+      "stepDetail": "Bloquea links que vendan Pre-IPO o $CLAUDE"
+    },
+    {
+      "durationInFrames": 187,
+      "topTag": "CANDADO · PASO 2 DE 4",
+      "accentColor": "#22C55E",
+      "expression": "determined_hacker",
+      "cardType": "step_single",
+      "stageProp": "shield_vault",
+      "stepBadge": "2",
+      "pillText": "Valida padrón oficial CNBV / SEC",
+      "headlinePrefix": "Paso 2: valida el",
+      "headlineFocus": "broker regulado",
+      "headlineSuffix": "",
+      "terminalCmd": "$ verify-broker --registry CNBV_MX,SEC_US --app official_store",
+      "terminalSub": "✓ Solo apps oficiales antes de subir INE o pasaporte",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "2. Broker Regulado CNBV/SEC",
+      "stepDetail": "Jamás subas foto de tu INE a páginas nuevas"
+    },
+    {
+      "durationInFrames": 192,
+      "topTag": "CANDADO · PASO 3 DE 4",
+      "accentColor": "#22C55E",
+      "expression": "happy_arcs",
+      "cardType": "step_single",
+      "stageProp": "tax_vault",
+      "stepBadge": "3",
+      "pillText": "Protege tu archivo .cer y .key",
+      "headlinePrefix": "Paso 3: no regales tu",
+      "headlineFocus": "e.firma SAT",
+      "headlineSuffix": "",
+      "terminalCmd": "$ guard --files efirma.cer,efirma.key --share NEVER",
+      "terminalSub": "✓ Tu e.firma vale igual que tu firma física ante notario",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "stepTitle": "3. e.firma Siempre Contigo",
+      "stepDetail": "No la subas a apps milagro de 'Claude Contador'"
+    },
+    {
+      "durationInFrames": 197,
+      "topTag": "CANDADO · PASO 4 DE 4",
+      "accentColor": "#22C55E",
+      "expression": "zen_proud",
+      "cardType": "step_single",
+      "stageProp": "stock_chart",
+      "stepBadge": "4",
+      "pillText": "En bolsa real no hay retornos fijos x10",
+      "headlinePrefix": "Paso 4: huye de",
+      "headlineFocus": "retornos garantizados",
+      "headlineSuffix": "",
+      "terminalCmd": "$ filter --deepfake celebrity --claim 'guaranteed_profit'",
+      "terminalSub": "✓ Si promete ganancias seguras y rápidas: es trampa",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "4. Cero Promesas Garantizadas",
+      "stepDetail": "La bolsa real tiene riesgo y regulación formal"
+    },
+    {
+      "durationInFrames": 379,
+      "topTag": "PUENTE · FOMO VS ESTRATEGIA",
+      "accentColor": "#DFB15B",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "stock_chart",
+      "stepBadge": "⚖",
+      "pillText": "No entregues tus llaves por prisa",
+      "headlinePrefix": "Invierte con cabeza, no por",
+      "headlineFocus": "avaricia FOMO",
+      "headlineSuffix": "",
+      "terminalCmd": "$ compare --strategy 'Regulado CNBV' vs 'Link DM FOMO'",
+      "terminalSub": "✓ Tiempo + regulación ganan al hype de 5 minutos",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "BROKERS REALES",
+          "sub": "Ticker ANT Nasdaq",
+          "color": "#22C55E"
+        },
+        {
+          "title": "PRISA / FOMO",
+          "sub": "Pérdida en 5 min ❌",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 191,
+      "topTag": "GUÍA PDF + CHECKLIST 8 PUNTOS",
+      "accentColor": "#22C55E",
+      "expression": "happy_arcs",
+      "cardType": "cta_blinda",
+      "stageProp": "kit_box",
+      "stepBadge": "🚀",
+      "pillText": "Checklist gratis directo a tu DM",
+      "headlinePrefix": "Comenta la palabra",
+      "headlineFocus": "BOLSA",
+      "headlineSuffix": "👇",
+      "terminalCmd": "$ send-dm --keyword BOLSA --file guia_bolsa_preipo.pdf",
+      "terminalSub": "✓ Caso real Ashton Kutcher + 8 filtros anti-fraude",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "BOLSA"
+    },
+    {
+      "durationInFrames": 50,
+      "topTag": "SERIE ¡WATERS! · CAPTOORA",
+      "accentColor": "#22C55E",
+      "expression": "wink",
+      "cardType": "cta_blinda",
+      "stageProp": "kit_box",
+      "stepBadge": "🌊",
+      "pillText": "¡Toma tus precauciones hoy!",
+      "headlinePrefix": "No entregues tu lana:",
+      "headlineFocus": "¡WATERS!",
+      "headlineSuffix": "🌊📈",
+      "terminalCmd": "$ status --shield VERIFIED --cta BOLSA",
+      "terminalSub": "✓ Comenta BOLSA para recibir la guía PDF",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "¡WATERS! 📈"
+    }
+  ],
+  "EP08_AGENTE_CONTABLE": [
+    {
+      "durationInFrames": 50,
+      "topTag": "IA CONTABLE · TICKETS Y CFDI",
+      "accentColor": "#00F5D4",
+      "expression": "star_eyes",
+      "cardType": "dual_cards",
+      "stageProp": "tax_vault",
+      "stepBadge": "✦",
+      "pillText": "Agentes contables de nueva generación",
+      "headlinePrefix": "Tu nuevo",
+      "headlineFocus": "contador IA",
+      "headlineSuffix": "¿ayuda o bomba?",
+      "terminalCmd": "$ agent-fiscal --scan tickets_mes.jpg cfdi_40.xml",
+      "terminalSub": "✓ Ordena facturas y gastos en segundos... PERO OJO",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "LO BUENO ⚡",
+          "sub": "Ordena XML en segundos",
+          "color": "#22C55E"
+        },
+        {
+          "title": "EL PELIGRO 🔥",
+          "sub": "Llaves SAT en riesgo",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 281,
+      "topTag": "LO BUENO · AUTOMATIZACIÓN BRUTAL",
+      "accentColor": "#22C55E",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "tax_vault",
+      "stepBadge": "1",
+      "pillText": "De tickets sueltos a carpeta lista",
+      "headlinePrefix": "Foto al ticket y XML listos en",
+      "headlineFocus": "segundos",
+      "headlineSuffix": "",
+      "terminalCmd": "$ claude-tax --extract RFC,IVA,concepto --build carpeta",
+      "terminalSub": "✓ Detecta gastos y prepara tu pre-cierre mensual",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "OCR TICKETS",
+          "sub": "RFC + IVA automático",
+          "color": "#22C55E"
+        },
+        {
+          "title": "CRUCE XML 4.0",
+          "sub": "Pre-cierre al instante",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 288,
+      "topTag": "EL ERROR FATAL · SIN CANDADOS",
+      "accentColor": "#FF3B3B",
+      "expression": "sad_cloud",
+      "cardType": "dual_cards",
+      "stageProp": "tax_vault",
+      "stepBadge": "⚠",
+      "pillText": "Subir tus llaves privadas a ciegas",
+      "headlinePrefix": "Error: regalar tu",
+      "headlineFocus": "e.firma SAT",
+      "headlineSuffix": "al bot",
+      "terminalCmd": "$ warn --upload efirma.cer,efirma.key --cloud_bot UNSAFE",
+      "terminalSub": "! Entregas firma legal + movimientos bancarios reales",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": false,
+      "cardItems": [
+        {
+          "title": ".CER + .KEY + CIEC",
+          "sub": "Firma ante notario",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "PDFs BANCARIOS",
+          "sub": "Fuga de datos PII",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 306,
+      "topTag": "EL GIRO FISCAL · RESPONSABILIDAD",
+      "accentColor": "#00F5D4",
+      "expression": "shock_sweat",
+      "cardType": "giro_punch",
+      "stageProp": "tax_vault",
+      "stepBadge": "⚡",
+      "pillText": "Quien responde ante el SAT eres tú",
+      "headlinePrefix": "La multa del SAT la",
+      "headlineFocus": "pagas tú",
+      "headlineSuffix": "",
+      "terminalCmd": "$ audit --rfc YOUR_RFC --liability owner=100%",
+      "terminalSub": "⚠ El modelo alucina: los recargos van a tu RFC",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "safeMode": false,
+      "giroTop": "SI EL AGENTE FALLA O TE HACKEAN",
+      "giroBottom": "⚠ La multa NO la paga Claude: LA PAGAS TÚ"
+    },
+    {
+      "durationInFrames": 360,
+      "topTag": "3 PELIGROS REALES · SAT + CYBER",
+      "accentColor": "#FF3B3B",
+      "expression": "determined_hacker",
+      "cardType": "triple_cards",
+      "stageProp": "terminator",
+      "stepBadge": "3",
+      "pillText": "Ataques y errores invisibles hoy",
+      "headlinePrefix": "Los 3 peligros con",
+      "headlineFocus": "agentes fiscales",
+      "headlineSuffix": "",
+      "terminalCmd": "$ scan-pdf --payload hidden_prompt_injection",
+      "terminalSub": "! Una factura maliciosa puede cambiar tu CLABE de pago",
+      "pops": [
+        2,
+        8,
+        16,
+        26,
+        36
+      ],
+      "speaking": true,
+      "cardItems": [
+        {
+          "title": "E.FIRMA LEGAL",
+          "sub": "Pueden facturar por ti",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "PDF INJECTION",
+          "sub": "Desvía pagos ocultos",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "ALUCINACIÓN SAT",
+          "sub": "Multas en tu RFC",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 218,
+      "topTag": "ARQUITECTURA · PASO 1 DE 4",
+      "accentColor": "#00F5D4",
+      "expression": "happy_open",
+      "cardType": "step_single",
+      "stageProp": "shield_vault",
+      "stepBadge": "1",
+      "pillText": "Copiloto Read-Only en borrador",
+      "headlinePrefix": "Paso 1: solo",
+      "headlineFocus": "modo borrador",
+      "headlineSuffix": "Read-Only",
+      "terminalCmd": "$ agent-policy --mode READ_ONLY --autonomous-pay BLOCKED",
+      "terminalSub": "✓ La IA ordena Excel/pre-pólizas; tú autorizas todo",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "1. Modo Borrador Read-Only",
+      "stepDetail": "Cero transferencias SPEI o timbrados autónomos"
+    },
+    {
+      "durationInFrames": 192,
+      "topTag": "ARQUITECTURA · PASO 2 DE 4",
+      "accentColor": "#00F5D4",
+      "expression": "zen_proud",
+      "cardType": "step_single",
+      "stageProp": "tax_vault",
+      "stepBadge": "2",
+      "pillText": "Tu firma privada nunca entra al chat",
+      "headlinePrefix": "Paso 2: cero",
+      "headlineFocus": ".cer y .key",
+      "headlineSuffix": "en la nube",
+      "terminalCmd": "$ vault --keep-local efirma_usb --cloud-upload DENIED",
+      "terminalSub": "✓ Solo firma trámites directo en el portal oficial SAT",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "stepTitle": "2. Llaves e.firma 100% Locales",
+      "stepDetail": "Nunca entregues .cer, .key ni CIEC a bots"
+    },
+    {
+      "durationInFrames": 194,
+      "topTag": "ARQUITECTURA · PASO 3 DE 4",
+      "accentColor": "#00F5D4",
+      "expression": "determined_hacker",
+      "cardType": "step_single",
+      "stageProp": "laptop",
+      "stepBadge": "3",
+      "pillText": "Sanitiza CSVs y PDFs bancarios",
+      "headlinePrefix": "Paso 3: anonimiza",
+      "headlineFocus": "CLABE y RFC",
+      "headlineSuffix": "primero",
+      "terminalCmd": "$ scrub --mask clabe,rfc,nombre --before-prompt true",
+      "terminalSub": "✓ Clasifica montos y fechas sin regalar identidad",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "3. Enmascara Datos Antes del LLM",
+      "stepDetail": "Valida XML estructurado y activa Zero-Retention"
+    },
+    {
+      "durationInFrames": 187,
+      "topTag": "ARQUITECTURA · PASO 4 DE 4",
+      "accentColor": "#00F5D4",
+      "expression": "happy_arcs",
+      "cardType": "step_single",
+      "stageProp": "shield_vault",
+      "stepBadge": "4",
+      "pillText": "Revisión profesional Human-in-the-Loop",
+      "headlinePrefix": "Paso 4: tu",
+      "headlineFocus": "contador humano",
+      "headlineSuffix": "valida",
+      "terminalCmd": "$ sign-off --reviewer CPA_Humano --check 69B_SAT PASS",
+      "terminalSub": "✓ Revisa UUID vigente y lista negra 69-B antes del envío",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "4. Doble Check con Contador Real",
+      "stepDetail": "IA agiliza el orden; el criterio fiscal es humano"
+    },
+    {
+      "durationInFrames": 319,
+      "topTag": "LA FÓRMULA GANADORA",
+      "accentColor": "#00F5D4",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "tax_vault",
+      "stepBadge": "💎",
+      "pillText": "Productividad brutal sin riesgo fiscal",
+      "headlinePrefix": "IA hace el 90%: tu",
+      "headlineFocus": "firma siempre tuya",
+      "headlineSuffix": "",
+      "terminalCmd": "$ balance --ai-work 90%_orden --human-keys 100%_control",
+      "terminalSub": "✓ Ahorras horas cada cierre sin abrir brechas al SAT",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "90% IA COPILOTO",
+          "sub": "Ordena tickets y XML",
+          "color": "#22C55E"
+        },
+        {
+          "title": "100% TU FIRMA",
+          "sub": "Llaves locales + Contador",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 244,
+      "topTag": "GUÍA PDF + CHECKLIST 8 PUNTOS",
+      "accentColor": "#00F5D4",
+      "expression": "happy_arcs",
+      "cardType": "cta_blinda",
+      "stageProp": "kit_box",
+      "stepBadge": "🚀",
+      "pillText": "Checklist IA + SAT gratis en tu DM",
+      "headlinePrefix": "Comenta la palabra",
+      "headlineFocus": "CONTADOR",
+      "headlineSuffix": "👇",
+      "terminalCmd": "$ send-dm --keyword CONTADOR --file guia_contador_sat.pdf",
+      "terminalSub": "✓ Arquitectura Read-Only + Defensa PDF Injection",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "CONTADOR"
+    },
+    {
+      "durationInFrames": 50,
+      "topTag": "SERIE ¡WATERS! · CAPTOORA",
+      "accentColor": "#00F5D4",
+      "expression": "wink",
+      "cardType": "cta_blinda",
+      "stageProp": "kit_box",
+      "stepBadge": "🌊",
+      "pillText": "¡Automatiza con candado!",
+      "headlinePrefix": "Cuida tu RFC y llaves:",
+      "headlineFocus": "¡WATERS!",
+      "headlineSuffix": "🌊🛡️",
+      "terminalCmd": "$ status --tax-shield ACTIVE --cta CONTADOR",
+      "terminalSub": "✓ Comenta CONTADOR para recibir la guía PDF",
+      "pops": [
+        2,
+        8,
+        18
+      ],
+      "speaking": true,
+      "stepTitle": "¡WATERS! 💼"
+    }
   ]
 }

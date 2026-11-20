@@ -865,3 +865,191 @@ export const ShieldVault3D: React.FC<{
     </group>
   );
 };
+
+/**
+ * 3D Ascending Nasdaq Stock Chart Pedestal (5 luminous green/gold bars + upward trend rocket)
+ */
+export const StockRocketChart3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+  position?: [number, number, number];
+}> = ({ frame, localFrame, fps, position = [0.92, -0.28, -0.05] }) => {
+  const t = frame / fps;
+  const pop = spring({
+    frame: Math.max(0, localFrame - 5),
+    fps,
+    config: { damping: 11, stiffness: 205 },
+  });
+
+  const bars = [
+    { x: -0.36, h: 0.28, col: '#16A34A', delay: 4 },
+    { x: -0.18, h: 0.44, col: '#22C55E', delay: 8 },
+    { x: 0.0, h: 0.62, col: '#22C55E', delay: 12 },
+    { x: 0.18, h: 0.88, col: '#00F5D4', delay: 16 },
+    { x: 0.36, h: 1.18, col: '#FACC15', delay: 20 },
+  ];
+
+  const rocketHover = Math.sin(t * 4.5) * 0.05;
+
+  return (
+    <group
+      position={position}
+      rotation={[0, -0.26 + Math.sin(t * 1.4) * 0.06, 0]}
+      scale={Math.max(0.001, pop)}
+    >
+      {/* Trading Pedestal Base on Floor */}
+      <mesh position={[0, -0.72, 0]}>
+        <cylinderGeometry args={[0.66, 0.74, 0.10, 32]} />
+        <meshStandardMaterial color="#0D1422" metalness={0.75} roughness={0.28} />
+      </mesh>
+      <mesh position={[0, -0.665, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[0.66, 0.025, 12, 36]} />
+        <meshStandardMaterial color="#22C55E" emissive="#22C55E" emissiveIntensity={1.9} />
+      </mesh>
+
+      {/* 5 Rising Candle Bars */}
+      {bars.map((b, bi) => {
+        const s = spring({
+          frame: Math.max(0, localFrame - b.delay),
+          fps,
+          config: { damping: 10, stiffness: 210 },
+        });
+        const curH = Math.max(0.05, b.h * s);
+        return (
+          <mesh key={bi} position={[b.x, -0.66 + curH / 2, 0]}>
+            <boxGeometry args={[0.13, curH, 0.14]} />
+            <meshStandardMaterial
+              color={b.col}
+              emissive={b.col}
+              emissiveIntensity={bi === 4 ? 1.45 : 0.95}
+              roughness={0.22}
+            />
+          </mesh>
+        );
+      })}
+
+      {/* Mini Trend Arrow / Rocket above peak bar */}
+      <group
+        position={[0.26, 0.72 + rocketHover, 0.12]}
+        rotation={[0, 0, -0.55]}
+      >
+        <mesh position={[0, 0.24, 0]}>
+          <coneGeometry args={[0.14, 0.30, 16]} />
+          <meshStandardMaterial
+            color="#FACC15"
+            emissive="#DFB15B"
+            emissiveIntensity={1.4}
+            metalness={0.5}
+          />
+        </mesh>
+        <mesh position={[0, -0.02, 0]}>
+          <cylinderGeometry args={[0.07, 0.08, 0.28, 16]} />
+          <meshStandardMaterial color="#F8FAFC" roughness={0.25} />
+        </mesh>
+        <mesh position={[0, -0.22, 0]} rotation={[Math.PI, 0, 0]}>
+          <coneGeometry args={[0.08, 0.18 + Math.sin(t * 16) * 0.03, 12]} />
+          <meshBasicMaterial color="#00F5D4" />
+        </mesh>
+      </group>
+    </group>
+  );
+};
+
+/**
+ * 3D Stack of CFDI Invoices + Metallic Golden e.firma USB Token with Shield or Alert Ring
+ */
+export const TaxVaultEfirma3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+  position?: [number, number, number];
+  safe?: boolean;
+}> = ({
+  frame,
+  localFrame,
+  fps,
+  position = [0.92, -0.28, -0.05],
+  safe = false,
+}) => {
+  const t = frame / fps;
+  const pop = spring({
+    frame: Math.max(0, localFrame - 5),
+    fps,
+    config: { damping: 11, stiffness: 205 },
+  });
+  const ringCol = safe ? '#00F5D4' : '#FF3B3B';
+  const usbHover = Math.sin(t * 3.4) * 0.06;
+
+  return (
+    <group
+      position={position}
+      rotation={[0, -0.28 + Math.sin(t * 1.4) * 0.05, 0]}
+      scale={Math.max(0.001, pop)}
+    >
+      {/* Circular Vault Pedestal */}
+      <mesh position={[0, -0.72, 0]}>
+        <cylinderGeometry args={[0.66, 0.74, 0.10, 32]} />
+        <meshStandardMaterial color="#0F172A" metalness={0.75} roughness={0.28} />
+      </mesh>
+      <mesh position={[0, -0.665, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[0.66, 0.025, 12, 36]} />
+        <meshStandardMaterial color={ringCol} emissive={ringCol} emissiveIntensity={2.0} />
+      </mesh>
+
+      {/* Stacked CFDI / Tax Invoice Receipts */}
+      {[
+        [-0.58, 0.04],
+        [-0.49, -0.08],
+        [-0.40, 0.10],
+        [-0.31, -0.03],
+      ].map(([iy, rot], idx) => (
+        <group key={idx} position={[0, iy, 0]} rotation={[0, rot, 0]}>
+          <mesh>
+            <boxGeometry args={[0.78, 0.055, 0.56]} />
+            <meshStandardMaterial color="#F8FAFC" roughness={0.45} />
+          </mesh>
+          {/* Teal/Red line printed on invoice edge */}
+          <mesh position={[-0.14, 0.03, 0.16]}>
+            <boxGeometry args={[0.38, 0.01, 0.04]} />
+            <meshBasicMaterial color={idx === 3 ? ringCol : '#64748B'} />
+          </mesh>
+        </group>
+      ))}
+
+      {/* Floating Golden USB Token ('e.firma') */}
+      <group
+        position={[0, 0.34 + usbHover, 0]}
+        rotation={[0.25, t * 0.9, -0.15]}
+      >
+        {/* USB Metal Plug */}
+        <mesh position={[-0.30, 0, 0]}>
+          <boxGeometry args={[0.22, 0.16, 0.08]} />
+          <meshStandardMaterial color="#E2E8F0" metalness={0.9} roughness={0.18} />
+        </mesh>
+        {/* Golden Body */}
+        <mesh position={[0.08, 0, 0]}>
+          <boxGeometry args={[0.56, 0.24, 0.12]} />
+          <meshStandardMaterial
+            color="#FACC15"
+            emissive="#DFB15B"
+            emissiveIntensity={0.65}
+            metalness={0.82}
+            roughness={0.20}
+          />
+        </mesh>
+        {/* Core Status LED Gem */}
+        <mesh position={[0.14, 0, 0.07]}>
+          <sphereGeometry args={[0.05, 14, 14]} />
+          <meshStandardMaterial color={ringCol} emissive={ringCol} emissiveIntensity={2.6} />
+        </mesh>
+      </group>
+
+      {/* Halo Ring around the e.firma USB */}
+      <mesh position={[0, 0.34, 0]} rotation={[0.4, t * 0.7, 0]}>
+        <torusGeometry args={[0.56, 0.028, 12, safe ? 6 : 32]} />
+        <meshStandardMaterial color={ringCol} emissive={ringCol} emissiveIntensity={1.9} />
+      </mesh>
+    </group>
+  );
+};

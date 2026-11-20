@@ -18,13 +18,17 @@ import {
   GoldenKitBox3D,
   ShieldVault3D,
   SilverLaptop3D,
+  StockRocketChart3D,
   StudioFloor3D,
+  TaxVaultEfirma3D,
   VoiceWaveClone3D,
 } from '../components/ChispaStageProps3D';
 import {
   BankShieldIcon,
+  ClaudeStarburstLogo,
   GovLeakBadge,
   MastercardCircles,
+  TerminalHarnessLogo,
   TerminatorEyeIcon,
   VisaWordmark,
   VoiceWaveIcon,
@@ -39,7 +43,9 @@ export type CyberCardType =
   | 'terminator_cameo'
   | 'step_single'
   | 'chaos_bridge'
-  | 'cta_blinda';
+  | 'cta_blinda'
+  | 'dual_cards'
+  | 'triple_cards';
 
 export type CyberStageProp =
   | 'none'
@@ -47,7 +53,15 @@ export type CyberStageProp =
   | 'voice_wave'
   | 'terminator'
   | 'shield_vault'
-  | 'kit_box';
+  | 'kit_box'
+  | 'stock_chart'
+  | 'tax_vault';
+
+export interface CyberBeatCardItem {
+  title: string;
+  sub: string;
+  color?: string;
+}
 
 export interface CyberBeatItem {
   durationInFrames: number;
@@ -56,6 +70,7 @@ export interface CyberBeatItem {
   expression: ChispaExpression;
   cardType: CyberCardType;
   stageProp: CyberStageProp;
+  safeMode?: boolean;
   stepBadge: string;
   pillText: string;
   headlinePrefix: string;
@@ -63,6 +78,9 @@ export interface CyberBeatItem {
   headlineSuffix?: string;
   terminalCmd: string;
   terminalSub: string;
+  giroTop?: string;
+  giroBottom?: string;
+  cardItems?: CyberBeatCardItem[];
   stepTitle?: string;
   stepDetail?: string;
   pops?: number[];
@@ -250,6 +268,25 @@ const CyberScene3D: React.FC<{
           position={[-0.86, -0.57, -0.04]}
         />
       )}
+
+      {beat.stageProp === 'stock_chart' && (
+        <StockRocketChart3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[0.92, -0.28, -0.05]}
+        />
+      )}
+
+      {beat.stageProp === 'tax_vault' && (
+        <TaxVaultEfirma3D
+          frame={globalFrame}
+          localFrame={localFrame}
+          fps={fps}
+          position={[0.92, -0.28, -0.05]}
+          safe={beat.safeMode ?? false}
+        />
+      )}
     </>
   );
 };
@@ -422,9 +459,10 @@ const CyberStepPill: React.FC<{
   text: string;
   localFrame: number;
   isDanger?: boolean;
-}> = ({ badge, text, localFrame, isDanger = false }) => {
-  const pillColor = isDanger ? '#FF3B3B' : '#00F5D4';
-  const bg = isDanger ? 'rgba(26, 6, 10, 0.94)' : 'rgba(4, 18, 18, 0.94)';
+  accentColor?: string;
+}> = ({ badge, text, localFrame, isDanger = false, accentColor = '#00F5D4' }) => {
+  const pillColor = isDanger ? '#FF3B3B' : accentColor;
+  const bg = isDanger ? 'rgba(26, 6, 10, 0.94)' : 'rgba(6, 16, 18, 0.94)';
   return (
     <PopBox
       localFrame={localFrame}
@@ -619,15 +657,76 @@ const CyberTerminalCard: React.FC<{
 
         {beat.cardType === 'giro_punch' && (
           <PopBox localFrame={localFrame} popFrame={pops[2] ?? 18}>
-            <div style={{ background: '#041418', border: '2.5px solid #00F5D4', borderRadius: 16, padding: '14px 18px', textAlign: 'center' }}>
-              <div style={{ color: '#FFFFFF', fontWeight: 900, fontSize: 28, fontFamily: 'system-ui, sans-serif' }}>
-                IA <span style={{ color: '#FF3B3B' }}>&gt;</span> Ciberseguridad
+            <div style={{ background: '#041418', border: `2.5px solid ${beat.accentColor}`, borderRadius: 16, padding: '14px 18px', textAlign: 'center' }}>
+              <div style={{ color: '#FFFFFF', fontWeight: 900, fontSize: 27, fontFamily: 'system-ui, sans-serif' }}>
+                {beat.giroTop ?? (
+                  <>
+                    IA <span style={{ color: '#FF3B3B' }}>&gt;</span> Ciberseguridad
+                  </>
+                )}
               </div>
-              <div style={{ color: '#00F5D4', fontWeight: 800, fontSize: 20, fontFamily: 'ui-monospace, monospace', marginTop: 4 }}>
-                ⚠ Hoy ya NO confíes ni en tu propia voz
+              <div style={{ color: beat.accentColor, fontWeight: 800, fontSize: 20, fontFamily: 'ui-monospace, monospace', marginTop: 4 }}>
+                {beat.giroBottom ?? '⚠ Hoy ya NO confíes ni en tu propia voz'}
               </div>
             </div>
           </PopBox>
+        )}
+
+        {beat.cardType === 'dual_cards' && beat.cardItems && (
+          <div style={{ display: 'flex', gap: 12 }}>
+            {beat.cardItems.slice(0, 2).map((item, di) => {
+              const col = item.color ?? beat.accentColor;
+              const isAlert = col === '#FF3B3B';
+              const popAt = pops[2 + di] ?? 20 + di * 12;
+              return (
+                <PopBox key={di} localFrame={localFrame} popFrame={popAt} style={{ flex: 1 }}>
+                  <div
+                    style={{
+                      background: isAlert ? '#1A080C' : '#061916',
+                      border: `2px solid ${col}`,
+                      borderRadius: 14,
+                      padding: '12px 14px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 10,
+                    }}
+                  >
+                    {di === 0 ? <ClaudeStarburstLogo size={32} /> : isAlert ? <GovLeakBadge size={32} /> : <TerminalHarnessLogo size={32} />}
+                    <div>
+                      <div style={{ color: col, fontWeight: 900, fontSize: 19, fontFamily: 'system-ui, sans-serif' }}>{item.title}</div>
+                      <div style={{ color: '#FFFFFF', fontSize: 15, fontFamily: 'ui-monospace, monospace' }}>{item.sub}</div>
+                    </div>
+                  </div>
+                </PopBox>
+              );
+            })}
+          </div>
+        )}
+
+        {beat.cardType === 'triple_cards' && beat.cardItems && (
+          <div style={{ display: 'flex', gap: 10 }}>
+            {beat.cardItems.slice(0, 3).map((item, ti) => {
+              const col = item.color ?? beat.accentColor;
+              const isAlert = col === '#FF3B3B';
+              const popAt = pops[1 + ti] ?? 14 + ti * 10;
+              return (
+                <PopBox key={ti} localFrame={localFrame} popFrame={popAt} style={{ flex: 1 }}>
+                  <div
+                    style={{
+                      background: isAlert ? '#19080C' : '#061B1A',
+                      border: `2px solid ${col}`,
+                      borderRadius: 14,
+                      padding: '10px 8px',
+                      textAlign: 'center',
+                    }}
+                  >
+                    <div style={{ color: col, fontWeight: 900, fontSize: 17, fontFamily: 'system-ui, sans-serif' }}>{item.title}</div>
+                    <div style={{ color: '#FFFFFF', fontSize: 14.5, fontFamily: 'ui-monospace, monospace', marginTop: 2 }}>{item.sub}</div>
+                  </div>
+                </PopBox>
+              );
+            })}
+          </div>
         )}
 
         {beat.cardType === 'three_shields' && (
@@ -669,10 +768,10 @@ const CyberTerminalCard: React.FC<{
 
         {beat.cardType === 'step_single' && (
           <PopBox localFrame={localFrame} popFrame={pops[2] ?? 18}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, background: '#061B1A', border: '2.5px solid #00F5D4', borderRadius: 16, padding: '12px 18px' }}>
-              <BankShieldIcon size={40} />
+            <div style={{ display: 'flex', alignItems: 'center', gap: 14, background: beat.accentColor === '#FF3B3B' ? '#1A080C' : '#061B1A', border: `2.5px solid ${beat.accentColor}`, borderRadius: 16, padding: '12px 18px' }}>
+              {beat.accentColor === '#FF3B3B' ? <GovLeakBadge size={40} /> : <BankShieldIcon size={40} />}
               <div>
-                <div style={{ color: '#00F5D4', fontWeight: 900, fontSize: 23, fontFamily: 'system-ui, sans-serif' }}>
+                <div style={{ color: beat.accentColor, fontWeight: 900, fontSize: 23, fontFamily: 'system-ui, sans-serif' }}>
                   {beat.stepTitle ?? 'Acción Inmediata'}
                 </div>
                 <div style={{ color: '#FFFFFF', fontSize: 18, fontFamily: 'ui-monospace, monospace', marginTop: 2 }}>
@@ -786,6 +885,7 @@ export const WatersChispaCyberEpisode: React.FC<CyberEpisodeProps> = ({
           text={activeBeat.pillText}
           localFrame={localFrame}
           isDanger={isDanger}
+          accentColor={activeBeat.accentColor}
         />
 
         <CyberTerminalCard beat={activeBeat} localFrame={localFrame} />
