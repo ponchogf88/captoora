@@ -3,5 +3,12 @@
   "pendiente": 625,
   "rechazada": 12,
   "bloqueada_herramienta": 3,
-  "en_revision": 15
+  "en_revision": 15,
+  "entregadas": 88,
+  "entrega_parte1": "Parte 1 - PixieSet 2026-11-06",
+  "fecha_entrega_parte1": "2026-11-06",
+  "entrega_parte1_total_galeria": 89,
+  "entrega_parte1_sin_coincidencia": [
+    "DSC082902_bebe_v01.jpg"
+  ]
 }

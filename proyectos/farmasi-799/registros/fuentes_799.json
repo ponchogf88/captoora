@@ -34,7 +34,9 @@
     "lote_actual": "02_cinco",
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/1m2pV0yoEURMWao_c_HNvBX7Mo9LWDdXJ/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00007.JPG",
@@ -44,7 +46,9 @@
     "lote_actual": "02_cinco",
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/1oXflb1ChJ_umlNoy5VzPm0KzOom6JYb0/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00009.JPG",
@@ -65,7 +69,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Q2EEI1TusXRdRZnTJvgEcCxYeXhsG4Za/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00017.JPG",
@@ -98,7 +104,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ovBDDHL6EJe_lzZRUgPE2kMBGDtRyFdq/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00024.JPG",
@@ -109,7 +117,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1uoGUQ5Zbe1Dgpad0C7kEyHyjMljAfWH_/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00025.JPG",
@@ -120,7 +130,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1fRGUBV2fzpPp16QBojpKlrpgZ6U40C0P/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00027.JPG",
@@ -131,7 +143,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1AiL-u1jjVNuvBTwQ5O7Q0HddORQr5Bs1/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00029.JPG",
@@ -142,7 +156,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/10J6GX1zP7qh0n2uIQ46UPUkyay-Os9n3/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00033.JPG",
@@ -153,7 +169,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Avo-_0V32nU9r96KRwtdp5_sLmLOp_mi/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00043.JPG",
@@ -164,7 +182,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1LJ0CYzT-eXkvuVbjnVKAVYMFxwK5gXTK/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00046.JPG",
@@ -255,7 +275,9 @@
     "source_id": "1nOZpyPGJRlqlcpe_VMOlh1OdnIh3qp3R",
     "source_url": "https://drive.google.com/file/d/1nOZpyPGJRlqlcpe_VMOlh1OdnIh3qp3R/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/19PjUDGy-Ii5uoVuQTG9ls1BPh3mntCn5/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00109.JPG",
@@ -380,7 +402,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ElydZC4haDSSWnBwxmNFeGqihzKzqqDT/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ElydZC4haDSSWnBwxmNFeGqihzKzqqDT/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ElydZC4haDSSWnBwxmNFeGqihzKzqqDT/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00235.JPG",
@@ -847,7 +871,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1XcfsbuEElRGdfXjMtEbIoi3O03NAXyF2/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1XcfsbuEElRGdfXjMtEbIoi3O03NAXyF2/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1XcfsbuEElRGdfXjMtEbIoi3O03NAXyF2/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00623.JPG",
@@ -902,7 +928,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ebf6VIzpMPvHmvuPPH6_7Jse8OD5Sycr/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00681.JPG",
@@ -935,7 +963,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1OV2z8t2RSweOWann84Q5Fw-stAuTkYP-/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00752.JPG",
@@ -1106,7 +1136,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1W-WO-1n5qkfew9H6QzPgqBGW9YSmoa-7/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00919.JPG",
@@ -1139,7 +1171,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Hrd1wx8op60nAyM42AFJfjb01CxAxRAz/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00925.JPG",
@@ -1161,7 +1195,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/17MfD8FKVew9z-9g-n5P_myZzufVGbHhi/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC00941.JPG",
@@ -1226,7 +1262,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1Ahow1PnWWbXBlhXJRf5DgMd4Iuv6q9Qf/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01027.JPG",
@@ -1237,7 +1275,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1JBpoKkfy3_F6SK5foukbkGfRqP3Msa2g/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01051.JPG",
@@ -1248,7 +1288,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/166e9Ya1_C6nNQFwkHsP2eVntU-YZpnIo/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01063.JPG",
@@ -1259,7 +1301,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1dfbAzUn6MqUjBVe5dhwyyqUcADkD0yzz/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01067.JPG",
@@ -1270,7 +1314,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1TwmhMj1ACosbdCua5IZUMMaUev_gcbEp/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01073.JPG",
@@ -1281,7 +1327,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1dedvFCvTRd3KWf__TWp-gARb9E1onpAM/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1dedvFCvTRd3KWf__TWp-gARb9E1onpAM/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1dedvFCvTRd3KWf__TWp-gARb9E1onpAM/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01077.JPG",
@@ -1292,7 +1340,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/176D8DgCbSDC9Z_R0bb4TBBtXtsiuLjDA/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01080.JPG",
@@ -1303,7 +1353,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1QZuFKypb5noapU4llEj24vkC4jgmsjAz/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1QZuFKypb5noapU4llEj24vkC4jgmsjAz/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1QZuFKypb5noapU4llEj24vkC4jgmsjAz/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01084.JPG",
@@ -1314,7 +1366,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1G5CAljXFA6Is1nN_ZAfMKGoXb1YyrZ7l/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01088.JPG",
@@ -1325,7 +1379,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1XtGiaBN2rF31ekZEN3yRhk1rqKrSaQ2t/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01115.JPG",
@@ -1398,7 +1454,9 @@
     "source_id": "1tMlzfkUvbKJkOYiYXz43tK9kVikbjHgr",
     "source_url": "https://drive.google.com/file/d/1tMlzfkUvbKJkOYiYXz43tK9kVikbjHgr/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/1HjdP-50xzu-GyhA4olAbt0Mm_yG0CJSp/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01205.JPG",
@@ -1559,7 +1617,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/10CpU0l16KTjgSU1DoizmG2eNx1SpDSjA/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01540.JPG",
@@ -1579,7 +1639,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/14jXudouQku1rEJp69N5-gDmfulOy-e53/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01543.JPG",
@@ -1590,7 +1652,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ATdYhZB-COya5a-6dHH0uPJI154bqH3H/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01550.JPG",
@@ -1601,7 +1665,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1v740fF9WqH3_TINQSBNfDgkgQIgLKSMV/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01551.JPG",
@@ -1612,7 +1678,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1RxJNVvNlDztuWJLcKBKOkM2KRbbi05c5/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01556.JPG",
@@ -1623,7 +1691,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1uGTag9MRayz8ji5lRxSGREh9tVkLzhiO/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01557.JPG",
@@ -1634,7 +1704,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1xBZed-NkzRawL8_2YHvxjHNS_43r4PG0/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01560.JPG",
@@ -1937,7 +2009,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1RVbkUIb9zitpIKlrFwhI4RiRhjuoSRRp/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01822.JPG",
@@ -1948,7 +2022,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1MLocR6LG6dn-CVlwgEXir0pEd5BlJqei/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01833.JPG",
@@ -1959,7 +2035,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ZrHhZYiUhXy5VENMq5MdMvgTzqgDMs0J/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01855.JPG",
@@ -1970,7 +2048,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1GB86QftoctO_4WochQYZQeRbsjAtIXa6/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1GB86QftoctO_4WochQYZQeRbsjAtIXa6/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1GB86QftoctO_4WochQYZQeRbsjAtIXa6/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01857.JPG",
@@ -1981,7 +2061,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1zB8kZYeItnhQQPn8eGXWwoxTLOPxWaI4/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01859.JPG",
@@ -1992,14 +2074,18 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1ejMBBpOUCxw6zht10GYrySvG58CSLZfv/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1ejMBBpOUCxw6zht10GYrySvG58CSLZfv/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ejMBBpOUCxw6zht10GYrySvG58CSLZfv/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01863.JPG",
     "source_id": "1F3W655W7ThB6GEeJbXLIWEeV6vC6sxHc",
     "source_url": "https://drive.google.com/file/d/1F3W655W7ThB6GEeJbXLIWEeV6vC6sxHc/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/1fCrWQNRDXnxZgAESi95_0eepFolijey_/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/1fCrWQNRDXnxZgAESi95_0eepFolijey_/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01865.JPG",
@@ -2010,7 +2096,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1EvB8voJj1zAsDK88jmJHkv42AcibpPyB/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1EvB8voJj1zAsDK88jmJHkv42AcibpPyB/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1EvB8voJj1zAsDK88jmJHkv42AcibpPyB/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01866.JPG",
@@ -2021,7 +2109,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1vxG1OCNBakkRnhXlim_sOwwbsJIJmbAw/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01868.JPG",
@@ -2110,7 +2200,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1N9EGkHExPlgHrdO7YevLEXpT3DL8_z1f/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1N9EGkHExPlgHrdO7YevLEXpT3DL8_z1f/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1N9EGkHExPlgHrdO7YevLEXpT3DL8_z1f/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01910.JPG",
@@ -2181,7 +2273,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1kjVX2NsBJXQ8O0dkXJ8s35jYYc-tb54V/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1kjVX2NsBJXQ8O0dkXJ8s35jYYc-tb54V/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1kjVX2NsBJXQ8O0dkXJ8s35jYYc-tb54V/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC01935.JPG",
@@ -2296,7 +2390,9 @@
     "source_id": "1NJtw4sbuNSwPw6S_FvEa5-L8gvuu0PUN",
     "source_url": "https://drive.google.com/file/d/1NJtw4sbuNSwPw6S_FvEa5-L8gvuu0PUN/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/1PBo1NagxD1AjUnihCVkgugwr8u76L47D/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/1PBo1NagxD1AjUnihCVkgugwr8u76L47D/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02006.JPG",
@@ -2499,7 +2595,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1lOyRy6fBdhkrX01lFQtLAAIHRe3auSCE/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1lOyRy6fBdhkrX01lFQtLAAIHRe3auSCE/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1lOyRy6fBdhkrX01lFQtLAAIHRe3auSCE/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02099.JPG",
@@ -2572,7 +2670,9 @@
     "source_id": "1dIQ6VeInMB-tbXTus7HvCBwpH3IfLGR0",
     "source_url": "https://drive.google.com/file/d/1dIQ6VeInMB-tbXTus7HvCBwpH3IfLGR0/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/143bLvstSGb9TNmbdqFB95LUFkWyWNqsW/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02117.JPG",
@@ -2633,7 +2733,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/12hmPPrirqqDA_DUnWMJOaQvVpIK4TcKo/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02134.JPG",
@@ -2666,7 +2768,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/167s9PhSOnDf9OsHZs0cb6CbUEmfpHUty/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02141.JPG",
@@ -2705,7 +2809,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/14s4i9JnzH8OTMIwQ4DfSixp4i2BkFzbl/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02167.JPG",
@@ -2894,7 +3000,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1P-RkRhuDh1Gxmc3c4AMdAhVTKIAAvZ6g/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02256.JPG",
@@ -2905,7 +3013,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1I-ho0iM0ZLbpRv4-0J83aPRpBUeNuvaP/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02259.JPG",
@@ -2916,7 +3026,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1FEtjZ_--91Kx3eieXH30Yw_jgTFQg_8K/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02260.JPG",
@@ -2949,7 +3061,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1odJ5dmPKt7nHrgH5eeUI-K8rLMNkJMjM/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02275.JPG",
@@ -2960,7 +3074,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1VnHsua8wDRvGBIcI_d-dKkq6HWvhPdlL/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02278.JPG",
@@ -2971,7 +3087,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1UBE8rb4-_5o51DSMwSprDneyyGsE3sJm/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02279.JPG",
@@ -3191,7 +3309,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1TnPesNawSfS0-42PfGIIWZzm6ChJdpLS/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02400.JPG",
@@ -3202,7 +3322,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1_jgSmzjfwFM58UbXrzbmdEtmuEKC31kX/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02405.JPG",
@@ -3213,7 +3335,9 @@
     "version_actual": "v02",
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
-    "revision_drive_url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/13bsYI-Nrj68gToUqZZqa1dcJeX0AqWkG/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02409.JPG",
@@ -3226,7 +3350,9 @@
     "source_id": "1UQXMCIhJj3mIGvXMZCMCIWZJlm-_Beo-",
     "source_url": "https://drive.google.com/file/d/1UQXMCIhJj3mIGvXMZCMCIWZJlm-_Beo-/view?usp=drivesdk",
     "estado": "aprobada",
-    "approved_jpg_drive": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk"
+    "approved_jpg_drive": "https://drive.google.com/file/d/11MLyLfYezelPzT50RfEtwZZR3f25kh1T/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC02416.JPG",
@@ -4273,7 +4399,9 @@
       "url": "https://drive.google.com/file/d/19SJhqwJrlwYweF4u82Jw_FELD0R_HTQ3/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07720.JPG",
@@ -4290,7 +4418,9 @@
       "url": "https://drive.google.com/file/d/1qodzPDKb0OZMxU5ndkjoC1YL3z_WdUek/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07721.JPG",
@@ -4307,7 +4437,9 @@
       "url": "https://drive.google.com/file/d/1tm2VmG5AM0qt8hvPvRoXDpqWgH3Fd7Dy/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07722.JPG",
@@ -4324,7 +4456,9 @@
       "url": "https://drive.google.com/file/d/1aZbaoLdOwOnsQqlp-JtkxNVb6FhIS6w_/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07724.JPG",
@@ -4341,7 +4475,9 @@
       "url": "https://drive.google.com/file/d/1_hRuTcnc6X5elGGv-ng1uKIbt3kj2ooA/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07726.JPG",
@@ -4358,7 +4494,9 @@
       "url": "https://drive.google.com/file/d/1q7QnVRfrZhyqbJga2kKYbGWCI4FLpZlf/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07731.JPG",
@@ -4375,7 +4513,9 @@
       "url": "https://drive.google.com/file/d/1j1qf7PRcbPOxWEthWH3hjjLFtrgYkXKG/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07732.JPG",
@@ -4392,7 +4532,9 @@
       "url": "https://drive.google.com/file/d/1X7ZrL-qwwMtZine1p3dqkipbIdXUq8WB/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07733.JPG",
@@ -4409,7 +4551,9 @@
       "url": "https://drive.google.com/file/d/1I9kfozV5waH6ShgmXvRDpEL3J6Pr52Q0/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07734.JPG",
@@ -4426,7 +4570,9 @@
       "url": "https://drive.google.com/file/d/1lTfaVCijZEHsUbli4OR_vUXqb5oC9LE4/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07736.JPG",
@@ -4449,7 +4595,9 @@
     "decision_usuario_actual": "aprobada",
     "approved_jpg_drive": "https://drive.google.com/file/d/1jxkdA1_d-tgz3ZBLjqs0LmJBwbOeABVZ/view?usp=drivesdk",
     "revision_drive_url": "https://drive.google.com/file/d/1y3KUbvjxdOoPxEsHsNgOKzEHAQRFDJGI/view?usp=drivesdk",
-    "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales"
+    "correccion_en_revision": "v03_fondo_entero_continuo_y_etiquetas_originales",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC07739.JPG",
@@ -4729,7 +4877,9 @@
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
     "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1UJYG_XHGDYnuR_qfYs0GAd1496X-B_ZV/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1UJYG_XHGDYnuR_qfYs0GAd1496X-B_ZV/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08355 2.JPG",
@@ -4830,7 +4980,9 @@
       "url": "https://drive.google.com/file/d/1Gqw-HWv7OZtkyBDNrtq4itPLwBj46zK8/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08456.JPG",
@@ -4847,7 +4999,9 @@
       "url": "https://drive.google.com/file/d/1shTs411GIwjoYxhQj9aOtPYC3isIFboQ/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08457.JPG",
@@ -4864,7 +5018,9 @@
       "url": "https://drive.google.com/file/d/1PZU1ibvUOCP0vBjKxWNLnREQG7WwiXtF/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08459.JPG",
@@ -4881,7 +5037,9 @@
       "url": "https://drive.google.com/file/d/12FV2grtGN0zHjr-u_3UYdAxGDkOlLRLm/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08466.JPG",
@@ -4898,7 +5056,9 @@
       "url": "https://drive.google.com/file/d/1ePYEqXyk1jF1xaIQeXpXh-wJZJ3KvUgy/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08471.JPG",
@@ -4915,7 +5075,9 @@
       "url": "https://drive.google.com/file/d/1Uk2ZXW8X6J6QDdHJEsKYqCxYcNwIioVX/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08477.JPG",
@@ -4932,7 +5094,9 @@
       "url": "https://drive.google.com/file/d/1zL8toV-5NaaVgZ6EC4rog5ss1rKP2FG6/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08479.JPG",
@@ -4949,7 +5113,9 @@
       "url": "https://drive.google.com/file/d/1dM0Q2SZAv4GkzAIN-RrMpYs1-6612SeB/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08481.JPG",
@@ -4966,7 +5132,9 @@
       "url": "https://drive.google.com/file/d/1X5qBEt9LXqQUX72urcgD1kDE4iljhfid/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08484.JPG",
@@ -4983,7 +5151,9 @@
       "url": "https://drive.google.com/file/d/1KnFztuJutyLejjN_0FLoSSPx7o3FDfYZ/view?usp=drivesdk",
       "estado": "en_revision",
       "folder": "https://drive.google.com/drive/folders/1dCjNfEMUmXyFDu27HtmkpzXkISF3aWlP"
-    }
+    },
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08485.JPG",
@@ -5016,7 +5186,9 @@
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
     "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1ua8rRHXw1fM5RcJZ5jAFmVACuTehf1rE/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08504.JPG",
@@ -5034,7 +5206,9 @@
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
     "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1lmaDFtotRY-jwM8nmiKXgkzOTsfVdBOy/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08540.JPG",
@@ -5043,7 +5217,9 @@
     "estado": "en_revision",
     "lote_actual": "cobrizo_sola_6",
     "version_actual": "cobrizo_sola_v02",
-    "revision_drive_url": "https://drive.google.com/file/d/1TCL7B7PgiH9r4aUx9ROzoKROoztoIOZ_/view?usp=drivesdk"
+    "revision_drive_url": "https://drive.google.com/file/d/1TCL7B7PgiH9r4aUx9ROzoKROoztoIOZ_/view?usp=drivesdk",
+    "entregada": true,
+    "entrega": "Parte 1 - PixieSet 2026-11-06"
   },
   {
     "source_name": "DSC08554.JPG",
