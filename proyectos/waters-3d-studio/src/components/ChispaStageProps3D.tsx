@@ -512,3 +512,356 @@ export const GoldenKitBox3D: React.FC<{
     </group>
   );
 };
+
+/**
+ * Evil dark-chrome Terminator-style AI villain robot with glowing red LED eyes,
+ * crimson laser visor scanner, phone voice-spoofing prop, and hangup block barrier.
+ */
+export const EvilTerminatorBot3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+  position?: [number, number, number];
+  rotationY?: number;
+  scale?: number;
+  blocked?: boolean;
+}> = ({
+  frame,
+  localFrame,
+  fps,
+  position = [0.92, -0.22, 0.05],
+  rotationY = -0.32,
+  scale = 0.96,
+  blocked = true,
+}) => {
+  const t = frame / fps;
+  const pop = spring({
+    frame: Math.max(0, localFrame - 4),
+    fps,
+    config: { damping: 10, stiffness: 210 },
+  });
+  const blockSpring = spring({
+    frame: Math.max(0, localFrame - 24),
+    fps,
+    config: { damping: 9, stiffness: 260 },
+  });
+
+  const geos = useMemo(
+    () => ({
+      skull: new RoundedBoxGeometry(1.30, 1.04, 0.88, 4, 0.14),
+      visorInset: new RoundedBoxGeometry(1.06, 0.56, 0.16, 3, 0.08),
+      torso: new RoundedBoxGeometry(1.08, 0.44, 0.70, 4, 0.10),
+      arm: new RoundedBoxGeometry(0.19, 0.36, 0.19, 3, 0.06),
+      leg: new RoundedBoxGeometry(0.20, 0.32, 0.24, 3, 0.06),
+    }),
+    []
+  );
+
+  const gunmetal = '#4B5565';
+  const darkSteel = '#11151E';
+  const chrome = '#CBD5E1';
+  const crimson = '#FF1E2D';
+  const hover = Math.sin(t * 6.0) * 0.035;
+  const scanX = Math.sin(t * 7.5) * 0.34;
+  const ringPulse = (t * 1.9) % 1;
+
+  return (
+    <group
+      position={[position[0], position[1] + hover, position[2]]}
+      rotation={[0, rotationY, blocked && localFrame >= 24 ? -0.09 : 0]}
+      scale={scale * Math.max(0.001, pop)}
+    >
+      {/* Dedicated crimson/steel rim light so dark chrome T-800 gleams cleanly */}
+      <pointLight position={[0.4, 0.9, 1.2]} intensity={2.2} color="#E2E8F0" />
+      <pointLight position={[0, 0.3, 1.0]} intensity={1.8} color="#FF2E3B" />
+      {/* Contact shadow under villain bot */}
+      <mesh position={[0, -0.81, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <circleGeometry args={[0.82, 28]} />
+        <meshBasicMaterial color="#020308" transparent opacity={0.44} />
+      </mesh>
+
+      {/* EVIL ANGULAR CHROME HEAD */}
+      <group position={[0, 0.34, 0]}>
+        <mesh geometry={geos.skull} castShadow>
+          <meshStandardMaterial color={gunmetal} metalness={0.82} roughness={0.22} />
+        </mesh>
+
+        {/* Armored Cheek Blades & Red Ear Sensors */}
+        {[-0.69, 0.69].map((ex, i) => (
+          <mesh key={i} position={[ex, 0.04, 0]} rotation={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.14, 0.14, 0.10, 18]} />
+            <meshStandardMaterial color={crimson} emissive={crimson} emissiveIntensity={1.6} />
+          </mesh>
+        ))}
+
+        {/* Dark Recessed Optical Faceplate */}
+        <mesh position={[0, 0.05, 0.40]} geometry={geos.visorInset}>
+          <meshStandardMaterial color={darkSteel} metalness={0.7} roughness={0.18} />
+        </mesh>
+
+        {/* Intense Glowing Blood-Red Terminator LED Eyes */}
+        {[-0.24, 0.24].map((ex, i) => (
+          <group key={i} position={[ex, 0.06, 0.49]}>
+            <mesh>
+              <sphereGeometry args={[0.095, 18, 18]} />
+              <meshStandardMaterial
+                color={crimson}
+                emissive={crimson}
+                emissiveIntensity={3.0}
+              />
+            </mesh>
+            <mesh position={[0, 0, 0.055]}>
+              <sphereGeometry args={[0.042, 12, 12]} />
+              <meshBasicMaterial color="#FFD1D1" />
+            </mesh>
+            {/* Angry Metallic Brow Slash (\ /) */}
+            <mesh position={[0, 0.13, 0.02]} rotation={[0, 0, i === 0 ? -0.34 : 0.34]}>
+              <boxGeometry args={[0.25, 0.045, 0.05]} />
+              <meshStandardMaterial color={chrome} metalness={0.9} roughness={0.18} />
+            </mesh>
+          </group>
+        ))}
+
+        {/* Sweeping Red Scanner Dot Across Visor */}
+        <mesh position={[scanX, 0.05, 0.50]}>
+          <boxGeometry args={[0.05, 0.36, 0.015]} />
+          <meshBasicMaterial color="#FF4D4D" transparent opacity={0.55} />
+        </mesh>
+
+        {/* Metallic Jaw Grille Teeth */}
+        <mesh position={[0, -0.32, 0.45]}>
+          <boxGeometry args={[0.56, 0.14, 0.05]} />
+          <meshStandardMaterial color={darkSteel} metalness={0.8} roughness={0.3} />
+        </mesh>
+        {[-0.18, -0.09, 0, 0.09, 0.18].map((tx, ti) => (
+          <mesh key={ti} position={[tx, -0.32, 0.48]}>
+            <boxGeometry args={[0.032, 0.11, 0.02]} />
+            <meshStandardMaterial color={chrome} metalness={0.9} roughness={0.2} />
+          </mesh>
+        ))}
+      </group>
+
+      {/* ARMORED TORSO + CRIMSON REACTOR */}
+      <group position={[0, -0.32, 0]}>
+        <mesh geometry={geos.torso} castShadow>
+          <meshStandardMaterial color={gunmetal} metalness={0.82} roughness={0.25} />
+        </mesh>
+        <mesh position={[0, 0.04, 0.36]}>
+          <torusGeometry args={[0.12, 0.025, 12, 24]} />
+          <meshStandardMaterial color={crimson} emissive={crimson} emissiveIntensity={2.4} />
+        </mesh>
+        <mesh position={[0, 0.04, 0.36]}>
+          <sphereGeometry args={[0.06, 14, 14]} />
+          <meshBasicMaterial color="#FFB4B4" />
+        </mesh>
+      </group>
+
+      {/* LEFT ARM HOLDING SPOOFED SMARTPHONE + VOICE RINGS */}
+      <group position={[-0.64, -0.18, 0.12]} rotation={[-0.75, 0.1, -0.25]}>
+        <mesh position={[0, -0.14, 0]} geometry={geos.arm}>
+          <meshStandardMaterial color={gunmetal} metalness={0.8} roughness={0.25} />
+        </mesh>
+        {/* Dark Smartphone emitting spoofed crimson rings */}
+        <group position={[-0.08, -0.36, 0.12]} rotation={[0.4, 0, 0]}>
+          <mesh>
+            <boxGeometry args={[0.20, 0.34, 0.03]} />
+            <meshStandardMaterial color="#090D16" metalness={0.5} />
+          </mesh>
+          <mesh position={[0, 0, 0.018]}>
+            <boxGeometry args={[0.16, 0.28, 0.01]} />
+            <meshBasicMaterial color={crimson} />
+          </mesh>
+          <mesh
+            position={[0, 0, 0.04]}
+            scale={0.55 + ringPulse * 1.1}
+          >
+            <torusGeometry args={[0.16, 0.018, 8, 24]} />
+            <meshBasicMaterial
+              color="#FF5555"
+              transparent
+              opacity={(1 - ringPulse) * 0.9}
+            />
+          </mesh>
+        </group>
+      </group>
+
+      {/* RIGHT ARM */}
+      <group position={[0.64, -0.18, 0]} rotation={[0, 0, 0.32]}>
+        <mesh position={[0, -0.14, 0]} geometry={geos.arm}>
+          <meshStandardMaterial color={gunmetal} metalness={0.8} roughness={0.25} />
+        </mesh>
+      </group>
+
+      {/* 4 STURDY METALLIC BOOTS */}
+      {[-0.36, -0.12, 0.12, 0.36].map((lx, i) => (
+        <mesh key={i} position={[lx, -0.66, 0.02]} geometry={geos.leg}>
+          <meshStandardMaterial color={darkSteel} metalness={0.85} roughness={0.3} />
+        </mesh>
+      ))}
+
+      {/* POPPING 'HANGUP / CLONE BLOCKED' X BARRIER ABOVE BETWEEN BOTS */}
+      {blocked && localFrame >= 24 && (
+        <group
+          position={[-0.78, 0.96, 0.28]}
+          rotation={[0, 0.18, 0]}
+          scale={0.76 * Math.max(0.001, blockSpring)}
+        >
+          <mesh>
+            <torusGeometry args={[0.36, 0.045, 14, 32]} />
+            <meshStandardMaterial
+              color="#00F5D4"
+              emissive="#00F5D4"
+              emissiveIntensity={2.0}
+            />
+          </mesh>
+          <mesh rotation={[0, 0, Math.PI / 4]}>
+            <boxGeometry args={[0.48, 0.075, 0.05]} />
+            <meshStandardMaterial color={crimson} emissive={crimson} emissiveIntensity={2.4} />
+          </mesh>
+          <mesh rotation={[0, 0, -Math.PI / 4]}>
+            <boxGeometry args={[0.48, 0.075, 0.05]} />
+            <meshStandardMaterial color={crimson} emissive={crimson} emissiveIntensity={2.4} />
+          </mesh>
+        </group>
+      )}
+    </group>
+  );
+};
+
+/**
+ * Animated 3D Smartphone Voice-Wave Pedestal showing voiceprint morphing from
+ * natural cyan wave into crimson AI clone waveform.
+ */
+export const VoiceWaveClone3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+  position?: [number, number, number];
+  scale?: number;
+}> = ({
+  frame,
+  localFrame,
+  fps,
+  position = [0.92, -0.32, -0.05],
+  scale = 0.96,
+}) => {
+  const t = frame / fps;
+  const pop = spring({
+    frame: Math.max(0, localFrame - 6),
+    fps,
+    config: { damping: 11, stiffness: 200 },
+  });
+  const isCloned = localFrame >= 28;
+  const waveColor = isCloned ? '#FF3B3B' : '#00F5D4';
+
+  return (
+    <group
+      position={position}
+      rotation={[0, -0.35 + Math.sin(t * 1.4) * 0.06, 0]}
+      scale={scale * Math.max(0.001, pop)}
+    >
+      {/* Sleek Circular Tech Base on Floor (relative y = -0.73 -> floorY = -1.05) */}
+      <mesh position={[0, -0.68, 0]}>
+        <cylinderGeometry args={[0.64, 0.72, 0.10, 32]} />
+        <meshStandardMaterial color="#111827" metalness={0.7} roughness={0.3} />
+      </mesh>
+      <mesh position={[0, -0.63, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <torusGeometry args={[0.65, 0.025, 12, 36]} />
+        <meshStandardMaterial
+          color={waveColor}
+          emissive={waveColor}
+          emissiveIntensity={2.0}
+        />
+      </mesh>
+
+      {/* Floating Glass Smartphone Frame */}
+      <mesh position={[0, 0.10, 0]}>
+        <boxGeometry args={[0.98, 1.48, 0.09]} />
+        <meshStandardMaterial color="#090D16" metalness={0.75} roughness={0.2} />
+      </mesh>
+      <mesh position={[0, 0.10, 0.05]}>
+        <boxGeometry args={[0.86, 1.34, 0.015]} />
+        <meshStandardMaterial color="#030712" roughness={0.1} />
+      </mesh>
+
+      {/* 7 Animated 3D Equalizer Bars Inside Phone */}
+      {[-0.30, -0.20, -0.10, 0, 0.10, 0.20, 0.30].map((bx, idx) => {
+        const barH =
+          0.18 +
+          Math.abs(Math.sin(t * 11 + idx * 0.9)) * 0.62 +
+          Math.cos(t * 6 - idx) * 0.10;
+        return (
+          <mesh key={idx} position={[bx, 0.12, 0.08]}>
+            <boxGeometry args={[0.065, Math.max(0.14, barH), 0.05]} />
+            <meshStandardMaterial
+              color={waveColor}
+              emissive={waveColor}
+              emissiveIntensity={2.2}
+            />
+          </mesh>
+        );
+      })}
+    </group>
+  );
+};
+
+/**
+ * Rotating Hexagonal Cyber Shield + Padlock Vault on Pedestal
+ */
+export const ShieldVault3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+  position?: [number, number, number];
+  accentColor?: string;
+}> = ({
+  frame,
+  localFrame,
+  fps,
+  position = [0.92, -0.28, -0.05],
+  accentColor = '#00F5D4',
+}) => {
+  const t = frame / fps;
+  const pop = spring({
+    frame: Math.max(0, localFrame - 6),
+    fps,
+    config: { damping: 11, stiffness: 205 },
+  });
+  const hover = Math.sin(t * 3.0) * 0.07;
+
+  return (
+    <group position={position} scale={Math.max(0.001, pop)}>
+      {/* Base Pad on Studio Floor */}
+      <mesh position={[0, -0.72, 0]}>
+        <cylinderGeometry args={[0.60, 0.68, 0.10, 28]} />
+        <meshStandardMaterial color="#0F172A" metalness={0.75} roughness={0.28} />
+      </mesh>
+      {/* Orbiting Neon Hexagon Shield Frame */}
+      <group position={[0, hover + 0.05, 0]} rotation={[0, Math.sin(t * 1.5) * 0.28, 0]}>
+        <mesh>
+          <torusGeometry args={[0.62, 0.055, 12, 6]} />
+          <meshStandardMaterial
+            color={accentColor}
+            emissive={accentColor}
+            emissiveIntensity={2.1}
+          />
+        </mesh>
+        {/* Golden Padlock Core Inside Shield */}
+        <mesh position={[0, -0.08, 0]}>
+          <boxGeometry args={[0.48, 0.40, 0.18]} />
+          <meshStandardMaterial
+            color="#FACC15"
+            emissive="#DFB15B"
+            emissiveIntensity={0.65}
+            metalness={0.75}
+            roughness={0.22}
+          />
+        </mesh>
+        <mesh position={[0, 0.16, 0]}>
+          <torusGeometry args={[0.15, 0.042, 12, 24, Math.PI]} />
+          <meshStandardMaterial color="#F8FAFC" metalness={0.85} roughness={0.18} />
+        </mesh>
+      </group>
+    </group>
+  );
+};

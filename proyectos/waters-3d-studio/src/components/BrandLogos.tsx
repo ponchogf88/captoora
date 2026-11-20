@@ -73,3 +73,73 @@ export const TerminalHarnessLogo: React.FC<LogoProps> = ({ size = 40 }) => (
     <line x1="24" y1="31" x2="34" y2="31" stroke="#38BDF8" strokeWidth="3.5" strokeLinecap="round" />
   </svg>
 );
+
+export const VisaWordmark: React.FC<LogoProps> = ({ size = 40 }) => (
+  <svg width={size * 1.4} height={size * 0.7} viewBox="0 0 72 36" fill="none">
+    <rect x="1" y="1" width="70" height="34" rx="8" fill="#0F172A" stroke="#38BDF8" strokeWidth="2" />
+    <text
+      x="36"
+      y="24"
+      textAnchor="middle"
+      fill="#38BDF8"
+      fontFamily="system-ui, sans-serif"
+      fontWeight="900"
+      fontStyle="italic"
+      fontSize="18"
+      letterSpacing="1.2"
+    >
+      VISA
+    </text>
+  </svg>
+);
+
+export const MastercardCircles: React.FC<LogoProps> = ({ size = 38 }) => (
+  <svg width={size * 1.35} height={size * 0.85} viewBox="0 0 56 36" fill="none">
+    <circle cx="21" cy="18" r="13" fill="#EF4444" fillOpacity="0.92" />
+    <circle cx="35" cy="18" r="13" fill="#F59E0B" fillOpacity="0.88" />
+  </svg>
+);
+
+export const BankShieldIcon: React.FC<LogoProps> = ({ size = 38 }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+    <path
+      d="M24 4L40 10V23C40 33.2 33 41.2 24 44C15 41.2 8 33.2 8 23V10L24 4Z"
+      fill="#06191D"
+      stroke="#00F5D4"
+      strokeWidth="3"
+    />
+    <path d="M17 24L22 29L32 19" stroke="#00F5D4" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
+export const GovLeakBadge: React.FC<LogoProps> = ({ size = 38 }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+    <rect x="4" y="6" width="40" height="36" rx="8" fill="#180A0E" stroke="#FF3B3B" strokeWidth="2.8" />
+    <path d="M24 14L33 30H15L24 14Z" stroke="#FF3B3B" strokeWidth="2.8" strokeLinejoin="round" />
+    <line x1="24" y1="20" x2="24" y2="25" stroke="#FFFFFF" strokeWidth="2.6" strokeLinecap="round" />
+    <circle cx="24" cy="27.8" r="1.4" fill="#FFFFFF" />
+  </svg>
+);
+
+export const VoiceWaveIcon: React.FC<LogoProps> = ({ size = 38 }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+    <rect x="4" y="4" width="40" height="40" rx="10" fill="#140A12" stroke="#FF3B3B" strokeWidth="2.6" />
+    <line x1="12" y1="20" x2="12" y2="28" stroke="#00F5D4" strokeWidth="3.2" strokeLinecap="round" />
+    <line x1="18" y1="14" x2="18" y2="34" stroke="#00F5D4" strokeWidth="3.2" strokeLinecap="round" />
+    <line x1="24" y1="10" x2="24" y2="38" stroke="#FF3B3B" strokeWidth="3.2" strokeLinecap="round" />
+    <line x1="30" y1="15" x2="30" y2="33" stroke="#FF3B3B" strokeWidth="3.2" strokeLinecap="round" />
+    <line x1="36" y1="19" x2="36" y2="29" stroke="#FF3B3B" strokeWidth="3.2" strokeLinecap="round" />
+  </svg>
+);
+
+export const TerminatorEyeIcon: React.FC<LogoProps> = ({ size = 38 }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" fill="none">
+    <rect x="4" y="8" width="40" height="32" rx="9" fill="#181C26" stroke="#FF1E2D" strokeWidth="3" />
+    <circle cx="17" cy="24" r="5" fill="#FF1E2D" />
+    <circle cx="31" cy="24" r="5" fill="#FF1E2D" />
+    <circle cx="17" cy="24" r="2" fill="#FFFFFF" />
+    <circle cx="31" cy="24" r="2" fill="#FFFFFF" />
+    <line x1="10" y1="16" x2="22" y2="19" stroke="#94A3B8" strokeWidth="2.8" strokeLinecap="round" />
+    <line x1="38" y1="16" x2="26" y2="19" stroke="#94A3B8" strokeWidth="2.8" strokeLinecap="round" />
+  </svg>
+);
