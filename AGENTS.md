@@ -76,11 +76,15 @@ No empieces por el lente 3D del hero si el miércoles alguien no encuentra la di
 | Facebook Page | TBD | Pendiente |
 | Google Business | TBD | Crítico esta semana |
 | TikTok / Reels | Mismo handle que IG | Después del miércoles si no está |
-| Calendly | Conectado a la cuenta Grok del dueño | Usar para “Agendar sesión” cuando el event type exista |
+| Calendly | Cuenta del estudio `alfonsogf.88@gmail.com`. Enlace https://calendly.com/captoora/gift-card | Pendiente de autorización. No es el despacho. [Ficha](docs/CALENDLY_CAPTOORA.md) |
 | Canva | Conectado | Fuente actual del logo |
 | GitHub | ponchogf88/captoora | Este repo |
 
 Si un handle no está confirmado, escríbelo como `TBD`. Nunca publiques un @ inventado.
+
+## Agenda del estudio
+
+Antes de leer reservas o escribir en un calendario, leer [docs/CALENDLY_CAPTOORA.md](docs/CALENDLY_CAPTOORA.md). Jesús Gutiérrez confirmó el 6 de noviembre de 2026 que Calendly Captoora es cuenta propia (`alfonsogf.88@gmail.com`), distinta del despacho (`https://calendly.com/ggconsultores`, correo exacto `l.jagf87@gmail.com`). Esa conexión no se consulta como si fuera el estudio.
 
 ---
 
@@ -129,6 +133,7 @@ Airbnb Experiences, agente de prospección autónomo, “growth engine”, 12 ve
 6. Imágenes nuevas del sitio van a `assets/` con nombres sin espacios. Los rollos de sesión no entran a este repo ni al disco interno: SD → nube. Se conservan solo el crudo en Drive y la final en Pixieset.
 7. Si tocas precios, contrasta con `GUIA_ESTRATEGICA_CAPTOORA.md`.
 8. Pregunta antes de cambiar el logo.
+9. Antes de leer o modificar Calendly, lee `docs/CALENDLY_CAPTOORA.md`. La cuenta del estudio no es la del despacho.
 
 ---
 
