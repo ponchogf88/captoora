@@ -349,6 +349,39 @@
       ],
       "caption_cta_suave": "Nadie te dice que un chat eterno reenvía todo el historial y te devora la cuota. Soltar y abrir un chat nuevo con mapa de proyecto también es amor propio (y AI FinOps). Comenta CUOTA para la guía. (Guion: EPISODIO_MAD08_ES_POR_EL_BIEN_DE_TU_CUOTA.md)",
       "arrastrable": true
+    },
+    {
+      "id": "DIA-APPLE",
+      "vertiente": "A_WATERS_DIA",
+      "titulo": "Siri confesó los 4 hackeos a Apple Intelligence (+ cuota 20x en iCloud 2TB/6TB)",
+      "tema": "Ciberseguridad Apple · Ataque Serpent, Prompt Injection en correos, Recompensa $1M y Cuotas iCloud+",
+      "estado": "guion",
+      "cta_palabra": "APPLE",
+      "guion_path": "EPISODIO_DIA_SIRI_APPLE_INTELLIGENCE_HACKS.md",
+      "lead_magnet_pdf": "lead_magnets/CHECKLIST_BLINDAJE_APPLE_INTELLIGENCE.pdf",
+      "arrastrable": true
+    },
+    {
+      "id": "MAD-04",
+      "vertiente": "B_MADRUGADA_NOCHE",
+      "titulo": "El Bot que Sabía Demasiado (acceso local sin Sandbox + pánico a las 2 AM)",
+      "desenlace": "rescate_antigravity",
+      "estado": "guion",
+      "duracion_seg": 46.0,
+      "guion_path": "EPISODIO_MAD04_EL_BOT_QUE_SABIA_DEMASIADO.md",
+      "cold_open": "Chispa con café y cuota de 2TB: 'Organízame todo el disco' — El bot: 'Indexé tu e.firma y 3 passwords bancarias, subiendo a servidor externo...'",
+      "camera_shots_sugeridos": [
+        "side_3q_left",
+        "low_villain",
+        "top_desk",
+        "closeup_face",
+        "dutch_panic",
+        "ots_chispa",
+        "orbit_hero",
+        "wide_front"
+      ],
+      "caption_cta_suave": "Darle permisos de lectura a un agente de IA sin Sandbox es dejar la casa abierta con la caja fuerte en la mesa. Comenta SANDBOX para la plantilla.",
+      "arrastrable": true
     }
   ]
 }
