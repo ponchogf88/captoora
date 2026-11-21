@@ -25,6 +25,7 @@ interface ChispaAstronaut3DProps {
   speaking?: boolean;
   /** Frames within the beat where UI cards pop in — character hops & sparkles in sync */
   popFrames?: number[];
+  hasTear?: boolean;
 }
 
 function createFourPointStarShape(outerR = 0.22, innerR = 0.065): THREE.Shape {
@@ -58,6 +59,7 @@ export const ChispaAstronaut3D: React.FC<ChispaAstronaut3DProps> = ({
   scale = 1,
   speaking = true,
   popFrames = [2, 8, 24, 36, 48],
+  hasTear = false,
 }) => {
   const t = frame / fps;
 
@@ -510,6 +512,22 @@ export const ChispaAstronaut3D: React.FC<ChispaAstronaut3DProps> = ({
             <mesh position={[0, -0.19, 0.015]} rotation={[0, 0, 0]}>
               <torusGeometry args={[0.09, 0.024, 12, 24, Math.PI]} />
               <meshStandardMaterial color={blackInk} roughness={0.2} />
+            </mesh>
+          )}
+
+          {/* TEARDROP SLIDING DOWN LEFT VISOR (MAD-08 B11) */}
+          {hasTear && (
+            <mesh position={[-0.24, -0.05 - (Math.min(localFrame, 90) / 90) * 0.22, 0.045]}>
+              <sphereGeometry args={[0.042, 16, 16]} />
+              <meshStandardMaterial
+                color="#38BDF8"
+                emissive="#00F5D4"
+                emissiveIntensity={0.5}
+                transparent
+                opacity={0.88}
+                roughness={0.08}
+                metalness={0.7}
+              />
             </mesh>
           )}
 

@@ -40,6 +40,9 @@ export interface MadrugadaBeatItem {
   screenMode: MonitorScreenMode;
   expression: ChispaExpression;
   accentColor: string;
+  stageMode?: 'cuarto_lluvia' | 'escritorio_monitor_3d' | 'ambos';
+  imageSrc?: string;
+  showTear?: boolean;
   showCheapBot?: boolean;
   microShake?: boolean;
   coldLockoutLight?: boolean;
@@ -169,7 +172,11 @@ function getShotSpec(shot: CameraShot, showCheapBot: boolean): ShotRigSpec {
   }
 }
 
-const easeOutCubic = (x: number) => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+const easeOutBack = (x: number, c1 = 1.35) => {
+  const t = Math.max(0, Math.min(1, x));
+  const c3 = c1 + 1;
+  return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2);
+};
 
 const MadrugadaCameraRig: React.FC<{
   beat: MadrugadaBeatItem;
@@ -196,13 +203,30 @@ const MadrugadaCameraRig: React.FC<{
     [0, 1],
     { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
   );
-  const p = easeOutCubic(rawProgress);
+  // Overshoot entry curve (back.out)
+  const p = easeOutBack(rawProgress);
 
   const spec = getShotSpec(activeShot, Boolean(beat.showCheapBot));
 
   let cx = interpolate(p, [0, 1], [spec.fromPos[0], spec.toPos[0]]);
   let cy = interpolate(p, [0, 1], [spec.fromPos[1], spec.toPos[1]]);
   let cz = interpolate(p, [0, 1], [spec.fromPos[2], spec.toPos[2]]);
+
+  const tx = interpolate(p, [0, 1], [spec.fromTarget[0], spec.toTarget[0]]);
+  const ty = interpolate(p, [0, 1], [spec.fromTarget[1], spec.toTarget[1]]);
+  const tz = interpolate(p, [0, 1], [spec.fromTarget[2], spec.toTarget[2]]);
+  const fov = interpolate(p, [0, 1], [spec.fromFov, spec.toFov]);
+
+  // Continuous slow push-in / dolly zoom across the beat (cero planos estáticos de tripié)
+  const beatProg = localFrame / Math.max(1, beat.durationInFrames);
+  const continuousPush = beatProg * 0.14;
+  const dirX = tx - cx;
+  const dirY = ty - cy;
+  const dirZ = tz - cz;
+  const dist = Math.hypot(dirX, dirY, dirZ) || 1;
+  cx += (dirX / dist) * continuousPush;
+  cy += (dirY / dist) * continuousPush;
+  cz += (dirZ / dist) * continuousPush;
 
   // Curved arc for orbit_hero
   if (activeShot === 'orbit_hero') {
@@ -220,11 +244,6 @@ const MadrugadaCameraRig: React.FC<{
     cx += Math.sin(globalFrame * 1.9) * 0.028;
     cy += Math.cos(globalFrame * 2.4) * 0.022;
   }
-
-  const tx = interpolate(p, [0, 1], [spec.fromTarget[0], spec.toTarget[0]]);
-  const ty = interpolate(p, [0, 1], [spec.fromTarget[1], spec.toTarget[1]]);
-  const tz = interpolate(p, [0, 1], [spec.fromTarget[2], spec.toTarget[2]]);
-  const fov = interpolate(p, [0, 1], [spec.fromFov, spec.toFov]);
 
   camera.position.set(cx, cy, cz);
   camera.lookAt(new THREE.Vector3(tx, ty, tz));
@@ -254,7 +273,9 @@ const MadrugadaScene3D: React.FC<{
     beat.screenMode === 'broken_web' ||
     beat.screenMode === 'zoom_countdown' ||
     beat.screenMode === 'hola_drain' ||
-    beat.screenMode === 'quota_lockout';
+    beat.screenMode === 'quota_lockout' ||
+    beat.screenMode === 'context_94' ||
+    beat.screenMode === 'quota_renew_red';
 
   return (
     <>
@@ -289,7 +310,7 @@ const MadrugadaScene3D: React.FC<{
         color={isDanger ? '#F87171' : '#FBBF24'}
       />
 
-      <DarkStudioRoom3D frame={globalFrame} coldLockout={isCold} />
+      <DarkStudioRoom3D frame={globalFrame} coldLockout={isCold} stageMode={beat.stageMode} />
 
       <ChispaAstronaut3D
         frame={globalFrame}
@@ -302,6 +323,7 @@ const MadrugadaScene3D: React.FC<{
         scale={0.8}
         speaking={beat.speaking ?? true}
         popFrames={[]}
+        hasTear={beat.showTear ?? false}
       />
 
       <DiegeticMonitor3D
@@ -311,6 +333,8 @@ const MadrugadaScene3D: React.FC<{
         position={[0.56, DESK_TOP_Y, -0.45]}
         rotationY={-0.24}
         scale={1.0}
+        showTear={beat.showTear ?? false}
+        imageSrc={beat.imageSrc}
       />
 
       {beat.showCheapBot && (

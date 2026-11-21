@@ -28,6 +28,7 @@ const EP06_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP0
 const EP07_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP07_ANTHROPIC_IPO ?? [];
 const EP08_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP08_AGENTE_CONTABLE ?? [];
 const MAD01_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD01_RENTA_UN_DOLAR ?? [];
+const MAD08_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD08_ES_POR_EL_BIEN_DE_TU_CUOTA ?? [];
 
 const sumFrames = (beats: { durationInFrames: number }[]) =>
   Math.max(1, beats.reduce((acc, b) => acc + b.durationInFrames, 0));
@@ -149,6 +150,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           episodeLabel: 'MAD-01',
           beats: MAD01_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersMad08"
+        component={WatersMadrugadaEpisode as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={sumFrames(MAD08_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'MAD-08 · ES POR EL BIEN DE TU CUOTA',
+          beats: MAD08_BEATS,
         }}
       />
     </>

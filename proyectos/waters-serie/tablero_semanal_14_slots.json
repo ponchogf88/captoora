@@ -334,7 +334,9 @@
       "vertiente": "B_MADRUGADA_NOCHE",
       "titulo": "Es por el bien de tu cuota (ruptura bajo la lluvia + la lágrima en el chat nuevo)",
       "desenlace": "final_crudo",
-      "estado": "guion",
+      "estado": "listo_publicar",
+      "duracion_seg": 46.0,
+      "video_path": "renders/WATERS_CHISPA_MAD08_CUOTA_45S.mp4",
       "cold_open": "Lluvia tras ventana 3D, piano triste: 'Entonces... ¿me estás diciendo que hasta aquí llegamos?' — 'Es por el bien de tu cuota.'",
       "camera_shots_sugeridos": [
         "side_3q_left",

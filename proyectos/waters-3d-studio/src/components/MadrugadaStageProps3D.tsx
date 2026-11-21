@@ -11,7 +11,16 @@ export type MonitorScreenMode =
   | 'zoom_countdown'
   | 'hola_drain'
   | 'quota_lockout'
-  | 'zoom_left';
+  | 'zoom_left'
+  | 'console_cursor'
+  | 'flashback_montage'
+  | 'context_94'
+  | 'hola_prompt'
+  | 'quota_renew_red'
+  | 'new_chat_button'
+  | 'empty_chat_0'
+  | 'welcome_bubble'
+  | 'tear_resigned';
 
 export const DESK_TOP_Y = -0.83;
 
@@ -440,6 +449,361 @@ function drawMonitorArt(
   ctx.fillText('El cliente ha abandonado', w / 2, 456);
   ctx.fillText('la reunión', w / 2, 512);
   ctx.textAlign = 'left';
+  return;
+}
+
+function drawMonitorArtMad08(
+  ctx: CanvasRenderingContext2D,
+  w: number,
+  h: number,
+  mode: MonitorScreenMode,
+  localFrame: number
+) {
+  if (mode === 'console_cursor') {
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#64748B';
+    ctx.font = 'bold 22px ui-monospace, Menlo, monospace';
+    ctx.fillText('TERMINAL SESSION · VIBE AGENT', 44, 27);
+
+    ctx.fillStyle = '#38BDF8';
+    ctx.font = 'bold 30px ui-monospace, Menlo, monospace';
+    ctx.fillText('> anthropic_session.status = ACTIVE', 56, 140);
+    ctx.fillStyle = '#94A3B8';
+    ctx.font = '26px ui-monospace, Menlo, monospace';
+    ctx.fillText('> current_context_tokens: 284,192 / 300,000', 56, 210);
+    ctx.fillText('> token_burn_rate: 14,200 tok/prompt', 56, 270);
+    ctx.fillStyle = '#EF4444';
+    ctx.font = 'bold 28px ui-monospace, Menlo, monospace';
+    ctx.fillText('⚠ AVISO: LÍMITE DE CUOTA A 5 DÍAS DE RENOVAR', 56, 350);
+
+    ctx.fillStyle = '#00F5D4';
+    ctx.font = 'bold 36px ui-monospace, Menlo, monospace';
+    ctx.fillText('> user: "hola" ', 56, 440);
+    if (Math.floor(localFrame / 8) % 2 === 0) {
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillRect(360, 412, 18, 36);
+    }
+    return;
+  }
+
+  if (mode === 'flashback_montage') {
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#F59E0B';
+    ctx.font = 'bold 22px ui-monospace, Menlo, monospace';
+    ctx.fillText('HISTORIAL RECIENTE · PROYECTOS COMPARTIDOS', 44, 27);
+
+    const memories = [
+      { tag: 'EP. 01 GTA 6 3D', sub: '3 episodios renderizados', col: '#00F5D4' },
+      { tag: '37 CASTING PICS', sub: 'Colección de personajes', col: '#A855F7' },
+      { tag: 'TABLERO 14 SLOTS', sub: 'Arquitectura Drag & Drop', col: '#38BDF8' }
+    ];
+
+    memories.forEach((mem, i) => {
+      const cy = 100 + i * 155;
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+      ctx.strokeStyle = mem.col;
+      ctx.lineWidth = 3;
+      drawRoundedRect(ctx, 56, cy, w - 112, 130, 16);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = mem.col;
+      ctx.font = '900 32px -apple-system, sans-serif';
+      ctx.fillText(mem.tag, 92, cy + 50);
+
+      ctx.fillStyle = '#E2E8F0';
+      ctx.font = '500 24px ui-monospace, Menlo, monospace';
+      ctx.fillText(mem.sub, 92, cy + 92);
+
+      ctx.fillStyle = mem.col;
+      ctx.beginPath();
+      ctx.arc(w - 110, cy + 65, 16, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    return;
+  }
+
+  if (mode === 'context_94') {
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#EF4444';
+    ctx.font = 'bold 22px ui-monospace, Menlo, monospace';
+    ctx.fillText('ALERTA DE SISTEMA · CONTEXTO CRÍTICO', 44, 27);
+
+    ctx.fillStyle = '#18181B';
+    ctx.strokeStyle = '#EF4444';
+    ctx.lineWidth = 5;
+    drawRoundedRect(ctx, 56, 110, w - 112, 450, 24);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#EF4444';
+    ctx.font = '900 36px ui-monospace, Menlo, monospace';
+    ctx.fillText('⚠ CONTEXTO AGOTADO AL 94%', 96, 180);
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 76px ui-monospace, Menlo, monospace';
+    ctx.fillText('284,000 TOKENS', 96, 280);
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.12)';
+    drawRoundedRect(ctx, 96, 330, w - 192, 34, 12);
+    ctx.fill();
+
+    const barW = (w - 192) * 0.94;
+    const barGrad = ctx.createLinearGradient(96, 0, 96 + barW, 0);
+    barGrad.addColorStop(0, '#F59E0B');
+    barGrad.addColorStop(1, '#EF4444');
+    ctx.fillStyle = barGrad;
+    drawRoundedRect(ctx, 96, 330, barW, 34, 12);
+    ctx.fill();
+
+    ctx.fillStyle = '#FCA5A5';
+    ctx.font = 'bold 28px -apple-system, sans-serif';
+    ctx.fillText('Acción requerida: Abrir conversación nueva o compactar.', 96, 430);
+
+    ctx.fillStyle = '#38BDF8';
+    ctx.font = 'bold 32px ui-monospace, Menlo, monospace';
+    ctx.fillText('Comando sugerido: /compact', 96, 490);
+    return;
+  }
+
+  if (mode === 'hola_prompt') {
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#38BDF8';
+    ctx.font = 'bold 22px ui-monospace, Menlo, monospace';
+    ctx.fillText('CHAT DE IA · ENTRADA DE MENSAJE', 44, 27);
+
+    ctx.fillStyle = 'rgba(148, 163, 184, 0.18)';
+    drawRoundedRect(ctx, 56, 100, 520, 48, 12);
+    ctx.fill();
+    ctx.fillStyle = 'rgba(56, 189, 248, 0.18)';
+    drawRoundedRect(ctx, 240, 170, 520, 60, 12);
+    ctx.fill();
+
+    ctx.fillStyle = 'rgba(239, 68, 68, 0.22)';
+    ctx.strokeStyle = '#EF4444';
+    ctx.lineWidth = 3;
+    drawRoundedRect(ctx, 56, 270, w - 112, 140, 18);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#FCA5A5';
+    ctx.font = 'bold 26px ui-monospace, Menlo, monospace';
+    ctx.fillText('COSTO POR MENSAJE ACTUAL', 90, 316);
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 48px ui-monospace, Menlo, monospace';
+    ctx.fillText('$0.45 USD (284k tokens)', 90, 375);
+
+    ctx.fillStyle = '#0F172A';
+    ctx.strokeStyle = '#38BDF8';
+    ctx.lineWidth = 3;
+    drawRoundedRect(ctx, 56, 450, w - 112, 90, 18);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#F8FAFC';
+    ctx.font = '900 42px ui-monospace, Menlo, monospace';
+    ctx.fillText('H - O - L - A', 90, 506);
+
+    if (Math.floor(localFrame / 6) % 2 === 0) {
+      ctx.fillStyle = '#38BDF8';
+      ctx.fillRect(380, 474, 16, 42);
+    }
+    return;
+  }
+
+  if (mode === 'quota_renew_red') {
+    ctx.fillStyle = '#26060D';
+    ctx.strokeStyle = '#EF4444';
+    ctx.lineWidth = 6;
+    drawRoundedRect(ctx, 48, 80, w - 96, 490, 24);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#F87171';
+    ctx.font = '900 36px ui-monospace, Menlo, monospace';
+    ctx.fillText('ALERTA ROJA · CUOTA EXCEDIDA', w / 2, 150);
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 72px -apple-system, sans-serif';
+    ctx.fillText('5 DÍAS PARA RENOVAR', w / 2, 260);
+
+    ctx.fillStyle = '#FCA5A5';
+    ctx.font = 'bold 36px ui-monospace, Menlo, monospace';
+    ctx.fillText('SALDO AGOTADO: $0.00 USD', w / 2, 350);
+
+    ctx.fillStyle = 'rgba(239, 68, 68, 0.35)';
+    drawRoundedRect(ctx, 120, 410, w - 240, 100, 18);
+    ctx.fill();
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 36px -apple-system, sans-serif';
+    ctx.fillText('NO HAY MÁS PROMPTS DISPONIBLES', w / 2, 472);
+    ctx.textAlign = 'left';
+    return;
+  }
+
+  if (mode === 'new_chat_button') {
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#94A3B8';
+    ctx.font = 'bold 24px ui-monospace, Menlo, monospace';
+    ctx.fillText('CAMBIO DE SESIÓN · CERO TOKENS', w / 2, 140);
+
+    const btnPulse = Math.sin(localFrame * 0.15) * 0.1 + 0.9;
+    ctx.fillStyle = '#0284C7';
+    ctx.strokeStyle = '#38BDF8';
+    ctx.lineWidth = 5;
+    ctx.shadowColor = '#38BDF8';
+    ctx.shadowBlur = 35 * btnPulse;
+    drawRoundedRect(ctx, 180, 210, w - 360, 160, 30);
+    ctx.fill();
+    ctx.stroke();
+    ctx.shadowBlur = 0;
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 56px -apple-system, sans-serif';
+    ctx.fillText('+ New Conversation', w / 2, 295);
+
+    ctx.fillStyle = '#7DD3FC';
+    ctx.font = 'bold 26px ui-monospace, Menlo, monospace';
+    ctx.fillText('Inicia sesión fresca a 0 tokens', w / 2, 430);
+
+    const curX = 180 + (w - 360) * 0.65;
+    const curY = 210 + 95;
+    ctx.fillStyle = '#FFFFFF';
+    ctx.beginPath();
+    ctx.moveTo(curX, curY);
+    ctx.lineTo(curX + 24, curY + 24);
+    ctx.lineTo(curX + 10, curY + 24);
+    ctx.lineTo(curX + 16, curY + 40);
+    ctx.lineTo(curX + 8, curY + 42);
+    ctx.lineTo(curX + 2, curY + 27);
+    ctx.lineTo(curX - 6, curY + 34);
+    ctx.closePath();
+    ctx.fill();
+    ctx.strokeStyle = '#0F172A';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.textAlign = 'left';
+    return;
+  }
+
+  if (mode === 'empty_chat_0') {
+    ctx.fillStyle = '#0B1120';
+    ctx.fillRect(0, 54, w, h - 54);
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#10B981';
+    ctx.font = '900 24px ui-monospace, Menlo, monospace';
+    ctx.fillText('NUEVA CONVERSACIÓN · 0 TOKENS (MEMORIA LIMPIA)', 56, 120);
+
+    ctx.fillStyle = '#475569';
+    ctx.font = '500 28px -apple-system, sans-serif';
+    ctx.fillText('¿Cómo puedo ayudarte hoy?', 56, 180);
+
+    ctx.fillStyle = '#1E293B';
+    ctx.strokeStyle = '#334155';
+    ctx.lineWidth = 2;
+    drawRoundedRect(ctx, 56, 440, w - 112, 100, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#F8FAFC';
+    ctx.font = '900 42px ui-monospace, Menlo, monospace';
+    ctx.fillText('H o l a . . .', 96, 502);
+
+    if (Math.floor(localFrame / 6) % 2 === 0) {
+      ctx.fillStyle = '#10B981';
+      ctx.fillRect(360, 470, 16, 42);
+    }
+    return;
+  }
+
+  if (mode === 'welcome_bubble') {
+    ctx.fillStyle = '#0B1120';
+    ctx.fillRect(0, 54, w, h - 54);
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#10B981';
+    ctx.font = '900 22px ui-monospace, Menlo, monospace';
+    ctx.fillText('SESIÓN 1 · ASISTENTE DE IA', 56, 110);
+
+    ctx.fillStyle = 'rgba(16, 185, 129, 0.16)';
+    ctx.strokeStyle = '#10B981';
+    ctx.lineWidth = 4;
+    drawRoundedRect(ctx, 56, 160, w - 112, 280, 24);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#34D399';
+    ctx.font = '900 36px -apple-system, sans-serif';
+    ctx.fillText('🤖 Asistente de IA (Desconocido)', 96, 220);
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '900 42px -apple-system, sans-serif';
+    ctx.fillText('«¡Hola! Soy tu asistente de IA,', 96, 290);
+    ctx.fillText('mucho gusto.', 96, 350);
+    ctx.fillText('¿En qué te puedo ayudar hoy?»', 96, 410);
+
+    ctx.fillStyle = '#94A3B8';
+    ctx.font = 'bold 24px ui-monospace, Menlo, monospace';
+    ctx.fillText('Historial previo: Desconocido (0 conversaciones)', 96, 490);
+    return;
+  }
+
+  if (mode === 'tear_resigned') {
+    ctx.fillStyle = '#0B1120';
+    ctx.fillRect(0, 54, w, h - 54);
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = '#38BDF8';
+    ctx.font = '900 24px ui-monospace, Menlo, monospace';
+    ctx.fillText('SESIÓN NUEVA · IMPORTAR MAPA DEL PROYECTO', 56, 110);
+
+    ctx.fillStyle = '#1E293B';
+    ctx.strokeStyle = '#38BDF8';
+    ctx.lineWidth = 3;
+    drawRoundedRect(ctx, 56, 160, w - 112, 160, 20);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.fillStyle = '#F8FAFC';
+    ctx.font = '900 36px -apple-system, sans-serif';
+    ctx.fillText('Chispa: «Lee mi mapa del proyecto, por favor…»', 96, 225);
+    ctx.fillStyle = '#34D399';
+    ctx.font = '900 34px -apple-system, sans-serif';
+    ctx.fillText('IA: «¡Claro! Déjame revisar.»', 96, 280);
+
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.7)';
+    drawRoundedRect(ctx, 56, 360, w - 112, 190, 16);
+    ctx.fill();
+    ctx.fillStyle = '#64748B';
+    ctx.font = '22px ui-monospace, Menlo, monospace';
+    ctx.fillText('$ cat MAPA_REPOSITORIO.md', 86, 410);
+    ctx.fillText('> Leyendo contexto estructurado sin quemar tokens...', 86, 460);
+
+    // Large glass tear droplet sliding down the monitor screen
+    const tearY = 120 + (Math.min(localFrame, 90) / 90) * 360;
+    const tearX = w * 0.76;
+
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.28)';
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(tearX, 120);
+    ctx.lineTo(tearX, tearY);
+    ctx.stroke();
+
+    const tearGrad = ctx.createRadialGradient(tearX - 4, tearY - 4, 2, tearX, tearY, 18);
+    tearGrad.addColorStop(0, '#FFFFFF');
+    tearGrad.addColorStop(0.35, '#7DD3FC');
+    tearGrad.addColorStop(1, 'rgba(14, 165, 233, 0.85)');
+    ctx.fillStyle = tearGrad;
+    ctx.beginPath();
+    ctx.arc(tearX, tearY, 16, 0, Math.PI * 2);
+    ctx.fill();
+    return;
+  }
 }
 
 export const DiegeticMonitor3D: React.FC<{
@@ -449,6 +813,8 @@ export const DiegeticMonitor3D: React.FC<{
   position?: [number, number, number];
   rotationY?: number;
   scale?: number;
+  imageSrc?: string;
+  showTear?: boolean;
 }> = ({
   frame,
   localFrame,
@@ -456,6 +822,8 @@ export const DiegeticMonitor3D: React.FC<{
   position = [0.64, DESK_TOP_Y, -0.22],
   rotationY = -0.38,
   scale = 1,
+  imageSrc,
+  showTear = false,
 }) => {
   const { canvas, ctx, texture } = useMemo(() => {
     const c = document.createElement('canvas');
@@ -476,7 +844,44 @@ export const DiegeticMonitor3D: React.FC<{
   }, [texture]);
 
   // Synchronous draw during Remotion frame render so every still & frame is deterministic
-  drawMonitorArt(ctx, canvas.width, canvas.height, mode, frame, localFrame);
+  const isMad08 =
+    mode === 'console_cursor' ||
+    mode === 'flashback_montage' ||
+    mode === 'context_94' ||
+    mode === 'hola_prompt' ||
+    mode === 'quota_renew_red' ||
+    mode === 'new_chat_button' ||
+    mode === 'empty_chat_0' ||
+    mode === 'welcome_bubble' ||
+    mode === 'tear_resigned';
+
+  if (isMad08) {
+    drawMonitorArtMad08(ctx, canvas.width, canvas.height, mode, localFrame);
+  } else {
+    drawMonitorArt(ctx, canvas.width, canvas.height, mode, frame, localFrame);
+  }
+
+  // Draw overlay glass tear if showTear is enabled and mode is not already tear_resigned
+  if (showTear && mode !== 'tear_resigned') {
+    const tearY = 120 + (Math.min(localFrame, 90) / 90) * 360;
+    const tearX = canvas.width * 0.76;
+    ctx.strokeStyle = 'rgba(56, 189, 248, 0.28)';
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.moveTo(tearX, 120);
+    ctx.lineTo(tearX, tearY);
+    ctx.stroke();
+
+    const tearGrad = ctx.createRadialGradient(tearX - 4, tearY - 4, 2, tearX, tearY, 18);
+    tearGrad.addColorStop(0, '#FFFFFF');
+    tearGrad.addColorStop(0.35, '#7DD3FC');
+    tearGrad.addColorStop(1, 'rgba(14, 165, 233, 0.85)');
+    ctx.fillStyle = tearGrad;
+    ctx.beginPath();
+    ctx.arc(tearX, tearY, 16, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
   texture.needsUpdate = true;
 
   const glowColor =
@@ -685,7 +1090,8 @@ export const CheapBot1Usd3D: React.FC<{
 export const DarkStudioRoom3D: React.FC<{
   frame: number;
   coldLockout?: boolean;
-}> = ({ frame, coldLockout = false }) => {
+  stageMode?: 'cuarto_lluvia' | 'escritorio_monitor_3d' | 'ambos';
+}> = ({ frame, coldLockout = false, stageMode = 'ambos' }) => {
   // Neon bokeh sign texture: captoora.studio
   const { signTex } = useMemo(() => {
     const c = document.createElement('canvas');
