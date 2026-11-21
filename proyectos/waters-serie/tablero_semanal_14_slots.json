@@ -189,7 +189,7 @@
         "vertiente": "A_WATERS_DIA",
         "titulo": "4 cosas que Siri AI confesó sobre seguridad (+ los 4 botones de blindaje familiar)",
         "tema": "Ciberseguridad Apple · Ataque Serpent mitigado, Prompt Injection en correos, Bug Bounty $1M preventivo y Cuotas exactas iCloud+ (200GB=2x, 2TB=5x, 6TB=10x, 12TB=20x)",
-        "estado": "en_render",
+        "estado": "listo_publicar",
         "duracion_seg": 60.0,
         "cta_palabra": "APPLE",
         "guion_path": "EPISODIO_DIA_SIRI_APPLE_INTELLIGENCE_HACKS.md",
