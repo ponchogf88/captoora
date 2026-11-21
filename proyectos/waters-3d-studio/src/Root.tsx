@@ -13,6 +13,10 @@ import {
   CyberBeatItem,
   WatersChispaCyberEpisode,
 } from './compositions/WatersChispaCyberEpisode';
+import {
+  MadrugadaBeatItem,
+  WatersMadrugadaEpisode,
+} from './compositions/WatersMadrugadaEpisode';
 import beatsData from './episodeBeats.json';
 
 const EP01_BEATS = (beatsData as Record<string, BeatItem[]>).EP01;
@@ -23,6 +27,7 @@ const EP05_BEATS = (beatsData as Record<string, NeonBeatItem[]>).EP05_FABLE_HYDR
 const EP06_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP06_HACKEOS_Y_VOZ ?? [];
 const EP07_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP07_ANTHROPIC_IPO ?? [];
 const EP08_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP08_AGENTE_CONTABLE ?? [];
+const MAD01_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD01_RENTA_UN_DOLAR ?? [];
 
 const sumFrames = (beats: { durationInFrames: number }[]) =>
   Math.max(1, beats.reduce((acc, b) => acc + b.durationInFrames, 0));
@@ -132,6 +137,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           episodeLabel: 'EP. 08 · CLAUDE CONTADOR SAT',
           beats: EP08_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersMadrugadaMad01"
+        component={WatersMadrugadaEpisode as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={sumFrames(MAD01_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'MAD-01',
+          beats: MAD01_BEATS,
         }}
       />
     </>

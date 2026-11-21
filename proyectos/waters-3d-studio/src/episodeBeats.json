@@ -1964,5 +1964,118 @@
       "speaking": true,
       "stepTitle": "¡WATERS! 💼"
     }
+  ],
+  "MAD01_RENTA_UN_DOLAR": [
+    {
+      "id": "B1",
+      "durationInFrames": 114,
+      "cameraShot": "side_3q_left",
+      "screenMode": "quota_low",
+      "expression": "sad_cloud",
+      "accentColor": "#38BDF8",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B2",
+      "durationInFrames": 108,
+      "cameraShot": "ots_chispa",
+      "screenMode": "model_selector_1usd",
+      "expression": "determined_hacker",
+      "accentColor": "#F59E0B",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B3",
+      "durationInFrames": 108,
+      "cameraShot": "low_villain",
+      "screenMode": "bot_flattery",
+      "expression": "happy_arcs",
+      "accentColor": "#10B981",
+      "showCheapBot": true,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B4",
+      "durationInFrames": 165,
+      "cameraShot": "top_desk",
+      "screenMode": "broken_web",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B5",
+      "durationInFrames": 150,
+      "cameraShot": "side_3q_right",
+      "screenMode": "broken_web",
+      "expression": "shock_sweat",
+      "accentColor": "#F59E0B",
+      "showCheapBot": true,
+      "microShake": true,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B6",
+      "durationInFrames": 180,
+      "cameraShot": "dutch_panic",
+      "screenMode": "zoom_countdown",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "showCheapBot": false,
+      "microShake": true,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B7",
+      "durationInFrames": 165,
+      "cameraShot": "ots_chispa",
+      "cutToShot": "closeup_face",
+      "cutAtFrame": 60,
+      "screenMode": "hola_drain",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B8",
+      "durationInFrames": 165,
+      "cameraShot": "low_villain",
+      "screenMode": "quota_lockout",
+      "expression": "sad_cloud",
+      "accentColor": "#EF4444",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": true,
+      "speaking": false
+    },
+    {
+      "id": "B9",
+      "durationInFrames": 150,
+      "cameraShot": "wide_front",
+      "screenMode": "zoom_left",
+      "expression": "sad_cloud",
+      "accentColor": "#38BDF8",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": true,
+      "cutToBlackAtFrame": 99,
+      "speaking": false
+    }
   ]
 }

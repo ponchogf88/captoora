@@ -56,17 +56,22 @@
         "horario_mx": "22:00",
         "titulo": "Mañana pago la renta... y bajé el modelo a $1 para ahorrar tokens",
         "desenlace": "final_crudo",
-        "estado": "idea",
-        "cold_open": "Lluvia tras ventana 3D, cuarto a oscuras con brillo del monitor: 'Mañana tengo que pagar la renta y me quedan 20 pesos de cuota...'",
+        "estado": "guion",
+        "duracion_seg": 43.5,
+        "guion_path": "EPISODIO_MAD01_RENTA_Y_MODELO_UN_DOLAR.md",
+        "composicion_remotion": "WatersMadrugadaMad01",
+        "cold_open": "Lluvia tras ventana 3D, cuarto a oscuras con brillo del monitor: 'Mañana pago la renta... y me quedan veinte pesos de cuota.'",
         "camera_shots_sugeridos": [
-          "wide_front",
+          "side_3q_left",
           "ots_chispa",
-          "top_desk",
           "low_villain",
+          "top_desk",
+          "side_3q_right",
+          "dutch_panic",
           "closeup_face",
-          "dutch_panic"
+          "wide_front"
         ],
-        "caption_cta_suave": "Todo por bajar el modelo sin arquitectura de routing y quemar el contexto en pánico. Si no quieres que te pase antes de entregarle a tu cliente, mándame mensaje con la palabra CUOTA y te paso la guía FinOps.",
+        "caption_cta_suave": "Bajar el modelo sin arquitectura de routing y quemar el contexto en pánico sale más caro que pagar bien desde el minuto 1. Si no quieres que se te muera la cuota dos minutos antes de entregarle a un cliente, comenta CUOTA y te paso la guía FinOps.",
         "arrastrable": true
       }
     },
