@@ -27,8 +27,10 @@ const EP05_BEATS = (beatsData as Record<string, NeonBeatItem[]>).EP05_FABLE_HYDR
 const EP06_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP06_HACKEOS_Y_VOZ ?? [];
 const EP07_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP07_ANTHROPIC_IPO ?? [];
 const EP08_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP08_AGENTE_CONTABLE ?? [];
+const EP09_BEATS = (beatsData as unknown as Record<string, CyberBeatItem[]>).EP09_APPLE_INTELLIGENCE ?? [];
 const MAD01_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD01_RENTA_UN_DOLAR ?? [];
 const MAD08_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD08_ES_POR_EL_BIEN_DE_TU_CUOTA ?? [];
+const MAD09_BEATS = (beatsData as unknown as Record<string, MadrugadaBeatItem[]>).MAD09_SIRI_SUFICIENTE_INTERNET ?? [];
 
 const sumFrames = (beats: { durationInFrames: number }[]) =>
   Math.max(1, beats.reduce((acc, b) => acc + b.durationInFrames, 0));
@@ -141,6 +143,18 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
+        id="WatersChispaEp09"
+        component={WatersChispaCyberEpisode}
+        durationInFrames={sumFrames(EP09_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'EP. 09 · SIRI AI SEGURIDAD',
+          beats: EP09_BEATS,
+        }}
+      />
+      <Composition
         id="WatersMadrugadaMad01"
         component={WatersMadrugadaEpisode as unknown as React.ComponentType<Record<string, unknown>>}
         durationInFrames={sumFrames(MAD01_BEATS)}
@@ -162,6 +176,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           episodeLabel: 'MAD-08 · ES POR EL BIEN DE TU CUOTA',
           beats: MAD08_BEATS,
+        }}
+      />
+      <Composition
+        id="WatersMad09"
+        component={WatersMadrugadaEpisode as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={sumFrames(MAD09_BEATS)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          episodeLabel: 'MAD-09 · SUFICIENTE INTERNET',
+          beats: MAD09_BEATS,
         }}
       />
     </>

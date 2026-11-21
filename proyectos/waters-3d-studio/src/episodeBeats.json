@@ -2224,5 +2224,543 @@
       "cutToBlackAtFrame": 140,
       "speaking": true
     }
+  ],
+  "MAD09_SIRI_SUFICIENTE_INTERNET": [
+    {
+      "id": "B1",
+      "durationInFrames": 135,
+      "cameraShot": "side_3q_left",
+      "screenMode": "siri_email_open",
+      "expression": "sad_cloud",
+      "accentColor": "#38BDF8",
+      "stageMode": "cuarto_lluvia",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B2",
+      "durationInFrames": 135,
+      "cameraShot": "top_desk",
+      "screenMode": "siri_listening_orb",
+      "expression": "sad_cloud",
+      "accentColor": "#06B6D4",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B3",
+      "durationInFrames": 135,
+      "cameraShot": "closeup_face",
+      "screenMode": "siri_reading_prompt_injection",
+      "expression": "determined_hacker",
+      "accentColor": "#F59E0B",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": false
+    },
+    {
+      "id": "B4",
+      "durationInFrames": 150,
+      "cameraShot": "dutch_panic",
+      "screenMode": "siri_scanning_notes",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": true,
+      "coldLockoutLight": false,
+      "speaking": false
+    },
+    {
+      "id": "B5",
+      "durationInFrames": 135,
+      "cameraShot": "closeup_face",
+      "screenMode": "siri_scanning_notes",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": true,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B6",
+      "durationInFrames": 150,
+      "cameraShot": "top_desk",
+      "screenMode": "siri_draft_exfiltration",
+      "expression": "shock_sweat",
+      "accentColor": "#EF4444",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": false
+    },
+    {
+      "id": "B7",
+      "durationInFrames": 135,
+      "cameraShot": "side_3q_right",
+      "screenMode": "phone_face_down_slam",
+      "expression": "shock_sweat",
+      "accentColor": "#64748B",
+      "stageMode": "escritorio_monitor_3d",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": true
+    },
+    {
+      "id": "B8",
+      "durationInFrames": 105,
+      "cameraShot": "low_villain",
+      "screenMode": "phone_dark_silence",
+      "expression": "sad_cloud",
+      "accentColor": "#1E293B",
+      "stageMode": "cuarto_lluvia",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": false
+    },
+    {
+      "id": "B9",
+      "durationInFrames": 180,
+      "cameraShot": "low_villain",
+      "screenMode": "phone_glowing_halo_desk",
+      "expression": "sad_cloud",
+      "accentColor": "#A855F7",
+      "stageMode": "cuarto_lluvia",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "speaking": false
+    },
+    {
+      "id": "B10",
+      "durationInFrames": 120,
+      "cameraShot": "wide_front",
+      "screenMode": "cut_to_black_tomorrow",
+      "expression": "sad_cloud",
+      "accentColor": "#000000",
+      "stageMode": "cuarto_lluvia",
+      "showCheapBot": false,
+      "microShake": false,
+      "coldLockoutLight": false,
+      "cutToBlackAtFrame": 1,
+      "speaking": false
+    }
+  ],
+  "EP09_APPLE_INTELLIGENCE": [
+    {
+      "durationInFrames": 105,
+      "topTag": "SIRI AI · SEGURIDAD Y FAMILIA",
+      "accentColor": "#00F5D4",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "shield_vault",
+      "stepBadge": "✦",
+      "pillText": "Rescate Antigravity · Blindaje iPhone",
+      "headlinePrefix": "4 cosas que Siri confesó",
+      "headlineFocus": "sobre seguridad",
+      "headlineSuffix": "",
+      "terminalCmd": "$ apple-security --audit siri_beta --family safe",
+      "terminalSub": "✓ Conectando con la noche de ayer: blindaje en 60s",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "ANÁLISIS SIRI",
+          "sub": "Vulnerabilidades admitidas",
+          "color": "#00F5D4"
+        },
+        {
+          "title": "BLINDAJE",
+          "sub": "4 botones familiares",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 165,
+      "topTag": "CONFESIÓN 1 · MALWARE SERPENT",
+      "accentColor": "#FFB703",
+      "expression": "shock_sweat",
+      "cardType": "dual_cards",
+      "stageProp": "laptop",
+      "stepBadge": "1",
+      "pillText": "Ataque conceptual mitigado por Apple",
+      "headlinePrefix": "Robo de tokens de sesión:",
+      "headlineFocus": "Ataque Serpent",
+      "headlineSuffix": "",
+      "terminalCmd": "$ token --extract session_key --mitigated true",
+      "terminalSub": "! Malware en Mac extraía tokens para usar tu cuota",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": false,
+      "cardItems": [
+        {
+          "title": "EXPOSICIÓN",
+          "sub": "Robo silencioso de cuota IA",
+          "color": "#FFB703"
+        },
+        {
+          "title": "ESTADO",
+          "sub": "Mitigado en zonas seguras OS",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 180,
+      "topTag": "CONFESIÓN 2 · PROMPT INJECTION",
+      "accentColor": "#FF3B3B",
+      "expression": "sad_cloud",
+      "cardType": "dual_cards",
+      "stageProp": "laptop",
+      "stepBadge": "2",
+      "pillText": "Instrucciones ocultas en emails o fotos",
+      "headlinePrefix": "El peligro de pedirle resumir",
+      "headlineFocus": "correos raros",
+      "headlineSuffix": "",
+      "terminalCmd": "$ siri --read email.eml --danger prompt_injection",
+      "terminalSub": "! Texto oculto cruza notas y contactos sin aviso",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": false,
+      "cardItems": [
+        {
+          "title": "INYECCIÓN INVISIBLE",
+          "sub": "Comando dentro de la imagen",
+          "color": "#FF3B3B"
+        },
+        {
+          "title": "RIESGO",
+          "sub": "Lectura de notas y mensajes",
+          "color": "#FF3B3B"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 150,
+      "topTag": "CONFESIÓN 3 · BUG BOUNTY M",
+      "accentColor": "#3A86FF",
+      "expression": "determined_hacker",
+      "cardType": "dual_cards",
+      "stageProp": "shield_vault",
+      "stepBadge": "3",
+      "pillText": "Recompensa preventiva, no hackeo consumado",
+      "headlinePrefix": "Apple ofrece recompensa de",
+      "headlineFocus": ",000,000 USD",
+      "headlineSuffix": "",
+      "terminalCmd": "$ security-bounty --target PCC --reward 1M_USD",
+      "terminalSub": "✓ Buscan vulnerabilidades en Private Cloud Compute",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "SECURITY BOUNTY",
+          "sub": "Hasta 1 millón de dólares",
+          "color": "#3A86FF"
+        },
+        {
+          "title": "OBJETIVO",
+          "sub": "Blindar arranque de servidores",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 210,
+      "topTag": "CONFESIÓN 4 · CUOTAS ICLOUD+",
+      "accentColor": "#8338EC",
+      "expression": "star_eyes",
+      "cardType": "triple_cards",
+      "stageProp": "kit_box",
+      "stepBadge": "4",
+      "pillText": "Multiplicador según plan de almacenamiento",
+      "headlinePrefix": "Tu cuota diaria se multiplica",
+      "headlineFocus": "hasta 20 veces",
+      "headlineSuffix": "",
+      "terminalCmd": "$ icloud --tier 200GB:2x,2TB:5x,6TB:10x,12TB:20x",
+      "terminalSub": "✓ Reinicio a medianoche · Consumo cero en local",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "200 GB",
+          "sub": "2x límite diario",
+          "color": "#8338EC"
+        },
+        {
+          "title": "2 TB",
+          "sub": "5x límite diario",
+          "color": "#3A86FF"
+        },
+        {
+          "title": "6TB / 12TB",
+          "sub": "10x a 20x potencia",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 180,
+      "topTag": "PLAN DE DEFENSA FAMILIAR",
+      "accentColor": "#00F5D4",
+      "expression": "determined_hacker",
+      "cardType": "giro_punch",
+      "stageProp": "shield_vault",
+      "stepBadge": "⚡",
+      "pillText": "Más cuota = Mayor superficie de riesgo",
+      "headlinePrefix": "Los 4 botones para blindar",
+      "headlineFocus": "a toda tu familia",
+      "headlineSuffix": "",
+      "terminalCmd": "$ family-shield --lock-devices --audit-permissions",
+      "terminalSub": "✓ Configuración en Ajustes de iOS en 30 segundos",
+      "giroTop": "MÁS POTENCIA IA",
+      "giroBottom": "REQUIERE CANDADOS REALES",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true
+    },
+    {
+      "durationInFrames": 180,
+      "topTag": "BOTÓN 1 · AJUSTES IOS",
+      "accentColor": "#22C55E",
+      "expression": "determined_hacker",
+      "cardType": "dual_cards",
+      "stageProp": "shield_vault",
+      "stepBadge": "1",
+      "pillText": "Configuración > Privacidad > Verificación",
+      "headlinePrefix": "Botón 1:",
+      "headlineFocus": "Verificación de Seguridad",
+      "headlineSuffix": "",
+      "terminalCmd": "$ settings --privacy --safety-check --revoke-all",
+      "terminalSub": "✓ Revisa y revoca accesos de personas o apps",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "RESTABLECIMIENTO",
+          "sub": "Corta accesos compartidos",
+          "color": "#22C55E"
+        },
+        {
+          "title": "UBICACIÓN",
+          "sub": "Audita quién te rastrea",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 165,
+      "topTag": "BOTÓN 2 · PRIVACIDAD AUDIO",
+      "accentColor": "#00F5D4",
+      "expression": "happy_arcs",
+      "cardType": "dual_cards",
+      "stageProp": "laptop",
+      "stepBadge": "2",
+      "pillText": "Ajustes > Privacidad > Análisis y mejoras",
+      "headlinePrefix": "Botón 2: Apagar",
+      "headlineFocus": "Mejorar Siri y Dictado",
+      "headlineSuffix": "",
+      "terminalCmd": "$ siri --opt-out improve_siri --retention 0_days",
+      "terminalSub": "✓ Evita que Apple retenga muestras por 2 años",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "OFF AUDITORÍA",
+          "sub": "Cero audios en servidores",
+          "color": "#00F5D4"
+        },
+        {
+          "title": "BORRAR HISTORIAL",
+          "sub": "Limpia registros previos",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 150,
+      "topTag": "BOTÓN 3 · CIFRADO TOTAL",
+      "accentColor": "#22C55E",
+      "expression": "star_eyes",
+      "cardType": "dual_cards",
+      "stageProp": "shield_vault",
+      "stepBadge": "3",
+      "pillText": "Configuración > Tu Nombre > iCloud > Datos",
+      "headlinePrefix": "Botón 3:",
+      "headlineFocus": "Protección de Datos Avanzada",
+      "headlineSuffix": "",
+      "terminalCmd": "$ icloud --advanced-data-protection --enable true",
+      "terminalSub": "✓ Cifrado extremo a extremo de fotos, notas y backup",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "ZERO-KNOWLEDGE",
+          "sub": "Ni Apple puede leer tus datos",
+          "color": "#22C55E"
+        },
+        {
+          "title": "COPIAS DE SEGURIDAD",
+          "sub": "100% encriptadas",
+          "color": "#00F5D4"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 135,
+      "topTag": "BOTÓN 4 · PROTOCOLO FAMILIAR",
+      "accentColor": "#FFB703",
+      "expression": "determined_hacker",
+      "cardType": "dual_cards",
+      "stageProp": "laptop",
+      "stepBadge": "4",
+      "pillText": "Regla de oro: Cero resúmenes desconocidos",
+      "headlinePrefix": "Regla de Oro:",
+      "headlineFocus": "Nunca resumas correos raros",
+      "headlineSuffix": "",
+      "terminalCmd": "$ ai-filter --unknown-senders block --zero-read",
+      "terminalSub": "! Si no conoces al remitente, no invoques a Siri",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "REMITENTES RAROS",
+          "sub": "Abrir manualmente",
+          "color": "#FFB703"
+        },
+        {
+          "title": "NO PROMPT INJECTION",
+          "sub": "Cierra la puerta al atacante",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 105,
+      "topTag": "CHECKLIST PDF DESCARGABLE",
+      "accentColor": "#00F5D4",
+      "expression": "happy_open",
+      "cardType": "dual_cards",
+      "stageProp": "kit_box",
+      "stepBadge": "📥",
+      "pillText": "Manual de Blindaje Apple Intelligence",
+      "headlinePrefix": "Checklist paso a paso",
+      "headlineFocus": "en PDF gratis",
+      "headlineSuffix": "",
+      "terminalCmd": "$ lead-magnet --send CHECKLIST_BLINDAJE_APPLE.pdf",
+      "terminalSub": "✓ Rutas exactas + capturas para proteger a tu familia",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true,
+      "cardItems": [
+        {
+          "title": "GUÍA TÉCNICA",
+          "sub": "Pasos para papás e hijos",
+          "color": "#00F5D4"
+        },
+        {
+          "title": "ACCESO DIRECTO",
+          "sub": "Envío automático por DM",
+          "color": "#22C55E"
+        }
+      ]
+    },
+    {
+      "durationInFrames": 75,
+      "topTag": "COMENTA APPLE EN EL CHAT",
+      "accentColor": "#FF007F",
+      "expression": "star_eyes",
+      "cardType": "cta_blinda",
+      "stageProp": "kit_box",
+      "stepBadge": "✦",
+      "pillText": "Comenta APPLE y te llega al instante",
+      "headlinePrefix": "Comenta",
+      "headlineFocus": "APPLE",
+      "headlineSuffix": "y protégete",
+      "terminalCmd": "$ bot --auto-reply keyword:APPLE --family-safe",
+      "terminalSub": "✓ Protege tu iPhone hoy mismo y... ¡Waters!",
+      "pops": [
+        2,
+        8,
+        20,
+        32
+      ],
+      "speaking": true,
+      "safeMode": true
+    }
   ]
 }

@@ -159,37 +159,45 @@
         "arrastrable": true
       },
       "slot_noche": {
-        "id": "MAD-04",
+        "id": "MAD-09",
         "vertiente": "B_MADRUGADA_NOCHE",
-        "horario_mx": "22:00",
-        "titulo": "Le dije 'hola' en el turno 80 y se puso a escanear toda la empresa",
-        "desenlace": "final_crudo",
-        "estado": "idea",
-        "cold_open": "Voz calmada frente a la lluvia: 'Solo quise saludar al agente por educación antes de pedirle un cambio de botón...'",
+        "titulo": "Creo que ya fue suficiente internet por hoy (la pesadilla de Siri AI a las 2:47 a.m.)",
+        "desenlace": "tragedia_escalofrio",
+        "estado": "listo_publicar",
+        "duracion_seg": 46.0,
+        "guion_path": "EPISODIO_MAD09_NOCHE_SIRI_SUFICIENTE_INTERNET.md",
+        "cold_open": "Chispa en pijama a las 2:47 AM: 'Siri resúmeme este correo'... Prompt injection cruza notas privadas... Manotazo y teléfono boca abajo ('Suficiente internet por hoy')... El iPhone se ilumina solo: 'Descansa… todavía sigo leyendo tu pantalla. Buenas noches.' (Cero rescate).",
         "camera_shots_sugeridos": [
-          "ots_chispa",
+          "side_3q_left",
           "top_desk",
+          "closeup_face",
           "dutch_panic",
-          "closeup_face"
+          "low_villain"
         ],
-        "caption_cta_suave": "Cada turno en un chat saturado reenvía el historial completo y quema millones de tokens. Si te urge aprender Context Hygiene para trabajar o para entrevistas, escríbeme FINOPS.",
-        "arrastrable": true
+        "caption_cta_suave": "El terror de la IA es pedirle a Siri resumir un correo a las 2:47 a.m. con Prompt Injection. Mañana a las 12:00 te muestro los 4 botones para que esto NO te pase.",
+        "diptico_pareja_id": "EP09_DIA_APPLE",
+        "arrastrable": true,
+        "video_path": "renders/WATERS_CHISPA_MAD09_SIRI_45S.mp4",
+        "audio_path": "renders/audio_elevenlabs_v3/MAD09_SIRI_NOCHE/MAD09_master.wav"
       }
     },
     {
       "dia_key": "viernes",
       "dia_nombre": "Viernes",
       "slot_dia": {
-        "id": "DIA-HYB-02",
+        "id": "EP09_DIA_APPLE",
         "vertiente": "A_WATERS_DIA",
-        "horario_mx": "12:00",
-        "titulo": "Agente en Meta / WhatsApp sin candados: promesas legales y fuga de datos",
-        "tema": "Legal Engineering · Bot aceptando descuentos y comprometiéndote con clientes",
-        "estado": "revision_final",
-        "cta_palabra": "WATERS",
-        "video_path": "renders/WATERS_HYBRID_EP02_META_AGENTE_V3.mp4",
-        "lead_magnet_pdf": null,
-        "arrastrable": true
+        "titulo": "4 cosas que Siri AI confesó sobre seguridad (+ los 4 botones de blindaje familiar)",
+        "tema": "Ciberseguridad Apple · Ataque Serpent mitigado, Prompt Injection en correos, Bug Bounty $1M preventivo y Cuotas exactas iCloud+ (200GB=2x, 2TB=5x, 6TB=10x, 12TB=20x)",
+        "estado": "en_render",
+        "duracion_seg": 60.0,
+        "cta_palabra": "APPLE",
+        "guion_path": "EPISODIO_DIA_SIRI_APPLE_INTELLIGENCE_HACKS.md",
+        "lead_magnet_pdf": "lead_magnets/CHECKLIST_BLINDAJE_APPLE_INTELLIGENCE.pdf",
+        "diptico_pareja_id": "MAD-09",
+        "arrastrable": true,
+        "video_path": "renders/WATERS_CHISPA_EP09_APPLE_60S.mp4",
+        "audio_path": "renders/audio_elevenlabs_v3/EP09_DIA_APPLE/EP09_master.wav"
       },
       "slot_noche": {
         "id": "MAD-05",
@@ -351,39 +359,6 @@
       "arrastrable": true
     },
     {
-      "id": "MAD-09",
-      "vertiente": "B_MADRUGADA_NOCHE",
-      "titulo": "Creo que ya fue suficiente internet por hoy (la pesadilla de Siri AI a las 2:47 a.m.)",
-      "desenlace": "tragedia_escalofrio",
-      "estado": "guion",
-      "duracion_seg": 46.0,
-      "guion_path": "EPISODIO_MAD09_NOCHE_SIRI_SUFICIENTE_INTERNET.md",
-      "cold_open": "Chispa en pijama a las 2:47 AM: 'Siri resúmeme este correo'... Prompt injection cruza notas privadas... Manotazo y teléfono boca abajo ('Suficiente internet por hoy')... El iPhone se ilumina solo: 'Descansa… todavía sigo leyendo tu pantalla. Buenas noches.' (Cero rescate).",
-      "camera_shots_sugeridos": [
-        "side_3q_left",
-        "top_desk",
-        "closeup_face",
-        "dutch_panic",
-        "low_villain"
-      ],
-      "caption_cta_suave": "El terror de la IA es pedirle a Siri resumir un correo a las 2:47 a.m. con Prompt Injection. Mañana a las 12:00 te muestro los 4 botones para que esto NO te pase.",
-      "diptico_pareja_id": "EP09_DIA_APPLE",
-      "arrastrable": true
-    },
-    {
-      "id": "EP09_DIA_APPLE",
-      "vertiente": "A_WATERS_DIA",
-      "titulo": "4 cosas que Siri AI confesó sobre seguridad (+ los 4 botones de blindaje familiar)",
-      "tema": "Ciberseguridad Apple · Ataque Serpent mitigado, Prompt Injection en correos, Bug Bounty $1M preventivo y Cuotas exactas iCloud+ (200GB=2x, 2TB=5x, 6TB=10x, 12TB=20x)",
-      "estado": "guion",
-      "duracion_seg": 60.0,
-      "cta_palabra": "APPLE",
-      "guion_path": "EPISODIO_DIA_SIRI_APPLE_INTELLIGENCE_HACKS.md",
-      "lead_magnet_pdf": "lead_magnets/CHECKLIST_BLINDAJE_APPLE_INTELLIGENCE.pdf",
-      "diptico_pareja_id": "MAD-09",
-      "arrastrable": true
-    },
-    {
       "id": "MAD-04",
       "vertiente": "B_MADRUGADA_NOCHE",
       "titulo": "El Bot que Sabía Demasiado (acceso local sin Sandbox + pánico a las 2 AM)",
@@ -403,6 +378,18 @@
         "wide_front"
       ],
       "caption_cta_suave": "Darle permisos de lectura a un agente de IA sin Sandbox es dejar la casa abierta con la caja fuerte en la mesa. Comenta SANDBOX para la plantilla.",
+      "arrastrable": true
+    },
+    {
+      "id": "DIA-HYB-02",
+      "vertiente": "A_WATERS_DIA",
+      "horario_mx": "12:00",
+      "titulo": "Agente en Meta / WhatsApp sin candados: promesas legales y fuga de datos",
+      "tema": "Legal Engineering · Bot aceptando descuentos y comprometiéndote con clientes",
+      "estado": "revision_final",
+      "cta_palabra": "WATERS",
+      "video_path": "renders/WATERS_HYBRID_EP02_META_AGENTE_V3.mp4",
+      "lead_magnet_pdf": null,
       "arrastrable": true
     }
   ]
