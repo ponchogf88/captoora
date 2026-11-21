@@ -351,14 +351,36 @@
       "arrastrable": true
     },
     {
-      "id": "DIA-APPLE",
-      "vertiente": "A_WATERS_DIA",
-      "titulo": "Siri confesó los 4 hackeos a Apple Intelligence (+ cuota 20x en iCloud 2TB/6TB)",
-      "tema": "Ciberseguridad Apple · Ataque Serpent, Prompt Injection en correos, Recompensa $1M y Cuotas iCloud+",
+      "id": "MAD-09",
+      "vertiente": "B_MADRUGADA_NOCHE",
+      "titulo": "Creo que ya fue suficiente internet por hoy (la pesadilla de Siri AI a las 2:47 a.m.)",
+      "desenlace": "tragedia_escalofrio",
       "estado": "guion",
+      "duracion_seg": 46.0,
+      "guion_path": "EPISODIO_MAD09_NOCHE_SIRI_SUFICIENTE_INTERNET.md",
+      "cold_open": "Chispa en pijama a las 2:47 AM: 'Siri resúmeme este correo'... Prompt injection cruza notas privadas... Manotazo y teléfono boca abajo ('Suficiente internet por hoy')... El iPhone se ilumina solo: 'Descansa… todavía sigo leyendo tu pantalla. Buenas noches.' (Cero rescate).",
+      "camera_shots_sugeridos": [
+        "side_3q_left",
+        "top_desk",
+        "closeup_face",
+        "dutch_panic",
+        "low_villain"
+      ],
+      "caption_cta_suave": "El terror de la IA es pedirle a Siri resumir un correo a las 2:47 a.m. con Prompt Injection. Mañana a las 12:00 te muestro los 4 botones para que esto NO te pase.",
+      "diptico_pareja_id": "EP09_DIA_APPLE",
+      "arrastrable": true
+    },
+    {
+      "id": "EP09_DIA_APPLE",
+      "vertiente": "A_WATERS_DIA",
+      "titulo": "4 cosas que Siri AI confesó sobre seguridad (+ los 4 botones de blindaje familiar)",
+      "tema": "Ciberseguridad Apple · Ataque Serpent mitigado, Prompt Injection en correos, Bug Bounty $1M preventivo y Cuotas exactas iCloud+ (200GB=2x, 2TB=5x, 6TB=10x, 12TB=20x)",
+      "estado": "guion",
+      "duracion_seg": 60.0,
       "cta_palabra": "APPLE",
       "guion_path": "EPISODIO_DIA_SIRI_APPLE_INTELLIGENCE_HACKS.md",
       "lead_magnet_pdf": "lead_magnets/CHECKLIST_BLINDAJE_APPLE_INTELLIGENCE.pdf",
+      "diptico_pareja_id": "MAD-09",
       "arrastrable": true
     },
     {
