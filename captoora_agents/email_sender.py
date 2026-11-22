@@ -93,6 +93,7 @@ def send_email_via_zoho(
     attachments: list[Path] | None = None,
     config: ZohoSmtpConfig | None = None,
     dry_run: bool = False,
+    save_eml_path: Path | None = None,
 ) -> dict[str, Any]:
     """Build and optionally transmit a client-safe HTML+attachment email from chuy@captoora.studio."""
     cfg = config or load_smtp_config()
@@ -124,6 +125,12 @@ def send_email_via_zoho(
         )
         attached_names.append(att_path.name)
 
+    eml_saved: str | None = None
+    if save_eml_path is not None:
+        save_eml_path.parent.mkdir(parents=True, exist_ok=True)
+        save_eml_path.write_bytes(msg.as_bytes())
+        eml_saved = str(save_eml_path)
+
     if dry_run or not cfg.is_configured:
         return {
             "sent": False,
@@ -132,6 +139,7 @@ def send_email_via_zoho(
             "to": to_email.strip(),
             "subject": subject,
             "attachments": attached_names,
+            "eml_path": eml_saved,
             "missing_env": [] if dry_run else cfg.missing_env_vars(),
         }
 

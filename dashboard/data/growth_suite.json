@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T08:30:44-06:00",
+  "updated_at": "2026-11-21T21:19:12-06:00",
   "tracking_ids": {
     "ga4_id": "",
     "meta_pixel_id": "",
@@ -7,7 +7,7 @@
     "google_ads_tag": ""
   },
   "calendly": {
-    "base_url": "",
+    "base_url": "https://calendly.com/captoora",
     "event_types": [
       {
         "id": "maps_audit_15",
@@ -28,7 +28,7 @@
     "generated_links": []
   },
   "ceo_plan": {
-    "updated_at": "2026-11-20T08:30:44-06:00",
+    "updated_at": "2026-11-21T08:30:58-06:00",
     "week_focus": "Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad hasta cobrar el 1er anticipo 50% y liberar Ads.",
     "primary_kpis": [
       "Primer 'Sí' cobrado (50%)",
@@ -361,6 +361,18 @@
     ],
     "tomorrow_reminders_log": [
       {
+        "triggered_at": "2026-11-21T18:00:00-06:00",
+        "blocks_count": 4,
+        "email_result": null,
+        "text": "Agenda de Mañana Captoora Studio:\n- 08:30 | Despertador 24/7: Resumen CEO & Cola Follow-up 48h (Scheduler)\n- 09:30 | Rutas presenciales confirmadas (Mapa MTY Optimizado) (Mapa Rutas)\n- 12:00 | Corte Seguimientos 72h (-35% / 2do Momento) (WA / Zoho)\n- 17:00 | Publicación Reel / Collab hora pico según Insights (IG / TikTok)"
+      },
+      {
+        "triggered_at": "2026-11-20T18:00:55-06:00",
+        "blocks_count": 4,
+        "email_result": null,
+        "text": "Agenda de Mañana Captoora Studio:\n- 08:30 | Despertador 24/7: Resumen CEO & Cola Follow-up 48h (Scheduler)\n- 09:30 | Rutas presenciales confirmadas (Mapa MTY Optimizado) (Mapa Rutas)\n- 12:00 | Corte Seguimientos 72h (-35% / 2do Momento) (WA / Zoho)\n- 17:00 | Publicación Reel / Collab hora pico según Insights (IG / TikTok)"
+      },
+      {
         "triggered_at": "2026-11-19T18:00:40-06:00",
         "blocks_count": 4,
         "email_result": null,
@@ -374,18 +386,206 @@
       }
     ]
   },
-  "crm_records": {},
-  "mail_campaigns_log": [],
+  "crm_records": {
+    "plan_uno": {
+      "slug": "plan_uno",
+      "nombre": "Plan Uno",
+      "stage": "Nuevo",
+      "email": "info@elplanuno.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Nutricionista",
+      "phone": "+52 81 8024 1183"
+    },
+    "blumette_studio": {
+      "slug": "blumette_studio",
+      "nombre": "Blumette Studio",
+      "stage": "Nuevo",
+      "email": "contacto@blumettestudio.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Centro de pilates",
+      "phone": "+52 81 3080 2222"
+    },
+    "outwork_calisthenics_studio_zona_tec": {
+      "slug": "outwork_calisthenics_studio_zona_tec",
+      "nombre": "Outwork Calisthenics Studio - Zona Tec",
+      "stage": "Nuevo",
+      "email": "info@outwork.mx",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Centro deportivo",
+      "phone": "+52 81 2876 6838"
+    },
+    "motus_fitness_studio": {
+      "slug": "motus_fitness_studio",
+      "nombre": "Motus Fitness Studio",
+      "stage": "Nuevo",
+      "email": "hola@motusfitnessstudio.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Gimnasio"
+    },
+    "zen_soul_studio": {
+      "slug": "zen_soul_studio",
+      "nombre": "Zen Soul Studio",
+      "stage": "Nuevo",
+      "email": "hola@zensoulstudio.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Centro de pilates"
+    },
+    "forza_gravity_gym": {
+      "slug": "forza_gravity_gym",
+      "nombre": "Forza Gravity Gym",
+      "stage": "Nuevo",
+      "email": "contacto@forzagravitygym.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Gimnasio",
+      "phone": "+52 81 4772 6112"
+    },
+    "arena_borregos_gimnasio_deportivo_itesm": {
+      "slug": "arena_borregos_gimnasio_deportivo_itesm",
+      "nombre": "Arena Borregos | Gimnasio Deportivo ITESM",
+      "stage": "Nuevo",
+      "email": "tecservices@servicios.tec.mx",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Gimnasio"
+    },
+    "tierra_libre": {
+      "slug": "tierra_libre",
+      "nombre": "Tierra Libre",
+      "stage": "Nuevo",
+      "email": "matt@pixelspread.com",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Cafetería",
+      "phone": "+52 81 2402 0572"
+    },
+    "chuga_sucursal_galerias_monterrey": {
+      "slug": "chuga_sucursal_galerias_monterrey",
+      "nombre": "Chuga | Sucursal Galerías Monterrey",
+      "stage": "Nuevo",
+      "email": "eat@chuga.mx",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Tienda de ensaladas"
+    },
+    "sport_city_nuevo_sur": {
+      "slug": "sport_city_nuevo_sur",
+      "nombre": "Sport City Nuevo Sur",
+      "stage": "Nuevo",
+      "email": "teescuchamos@marti.com.mx",
+      "email_source": "apify_preseeded",
+      "territory": "biogen",
+      "nicho": "Centro deportivo",
+      "phone": "+52 81 8346 0078"
+    }
+  },
+  "mail_campaigns_log": [
+    {
+      "timestamp": "2026-11-21T21:19:12-06:00",
+      "to_email": "info@outwork.mx",
+      "prospect_name": "Outwork Calisthenics Studio - Zona Tec",
+      "slug": "outwork_calisthenics_studio_zona_tec",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Gimnasio_Club.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_outwork_calisthenics_studio_zona_tec.eml"
+    },
+    {
+      "timestamp": "2026-11-21T21:19:12-06:00",
+      "to_email": "contacto@blumettestudio.com",
+      "prospect_name": "Blumette Studio",
+      "slug": "blumette_studio",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Gimnasio_Club.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_blumette_studio.eml"
+    },
+    {
+      "timestamp": "2026-11-21T21:19:12-06:00",
+      "to_email": "info@elplanuno.com",
+      "prospect_name": "Plan Uno",
+      "slug": "plan_uno",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Cocina_Aliada.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_plan_uno.eml"
+    },
+    {
+      "timestamp": "2026-11-21T21:18:58-06:00",
+      "to_email": "info@outwork.mx",
+      "prospect_name": "Outwork Calisthenics Studio - Zona Tec",
+      "slug": "outwork_calisthenics_studio_zona_tec",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Gimnasio_Club.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_outwork_calisthenics_studio_zona_tec.eml"
+    },
+    {
+      "timestamp": "2026-11-21T21:18:58-06:00",
+      "to_email": "contacto@blumettestudio.com",
+      "prospect_name": "Blumette Studio",
+      "slug": "blumette_studio",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Gimnasio_Club.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_blumette_studio.eml"
+    },
+    {
+      "timestamp": "2026-11-21T21:18:58-06:00",
+      "to_email": "info@elplanuno.com",
+      "prospect_name": "Plan Uno",
+      "slug": "plan_uno",
+      "territory": "biogen",
+      "ab_variant": "C_biogen_aliados_flujo",
+      "offer_track": "biogen",
+      "dry_run": true,
+      "status": "dry_run",
+      "attachments": [
+        "Propuesta_Captoora_Biogen_Cocina_Aliada.pdf"
+      ],
+      "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_plan_uno.eml"
+    }
+  ],
   "whatsapp_web_log": [],
   "apify_sweeps_log": [],
   "scheduler": {
     "enabled": true,
-    "last_tick": "2026-11-20T12:28:45-06:00",
+    "last_tick": "2026-11-21T21:20:40-06:00",
     "ran_slots_today": {
-      "18_00_tomorrow": "2026-11-19",
-      "08_30_ceo": "2026-11-20",
-      "10_00_followups": "2026-11-20",
-      "13_00_pull": "2026-11-19"
+      "18_00_tomorrow": "2026-11-21",
+      "08_30_ceo": "2026-11-21",
+      "10_00_followups": "2026-11-21",
+      "13_00_pull": "2026-11-21"
     },
     "slots": [
       {
@@ -401,6 +601,20 @@
           5
         ],
         "label": "08:30 CST · Briefing CEO & Agenda"
+      },
+      {
+        "id": "09_15_daily_email_batch",
+        "hour": 9,
+        "minute": 15,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "09:15 CST · Extractor Web + Lote Diario Zoho (25/día)"
       },
       {
         "id": "10_00_followups",
@@ -445,6 +659,20 @@
         "label": "18:00 CST · Recordatorio Agenda Mañana"
       },
       {
+        "id": "18_15_iterate_ab",
+        "hour": 18,
+        "minute": 15,
+        "weekdays": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "label": "18:15 CST · Iteración A/B & Aprendizaje Diario"
+      },
+      {
         "id": "fri_16_report",
         "hour": 16,
         "minute": 0,
@@ -455,10 +683,237 @@
       }
     ],
     "last_executed_slot": {
-      "slot_id": "10_00_followups",
-      "at": "2026-11-20T10:00:44-06:00",
+      "slot_id": "18_00_tomorrow",
+      "at": "2026-11-21T18:00:00-06:00",
       "manual": false,
-      "detail": "Detector 24–48h: 0 seguimientos CRM y 21 triggers en cola."
+      "detail": "Recordatorio Agenda Mañana listo (4 bloques)."
     }
+  },
+  "daily_automation": {
+    "settings": {
+      "auto_send_enabled": true,
+      "daily_email_cap": 25,
+      "territory_mix": {
+        "mty": 10,
+        "pv": 10,
+        "biogen": 5
+      }
+    },
+    "scanned_urls": [],
+    "ab_variants": {
+      "A_diagnostico_tecnica": {
+        "label": "Variante A · Hallazgo Google Maps + Técnica 1/2000s",
+        "sent": 0,
+        "replies": 0,
+        "meetings": 0,
+        "closes": 0,
+        "active": true
+      },
+      "B_roi_patrocinio_vitrina": {
+        "label": "Variante B · Vitrina 2027 / Retorno Rápido -35%",
+        "sent": 0,
+        "replies": 0,
+        "meetings": 0,
+        "closes": 0,
+        "active": true
+      },
+      "C_biogen_aliados_flujo": {
+        "label": "Variante C · Alianzas Captoora Biogen Flow",
+        "sent": 0,
+        "replies": 0,
+        "meetings": 0,
+        "closes": 0,
+        "active": true
+      }
+    },
+    "daily_email_batch": {
+      "batch_date": "2026-11-21",
+      "prepared_at": "2026-11-21T21:18:57-06:00",
+      "items": [
+        {
+          "slug": "plan_uno",
+          "nombre": "Plan Uno",
+          "email": "info@elplanuno.com",
+          "phone": "+52 81 8024 1183",
+          "territory": "biogen",
+          "nicho": "Nutricionista",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Cocina_Aliada.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Plan Uno: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Plan Uno, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Plan Uno,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Plan Uno, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "eml_ready",
+          "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_plan_uno.eml",
+          "dispatched_at": "2026-11-21T21:19:12-06:00"
+        },
+        {
+          "slug": "blumette_studio",
+          "nombre": "Blumette Studio",
+          "email": "contacto@blumettestudio.com",
+          "phone": "+52 81 3080 2222",
+          "territory": "biogen",
+          "nicho": "Centro de pilates",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Blumette Studio: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Blumette Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Blumette Studio,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Blumette Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "eml_ready",
+          "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_blumette_studio.eml",
+          "dispatched_at": "2026-11-21T21:19:12-06:00"
+        },
+        {
+          "slug": "outwork_calisthenics_studio_zona_tec",
+          "nombre": "Outwork Calisthenics Studio - Zona Tec",
+          "email": "info@outwork.mx",
+          "phone": "+52 81 2876 6838",
+          "territory": "biogen",
+          "nicho": "Centro deportivo",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Outwork Calisthenics Studio - Zona Tec: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Outwork Calisthenics Studio - Zona Tec, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Outwork Calisthenics Studio - Zona Tec,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Outwork Calisthenics Studio - Zona Tec, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "eml_ready",
+          "eml_path": "/Users/imac/Documents/antigravity/epic-bohr/assets/mockups/daily_queue/2026-11-21_outwork_calisthenics_studio_zona_tec.eml",
+          "dispatched_at": "2026-11-21T21:19:12-06:00"
+        },
+        {
+          "slug": "motus_fitness_studio",
+          "nombre": "Motus Fitness Studio",
+          "email": "hola@motusfitnessstudio.com",
+          "phone": "",
+          "territory": "biogen",
+          "nicho": "Gimnasio",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Motus Fitness Studio: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Motus Fitness Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Motus Fitness Studio,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Motus Fitness Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "zen_soul_studio",
+          "nombre": "Zen Soul Studio",
+          "email": "hola@zensoulstudio.com",
+          "phone": "",
+          "territory": "biogen",
+          "nicho": "Centro de pilates",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Zen Soul Studio: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Zen Soul Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Zen Soul Studio,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Zen Soul Studio, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "forza_gravity_gym",
+          "nombre": "Forza Gravity Gym",
+          "email": "contacto@forzagravitygym.com",
+          "phone": "+52 81 4772 6112",
+          "territory": "biogen",
+          "nicho": "Gimnasio",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Forza Gravity Gym: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Forza Gravity Gym, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Forza Gravity Gym,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Forza Gravity Gym, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "arena_borregos_gimnasio_deportivo_itesm",
+          "nombre": "Arena Borregos | Gimnasio Deportivo ITESM",
+          "email": "tecservices@servicios.tec.mx",
+          "phone": "",
+          "territory": "biogen",
+          "nicho": "Gimnasio",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Arena Borregos | Gimnasio Deportivo ITESM: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Arena Borregos | Gimnasio Deportivo ITESM, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Arena Borregos | Gimnasio Deportivo ITESM,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Arena Borregos | Gimnasio Deportivo ITESM, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "tierra_libre",
+          "nombre": "Tierra Libre",
+          "email": "matt@pixelspread.com",
+          "phone": "+52 81 2402 0572",
+          "territory": "biogen",
+          "nicho": "Cafetería",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Cocina_Aliada.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Tierra Libre: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Tierra Libre, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Tierra Libre,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Tierra Libre, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "chuga_sucursal_galerias_monterrey",
+          "nombre": "Chuga | Sucursal Galerías Monterrey",
+          "email": "eat@chuga.mx",
+          "phone": "",
+          "territory": "biogen",
+          "nicho": "Tienda de ensaladas",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Cocina_Aliada.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Chuga | Sucursal Galerías Monterrey: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Chuga | Sucursal Galerías Monterrey, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Chuga | Sucursal Galerías Monterrey,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Chuga | Sucursal Galerías Monterrey, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        },
+        {
+          "slug": "sport_city_nuevo_sur",
+          "nombre": "Sport City Nuevo Sur",
+          "email": "teescuchamos@marti.com.mx",
+          "phone": "+52 81 8346 0078",
+          "territory": "biogen",
+          "nicho": "Centro deportivo",
+          "offer_track": "biogen",
+          "pdf_rel_path": "docs/Propuesta_Captoora_Biogen_Gimnasio_Club.pdf",
+          "demo_rel_path": "",
+          "ab_variant": "C_biogen_aliados_flujo",
+          "subject": "Sport City Nuevo Sur: Alianza Captoora Biogen Flow · Contenido Editorial Semanal",
+          "plain_text": "Hola equipo de Sport City Nuevo Sur, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.",
+          "html_body": "\n    <div style=\"background:#08090c;color:#f5f4ef;font-family:Arial,sans-serif;padding:28px;border:1px solid #c5a880;border-radius:12px;\">\n      <p style=\"color:#c5a880;font-size:11px;letter-spacing:2px;margin:0 0 8px;\">CAPTOORA STUDIO · PRODUCCIÓN EDITORIAL 1/2000s</p>\n      <h2 style=\"margin:0 0 12px;color:#f5f4ef;\">Hola equipo de Sport City Nuevo Sur,</h2>\n      <p style=\"line-height:1.6;color:#d2d5de;\">Hola equipo de Sport City Nuevo Sur, soy Jesús Gutiérrez de Captoora Studio (https://captoora.studio/sports). Abrimos el programa piloto Captoora Biogen Flow con cobertura fotográfica de iluminación escultural y clips verticales 9:16 listos en 48–72h para proyectar el nivel real de su marca sin adelantos rígidos. Adjunto la propuesta en PDF; si les hace sentido revisarlo 15 minutos, pueden apartar hora en https://calendly.com/captoora o responder este correo.</p>\n      <p style=\"margin:18px 0;\">\n        <a href=\"https://captoora.studio/sports\" style=\"background:#c5a880;color:#08090c;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:bold;\">Ver Portafolio</a>\n        &nbsp;&nbsp;\n        <a href=\"https://calendly.com/captoora\" style=\"border:1px solid #c5a880;color:#c5a880;padding:10px 18px;border-radius:8px;text-decoration:none;\">Agendar 15 min</a>\n      </p>\n      <p style=\"font-size:12px;color:#888d9e;\">Jesús Gutiérrez · Captoora Studio · WhatsApp +52 81 4005 0088 · chuy@captoora.studio</p>\n    </div>\n    ",
+          "status": "queued",
+          "eml_path": null,
+          "dispatched_at": null
+        }
+      ]
+    },
+    "followups_due_cache": [],
+    "negotiation_logs": [],
+    "last_iteration_report": null
   }
 }

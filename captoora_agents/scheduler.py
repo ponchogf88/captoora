@@ -10,11 +10,18 @@ from datetime import datetime
 from typing import Any
 
 from .config import FILES, MONTERREY_TZ, append_agent_event, now_iso, write_json
+from .email_sender import get_smtp_status
 from .growth_suite import (
     compute_accountant_snapshot,
     compute_weekly_report,
+    dispatch_daily_email_batch,
+    dispatch_due_followups,
+    enrich_emails_from_websites,
+    evaluate_due_followups,
     get_or_init_growth_state,
+    prepare_daily_email_batch,
     refresh_ceo_weekly_plan,
+    run_daily_iteration_cycle,
     trigger_tomorrow_reminder,
 )
 
@@ -29,7 +36,7 @@ def execute_scheduler_slot(
     manual: bool = False,
     now_dt: datetime | None = None,
 ) -> dict[str, Any]:
-    """Run one scheduled awakening slot safely without performing unsupervised external sends."""
+    """Run one scheduled awakening slot safely with daily batching, followups, and A/B learning."""
     dt = now_dt or _current_monterrey_dt()
     state = get_or_init_growth_state()
     sched = state.setdefault("scheduler", {})
@@ -39,12 +46,25 @@ def execute_scheduler_slot(
     if slot_id == "08_30_ceo":
         plan = refresh_ceo_weekly_plan()
         result_detail = f"CEO Briefing despertado: {plan.get('week_focus', '')[:120]}"
+    elif slot_id == "09_15_daily_email_batch":
+        enrich_emails_from_websites(limit=10)
+        batch = prepare_daily_email_batch()
+        auto_send = bool(((state.get("daily_automation") or {}).get("settings") or {}).get("auto_send_enabled", True))
+        smtp_ok = get_smtp_status()["configured"]
+        disp = dispatch_daily_email_batch(dry_run=(not auto_send or not smtp_ok))
+        result_detail = (
+            f"Lote diario ({len(batch.get('items', []))} prospectos): "
+            f"{disp['sent_count']} enviados SMTP, {disp['eml_exported_count']} .eml listos."
+        )
     elif slot_id == "10_00_followups":
-        rep = compute_weekly_report()
-        due = rep["funnel_metrics"]["followups_24_48h_due"]
-        pending = rep["funnel_metrics"]["pending_trigger"]
-        result_detail = f"Detector 24–48h: {due} seguimientos CRM y {pending} triggers en cola."
-        append_agent_event("ventas_outreach", "Despertó Seguimientos 24–48h", result_detail, zone="desk_ventas", source="scheduler")
+        auto_send = bool(((state.get("daily_automation") or {}).get("settings") or {}).get("auto_send_enabled", True))
+        smtp_ok = get_smtp_status()["configured"]
+        eval_res = evaluate_due_followups(now_dt=dt)
+        disp = dispatch_due_followups(dry_run=(not auto_send or not smtp_ok), now_dt=dt)
+        result_detail = (
+            f"Seguimientos 48h/72h/Día7: {eval_res['due_count']} vencidos · "
+            f"{disp['email_sent']} correos + {disp['whatsapp_ready']} WA listos."
+        )
     elif slot_id == "13_00_pull":
         rep = compute_weekly_report()
         result_detail = f"Corte Pull & SEO: {rep['seo_status']['note'][:120]}"
@@ -52,6 +72,9 @@ def execute_scheduler_slot(
     elif slot_id == "18_00_tomorrow":
         rem = trigger_tomorrow_reminder(send_email_to="", dry_run=True)
         result_detail = f"Recordatorio Agenda Mañana listo ({rem['blocks_count']} bloques)."
+    elif slot_id == "18_15_iterate_ab":
+        rep = run_daily_iteration_cycle()
+        result_detail = f"Iteración A/B lista · Ganadora: {rep['winner_variant_id']} · {rep['recommendations'][0][:90]}"
     elif slot_id == "fri_16_report":
         snap = compute_accountant_snapshot()
         result_detail = f"Reporte Contador & Ventas: {snap['summary']['ads_gate_status']}"

@@ -1048,6 +1048,116 @@ def test_phase4_growth_geo_accountant_and_scheduler(isolated_workspace: Path, mo
     assert client.get("/llms.txt").status_code == 200
 
 
+def test_phase5_daily_emails_followups_negotiation_and_ab_iteration(
+    isolated_workspace: Path,
+    monkeypatch: pytest.MonkeyPatch,
+):
+    """Verify daily email batching (MTY/PV/Biogen), .eml dry-run, 48h/72h followups, negotiation closer -> PFAE 612, and A/B iteration."""
+    from datetime import timedelta
+    from captoora_agents import email_sender, growth_suite, scheduler
+
+    # Copy PV & Biogen read-only datasets into isolated tmp workspace if present so collector balances all 3 fronts
+    repo_root = Path(__file__).resolve().parent.parent
+    real_data = repo_root / "dashboard" / "data"
+    bio_src = real_data / "alianzas_biogen_mty.json"
+    if bio_src.exists():
+        shutil.copy2(bio_src, isolated_workspace / "alianzas_biogen_mty.json")
+
+    client = TestClient(server.app)
+
+    # 1. Configure daily rules + prepare batch (imports preseeded Biogen emails automatically)
+    cfg_res = client.post(
+        "/api/growth/automation-settings",
+        json={"auto_send_enabled": True, "daily_email_cap": 15, "territory_mix": {"mty": 5, "pv": 5, "biogen": 5}},
+    )
+    assert cfg_res.status_code == 200
+    assert cfg_res.json()["settings"]["daily_email_cap"] == 15
+
+    prep = client.post("/api/growth/daily/prepare-batch", json={"scan_websites_first": False})
+    assert prep.status_code == 200
+    batch_items = prep.json()["batch"]["items"]
+    assert 1 <= len(batch_items) <= 15
+    for it in batch_items:
+        assert config.validate_client_copy(f"{it['subject']} {it['plain_text']}") == []
+
+    # 2. Dispatch dry-run / missing SMTP_PASS -> exports valid .eml drafts in isolated tmp workspace
+    disp_dry = client.post("/api/growth/daily/dispatch-batch", json={"dry_run": True, "limit": 3})
+    assert disp_dry.status_code == 200
+    assert disp_dry.json()["eml_exported_count"] == 3
+    eml_files = list((isolated_workspace / "daily_queue").glob("*.eml"))
+    assert len(eml_files) == 3
+
+    # 3. Simulate live Zoho SMTP dispatch -> advances CRM to Contactado + schedules +48h followup + increments A/B sent
+    monkeypatch.setattr(
+        growth_suite,
+        "get_smtp_status",
+        lambda: {"configured": True, "sender": "chuy@captoora.studio"},
+    )
+    monkeypatch.setattr(
+        growth_suite,
+        "send_email_via_zoho",
+        lambda **kw: {"sent": True, "mode": "zoho_smtp", "to": kw["to_email"], "attachments": []},
+    )
+    disp_live = client.post("/api/growth/daily/dispatch-batch", json={"dry_run": False, "limit": 4})
+    assert disp_live.status_code == 200
+    assert disp_live.json()["sent_count"] == 4
+
+    # 4. Evaluate overdue 48h followups using future timestamp and verify cadence + WhatsApp advance
+    future_49h = datetime.now(config.MONTERREY_TZ) + timedelta(hours=49)
+    due = growth_suite.evaluate_due_followups(now_dt=future_49h)
+    assert due["due_count"] == 4
+    assert all(item["next_stage"] == "Toque_48h" for item in due["items"])
+    disp_fu = growth_suite.dispatch_due_followups(channel="email", dry_run=False, limit=4, now_dt=future_49h)
+    assert disp_fu["email_sent"] == 4
+
+    # WhatsApp 1-click cadence progression (Contactado -> Toque_48h -> Toque_72h)
+    wa1 = growth_suite.mark_whatsapp_web_sent(slug="clinic_wa_demo", nombre="Clínica WA Demo", phone="528111112222")
+    assert wa1["logged"]["slug"] == "clinic_wa_demo"
+    wa2 = growth_suite.mark_whatsapp_web_sent(slug="clinic_wa_demo", nombre="Clínica WA Demo", phone="528111112222")
+    assert growth_suite.get_or_init_growth_state()["crm_records"]["clinic_wa_demo"]["stage"] == "Toque_48h"
+
+    # 5. Negotiation closer + objection playbook + real sale unlock in PFAE 612 Accountant
+    target_slug = batch_items[0]["slug"]
+    obj_res = client.post(
+        "/api/growth/negotiation/reply-and-close",
+        json={"slug": target_slug, "outcome": "objecion", "objection_key": "precio"},
+    )
+    assert obj_res.status_code == 200
+    assert "50%" in obj_res.json()["suggested_reply"]
+    assert config.validate_client_copy(obj_res.json()["suggested_reply"]) == []
+
+    close_res = client.post(
+        "/api/growth/negotiation/reply-and-close",
+        json={
+            "slug": target_slug,
+            "outcome": "cerrado_anticipo",
+            "objection_key": "demo_y_cierre",
+            "collected_mxn": 3900.0,
+            "client_is_persona_moral": True,
+        },
+    )
+    assert close_res.status_code == 200
+    assert close_res.json()["crm_record"]["stage"] == "Anticipo_50"
+    acct_summary = close_res.json()["accountant_sale"]["accountant"]["summary"]
+    assert acct_summary["paid_sales_count"] == 1
+    assert acct_summary["ads_unlocked"] is True
+
+    # 6. Nightly A/B Iteration loop + Scheduler 09:15 / 18:15 slots + UI container verification
+    iter_res = client.post("/api/growth/iteration/run")
+    assert iter_res.status_code == 200
+    report = iter_res.json()["report"]
+    assert report["winner_variant_id"] in ("A_diagnostico_tecnica", "B_roi_patrocinio_vitrina", "C_biogen_aliados_flujo")
+    assert any(r["closes"] >= 1 for r in report["metrics_by_variant"])
+
+    slot_res = client.post("/api/scheduler/run-slot", json={"slot_id": "18_15_iterate_ab"})
+    assert slot_res.status_code == 200
+    assert "Iteración A/B" in slot_res.json()["executed"]["detail"]
+
+    dash_html = (repo_root / "dashboard" / "index.html").read_text(encoding="utf-8")
+    assert "growthDailyPipelinePanel" in dash_html
+
+
+
 
 
 

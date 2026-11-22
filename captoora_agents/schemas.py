@@ -196,6 +196,42 @@ class InboundWebhookRequest(BaseModel):
     payload: dict[str, Any] = Field(default_factory=dict)
 
 
+class DailyBatchPrepareRequest(BaseModel):
+    max_emails: int | None = Field(default=None, ge=1, le=50)
+    territory_mix: dict[str, int] | None = None
+    scan_websites_first: bool = False
+
+
+class DailyBatchDispatchRequest(BaseModel):
+    dry_run: bool = False
+    limit: int = Field(default=25, ge=1, le=50)
+
+
+class FollowupDispatchRequest(BaseModel):
+    channel: Literal["all", "email", "whatsapp_web"] = "all"
+    dry_run: bool = False
+    limit: int = Field(default=20, ge=1, le=50)
+
+
+class NegotiationReplyRequest(BaseModel):
+    slug: str = Field(min_length=2, max_length=90)
+    nombre: str = ""
+    outcome: Literal["positivo", "objecion", "pidio_cotizacion", "agendo_calendly", "cerrado_anticipo", "no_interesado"] = "objecion"
+    objection_key: Literal["precio", "despues_navidad", "ya_tengo_fotografo", "persona_moral_cfdi", "solo_digital_primero", "demo_y_cierre"] = "demo_y_cierre"
+    offer_track: Literal["small_business", "navidad_led", "biogen"] = "small_business"
+    package_ref: str = "Suite Total / Impulso Maps -35%"
+    collected_mxn: float = Field(default=0.0, ge=0.0)
+    direct_cost_mxn: float = Field(default=0.0, ge=0.0)
+    client_is_persona_moral: bool = False
+    notes: str = ""
+
+
+class AutomationSettingsRequest(BaseModel):
+    auto_send_enabled: bool | None = None
+    daily_email_cap: int | None = Field(default=None, ge=1, le=50)
+    territory_mix: dict[str, int] | None = None
+
+
 class AgentMissionOutput(BaseModel):
     """Structured final report returned by Google Antigravity agents."""
 

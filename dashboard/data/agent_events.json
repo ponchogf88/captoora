@@ -3,6 +3,86 @@
   "active_agent": "ventas_outreach",
   "events": [
     {
+      "id": "EVT-057-7552",
+      "timestamp": "2026-11-21T21:19:12-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Despachó Lote Diario Zoho",
+      "detail": "Enviados SMTP: 0 · Borradores .eml generados: 3 (tope restante: 25/25).",
+      "source": "daily_automation"
+    },
+    {
+      "id": "EVT-056-7538",
+      "timestamp": "2026-11-21T21:18:58-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Despachó Lote Diario Zoho",
+      "detail": "Enviados SMTP: 0 · Borradores .eml generados: 3 (tope restante: 25/25).",
+      "source": "daily_automation"
+    },
+    {
+      "id": "EVT-055-7537",
+      "timestamp": "2026-11-21T21:18:57-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Preparó Lote Diario de Correos",
+      "detail": "10 prospectos listos (MTY/PV/Biogen) · SMTP Modo .eml / Dry-Run.",
+      "source": "daily_automation"
+    },
+    {
+      "id": "EVT-054-5600",
+      "timestamp": "2026-11-21T18:00:00-06:00",
+      "agent_id": "chief_of_staff",
+      "target_agent": null,
+      "zone": "mesa_directiva",
+      "action": "Recordatorio Agenda Mañana",
+      "detail": "4 bloques ordenados.",
+      "source": "human_ui"
+    },
+    {
+      "id": "EVT-053-7659",
+      "timestamp": "2026-11-21T13:00:59-06:00",
+      "agent_id": "marky_marketing",
+      "target_agent": null,
+      "zone": "estudio_marky",
+      "action": "Corte Pull & SEO 13:00",
+      "detail": "Corte Pull & SEO: Cimientos SEO + AEO listos localmente. Sube sitemap.xml/robots.txt/llms.txt a captoora.studio y verifica Search Console ",
+      "source": "scheduler"
+    },
+    {
+      "id": "EVT-052-6858",
+      "timestamp": "2026-11-21T10:00:58-06:00",
+      "agent_id": "ventas_outreach",
+      "target_agent": null,
+      "zone": "desk_ventas",
+      "action": "Despertó Seguimientos 24–48h",
+      "detail": "Detector 24–48h: 0 seguimientos CRM y 36 triggers en cola.",
+      "source": "scheduler"
+    },
+    {
+      "id": "EVT-051-1458",
+      "timestamp": "2026-11-21T08:30:58-06:00",
+      "agent_id": "chief_of_staff",
+      "target_agent": null,
+      "zone": "mesa_directiva",
+      "action": "Actualizó Plan CEO",
+      "detail": "Fase Despegue Cero Deuda: convertir las 4 aprobaciones listas + 68 fichas Street View con mensajes por técnica/velocidad hasta cobrar el 1er anticipo 50% y libe",
+      "source": "human_ui"
+    },
+    {
+      "id": "EVT-050-9255",
+      "timestamp": "2026-11-20T18:00:55-06:00",
+      "agent_id": "chief_of_staff",
+      "target_agent": null,
+      "zone": "mesa_directiva",
+      "action": "Recordatorio Agenda Mañana",
+      "detail": "4 bloques ordenados.",
+      "source": "human_ui"
+    },
+    {
       "id": "EVT-049-444",
       "timestamp": "2026-11-20T10:00:44-06:00",
       "agent_id": "ventas_outreach",

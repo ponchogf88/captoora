@@ -25,19 +25,27 @@ from .growth_suite import (
     audit_contract_financial_and_tax,
     compute_accountant_snapshot,
     compute_weekly_report,
+    dispatch_daily_email_batch,
+    dispatch_due_followups,
     enrich_emails_from_websites,
+    evaluate_due_followups,
     generate_20_clips_plan,
     generate_calendly_client_link,
+    get_daily_automation_overview,
     get_or_init_growth_state,
     get_seo_aeo_status,
     get_whatsapp_web_supervisor_queue,
+    log_prospect_reply_and_close,
     mark_whatsapp_web_sent,
+    prepare_daily_email_batch,
     record_accountant_expense,
     record_accountant_sale,
     refresh_ceo_weekly_plan,
     run_apify_zone_sweep,
+    run_daily_iteration_cycle,
     send_growth_mail_campaign,
     trigger_tomorrow_reminder,
+    update_automation_settings,
     update_calendly_base_url,
     update_fiscal_config,
     upsert_crm_kyc,
@@ -73,6 +81,7 @@ from .schemas import (
     AgentRunRequest,
     ApifySweepRequest,
     ApprovalDecisionRequest,
+    AutomationSettingsRequest,
     CalendlyBaseRequest,
     CalendlyLinkRequest,
     CeoPlanRequest,
@@ -81,8 +90,11 @@ from .schemas import (
     ContractAuditRequest,
     CreateTaskRequest,
     CrmKycUpsertRequest,
+    DailyBatchDispatchRequest,
+    DailyBatchPrepareRequest,
     EmailSendTestRequest,
     FiscalConfigRequest,
+    FollowupDispatchRequest,
     GeoRouteOptimizeRequest,
     GeoRouteSaveRequest,
     GmapsCaptureRequest,
@@ -91,6 +103,7 @@ from .schemas import (
     LupeEnqueuePostRequest,
     MarketingPlanGenerateRequest,
     MuseIngestRequest,
+    NegotiationReplyRequest,
     SchedulerRunSlotRequest,
     SchedulerToggleRequest,
     SmbGenerateAuditRequest,
@@ -688,6 +701,7 @@ async def post_geo_route_save(req: GeoRouteSaveRequest):
 async def get_growth_suite_state():
     return {
         "growth_suite": get_or_init_growth_state(),
+        "daily_automation": get_daily_automation_overview(),
         "accountant": compute_accountant_snapshot(),
         "weekly_report": compute_weekly_report(),
         "seo_status": get_seo_aeo_status(),
@@ -833,6 +847,79 @@ async def post_growth_apify_sweep(req: ApifySweepRequest):
     except ValueError as exc:
         raise HTTPException(status_code=400, detail=str(exc)) from exc
     return {"sweep": rec, "growth_suite": get_or_init_growth_state(), "workspace": _assemble_workspace()}
+
+
+# --- Daily Email Batch, Follow-up Cadence, Negotiation Closer & A/B Iteration ---
+@app.get("/api/growth/daily/overview")
+async def get_growth_daily_overview():
+    return get_daily_automation_overview()
+
+
+@app.post("/api/growth/daily/prepare-batch")
+async def post_growth_daily_prepare_batch(req: DailyBatchPrepareRequest | None = None):
+    payload = req or DailyBatchPrepareRequest()
+    batch = await asyncio.to_thread(
+        prepare_daily_email_batch,
+        max_emails=payload.max_emails,
+        territory_mix=payload.territory_mix,
+        scan_websites_first=payload.scan_websites_first,
+    )
+    return {"batch": batch, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
+
+
+@app.post("/api/growth/daily/dispatch-batch")
+async def post_growth_daily_dispatch_batch(req: DailyBatchDispatchRequest | None = None):
+    payload = req or DailyBatchDispatchRequest()
+    res = await asyncio.to_thread(dispatch_daily_email_batch, dry_run=payload.dry_run, limit=payload.limit)
+    return {**res, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
+
+
+@app.get("/api/growth/followups/due")
+async def get_growth_followups_due():
+    return evaluate_due_followups()
+
+
+@app.post("/api/growth/followups/dispatch")
+async def post_growth_followups_dispatch(req: FollowupDispatchRequest | None = None):
+    payload = req or FollowupDispatchRequest()
+    res = await asyncio.to_thread(dispatch_due_followups, channel=payload.channel, dry_run=payload.dry_run, limit=payload.limit)
+    return {**res, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
+
+
+@app.post("/api/growth/negotiation/reply-and-close")
+async def post_growth_negotiation_reply(req: NegotiationReplyRequest):
+    try:
+        res = log_prospect_reply_and_close(
+            slug=req.slug,
+            nombre=req.nombre,
+            outcome=req.outcome,
+            objection_key=req.objection_key,
+            offer_track=req.offer_track,
+            package_ref=req.package_ref,
+            collected_mxn=req.collected_mxn,
+            direct_cost_mxn=req.direct_cost_mxn,
+            client_is_persona_moral=req.client_is_persona_moral,
+            notes=req.notes,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+    return {**res, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
+
+
+@app.post("/api/growth/iteration/run")
+async def post_growth_iteration_run():
+    report = run_daily_iteration_cycle()
+    return {"report": report, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
+
+
+@app.post("/api/growth/automation-settings")
+async def post_growth_automation_settings(req: AutomationSettingsRequest):
+    settings = update_automation_settings(
+        auto_send_enabled=req.auto_send_enabled,
+        daily_email_cap=req.daily_email_cap,
+        territory_mix=req.territory_mix,
+    )
+    return {"settings": settings, "daily_automation": get_daily_automation_overview(), "workspace": _assemble_workspace()}
 
 
 # --- WhatsApp Web Safe 1-Click Supervisor ---

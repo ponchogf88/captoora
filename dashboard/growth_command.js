@@ -602,6 +602,7 @@
   function renderExecutiveGrowthTab() {
     const g = cmdState.growth;
     if (!g) return;
+    renderDailyPipelinePanel(g.daily_automation);
     renderAccountantPanel(g.accountant);
     renderWhatsAppSupervisorPanel(g.whatsapp_web_supervisor);
     renderScheduler247Panel(g.scheduler);
@@ -1262,6 +1263,275 @@
       toast(`Barrido Apify planificado: ${res.sweep.queries.length} consultas.`);
     } catch (err) {
       toast('Error Apify Sweep: ' + err.message);
+    }
+  };
+
+  function renderDailyPipelinePanel(da) {
+    const box = document.getElementById('growthDailyPipelinePanel');
+    if (!box) return;
+    const data = da || {};
+    const settings = data.settings || {};
+    const mix = settings.territory_mix || { mty: 10, pv: 10, biogen: 5 };
+    const batch = data.daily_email_batch || {};
+    const batchItems = batch.items || [];
+    const due = (data.due_followups && data.due_followups.items) || [];
+    const variants = data.ab_variants || {};
+    const iter = data.last_iteration_report || {};
+    const logs = data.negotiation_logs || [];
+    const playbooks = data.objection_playbooks || {};
+    cmdState._copyMap = cmdState._copyMap || {};
+
+    const smtpBadge = data.smtp_configured
+      ? 'border-color:rgba(110,148,119,0.5);background:rgba(110,148,119,0.12);color:#c2dec8;'
+      : 'border-color:rgba(197,159,107,0.45);background:rgba(197,159,107,0.12);color:#dfcbb5;';
+
+    batchItems.forEach((it, idx) => {
+      cmdState._copyMap[`batch_${idx}`] = `${it.subject || ''}\n\n${it.plain_text || ''}`;
+    });
+    due.forEach((f, idx) => {
+      cmdState._copyMap[`due_${idx}`] = f.message || '';
+    });
+
+    box.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:14px;">
+        <div>
+          <div class="panel-inner-title">0 · Piloto Diario Automático · Correos (25/día), Seguimiento 48h/72h, Cierre e Iteración</div>
+          <div class="panel-inner-sub" style="margin-bottom:0;">Correos listos con email: <strong>${data.crm_with_email || 0}</strong> (${data.uncontacted_with_email || 0} sin primer envío) · Webs escaneadas: ${data.scanned_websites_count || 0}</div>
+        </div>
+        <span style="padding:6px 12px;border-radius:99px;font-size:0.72rem;border:1px solid;${smtpBadge}">
+          ${data.smtp_configured ? 'Zoho SMTP Activo (chuy@captoora.studio)' : 'Falta SMTP_PASS en .env → Exporta .eml + 1-Clic'}
+        </span>
+      </div>
+
+      <div class="mvp-grid-layout" style="margin-bottom:14px;">
+        <!-- 1. LOTE DIARIO ZOHO -->
+        <div style="padding:14px;border-radius:12px;background:rgba(0,0,0,0.28);border:1px solid var(--glass-border);">
+          <div style="font-size:0.84rem;color:var(--champagne);margin-bottom:8px;">1 · Lote Diario de Correos (Tope Seguro: ${settings.daily_email_cap || 25}/día)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px;">
+            <label style="font-size:0.68rem;color:var(--slate-muted);">Tope/Día <input type="number" id="daCapInput" class="glass-select-input" value="${settings.daily_email_cap || 25}" min="1" max="50"></label>
+            <label style="font-size:0.68rem;color:var(--slate-muted);">MTY <input type="number" id="daMixMty" class="glass-select-input" value="${mix.mty ?? 10}" min="0" max="50"></label>
+            <label style="font-size:0.68rem;color:var(--slate-muted);">Vallarta <input type="number" id="daMixPv" class="glass-select-input" value="${mix.pv ?? 10}" min="0" max="50"></label>
+            <label style="font-size:0.68rem;color:var(--slate-muted);">Biogen <input type="number" id="daMixBio" class="glass-select-input" value="${mix.biogen ?? 5}" min="0" max="50"></label>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
+            <label style="font-size:0.72rem;color:var(--platinum);"><input type="checkbox" id="daAutoSendChk" ${settings.auto_send_enabled !== false ? 'checked' : ''}> Auto-enviar a las 09:15 CST</label>
+            <button type="button" class="week-btn" style="font-size:0.7rem;" onclick="window.saveDailyAutomationSettingsNow()">Guardar Regla</button>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+            <button type="button" class="week-btn" onclick="window.prepareDailyBatchNow(true)">Escanear Webs + Armar Lote</button>
+            <button type="button" class="btn-approve-trigger" onclick="window.dispatchDailyBatchNow()">${data.smtp_configured ? 'Enviar Lote Hoy por Zoho' : 'Generar Borradores .eml Hoy'}</button>
+          </div>
+          <div style="max-height:175px;overflow:auto;display:flex;flex-direction:column;gap:6px;">
+            ${batchItems.length ? batchItems.map((it, idx) => `
+              <div style="padding:8px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border-subtle);font-size:0.71rem;display:flex;justify-content:space-between;gap:8px;align-items:center;">
+                <div style="min-width:0;">
+                  <div style="color:var(--bone-white);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${esc(it.nombre)} <span style="color:var(--champagne);">[${esc(String(it.territory || '').toUpperCase())}]</span></div>
+                  <div style="color:var(--slate-muted);font-size:0.67rem;">${esc(it.email)} · ${esc(it.ab_variant)} · <strong style="color:${it.status === 'sent_zoho' ? '#c2dec8' : '#dfcbb5'};">${esc(it.status)}</strong></div>
+                </div>
+                <button type="button" class="week-btn" style="padding:3px 7px;font-size:0.66rem;" onclick="window.copyDailyDraftByKey('batch_${idx}')">Copiar</button>
+              </div>
+            `).join('') : '<div style="font-size:0.73rem;color:var(--slate-muted);">Presiona "Escanear Webs + Armar Lote" para cargar los prospectos con correo listo hoy.</div>'}
+          </div>
+        </div>
+
+        <!-- 2. SEGUIMIENTOS AUTOMATICOS 48H / 72H / DIA 7 -->
+        <div style="padding:14px;border-radius:12px;background:rgba(0,0,0,0.28);border:1px solid var(--glass-border);">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+            <div style="font-size:0.84rem;color:var(--champagne);">2 · Seguimientos Vencidos (${due.length})</div>
+            <button type="button" class="week-btn" style="font-size:0.7rem;" onclick="window.dispatchDueFollowupsNow()">Procesar Vencidos Hoy</button>
+          </div>
+          <div style="max-height:260px;overflow:auto;display:flex;flex-direction:column;gap:8px;">
+            ${due.length ? due.slice(0, 10).map((f, idx) => `
+              <div style="padding:9px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid var(--glass-border-subtle);font-size:0.72rem;">
+                <div style="display:flex;justify-content:space-between;gap:6px;margin-bottom:4px;">
+                  <strong style="color:var(--bone-white);">${esc(f.nombre)}</strong>
+                  <span style="color:var(--champagne);">${esc(f.current_stage)} &rarr; ${esc(f.next_stage)}</span>
+                </div>
+                <div style="color:var(--platinum);margin-bottom:6px;">${esc(f.message)}</div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                  ${f.web_whatsapp_url ? `<a href="${esc(f.web_whatsapp_url)}" target="_blank" rel="noopener" class="btn-approve-trigger" style="text-decoration:none;font-size:0.68rem;padding:4px 8px;">WA Web 1-Clic &rarr;</a><button type="button" class="week-btn" style="font-size:0.68rem;padding:4px 8px;" onclick="window.confirmWaWebSent('${esc(f.slug)}','${esc(f.nombre)}','${esc(f.phone)}')">Marcar WA Enviado</button>` : ''}
+                  <button type="button" class="week-btn" style="font-size:0.68rem;padding:4px 8px;" onclick="window.copyDailyDraftByKey('due_${idx}')">Copiar Mensaje</button>
+                </div>
+              </div>
+            `).join('') : '<div style="font-size:0.73rem;color:var(--slate-muted);">Sin seguimientos vencidos en este momento. Cada envío por Zoho o WhatsApp programa su toque a 48h, 72h y Día 7.</div>'}
+          </div>
+        </div>
+      </div>
+
+      <div class="mvp-grid-layout">
+        <!-- 3. CONCRETAR NEGOCIACIONES (OBJECIONES + CIERRE 50/50 + CAJA 612) -->
+        <div style="padding:14px;border-radius:12px;background:rgba(0,0,0,0.28);border:1px solid var(--glass-border);">
+          <div style="font-size:0.84rem;color:var(--champagne);margin-bottom:8px;">3 · Mesa de Negociación &amp; Cierre 50/50 (PFAE 612)</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px;">
+            <input type="text" id="negNombreInput" class="glass-select-input" placeholder="Negocio / Prospecto que respondió">
+            <select id="negOutcomeSelect" class="glass-select-input">
+              <option value="objecion">Respondió con Objeción</option>
+              <option value="pidio_cotizacion">Pidió Cotización / Datos</option>
+              <option value="agendo_calendly">Agendó en Calendly</option>
+              <option value="positivo">Interés Positivo</option>
+              <option value="cerrado_anticipo">Cerrado · Cobró Anticipo 50%</option>
+              <option value="no_interesado">Descartado</option>
+            </select>
+            <select id="negObjectionSelect" class="glass-select-input">
+              ${Object.entries(playbooks).map(([k, lbl]) => `<option value="${esc(k)}">${esc(lbl)}</option>`).join('')}
+            </select>
+            <input type="number" id="negCollectedInput" class="glass-select-input" placeholder="Cobro MXN (solo si ya pagó 50%)" min="0" step="10" value="0">
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <label style="font-size:0.71rem;color:var(--platinum);"><input type="checkbox" id="negPmChk"> Persona Moral (Retenciones 612)</label>
+            <button type="button" class="btn-approve-trigger" onclick="window.submitNegotiationReplyNow()">Generar Respuesta / Registrar Cierre</button>
+          </div>
+          <div id="negResultBox" style="font-size:0.72rem;color:var(--platinum);">
+            ${logs[0] ? `<div style="padding:8px;border-radius:8px;background:rgba(197,168,128,0.08);border:1px solid rgba(197,168,128,0.3);"><strong>${esc(logs[0].nombre)} (${esc(logs[0].new_stage)}):</strong> ${esc(logs[0].suggested_reply)}</div>` : ''}
+          </div>
+        </div>
+
+        <!-- 4. ITERADOR DIARIO A/B -->
+        <div style="padding:14px;border-radius:12px;background:rgba(0,0,0,0.28);border:1px solid var(--glass-border);">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px;">
+            <div style="font-size:0.84rem;color:var(--champagne);">4 · Iteración Diaria A/B (18:15 CST)</div>
+            <button type="button" class="week-btn" style="font-size:0.7rem;" onclick="window.runIterationCycleNow()">Iterar &amp; Optimizar Ahora</button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:10px;">
+            ${Object.entries(variants).map(([vid, v]) => {
+              const sent = Number(v.sent || 0);
+              const rep = Number(v.replies || 0);
+              const rate = sent ? ((rep / sent) * 100).toFixed(1) : '0.0';
+              const isWin = iter.winner_variant_id === vid;
+              return `
+                <div style="padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid ${isWin ? 'rgba(197,168,128,0.55)' : 'var(--glass-border-subtle)'};font-size:0.71rem;display:flex;justify-content:space-between;gap:8px;">
+                  <span style="color:var(--bone-white);">${isWin ? '★ ' : ''}${esc(v.label)} ${v.active === false ? '(Pausada)' : ''}</span>
+                  <span style="font-family:var(--font-mono);color:var(--champagne-light);white-space:nowrap;">${sent} env · ${rep} resp (${rate}%) · ${v.closes || 0} cierres</span>
+                </div>
+              `;
+            }).join('')}
+          </div>
+          <div style="font-size:0.71rem;color:var(--slate-muted);">
+            ${(iter.recommendations || []).map((r) => `<div>• ${esc(r)}</div>`).join('') || 'Ejecuta la iteración al final del día para promover la variante ganadora al lote de mañana.'}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  window.copyDailyDraft = function (txt) {
+    copyText(txt, 'Texto copiado al portapapeles.');
+  };
+
+  window.copyDailyDraftByKey = function (key) {
+    const map = cmdState._copyMap || {};
+    copyText(map[key] || '', 'Texto copiado al portapapeles.');
+  };
+
+  window.saveDailyAutomationSettingsNow = async function () {
+    const daily_email_cap = Number(document.getElementById('daCapInput')?.value || 25);
+    const auto_send_enabled = Boolean(document.getElementById('daAutoSendChk')?.checked);
+    const territory_mix = {
+      mty: Number(document.getElementById('daMixMty')?.value || 10),
+      pv: Number(document.getElementById('daMixPv')?.value || 10),
+      biogen: Number(document.getElementById('daMixBio')?.value || 5),
+    };
+    try {
+      await apiJson('/api/growth/automation-settings', {
+        method: 'POST',
+        body: JSON.stringify({ auto_send_enabled, daily_email_cap, territory_mix }),
+      });
+      await window.loadGeoAndGrowthData(true);
+      toast('Reglas del piloto diario guardadas.');
+    } catch (err) {
+      toast('Error Config Piloto: ' + err.message);
+    }
+  };
+
+  window.prepareDailyBatchNow = async function (scanWebs = true) {
+    toast('Escaneando sitios web y armando lote diario seguro...');
+    try {
+      const res = await apiJson('/api/growth/daily/prepare-batch', {
+        method: 'POST',
+        body: JSON.stringify({ scan_websites_first: scanWebs }),
+      });
+      await window.loadGeoAndGrowthData(true);
+      toast(`Lote preparado con ${(res.batch.items || []).length} prospectos.`);
+    } catch (err) {
+      toast('Error Lote Diario: ' + err.message);
+    }
+  };
+
+  window.dispatchDailyBatchNow = async function () {
+    try {
+      const res = await apiJson('/api/growth/daily/dispatch-batch', {
+        method: 'POST',
+        body: JSON.stringify({ dry_run: false }),
+      });
+      await window.loadGeoAndGrowthData(true);
+      toast(`Lote procesado: ${res.sent_count} SMTP · ${res.eml_exported_count} borradores .eml`);
+    } catch (err) {
+      toast('Error Dispatch Lote: ' + err.message);
+    }
+  };
+
+  window.dispatchDueFollowupsNow = async function () {
+    try {
+      const res = await apiJson('/api/growth/followups/dispatch', {
+        method: 'POST',
+        body: JSON.stringify({ channel: 'all', dry_run: false }),
+      });
+      await window.loadGeoAndGrowthData(true);
+      toast(`Seguimientos: ${res.processed_due} procesados (${res.email_sent} SMTP · ${res.eml_saved} .eml · ${res.whatsapp_ready} WA).`);
+    } catch (err) {
+      toast('Error Seguimientos: ' + err.message);
+    }
+  };
+
+  window.submitNegotiationReplyNow = async function () {
+    const nombre = (document.getElementById('negNombreInput')?.value || '').trim();
+    const outcome = document.getElementById('negOutcomeSelect')?.value || 'objecion';
+    const objection_key = document.getElementById('negObjectionSelect')?.value || 'demo_y_cierre';
+    const collected_mxn = Number(document.getElementById('negCollectedInput')?.value || 0);
+    const client_is_persona_moral = Boolean(document.getElementById('negPmChk')?.checked);
+    if (!nombre) {
+      toast('Escribe el nombre del negocio que respondió.');
+      return;
+    }
+    try {
+      const res = await apiJson('/api/growth/negotiation/reply-and-close', {
+        method: 'POST',
+        body: JSON.stringify({
+          slug: nombre.toLowerCase().replace(/[^a-z0-9]+/g, '_'),
+          nombre,
+          outcome,
+          objection_key,
+          collected_mxn,
+          client_is_persona_moral,
+        }),
+      });
+      await window.loadGeoAndGrowthData(true);
+      const box = document.getElementById('negResultBox');
+      if (box) {
+        cmdState._copyMap = cmdState._copyMap || {};
+        cmdState._copyMap['neg_latest'] = res.suggested_reply || '';
+        box.innerHTML = `<div style="padding:9px;border-radius:8px;background:rgba(110,148,119,0.12);border:1px solid rgba(110,148,119,0.45);">
+          <div style="margin-bottom:6px;"><strong>${esc(res.crm_record.nombre)} &rarr; ${esc(res.crm_record.stage)}</strong></div>
+          <div style="margin-bottom:8px;">${esc(res.suggested_reply)}</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button type="button" class="week-btn" style="font-size:0.68rem;" onclick="window.copyDailyDraftByKey('neg_latest')">Copiar Respuesta</button>
+            ${res.web_whatsapp_url ? `<a href="${esc(res.web_whatsapp_url)}" target="_blank" rel="noopener" class="btn-approve-trigger" style="text-decoration:none;font-size:0.68rem;padding:4px 8px;">Enviar en WA Web &rarr;</a>` : ''}
+          </div>
+        </div>`;
+      }
+      toast(collected_mxn > 0 ? 'Cierre registrado y reflejado en Contador PFAE 612.' : 'Respuesta de negociación lista.');
+    } catch (err) {
+      toast('Error Negociación: ' + err.message);
+    }
+  };
+
+  window.runIterationCycleNow = async function () {
+    try {
+      const res = await apiJson('/api/growth/iteration/run', { method: 'POST' });
+      await window.loadGeoAndGrowthData(true);
+      toast(`Iteración lista · Ganadora: ${res.report.winner_variant_id}`);
+    } catch (err) {
+      toast('Error Iteración: ' + err.message);
     }
   };
 

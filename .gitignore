@@ -17,5 +17,6 @@ __pycache__/
 # Large regenerable NL batch mockups & email archives (keeps PV captures, bases & test kit tracked)
 assets/mockups/clubs/
 assets/mockups/small_biz/
+assets/mockups/daily_queue/
 assets/mockups/test/*.eml
 assets/gmaps_audits/*.png
