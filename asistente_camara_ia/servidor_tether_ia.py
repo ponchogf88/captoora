@@ -191,7 +191,12 @@ def detect_camera():
             res = subprocess.run(["system_profiler", "SPUSBHostDataType"], capture_output=True, text=True, timeout=5)
             if not res.stdout:
                 res = subprocess.run(["system_profiler", "SPUSBDataType"], capture_output=True, text=True, timeout=5)
-            if "Nikon" in res.stdout:
+            if "Sony" in res.stdout or "ILCE" in res.stdout or "ZV" in res.stdout:
+                STATE["camera_connected"] = True
+                STATE["camera_model"] = "Sony ZV-E10"
+                STATE["connection_mode"] = "macOS USB Directo (Sony PC Remote)"
+                return STATE
+            elif "Nikon" in res.stdout:
                 STATE["camera_connected"] = True
                 STATE["camera_model"] = "Nikon Digital Camera"
                 STATE["connection_mode"] = "macOS USB Directo (Nikon PTP)"
@@ -460,7 +465,7 @@ def trigger_camera_shutter(source_label: str = "DISPARADOR") -> dict:
     """
     STATE["is_shooting"] = True
     timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")
-    model_tag = "NIKON" if "Nikon" in STATE.get("camera_model", "") else ("CANON" if "Canon" in STATE.get("camera_model", "") else "CAM")
+    model_tag = "SONY" if "Sony" in STATE.get("camera_model", "") or "ZV" in STATE.get("camera_model", "") else ("NIKON" if "Nikon" in STATE.get("camera_model", "") else ("CANON" if "Canon" in STATE.get("camera_model", "") else "CAM"))
     out_file = TETHER_DIR / f"CAPTOORA_{model_tag}_{timestamp_str}.jpg"
 
     try:
@@ -469,7 +474,7 @@ def trigger_camera_shutter(source_label: str = "DISPARADOR") -> dict:
         if not STATE["camera_connected"]:
             return {
                 "ok": False,
-                "error": "Cámara no conectada por USB. Conecta la Canon o Nikon vía USB y enciéndela."
+                "error": "Cámara no conectada por USB. Conecta tu Sony, Nikon o Canon vía USB y enciéndela."
             }
 
         # 1. Disparo real en macOS vía gphoto2 PTP (Soporta Canon, Nikon, Sony, Fuji)
