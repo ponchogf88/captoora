@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "meta": {
+    "canal": "¿Caíste o no caíste?",
+    "episodio_id": "CAISTE-PILOTO-01",
+    "nivel": "facil",
+    "titulo": "¿Caíste o no caíste? Nivel Fácil · 10 casos (7 trampas + 3 reales)",
+    "estado_validacion": "en_prueba_hipotesis",
+    "estilo_visual": "3D low-poly / voxel, blocky cute character, pastel bright colors, soft matte textures, warm studio lighting (CERO neon)",
+    "tiempos_serie_seg": {
+      "facil_chatgpt": 5,
+      "medio_claude": 7,
+      "dificil_grok": 9
+    },
+    "regla_segundo_robado": {
+      "activa": true,
+      "preguntas": [4, 8],
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 4,
+      "secuencia_reloj": [5, 4, 3, 1, "¡TIEMPO!"]
+    },
+    "personajes": {
+      "guia": {
+        "nombre": "Antigravity Guardrails",
+        "rol": "Guía con casco y arnés sobre rieles ascendentes (Semper Ascendens)",
+        "asset_path": "assets/personajes/guardrails_antigravity.png"
+      },
+      "nivel_facil": {
+        "nombre": "ChatGPT",
+        "rol": "Host Nivel Fácil (5 s)",
+        "asset_path": "assets/personajes/chatgpt_facil.png"
+      },
+      "nivel_medio": {
+        "nombre": "Claude",
+        "rol": "Host Nivel Medio (7 s)",
+        "asset_path": "assets/personajes/claude_medio.png"
+      },
+      "nivel_dificil": {
+        "nombre": "Grok",
+        "rol": "Host Nivel Difícil (9 s) + cameo robando 1 segundo",
+        "asset_path": "assets/personajes/grok_dificil.png"
+      }
+    },
+    "escenarios": {
+      "facil": "assets/escenarios/escenario_01_facil_casa.png",
+      "medio": "assets/escenarios/escenario_02_medio_oficina.png",
+      "dificil": "assets/escenarios/escenario_03_dificil_cima_rieles.png"
+    },
+    "cta_oficial": "Comenta CAÍ o NO CAÍ con tu marcador (0/10 a 10/10) y escribe GUARDRAILS para la guía familiar."
+  },
+  "intro": {
+    "duracion_aprox_seg": 15,
+    "hablante": "Antigravity Guardrails",
+    "texto": "¿Crees que a ti y a tu familia jamás los engañarían con un mensajito al celular? Este soy yo poniéndome mi arnés y colocando los guardrails —los rieles de seguridad— para que la IA no se desboque contigo encima. Hoy jugamos Nivel Fácil con ChatGPT: diez casos de la vida real y cinco segundos para decidir en cada uno. Pero ojo: no todas son trampa; algunas sí son reales. ¿Listos? ¡Súbanse al riel!"
+  },
+  "preguntas": [
+    {
+      "numero": 1,
+      "titulo": "El paquete retenido",
+      "caso_pantalla": "SMS: 'Tu paquete está retenido en almacén. Da clic aquí o se regresa hoy mismo a las 6 p.m.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "No incluye número de guía ni dice qué tienda o paquetería envía.",
+        "Mete prisa artificial ('se regresa hoy mismo').",
+        "Usa enlace acortado ajeno al dominio oficial."
+      ],
+      "guardrail": "Nunca des clic al enlace de un SMS: revisa tu compra directo dentro de la app oficial.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 2,
+      "titulo": "Aviso de compra dentro de tu app del banco",
+      "caso_pantalla": "Dentro de tu app oficial del banco: 'Compra registrada por $480 MXN en farmacia. ¿Fuiste tú? Sí fui yo / No reconozco.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "REAL",
+      "pistas": [
+        "Ya iniciaste sesión adentro de la aplicación oficial de tu banco.",
+        "No te pide contraseñas, NIP ni códigos por llamada o chat.",
+        "Solo te permite confirmar o bloquear el cargo en el mismo sistema seguro."
+      ],
+      "guardrail": "Verifica siempre dentro de tu app oficial antes de entrar en pánico.",
+      "short_prioritario": true
+    },
+    {
+      "numero": 3,
+      "titulo": "Tu pago de Netflix falló",
+      "caso_pantalla": "Correo: 'Tu pago de Netflix falló. Actualiza tu tarjeta en netflx-pagos.xyz o pierdes tu cuenta hoy.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "Dominio mal escrito (falta la 'i' en netflx) y terminación .xyz.",
+        "Pide capturar tu tarjeta fuera de la app oficial.",
+        "Netflix pausa la reproducción y cobra únicamente desde tu cuenta oficial."
+      ],
+      "guardrail": "Lee el dominio letra por letra o entra directo a la app oficial.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 4,
+      "titulo": "Tu recibo de CFE venció",
+      "caso_pantalla": "WhatsApp de desconocido: 'Tu recibo de CFE venció. Paga $1,240 aquí en las próximas 2 horas o cortamos la luz hoy.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 4,
+      "segundo_robado": true,
+      "secuencia_reloj": [5, 4, 3, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "CFE no cobra recibos ni amenaza cortes por WhatsApp particular con enlaces externos.",
+        "Usa urgencia extrema ('corte hoy en 2 horas') sin datos reales de tu servicio.",
+        "Esa falta de tiempo artificial replica exactamente cómo presionan los estafadores."
+      ],
+      "guardrail": "Consulta y paga únicamente en la app CFE Contigo, portal oficial o centros autorizados.",
+      "short_prioritario": true
+    },
+    {
+      "numero": 5,
+      "titulo": "Te ganaste un iPhone 17",
+      "caso_pantalla": "Pop-up en navegador: '¡Felicidades visitante #1,000! Ganaste un iPhone 17 Pro Max. Solo paga $299 de envío hoy.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "No participaste en ningún concurso oficial.",
+        "El envío de '$299' sirve para robarte los datos completos de tu tarjeta.",
+        "Nadie regala equipos nuevos de gama alta al azar por abrir una página."
+      ],
+      "guardrail": "Si no participaste en un sorteo verificable, no ganaste nada.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 6,
+      "titulo": "Alerta oficial de inicio de sesión de Google",
+      "caso_pantalla": "Correo de no-reply@accounts.google.com: 'Nuevo inicio de sesión desde una laptop. Si fuiste tú, no hagas nada. Si no, entra tú a tu Cuenta de Google → Seguridad.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "REAL",
+      "pistas": [
+        "Remitente oficial verificado (@accounts.google.com).",
+        "No pide contraseñas ni códigos y dice 'si fuiste tú, no hagas nada'.",
+        "Te invita a entrar por tu cuenta a Ajustes de Seguridad sin forzar enlaces externos."
+      ],
+      "guardrail": "Incluso ante avisos reales, entra escribiendo la ruta desde tus ajustes oficiales.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 7,
+      "titulo": "Te contratamos por WhatsApp",
+      "caso_pantalla": "WhatsApp: 'Te contratamos para dar likes desde casa y ganar $3,000 al día. Solo deposita $500 para activar tu cuenta.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "Sueldos irreales ($3,000 diarios por dar likes) sin proceso formal.",
+        "Un empleo real te paga a ti, no te cobra depósito previo.",
+        "Enganchan devolviendo montos chicos al inicio para luego robar el depósito grande."
+      ],
+      "guardrail": "Si te piden depositar dinero para trabajar o liberar ganancias, es fraude.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 8,
+      "titulo": "Tu paquete de DHL está en aduana",
+      "caso_pantalla": "SMS: 'DHL Express: tu envío internacional está retenido en aduana. Paga $350 MXN de impuestos en el siguiente enlace.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 4,
+      "segundo_robado": true,
+      "secuencia_reloj": [5, 4, 3, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "DHL no cobra impuestos aduanales con un enlace genérico por SMS.",
+        "Juega con la probabilidad de que estés esperando un pedido reciente.",
+        "El robo de 1 segundo en el reloj imita el apuro con el que buscan que pagues sin validar."
+      ],
+      "guardrail": "Copia tu número de guía real y consúltalo únicamente en el portal o app oficial de DHL.",
+      "short_prioritario": true
+    },
+    {
+      "numero": 9,
+      "titulo": "Código de 6 dígitos que TÚ pediste",
+      "caso_pantalla": "Estás frente a tu computadora iniciando sesión, oprimes 'Enviar código' y al instante llega SMS: 'Tu código es 482910. Nunca lo compartas con nadie.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "REAL",
+      "pistas": [
+        "Tú acabas de solicitar ese código un segundo antes en tu dispositivo.",
+        "Advierte explícitamente no compartirlo con nadie.",
+        "Solo sería señal de ataque si llegara sin que tú lo pidieras o si alguien te lo pide por llamada."
+      ],
+      "guardrail": "Código que tú pediste = úsalo en tu pantalla. Código sin pedirlo o solicitado por un tercero = trampa.",
+      "short_prioritario": false
+    },
+    {
+      "numero": 10,
+      "titulo": "Sorteo de Costco, pantalla gratis",
+      "caso_pantalla": "Cadena de WhatsApp: 'Por aniversario, Costco regala pantallas de 65 pulgadas. Contesta 3 preguntas, reenvía a 10 contactos y paga envío.'",
+      "tiempo_anunciado_seg": 5,
+      "tiempo_real_seg": 5,
+      "segundo_robado": false,
+      "secuencia_reloj": [5, 4, 3, 2, 1, "¡TIEMPO!"],
+      "respuesta": "TRAMPA",
+      "pistas": [
+        "Obliga a reenviar a 10 contactos para usar la confianza de tu familia.",
+        "El enlace imita la marca pero no pertenece a costco.com.mx.",
+        "Al final solicita tarjeta para pagar un envío falso."
+      ],
+      "guardrail": "Corta la cadena familiar: valida cualquier sorteo únicamente en los canales oficiales de la tienda.",
+      "short_prioritario": false
+    }
+  ],
+  "outro": {
+    "duracion_aprox_seg": 20,
+    "hablante": "Antigravity Guardrails",
+    "texto": "¡Alto ahí! Antes de que reclames en los comentarios: sí, en la pregunta 4 y en la pregunta 8 te robamos un segundo (fueron cuatro, no cinco). ¿Sentiste esa presión de 'no alcancé a pensar'? Exacto: así funciona cada estafa real; te quitan segundos a propósito para que des clic sin razonar. Poner guardrails es darte tú ese segundo extra antes de tocar un link. Cuéntame abajo con CAÍ o NO CAÍ cuántas acertaste de diez, escribe GUARDRAILS para la guía familiar y prepárate: el siguiente escalón es Nivel Medio con Claude en 7 segundos."
+  }
+}

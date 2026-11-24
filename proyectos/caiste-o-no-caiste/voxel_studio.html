@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Caíste o no caíste? — Estudio 3D Voxel Pastel</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #fdf6ea;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+    }
+    #ui {
+      position: fixed;
+      top: 14px;
+      left: 14px;
+      z-index: 10;
+      display: none;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: rgba(255, 252, 245, 0.92);
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(40, 35, 30, 0.12);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    #ui button {
+      border: 1px solid rgba(40, 35, 30, 0.18);
+      background: #ffffff;
+      color: #2c2623;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #ui button.active {
+      background: #2c2623;
+      color: #fdf6ea;
+    }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/proyectos/waters-3d-studio/node_modules/three/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="ui"></div>
+  <script type="module">
+    import * as THREE from "three";
+    import { RoundedBoxGeometry } from "/proyectos/waters-3d-studio/node_modules/three/examples/jsm/geometries/RoundedBoxGeometry.js";
+
+    const params = new URLSearchParams(window.location.search);
+    const activeSceneId = params.get("scene") || "guardrails_antigravity";
+    const showUi = params.get("ui") === "1";
+
+    const SCENES = [
+      "guardrails_antigravity",
+      "chatgpt_facil",
+      "claude_medio",
+      "grok_dificil",
+      "escenario_01_facil_casa",
+      "escenario_02_medio_oficina",
+      "escenario_03_dificil_cima_rieles",
+    ];
+
+    if (showUi) {
+      const ui = document.getElementById("ui");
+      ui.style.display = "flex";
+      for (const id of SCENES) {
+        const btn = document.createElement("button");
+        btn.textContent = id;
+        if (id === activeSceneId) btn.classList.add("active");
+        btn.onclick = () => {
+          const next = new URL(window.location.href);
+          next.searchParams.set("scene", id);
+          window.location.href = next.toString();
+        };
+        ui.appendChild(btn);
+      }
+    }
+
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      preserveDrawingBuffer: true,
+      powerPreference: "high-performance",
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.06;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    document.body.appendChild(renderer.domElement);
+
+    const matCache = new Map();
+    function mat(color, opts = {}) {
+      const key = `${color}_${opts.rough ?? 0.84}_${opts.metal ?? 0.04}_${opts.emissive ?? 0}_${opts.ei ?? 0}`;
+      if (matCache.has(key)) return matCache.get(key);
+      const m = new THREE.MeshStandardMaterial({
+        color,
+        roughness: opts.rough ?? 0.84,
+        metalness: opts.metal ?? 0.04,
+        emissive: opts.emissive ?? 0x000000,
+        emissiveIntensity: opts.ei ?? 0,
+      });
+      matCache.set(key, m);
+      return m;
+    }
+
+    function addBox(parent, size, pos, material, opts = {}) {
+      const [w, h, d] = size;
+      const radius = opts.radius ?? Math.min(w, h, d) * 0.16;
+      const segs = opts.segs ?? 4;
+      const geom = radius > 0.001
+        ? new RoundedBoxGeometry(w, h, d, segs, radius)
+        : new THREE.BoxGeometry(w, h, d);
+      const mesh = new THREE.Mesh(geom, material);
+      mesh.position.set(pos[0], pos[1], pos[2]);
+      if (opts.rot) mesh.rotation.set(opts.rot[0], opts.rot[1], opts.rot[2]);
+      mesh.castShadow = opts.cast !== false;
+      mesh.receiveShadow = opts.recv !== false;
+      parent.add(mesh);
+      return mesh;
+    }
+
+    function addCyl(parent, rTop, rBot, h, pos, material, opts = {}) {
+      const mesh = new THREE.Mesh(
+        new THREE.CylinderGeometry(rTop, rBot, h, opts.seg ?? 20),
+        material
+      );
+      mesh.position.set(pos[0], pos[1], pos[2]);
+      if (opts.rot) mesh.rotation.set(opts.rot[0], opts.rot[1], opts.rot[2]);
+      mesh.castShadow = opts.cast !== false;
+      mesh.receiveShadow = opts.recv !== false;
+      parent.add(mesh);
+      return mesh;
+    }
+
+    function makeSkyPlane(topHex, midHex, botHex) {
+      const canvas = document.createElement("canvas");
+      canvas.width = 16;
+      canvas.height = 512;
+      const ctx = canvas.getContext("2d");
+      const grad = ctx.createLinearGradient(0, 0, 0, 512);
+      grad.addColorStop(0, topHex);
+      grad.addColorStop(0.55, midHex);
+      grad.addColorStop(1, botHex);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 16, 512);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      return tex;
+    }
+
+    function setupLights(scene, cfg = {}) {
+      const hemi = new THREE.HemisphereLight(
+        cfg.sky ?? 0xfff8ec,
+        cfg.ground ?? 0xdccbb8,
+        cfg.hemiInt ?? 0.95
+      );
+      scene.add(hemi);
+
+      const key = new THREE.DirectionalLight(cfg.keyCol ?? 0xfff0d6, cfg.keyInt ?? 1.45);
+      const kp = cfg.keyPos ?? [6.5, 11, 7.5];
+      key.position.set(kp[0], kp[1], kp[2]);
+      key.castShadow = true;
+      key.shadow.mapSize.set(2048, 2048);
+      key.shadow.bias = -0.0004;
+      const d = cfg.shadowSpan ?? 11;
+      key.shadow.camera.left = -d;
+      key.shadow.camera.right = d;
+      key.shadow.camera.top = d;
+      key.shadow.camera.bottom = -d;
+      key.shadow.camera.near = 1;
+      key.shadow.camera.far = 35;
+      scene.add(key);
+
+      const fill = new THREE.DirectionalLight(cfg.fillCol ?? 0xdfeeff, cfg.fillInt ?? 0.45);
+      fill.position.set(-7, 5, 4);
+      scene.add(fill);
+
+      const rim = new THREE.DirectionalLight(cfg.rimCol ?? 0xffe0b2, cfg.rimInt ?? 0.4);
+      rim.position.set(-4, 7, -8);
+      scene.add(rim);
+    }
+
+    function addBasePedestal(parent, width, depth, topColor, rimColor, y = -0.35) {
+      addBox(parent, [width, 0.44, depth], [0, y, 0], mat(topColor, { rough: 0.88 }), {
+        radius: 0.14,
+        cast: false,
+      });
+      addBox(parent, [width + 0.18, 0.28, depth + 0.18], [0, y - 0.34, 0], mat(rimColor, { rough: 0.9 }), {
+        radius: 0.12,
+        cast: false,
+      });
+    }
+
+    function addAscendingRails(parent, start, end, count, opts = {}) {
+      const group = new THREE.Group();
+      const s = new THREE.Vector3(...start);
+      const e = new THREE.Vector3(...end);
+      const dir = new THREE.Vector3().subVectors(e, s);
+      const len = dir.length();
+      const yaw = Math.atan2(dir.x, dir.z);
+      const pitch = -Math.asin(dir.y / len);
+      const mid = new THREE.Vector3().addVectors(s, e).multiplyScalar(0.5);
+
+      const trackHolder = new THREE.Group();
+      trackHolder.position.copy(mid);
+      trackHolder.rotation.order = "YXZ";
+      trackHolder.rotation.y = yaw;
+      trackHolder.rotation.x = pitch;
+
+      const railSpan = opts.gauge ?? 0.68;
+      const railMat = mat(0x98a4b3, { rough: 0.38, metal: 0.55 });
+      const tieMat = mat(0x9c6e4b, { rough: 0.86 });
+      const pierMat = mat(opts.pierColor ?? 0xe8d9c4, { rough: 0.88 });
+
+      addBox(trackHolder, [0.11, 0.12, len], [-railSpan * 0.5, 0.13, 0], railMat, { radius: 0.03 });
+      addBox(trackHolder, [0.11, 0.12, len], [railSpan * 0.5, 0.13, 0], railMat, { radius: 0.03 });
+
+      for (let i = 0; i < count; i++) {
+        const t = count === 1 ? 0.5 : i / (count - 1);
+        const z = (t - 0.5) * (len - 0.35);
+        addBox(trackHolder, [railSpan + 0.42, 0.09, 0.18], [0, 0.03, z], tieMat, { radius: 0.025 });
+      }
+      group.add(trackHolder);
+
+      if (opts.withPiers) {
+        const pierCount = opts.pierCount ?? 4;
+        for (let i = 0; i < pierCount; i++) {
+          const t = (i + 0.5) / pierCount;
+          const p = new THREE.Vector3().lerpVectors(s, e, t);
+          const groundY = opts.groundY ?? -0.13;
+          const h = Math.max(0.25, p.y - groundY);
+          addBox(group, [0.46, h, 0.46], [p.x, groundY + h * 0.5, p.z], pierMat, { radius: 0.08 });
+        }
+      }
+      parent.add(group);
+      return group;
+    }
+
+    function addCubeFace(head, opts = {}) {
+      const z = (opts.depth ?? 1.4) * 0.5 + 0.02;
+      const eyeY = opts.eyeY ?? 0.06;
+      const eyeX = opts.eyeX ?? 0.31;
+      const eyeMat = mat(0x232026, { rough: 0.25, metal: 0.1 });
+      const hlMat = mat(0xffffff, { rough: 0.2 });
+
+      if (opts.sunglasses) {
+        const frame = mat(0x1f1d26, { rough: 0.3, metal: 0.2 });
+        addBox(head, [0.48, 0.28, 0.1], [-0.31, eyeY + 0.03, z + 0.04], frame, { radius: 0.06 });
+        addBox(head, [0.48, 0.28, 0.1], [0.31, eyeY + 0.03, z + 0.04], frame, { radius: 0.06 });
+        addBox(head, [0.18, 0.07, 0.08], [0, eyeY + 0.07, z + 0.04], frame, { radius: 0.02 });
+        addBox(head, [0.14, 0.05, 0.02], [-0.39, eyeY + 0.09, z + 0.09], mat(0x7e7994, { rough: 0.4 }), {
+          radius: 0.01,
+          cast: false,
+        });
+        addBox(head, [0.14, 0.05, 0.02], [0.23, eyeY + 0.09, z + 0.09], mat(0x7e7994, { rough: 0.4 }), {
+          radius: 0.01,
+          cast: false,
+        });
+      } else {
+        for (const sx of [-1, 1]) {
+          addBox(head, [0.16, 0.22, 0.08], [sx * eyeX, eyeY, z], eyeMat, { radius: 0.04 });
+          addBox(head, [0.055, 0.055, 0.03], [sx * eyeX + 0.035, eyeY + 0.055, z + 0.04], hlMat, {
+            radius: 0.01,
+            cast: false,
+          });
+        }
+      }
+
+      if (opts.glasses) {
+        const ringMat = mat(0x3a373d, { rough: 0.35, metal: 0.35 });
+        for (const sx of [-1, 1]) {
+          const g = new THREE.Mesh(new THREE.TorusGeometry(0.18, 0.032, 12, 24), ringMat);
+          g.position.set(sx * eyeX, eyeY, z + 0.05);
+          head.add(g);
+        }
+        addBox(head, [0.26, 0.04, 0.04], [0, eyeY + 0.02, z + 0.05], ringMat, { radius: 0.01 });
+      }
+
+      if (opts.cheeks !== false) {
+        const cheekMat = mat(opts.cheekCol ?? 0xf49d92, { rough: 0.85 });
+        addBox(head, [0.16, 0.08, 0.04], [-0.46, eyeY - 0.19, z], cheekMat, { radius: 0.025, cast: false });
+        addBox(head, [0.16, 0.08, 0.04], [0.46, eyeY - 0.19, z], cheekMat, { radius: 0.025, cast: false });
+      }
+
+      const mouthMat = mat(0x3a2a28, { rough: 0.5 });
+      if (opts.smirk) {
+        addBox(head, [0.24, 0.06, 0.04], [0.07, eyeY - 0.27, z], mouthMat, {
+          radius: 0.02,
+          rot: [0, 0, 0.16],
+          cast: false,
+        });
+      } else {
+        addBox(head, [0.26, 0.065, 0.04], [0, eyeY - 0.27, z], mouthMat, { radius: 0.025, cast: false });
+        addBox(head, [0.07, 0.07, 0.04], [-0.14, eyeY - 0.24, z], mouthMat, { radius: 0.02, cast: false });
+        addBox(head, [0.07, 0.07, 0.04], [0.14, eyeY - 0.24, z], mouthMat, { radius: 0.02, cast: false });
+      }
+    }
+
+    function addVoxelTree(parent, pos, foliageHex = 0x9bd79e, height = 1.6) {
+      const g = new THREE.Group();
+      g.position.set(...pos);
+      const trunkH = height * 0.45;
+      addBox(g, [0.26, trunkH, 0.26], [0, trunkH * 0.5, 0], mat(0x9a7154), { radius: 0.04 });
+      addBox(g, [0.95, 0.72, 0.95], [0, trunkH + 0.32, 0], mat(foliageHex), { radius: 0.14 });
+      addBox(g, [0.64, 0.5, 0.64], [0, trunkH + 0.76, 0], mat(foliageHex), { radius: 0.12 });
+      parent.add(g);
+      return g;
+    }
+
+    function addPineTree(parent, pos, foliageHex = 0x628c7d) {
+      const g = new THREE.Group();
+      g.position.set(...pos);
+      addBox(g, [0.24, 0.55, 0.24], [0, 0.27, 0], mat(0x7c5947), { radius: 0.04 });
+      addBox(g, [1.05, 0.48, 1.05], [0, 0.7, 0], mat(foliageHex), { radius: 0.1 });
+      addBox(g, [0.76, 0.46, 0.76], [0, 1.12, 0], mat(foliageHex), { radius: 0.09 });
+      addBox(g, [0.46, 0.42, 0.46], [0, 1.5, 0], mat(foliageHex), { radius: 0.08 });
+      parent.add(g);
+      return g;
+    }
+
+    function buildGuardrailsScene(scene, cam) {
+      scene.background = makeSkyPlane("#FFF9EE", "#FDF4E3", "#F4E5CA");
+      setupLights(scene, { keyPos: [5.5, 9, 7], shadowSpan: 8 });
+      cam.position.set(2.1, 2.5, 6.7);
+      cam.lookAt(0.25, 1.25, 0);
+
+      addBasePedestal(scene, 5.6, 4.8, 0xf2e4cc, 0xd8c3a3, -0.22);
+      // Rails clearly sweeping diagonally BEHIND hero so geometry never intersects hero
+      addAscendingRails(scene, [-2.3, 0.35, -0.35], [2.4, 2.05, -1.45], 9, {
+        gauge: 0.62,
+        withPiers: true,
+        pierCount: 4,
+        groundY: 0.0,
+        pierColor: 0xe6d2b5,
+      });
+
+      const hero = new THREE.Group();
+      hero.position.set(-0.62, 0, 0.88);
+      hero.rotation.y = 0.22;
+
+      // Shoes & pants
+      const shoeMat = mat(0x6b7c93);
+      const pantsMat = mat(0xe3cfa9);
+      addBox(hero, [0.42, 0.24, 0.58], [-0.28, 0.12, 0.06], shoeMat, { radius: 0.07 });
+      addBox(hero, [0.42, 0.24, 0.58], [0.28, 0.12, 0.06], shoeMat, { radius: 0.07 });
+      addBox(hero, [0.38, 0.48, 0.4], [-0.28, 0.46, 0], pantsMat, { radius: 0.08 });
+      addBox(hero, [0.38, 0.48, 0.4], [0.28, 0.46, 0], pantsMat, { radius: 0.08 });
+
+      // Pastel sky-blue jacket torso + crossed yellow/coral harness straps
+      const bodyMat = mat(0x7cc4e8);
+      addBox(hero, [1.14, 1.02, 0.78], [0, 1.15, 0], bodyMat, { radius: 0.18 });
+      const harnessY = mat(0xf6c945);
+      const harnessC = mat(0xf08c6c);
+      addBox(hero, [0.22, 1.06, 0.85], [-0.34, 1.16, 0], harnessY, { radius: 0.05 });
+      addBox(hero, [0.22, 1.06, 0.85], [0.34, 1.16, 0], harnessY, { radius: 0.05 });
+      addBox(hero, [1.22, 0.18, 0.86], [0, 0.88, 0], harnessC, { radius: 0.05 });
+      addBox(hero, [0.85, 0.14, 0.86], [0, 1.15, 0], harnessY, { radius: 0.04, rot: [0, 0, 0.45] });
+      addBox(hero, [0.85, 0.14, 0.86], [0, 1.15, 0], harnessY, { radius: 0.04, rot: [0, 0, -0.45] });
+      addBox(hero, [0.28, 0.22, 0.1], [0, 1.12, 0.43], mat(0xd8b16a, { rough: 0.35, metal: 0.6 }), {
+        radius: 0.04,
+      });
+
+      // Left arm down, right arm waving as a connected pivot group
+      const skinMat = mat(0xf8cfb8);
+      const leftArm = new THREE.Group();
+      leftArm.position.set(-0.68, 1.48, 0);
+      leftArm.rotation.z = -0.2;
+      addBox(leftArm, [0.32, 0.68, 0.34], [-0.08, -0.3, 0], bodyMat, { radius: 0.1 });
+      addBox(leftArm, [0.28, 0.26, 0.28], [-0.08, -0.7, 0.02], skinMat, { radius: 0.09 });
+      hero.add(leftArm);
+
+      const rightArm = new THREE.Group();
+      rightArm.position.set(0.68, 1.48, 0);
+      rightArm.rotation.z = 2.35;
+      addBox(rightArm, [0.32, 0.68, 0.34], [0.08, -0.3, 0], bodyMat, { radius: 0.1 });
+      addBox(rightArm, [0.28, 0.26, 0.28], [0.08, -0.7, 0.02], skinMat, { radius: 0.09 });
+      hero.add(rightArm);
+
+      // Head + safety helmet
+      const head = new THREE.Group();
+      head.position.set(0, 2.18, 0);
+      addBox(head, [1.34, 1.18, 1.24], [0, 0, 0], skinMat, { radius: 0.24 });
+      addCubeFace(head, { depth: 1.24, eyeY: 0.02, eyeX: 0.29 });
+
+      const helmetMat = mat(0xf9d14b, { rough: 0.65 });
+      addBox(head, [1.5, 0.58, 1.38], [0, 0.56, -0.02], helmetMat, { radius: 0.22 });
+      addBox(head, [1.14, 0.24, 1.12], [0, 0.84, -0.02], helmetMat, { radius: 0.1 });
+      addBox(head, [1.46, 0.12, 0.46], [0, 0.34, 0.68], helmetMat, { radius: 0.05 });
+      addBox(head, [0.28, 0.26, 0.1], [0, 0.62, 0.67], mat(0x7cc4e8), { radius: 0.04 });
+
+      hero.add(head);
+      scene.add(hero);
+    }
+
+    function buildChatGptScene(scene, cam) {
+      scene.background = makeSkyPlane("#F0FCF6", "#E7F9F0", "#D6F0E3");
+      setupLights(scene, { keyPos: [5, 9, 7], shadowSpan: 7 });
+      cam.position.set(1.75, 2.3, 6.25);
+      cam.lookAt(0.22, 1.18, 0);
+
+      addBasePedestal(scene, 4.6, 4.0, 0xdff5ea, 0xbae3ce, -0.22);
+
+      const bot = new THREE.Group();
+      bot.position.set(-0.1, 0, 0);
+      bot.rotation.y = -0.18;
+      const mint = mat(0x7be0b4);
+      const cream = mat(0xfaf8f0);
+
+      // Cute blocky feet
+      addBox(bot, [0.42, 0.26, 0.52], [-0.36, 0.13, 0.06], cream, { radius: 0.08 });
+      addBox(bot, [0.42, 0.26, 0.52], [0.36, 0.13, 0.06], cream, { radius: 0.08 });
+
+      // Mint & cream torso block
+      addBox(bot, [1.56, 1.56, 1.44], [0, 1.06, 0], mint, { radius: 0.28 });
+      addBox(bot, [1.16, 0.44, 0.16], [0, 0.56, 0.68], cream, { radius: 0.09 });
+      // Tiny decorative cream antenna bud on top
+      addBox(bot, [0.16, 0.28, 0.16], [0, 1.94, 0], cream, { radius: 0.05 });
+      addBox(bot, [0.34, 0.24, 0.34], [0, 2.12, 0], mat(0xa8ecd0), { radius: 0.09 });
+
+      // Friendly arms
+      addBox(bot, [0.32, 0.72, 0.34], [-0.94, 1.0, 0.04], cream, { radius: 0.11, rot: [0, 0, 0.22] });
+      addBox(bot, [0.32, 0.72, 0.34], [0.98, 1.32, 0.12], cream, { radius: 0.11, rot: [0, 0, -2.35] });
+
+      const faceGroup = new THREE.Group();
+      faceGroup.position.set(0, 1.18, 0);
+      addCubeFace(faceGroup, { depth: 1.44, glasses: true, eyeY: 0.06, eyeX: 0.33 });
+      bot.add(faceGroup);
+
+      // Soft floating speech bubble prop well inside frame (zero text)
+      const bubble = new THREE.Group();
+      bubble.position.set(1.22, 2.08, -0.05);
+      addBox(bubble, [0.78, 0.52, 0.22], [0, 0, 0], cream, { radius: 0.12 });
+      addBox(bubble, [0.2, 0.2, 0.16], [-0.22, -0.3, 0], cream, { radius: 0.05, rot: [0, 0, 0.65] });
+      bot.add(bubble);
+
+      scene.add(bot);
+    }
+
+    function buildClaudeScene(scene, cam) {
+      scene.background = makeSkyPlane("#FEF4EA", "#FCEBD9", "#F5DEC7");
+      setupLights(scene, { keyPos: [5, 9, 7], shadowSpan: 6 });
+      cam.position.set(-1.9, 2.25, 5.6);
+      cam.lookAt(0, 1.15, 0);
+
+      addBasePedestal(scene, 4.4, 3.8, 0xf7e3cf, 0xe4c2a2, -0.22);
+
+      const bot = new THREE.Group();
+      bot.rotation.y = 0.2;
+      const terra = mat(0xe68d66);
+      const cream = mat(0xfff8ee);
+      const navy = mat(0x4e6485);
+
+      // Feet
+      addBox(bot, [0.42, 0.26, 0.52], [-0.36, 0.13, 0.06], navy, { radius: 0.08 });
+      addBox(bot, [0.42, 0.26, 0.52], [0.36, 0.13, 0.06], navy, { radius: 0.08 });
+
+      // Terracotta cube body
+      addBox(bot, [1.56, 1.62, 1.44], [0, 1.09, 0], terra, { radius: 0.28 });
+
+      // Crisp collar + tie
+      addBox(bot, [0.54, 0.16, 0.14], [0, 0.72, 0.7], cream, { radius: 0.04 });
+      addBox(bot, [0.2, 0.44, 0.12], [0, 0.46, 0.72], navy, { radius: 0.04 });
+
+      // Arms + clipboard notebook in left hand
+      addBox(bot, [0.32, 0.74, 0.34], [-0.94, 1.02, 0.05], terra, { radius: 0.11, rot: [0, 0, 0.2] });
+      addBox(bot, [0.32, 0.74, 0.34], [0.95, 1.02, 0.24], terra, { radius: 0.11, rot: [-0.65, 0, -0.25] });
+
+      const board = new THREE.Group();
+      board.position.set(1.06, 1.02, 0.62);
+      board.rotation.set(-0.35, -0.35, 0.1);
+      addBox(board, [0.74, 0.92, 0.09], [0, 0, 0], mat(0xa87c56), { radius: 0.04 });
+      addBox(board, [0.6, 0.76, 0.06], [0, -0.02, 0.05], cream, { radius: 0.02 });
+      addBox(board, [0.3, 0.11, 0.08], [0, 0.42, 0.06], mat(0xd8b473, { metal: 0.45, rough: 0.4 }), {
+        radius: 0.02,
+      });
+      // Blank subtle ruled bars (no readable text)
+      for (let i = 0; i < 3; i++) {
+        addBox(board, [0.42, 0.045, 0.02], [0, 0.14 - i * 0.16, 0.09], mat(0xe3d3c3), {
+          radius: 0.01,
+          cast: false,
+        });
+      }
+      bot.add(board);
+
+      const faceGroup = new THREE.Group();
+      faceGroup.position.set(0, 1.24, 0);
+      addCubeFace(faceGroup, { depth: 1.44, eyeY: 0.05, eyeX: 0.32, cheekCol: 0xf4a890 });
+      bot.add(faceGroup);
+
+      scene.add(bot);
+    }
+
+    function buildGrokScene(scene, cam) {
+      scene.background = makeSkyPlane("#EFEBF7", "#E4DFF0", "#D1CBE3");
+      setupLights(scene, {
+        sky: 0xede8f8,
+        ground: 0xbcb3cf,
+        keyCol: 0xffe4bd,
+        keyInt: 1.4,
+        rimCol: 0xf7b977,
+        rimInt: 0.85,
+        keyPos: [5.5, 8.5, 6.5],
+        shadowSpan: 6,
+      });
+      cam.position.set(2.15, 2.25, 5.7);
+      cam.lookAt(0.1, 1.1, 0);
+
+      addBasePedestal(scene, 4.8, 4.0, 0xd8d2e6, 0xb8afc9, -0.22);
+
+      const rebel = new THREE.Group();
+      rebel.position.set(-0.28, 0, 0);
+      rebel.rotation.y = 0.22;
+
+      const charcoal = mat(0x3f4052);
+      const plum = mat(0x6d568c);
+      const plumSoft = mat(0x8a70ad);
+      const cream = mat(0xf6ecd9);
+
+      // Sneakers
+      addBox(rebel, [0.44, 0.25, 0.56], [-0.35, 0.12, 0.06], charcoal, { radius: 0.08 });
+      addBox(rebel, [0.44, 0.25, 0.56], [0.35, 0.12, 0.06], charcoal, { radius: 0.08 });
+
+      // Rebel hoodie torso + cube head
+      addBox(rebel, [1.58, 1.56, 1.44], [0, 1.07, 0], charcoal, { radius: 0.28 });
+      addBox(rebel, [1.66, 0.62, 1.52], [0, 0.62, 0], plum, { radius: 0.22 });
+      addBox(rebel, [1.72, 0.36, 0.56], [0, 1.52, -0.52], plumSoft, { radius: 0.14 });
+      addBox(rebel, [0.09, 0.28, 0.07], [-0.22, 0.66, 0.76], cream, { radius: 0.03 });
+      addBox(rebel, [0.09, 0.28, 0.07], [0.22, 0.66, 0.76], cream, { radius: 0.03 });
+
+      // Arms (right hand cheekily reaching toward pocket stopwatch)
+      addBox(rebel, [0.32, 0.72, 0.34], [-0.94, 0.96, 0.05], plum, { radius: 0.11, rot: [0, 0, 0.24] });
+      addBox(rebel, [0.32, 0.74, 0.34], [0.96, 0.96, 0.22], plum, { radius: 0.11, rot: [-0.45, 0, -0.35] });
+
+      const faceGroup = new THREE.Group();
+      faceGroup.position.set(0, 1.24, 0);
+      addCubeFace(faceGroup, { depth: 1.44, sunglasses: true, smirk: true, cheeks: false, eyeY: 0.06 });
+      rebel.add(faceGroup);
+      scene.add(rebel);
+
+      // Oversized playful retro brass-and-cream pocket stopwatch (zero numbers/text)
+      const watch = new THREE.Group();
+      watch.position.set(1.28, 0.56, 0.52);
+      watch.rotation.set(-0.22, -0.45, -0.14);
+      const brass = mat(0xdab068, { rough: 0.38, metal: 0.45 });
+      addCyl(watch, 0.56, 0.56, 0.24, [0, 0, 0], brass, { rot: [Math.PI / 2, 0, 0], seg: 28 });
+      addCyl(watch, 0.44, 0.44, 0.26, [0, 0, 0.01], cream, { rot: [Math.PI / 2, 0, 0], seg: 28 });
+      addBox(watch, [0.18, 0.2, 0.14], [0, 0.62, 0], brass, { radius: 0.04 });
+      addBox(watch, [0.14, 0.14, 0.12], [0.42, 0.44, 0], mat(0xd87b70), { radius: 0.04, rot: [0, 0, -0.7] });
+      // Hand pointing briskly
+      addBox(watch, [0.06, 0.3, 0.05], [0.08, 0.1, 0.14], mat(0xd45b55), { radius: 0.02, rot: [0, 0, -0.65] });
+      addBox(watch, [0.1, 0.1, 0.06], [0, 0, 0.14], charcoal, { radius: 0.03 });
+      scene.add(watch);
+    }
+
+    function buildEasyHomeDiorama(scene, cam) {
+      scene.background = makeSkyPlane("#DCEFF8", "#F1F5EC", "#FDEFD9");
+      setupLights(scene, { keyPos: [9, 14, 9], shadowSpan: 13 });
+      cam.position.set(0.4, 5.2, 13.4);
+      cam.lookAt(0.2, 1.5, -0.4);
+
+      addBasePedestal(scene, 15.2, 8.6, 0xd8ead2, 0xc3ac8e, -0.22);
+      // Warm pastel sidewalk/cobble lane
+      addBox(scene, [14.4, 0.1, 3.2], [0, 0.03, 1.3], mat(0xece1ce), { radius: 0.04, cast: false });
+
+      // Bakery on left ("Panaderia pastel")
+      const bakery = new THREE.Group();
+      bakery.position.set(-4.3, 0, -1.35);
+      addBox(bakery, [3.4, 2.5, 2.7], [0, 1.25, 0], mat(0xf7cfd0), { radius: 0.14 });
+      addBox(bakery, [3.6, 0.32, 2.9], [0, 2.55, 0], mat(0xf2a79f), { radius: 0.08 });
+      // Striped pastel awning
+      for (let i = 0; i < 6; i++) {
+        const col = i % 2 === 0 ? 0xf6988e : 0xfff8ed;
+        addBox(bakery, [0.54, 0.22, 1.05], [-1.35 + i * 0.54, 1.48, 1.65], mat(col), {
+          radius: 0.04,
+          rot: [0.3, 0, 0],
+        });
+      }
+      // Door & warm bread display window
+      addBox(bakery, [0.76, 1.15, 0.14], [-0.95, 0.58, 1.35], mat(0x9d7052), { radius: 0.04 });
+      addBox(bakery, [1.55, 0.85, 0.14], [0.55, 0.78, 1.35], mat(0xfff1c7, { emissive: 0xffd580, ei: 0.15 }), {
+        radius: 0.06,
+      });
+      // Cute pastel croissant/bread blocks inside window
+      addBox(bakery, [0.35, 0.22, 0.22], [0.22, 0.55, 1.4], mat(0xdca05a), { radius: 0.06 });
+      addBox(bakery, [0.35, 0.22, 0.22], [0.72, 0.55, 1.4], mat(0xdca05a), { radius: 0.06 });
+      scene.add(bakery);
+
+      // Sunny Mexican pastel house in center-back
+      const house = new THREE.Group();
+      house.position.set(-0.2, 0, -2.0);
+      addBox(house, [3.1, 2.9, 2.5], [0, 1.45, 0], mat(0xfbe39c), { radius: 0.14 });
+      addBox(house, [3.35, 0.42, 2.75], [0, 3.05, 0], mat(0xde8263), { radius: 0.1 });
+      addBox(house, [0.8, 1.25, 0.14], [0, 0.62, 1.25], mat(0x7fb4b8), { radius: 0.04 });
+      addBox(house, [0.72, 0.72, 0.14], [-0.85, 2.0, 1.25], mat(0xfff5d8), { radius: 0.04 });
+      addBox(house, [0.72, 0.72, 0.14], [0.85, 2.0, 1.25], mat(0xfff5d8), { radius: 0.04 });
+      scene.add(house);
+
+      // Blank pastel smartphone billboard prop on right (zero text)
+      const phone = new THREE.Group();
+      phone.position.set(4.5, 0, -1.2);
+      phone.rotation.y = -0.35;
+      addBox(phone, [1.9, 0.34, 1.2], [0, 0.17, 0], mat(0xd6d2de), { radius: 0.08 });
+      addBox(phone, [1.56, 2.85, 0.24], [0, 1.62, 0], mat(0x6d7d96), { radius: 0.16 });
+      addBox(phone, [1.34, 2.5, 0.06], [0, 1.62, 0.12], mat(0xfcf7eb), { radius: 0.1, cast: false });
+      scene.add(phone);
+
+      // Foliage & warm lamp
+      addVoxelTree(scene, [-6.4, 0, 1.5], 0x99d69c, 1.8);
+      addVoxelTree(scene, [2.1, 0, -2.1], 0xa5dd9e, 1.7);
+      addVoxelTree(scene, [6.2, 0, 0.9], 0x8bc996, 1.65);
+
+      const lamp = new THREE.Group();
+      lamp.position.set(1.85, 0, 2.1);
+      addBox(lamp, [0.16, 2.1, 0.16], [0, 1.05, 0], mat(0x626978), { radius: 0.04 });
+      addBox(lamp, [0.46, 0.42, 0.46], [0, 2.25, 0], mat(0xffe9a6, { emissive: 0xffd275, ei: 0.22 }), {
+        radius: 0.08,
+      });
+      scene.add(lamp);
+
+      // Ascending Guardrails climbing left-low -> right-high
+      addAscendingRails(scene, [-6.1, 0.42, 2.25], [6.1, 2.85, 0.55], 20, {
+        gauge: 0.72,
+        withPiers: true,
+        pierCount: 6,
+        groundY: 0,
+        pierColor: 0xe3ceb1,
+      });
+    }
+
+    function buildMediumOfficeDiorama(scene, cam) {
+      scene.background = makeSkyPlane("#DDEAF7", "#EDF2F7", "#F7EDE2");
+      setupLights(scene, { keyPos: [9, 15, 9], shadowSpan: 14 });
+      cam.position.set(-0.2, 5.5, 13.8);
+      cam.lookAt(0.1, 1.9, -0.4);
+
+      addBasePedestal(scene, 15.6, 8.8, 0xe3dfd6, 0xc4beb4, -0.22);
+      addBox(scene, [14.8, 0.08, 4.4], [0, 0.02, 1.2], mat(0xd2d7df), { radius: 0.04, cast: false });
+
+      // Neighborhood pastel bank on left
+      const bank = new THREE.Group();
+      bank.position.set(-4.1, 0, -1.6);
+      addBox(bank, [4.2, 0.36, 3.3], [0, 0.18, 0], mat(0xece6db), { radius: 0.06 });
+      addBox(bank, [3.9, 3.2, 2.9], [0, 1.95, 0], mat(0xf6efe3), { radius: 0.12 });
+      addBox(bank, [4.25, 0.46, 3.2], [0, 3.7, 0], mat(0x6c809a), { radius: 0.08 });
+      addBox(bank, [2.8, 0.42, 0.5], [0, 4.05, 0.8], mat(0x889cb5), { radius: 0.06 });
+      // Classical voxel columns
+      for (const cx of [-1.45, -0.55, 0.55, 1.45]) {
+        addBox(bank, [0.34, 2.8, 0.34], [cx, 1.8, 1.48], mat(0xfffaf0), { radius: 0.06 });
+      }
+      addBox(bank, [0.9, 1.35, 0.16], [0, 1.05, 1.42], mat(0x556880), { radius: 0.04 });
+      // Blank bank clock emblem (zero numbers)
+      addCyl(bank, 0.38, 0.38, 0.12, [0, 4.05, 1.08], mat(0xf8e5b0), { rot: [Math.PI / 2, 0, 0] });
+      scene.add(bank);
+
+      // Pastel office building on right
+      const office = new THREE.Group();
+      office.position.set(3.9, 0, -1.7);
+      addBox(office, [3.8, 4.2, 2.9], [0, 2.1, 0], mat(0xbcd6c8), { radius: 0.14 });
+      addBox(office, [4.05, 0.32, 3.1], [0, 4.3, 0], mat(0xdf9273), { radius: 0.08 });
+      for (let row = 0; row < 3; row++) {
+        for (let col = 0; col < 3; col++) {
+          addBox(
+            office,
+            [0.72, 0.62, 0.1],
+            [-1.05 + col * 1.05, 1.35 + row * 1.05, 1.44],
+            mat(0xfff4cf, { emissive: 0xffd78a, ei: 0.14 }),
+            { radius: 0.04 }
+          );
+        }
+      }
+      addBox(office, [0.95, 0.9, 0.14], [0, 0.45, 1.45], mat(0x6b7c93), { radius: 0.04 });
+      scene.add(office);
+
+      // Office outdoor bench & tidy trees
+      addBox(scene, [1.5, 0.22, 0.62], [0.2, 0.42, 1.4], mat(0xb37f59), { radius: 0.05 });
+      addBox(scene, [0.16, 0.35, 0.5], [-0.45, 0.18, 1.4], mat(0x5d6473), { radius: 0.03 });
+      addBox(scene, [0.16, 0.35, 0.5], [0.85, 0.18, 1.4], mat(0x5d6473), { radius: 0.03 });
+
+      addVoxelTree(scene, [-6.5, 0, 1.4], 0x95cfa0, 1.9);
+      addVoxelTree(scene, [0.15, 0, -2.2], 0xa5d9ab, 2.1);
+      addVoxelTree(scene, [6.4, 0, 1.2], 0x89c298, 1.85);
+
+      // Ascending Guardrails higher across viaduct piers
+      addAscendingRails(scene, [-6.4, 0.52, 2.35], [6.4, 3.65, 0.65], 21, {
+        gauge: 0.74,
+        withPiers: true,
+        pierCount: 6,
+        groundY: 0,
+        pierColor: 0xd9d4ca,
+      });
+    }
+
+    function buildHardSummitDiorama(scene, cam) {
+      // Twilight plum/indigo/peach matte sky — strictly NO neon!
+      scene.background = makeSkyPlane("#4B4770", "#7E678E", "#D69E82");
+      setupLights(scene, {
+        sky: 0x9b8bb8,
+        ground: 0x62536f,
+        keyCol: 0xffcfa0,
+        keyInt: 1.28,
+        fillCol: 0x9aa4cf,
+        fillInt: 0.52,
+        rimCol: 0xf7b878,
+        rimInt: 0.72,
+        keyPos: [8, 13, 9],
+        shadowSpan: 15,
+      });
+      cam.position.set(-0.5, 5.8, 14.2);
+      cam.lookAt(0.4, 2.35, -0.5);
+
+      addBasePedestal(scene, 15.6, 9.0, 0x736b87, 0x574f69, -0.22);
+
+      // Stepped mountain peak terraces tucked cleanly behind/below the foreground ascending rail viaduct
+      addBox(scene, [8.6, 0.9, 4.4], [2.7, 0.45, -1.8], mat(0x887f9c), { radius: 0.16 });
+      addBox(scene, [6.6, 1.25, 3.8], [3.5, 1.52, -2.0], mat(0x9990ad), { radius: 0.16 });
+      addBox(scene, [4.8, 1.3, 3.2], [4.2, 2.75, -2.1], mat(0xaba2bd), { radius: 0.16 });
+
+      // Distant soft low-poly mountains (matte silhouettes)
+      addBox(scene, [3.6, 2.2, 2.4], [-4.8, 1.1, -2.6], mat(0x7c7391), { radius: 0.2 });
+      addBox(scene, [2.2, 1.4, 1.8], [-4.8, 2.4, -2.6], mat(0x9b91b0), { radius: 0.18 });
+
+      // Cozy voxel server control cabin clearly perched on terrace 2 (100% unobstructed)
+      const cabin = new THREE.Group();
+      cabin.position.set(1.5, 2.15, -1.65);
+      addBox(cabin, [3.2, 2.15, 2.35], [0, 1.08, 0], mat(0x5b5870), { radius: 0.14 });
+      addBox(cabin, [3.5, 0.34, 2.65], [0, 2.26, 0], mat(0xd8a373), { radius: 0.08 });
+      // Open warm observation bay + 2 matte server racks inside (warm amber LEDs only, ZERO neon)
+      addBox(cabin, [2.4, 1.35, 0.2], [0, 1.12, 1.12], mat(0x363344), { radius: 0.08 });
+      for (const rx of [-0.65, 0.65]) {
+        addBox(cabin, [0.68, 1.15, 0.32], [rx, 1.05, 1.08], mat(0x4a4859), { radius: 0.06 });
+        for (let l = 0; l < 3; l++) {
+          addBox(
+            cabin,
+            [0.36, 0.09, 0.05],
+            [rx, 0.72 + l * 0.26, 1.26],
+            mat(0xf5b962, { emissive: 0xe69c3a, ei: 0.4 }),
+            { radius: 0.02, cast: false }
+          );
+        }
+      }
+      // Warm amber desk lamp right beside cabin
+      addBox(cabin, [0.22, 0.5, 0.22], [0, 0.62, 1.34], mat(0x9c7250), { radius: 0.04 });
+      addBox(
+        cabin,
+        [0.42, 0.28, 0.42],
+        [0, 0.94, 1.34],
+        mat(0xffd98e, { emissive: 0xffbd59, ei: 0.45 }),
+        { radius: 0.06 }
+      );
+      scene.add(cabin);
+
+      // Summit golden finish arch sitting atop summit terrace right in line with end of rails
+      const arch = new THREE.Group();
+      arch.position.set(5.35, 3.4, -1.05);
+      arch.rotation.y = -0.35;
+      const gold = mat(0xeec467, { rough: 0.42, metal: 0.28 });
+      addBox(arch, [0.24, 1.9, 0.24], [-0.72, 0.95, 0], gold, { radius: 0.05 });
+      addBox(arch, [0.24, 1.9, 0.24], [0.72, 0.95, 0], gold, { radius: 0.05 });
+      addBox(arch, [1.8, 0.34, 0.34], [0, 1.92, 0], gold, { radius: 0.07 });
+      addBox(arch, [0.55, 0.38, 0.1], [0.85, 2.25, 0], mat(0xe38a73), { radius: 0.04 });
+      scene.add(arch);
+
+      // Alpine voxel pines
+      addPineTree(scene, [-5.6, 0, 1.2], 0x5c7f76);
+      addPineTree(scene, [-2.7, 0, -2.6], 0x678d80);
+      addPineTree(scene, [-0.5, 0.9, -2.6], 0x62857a);
+      addPineTree(scene, [6.2, 0, 1.5], 0x5d8277);
+
+      // Guardrails climbing cleanly in front of terraces all the way to summit arch (zero clipping!)
+      addAscendingRails(scene, [-5.9, 0.5, 2.25], [5.15, 3.9, 0.45], 21, {
+        gauge: 0.72,
+        withPiers: true,
+        pierCount: 6,
+        groundY: 0,
+        pierColor: 0x9b90ab,
+      });
+    }
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(36, window.innerWidth / window.innerHeight, 0.1, 100);
+
+    const BUILDERS = {
+      guardrails_antigravity: buildGuardrailsScene,
+      chatgpt_facil: buildChatGptScene,
+      claude_medio: buildClaudeScene,
+      grok_dificil: buildGrokScene,
+      escenario_01_facil_casa: buildEasyHomeDiorama,
+      escenario_02_medio_oficina: buildMediumOfficeDiorama,
+      escenario_03_dificil_cima_rieles: buildHardSummitDiorama,
+    };
+
+    const builder = BUILDERS[activeSceneId] || buildGuardrailsScene;
+    builder(scene, camera);
+
+    renderer.render(scene, camera);
+    document.body.dataset.rendered = "true";
+
+    window.addEventListener("resize", () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.render(scene, camera);
+    });
+  </script>
+</body>
+</html>
