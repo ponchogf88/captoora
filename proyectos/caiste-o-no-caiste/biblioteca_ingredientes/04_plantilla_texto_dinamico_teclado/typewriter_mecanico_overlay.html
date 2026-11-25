@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Plantilla Texto Dinámico + Teclado Mecánico · ¿Caíste o no caíste?</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Outfit", "Nunito", sans-serif;
+      color: #241d1a;
+    }
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      background: transparent;
+      overflow: hidden;
+    }
+    .bubble-wrap {
+      position: absolute;
+      top: 480px;
+      left: 72px;
+      width: 868px;
+    }
+    .bubble-card {
+      background: #fffcf5;
+      border: 5px solid #241d1a;
+      border-radius: 34px;
+      padding: 34px 38px;
+      box-shadow: 0 14px 0 #d5c2a4;
+    }
+    .bubble-label {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 28px;
+      color: #b5342b;
+      margin-bottom: 14px;
+      letter-spacing: 0.04em;
+    }
+    .type-line {
+      font-family: "Nunito", "Outfit", sans-serif;
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.24;
+      color: #241d1a;
+      min-height: 175px;
+    }
+    .cursor {
+      display: inline-block;
+      width: 16px;
+      height: 44px;
+      background: #f9d14b;
+      border: 3px solid #241d1a;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div
+    id="root"
+    data-composition-id="typewriter_teclado"
+    data-start="0"
+    data-duration="4.0"
+    data-width="1080"
+    data-height="1920"
+    data-fps="30"
+  >
+    <audio
+      id="sfx-teclado"
+      class="clip"
+      src="assets/sfx_teclado_creamy_rafaga_3s.wav"
+      data-start="0.1"
+      data-duration="3.0"
+      data-volume="1"
+      data-track-index="5"
+    ></audio>
+
+    <div id="type-card" class="clip bubble-wrap" data-start="0" data-duration="4.0">
+      <div id="type-card-inner" class="bubble-card">
+        <div class="bubble-label">SMS · ALERTA EN PANTALLA</div>
+        <div class="type-line"><span id="type-text">Tu paquete de DHL está detenido en aduana…</span><span id="type-cursor" class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const FULL_TEXT = "Tu paquete de DHL está detenido en aduana. Paga $350 aquí hoy.";
+      const textEl = document.getElementById("type-text");
+      const cursorEl = document.getElementById("type-cursor");
+
+      function renderTypeAt(t) {
+        const u = Math.max(0, Math.min(1, (t - 0.1) / 2.85));
+        const count = Math.floor(u * FULL_TEXT.length);
+        textEl.textContent = FULL_TEXT.slice(0, count);
+        cursorEl.style.opacity = Math.floor(t * 4) % 2 === 0 ? "1" : "0.15";
+      }
+
+      window.addEventListener("hf-seek", function (e) {
+        if (e && e.detail && typeof e.detail.time === "number") renderTypeAt(e.detail.time);
+      });
+
+      const tl = gsap.timeline({ paused: true });
+      const proxy = { t: 0 };
+      tl.fromTo(
+        proxy,
+        { t: 0 },
+        {
+          t: 4.0,
+          duration: 4.0,
+          ease: "none",
+          onUpdate: function () { renderTypeAt(proxy.t); },
+        },
+        0
+      );
+      tl.fromTo("#type-card-inner", { scale: 0.9, opacity: 0.9 }, { scale: 1.0, opacity: 1.0, duration: 0.28, ease: "back.out(1.7)" }, 0);
+
+      renderTypeAt(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["typewriter_teclado"] = tl;
+    })();
+  </script>
+</body>
+</html>
