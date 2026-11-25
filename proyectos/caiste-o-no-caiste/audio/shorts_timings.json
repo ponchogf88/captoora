@@ -1,0 +1,83 @@
+{
+  "total_chars_newly_synthesized": 1581,
+  "shorts": [
+    {
+      "short_id": "short_P4",
+      "pregunta_num": 4,
+      "slug": "P4_CFE",
+      "titulo": "Tu recibo de CFE venció",
+      "respuesta": "TRAMPA",
+      "segundo_robado": true,
+      "render_name": "CAISTE_SHORT_01_P4_CFE_SEGUNDO_ROBADO.mp4",
+      "audio_file": "short_P4_cfe_master.wav",
+      "audio_path": "audio/short_P4_cfe_master.wav",
+      "hook_start": 0.0,
+      "hook_end": 11.74,
+      "countdown_start": 11.74,
+      "countdown_end": 15.74,
+      "steal_time": 14.39,
+      "reveal_start": 15.74,
+      "reveal_end": 35.44,
+      "guardrail_start": 35.44,
+      "total_duration": 48.67,
+      "seg_durations": {
+        "seg1": 11.52,
+        "seg2": 19.2,
+        "seg3": 12.4
+      },
+      "char_count_used": 501
+    },
+    {
+      "short_id": "short_P2",
+      "pregunta_num": 2,
+      "slug": "P2_BANCO",
+      "titulo": "Aviso de compra dentro de tu app del banco",
+      "respuesta": "REAL",
+      "segundo_robado": false,
+      "render_name": "CAISTE_SHORT_02_P2_BANCO_REAL.mp4",
+      "audio_file": "short_P2_banco_master.wav",
+      "audio_path": "audio/short_P2_banco_master.wav",
+      "hook_start": 0.0,
+      "hook_end": 13.26,
+      "countdown_start": 13.26,
+      "countdown_end": 18.26,
+      "steal_time": null,
+      "reveal_start": 18.26,
+      "reveal_end": 37.48,
+      "guardrail_start": 37.48,
+      "total_duration": 52.4,
+      "seg_durations": {
+        "seg1": 13.04,
+        "seg2": 18.72,
+        "seg3": 14.08
+      },
+      "char_count_used": 549
+    },
+    {
+      "short_id": "short_P8",
+      "pregunta_num": 8,
+      "slug": "P8_DHL",
+      "titulo": "Tu paquete de DHL está en aduana",
+      "respuesta": "TRAMPA",
+      "segundo_robado": true,
+      "render_name": "CAISTE_SHORT_03_P8_DHL_SEGUNDO_ROBADO.mp4",
+      "audio_file": "short_P8_dhl_master.wav",
+      "audio_path": "audio/short_P8_dhl_master.wav",
+      "hook_start": 0.0,
+      "hook_end": 13.5,
+      "countdown_start": 13.5,
+      "countdown_end": 17.5,
+      "steal_time": 16.15,
+      "reveal_start": 17.5,
+      "reveal_end": 33.68,
+      "guardrail_start": 33.68,
+      "total_duration": 48.43,
+      "seg_durations": {
+        "seg1": 13.28,
+        "seg2": 15.68,
+        "seg3": 13.92
+      },
+      "char_count_used": 531
+    }
+  ]
+}

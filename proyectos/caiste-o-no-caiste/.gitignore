@@ -1,0 +1,8 @@
+audio/cache/
+audio/*.wav
+hyperframes_shorts/.debug/
+hyperframes_shorts/.cache/
+hyperframes_shorts/.hyperframes/
+hyperframes_shorts/snapshots/
+hyperframes_shorts/assets/*.wav
+.DS_Store
