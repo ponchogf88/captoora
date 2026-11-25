@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>¿Caíste o no caíste? · Short 01 V2 (P4 CFE + Segundo Robado)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #fdf0da;
+      font-family: "Outfit", "Nunito", sans-serif;
+      color: #241d1a;
+    }
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #fdf0da;
+    }
+    /* Full-bleed live 3D voxel pastel world (hero characters frame at y = 780..1460px) */
+    #stage-3d-wrap {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    #world-3d {
+      display: block;
+      width: 1080px;
+      height: 1920px;
+    }
+    #impact-flash {
+      position: absolute;
+      inset: 0;
+      z-index: 6;
+      background: #dc554b;
+      opacity: 0;
+      pointer-events: none;
+    }
+    /* Zona segura superior: y = 172..762px, x = 64..936px (deja rail derecho x=944..1080 libre y abajo del todo libre) */
+    .hud-safe {
+      position: absolute;
+      top: 172px;
+      left: 64px;
+      width: 872px;
+      height: 590px;
+      z-index: 10;
+    }
+    /* Always-on Ascending Rail Progress Tracker (Duolingo-in-Reverse: Semper Ascendens) */
+    .rail-hud-clip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 872px;
+      height: 66px;
+    }
+    .rail-hud {
+      height: 66px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: #fffcf5;
+      border: 4px solid #241d1a;
+      box-shadow: 0 7px 0 #d6c3a4;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .rail-tag {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+      color: #241d1a;
+      white-space: nowrap;
+    }
+    .rail-track {
+      position: relative;
+      flex: 1;
+      height: 18px;
+      border-radius: 999px;
+      background: #efe3ce;
+      border: 3px solid #241d1a;
+      overflow: hidden;
+    }
+    .rail-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f6c945;
+      transform-origin: left center;
+    }
+    .rail-steps {
+      font-weight: 900;
+      font-size: 28px;
+      color: #241d1a;
+      white-space: nowrap;
+    }
+    /* Shared Kinetic HUD Area (y = 84..590px inside .hud-safe) */
+    .phase-slot {
+      position: absolute;
+      top: 86px;
+      left: 0;
+      width: 872px;
+    }
+    .eyebrow-pill {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 999px;
+      background: #f9d14b;
+      color: #241d1a;
+      border: 4px solid #241d1a;
+      box-shadow: 0 6px 0 #cca023;
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+    }
+    .eyebrow-dark {
+      background: #241d1a;
+      color: #fdf6ea;
+      box-shadow: 0 6px 0 #7a6657;
+    }
+    .eyebrow-mint {
+      background: #7be0b4;
+      color: #182b22;
+      box-shadow: 0 6px 0 #45a377;
+    }
+    .title-card {
+      margin-top: 14px;
+      padding: 18px 28px;
+      border-radius: 26px;
+      background: #fffcf5;
+      border: 4px solid #241d1a;
+      box-shadow: 0 10px 0 #d6c3a4;
+    }
+    .hero-title {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 52px;
+      line-height: 1.05;
+      color: #241d1a;
+      letter-spacing: -0.02em;
+    }
+    /* Hook WhatsApp Notification Card */
+    .wa-card-clip {
+      position: absolute;
+      top: 262px;
+      left: 0;
+      width: 872px;
+    }
+    .wa-card {
+      background: #fffcf5;
+      border: 4px solid #241d1a;
+      border-radius: 30px;
+      padding: 26px 32px;
+      box-shadow: 0 12px 0 #d6c3a4;
+    }
+    .sender-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 28px;
+      font-weight: 900;
+      color: #6b5548;
+      margin-bottom: 12px;
+    }
+    .sender-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #dc554b;
+      border: 3px solid #241d1a;
+    }
+    .wa-msg {
+      font-family: "Nunito", "Outfit", sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.24;
+      color: #241d1a;
+    }
+    .accent-urgente {
+      color: #b5342b;
+      font-weight: 900;
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+    }
+    /* Countdown Ring + Kinetic Numerals */
+    .cd-ring-stage {
+      position: absolute;
+      top: 190px;
+      left: 112px;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cd-dial {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: #fffcf5;
+      border: 6px solid #241d1a;
+      box-shadow: 0 14px 0 #cca023;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cd-svg {
+      position: absolute;
+      inset: -6px;
+      width: 300px;
+      height: 300px;
+      transform: rotate(-90deg);
+    }
+    .digit-slot {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .digit-num {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 144px;
+      line-height: 0.92;
+      color: #241d1a;
+    }
+    .digit-sub {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      color: #6b5548;
+      margin-top: 4px;
+    }
+    .digit-num-stolen {
+      color: #b5342b;
+    }
+    .grok-chip-clip {
+      position: absolute;
+      top: 242px;
+      left: 448px;
+      width: 406px;
+    }
+    .grok-chip {
+      background: #6d568c;
+      color: #fffcf5;
+      border: 4px solid #241d1a;
+      border-radius: 26px;
+      padding: 18px 22px;
+      box-shadow: 0 10px 0 #3f3154;
+    }
+    .grok-chip-title {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 30px;
+      color: #f9d14b;
+    }
+    .grok-chip-sub {
+      font-size: 28px;
+      font-weight: 800;
+      color: #fffcf5;
+      margin-top: 4px;
+    }
+    /* Reveal Verdict Banner + Individual Whip-Swapped Clue Card */
+    .verdict-clip {
+      position: absolute;
+      top: 86px;
+      left: 0;
+      width: 872px;
+    }
+    .verdict-banner {
+      padding: 22px 32px;
+      border-radius: 28px;
+      border: 5px solid #241d1a;
+      background: #dc554b;
+      color: #fffcf5;
+      box-shadow: 0 12px 0 #8c2e27;
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 62px;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+    .clue-stage-clip {
+      position: absolute;
+      top: 232px;
+      left: 0;
+      width: 872px;
+    }
+    .clue-card {
+      background: #fffcf5;
+      border: 4px solid #241d1a;
+      border-radius: 30px;
+      padding: 28px 32px;
+      box-shadow: 0 12px 0 #d6c3a4;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .clue-badge {
+      width: 96px;
+      height: 96px;
+      border-radius: 26px;
+      background: #f9d14b;
+      border: 4px solid #241d1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+    }
+    .clue-badge-top {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1;
+      color: #241d1a;
+    }
+    .clue-copy {
+      font-family: "Nunito", "Outfit", sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.24;
+      color: #241d1a;
+    }
+    /* Guardrail Rule & Finale CTA */
+    .guard-box-clip {
+      position: absolute;
+      top: 162px;
+      left: 0;
+      width: 872px;
+    }
+    .guard-card {
+      background: #fff9e6;
+      border: 5px solid #241d1a;
+      border-radius: 32px;
+      padding: 30px 34px;
+      box-shadow: 0 14px 0 #cca023;
+    }
+    .guard-title {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 40px;
+      color: #241d1a;
+      margin-bottom: 12px;
+    }
+    .guard-rule {
+      font-family: "Nunito", "Outfit", sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.24;
+      color: #241d1a;
+    }
+    .cta-box {
+      background: #241d1a;
+      color: #fdf6ea;
+      border: 5px solid #241d1a;
+      border-radius: 32px;
+      padding: 32px 36px;
+      box-shadow: 0 14px 0 #7a6657;
+    }
+    .cta-main {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 48px;
+      color: #f9d14b;
+      margin-bottom: 14px;
+    }
+    .cta-sub {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #fffcf5;
+    }
+    .cta-chip {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: #6d568c;
+      border: 3px solid #fffcf5;
+      color: #fffcf5;
+      font-size: 28px;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <div
+    id="root"
+    data-composition-id="caiste_p4_v2"
+    data-start="0"
+    data-duration="48.67"
+    data-width="1080"
+    data-height="1920"
+    data-fps="30"
+  >
+    <audio
+      id="master-audio"
+      class="clip"
+      src="assets/short_P4_cfe_master.wav"
+      data-start="0"
+      data-duration="48.67"
+      data-volume="1"
+      data-track-index="10"
+    ></audio>
+
+    <div id="stage-3d-wrap" data-layout-ignore>
+      <canvas id="world-3d" width="1080" height="1920"></canvas>
+    </div>
+
+    <div id="impact-flash" data-layout-ignore></div>
+
+    <div class="hud-safe">
+      <!-- ALWAYS-ON ASCENDING RAIL PROGRESS TRACKER -->
+      <div id="rail-hud" class="clip rail-hud-clip" data-start="0" data-duration="48.67">
+        <div id="rail-hud-inner" class="rail-hud">
+          <span class="rail-tag">RIELES ↑</span>
+          <div class="rail-track">
+            <div id="rail-fill-bar" class="rail-fill"></div>
+          </div>
+          <span id="rail-step-label" class="rail-steps">P4 · CFE</span>
+        </div>
+      </div>
+
+      <!-- FASE 1: HOOK (0.00 -> 11.74 s) -->
+      <div id="hook-head" class="clip phase-slot" data-start="0" data-duration="11.74">
+        <div id="hook-head-inner">
+          <div class="eyebrow-pill">NIVEL FÁCIL · 5 SEG</div>
+          <div class="title-card">
+            <h1 class="hero-title">¿TE CORTAN LA LUZ HOY?</h1>
+          </div>
+        </div>
+      </div>
+
+      <div id="wa-card" class="clip wa-card-clip" data-start="0" data-duration="11.74">
+        <div id="wa-card-inner" class="wa-card">
+          <div class="sender-row"><span class="sender-dot"></span>WhatsApp · Número desconocido</div>
+          <p class="wa-msg">
+            “Tu recibo de CFE venció. Paga $1,240 aquí <span id="wa-hl-1" class="accent-urgente">en 2 horas</span> o <span id="wa-hl-2" class="accent-urgente">cortamos la luz hoy</span>.”
+          </p>
+        </div>
+      </div>
+
+      <!-- FASE 2: CONTADOR + SEGUNDO ROBADO (11.74 -> 15.74 s, robo at 14.39 s) -->
+      <div id="cd-head" class="clip phase-slot" data-start="11.74" data-duration="4.0">
+        <div id="cd-head-inner">
+          <div class="eyebrow-pill eyebrow-dark">¿REAL O TRAMPA? · ¡DECIDE!</div>
+        </div>
+      </div>
+
+      <div id="cd-ring-wrap" class="clip cd-ring-stage" data-start="11.74" data-duration="4.0">
+        <div id="cd-dial-inner" class="cd-dial">
+          <svg class="cd-svg" viewBox="0 0 340 340">
+            <circle cx="170" cy="170" r="150" fill="none" stroke="#EFE3CE" stroke-width="18"></circle>
+            <circle
+              id="cd-arc"
+              cx="170"
+              cy="170"
+              r="150"
+              fill="none"
+              stroke="#E66B60"
+              stroke-width="18"
+              stroke-linecap="round"
+              stroke-dasharray="942.5"
+              stroke-dashoffset="0"
+            ></circle>
+          </svg>
+        </div>
+      </div>
+
+      <div id="digit-5" class="clip cd-ring-stage" data-start="11.74" data-duration="1.0">
+        <div id="digit-5-inner" class="digit-slot"><span class="digit-num">5</span><span class="digit-sub">SEG</span></div>
+      </div>
+      <div id="digit-4" class="clip cd-ring-stage" data-start="12.74" data-duration="1.0">
+        <div id="digit-4-inner" class="digit-slot"><span class="digit-num">4</span><span class="digit-sub">SEG</span></div>
+      </div>
+      <div id="digit-3" class="clip cd-ring-stage" data-start="13.74" data-duration="0.65">
+        <div id="digit-3-inner" class="digit-slot"><span class="digit-num">3</span><span class="digit-sub">SEG</span></div>
+      </div>
+      <div id="digit-2" class="clip cd-ring-stage" data-start="14.39" data-duration="0.35">
+        <div id="digit-2-inner" class="digit-slot"><span class="digit-num digit-num-stolen">2</span><span class="digit-sub">−1 SEG</span></div>
+      </div>
+      <div id="digit-1" class="clip cd-ring-stage" data-start="14.74" data-duration="1.0">
+        <div id="digit-1-inner" class="digit-slot"><span class="digit-num">1</span><span class="digit-sub">¡TIEMPO!</span></div>
+      </div>
+
+      <div id="grok-chip" class="clip grok-chip-clip" data-start="14.39" data-duration="1.35">
+        <div id="grok-chip-inner" class="grok-chip">
+          <div class="grok-chip-title">GROK · −1 SEG</div>
+          <div class="grok-chip-sub">¡Te lo robé!</div>
+        </div>
+      </div>
+
+      <!-- FASE 3: REVELACIÓN + 3 PISTAS UNO A LA VEZ (15.74 -> 35.44 s) -->
+      <div id="verdict-wrap" class="clip verdict-clip" data-start="15.74" data-duration="19.7">
+        <div id="verdict-inner" class="verdict-banner">❌ ¡ES TRAMPA!</div>
+      </div>
+
+      <div id="clue-1" class="clip clue-stage-clip" data-start="16.2" data-duration="6.6">
+        <div id="clue-1-inner" class="clue-card">
+          <div class="clue-badge"><span class="clue-badge-top">1/3</span></div>
+          <div class="clue-copy">CFE no cobra recibos ni amenaza cortes por WhatsApp particular.</div>
+        </div>
+      </div>
+
+      <div id="clue-2" class="clip clue-stage-clip" data-start="22.8" data-duration="6.2">
+        <div id="clue-2-inner" class="clue-card">
+          <div class="clue-badge"><span class="clue-badge-top">2/3</span></div>
+          <div class="clue-copy">Urgencia extrema (“en 2 horas”) sin datos reales de tu servicio.</div>
+        </div>
+      </div>
+
+      <div id="clue-3" class="clip clue-stage-clip" data-start="29.0" data-duration="6.44">
+        <div id="clue-3-inner" class="clue-card">
+          <div class="clue-badge"><span class="clue-badge-top">3/3</span></div>
+          <div class="clue-copy">¿Sentiste que faltó 1 segundo? Así presionan los estafadores.</div>
+        </div>
+      </div>
+
+      <!-- FASE 4: GUARDRAIL POCKET RULE (35.44 -> 41.60 s) & CTA FINALE (41.60 -> 48.67 s) -->
+      <div id="guard-pill" class="clip phase-slot" data-start="35.44" data-duration="13.23">
+        <div id="guard-pill-inner">
+          <div class="eyebrow-pill eyebrow-mint">GUARDRAIL · RIEL DE SEGURIDAD</div>
+        </div>
+      </div>
+
+      <div id="guard-card" class="clip guard-box-clip" data-start="35.44" data-duration="6.16">
+        <div id="guard-card-inner" class="guard-card">
+          <div class="guard-title">TU REGLA DE BOLSILLO</div>
+          <p class="guard-rule">Consulta y paga solo en la app CFE Contigo, portal oficial o centros autorizados.</p>
+        </div>
+      </div>
+
+      <div id="cta-card" class="clip guard-box-clip" data-start="41.6" data-duration="7.07">
+        <div id="cta-card-inner" class="cta-box">
+          <div class="cta-main">¿CAÍSTE O NO CAÍSTE?</div>
+          <div class="cta-sub">Comenta CAÍ o NO CAÍ</div>
+          <div class="cta-chip">¿Notaste el −1s que robó Grok?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Build readiness promise MUST exist before module initializes WebGL scene -->
+  <script>
+    window.__hf = window.__hf || {};
+    window.__hf.buildReady = window.__hf.buildReady || {};
+    window.__hf.buildReady["world3d"] = new Promise(function (resolve) {
+      window.__resolveWorld3d = resolve;
+    });
+  </script>
+
+  <script type="module">
+    import { initWorld3D } from "./world3d.js";
+
+    try {
+      const canvas = document.getElementById("world-3d");
+      const world = initWorld3D(canvas, {
+        hookStart: 0.0,
+        hookEnd: 11.74,
+        countdownStart: 11.74,
+        countdownEnd: 15.74,
+        stealTime: 14.39,
+        revealStart: 15.74,
+        revealEnd: 35.44,
+        guardrailStart: 35.44,
+        totalDuration: 48.67,
+      });
+
+      window.__renderWorld3d = world.renderAt;
+      window.addEventListener("hf-seek", (e) => {
+        if (e && e.detail && typeof e.detail.time === "number") {
+          world.renderAt(e.detail.time);
+        }
+      });
+
+      world.renderAt(0);
+    } catch (err) {
+      console.error("Failed to initialize world3d:", err);
+    } finally {
+      if (window.__resolveWorld3d) window.__resolveWorld3d();
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Continuous deterministic 3D world scrub synced with GSAP seek
+      const proxy = { t: 0 };
+      tl.fromTo(
+        proxy,
+        { t: 0 },
+        {
+          t: 48.67,
+          duration: 48.67,
+          ease: "none",
+          onUpdate: function () {
+            if (window.__renderWorld3d) window.__renderWorld3d(proxy.t);
+          },
+        },
+        0
+      );
+
+      // Top ascending progress bar fills steadily 0 -> 100%
+      tl.fromTo(
+        "#rail-fill-bar",
+        { scaleX: 0.08 },
+        { scaleX: 1.0, duration: 48.6, ease: "none" },
+        0
+      );
+
+      // Frame 0 visible immediately (never blank, crisp settle)
+      tl.fromTo("#hook-head-inner", { y: 12, scale: 0.96, opacity: 1 }, { y: 0, scale: 1.0, opacity: 1, duration: 0.35, ease: "power4.out" }, 0);
+      tl.fromTo("#wa-card-inner", { scale: 0.92, y: 14, opacity: 1 }, { scale: 1.0, y: 0, opacity: 1, duration: 0.42, ease: "back.out(1.6)" }, 0);
+      // Kinetic emphasis pulses inside Hook (matching audio narrative)
+      tl.fromTo("#wa-hl-1", { scale: 1.0 }, { scale: 1.08, duration: 0.25, ease: "power2.out" }, 4.2);
+      tl.to("#wa-hl-1", { scale: 1.0, duration: 0.3, ease: "power2.inOut" }, 4.8);
+      tl.fromTo("#wa-hl-2", { scale: 1.0 }, { scale: 1.08, duration: 0.25, ease: "power2.out" }, 7.9);
+      tl.to("#wa-hl-2", { scale: 1.0, duration: 0.3, ease: "power2.inOut" }, 8.5);
+      // Clean exit whip before Countdown
+      tl.to("#hook-head-inner", { x: -120, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power3.in" }, 11.48);
+      tl.to("#wa-card-inner", { x: -140, opacity: 0, filter: "blur(8px)", duration: 0.22, ease: "power3.in" }, 11.48);
+
+      // Countdown Ring & Numerals (11.74 -> 15.74)
+      tl.fromTo("#cd-head-inner", { y: -18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 11.74);
+      tl.fromTo("#cd-dial-inner", { scale: 0.78, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.3, ease: "back.out(1.7)" }, 11.74);
+      tl.fromTo("#cd-arc", { strokeDashoffset: 0 }, { strokeDashoffset: 942.5, duration: 4.0, ease: "none" }, 11.74);
+
+      tl.fromTo("#digit-5-inner", { scale: 0.7, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.2, ease: "back.out(2.0)" }, 11.74);
+      tl.fromTo("#digit-4-inner", { scale: 0.7, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.2, ease: "back.out(2.0)" }, 12.74);
+      tl.fromTo("#digit-3-inner", { scale: 0.7, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.2, ease: "back.out(2.0)" }, 13.74);
+      // Digit 2 shrinks & whips slightly DOWN-RIGHT inside its own lane, never colliding with Grok chip!
+      tl.fromTo(
+        "#digit-2-inner",
+        { scale: 1.05, x: 0, y: 0, rotation: 0, opacity: 1, filter: "blur(0px)" },
+        { scale: 0.45, x: 110, y: 120, rotation: 24, opacity: 0.05, filter: "blur(8px)", duration: 0.32, ease: "power3.in" },
+        14.39
+      );
+      tl.fromTo(
+        "#grok-chip-inner",
+        { x: 140, rotation: 8, opacity: 0 },
+        { x: 0, rotation: -3, opacity: 1, duration: 0.24, ease: "back.out(2.1)" },
+        14.39
+      );
+      tl.fromTo("#digit-1-inner", { scale: 0.75, opacity: 0 }, { scale: 1.04, opacity: 1, duration: 0.2, ease: "back.out(2.1)" }, 14.74);
+      // Exit Countdown cleanly
+      tl.to("#cd-dial-inner", { scale: 1.15, opacity: 0, duration: 0.2, ease: "power3.in" }, 15.5);
+
+      // Phase 3: Impact Flash + TRAMPA Stamp + Single Whip-Swapped Clue Cards
+      tl.fromTo("#impact-flash", { opacity: 0 }, { opacity: 0.34, duration: 0.08, ease: "power2.out" }, 15.74);
+      tl.to("#impact-flash", { opacity: 0, duration: 0.24, ease: "power2.out" }, 15.82);
+
+      tl.fromTo(
+        "#verdict-inner",
+        { scale: 0.68, opacity: 0, filter: "blur(6px)" },
+        { scale: 1.0, opacity: 1, filter: "blur(0px)", duration: 0.28, ease: "back.out(2.1)" },
+        15.74
+      );
+      tl.to("#verdict-inner", { y: -24, opacity: 0, duration: 0.2, ease: "power3.in" }, 35.2);
+
+      // Clue 1 (16.2 -> 22.8)
+      tl.fromTo("#clue-1-inner", { x: 90, opacity: 0, filter: "blur(6px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.26, ease: "power4.out" }, 16.2);
+      tl.to("#clue-1-inner", { x: -110, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power3.in" }, 22.56);
+
+      // Clue 2 (22.8 -> 29.0)
+      tl.fromTo("#clue-2-inner", { x: 90, opacity: 0, filter: "blur(6px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.26, ease: "power4.out" }, 22.8);
+      tl.to("#clue-2-inner", { x: -110, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power3.in" }, 28.76);
+
+      // Clue 3 (29.0 -> 35.44)
+      tl.fromTo("#clue-3-inner", { x: 90, opacity: 0, filter: "blur(6px)" }, { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.26, ease: "power4.out" }, 29.0);
+      tl.to("#clue-3-inner", { x: -110, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power3.in" }, 35.2);
+
+      // Phase 4: Guardrail Rule (35.44 -> 41.6) + CTA Finale (41.6 -> 48.67)
+      tl.fromTo("#guard-pill-inner", { y: -16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.25, ease: "power3.out" }, 35.44);
+      tl.fromTo("#guard-card-inner", { scale: 0.88, y: 20, opacity: 0 }, { scale: 1.0, y: 0, opacity: 1, duration: 0.34, ease: "back.out(1.6)" }, 35.44);
+      tl.to("#guard-card-inner", { x: -110, opacity: 0, filter: "blur(6px)", duration: 0.2, ease: "power3.in" }, 41.36);
+
+      tl.fromTo("#cta-card-inner", { x: 100, scale: 0.94, opacity: 0, filter: "blur(6px)" }, { x: 0, scale: 1.0, opacity: 1, filter: "blur(0px)", duration: 0.34, ease: "back.out(1.5)" }, 41.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["caiste_p4_v2"] = tl;
+    })();
+  </script>
+</body>
+</html>
