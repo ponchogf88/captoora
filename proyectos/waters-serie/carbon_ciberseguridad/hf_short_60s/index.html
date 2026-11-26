@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gemini 4 Carbon en Ciberseguridad · ¿Oro Puro o Puro Humo? (Short)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0e131b;
+      font-family: "Outfit", "Nunito", sans-serif;
+      color: #f8fafc;
+    }
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0e131b;
+    }
+    .bg-stage {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .halo-orb-a {
+      position: absolute;
+      width: 780px;
+      height: 780px;
+      left: -120px;
+      top: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56,189,248,0.28) 0%, rgba(56,189,248,0) 70%);
+    }
+    .halo-orb-b {
+      position: absolute;
+      width: 820px;
+      height: 820px;
+      right: -180px;
+      top: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,85,247,0.26) 0%, rgba(168,85,247,0) 70%);
+    }
+    .halo-orb-c {
+      position: absolute;
+      width: 680px;
+      height: 680px;
+      left: 160px;
+      top: 900px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(245,158,11,0.18) 0%, rgba(245,158,11,0) 70%);
+    }
+    /* Banda segura vertical estricta: y=172..1310px, x=64..936px (rail derecho 944..1080 y abajo 1330..1920 libres) */
+    .safe-stage {
+      position: absolute;
+      top: 172px;
+      left: 64px;
+      width: 872px;
+      height: 1138px;
+      z-index: 10;
+    }
+    .top-bar-clip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 872px;
+      height: 58px;
+    }
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 58px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: #161f2d;
+      border: 2px solid #2c3b52;
+    }
+    .top-tag {
+      font-family: "Space Mono", monospace;
+      font-size: 28px;
+      font-weight: 700;
+      color: #f9d14b;
+      white-space: nowrap;
+    }
+    .prog-track {
+      flex: 1;
+      height: 12px;
+      border-radius: 999px;
+      background: #233044;
+      overflow: hidden;
+    }
+    .prog-fill {
+      width: 100%;
+      height: 100%;
+      background: #38bdf8;
+      transform-origin: left center;
+    }
+    .scene-slot {
+      position: absolute;
+      top: 86px;
+      left: 0;
+      width: 872px;
+      height: 1020px;
+    }
+    .card {
+      background: #151e2b;
+      border: 3px solid #2e3f57;
+      border-radius: 34px;
+      padding: 36px 38px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+    .pill {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-family: "Space Mono", monospace;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+    .pill-amber { background: #f9d14b; color: #111827; }
+    .pill-cyan { background: #38bdf8; color: #081220; }
+    .pill-emerald { background: #34d399; color: #062116; }
+    .pill-rose { background: #fb7185; color: #2b0910; }
+    .h1 {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 56px;
+      line-height: 1.06;
+      color: #ffffff;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+    .sub {
+      font-family: "Nunito", "Outfit", sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.26;
+      color: #cbd5e1;
+    }
+    .source-chip {
+      margin-top: 26px;
+      padding: 18px 24px;
+      border-radius: 22px;
+      background: #101722;
+      border: 2px solid #28364a;
+      font-family: "Space Mono", monospace;
+      font-size: 28px;
+      color: #93c5fd;
+    }
+    /* Gráficas de barras animadas */
+    .bars-stack {
+      margin-top: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .bar-row {
+      background: #101722;
+      border: 2px solid #273549;
+      border-radius: 22px;
+      padding: 20px 24px;
+    }
+    .bar-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+    }
+    .bar-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: #f1f5f9;
+    }
+    .bar-val {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 40px;
+      color: #38bdf8;
+    }
+    .bar-val-gold { color: #f9d14b; }
+    .bar-val-muted { color: #94a3b8; }
+    .bar-rail {
+      width: 100%;
+      height: 24px;
+      border-radius: 999px;
+      background: #1e293b;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      transform-origin: left center;
+    }
+    .fill-gold { background: #f9d14b; }
+    .fill-cyan { background: #38bdf8; }
+    .fill-slate { background: #64748b; }
+    .fine-list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .fine-item {
+      padding: 22px 26px;
+      border-radius: 24px;
+      background: #101722;
+      border-left: 8px solid #fb7185;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.24;
+      color: #f1f5f9;
+    }
+    .verdict-box {
+      margin-top: 26px;
+      padding: 28px 30px;
+      border-radius: 26px;
+      background: #f9d14b;
+      color: #111827;
+      border: 4px solid #ffffff;
+    }
+    .verdict-title {
+      font-family: "Archivo Black", "Outfit", sans-serif;
+      font-size: 44px;
+      line-height: 1.08;
+      margin-bottom: 10px;
+    }
+    .verdict-sub {
+      font-size: 32px;
+      font-weight: 800;
+      color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="carbon_short_60s" data-start="0" data-duration="73.14" data-width="1080" data-height="1920" data-fps="30">
+    <audio id="master-audio" class="clip" src="assets/carbon_short_60s_master.wav" data-start="0" data-duration="73.14" data-volume="1" data-track-index="10"></audio>
+
+    <div class="bg-stage" data-layout-ignore>
+      <div id="orb-a" class="halo-orb-a"></div>
+      <div id="orb-b" class="halo-orb-b"></div>
+      <div id="orb-c" class="halo-orb-c"></div>
+    </div>
+
+    <div class="safe-stage">
+      <div id="top-bar" class="clip top-bar-clip" data-start="0" data-duration="73.14">
+        <div id="top-bar-inner" class="top-bar">
+          <span class="top-tag">AUDITORÍA IA</span>
+          <div class="prog-track"><div id="prog-fill-bar" class="prog-fill"></div></div>
+        </div>
+      </div>
+
+      <!-- S1: HOOK -->
+      <div id="sc-1" class="clip scene-slot" data-start="0.15" data-duration="6.97">
+        <div id="sc-1-inner" class="card">
+          <div class="pill pill-amber">¿ORO PURO O PURO HUMO?</div>
+          <h1 class="h1">¿Gemini 4 Carbon es el rey en ciberseguridad?</h1>
+          <p class="sub">Google lo presume en Grande y lo abrió en Google Pro. Revisamos los datos reales.</p>
+          <div class="source-chip">3 benchmarks públicos + letra chiquita</div>
+        </div>
+      </div>
+
+      <!-- S2: SEC-BENCH PRO -->
+      <div id="sc-2" class="clip scene-slot" data-start="7.12" data-duration="10.81">
+        <div id="sc-2-inner" class="card">
+          <div class="pill pill-cyan">PRUEBA 1 · DETECCIÓN</div>
+          <h1 class="h1">SEC-bench Pro (Docker real)</h1>
+          <p class="sub">Cacería de fallos y PoC en V8, SpiderMonkey y kernel Linux.</p>
+          <div class="bars-stack">
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">Gemini 4 Carbon</span><span class="bar-val bar-val-gold">88.2%</span></div>
+              <div class="bar-rail"><div id="s2-b1" class="bar-fill fill-gold" style="width:88.2%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">GPT-6.2 Astra</span><span class="bar-val">~86.7%</span></div>
+              <div class="bar-rail"><div id="s2-b2" class="bar-fill fill-cyan" style="width:86.7%;"></div></div>
+            </div>
+          </div>
+          <div class="source-chip">Fuente: Model Card DeepMind / SEC-bench Pro</div>
+        </div>
+      </div>
+
+      <!-- S3: EXPLOITGYM -->
+      <div id="sc-3" class="clip scene-slot" data-start="17.93" data-duration="16.17">
+        <div id="sc-3-inner" class="card">
+          <div class="pill pill-cyan">PRUEBA 2 · EXPLOTACIÓN</div>
+          <h1 class="h1">ExploitGym (898 fallos reales)</h1>
+          <p class="sub">UC Berkeley + Max Planck + labs: encadenar un exploit funcional.</p>
+          <div class="bars-stack">
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">Gemini 4 Carbon</span><span class="bar-val bar-val-gold">54.8%</span></div>
+              <div class="bar-rail"><div id="s3-b1" class="bar-fill fill-gold" style="width:75%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">GPT-6 Astra</span><span class="bar-val">42.4%</span></div>
+              <div class="bar-rail"><div id="s3-b2" class="bar-fill fill-cyan" style="width:58%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">Claude Opus 5.5</span><span class="bar-val bar-val-muted">34.5%</span></div>
+              <div class="bar-rail"><div id="s3-b3" class="bar-fill fill-slate" style="width:47%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S4: CWE-BENCH -->
+      <div id="sc-4" class="clip scene-slot" data-start="34.1" data-duration="15.13">
+        <div id="sc-4-inner" class="card">
+          <div class="pill pill-emerald">PRUEBA 3 · PARCHES</div>
+          <h1 class="h1">CWE-bench (Collinear AI)</h1>
+          <p class="sub">Auditar repo sin pista de ubicación y parchar sin romper la app.</p>
+          <div class="bars-stack">
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">Gemini 4 Carbon</span><span class="bar-val bar-val-gold">71.0%</span></div>
+              <div class="bar-rail"><div id="s4-b1" class="bar-fill fill-gold" style="width:71%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">OpenAI (Astra)</span><span class="bar-val">~68.0%</span></div>
+              <div class="bar-rail"><div id="s4-b2" class="bar-fill fill-cyan" style="width:68%;"></div></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-head"><span class="bar-name">Anthropic (Opus)</span><span class="bar-val bar-val-muted">~67.0%</span></div>
+              <div class="bar-rail"><div id="s4-b3" class="bar-fill fill-slate" style="width:67%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S5: LETRA CHIQUITA -->
+      <div id="sc-5" class="clip scene-slot" data-start="49.23" data-duration="14.89">
+        <div id="sc-5-inner" class="card">
+          <div class="pill pill-rose">⚠️ LA LETRA CHIQUITA</div>
+          <h1 class="h1">Lo que casi nadie cuenta</h1>
+          <div class="fine-list">
+            <div id="s5-i1" class="fine-item">1. Las 3 pruebas usan reglas distintas: NO se suman ni dan 100% seguro.</div>
+            <div id="s5-i2" class="fine-item">2. Astra sacó 100% en ExploitBench y Claude Fable compite duro en código diario.</div>
+            <div id="s5-i3" class="fine-item">3. Carbon razona más largo: quema mucho más cuota de thinking tokens.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S6: VEREDICTO + CTA -->
+      <div id="sc-6" class="clip scene-slot" data-start="64.12" data-duration="9.02">
+        <div id="sc-6-inner" class="card">
+          <div class="pill pill-amber">REGLA PRÁCTICA · GOOGLE PRO</div>
+          <h1 class="h1">Úsalo como cirujano, no para todo</h1>
+          <p class="sub">Audita repos o bugs críticos con Carbon; deja lo diario en modelos ligeros.</p>
+          <div id="s6-verdict" class="verdict-box">
+            <div class="verdict-title">COMENTA: CARBON</div>
+            <div class="verdict-sub">Te paso los links a los 3 estudios reales.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // Fondo Halo continuo (evita tramos estáticos)
+      tl.fromTo("#orb-a", { x: 0, y: 0 }, { x: 160, y: 120, duration: 73.14, ease: "sine.inOut" }, 0);
+      tl.fromTo("#orb-b", { x: 0, y: 0 }, { x: -140, y: -110, duration: 73.14, ease: "sine.inOut" }, 0);
+      tl.fromTo("#orb-c", { scale: 0.9 }, { scale: 1.15, duration: 73.14, ease: "sine.inOut" }, 0);
+      tl.fromTo("#prog-fill-bar", { scaleX: 0.03 }, { scaleX: 1.0, duration: 73.14, ease: "none" }, 0);
+
+      // Frame 0 inmediato
+      tl.fromTo("#sc-1-inner", { y: 12, scale: 0.97, opacity: 1 }, { y: 0, scale: 1, opacity: 1, duration: 0.35, ease: "power4.out" }, 0.15);
+      tl.to("#sc-1-inner", { x: -90, opacity: 0, duration: 0.22, ease: "power3.in" }, 6.9);
+
+      // S2
+      tl.fromTo("#sc-2-inner", { x: 90, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 7.12);
+      tl.fromTo("#s2-b1", { scaleX: 0.05 }, { scaleX: 1, duration: 0.75, ease: "power4.out" }, 7.47);
+      tl.fromTo("#s2-b2", { scaleX: 0.05 }, { scaleX: 1, duration: 0.75, ease: "power4.out" }, 7.67);
+      tl.to("#sc-2-inner", { x: -90, opacity: 0, duration: 0.22, ease: "power3.in" }, 17.71);
+
+      // S3
+      tl.fromTo("#sc-3-inner", { x: 90, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 17.93);
+      tl.fromTo("#s3-b1", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 18.33);
+      tl.fromTo("#s3-b2", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 18.58);
+      tl.fromTo("#s3-b3", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 18.83);
+      tl.to("#sc-3-inner", { x: -90, opacity: 0, duration: 0.22, ease: "power3.in" }, 33.88);
+
+      // S4
+      tl.fromTo("#sc-4-inner", { x: 90, opacity: 0 }, { x: 0, opacity: 1, duration: 0.3, ease: "power4.out" }, 34.1);
+      tl.fromTo("#s4-b1", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 34.5);
+      tl.fromTo("#s4-b2", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 34.75);
+      tl.fromTo("#s4-b3", { scaleX: 0.05 }, { scaleX: 1, duration: 0.7, ease: "power4.out" }, 35.0);
+      tl.to("#sc-4-inner", { x: -90, opacity: 0, duration: 0.22, ease: "power3.in" }, 49.01);
+
+      // S5
+      tl.fromTo("#sc-5-inner", { scale: 0.94, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.4)" }, 49.23);
+      tl.fromTo("#s5-i1", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.32, ease: "power3.out" }, 49.53);
+      tl.fromTo("#s5-i2", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.32, ease: "power3.out" }, 51.03);
+      tl.fromTo("#s5-i3", { x: -24, opacity: 0 }, { x: 0, opacity: 1, duration: 0.32, ease: "power3.out" }, 52.63);
+      tl.to("#sc-5-inner", { x: -90, opacity: 0, duration: 0.22, ease: "power3.in" }, 63.9);
+
+      // S6
+      tl.fromTo("#sc-6-inner", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "power4.out" }, 64.12);
+      tl.fromTo("#s6-verdict", { scale: 0.88, opacity: 0 }, { scale: 1.0, opacity: 1, duration: 0.38, ease: "back.out(1.7)" }, 64.72);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["carbon_short_60s"] = tl;
+    })();
+  </script>
+</body>
+</html>

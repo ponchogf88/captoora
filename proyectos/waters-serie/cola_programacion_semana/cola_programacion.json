@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.0",
+  "titulo": "Cola Semanal de Programación · Captoora / ¡WATERS! / ¿Caíste o no caíste?",
+  "ventana": "2026-11-25 a 2026-12-01",
+  "estado_general": "en_prueba_hipotesis",
+  "plataformas_nativas_gratis": {
+    "tiktok": "https://www.tiktok.com/tiktokstudio",
+    "youtube": "https://studio.youtube.com",
+    "meta_ig_fb": "https://business.facebook.com"
+  },
+  "slots": [
+    {
+      "orden": "01",
+      "archivo_cola": "01_MIE_2000_CAISTE_P4_V2.mp4",
+      "fecha_mx": "2026-11-25 20:00",
+      "serie": "¿Caíste o no caíste?",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      "titulo": "¿Caerás en el recibo falso de CFE? (Pon atención al reloj)",
+      "cta_palabra": "CAÍ / NO CAÍ / GUARDRAILS",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/caiste-o-no-caiste/renders/CAISTE_SHORT_01_P4_CFE_V2_DYNAMIC.mp4"
+    },
+    {
+      "orden": "02",
+      "archivo_cola": "02_JUE_1200_WATERS_EP08_SAT.mp4",
+      "fecha_mx": "2026-11-26 12:00",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      "titulo": "Claude como contador vs regalar tu e.firma (.cer/.key) al SAT",
+      "cta_palabra": "CONTADOR",
+      "lead_magnet_pdf": "proyectos/waters-serie/lead_magnets/GUIA_CONTADOR_IA_SAT_CAPTOORA.pdf",
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_CHISPA_EP08_CLAUDE_CONTADOR_SAT_60S.mp4"
+    },
+    {
+      "orden": "03",
+      "archivo_cola": "03_JUE_2200_WATERS_MAD08_CUOTA.mp4",
+      "fecha_mx": "2026-11-26 22:00",
+      "serie": "Historias de Madrugada",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels"],
+      "titulo": "Es por el bien de tu cuota (cuando el bot te frena a las 2 a.m.)",
+      "cta_palabra": "CUOTA",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_CHISPA_MAD08_CUOTA_45S.mp4"
+    },
+    {
+      "orden": "04",
+      "archivo_cola": "04_VIE_1200_ORO_CARBON_SHORT_60S.mp4",
+      "fecha_mx": "2026-11-27 12:00",
+      "serie": "¿Oro Puro o Puro Humo?",
+      "formato": "9:16 (1080x1920, 73.2s)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      "titulo": "¿Gemini 4 Carbon sí es el rey en ciberseguridad? 3 pruebas + letra chiquita",
+      "cta_palabra": "CARBON",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/ORO_CARBON_CIBERSEGURIDAD_SHORT_60S.mp4"
+    },
+    {
+      "orden": "05",
+      "archivo_cola": "05_VIE_2000_ORO_CARBON_EXPLICATIVO_3MIN.mp4",
+      "fecha_mx": "2026-11-27 20:00",
+      "serie": "¿Oro Puro o Puro Humo? · Deep Dive",
+      "formato": "16:9 (1920x1080, 273.2s)",
+      "canales": ["YouTube Largo", "LinkedIn", "X (Twitter)"],
+      "titulo": "Gemini 4 Carbon vs Astra, Opus, Fable y Grok en Ciberseguridad: Fuentes y Letra Chiquita",
+      "cta_palabra": "AUDITA",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/ORO_CARBON_CIBERSEGURIDAD_EXPLICATIVO_3MIN.mp4"
+    },
+    {
+      "orden": "06",
+      "archivo_cola": "06_SAB_1200_WATERS_EP09_APPLE.mp4",
+      "fecha_mx": "2026-11-28 12:00",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      "titulo": "Apple Intelligence en tu iPhone: dónde termina tu privacidad y dónde va a la nube",
+      "cta_palabra": "APPLE",
+      "lead_magnet_pdf": "proyectos/waters-serie/lead_magnets/CHECKLIST_BLINDAJE_APPLE_INTELLIGENCE.pdf",
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_CHISPA_EP09_APPLE_60S.mp4"
+    },
+    {
+      "orden": "07",
+      "archivo_cola": "07_SAB_2200_WATERS_MAD09_SIRI.mp4",
+      "fecha_mx": "2026-11-28 22:00",
+      "serie": "Historias de Madrugada",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels"],
+      "titulo": "Lo que pasa cuando dejas a Siri y los permisos abiertos de madrugada",
+      "cta_palabra": "SIRI",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_CHISPA_MAD09_SIRI_45S.mp4"
+    },
+    {
+      "orden": "08",
+      "archivo_cola": "08_DOM_1200_WATERS_EP05_FABLE_VS_HYDROGEN.mp4",
+      "fecha_mx": "2026-11-29 12:00",
+      "serie": "¡WATERS! FinOps",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels"],
+      "titulo": "Fable vs Hydrogen: cómo no quemar tu cuota pagando cañón donde basta resortera",
+      "cta_palabra": "FINOPS",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_NEON3D_EP05_FABLE5_VS_HYDROGEN_60S.mp4"
+    },
+    {
+      "orden": "09",
+      "archivo_cola": "09_LUN_1200_WATERS_EP03_TONY_FINOPS.mp4",
+      "fecha_mx": "2026-11-30 12:00",
+      "serie": "¡WATERS! FinOps",
+      "formato": "9:16 (1080x1920)",
+      "canales": ["TikTok", "YouTube Shorts", "Instagram Reels"],
+      "titulo": "Por qué se acaba tu cuota a mitad de mes y cómo administrarla como ingeniero",
+      "cta_palabra": "CUOTA",
+      "lead_magnet_pdf": null,
+      "source_mp4": "proyectos/waters-serie/renders/WATERS_HYBRID_EP03_TONY_CUOTA_FINOPS_60S.mp4"
+    }
+  ]
+}

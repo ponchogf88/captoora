@@ -1,0 +1,213 @@
+{
+  "short_60s": {
+    "total_duration": 73.14,
+    "total_chars": 946,
+    "master_wav": "proyectos/waters-serie/carbon_ciberseguridad/audio/carbon_short_60s_master.wav",
+    "clips": [
+      {
+        "id": "S1_hook",
+        "chapter": "S1_hook",
+        "start": 0.15,
+        "voice_end": 6.87,
+        "end": 7.12,
+        "duration": 6.97,
+        "voice_dur": 6.72,
+        "chars": 114,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S1_hook.mp3"
+      },
+      {
+        "id": "S2_secbench",
+        "chapter": "S2_secbench",
+        "start": 7.12,
+        "voice_end": 17.68,
+        "end": 17.93,
+        "duration": 10.81,
+        "voice_dur": 10.56,
+        "chars": 144,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S2_secbench.mp3"
+      },
+      {
+        "id": "S3_exploitgym",
+        "chapter": "S3_exploitgym",
+        "start": 17.93,
+        "voice_end": 33.85,
+        "end": 34.1,
+        "duration": 16.17,
+        "voice_dur": 15.92,
+        "chars": 217,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S3_exploitgym.mp3"
+      },
+      {
+        "id": "S4_cwebench",
+        "chapter": "S4_cwebench",
+        "start": 34.1,
+        "voice_end": 48.98,
+        "end": 49.23,
+        "duration": 15.13,
+        "voice_dur": 14.88,
+        "chars": 169,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S4_cwebench.mp3"
+      },
+      {
+        "id": "S5_letrachiquita",
+        "chapter": "S5_letrachiquita",
+        "start": 49.23,
+        "voice_end": 63.87,
+        "end": 64.12,
+        "duration": 14.89,
+        "voice_dur": 14.64,
+        "chars": 171,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S5_letrachiquita.mp3"
+      },
+      {
+        "id": "S6_cta",
+        "chapter": "S6_cta",
+        "start": 64.12,
+        "voice_end": 72.44,
+        "end": 72.79,
+        "duration": 8.67,
+        "voice_dur": 8.32,
+        "chars": 131,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/short_60s/S6_cta.mp3"
+      }
+    ]
+  },
+  "explainer_3min": {
+    "total_duration": 273.17,
+    "total_chars": 3769,
+    "master_wav": "proyectos/waters-serie/carbon_ciberseguridad/audio/carbon_explainer_3min_master.wav",
+    "clips": [
+      {
+        "id": "L01_hook",
+        "chapter": "01 · El Reclamo",
+        "start": 0.15,
+        "voice_end": 21.51,
+        "end": 21.86,
+        "duration": 21.71,
+        "voice_dur": 21.36,
+        "chars": 278,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L01_hook.mp3"
+      },
+      {
+        "id": "L02_origen",
+        "chapter": "02 · Origen",
+        "start": 21.86,
+        "voice_end": 41.62,
+        "end": 41.97,
+        "duration": 20.11,
+        "voice_dur": 19.76,
+        "chars": 312,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L02_origen.mp3"
+      },
+      {
+        "id": "L03_secbench",
+        "chapter": "03 · SEC-bench Pro",
+        "start": 41.97,
+        "voice_end": 67.81,
+        "end": 68.16,
+        "duration": 26.19,
+        "voice_dur": 25.84,
+        "chars": 351,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L03_secbench.mp3"
+      },
+      {
+        "id": "L04_exploitgym",
+        "chapter": "04 · ExploitGym",
+        "start": 68.16,
+        "voice_end": 104.0,
+        "end": 104.35,
+        "duration": 36.19,
+        "voice_dur": 35.84,
+        "chars": 485,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L04_exploitgym.mp3"
+      },
+      {
+        "id": "L05_cwebench",
+        "chapter": "05 · CWE-bench",
+        "start": 104.35,
+        "voice_end": 128.19,
+        "end": 128.54,
+        "duration": 24.19,
+        "voice_dur": 23.84,
+        "chars": 345,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L05_cwebench.mp3"
+      },
+      {
+        "id": "L06_vs_astra_fable",
+        "chapter": "06 · Vs Astra y Fable",
+        "start": 128.54,
+        "voice_end": 157.66,
+        "end": 158.01,
+        "duration": 29.47,
+        "voice_dur": 29.12,
+        "chars": 439,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L06_vs_astra_fable.mp3"
+      },
+      {
+        "id": "L07_vs_grok",
+        "chapter": "06 · Vs Grok y Ranking",
+        "start": 158.01,
+        "voice_end": 189.05,
+        "end": 189.4,
+        "duration": 31.39,
+        "voice_dur": 31.04,
+        "chars": 418,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L07_vs_grok.mp3"
+      },
+      {
+        "id": "L08_letrachiquita_1",
+        "chapter": "07 · Letra Chiquita I",
+        "start": 189.4,
+        "voice_end": 214.92,
+        "end": 215.27,
+        "duration": 25.87,
+        "voice_dur": 25.52,
+        "chars": 327,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L08_letrachiquita_1.mp3"
+      },
+      {
+        "id": "L09_letrachiquita_2",
+        "chapter": "07 · Letra Chiquita II",
+        "start": 215.27,
+        "voice_end": 233.99,
+        "end": 234.34,
+        "duration": 19.07,
+        "voice_dur": 18.72,
+        "chars": 305,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L09_letrachiquita_2.mp3"
+      },
+      {
+        "id": "L10_finops_pro",
+        "chapter": "08 · Regla Google Pro",
+        "start": 234.34,
+        "voice_end": 249.94,
+        "end": 250.29,
+        "duration": 15.95,
+        "voice_dur": 15.6,
+        "chars": 234,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L10_finops_pro.mp3"
+      },
+      {
+        "id": "L11_cta",
+        "chapter": "09 · Fuentes y CTA",
+        "start": 250.29,
+        "voice_end": 272.37,
+        "end": 272.82,
+        "duration": 22.53,
+        "voice_dur": 22.08,
+        "chars": 275,
+        "mp3": "proyectos/waters-serie/carbon_ciberseguridad/audio/cache/explainer_3min/L11_cta.mp3"
+      }
+    ]
+  },
+  "elevenlabs_quota_before": {
+    "character_count": 29438,
+    "character_limit": 61509,
+    "remaining": 32071
+  },
+  "elevenlabs_quota_after": {
+    "character_count": 31325,
+    "character_limit": 61509,
+    "remaining": 30184
+  }
+}
