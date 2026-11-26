@@ -48,7 +48,8 @@
       "titulo": "¿Por qué tu IA bloquea pruebas de seguridad en TU negocio? (3 candados locales)",
       "sticker": "stk_03_filtros_vs_auditoria.png",
       "cta": "SANDBOX",
-      "estado": "guion"
+      "estado": "render_listo",
+      "render_local": "renders/HRM03_sandbox_editorial_master.mp4"
     },
     {
       "id": "HRM-04",

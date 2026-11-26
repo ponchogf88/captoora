@@ -1,13 +1,13 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.6 (Taxonomía Diseño/Guion/Flujo + REF-13/14) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.7 (Taxonomía + REF-13/14 + S11 HRM-03) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.6",
+  schema_version: "1.7",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
     fecha_corte: "2026-11-26",
     meta_videos_validacion: 20,
     cuota_elevenlabs: {
-      disponible: 29754,
+      disponible: 29349,
       total: 61509,
       unidad: "caracteres"
     },
@@ -87,7 +87,7 @@ window.CAPTOORA_DATA = {
       cuando_se_quita: "Al validar duración y volumen exacto con ffprobe",
       tiempo_estimado: "5 min/pieza",
       estado: "Activo",
-      detalle: "Cuota actual cuidada: 29,754 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
+      detalle: "Cuota actual cuidada: 29,349 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
     },
     {
       paso: 4,
@@ -420,7 +420,7 @@ window.CAPTOORA_DATA = {
       url: "https://www.facebook.com/reel/1704404857935272",
       que_muestra: "Fórmula Storytelling 4 pasos (Stakes -> Big Question -> Head Fake -> Re-hook) + estética Editorial Crema (#F3EFEA) con personaje 2D de 4-5 poses y mini tarjetas UI coral.",
       que_obtuvimos: "Plantilla narrativa de retención (5-50s) + opción visual Editorial Crema ligera a $0 en HyperFrames sin 3D pesado.",
-      donde_vive: "proyectos/tablero-control/",
+      donde_vive: "proyectos/waters-serie/biblioteca_hermes_abliterated/04_piloto_hrm03_editorial_hf/",
       veredicto: "En prueba",
       nota: "84.2K vistas, 506 shares. Separar look Editorial Crema (Diseño) de la fórmula de loops (Guion y Hooks)."
     },
@@ -435,7 +435,7 @@ window.CAPTOORA_DATA = {
       url: "https://www.facebook.com/reel/2109012676419363",
       que_muestra: "Método Triple Hook para 0-5s (Contexto inmediato audio+visual+texto -> The Lean -> Contrarian Snapback) + diagramas Dark y contraste blanco 'Show Proof'.",
       que_obtuvimos: "Regla de apertura en segundo 0 + giro contrario para atacar directo MEJ-01; tarjetas blur y contraste Dark/Light en HyperFrames.",
-      donde_vive: "proyectos/tablero-control/",
+      donde_vive: "proyectos/waters-serie/biblioteca_hermes_abliterated/04_piloto_hrm03_editorial_hf/",
       veredicto: "En prueba",
       nota: "403K vistas. Se combina con REF-13: Kallaway (0-5s) + Marktalksai (5-50s)."
     }
@@ -628,6 +628,21 @@ window.CAPTOORA_DATA = {
       source_mp4: "proyectos/waters-serie/biblioteca_hermes_abliterated/renders/HRM01_abliterated_black_canvas_master.mp4",
       estado_slot: "En CapCut Pro",
       feedback: "En Redmi Note 8 (/sdcard/Movies/Captoora_CapCut/04_HERMES_BLACK_CANVAS/) para subtítulos CapCut Pro."
+    },
+    {
+      orden: "11",
+      archivo_cola: "11_HRM03_SANDBOX_EDITORIAL.mp4",
+      fecha_mx: "2026-12-01 12:00",
+      serie: "¡WATERS! Día · Editorial Crema",
+      formato: "9:16 · 71.1s",
+      canales: ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      titulo: "¿Por qué tu IA bloquea pruebas de seguridad en TU negocio? (3 candados)",
+      cta_palabra: "SANDBOX",
+      lead_magnet_pdf: null,
+      thumb: "thumbs/s11_hrm03_sandbox.jpg",
+      source_mp4: "proyectos/waters-serie/biblioteca_hermes_abliterated/renders/HRM03_sandbox_editorial_master.mp4",
+      estado_slot: "En CapCut Pro",
+      feedback: "En Redmi Note 8 (04_HERMES_BLACK_CANVAS/). Piloto Triple Hook + Attention Trap + Editorial Crema / Dark."
     }
   ],
 
@@ -665,14 +680,14 @@ window.CAPTOORA_DATA = {
       cuenta: "Cuenta principal",
       tipo: "Membership",
       icon: "elevenlabs",
-      disponible: 29754,
+      disponible: 29349,
       total: 61509,
       unidad: "chars",
       origen: "API verificada",
       corte: "2026-11-26",
       renovacion: "Por confirmar",
       url: "https://elevenlabs.io/app/subscription",
-      nota: "Saldo verificado vía API tras HRM-01 (31,755 usados / 29,754 disp.); recordatorio 08:00 AM."
+      nota: "Saldo verificado vía API tras HRM-03 (32,160 usados / 29,349 disp.); recordatorio 08:00 AM."
     },
     {
       id: "CTA-02",

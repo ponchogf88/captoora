@@ -1,0 +1,74 @@
+{
+  "hrm03": {
+    "total_duration": 71.12,
+    "total_chars": 1015,
+    "master_wav": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/hrm03_master.wav",
+    "clips": [
+      {
+        "id": "B1_triple_hook",
+        "chapter": "01 · Triple Hook (0-5s)",
+        "start": 0.15,
+        "voice_end": 12.79,
+        "end": 13.01,
+        "duration": 12.86,
+        "voice_dur": 12.64,
+        "chars": 204,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm03/B1_triple_hook.mp3"
+      },
+      {
+        "id": "B2_stakes",
+        "chapter": "02 · Stakes + Big Question",
+        "start": 13.01,
+        "voice_end": 28.45,
+        "end": 28.67,
+        "duration": 15.66,
+        "voice_dur": 15.44,
+        "chars": 223,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm03/B2_stakes.mp3"
+      },
+      {
+        "id": "B3_head_fake",
+        "chapter": "03 · Head Fake (Giro peligroso)",
+        "start": 28.67,
+        "voice_end": 47.07,
+        "end": 47.32,
+        "duration": 18.65,
+        "voice_dur": 18.4,
+        "chars": 246,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm03/B3_head_fake.mp3"
+      },
+      {
+        "id": "B4_candados",
+        "chapter": "04 · Tres Candados",
+        "start": 47.32,
+        "voice_end": 63.4,
+        "end": 63.62,
+        "duration": 16.3,
+        "voice_dur": 16.08,
+        "chars": 236,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm03/B4_candados.mp3"
+      },
+      {
+        "id": "B5_cta",
+        "chapter": "05 · CTA SANDBOX",
+        "start": 63.62,
+        "voice_end": 70.42,
+        "end": 70.77,
+        "duration": 7.15,
+        "voice_dur": 6.8,
+        "chars": 106,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm03/B5_cta.mp3"
+      }
+    ]
+  },
+  "elevenlabs_quota_before": {
+    "character_count": 31755,
+    "character_limit": 61509,
+    "remaining": 29754
+  },
+  "elevenlabs_quota_after": {
+    "character_count": 32160,
+    "character_limit": 61509,
+    "remaining": 29349
+  }
+}
