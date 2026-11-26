@@ -169,7 +169,7 @@
           <article class="panel">
             <header>
               <div>
-                <h2>Miniaturas en producción (2 publicados + 9 en cola)</h2>
+                <h2 id="overview-thumbs-title">Miniaturas en producción (2 publicados + 10 en cola)</h2>
                 <span class="meta">Cuadros reales extraídos de los MP4. Clic en cualquier miniatura para editar métricas o feedback.</span>
               </div>
               <a href="#cola" class="card-link">Cola</a>
@@ -278,7 +278,7 @@
           <div class="title-row">
             <div>
               <h1>Videos y guías de referencia</h1>
-              <p class="sub">Tus 11 referentes auditados: qué se aplicó, en qué archivo vive y qué parte se descartó.</p>
+              <p class="sub" id="refs-subtitle">Tus 14 referentes auditados, separados por Diseño, Guion y Hooks, y Flujo y Sistema.</p>
             </div>
             <div class="title-actions">
               <button type="button" class="btn-primary" id="btn-open-add-ref">
@@ -288,14 +288,21 @@
             </div>
           </div>
 
+          <div class="filters" role="group" aria-label="Filtrar referencias por tipo de inspiración">
+            <button type="button" class="filter-btn is-active" data-ref-type="all">Todos los tipos (<span class="num" id="ref-type-all">14</span>)</button>
+            <button type="button" class="filter-btn" data-ref-type="Diseño">Diseño (<span class="num" id="ref-type-diseno">7</span>)</button>
+            <button type="button" class="filter-btn" data-ref-type="Guion y Hooks">Guion y Hooks (<span class="num" id="ref-type-guion">7</span>)</button>
+            <button type="button" class="filter-btn" data-ref-type="Flujo y Sistema">Flujo y Sistema (<span class="num" id="ref-type-flujo">6</span>)</button>
+          </div>
+
           <div class="filters" role="group" aria-label="Filtrar referencias por veredicto">
-            <button type="button" class="filter-btn is-active" data-ref-filter="all">Todas (<span class="num" id="ref-count-all">11</span>)</button>
+            <button type="button" class="filter-btn is-active" data-ref-filter="all">Todas (<span class="num" id="ref-count-all">14</span>)</button>
             <button type="button" class="filter-btn" data-ref-filter="Adoptado">Adoptadas (<span class="num" id="ref-count-adoptado">8</span>)</button>
-            <button type="button" class="filter-btn" data-ref-filter="Parcial">Parciales (<span class="num" id="ref-count-parcial">2</span>)</button>
-            <button type="button" class="filter-btn" data-ref-filter="En prueba">En prueba (<span class="num" id="ref-count-prueba">1</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="Parcial">Parciales (<span class="num" id="ref-count-parcial">3</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="En prueba">En prueba (<span class="num" id="ref-count-prueba">3</span>)</button>
             <button type="button" class="filter-btn" data-ref-filter="Pirita">Pirita (<span class="num" id="ref-count-pirita">0</span>)</button>
             <span class="spacer"></span>
-            <span class="meta" id="refs-filter-summary">Mostrando 11 de 11</span>
+            <span class="meta" id="refs-filter-summary">Mostrando 14 de 14</span>
           </div>
 
           <article class="panel">
@@ -306,6 +313,7 @@
                     <th>Ref</th>
                     <th class="num">Fecha</th>
                     <th>Fuente</th>
+                    <th>Tipo</th>
                     <th>Qué vimos</th>
                     <th>Qué obtuvimos y ruta</th>
                     <th>Veredicto</th>

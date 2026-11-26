@@ -107,7 +107,18 @@
       }));
       const savedRefs = (parsed.referencias || base.referencias).map((r) => {
         const match = base.referencias.find((br) => br.id === r.id) || {};
-        return { ...match, ...r, plat_icon: r.plat_icon || match.plat_icon || "globe", thumb: r.thumb !== undefined ? r.thumb : match.thumb };
+        const hydratedTipos = (schemaChanged && Array.isArray(match.tipos) && match.tipos.length)
+          ? match.tipos
+          : (Array.isArray(r.tipos) && r.tipos.length)
+            ? r.tipos
+            : (match.tipos || ["Flujo y Sistema"]);
+        return {
+          ...match,
+          ...r,
+          tipos: hydratedTipos,
+          plat_icon: r.plat_icon || match.plat_icon || "globe",
+          thumb: r.thumb !== undefined ? r.thumb : match.thumb
+        };
       });
       const seenRefIds = new Set(savedRefs.map((r) => r.id));
       parsed.referencias = savedRefs.concat(base.referencias.filter((br) => !seenRefIds.has(br.id)));
@@ -140,9 +151,13 @@
     }
   }
 
+  const REF_TYPES = ["Diseño", "Guion y Hooks", "Flujo y Sistema"];
+  const typePillClass = (t) => (t === "Diseño" ? "pill-design" : t === "Guion y Hooks" ? "pill-story" : "pill-system");
+
   let state = loadState();
   let currentRoute = "overview";
   let refFilter = "all";
+  let refTypeFilter = "all";
   let colaFilter = "all";
   let quotaFilter = "all";
   let searchQuery = "";
@@ -224,6 +239,13 @@
       Pirita: refs.filter((r) => r.veredicto === "Pirita").length
     };
 
+    const refTypeCounts = {
+      all: refs.length,
+      "Diseño": refs.filter((r) => (r.tipos || []).includes("Diseño")).length,
+      "Guion y Hooks": refs.filter((r) => (r.tipos || []).includes("Guion y Hooks")).length,
+      "Flujo y Sistema": refs.filter((r) => (r.tipos || []).includes("Flujo y Sistema")).length
+    };
+
     const colaCounts = {
       all: cola.length,
       "Listo en disco": cola.filter((c) => c.estado_slot === "Listo en disco").length,
@@ -257,7 +279,7 @@
     const quotaPct = meta.cuota_elevenlabs.total > 0
       ? (meta.cuota_elevenlabs.disponible / meta.cuota_elevenlabs.total) * 100
       : 0;
-    return { totalPub, target, pctGoal, totalViews, avgViews, refCounts, colaCounts, colaPendientes, quotaCounts, quotaPct };
+    return { totalPub, target, pctGoal, totalViews, avgViews, refCounts, refTypeCounts, colaCounts, colaPendientes, quotaCounts, quotaPct };
   }
 
   function renderAll() {
@@ -278,6 +300,8 @@
     document.getElementById("kpi-refs-note").textContent = `${m.refCounts.Adoptado} adoptadas · ${m.refCounts.Parcial} parciales · ${m.refCounts["En prueba"]} en prueba`;
     document.getElementById("kpi-quota").innerHTML = `${fmtInt(state.meta.cuota_elevenlabs.disponible)} <span class="kpi-unit">chars</span>`;
     document.getElementById("kpi-quota-note").textContent = `${m.quotaPct.toFixed(1)}% de ${fmtInt(state.meta.cuota_elevenlabs.total)} disponibles`;
+    const thumbsTitle = document.getElementById("overview-thumbs-title");
+    if (thumbsTitle) thumbsTitle.textContent = `Miniaturas en producción (${m.totalPub} publicados + ${m.colaPendientes} en cola)`;
 
     renderRelayTrack();
     renderThumbStrip();
@@ -440,6 +464,15 @@
   }
 
   function renderReferencias(m) {
+    const refsSub = document.getElementById("refs-subtitle");
+    if (refsSub) {
+      refsSub.textContent = `Tus ${m.refCounts.all} referentes auditados, separados por Diseño, Guion y Hooks, y Flujo y Sistema.`;
+    }
+    document.getElementById("ref-type-all").textContent = m.refTypeCounts.all;
+    document.getElementById("ref-type-diseno").textContent = m.refTypeCounts["Diseño"];
+    document.getElementById("ref-type-guion").textContent = m.refTypeCounts["Guion y Hooks"];
+    document.getElementById("ref-type-flujo").textContent = m.refTypeCounts["Flujo y Sistema"];
+
     document.getElementById("ref-count-all").textContent = m.refCounts.all;
     document.getElementById("ref-count-adoptado").textContent = m.refCounts.Adoptado;
     document.getElementById("ref-count-parcial").textContent = m.refCounts.Parcial;
@@ -447,15 +480,16 @@
     document.getElementById("ref-count-pirita").textContent = m.refCounts.Pirita;
 
     const filtered = state.referencias.filter((r) => {
+      const okType = refTypeFilter === "all" || (r.tipos || []).includes(refTypeFilter);
       const okFilter = refFilter === "all" || r.veredicto === refFilter;
-      const okSearch = matchesSearch(`${r.id} ${r.fuente} ${r.plataforma} ${r.que_muestra} ${r.que_obtuvimos} ${r.donde_vive} ${r.nota}`);
-      return okFilter && okSearch;
+      const okSearch = matchesSearch(`${r.id} ${r.fuente} ${r.plataforma} ${(r.tipos || []).join(" ")} ${r.que_muestra} ${r.que_obtuvimos} ${r.donde_vive} ${r.nota}`);
+      return okType && okFilter && okSearch;
     });
 
     document.getElementById("refs-filter-summary").textContent = `Mostrando ${filtered.length} de ${m.refCounts.all}`;
     const tbody = document.getElementById("table-referencias-body");
     if (!filtered.length) {
-      tbody.innerHTML = `<tr><td colspan="7" class="empty-row">Ninguna referencia coincide con el filtro actual.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="8" class="empty-row">Ninguna referencia coincide con el filtro actual.</td></tr>`;
       return;
     }
 
@@ -467,6 +501,9 @@
       const visualSlot = r.thumb
         ? `<div class="ref-thumb-slot"><img src="${esc(r.thumb)}" alt="${esc(r.fuente)}"></div>`
         : `<div class="ref-thumb-slot" title="${esc(r.plataforma)}">${iconHtml(r.plat_icon)}</div>`;
+      const typeBadges = (r.tipos || ["Flujo y Sistema"]).map((t) =>
+        `<span class="pill ${typePillClass(t)}">${esc(t)}</span>`
+      ).join("");
 
       return `
         <tr>
@@ -481,6 +518,7 @@
               </div>
             </div>
           </td>
+          <td><div class="ref-type-pills">${typeBadges}</div></td>
           <td>${esc(r.que_muestra)}</td>
           <td>
             <div>${esc(r.que_obtuvimos)}</div>
@@ -898,6 +936,12 @@
             <label for="rf-obt">Qué extraemos o aplicamos</label>
             <textarea id="rf-obt" name="que_obtuvimos" required></textarea>
           </div>
+          <div class="form-field full">
+            <label>Tipo de inspiración</label>
+            <div class="check-group">
+              ${REF_TYPES.map((t) => `<label class="check-pill"><input type="checkbox" name="tipos" value="${esc(t)}" ${t === "Guion y Hooks" ? "checked" : ""}><span>${esc(t)}</span></label>`).join("")}
+            </div>
+          </div>
           <div class="form-field">
             <label for="rf-ver">Veredicto</label>
             <select id="rf-ver" name="veredicto">
@@ -924,12 +968,14 @@
         const fd = new FormData(e.target);
         const plat = String(fd.get("plataforma")).trim();
         const nextNum = String(state.referencias.length + 1).padStart(2, "0");
+        const selTipos = fd.getAll("tipos").map((v) => String(v).trim()).filter(Boolean);
         state.referencias.push({
           id: `REF-${nextNum}`,
           fecha: new Date().toISOString().slice(0, 10),
           fuente: String(fd.get("fuente")).trim(),
           plataforma: plat,
           plat_icon: channelIconKey(plat),
+          tipos: selTipos.length ? selTipos : ["Flujo y Sistema"],
           thumb: null,
           url: String(fd.get("url")).trim() || "Local",
           que_muestra: String(fd.get("que_muestra")).trim(),
@@ -962,6 +1008,12 @@
             </select>
           </div>
           <div class="form-field full">
+            <label>Tipo de inspiración</label>
+            <div class="check-group">
+              ${REF_TYPES.map((t) => `<label class="check-pill"><input type="checkbox" name="tipos" value="${esc(t)}" ${(ref.tipos || []).includes(t) ? "checked" : ""}><span>${esc(t)}</span></label>`).join("")}
+            </div>
+          </div>
+          <div class="form-field full">
             <label for="rn-nota">Nota o iteración</label>
             <textarea id="rn-nota" name="nota" autofocus>${esc(ref.nota || "")}</textarea>
           </div>
@@ -976,6 +1028,8 @@
       document.getElementById("ref-note-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const fd = new FormData(e.target);
+        const selTipos = fd.getAll("tipos").map((v) => String(v).trim()).filter(Boolean);
+        ref.tipos = selTipos.length ? selTipos : ["Flujo y Sistema"];
         ref.veredicto = fd.get("veredicto");
         ref.nota = String(fd.get("nota")).trim();
         saveState();
@@ -1183,6 +1237,14 @@
     const stBtn = e.target.closest("[data-station]");
     if (stBtn) {
       openStationModal(stBtn.dataset.station);
+      return;
+    }
+
+    const refTypeBtn = e.target.closest("[data-ref-type]");
+    if (refTypeBtn) {
+      refTypeFilter = refTypeBtn.dataset.refType;
+      document.querySelectorAll("[data-ref-type]").forEach((b) => b.classList.toggle("is-active", b === refTypeBtn));
+      renderAll();
       return;
     }
 

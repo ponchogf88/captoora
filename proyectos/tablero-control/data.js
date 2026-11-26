@@ -1,6 +1,6 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.5 (Dark + Miniaturas + Mini Logos + Cuotas + REF-12 + S10 HRM-01) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.6 (Taxonomía Diseño/Guion/Flujo + REF-13/14) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.5",
+  schema_version: "1.6",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
@@ -68,7 +68,7 @@ window.CAPTOORA_DATA = {
       cuando_se_quita: "Cuando das luz verde al diálogo y gancho inicial (0-2s)",
       tiempo_estimado: "20 min/pieza",
       estado: "Activo",
-      detalle: "Sin inventar cifras ni prometer oro antes de probar. Define qué va en 3D, qué va en HTML y qué texto irá aparte."
+      detalle: "Sin inventar cifras ni prometer oro antes de probar. Checklist activo: Triple Hook (0-5s) + Attention Trap (5-50s). Define qué va en 3D, qué va en HTML y qué texto irá aparte."
     },
     {
       paso: 3,
@@ -235,6 +235,7 @@ window.CAPTOORA_DATA = {
       fuente: "@heytrip3",
       plataforma: "Threads",
       plat_icon: "threads",
+      tipos: ["Guion y Hooks"],
       thumb: null,
       url: "https://www.threads.com/@heytrip3/post/Df1Pi7vkrFV",
       que_muestra: "Estructura de gancho corto y ritmo ágil para hilos convertidos en video.",
@@ -249,6 +250,7 @@ window.CAPTOORA_DATA = {
       fuente: "Monito 3D plastilina",
       plataforma: "Instagram",
       plat_icon: "instagram",
+      tipos: ["Diseño"],
       thumb: "thumbs/pub_02_ep07.jpg",
       url: "https://www.instagram.com/reels/DfccbDIibJE/",
       que_muestra: "Personaje 3D carismático estilo plastilina narrando temas tech sin rostro humano.",
@@ -263,6 +265,7 @@ window.CAPTOORA_DATA = {
       fuente: "Soy Vibecoder",
       plataforma: "Web / IG",
       plat_icon: "globe",
+      tipos: ["Guion y Hooks", "Flujo y Sistema"],
       thumb: null,
       url: "https://soyvibecoder.com/fabrica#app",
       que_muestra: "Sistema de palabra clave en comentarios que dispara guía PDF o recurso automático.",
@@ -277,6 +280,7 @@ window.CAPTOORA_DATA = {
       fuente: "Arneses y guardrails IA",
       plataforma: "Instagram",
       plat_icon: "instagram",
+      tipos: ["Flujo y Sistema"],
       thumb: "thumbs/pub_01_ep06.jpg",
       url: "https://www.instagram.com/reels/Df5AT_FDG3w/",
       que_muestra: "Riesgos prácticos cuando agentes de IA operan sin arneses, límites ni aprobación.",
@@ -291,6 +295,7 @@ window.CAPTOORA_DATA = {
       fuente: "Mascota 4K en cuadro",
       plataforma: "Facebook",
       plat_icon: "facebook",
+      tipos: ["Diseño"],
       thumb: "thumbs/slot_09_ep03_tony.jpg",
       url: "https://www.facebook.com/reel/1292935342988871",
       que_muestra: "Personaje anclado visualmente sin desarmarse ni desaparecer al mostrar pantallas.",
@@ -305,6 +310,7 @@ window.CAPTOORA_DATA = {
       fuente: "Estética nocturna (727K likes)",
       plataforma: "Instagram",
       plat_icon: "instagram",
+      tipos: ["Diseño"],
       thumb: "thumbs/slot_03_mad08_cuota.jpg",
       url: "https://www.instagram.com/reels/Df0giB1hM_C/",
       que_muestra: "Susurros, zooms lentos, diseño sonoro suave y clima nocturno (DedIkqJla4G / Df0giB1hM_C / DfQrytINxzD).",
@@ -319,6 +325,7 @@ window.CAPTOORA_DATA = {
       fuente: "Fórmula Reel Lynx Studios",
       plataforma: "PDF Local",
       plat_icon: "pdf",
+      tipos: ["Guion y Hooks"],
       thumb: null,
       url: "proyectos/waters-serie/referencias/formula-reel-lynxstudios.pdf",
       que_muestra: "Estructura de retención Hook -> Conflicto -> Resolución rápida -> CTA.",
@@ -333,6 +340,7 @@ window.CAPTOORA_DATA = {
       fuente: "Stack creativo video IA",
       plataforma: "Facebook / IG",
       plat_icon: "facebook",
+      tipos: ["Flujo y Sistema"],
       thumb: null,
       url: "https://www.facebook.com/reel/2002879277335603",
       que_muestra: "Promesa de automatización total con herramientas pesadas de video IA (más DgBaMBZT9bB).",
@@ -347,6 +355,7 @@ window.CAPTOORA_DATA = {
       fuente: "woodxbt · '16 repos. One take.'",
       plataforma: "X (Twitter)",
       plat_icon: "x",
+      tipos: ["Flujo y Sistema"],
       thumb: null,
       url: "https://x.com/woodxbt/status/2124482580896498142",
       que_muestra: "16 repositorios open source para video, UI y subtítulos sin pagar agencias.",
@@ -361,6 +370,7 @@ window.CAPTOORA_DATA = {
       fuente: "Short gamificado + CapCut Pro",
       plataforma: "YouTube",
       plat_icon: "youtube",
+      tipos: ["Diseño", "Guion y Hooks"],
       thumb: "thumbs/slot_01_caiste_p4.jpg",
       url: "https://www.youtube.com/watch?v=1stM4GBFeqQ",
       que_muestra: "Formato juego de detección rápida con temporizador, SFX de teclado y stickers visuales.",
@@ -375,6 +385,7 @@ window.CAPTOORA_DATA = {
       fuente: "Professor Glitch (Loop 4 pasos)",
       plataforma: "Facebook",
       plat_icon: "facebook",
+      tipos: ["Guion y Hooks", "Flujo y Sistema"],
       thumb: null,
       url: "https://www.facebook.com/share/v/1DZhe36KBy/",
       que_muestra: "Ciclo Ideas -> Guion -> Antes/Después -> Push multiplataforma + regla 20 videos (con pitch de pago).",
@@ -389,6 +400,7 @@ window.CAPTOORA_DATA = {
       fuente: "David Ondrej · Hermes Agent Abliterated",
       plataforma: "YouTube",
       plat_icon: "youtube",
+      tipos: ["Diseño", "Flujo y Sistema"],
       thumb: "thumbs/ref_12_hermes_abliterated.jpg",
       url: "https://www.youtube.com/watch?v=6kadyV1GkcE",
       que_muestra: "Agente autónomo Hermes (Nous Research) con modelos locales abliterated en Black Canvas, más patrocinio VPS.",
@@ -396,6 +408,36 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/waters-serie/biblioteca_hermes_abliterated/",
       veredicto: "Parcial",
       nota: "Cero re-subida ajena; bajado a hardware real (2 GB VRAM) y arquitectura defensiva."
+    },
+    {
+      id: "REF-13",
+      fecha: "2026-11-26",
+      fuente: "Marktalksai · The Attention Trap",
+      plataforma: "Facebook Reels",
+      plat_icon: "facebook",
+      tipos: ["Guion y Hooks", "Diseño"],
+      thumb: "thumbs/ref_13_marktalksai_storytelling.jpg",
+      url: "https://www.facebook.com/reel/1704404857935272",
+      que_muestra: "Fórmula Storytelling 4 pasos (Stakes -> Big Question -> Head Fake -> Re-hook) + estética Editorial Crema (#F3EFEA) con personaje 2D de 4-5 poses y mini tarjetas UI coral.",
+      que_obtuvimos: "Plantilla narrativa de retención (5-50s) + opción visual Editorial Crema ligera a $0 en HyperFrames sin 3D pesado.",
+      donde_vive: "proyectos/tablero-control/",
+      veredicto: "En prueba",
+      nota: "84.2K vistas, 506 shares. Separar look Editorial Crema (Diseño) de la fórmula de loops (Guion y Hooks)."
+    },
+    {
+      id: "REF-14",
+      fecha: "2026-11-26",
+      fuente: "Kallaway · The Triple Hook Method",
+      plataforma: "Facebook Reels",
+      plat_icon: "facebook",
+      tipos: ["Guion y Hooks", "Diseño"],
+      thumb: "thumbs/ref_14_kallaway_triple_hook.jpg",
+      url: "https://www.facebook.com/reel/2109012676419363",
+      que_muestra: "Método Triple Hook para 0-5s (Contexto inmediato audio+visual+texto -> The Lean -> Contrarian Snapback) + diagramas Dark y contraste blanco 'Show Proof'.",
+      que_obtuvimos: "Regla de apertura en segundo 0 + giro contrario para atacar directo MEJ-01; tarjetas blur y contraste Dark/Light en HyperFrames.",
+      donde_vive: "proyectos/tablero-control/",
+      veredicto: "En prueba",
+      nota: "403K vistas. Se combina con REF-13: Kallaway (0-5s) + Marktalksai (5-50s)."
     }
   ],
 
@@ -584,7 +626,7 @@ window.CAPTOORA_DATA = {
       lead_magnet_pdf: null,
       thumb: "thumbs/s10_hrm01_abliterated.jpg",
       source_mp4: "proyectos/waters-serie/biblioteca_hermes_abliterated/renders/HRM01_abliterated_black_canvas_master.mp4",
-      estado_slot: "Listo para CapCut",
+      estado_slot: "En CapCut Pro",
       feedback: "En Redmi Note 8 (/sdcard/Movies/Captoora_CapCut/04_HERMES_BLACK_CANVAS/) para subtítulos CapCut Pro."
     }
   ],

@@ -41,6 +41,10 @@
   --pill-accent-ink: #7bb4f5;
   --pill-neutral-bg: #212023;
   --pill-neutral-ink: #d4d4d8;
+  --pill-design-bg: #172538;
+  --pill-design-ink: #7bb4f5;
+  --pill-story-bg: #2e1d1a;
+  --pill-story-ink: #f49b82;
 
   --seg-cola: #355070;
 
@@ -103,6 +107,10 @@
   --pill-accent-ink: #0f4553;
   --pill-neutral-bg: #ebedee;
   --pill-neutral-ink: #353736;
+  --pill-design-bg: #e5f2f5;
+  --pill-design-ink: #0f4553;
+  --pill-story-bg: #ffedea;
+  --pill-story-ink: #831c1e;
 
   --seg-cola: #8fbac4;
 }
@@ -1255,6 +1263,46 @@ img, svg {
 .pill-neutral {
   background: var(--pill-neutral-bg);
   color: var(--pill-neutral-ink);
+}
+
+.ref-type-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.pill-design {
+  background: var(--pill-design-bg);
+  color: var(--pill-design-ink);
+}
+
+.pill-story {
+  background: var(--pill-story-bg);
+  color: var(--pill-story-ink);
+}
+
+.pill-system {
+  background: var(--pill-neutral-bg);
+  color: var(--pill-neutral-ink);
+}
+
+.check-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.check-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--control);
+  border-radius: var(--radius-control);
+  background: var(--raised);
+  font-size: 12px;
+  color: var(--text);
+  cursor: pointer;
 }
 
 /* Hypotheses */
