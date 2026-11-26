@@ -1,6 +1,6 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.2 (Dark + Miniaturas + Íconos + Cuotas) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.3 (Dark + Miniaturas + Mini Logos + Cuotas) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.2",
+  schema_version: "1.3",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
@@ -34,7 +34,11 @@ window.CAPTOORA_DATA = {
     {
       paso: 1,
       codigo: "EST-01",
-      icon: "terminal",
+      icon: "gemini",
+      logos: [
+        { key: "gemini", label: "Gemini" },
+        { key: "agy", label: "Antigravity" }
+      ],
       nombre: "Ideas y Filtro",
       responsable: "AGY + Tú",
       estacion: "iMac / CLI",
@@ -49,7 +53,12 @@ window.CAPTOORA_DATA = {
     {
       paso: 2,
       codigo: "EST-02",
-      icon: "file-code",
+      icon: "agy",
+      logos: [
+        { key: "gemini", label: "Gemini" },
+        { key: "agy", label: "Antigravity" },
+        { key: "file-code", label: "Guion JSON/MD" }
+      ],
       nombre: "Guion y Candados",
       responsable: "AGY + Tú",
       estacion: "iMac",
@@ -64,7 +73,11 @@ window.CAPTOORA_DATA = {
     {
       paso: 3,
       codigo: "EST-03",
-      icon: "waveform",
+      icon: "python",
+      logos: [
+        { key: "python", label: "Python" },
+        { key: "elevenlabs", label: "ElevenLabs" }
+      ],
       nombre: "Voz y Reloj",
       responsable: "Python + 11Labs",
       estacion: "iMac",
@@ -79,7 +92,11 @@ window.CAPTOORA_DATA = {
     {
       paso: 4,
       codigo: "EST-04",
-      icon: "cube",
+      icon: "threejs",
+      logos: [
+        { key: "threejs", label: "Three.js" },
+        { key: "hyperframes", label: "HyperFrames" }
+      ],
       nombre: "Visual Limpio",
       responsable: "Three.js / HyperFrames",
       estacion: "iMac",
@@ -94,7 +111,11 @@ window.CAPTOORA_DATA = {
     {
       paso: 5,
       codigo: "EST-05",
-      icon: "smartphone",
+      icon: "capcut",
+      logos: [
+        { key: "capcut", label: "CapCut Pro" },
+        { key: "smartphone", label: "Redmi Note 8" }
+      ],
       nombre: "CapCut Pro",
       responsable: "Tú en Redmi Note 8",
       estacion: "Redmi Note 8",
@@ -109,7 +130,13 @@ window.CAPTOORA_DATA = {
     {
       paso: 6,
       codigo: "EST-06",
-      icon: "calendar",
+      icon: "youtube",
+      logos: [
+        { key: "tiktok", label: "TikTok" },
+        { key: "youtube", label: "YouTube" },
+        { key: "instagram", label: "Instagram" },
+        { key: "facebook", label: "Facebook" }
+      ],
       nombre: "Programar y Medir",
       responsable: "TikTok / YT / Meta",
       estacion: "Web gratis",
@@ -125,7 +152,7 @@ window.CAPTOORA_DATA = {
 
   relevos_banca: [
     {
-      icon: "ban",
+      icon: "captions",
       herramienta: "Captions (app móvil)",
       estado: "Reemplazado",
       momento: "Retirado del flujo",
@@ -133,7 +160,7 @@ window.CAPTOORA_DATA = {
       accion: "No renovar suscripción aparte."
     },
     {
-      icon: "scissors",
+      icon: "opusclip",
       herramienta: "Opus Clip",
       estado: "Fase 2",
       momento: "Hito 4 (19 Dic+)",
@@ -141,7 +168,7 @@ window.CAPTOORA_DATA = {
       accion: "Usar con captions apagadas y bajar clips a EST-05."
     },
     {
-      icon: "waveform",
+      icon: "python",
       herramienta: "WhisperX (local)",
       estado: "Siguiente 20%",
       momento: "Fase 3 (Mac local)",
@@ -149,7 +176,7 @@ window.CAPTOORA_DATA = {
       accion: "Activar tras completar los primeros 20 videos."
     },
     {
-      icon: "layers",
+      icon: "threejs",
       herramienta: "Theatre.js + postprocessing + Lemo-Opuscar",
       estado: "Siguiente 20%",
       momento: "Fase 3 (3D largo)",
@@ -566,7 +593,7 @@ window.CAPTOORA_DATA = {
       herramienta: "ElevenLabs",
       cuenta: "Cuenta principal",
       tipo: "Membership",
-      icon: "waveform",
+      icon: "elevenlabs",
       disponible: 30184,
       total: 61509,
       unidad: "chars",
@@ -581,7 +608,7 @@ window.CAPTOORA_DATA = {
       herramienta: "OpusClip",
       cuenta: "Cuenta principal",
       tipo: "Free Trial",
-      icon: "scissors",
+      icon: "opusclip",
       disponible: null,
       total: null,
       unidad: "min / créditos",
@@ -596,7 +623,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Google AI Pro / Flow",
       cuenta: "Cuenta principal",
       tipo: "Membership",
-      icon: "cube",
+      icon: "gemini",
       disponible: 1050,
       total: null,
       unidad: "cr. Flow (hist.)",
@@ -611,7 +638,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Google AI Pro / Flow (Yare)",
       cuenta: "Cuenta Yare",
       tipo: "Membership",
-      icon: "cube",
+      icon: "gemini",
       disponible: 1050,
       total: null,
       unidad: "cr. Flow (hist.)",
@@ -626,7 +653,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Google AI Pro",
       cuenta: "Cuenta secundaria",
       tipo: "Membership",
-      icon: "cube",
+      icon: "gemini",
       disponible: null,
       total: null,
       unidad: "cr. Flow",
@@ -641,7 +668,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Canva Business",
       cuenta: "Cuenta estudio",
       tipo: "Membership",
-      icon: "layers",
+      icon: "canva",
       disponible: null,
       total: null,
       unidad: "plan activo",
@@ -656,7 +683,7 @@ window.CAPTOORA_DATA = {
       herramienta: "CapCut Pro",
       cuenta: "user3733613018365",
       tipo: "Membership",
-      icon: "smartphone",
+      icon: "capcut",
       disponible: null,
       total: null,
       unidad: "$30 MXN/mes",
@@ -671,7 +698,7 @@ window.CAPTOORA_DATA = {
       herramienta: "HeyGen Creator",
       cuenta: "Cuenta principal",
       tipo: "Membership",
-      icon: "eye",
+      icon: "heygen",
       disponible: 1051,
       total: null,
       unidad: "cr. premium (hist.)",
@@ -686,7 +713,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Evoto",
       cuenta: "Cuenta estudio",
       tipo: "Free Trial",
-      icon: "pencil",
+      icon: "evoto",
       disponible: 65,
       total: 65,
       unidad: "cr. prueba",
@@ -701,7 +728,7 @@ window.CAPTOORA_DATA = {
       herramienta: "SuperGrok",
       cuenta: "Cuenta principal",
       tipo: "Membership",
-      icon: "x",
+      icon: "grok",
       disponible: null,
       total: null,
       unidad: "plan activo",
@@ -716,7 +743,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Perplexity Pro",
       cuenta: "Cuenta principal",
       tipo: "Membership",
-      icon: "globe",
+      icon: "perplexity",
       disponible: null,
       total: null,
       unidad: "plan activo",
@@ -731,7 +758,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Pixieset",
       cuenta: "Estudio",
       tipo: "Membership",
-      icon: "archive",
+      icon: "pixieset",
       disponible: null,
       total: null,
       unidad: "galerías",
@@ -746,7 +773,7 @@ window.CAPTOORA_DATA = {
       herramienta: "iCloud+ 6 TB",
       cuenta: "Ecosistema Apple",
       tipo: "Membership",
-      icon: "archive",
+      icon: "icloud",
       disponible: null,
       total: 6,
       unidad: "TB",
@@ -761,7 +788,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Claude",
       cuenta: "Cuenta personal",
       tipo: "Gratis",
-      icon: "terminal",
+      icon: "claude",
       disponible: null,
       total: null,
       unidad: "ventanas 5h gratis",
@@ -776,7 +803,7 @@ window.CAPTOORA_DATA = {
       herramienta: "ChatGPT",
       cuenta: "Cuenta personal",
       tipo: "Gratis",
-      icon: "terminal",
+      icon: "chatgpt",
       disponible: null,
       total: null,
       unidad: "tier gratis",
@@ -791,7 +818,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Captions",
       cuenta: "Cuenta móvil",
       tipo: "Gratis",
-      icon: "smartphone",
+      icon: "captions",
       disponible: null,
       total: null,
       unidad: "tier gratis",
@@ -806,7 +833,7 @@ window.CAPTOORA_DATA = {
       herramienta: "TikTok / YT / Meta Studio",
       cuenta: "Canales Captoora",
       tipo: "Gratis",
-      icon: "calendar",
+      icon: "meta",
       disponible: null,
       total: null,
       unidad: "programación $0",
@@ -821,7 +848,7 @@ window.CAPTOORA_DATA = {
       herramienta: "HyperFrames + Remotion + Three.js + FFmpeg",
       cuenta: "iMac local",
       tipo: "Local $0",
-      icon: "cube",
+      icon: "hyperframes",
       disponible: null,
       total: null,
       unidad: "ilimitado local",
@@ -836,7 +863,7 @@ window.CAPTOORA_DATA = {
       herramienta: "Ollama",
       cuenta: "iMac local",
       tipo: "Local $0",
-      icon: "terminal",
+      icon: "ollama",
       disponible: null,
       total: null,
       unidad: "ilimitado local",

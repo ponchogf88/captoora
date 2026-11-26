@@ -41,7 +41,26 @@
     linkedin: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2.2" y="2.2" width="11.6" height="11.6" rx="1.8"/><path d="M5.2 7v4.2M5.2 5v.2M8 11.2V7m0 1.5a1.8 1.8 0 013.4.5v2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     x: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/></svg>',
     threads: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M9.8 8.2a1.9 1.9 0 11-1.8-2.2c1.1 0 1.8.8 1.8 2.3v1.2" stroke-linecap="round"/></svg>',
-    globe: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5a8 8 0 010 11 8 8 0 010-11z"/></svg>'
+    globe: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5a8 8 0 010 11 8 8 0 010-11z"/></svg>',
+    gemini: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 1.5C8.5 5.2 10.8 7.5 14.5 8c-3.7.5-6 2.8-6.5 6.5-.5-3.7-2.8-6-6.5-6.5 3.7-.5 6-2.8 6.5-6.5z" fill="currentColor" stroke="none"/></svg>',
+    agy: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><ellipse cx="8" cy="8" rx="6" ry="2.7" transform="rotate(-28 8 8)"/><circle cx="8" cy="8" r="1.9" fill="currentColor" stroke="none"/></svg>',
+    python: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2.1c-2.2 0-2.4 1-2.4 2.1v1.4h4v.7H4.2C2.9 6.3 2.1 7.2 2.1 8.8s.8 2.5 2.1 2.5h1.2V10c0-1.2.9-2.2 2.2-2.2h2.7c.9 0 1.5-.6 1.5-1.5V4.1c0-1.1-1.1-2-3.8-2z" stroke-linejoin="round"/><path d="M8 13.9c2.2 0 2.4-1 2.4-2.1v-1.4h-4v-.7h5.4c1.3 0 2.1-.9 2.1-2.5s-.8-2.5-2.1-2.5h-1.2V6c0 1.2-.9 2.2-2.2 2.2H5.7c-.9 0-1.5.6-1.5 1.5v2.2c0 1.1 1.1 2 3.8 2z" stroke-linejoin="round"/><circle cx="6.7" cy="3.8" r="0.6" fill="currentColor" stroke="none"/><circle cx="9.3" cy="12.2" r="0.6" fill="currentColor" stroke="none"/></svg>',
+    elevenlabs: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="4.5" y="2.5" width="2.3" height="11" rx="0.4" fill="currentColor" stroke="none"/><rect x="9.2" y="2.5" width="2.3" height="11" rx="0.4" fill="currentColor" stroke="none"/></svg>',
+    threejs: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.5 3L13.5 6.3 5.5 13.7z" stroke-linejoin="round"/><path d="M8 4.7L9.5 9.9 4 8.3zM8 4.7l1.5 5.2 4-3.6" stroke-linejoin="round"/></svg>',
+    hyperframes: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="2.8" width="12" height="10.4" rx="1.4"/><path d="M2 5.5h12M6.7 7.6l3.2 1.7-3.2 1.7V7.6z" stroke-linejoin="round"/></svg>',
+    capcut: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3 4.2l8.5 7.6M3 11.8l8.5-7.6M11.5 4.2h1.6M11.5 11.8h1.6" stroke-linecap="round"/></svg>',
+    opusclip: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="2.8" width="12" height="10.4" rx="2"/><path d="M6.2 5.8v4.4M9.2 5.8l3 2.2-3 2.2V5.8z" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    captions: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="3" width="12" height="10" rx="1.6"/><path d="M7 6.5a1.5 1.5 0 100 3M11 6.5a1.5 1.5 0 100 3" stroke-linecap="round"/></svg>',
+    canva: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.8"/><path d="M10.2 6.1a2.4 2.4 0 10.1 3.7" stroke-linecap="round"/></svg>',
+    claude: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2v12M2 8h12M3.8 3.8l8.4 8.4M12.2 3.8l-8.4 8.4" stroke-linecap="round"/></svg>',
+    chatgpt: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><polygon points="8,2 13,5 13,11 8,14 3,11 3,5" stroke-linejoin="round"/><circle cx="8" cy="8" r="2.1"/></svg>',
+    grok: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M3.5 12.5L12.5 3.5" stroke-linecap="round"/></svg>',
+    perplexity: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2v12M3.2 4.5l9.6 7M12.8 4.5l-9.6 7" stroke-linecap="round"/><rect x="4.5" y="4.5" width="7" height="7" rx="0.5"/></svg>',
+    heygen: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2L13.5 8 8 14 2.5 8z" stroke-linejoin="round"/><path d="M7 6.2l3 1.8-3 1.8V6.2z" fill="currentColor" stroke="none"/></svg>',
+    evoto: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M8 2.5l2.5 4.2M13.5 8h-5M11 12.8L8.5 8.5M5 12.8l2.5-4.3M2.5 8h5M5 3.2L7.5 7.5" stroke-linecap="round"/></svg>',
+    pixieset: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="3" width="12" height="10" rx="1.2"/><path d="M3.5 11.2l3-3 2.2 2 1.8-1.5 2 2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.5" cy="5.8" r="0.8" fill="currentColor" stroke="none"/></svg>',
+    icloud: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M4.8 12.5h6.7a2.5 2.5 0 00.3-5A3.6 3.6 0 005 6.8a2.8 2.8 0 00-.2 5.7z" stroke-linejoin="round"/></svg>',
+    ollama: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M5.5 13.5v-4L5 4.5 6.5 6h3L11 4.5l-.5 5v4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.8" cy="8.8" r="0.5" fill="currentColor" stroke="none"/><circle cx="9.2" cy="8.8" r="0.5" fill="currentColor" stroke="none"/></svg>'
   };
 
   const iconHtml = (name) => ICONS[name] || ICONS.globe;
@@ -74,7 +93,8 @@
       parsed.estaciones_relevo = (parsed.estaciones_relevo || base.estaciones_relevo).map((st, idx) => ({
         ...(base.estaciones_relevo[idx] || {}),
         ...st,
-        icon: (base.estaciones_relevo[idx] || {}).icon || st.icon || "terminal"
+        icon: (base.estaciones_relevo[idx] || {}).icon || st.icon || "terminal",
+        logos: (base.estaciones_relevo[idx] || {}).logos || st.logos || []
       }));
       parsed.relevos_banca = (parsed.relevos_banca || base.relevos_banca).map((b, idx) => ({
         ...(base.relevos_banca[idx] || {}),
@@ -96,7 +116,7 @@
       if (Array.isArray(parsed.cuotas)) {
         parsed.cuotas = parsed.cuotas.map((q) => {
           const match = base.cuotas.find((bq) => bq.id === q.id) || {};
-          return { ...match, ...q, icon: q.icon || match.icon || "gauge" };
+          return { ...match, ...q, icon: match.icon || q.icon || "gauge" };
         });
       } else {
         parsed.cuotas = base.cuotas;
@@ -257,6 +277,13 @@
     renderCuotas(m);
   }
 
+  function renderLogosStrip(logos) {
+    if (!logos || !logos.length) return "";
+    return `<div class="relay-logos">${logos.map((lg) =>
+      `<span class="brand-logo" title="${esc(lg.label)}" aria-label="${esc(lg.label)}">${iconHtml(lg.key)}</span>`
+    ).join("")}</div>`;
+  }
+
   function renderRelayTrack() {
     document.getElementById("relay-track").innerHTML = state.estaciones_relevo.map((st) => {
       const isCurrent = st.estado.toLowerCase().includes("turno");
@@ -267,6 +294,7 @@
             <span class="pill ${pillClassFor(st.estado)}">${esc(st.estado)}</span>
           </div>
           <div class="relay-title">${esc(st.nombre)}</div>
+          ${renderLogosStrip(st.logos)}
           <div class="relay-owner">${esc(st.responsable)}</div>
           <div class="relay-output">${esc(st.entrega)}</div>
         </button>
@@ -372,6 +400,7 @@
         <td>
           <div class="inline-icon-label cell-primary">${iconHtml(st.icon)}<span><span class="mono">${esc(st.codigo)}</span> · ${esc(st.nombre)}</span></div>
           <div class="cell-secondary">${esc(st.responsable)} · ${esc(st.estacion)}</div>
+          ${renderLogosStrip(st.logos)}
         </td>
         <td>${esc(st.entra)}</td>
         <td>${esc(st.entrega)}</td>
@@ -700,6 +729,7 @@
     if (!st) return;
     openModal(`${st.codigo} · ${st.nombre}`, `
       <dl class="detail-kv">
+        <dt>Herramientas</dt><dd>${renderLogosStrip(st.logos)}</dd>
         <dt>Responsable</dt><dd>${esc(st.responsable)}</dd>
         <dt>Estación</dt><dd>${esc(st.estacion)}</dd>
         <dt>Qué entra</dt><dd>${esc(st.entra)}</dd>
