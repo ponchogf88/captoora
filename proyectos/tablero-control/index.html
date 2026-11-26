@@ -57,6 +57,14 @@
           <span class="rail-badge num" id="nav-cola-count">9</span>
           <span class="rail-label">Cola</span>
         </a>
+        <a class="rail-item" href="#cuotas" data-route="cuotas" title="Cuotas y membresías" aria-label="Cuotas y membresías">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M3 11.5a5.5 5.5 0 1110 0" stroke-linecap="round"/>
+            <path d="M8 9l2.6-2.6" stroke-linecap="round"/>
+            <circle cx="8" cy="9.5" r="0.9" fill="currentColor"/>
+          </svg>
+          <span class="rail-label">Cuotas</span>
+        </a>
       </nav>
 
       <div class="rail-sep" aria-hidden="true"></div>
@@ -136,7 +144,7 @@
             <div class="kpi-cell">
               <div class="kpi-label">Cuota ElevenLabs</div>
               <div class="kpi-value num" id="kpi-quota">30,184 <span class="kpi-unit">chars</span></div>
-              <div class="kpi-note num" id="kpi-quota-note">49.1% de 61,509 disponibles</div>
+              <div class="kpi-note num"><span id="kpi-quota-note">49.1% de 61,509 disponibles</span> · <a href="#cuotas" class="inline-link" data-route="cuotas">Ver cuotas</a></div>
             </div>
           </div>
 
@@ -412,6 +420,102 @@
                   </tr>
                 </thead>
                 <tbody id="table-cola-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- VISTA 6: CUOTAS, MEMBRESÍAS Y GRATUITAS -->
+        <section id="view-cuotas" class="view" data-view="cuotas" hidden>
+          <div class="title-row">
+            <div>
+              <h1>Cuotas, membresías y herramientas gratuitas</h1>
+              <p class="sub">Control de saldo por herramienta. ElevenLabs se consulta en vivo vía API; el resto se revisa en tu corte diario de las 08:00 AM.</p>
+            </div>
+            <div class="title-actions">
+              <button type="button" class="btn-primary" id="btn-open-add-quota">
+                <span class="btn-icon" aria-hidden="true" data-icon="plus"></span>
+                <span>Herramienta</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="kpi-strip" aria-label="Resumen de cuotas y planes">
+            <div class="kpi-cell">
+              <div class="kpi-label">Membership activas</div>
+              <div class="kpi-value kpi-leader num" id="kpi-q-membership">11</div>
+              <div class="kpi-note">Planes pagados y ecosistemas</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Free Trial</div>
+              <div class="kpi-value num" id="kpi-q-trial">2</div>
+              <div class="kpi-note" id="kpi-q-trial-note">OpusClip · Evoto (vigilar vencimiento)</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Gratis / Local ($0)</div>
+              <div class="kpi-value num" id="kpi-q-free">6</div>
+              <div class="kpi-note">Claude · ChatGPT · Captions · Stack local</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Recordatorio diario</div>
+              <div class="kpi-value num">08:00 <span class="kpi-unit">AM</span></div>
+              <div class="kpi-note">Hora Monterrey · Corte activo</div>
+            </div>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrar herramientas por tipo de cuota">
+            <button type="button" class="filter-btn is-active" data-quota-filter="all">Todas (<span class="num" id="q-count-all">19</span>)</button>
+            <button type="button" class="filter-btn" data-quota-filter="Membership">Membership (<span class="num" id="q-count-membership">11</span>)</button>
+            <button type="button" class="filter-btn" data-quota-filter="Free Trial">Free Trial (<span class="num" id="q-count-trial">2</span>)</button>
+            <button type="button" class="filter-btn" data-quota-filter="Gratis">Gratis (<span class="num" id="q-count-gratis">4</span>)</button>
+            <button type="button" class="filter-btn" data-quota-filter="Local $0">Local $0 (<span class="num" id="q-count-local">2</span>)</button>
+            <span class="spacer"></span>
+            <span class="meta" id="quota-filter-summary">Mostrando 19 de 19</span>
+          </div>
+
+          <article class="panel" id="panel-cuotas-pago">
+            <header>
+              <div>
+                <h2>Con cuota: Membership y Free Trial</h2>
+                <span class="meta">Usa el lápiz para actualizar el saldo del corte 08:00 AM o el enlace para abrir el panel de suscripción.</span>
+              </div>
+            </header>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Herramienta</th>
+                    <th>Tipo</th>
+                    <th class="num">Saldo / Cuota</th>
+                    <th>Origen / Renovación</th>
+                    <th>Nota operativa</th>
+                    <th class="num">Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="table-cuotas-pago-body"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel" id="panel-cuotas-gratis">
+            <header>
+              <div>
+                <h2>Gratuitas y locales ($0)</h2>
+                <span class="meta">Herramientas sin cobro mensual ni gasto de créditos de suscripción (Claude, ChatGPT, Captions, Nativo y Local).</span>
+              </div>
+            </header>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Herramienta</th>
+                    <th>Tipo</th>
+                    <th>Capacidad / Ventana</th>
+                    <th>Uso asignado</th>
+                    <th class="num">Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="table-cuotas-gratis-body"></tbody>
               </table>
             </div>
           </article>

@@ -1,14 +1,15 @@
-/* Captoora Control v1.1 — Dark default, real video thumbnails & Linux symbolic SVG icons */
+/* Captoora Control v1.2 — Dark default, real thumbnails, Linux icons & Cuotas */
 (() => {
   const STORAGE_KEY = "captoora_control_state_v1";
   const THEME_KEY = "captoora_control_theme";
-  const VALID_ROUTES = ["overview", "flujo", "referencias", "publicados", "cola"];
+  const VALID_ROUTES = ["overview", "flujo", "referencias", "publicados", "cola", "cuotas"];
   const ROUTE_TITLES = {
     overview: "Resumen",
     flujo: "Flujo y relevos",
     referencias: "Referencias",
     publicados: "Publicados",
-    cola: "Cola semanal"
+    cola: "Cola semanal",
+    cuotas: "Cuotas y membresías"
   };
 
   /* Crisp 16x16 stroke=1.5 Linux-style symbolic SVG icons */
@@ -19,6 +20,7 @@
     cube: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2l5.5 3v6L8 14l-5.5-3V5L8 2z" stroke-linejoin="round"/><path d="M2.5 5L8 8l5.5-3M8 8v6" stroke-linejoin="round"/></svg>',
     smartphone: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="4.5" y="1.8" width="7" height="12.4" rx="1.4"/><path d="M7.2 12h1.6" stroke-linecap="round"/></svg>',
     calendar: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="3" width="12" height="10.5" rx="1.5"/><path d="M2 6.5h12M5.5 1.8v2.2M10.5 1.8v2.2" stroke-linecap="round"/></svg>',
+    gauge: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3 11.5a5.5 5.5 0 1110 0" stroke-linecap="round"/><path d="M8 9l2.6-2.6" stroke-linecap="round"/><circle cx="8" cy="9.5" r="0.9" fill="currentColor"/></svg>',
     scissors: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="4.5" cy="11.5" r="2"/><circle cx="11.5" cy="11.5" r="2"/><path d="M6 10L12.5 3M10 10L3.5 3" stroke-linecap="round"/></svg>',
     layers: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2.5L13.5 5.5 8 8.5 2.5 5.5 8 2.5z" stroke-linejoin="round"/><path d="M2.5 8.5L8 11.5l5.5-3M2.5 11.2L8 14l5.5-2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     archive: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="2.5" width="12" height="3" rx="0.8"/><path d="M3 5.5v7.5a1 1 0 001 1h8a1 1 0 001-1V5.5M6.5 8.5h3" stroke-linecap="round"/></svg>',
@@ -60,7 +62,7 @@
     return "globe";
   }
 
-  /* Hydrate localStorage safely across v1.0 -> v1.1 so user edits persist alongside new thumbs/icons */
+  /* Hydrate localStorage safely across versions preserving user edits */
   function loadState() {
     const base = clone(window.CAPTOORA_DATA);
     try {
@@ -91,6 +93,14 @@
         const match = base.cola_semanal.find((bc) => bc.orden === c.orden) || {};
         return { ...match, ...c, thumb: c.thumb || match.thumb || null };
       });
+      if (Array.isArray(parsed.cuotas)) {
+        parsed.cuotas = parsed.cuotas.map((q) => {
+          const match = base.cuotas.find((bq) => bq.id === q.id) || {};
+          return { ...match, ...q, icon: q.icon || match.icon || "gauge" };
+        });
+      } else {
+        parsed.cuotas = base.cuotas;
+      }
       return parsed;
     } catch (_) {
       return base;
@@ -101,6 +111,7 @@
   let currentRoute = "overview";
   let refFilter = "all";
   let colaFilter = "all";
+  let quotaFilter = "all";
   let searchQuery = "";
 
   const editorDialog = document.getElementById("editor-dialog");
@@ -143,17 +154,27 @@
 
   function pillClassFor(label) {
     const v = String(label || "").toLowerCase();
-    if (v.includes("adopt") || v.includes("activo") || v.includes("publicado") || v.includes("lista")) return "pill-positive";
-    if (v.includes("turno")) return "pill-accent";
-    if (v.includes("parcial") || v.includes("prueba") || v.includes("capcut") || v.includes("programado") || v.includes("fase 2") || v.includes("siguiente")) return "pill-warning";
+    if (v.includes("adopt") || v.includes("activo") || v.includes("publicado") || v.includes("lista") || v.includes("local")) return "pill-positive";
+    if (v.includes("turno") || v.includes("membership")) return "pill-accent";
+    if (v.includes("parcial") || v.includes("prueba") || v.includes("capcut") || v.includes("programado") || v.includes("fase 2") || v.includes("siguiente") || v.includes("trial")) return "pill-warning";
     if (v.includes("pirita") || v.includes("reemplazado")) return "pill-negative";
     return "pill-neutral";
   }
 
+  function syncElevenLabsFromQuota() {
+    const elItem = (state.cuotas || []).find((q) => q.id === "CTA-01");
+    if (elItem && elItem.disponible != null) {
+      state.meta.cuota_elevenlabs.disponible = Number(elItem.disponible);
+      if (elItem.total != null) state.meta.cuota_elevenlabs.total = Number(elItem.total);
+    }
+  }
+
   function computeMetrics() {
+    syncElevenLabsFromQuota();
     const pubs = state.publicados;
     const refs = state.referencias;
     const cola = state.cola_semanal;
+    const cuotas = state.cuotas || [];
     const meta = state.meta;
 
     const totalPub = pubs.length;
@@ -179,6 +200,14 @@
     };
     const colaPendientes = cola.length - colaCounts.Publicado;
 
+    const quotaCounts = {
+      all: cuotas.length,
+      Membership: cuotas.filter((q) => q.tipo === "Membership").length,
+      "Free Trial": cuotas.filter((q) => q.tipo === "Free Trial").length,
+      Gratis: cuotas.filter((q) => q.tipo === "Gratis").length,
+      "Local $0": cuotas.filter((q) => q.tipo === "Local $0").length
+    };
+
     console.assert(
       refCounts.Adoptado + refCounts.Parcial + refCounts["En prueba"] + refCounts.Pirita === refCounts.all,
       "Reconciliación: veredictos == referencias"
@@ -187,9 +216,15 @@
       colaCounts["Listo en disco"] + colaCounts["En CapCut Pro"] + colaCounts.Programado + colaCounts.Publicado === colaCounts.all,
       "Reconciliación: estados == cola"
     );
+    console.assert(
+      quotaCounts.Membership + quotaCounts["Free Trial"] + quotaCounts.Gratis + quotaCounts["Local $0"] === quotaCounts.all,
+      "Reconciliación: tipos == cuotas"
+    );
 
-    const quotaPct = (meta.cuota_elevenlabs.disponible / meta.cuota_elevenlabs.total) * 100;
-    return { totalPub, target, pctGoal, totalViews, avgViews, refCounts, colaCounts, colaPendientes, quotaPct };
+    const quotaPct = meta.cuota_elevenlabs.total > 0
+      ? (meta.cuota_elevenlabs.disponible / meta.cuota_elevenlabs.total) * 100
+      : 0;
+    return { totalPub, target, pctGoal, totalViews, avgViews, refCounts, colaCounts, colaPendientes, quotaCounts, quotaPct };
   }
 
   function renderAll() {
@@ -219,6 +254,7 @@
     renderReferencias(m);
     renderPublicados();
     renderCola(m);
+    renderCuotas(m);
   }
 
   function renderRelayTrack() {
@@ -527,6 +563,107 @@
         </tr>
       `;
     }).join("");
+  }
+
+  function renderCuotas(m) {
+    const qc = m.quotaCounts;
+    const trialItems = (state.cuotas || []).filter((q) => q.tipo === "Free Trial").map((q) => q.herramienta);
+
+    document.getElementById("kpi-q-membership").textContent = fmtInt(qc.Membership);
+    document.getElementById("kpi-q-trial").textContent = fmtInt(qc["Free Trial"]);
+    document.getElementById("kpi-q-trial-note").textContent = trialItems.length ? `${trialItems.join(" · ")} (vigilar vencimiento)` : "Sin pruebas activas";
+    document.getElementById("kpi-q-free").textContent = fmtInt(qc.Gratis + qc["Local $0"]);
+
+    document.getElementById("q-count-all").textContent = qc.all;
+    document.getElementById("q-count-membership").textContent = qc.Membership;
+    document.getElementById("q-count-trial").textContent = qc["Free Trial"];
+    document.getElementById("q-count-gratis").textContent = qc.Gratis;
+    document.getElementById("q-count-local").textContent = qc["Local $0"];
+
+    const filtered = (state.cuotas || []).filter((q) => {
+      const okFilter = quotaFilter === "all" || q.tipo === quotaFilter;
+      const okSearch = matchesSearch(`${q.id} ${q.herramienta} ${q.cuenta} ${q.tipo} ${q.unidad} ${q.origen} ${q.nota}`);
+      return okFilter && okSearch;
+    });
+
+    document.getElementById("quota-filter-summary").textContent = `Mostrando ${filtered.length} de ${qc.all}`;
+
+    const pagoList = filtered.filter((q) => q.tipo === "Membership" || q.tipo === "Free Trial");
+    const gratisList = filtered.filter((q) => q.tipo === "Gratis" || q.tipo === "Local $0");
+
+    const pagoPanel = document.getElementById("panel-cuotas-pago");
+    const gratisPanel = document.getElementById("panel-cuotas-gratis");
+    pagoPanel.hidden = (quotaFilter === "Gratis" || quotaFilter === "Local $0");
+    gratisPanel.hidden = (quotaFilter === "Membership" || quotaFilter === "Free Trial");
+
+    const pagoBody = document.getElementById("table-cuotas-pago-body");
+    if (!pagoList.length) {
+      pagoBody.innerHTML = `<tr><td colspan="6" class="empty-row">Ninguna suscripción coincide con el filtro actual.</td></tr>`;
+    } else {
+      pagoBody.innerHTML = pagoList.map((q) => {
+        const hasVal = q.disponible != null;
+        const hasTotal = q.total != null && Number(q.total) > 0;
+        const pct = hasVal && hasTotal ? Math.max(0, Math.min(100, (Number(q.disponible) / Number(q.total)) * 100)) : null;
+        const saldoTxt = hasVal
+          ? `${fmtInt(q.disponible)}${hasTotal ? ` / ${fmtInt(q.total)}` : ""} ${esc(q.unidad)}`
+          : `— ${q.unidad ? esc(q.unidad) : ""}`;
+        const extBtn = q.url
+          ? `<a href="${esc(q.url)}" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Abrir panel de ${esc(q.herramienta)}" aria-label="Abrir ${esc(q.herramienta)}">${ICONS.external}</a>`
+          : "";
+        return `
+          <tr>
+            <td>
+              <div class="inline-icon-label cell-primary">${iconHtml(q.icon)}<span>${esc(q.herramienta)}</span></div>
+              <div class="cell-secondary">${esc(q.cuenta)} · <span class="mono">${esc(q.id)}</span></div>
+            </td>
+            <td><span class="pill ${pillClassFor(q.tipo)}">${esc(q.tipo)}</span></td>
+            <td class="num">
+              <div class="cell-primary">${saldoTxt}</div>
+              ${pct != null ? `<div class="quota-bar" aria-label="${pct.toFixed(0)}% restante"><div class="quota-bar-fill" style="width:${pct.toFixed(1)}%"></div></div>` : ""}
+            </td>
+            <td>
+              <div>${esc(q.origen)}</div>
+              <div class="cell-secondary">${esc(q.corte)} · ${esc(q.renovacion)}</div>
+            </td>
+            <td>${esc(q.nota)}</td>
+            <td class="num">
+              <div class="row-actions">
+                ${extBtn}
+                <button type="button" class="icon-btn" data-edit-quota="${esc(q.id)}" title="Editar saldo o estado" aria-label="Editar ${esc(q.herramienta)}">${ICONS.pencil}</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    const gratisBody = document.getElementById("table-cuotas-gratis-body");
+    if (!gratisList.length) {
+      gratisBody.innerHTML = `<tr><td colspan="5" class="empty-row">Ninguna herramienta gratuita coincide con el filtro actual.</td></tr>`;
+    } else {
+      gratisBody.innerHTML = gratisList.map((q) => {
+        const extBtn = q.url
+          ? `<a href="${esc(q.url)}" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Abrir ${esc(q.herramienta)}" aria-label="Abrir ${esc(q.herramienta)}">${ICONS.external}</a>`
+          : "";
+        return `
+          <tr>
+            <td>
+              <div class="inline-icon-label cell-primary">${iconHtml(q.icon)}<span>${esc(q.herramienta)}</span></div>
+              <div class="cell-secondary">${esc(q.cuenta)} · <span class="mono">${esc(q.id)}</span></div>
+            </td>
+            <td><span class="pill ${pillClassFor(q.tipo)}">${esc(q.tipo)}</span></td>
+            <td>${esc(q.unidad)}</td>
+            <td>${esc(q.nota)}</td>
+            <td class="num">
+              <div class="row-actions">
+                ${extBtn}
+                <button type="button" class="icon-btn" data-edit-quota="${esc(q.id)}" title="Editar herramienta" aria-label="Editar ${esc(q.herramienta)}">${ICONS.pencil}</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join("");
+    }
   }
 
   function setRoute(route) {
@@ -848,6 +985,108 @@
     });
   }
 
+  function openQuotaModal(quotaId = null) {
+    const existing = quotaId ? state.cuotas.find((q) => q.id === quotaId) : null;
+    const q = existing || {
+      id: `CTA-${String(state.cuotas.length + 1).padStart(2, "0")}`,
+      herramienta: "",
+      cuenta: "Cuenta principal",
+      tipo: "Membership",
+      icon: "gauge",
+      disponible: null,
+      total: null,
+      unidad: "créditos",
+      origen: "Corte manual 08:00",
+      corte: new Date().toISOString().slice(0, 10),
+      renovacion: "Mensual",
+      url: "",
+      nota: ""
+    };
+
+    openModal(existing ? `Editar cuota · ${q.herramienta}` : "Agregar herramienta o cuota", `
+      <form id="quota-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="qf-herr">Herramienta</label>
+            <input id="qf-herr" name="herramienta" required value="${esc(q.herramienta)}" autofocus>
+          </div>
+          <div class="form-field">
+            <label for="qf-cuenta">Cuenta / etiqueta (sin contraseñas)</label>
+            <input id="qf-cuenta" name="cuenta" required value="${esc(q.cuenta)}">
+          </div>
+          <div class="form-field">
+            <label for="qf-tipo">Tipo de plan</label>
+            <select id="qf-tipo" name="tipo">
+              ${["Membership", "Free Trial", "Gratis", "Local $0"].map((o) => `<option value="${o}" ${q.tipo === o ? "selected" : ""}>${o}</option>`).join("")}
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="qf-unidad">Unidad (ej. chars, min, cr. Flow)</label>
+            <input id="qf-unidad" name="unidad" value="${esc(q.unidad)}">
+          </div>
+          <div class="form-field">
+            <label for="qf-disp">Saldo disponible (vacío si ilimitado)</label>
+            <input id="qf-disp" name="disponible" type="number" step="any" value="${q.disponible == null ? "" : q.disponible}">
+          </div>
+          <div class="form-field">
+            <label for="qf-total">Límite o total del ciclo</label>
+            <input id="qf-total" name="total" type="number" step="any" value="${q.total == null ? "" : q.total}">
+          </div>
+          <div class="form-field">
+            <label for="qf-corte">Fecha de último corte</label>
+            <input id="qf-corte" name="corte" value="${esc(q.corte)}">
+          </div>
+          <div class="form-field">
+            <label for="qf-ren">Renovación / vencimiento</label>
+            <input id="qf-ren" name="renovacion" value="${esc(q.renovacion)}">
+          </div>
+          <div class="form-field full">
+            <label for="qf-url">URL del panel de suscripción</label>
+            <input id="qf-url" name="url" value="${esc(q.url)}" placeholder="https://...">
+          </div>
+          <div class="form-field full">
+            <label for="qf-nota">Notas o recordatorio 08:00 AM</label>
+            <textarea id="qf-nota" name="nota">${esc(q.nota)}</textarea>
+          </div>
+        </div>
+        <div class="dialog-actions">
+          <button type="button" class="btn-ghost" id="btn-cancel-modal">Cancelar</button>
+          <button type="submit" class="btn-primary">Guardar</button>
+        </div>
+      </form>
+    `, () => {
+      document.getElementById("btn-cancel-modal").addEventListener("click", () => editorDialog.close("cancel"));
+      document.getElementById("quota-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const fd = new FormData(e.target);
+        const numOrNull = (val) => (String(val).trim() === "" ? null : Number(val));
+        const updated = {
+          id: q.id,
+          herramienta: String(fd.get("herramienta")).trim(),
+          cuenta: String(fd.get("cuenta")).trim(),
+          tipo: fd.get("tipo"),
+          icon: q.icon || "gauge",
+          disponible: numOrNull(fd.get("disponible")),
+          total: numOrNull(fd.get("total")),
+          unidad: String(fd.get("unidad")).trim(),
+          origen: existing ? (q.id === "CTA-01" ? "API / Editado" : "Corte manual") : "Manual",
+          corte: String(fd.get("corte")).trim() || new Date().toISOString().slice(0, 10),
+          renovacion: String(fd.get("renovacion")).trim(),
+          url: String(fd.get("url")).trim(),
+          nota: String(fd.get("nota")).trim()
+        };
+        if (existing) {
+          Object.assign(existing, updated);
+        } else {
+          state.cuotas.push(updated);
+        }
+        saveState();
+        renderAll();
+        editorDialog.close("save");
+      });
+    });
+  }
+
   function updateSlotStatus(slot, newStatus) {
     slot.estado_slot = newStatus;
     if (newStatus === "Publicado") {
@@ -920,6 +1159,14 @@
       return;
     }
 
+    const quotaFilterBtn = e.target.closest("[data-quota-filter]");
+    if (quotaFilterBtn) {
+      quotaFilter = quotaFilterBtn.dataset.quotaFilter;
+      document.querySelectorAll("[data-quota-filter]").forEach((b) => b.classList.toggle("is-active", b === quotaFilterBtn));
+      renderAll();
+      return;
+    }
+
     const editPub = e.target.closest("[data-edit-pub]");
     if (editPub) {
       openEditPubModal(editPub.dataset.editPub);
@@ -935,6 +1182,12 @@
     const editSlot = e.target.closest("[data-edit-slot]");
     if (editSlot) {
       openSlotModal(editSlot.dataset.editSlot);
+      return;
+    }
+
+    const editQuota = e.target.closest("[data-edit-quota]");
+    if (editQuota) {
+      openQuotaModal(editQuota.dataset.editQuota);
     }
   });
 
@@ -965,6 +1218,7 @@
   document.getElementById("btn-open-add-pub-overview").addEventListener("click", () => openEditPubModal(null));
   document.getElementById("btn-open-add-pub").addEventListener("click", () => openEditPubModal(null));
   document.getElementById("btn-open-add-ref").addEventListener("click", () => openAddRefModal());
+  document.getElementById("btn-open-add-quota").addEventListener("click", () => openQuotaModal(null));
 
   document.getElementById("global-search").addEventListener("input", (e) => {
     searchQuery = e.target.value.trim();
