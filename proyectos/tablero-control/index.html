@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Captoora Control — Flujo, Referencias y Métricas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- L-frame Sidebar -->
+    <aside class="sidebar" aria-label="Navegación principal">
+      <div class="brand-lockup">
+        <svg class="brand-mark" width="28" height="20" viewBox="0 0 28 20" fill="none" aria-hidden="true">
+          <circle cx="9.5" cy="10" r="6.5" stroke="#1b6c80" stroke-width="2.4"/>
+          <circle cx="18.5" cy="10" r="6.5" stroke="#131416" stroke-width="2.4"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">Captoora Control</span>
+          <span class="brand-scope">¡WATERS! · ¿Caíste? · Estudio</span>
+        </div>
+      </div>
+
+      <nav class="nav-list" aria-label="Vistas del tablero">
+        <a class="nav-item" href="#overview" data-route="overview" aria-current="page">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <rect x="2" y="2" width="5" height="5" rx="1"/>
+            <rect x="9" y="2" width="5" height="5" rx="1"/>
+            <rect x="2" y="9" width="5" height="5" rx="1"/>
+            <rect x="9" y="9" width="5" height="5" rx="1"/>
+          </svg>
+          <span>Resumen</span>
+        </a>
+        <a class="nav-item" href="#flujo" data-route="flujo">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M2.5 5h8M8 2.5L10.5 5 8 7.5M13.5 11h-8M8 8.5L5.5 11 8 13.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Flujo y relevos</span>
+        </a>
+        <a class="nav-item" href="#referencias" data-route="referencias">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M3 3.5h10v9H3z" stroke-linejoin="round"/>
+            <path d="M6 6.5h4M6 9.5h2.5" stroke-linecap="round"/>
+          </svg>
+          <span>Referencias</span>
+        </a>
+        <a class="nav-item" href="#publicados" data-route="publicados">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <path d="M2.5 12.5V8.5m4 4V5.5m4 7v-3m3 3v-8" stroke-linecap="round"/>
+          </svg>
+          <span>Publicados</span>
+        </a>
+        <a class="nav-item" href="#cola" data-route="cola">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true">
+            <rect x="2.5" y="3" width="11" height="10" rx="1.5"/>
+            <path d="M2.5 6.5h11M6 1.8v2.4M10 1.8v2.4" stroke-linecap="round"/>
+          </svg>
+          <span>Cola semanal</span>
+          <span class="nav-count num" id="nav-cola-count">9</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-meta">
+        <div class="meta-block">
+          <div class="meta-label">Estación activa</div>
+          <div class="meta-val">5 · CapCut Pro móvil</div>
+          <div class="meta-sub">Redmi Note 8 · user3733613018365</div>
+        </div>
+        <div class="meta-block">
+          <div class="meta-label">Inventario en disco</div>
+          <div class="meta-val num" id="sidebar-inventory">29 MP4 · 4 PDF · Pack #1</div>
+          <div class="meta-sub" id="save-indicator">Guardado local listo</div>
+        </div>
+      </div>
+
+      <div class="sidebar-actions">
+        <button type="button" class="btn-ghost btn-sm" id="btn-export-json">Exportar JSON</button>
+        <label class="btn-ghost btn-sm file-btn">
+          Importar
+          <input type="file" id="input-import-json" accept="application/json" hidden>
+        </label>
+        <button type="button" class="btn-ghost btn-sm" id="btn-reset-data">Restaurar base</button>
+      </div>
+    </aside>
+
+    <!-- Right side of L-frame: Top bar + Inset white sheet -->
+    <div class="main-frame">
+      <header class="topbar">
+        <button type="button" class="btn-ghost mobile-menu-btn" id="btn-open-drawer" aria-label="Abrir menú de navegación">Menú</button>
+        <div class="topbar-search">
+          <label for="global-search" class="sr-only">Buscar en referencias, publicaciones o cola</label>
+          <input type="search" id="global-search" placeholder="Buscar referencia, episodio o CTA..." autocomplete="off">
+        </div>
+        <div class="topbar-right">
+          <span class="freshness" id="topbar-freshness">Corte 2026-11-26</span>
+          <span class="topbar-meta num" id="topbar-goal-pill">2 de 20 publicados</span>
+        </div>
+      </header>
+
+      <main class="sheet" id="sheet-root">
+        <!-- VISTA 1: RESUMEN -->
+        <section id="view-overview" class="view" data-view="overview">
+          <div class="title-row">
+            <div>
+              <h1>Resumen de producción</h1>
+              <p class="sub" id="overview-finding">Llevas 2 de 20 videos publicados (10.0%). Tienes 9 listos en cola para llegar a 11 de 20 esta semana.</p>
+            </div>
+            <div class="title-actions">
+              <button type="button" class="btn-primary" id="btn-open-add-pub-overview">Registrar publicación</button>
+            </div>
+          </div>
+
+          <!-- KPI strip divided by 1px rules (no cards, no icons, no sparklines) -->
+          <div class="kpi-strip" aria-label="Indicadores clave">
+            <div class="kpi-cell">
+              <div class="kpi-label">Publicados (meta 20)</div>
+              <div class="kpi-value kpi-leader num" id="kpi-published">2 <span class="kpi-unit">/ 20</span></div>
+              <div class="kpi-note num" id="kpi-published-note">10.0% · +9 listos en cola</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Vistas verificadas</div>
+              <div class="kpi-value num" id="kpi-views">193</div>
+              <div class="kpi-note num" id="kpi-views-note">Prom. 97 por video · 2 registros</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Referencias auditadas</div>
+              <div class="kpi-value num" id="kpi-refs">11</div>
+              <div class="kpi-note num" id="kpi-refs-note">8 adoptadas · 2 parciales · 1 en prueba</div>
+            </div>
+            <div class="kpi-cell">
+              <div class="kpi-label">Cuota ElevenLabs</div>
+              <div class="kpi-value num" id="kpi-quota">30,184 <span class="kpi-unit">chars</span></div>
+              <div class="kpi-note num" id="kpi-quota-note">49.1% de 61,509 disponibles</div>
+            </div>
+          </div>
+
+          <!-- Signature Element: Carril de relevos de 6 estaciones -->
+          <article class="panel relay-panel">
+            <header>
+              <div>
+                <h2>Carril de relevos: quién actúa y cuándo entrega la estafeta</h2>
+                <span class="meta">Flujo vigente de 2 estaciones (iMac + CapCut Pro en Redmi Note 8). Haz clic en una estación para ver qué entra, qué sale y cuándo se retira.</span>
+              </div>
+              <a href="#flujo" class="card-link">Ver flujo completo</a>
+            </header>
+            <div class="relay-track" id="relay-track"></div>
+            <footer class="relay-footer" id="relay-footer">
+              <span><strong>Reemplazado:</strong> Captions (absorbido por CapCut Pro)</span>
+              <span><strong>Entra en Fase 2:</strong> Opus Clip (solo al pasar a largo 16:9 de 10 min)</span>
+              <span><strong>Siguiente 20%:</strong> WhisperX + Theatre.js + Lemo-Opuscar</span>
+            </footer>
+          </article>
+
+          <!-- Balanced bottom row: Charts (7 cols) + Roadmap (5 cols) -->
+          <div class="grid top">
+            <article class="panel span-7">
+              <header>
+                <div>
+                  <h2>Alcance verificado y avance a 20 videos</h2>
+                  <span class="meta" id="chart-overview-meta">Vistas reales registradas por pieza publicada</span>
+                </div>
+                <a href="#publicados" class="card-link">Editar métricas</a>
+              </header>
+              <div class="chart" id="chart-published-views"></div>
+              <div class="plan-block">
+                <div class="chart-head">
+                  <h3>Ruta al primer corte de validación (20 videos)</h3>
+                  <span class="meta num" id="goal-bar-summary">2 publicados · 9 en cola · 9 por producir</span>
+                </div>
+                <div class="chart" id="chart-goal-plan"></div>
+              </div>
+            </article>
+
+            <article class="panel span-5">
+              <header>
+                <div>
+                  <h2>Hacia dónde vas y cuánto toma</h2>
+                  <span class="meta">Estimación por bloques reales (4 hitos · ~6 semanas)</span>
+                </div>
+                <a href="#cola" class="card-link">Abrir cola</a>
+              </header>
+              <ul class="roadmap-list" id="roadmap-list"></ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- VISTA 2: FLUJO Y RELEVOS -->
+        <section id="view-flujo" class="view" data-view="flujo" hidden>
+          <div class="title-row">
+            <div>
+              <h1>Flujo y relevos de herramientas</h1>
+              <p class="sub">Qué persona o herramienta entra en cada paso, qué entrega exactamente y en qué momento suelta la estafeta.</p>
+            </div>
+            <div class="title-actions">
+              <a href="#cola" class="btn-secondary">Ir a cola semanal</a>
+            </div>
+          </div>
+
+          <article class="panel">
+            <header>
+              <div>
+                <h2>Las 6 estaciones activas hoy</h2>
+                <span class="meta" id="hardware-line">iMac Intel i5-6500 · 24 GB RAM · Radeon R9 M380 2 GB VRAM</span>
+              </div>
+            </header>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Paso</th>
+                    <th>Estación / Responsable</th>
+                    <th>Qué entra</th>
+                    <th>Qué entrega al siguiente</th>
+                    <th>Cuándo se quita</th>
+                    <th class="num">Tiempo</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="table-estaciones-body"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <header>
+              <div>
+                <h2>Quién se quitó, quién entra después y qué está en reserva</h2>
+                <span class="meta">Control FinOps y límite de hardware (2 GB VRAM): nada se borra, cada pieza tiene momento de entrada.</span>
+              </div>
+            </header>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Herramienta / Módulo</th>
+                    <th>Estado en el flujo</th>
+                    <th>Momento de relevo</th>
+                    <th>Por qué (criterio técnico / costo)</th>
+                    <th>Acción operativa</th>
+                  </tr>
+                </thead>
+                <tbody id="table-banca-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- VISTA 3: REFERENCIAS -->
+        <section id="view-referencias" class="view" data-view="referencias" hidden>
+          <div class="title-row">
+            <div>
+              <h1>Videos y guías de referencia</h1>
+              <p class="sub" id="refs-subtitle">Todo lo que has compartido en esta etapa y qué pieza concreta de la fábrica salió de cada uno.</p>
+            </div>
+            <div class="title-actions">
+              <button type="button" class="btn-primary" id="btn-open-add-ref">Agregar referencia</button>
+            </div>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrar referencias por veredicto">
+            <button type="button" class="filter-btn is-active" data-ref-filter="all">Todas (<span class="num" id="ref-count-all">11</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="Adoptado">Adoptadas (<span class="num" id="ref-count-adoptado">8</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="Parcial">Parciales (<span class="num" id="ref-count-parcial">2</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="En prueba">En prueba (<span class="num" id="ref-count-prueba">1</span>)</button>
+            <button type="button" class="filter-btn" data-ref-filter="Pirita">Pirita (<span class="num" id="ref-count-pirita">0</span>)</button>
+            <span class="spacer"></span>
+            <span class="meta" id="refs-filter-summary">Mostrando 11 de 11</span>
+          </div>
+
+          <article class="panel">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th class="num">Fecha</th>
+                    <th>Referente</th>
+                    <th>Qué vimos</th>
+                    <th>Qué obtuvimos y dónde vive</th>
+                    <th>Veredicto</th>
+                    <th class="num">Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="table-referencias-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- VISTA 4: PUBLICADOS Y MÉTRICAS -->
+        <section id="view-publicados" class="view" data-view="publicados" hidden>
+          <div class="title-row">
+            <div>
+              <h1>Resultados publicados y mejoras</h1>
+              <p class="sub" id="pub-subtitle">Tus métricas reales en calle. Las celdas sin dato registrado aún se muestran con guion hasta actualizarlas.</p>
+            </div>
+            <div class="title-actions">
+              <button type="button" class="btn-primary" id="btn-open-add-pub">Registrar publicación</button>
+            </div>
+          </div>
+
+          <div class="grid top">
+            <article class="panel span-7">
+              <header>
+                <div>
+                  <h2>Rendimiento por video publicado</h2>
+                  <span class="meta">Actualiza vistas, retención al seg 3, guardados y DMs conforme cierres semana</span>
+                </div>
+              </header>
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>ID / Video</th>
+                      <th>Canal</th>
+                      <th class="num">Vistas</th>
+                      <th class="num">Ret. %</th>
+                      <th class="num">Guard.</th>
+                      <th class="num">DMs WA</th>
+                      <th>Estado</th>
+                      <th class="num">Editar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-publicados-body"></tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel span-5">
+              <header>
+                <div>
+                  <h2>Qué podemos mejorar ahora</h2>
+                  <span class="meta">Hipótesis activas para la siguiente tanda hacia los 20 videos</span>
+                </div>
+              </header>
+              <ul class="hypotheses-list" id="mejoras-list"></ul>
+            </article>
+          </div>
+        </section>
+
+        <!-- VISTA 5: COLA SEMANAL -->
+        <section id="view-cola" class="view" data-view="cola" hidden>
+          <div class="title-row">
+            <div>
+              <h1>Cola semanal de programación</h1>
+              <p class="sub" id="cola-subtitle">9 piezas ya renderizadas en disco y teléfono. Al marcar una como Publicado suma directo a tu meta de 20.</p>
+            </div>
+            <div class="title-actions">
+              <a href="https://www.tiktok.com/tiktokstudio" target="_blank" rel="noopener noreferrer" class="btn-secondary">TikTok Studio</a>
+              <a href="https://studio.youtube.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">YouTube Studio</a>
+              <a href="https://business.facebook.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">Meta Business Suite</a>
+            </div>
+          </div>
+
+          <div class="filters" role="group" aria-label="Filtrar cola semanal por estado">
+            <button type="button" class="filter-btn is-active" data-cola-filter="all">Todos (<span class="num" id="cola-count-all">9</span>)</button>
+            <button type="button" class="filter-btn" data-cola-filter="Listo en disco">Listo en disco (<span class="num" id="cola-count-disco">8</span>)</button>
+            <button type="button" class="filter-btn" data-cola-filter="En CapCut Pro">En CapCut Pro (<span class="num" id="cola-count-capcut">1</span>)</button>
+            <button type="button" class="filter-btn" data-cola-filter="Programado">Programado (<span class="num" id="cola-count-prog">0</span>)</button>
+            <button type="button" class="filter-btn" data-cola-filter="Publicado">Publicado (<span class="num" id="cola-count-pub">0</span>)</button>
+            <span class="spacer"></span>
+            <span class="meta" id="cola-filter-summary">Mostrando 9 de 9</span>
+          </div>
+
+          <article class="panel">
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th class="num">Slot</th>
+                    <th class="num">Fecha MX</th>
+                    <th>Video / Serie</th>
+                    <th>Formato y redes</th>
+                    <th>CTA / PDF</th>
+                    <th>Estado operativo</th>
+                    <th class="num">Revisión</th>
+                  </tr>
+                </thead>
+                <tbody id="table-cola-body"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Native <dialog> Navigation Drawer for Phone / Tablet -->
+  <dialog id="drawer-dialog" class="drawer-dialog" closedby="any" aria-labelledby="drawer-title">
+    <div class="drawer-head">
+      <h2 id="drawer-title">Captoora Control</h2>
+      <form method="dialog">
+        <button type="submit" class="btn-ghost btn-sm" value="close">Cerrar</button>
+      </form>
+    </div>
+    <nav class="drawer-nav" id="drawer-nav-list" aria-label="Menú móvil"></nav>
+  </dialog>
+
+  <!-- Native <dialog> for Station / Slot / Reference / Publication Detail & Edit -->
+  <dialog id="editor-dialog" class="editor-dialog" closedby="any" aria-labelledby="editor-title">
+    <div class="dialog-head">
+      <h2 id="editor-title">Detalle</h2>
+      <form method="dialog">
+        <button type="submit" class="btn-ghost btn-sm" value="cancel" aria-label="Cerrar ventana">Cerrar</button>
+      </form>
+    </div>
+    <div id="editor-body" class="dialog-body"></div>
+  </dialog>
+
+  <script src="charts.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
