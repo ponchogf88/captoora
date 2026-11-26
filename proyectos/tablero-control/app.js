@@ -101,10 +101,12 @@
         ...b,
         icon: (base.relevos_banca[idx] || {}).icon || b.icon || "archive"
       }));
-      parsed.referencias = (parsed.referencias || base.referencias).map((r) => {
+      const savedRefs = (parsed.referencias || base.referencias).map((r) => {
         const match = base.referencias.find((br) => br.id === r.id) || {};
         return { ...match, ...r, plat_icon: r.plat_icon || match.plat_icon || "globe", thumb: r.thumb !== undefined ? r.thumb : match.thumb };
       });
+      const seenRefIds = new Set(savedRefs.map((r) => r.id));
+      parsed.referencias = savedRefs.concat(base.referencias.filter((br) => !seenRefIds.has(br.id)));
       parsed.publicados = (parsed.publicados || base.publicados).map((p) => {
         const match = base.publicados.find((bp) => bp.id === p.id) || {};
         return { ...match, ...p, thumb: p.thumb || match.thumb || null };

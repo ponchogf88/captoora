@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Plantilla Black Canvas Coloreado · Captoora / ¡WATERS!</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d0e12;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #root {
+      position: relative;
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background: #0d0e12;
+    }
+    .grid-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 54px 54px;
+    }
+    /* Zona segura vertical: 260px inferiores totalmente libres para subtítulos en CapCut Pro */
+    .safe-stage {
+      position: absolute;
+      top: 168px;
+      left: 68px;
+      width: 944px;
+      height: 1320px;
+      z-index: 10;
+    }
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 34px;
+    }
+    .series-badge {
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.14);
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .prog-track {
+      flex: 1;
+      height: 10px;
+      border-radius: 999px;
+      background: #1d212d;
+      overflow: hidden;
+    }
+    .prog-fill {
+      width: 100%;
+      height: 100%;
+      background: #38bdf8;
+      transform-origin: left center;
+    }
+    .board-card {
+      background: #13151d;
+      border: 3px solid #2b3142;
+      border-radius: 34px;
+      padding: 44px 44px;
+      margin-bottom: 28px;
+    }
+    .pill-kicker {
+      display: inline-block;
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 28px;
+      font-weight: 800;
+      background: rgba(245, 158, 11, 0.16);
+      color: #fbbf24;
+      border: 2px solid #f59e0b;
+      margin-bottom: 18px;
+    }
+    .h1 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+    .lead {
+      font-size: 32px;
+      line-height: 1.38;
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+    .diagram-panel {
+      background: #0d0e12;
+      border: 2px solid #38bdf8;
+      border-radius: 26px;
+      padding: 28px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .node-box {
+      background: #13151d;
+      border: 3px solid #2e3445;
+      border-radius: 26px;
+      padding: 28px;
+    }
+    .node-red { border-color: #fb7185; }
+    .node-green { border-color: #34d399; }
+    .node-label {
+      font-size: 29px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
+    }
+    .c-red { color: #fb7185; }
+    .c-green { color: #34d399; }
+    .node-text {
+      font-size: 28px;
+      line-height: 1.35;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .cta-strip {
+      margin-top: 26px;
+      padding: 26px 32px;
+      border-radius: 24px;
+      background: #fbbf24;
+      color: #0d0e12;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 30px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="black_canvas_hermes" data-start="0" data-duration="12" data-width="1080" data-height="1920" data-fps="30">
+    <div id="bg-grid" class="grid-bg" data-layout-ignore></div>
+
+    <div class="safe-stage">
+      <div id="top-bar" class="clip" data-start="0" data-duration="12">
+        <div class="top-bar">
+          <span class="series-badge">¡WATERS! · BLACK CANVAS</span>
+          <div class="prog-track"><div id="prog-fill" class="prog-fill"></div></div>
+        </div>
+      </div>
+
+      <div id="card-main" class="clip" data-start="0.1" data-duration="11.9">
+        <div id="card-main-inner" class="board-card">
+          <span class="pill-kicker">PLANTILLA REUTILIZABLE · HRM-01</span>
+          <h1 class="h1">¿Qué es un modelo ABLITERATED?</h1>
+          <p class="lead">Así ubican la flecha matemática de rechazo en los pesos abiertos y la anulan sin reentrenar toda la red.</p>
+          <div id="diag-box" class="diagram-panel">
+            <svg viewBox="0 0 820 220" width="820" height="220">
+              <rect x="8" y="10" width="380" height="200" rx="18" fill="#13151d" stroke="#fb7185" stroke-width="3"/>
+              <text x="30" y="54" fill="#fb7185" font-size="29" font-weight="800">ESTÁNDAR (FRENO)</text>
+              <line id="vec-base-a" x1="34" y1="115" x2="275" y2="115" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+              <line id="vec-refusal" x1="275" y1="115" x2="340" y2="66" stroke="#fb7185" stroke-width="7" stroke-linecap="round"/>
+              <text x="30" y="176" fill="#cbd5e1" font-size="29" font-weight="600">Dispara rechazo</text>
+
+              <rect x="432" y="10" width="380" height="200" rx="18" fill="#13151d" stroke="#34d399" stroke-width="3"/>
+              <text x="454" y="54" fill="#34d399" font-size="29" font-weight="800">ABLITERATED</text>
+              <line id="vec-ablit" x1="458" y1="115" x2="770" y2="115" stroke="#34d399" stroke-width="7" stroke-linecap="round"/>
+              <text x="454" y="176" fill="#cbd5e1" font-size="29" font-weight="600">Pasa al Sandbox</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div id="card-compare" class="clip" data-start="3.5" data-duration="8.5">
+        <div id="card-compare-inner" class="two-col">
+          <div class="node-box node-red">
+            <div class="node-label c-red">SIN CANDADOS</div>
+            <div class="node-text">Terminal abierta + Prompt Injection = riesgo directo a tus archivos.</div>
+          </div>
+          <div class="node-box node-green">
+            <div class="node-label c-green">3 CANDADOS</div>
+            <div class="node-text">Docker Sandbox + Firewall UFW + Aprobación humana obligatoria.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="card-cta" class="clip" data-start="7.0" data-duration="5.0">
+        <div id="card-cta-inner" class="cta-strip">
+          <span>COMENTA: HERMES / SANDBOX</span>
+          <span>260 px libres abajo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#prog-fill", { scaleX: 0.04 }, { scaleX: 1.0, duration: 12, ease: "none" }, 0);
+      tl.fromTo("#bg-grid", { backgroundPosition: "0px 0px" }, { backgroundPosition: "54px 54px", duration: 12, ease: "none" }, 0);
+
+      tl.fromTo("#card-main-inner", { y: 20, opacity: 0.9 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, 0.1);
+      tl.fromTo("#vec-refusal", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 1.2);
+      tl.fromTo("#vec-ablit", { opacity: 0.2 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 1.8);
+
+      tl.fromTo("#card-compare-inner", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 3.5);
+      tl.fromTo("#card-cta-inner", { scale: 0.92, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.6)" }, 7.0);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["black_canvas_hermes"] = tl;
+    })();
+  </script>
+</body>
+</html>

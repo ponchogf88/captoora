@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Black Canvas Coloreado Stickers · Captoora</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      background: transparent;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #stage {
+      width: 1080px;
+      height: 1080px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 64px;
+      background: transparent;
+    }
+    .canvas-card {
+      width: 952px;
+      background: #0d0e12;
+      border: 4px solid #2b3040;
+      border-radius: 42px;
+      padding: 46px 48px;
+      color: #f8fafc;
+      box-shadow: 0 24px 0 #07080b;
+      position: relative;
+      overflow: hidden;
+    }
+    .canvas-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 44px 44px;
+      pointer-events: none;
+    }
+    .inner { position: relative; z-index: 2; }
+    .tag {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .t-cyan { background: rgba(56,189,248,0.16); color: #38bdf8; border: 2px solid #38bdf8; }
+    .t-amber { background: rgba(245,158,11,0.16); color: #fbbf24; border: 2px solid #f59e0b; }
+    .t-green { background: rgba(52,211,153,0.16); color: #34d399; border: 2px solid #10b981; }
+    .t-red { background: rgba(251,113,133,0.16); color: #fb7185; border: 2px solid #f43f5e; }
+    .title {
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+    .sub {
+      font-size: 27px;
+      line-height: 1.35;
+      color: #cbd5e1;
+      margin-bottom: 28px;
+    }
+    .row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .row3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .box {
+      background: #14161f;
+      border: 3px solid #2d3344;
+      border-radius: 26px;
+      padding: 24px 24px;
+    }
+    .box-cyan { border-color: #38bdf8; }
+    .box-amber { border-color: #f59e0b; }
+    .box-green { border-color: #34d399; }
+    .box-red { border-color: #fb7185; }
+    .box-head {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .c-cyan { color: #38bdf8; }
+    .c-amber { color: #fbbf24; }
+    .c-green { color: #34d399; }
+    .c-red { color: #fb7185; }
+    .box-body {
+      font-size: 25px;
+      line-height: 1.35;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+    .foot-note {
+      margin-top: 24px;
+      padding: 16px 22px;
+      border-radius: 18px;
+      background: #161923;
+      border: 2px solid #2b3142;
+      font-size: 24px;
+      font-weight: 700;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    svg.diag { width: 100%; height: auto; display: block; margin-bottom: 18px; }
+  </style>
+</head>
+<body>
+  <div id="stage"></div>
+  <script>
+    const STICKERS = {
+      stk_01_abliteration_vector: `
+        <div class="canvas-card" style="border-color:#38bdf8;">
+          <div class="inner">
+            <span class="tag t-cyan">BLACK CANVAS · INGREDIENTE 01</span>
+            <h1 class="title">¿Qué es un modelo ABLITERATED?</h1>
+            <p class="sub">No es magia ni reentrenamiento: miden la flecha matemática de rechazo y la borran.</p>
+            <svg class="diag" viewBox="0 0 840 220">
+              <rect x="10" y="14" width="380" height="190" rx="22" fill="#14161f" stroke="#fb7185" stroke-width="3"/>
+              <text x="38" y="56" fill="#fb7185" font-size="23" font-weight="800">MODELO ESTÁNDAR</text>
+              <line x1="48" y1="120" x2="290" y2="120" stroke="#38bdf8" stroke-width="7" stroke-linecap="round"/>
+              <line x1="290" y1="120" x2="345" y2="75" stroke="#fb7185" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="345" cy="75" r="9" fill="#fb7185"/>
+              <text x="38" y="168" fill="#cbd5e1" font-size="22" font-weight="600">Dispara Vector de Rechazo</text>
+
+              <rect x="450" y="14" width="380" height="190" rx="22" fill="#14161f" stroke="#34d399" stroke-width="3"/>
+              <text x="478" y="56" fill="#34d399" font-size="23" font-weight="800">PESOS ABLITERATED</text>
+              <line x1="488" y1="120" x2="775" y2="120" stroke="#34d399" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="775" cy="120" r="9" fill="#34d399"/>
+              <text x="478" y="168" fill="#cbd5e1" font-size="22" font-weight="600">Sin freno · Exige Sandbox</text>
+            </svg>
+            <div class="foot-note">
+              <span>Captoora Studio · Defensa IA</span>
+              <span class="c-cyan">Arditi et al. · Pesos abiertos</span>
+            </div>
+          </div>
+        </div>`,
+
+      stk_02_hermes_loop: `
+        <div class="canvas-card" style="border-color:#a855f7;">
+          <div class="inner">
+            <span class="tag t-cyan">BLACK CANVAS · INGREDIENTE 02</span>
+            <h1 class="title">Hermes Agent (Nous Research)</h1>
+            <p class="sub">Por qué un agente autónomo no es un simple chat de preguntas y respuestas.</p>
+            <div class="row2">
+              <div class="box box-cyan">
+                <div class="box-head c-cyan">1. Memoria + Skills</div>
+                <div class="box-body">Guarda aprendizaje entre sesiones y convierte tareas en habilidades repetibles.</div>
+              </div>
+              <div class="box box-green">
+                <div class="box-head c-green">2. Terminal + Cron</div>
+                <div class="box-body">Opera archivos, navegador y horarios 24/7 usando modelos locales o API.</div>
+              </div>
+            </div>
+            <div class="foot-note">
+              <span>Código abierto (Licencia MIT)</span>
+              <span class="c-amber">Requiere aislamiento Docker</span>
+            </div>
+          </div>
+        </div>`,
+
+      stk_03_filtros_vs_auditoria: `
+        <div class="canvas-card" style="border-color:#f59e0b;">
+          <div class="inner">
+            <span class="tag t-amber">BLACK CANVAS · INGREDIENTE 03</span>
+            <h1 class="title">Filtros Nube vs Auditoría Propia</h1>
+            <p class="sub">El choque cuando quieres revisar la seguridad de tu propio negocio.</p>
+            <div class="row2">
+              <div class="box box-red">
+                <div class="box-head c-red">API Comercial Nube</div>
+                <div class="box-body">No distingue si eres el dueño. Bloquea palabras de auditoría por regla rígida.</div>
+              </div>
+              <div class="box box-green">
+                <div class="box-head c-green">Lab Local Autorizado</div>
+                <div class="box-body">Pruebas sobre TU propio dominio, dentro de red cerrada y con registro.</div>
+              </div>
+            </div>
+            <div class="foot-note">
+              <span>Uso 100% defensivo y autorizado</span>
+              <span class="c-amber">Nunca sobre terceros</span>
+            </div>
+          </div>
+        </div>`,
+
+      stk_04_docker_sandbox_escudo: `
+        <div class="canvas-card" style="border-color:#34d399;">
+          <div class="inner">
+            <span class="tag t-green">BLACK CANVAS · INGREDIENTE 04</span>
+            <h1 class="title">Los 3 Candados Antes de Correrlo</h1>
+            <p class="sub">Si le quitas filtros al modelo, los frenos se ponen en la arquitectura física.</p>
+            <div class="row3">
+              <div class="box box-green">
+                <div class="box-head c-green">1. Docker</div>
+                <div class="box-body">Caja aislada. Nunca toques tu disco con contratos o llaves reales.</div>
+              </div>
+              <div class="box box-cyan">
+                <div class="box-head c-cyan">2. UFW + ID</div>
+                <div class="box-body">Firewall cerrado y lista blanca estricta de usuarios permitidos.</div>
+              </div>
+              <div class="box box-amber">
+                <div class="box-head c-amber">3. Humano</div>
+                <div class="box-body">Aprobación manual obligatoria antes de cualquier comando crítico.</div>
+              </div>
+            </div>
+            <div class="foot-note">
+              <span>Arquitectura Antigravity / Captoora</span>
+              <span class="c-green">Comenta: SANDBOX</span>
+            </div>
+          </div>
+        </div>`,
+
+      stk_05_vps_gpu_finops: `
+        <div class="canvas-card" style="border-color:#f59e0b;">
+          <div class="inner">
+            <span class="tag t-amber">BLACK CANVAS · PRUEBA FINOPS</span>
+            <h1 class="title">VPS de $5 vs GPU Real vs API</h1>
+            <p class="sub">La letra chiquita que los videos patrocinados no suelen mostrar.</p>
+            <div class="row3">
+              <div class="box box-red">
+                <div class="box-head c-red">VPS $5 USD</div>
+                <div class="box-body">Solo CPU. Corre el agente ligero, NO modelos grandes rápidos.</div>
+              </div>
+              <div class="box box-amber">
+                <div class="box-head c-amber">GPU 12-24 GB</div>
+                <div class="box-body">Necesaria para inferencia local veloz (nuestra iMac: 2 GB VRAM).</div>
+              </div>
+              <div class="box box-cyan">
+                <div class="box-head c-cyan">API Ruteada</div>
+                <div class="box-body">Pago por token real sin inflar renta mensual fija innecesaria.</div>
+              </div>
+            </div>
+            <div class="foot-note">
+              <span>¿Oro Puro o Puro Humo?</span>
+              <span class="c-amber">Mide hardware antes de pagar</span>
+            </div>
+          </div>
+        </div>`,
+
+      stk_06_alerta_prompt_injection: `
+        <div class="canvas-card" style="border-color:#fb7185;">
+          <div class="inner">
+            <span class="tag t-red">BLACK CANVAS · ALERTA SEGURIDAD</span>
+            <h1 class="title">Agente Sin Frenos + Prompt Injection</h1>
+            <p class="sub">Por qué borrar el vector de rechazo sin sandbox multiplica el daño de un correo trampa.</p>
+            <div class="row2">
+              <div class="box box-red">
+                <div class="box-head c-red">Sin Guardrails</div>
+                <div class="box-body">PDF o web con texto oculto ordena borrar archivos o filtrar .env; el modelo obedece sin dudar.</div>
+              </div>
+              <div class="box box-green">
+                <div class="box-head c-green">Con Aislamiento</div>
+                <div class="box-body">El contenedor muere limpio, cero acceso a .ssh o cuentas bancarias y pausa para aprobar.</div>
+              </div>
+            </div>
+            <div class="foot-note">
+              <span>Seguridad no es censura: es contención</span>
+              <span class="c-red">Revisa antes de ejecutar</span>
+            </div>
+          </div>
+        </div>`
+    };
+
+    const id = new URLSearchParams(location.search).get("id") || "stk_01_abliteration_vector";
+    document.getElementById("stage").innerHTML = STICKERS[id] || STICKERS.stk_01_abliteration_vector;
+  </script>
+</body>
+</html>

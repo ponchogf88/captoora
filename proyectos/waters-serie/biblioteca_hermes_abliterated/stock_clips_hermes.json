@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "referente_origen": {
+    "youtube_id": "6kadyV1GkcE",
+    "url": "https://www.youtube.com/watch?v=6kadyV1GkcE",
+    "titulo": "Hermes Agent, but 100% uncensored… it's insane",
+    "autor": "David Ondrej",
+    "fecha_publicacion": "2026-11-25",
+    "duracion_seg": 2148,
+    "vistas_corte": 51133,
+    "veredicto_prueba_acido": "Parcial (con letra chiquita FinOps y Seguridad)"
+  },
+  "ingredientes_generados": {
+    "stickers_png_rgba": [
+      "01_stickers_black_canvas/stk_01_abliteration_vector.png",
+      "01_stickers_black_canvas/stk_02_hermes_loop.png",
+      "01_stickers_black_canvas/stk_03_filtros_vs_auditoria.png",
+      "01_stickers_black_canvas/stk_04_docker_sandbox_escudo.png",
+      "01_stickers_black_canvas/stk_05_vps_gpu_finops.png",
+      "01_stickers_black_canvas/stk_06_alerta_prompt_injection.png"
+    ],
+    "plantilla_hyperframes": "02_plantilla_black_canvas_hf/index.html"
+  },
+  "clips": [
+    {
+      "id": "HRM-01",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (55s)",
+      "titulo": "¿Qué es un modelo ABLITERATED? Así borran el botón de rechazo (y el riesgo real)",
+      "sticker": "stk_01_abliteration_vector.png",
+      "cta": "HERMES",
+      "estado": "guion"
+    },
+    {
+      "id": "HRM-02",
+      "serie": "¿Oro Puro o Puro Humo?",
+      "formato": "9:16 (60s)",
+      "titulo": "IA sin censura 24/7 en un VPS barato: ¿Oro puro o letra chiquita de hardware?",
+      "sticker": "stk_05_vps_gpu_finops.png",
+      "cta": "AUDITA",
+      "estado": "guion"
+    },
+    {
+      "id": "HRM-03",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (60s)",
+      "titulo": "¿Por qué tu IA bloquea pruebas de seguridad en TU negocio? (3 candados locales)",
+      "sticker": "stk_03_filtros_vs_auditoria.png",
+      "cta": "SANDBOX",
+      "estado": "guion"
+    },
+    {
+      "id": "HRM-04",
+      "serie": "Historias de Madrugada",
+      "formato": "9:16 (45s)",
+      "titulo": "Le quité los candados a mi agente a las 2 a.m. y abrió un correo con Prompt Injection",
+      "sticker": "stk_06_alerta_prompt_injection.png",
+      "cta": "SANDBOX",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-05",
+      "serie": "El Túnel (AGY ↔ Klaus)",
+      "formato": "9:16 (50s)",
+      "titulo": "Qué es Hermes Agent (Nous Research) y por qué no es un simple chat",
+      "sticker": "stk_02_hermes_loop.png",
+      "cta": "HERMES",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-06",
+      "serie": "¿Caíste o no caíste?",
+      "formato": "9:16 (48s)",
+      "titulo": "¿Bajarías este modelo sin censura de un link random? Pon atención antes de instalar",
+      "sticker": "stk_06_alerta_prompt_injection.png",
+      "cta": "GUARDRAILS",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-07",
+      "serie": "¡WATERS! FinOps",
+      "formato": "9:16 (55s)",
+      "titulo": "VPS de $5 USD vs GPU de 12+ GB VRAM vs API: cuánto cuesta en realidad",
+      "sticker": "stk_05_vps_gpu_finops.png",
+      "cta": "FINOPS",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-08",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (55s)",
+      "titulo": "Los 3 candados si corres agentes locales: Docker Sandbox, UFW y aprobación humana",
+      "sticker": "stk_04_docker_sandbox_escudo.png",
+      "cta": "SANDBOX",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-09",
+      "serie": "¡WATERS! Día",
+      "formato": "9:16 (50s)",
+      "titulo": "Jailbreak vs Abliteration vs Fine-tuning explicados en pizarrón negro en 45 s",
+      "sticker": "stk_01_abliteration_vector.png",
+      "cta": "HERMES",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-10",
+      "serie": "Captoora / Negocios",
+      "formato": "9:16 (55s)",
+      "titulo": "Cómo revisar permisos y seguridad de tu negocio sin romper tu computadora",
+      "sticker": "stk_03_filtros_vs_auditoria.png",
+      "cta": "AUDITA",
+      "estado": "idea"
+    },
+    {
+      "id": "HRM-LONG",
+      "serie": "Deep Dive + OpusClip Fase 2",
+      "formato": "16:9 (8-10 min)",
+      "titulo": "Hermes Agent + Modelos Sin Censura bajo La Prueba del Ácido: arquitectura, costos y defensa",
+      "sticker": "01..06 + Black Canvas",
+      "cta": "SANDBOX",
+      "estado": "idea"
+    }
+  ]
+}

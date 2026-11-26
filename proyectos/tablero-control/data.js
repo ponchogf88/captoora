@@ -1,6 +1,6 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.3 (Dark + Miniaturas + Mini Logos + Cuotas) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.4 (Dark + Miniaturas + Mini Logos + Cuotas + REF-12) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.3",
+  schema_version: "1.4",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
@@ -382,6 +382,20 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/tablero-control/",
       veredicto: "Parcial",
       nota: ""
+    },
+    {
+      id: "REF-12",
+      fecha: "2026-11-25",
+      fuente: "David Ondrej · Hermes Agent Abliterated",
+      plataforma: "YouTube",
+      plat_icon: "youtube",
+      thumb: "thumbs/ref_12_hermes_abliterated.jpg",
+      url: "https://www.youtube.com/watch?v=6kadyV1GkcE",
+      que_muestra: "Agente autónomo Hermes (Nous Research) con modelos locales abliterated en Black Canvas, más patrocinio VPS.",
+      que_obtuvimos: "Biblioteca exclusiva (10 Shorts + 1 Largo), 6 stickers PNG Black Canvas 1080x1080 y plantilla HyperFrames 100% propia con 3 candados Docker.",
+      donde_vive: "proyectos/waters-serie/biblioteca_hermes_abliterated/",
+      veredicto: "Parcial",
+      nota: "Cero re-subida ajena; bajado a hardware real (2 GB VRAM) y arquitectura defensiva."
     }
   ],
 
