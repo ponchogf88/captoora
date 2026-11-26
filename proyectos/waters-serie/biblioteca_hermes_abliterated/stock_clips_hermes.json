@@ -29,7 +29,8 @@
       "titulo": "¿Qué es un modelo ABLITERATED? Así borran el botón de rechazo (y el riesgo real)",
       "sticker": "stk_01_abliteration_vector.png",
       "cta": "HERMES",
-      "estado": "guion"
+      "estado": "render_listo",
+      "render_local": "renders/HRM01_abliterated_black_canvas_master.mp4"
     },
     {
       "id": "HRM-02",

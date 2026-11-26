@@ -89,7 +89,11 @@
       if (!saved) return base;
       const parsed = JSON.parse(saved);
       if (!parsed) return base;
+      const schemaChanged = parsed.schema_version !== base.schema_version;
       parsed.schema_version = base.schema_version;
+      if (schemaChanged) {
+        parsed.meta = { ...(parsed.meta || {}), ...base.meta };
+      }
       parsed.estaciones_relevo = (parsed.estaciones_relevo || base.estaciones_relevo).map((st, idx) => ({
         ...(base.estaciones_relevo[idx] || {}),
         ...st,
@@ -111,15 +115,22 @@
         const match = base.publicados.find((bp) => bp.id === p.id) || {};
         return { ...match, ...p, thumb: p.thumb || match.thumb || null };
       });
-      parsed.cola_semanal = (parsed.cola_semanal || base.cola_semanal).map((c) => {
+      const savedCola = (parsed.cola_semanal || base.cola_semanal).map((c) => {
         const match = base.cola_semanal.find((bc) => bc.orden === c.orden) || {};
         return { ...match, ...c, thumb: c.thumb || match.thumb || null };
       });
+      const seenColaOrden = new Set(savedCola.map((c) => c.orden));
+      parsed.cola_semanal = savedCola.concat(base.cola_semanal.filter((bc) => !seenColaOrden.has(bc.orden)));
       if (Array.isArray(parsed.cuotas)) {
-        parsed.cuotas = parsed.cuotas.map((q) => {
+        const savedCuotas = parsed.cuotas.map((q) => {
           const match = base.cuotas.find((bq) => bq.id === q.id) || {};
+          if (schemaChanged && q.id === "CTA-01") {
+            return { ...q, ...match };
+          }
           return { ...match, ...q, icon: match.icon || q.icon || "gauge" };
         });
+        const seenQuotaIds = new Set(savedCuotas.map((q) => q.id));
+        parsed.cuotas = savedCuotas.concat(base.cuotas.filter((bq) => !seenQuotaIds.has(bq.id)));
       } else {
         parsed.cuotas = base.cuotas;
       }

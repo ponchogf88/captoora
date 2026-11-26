@@ -1,13 +1,13 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.4 (Dark + Miniaturas + Mini Logos + Cuotas + REF-12) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.5 (Dark + Miniaturas + Mini Logos + Cuotas + REF-12 + S10 HRM-01) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.4",
+  schema_version: "1.5",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
     fecha_corte: "2026-11-26",
     meta_videos_validacion: 20,
     cuota_elevenlabs: {
-      disponible: 30184,
+      disponible: 29754,
       total: 61509,
       unidad: "caracteres"
     },
@@ -87,7 +87,7 @@ window.CAPTOORA_DATA = {
       cuando_se_quita: "Al validar duración y volumen exacto con ffprobe",
       tiempo_estimado: "5 min/pieza",
       estado: "Activo",
-      detalle: "Cuota actual cuidada: 30,184 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
+      detalle: "Cuota actual cuidada: 29,754 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
     },
     {
       paso: 4,
@@ -571,6 +571,21 @@ window.CAPTOORA_DATA = {
       source_mp4: "proyectos/waters-serie/renders/WATERS_HYBRID_EP03_TONY_CUOTA_FINOPS_60S.mp4",
       estado_slot: "Listo en disco",
       feedback: ""
+    },
+    {
+      orden: "10",
+      archivo_cola: "10_HRM01_ABLITERATED_BLACK_CANVAS.mp4",
+      fecha_mx: "2026-11-30 20:00",
+      serie: "¡WATERS! Día · Black Canvas",
+      formato: "9:16 · 73.3s",
+      canales: ["TikTok", "YouTube Shorts", "Instagram Reels", "Facebook Reels"],
+      titulo: "¿Qué es un modelo ABLITERATED? Así borran el botón de rechazo (y el peligro real)",
+      cta_palabra: "HERMES",
+      lead_magnet_pdf: null,
+      thumb: "thumbs/s10_hrm01_abliterated.jpg",
+      source_mp4: "proyectos/waters-serie/biblioteca_hermes_abliterated/renders/HRM01_abliterated_black_canvas_master.mp4",
+      estado_slot: "Listo para CapCut",
+      feedback: "En Redmi Note 8 (/sdcard/Movies/Captoora_CapCut/04_HERMES_BLACK_CANVAS/) para subtítulos CapCut Pro."
     }
   ],
 
@@ -608,14 +623,14 @@ window.CAPTOORA_DATA = {
       cuenta: "Cuenta principal",
       tipo: "Membership",
       icon: "elevenlabs",
-      disponible: 30184,
+      disponible: 29754,
       total: 61509,
       unidad: "chars",
       origen: "API verificada",
       corte: "2026-11-26",
       renovacion: "Por confirmar",
       url: "https://elevenlabs.io/app/subscription",
-      nota: "Saldo verificado vía API; se consulta en vivo en el recordatorio 08:00 AM."
+      nota: "Saldo verificado vía API tras HRM-01 (31,755 usados / 29,754 disp.); recordatorio 08:00 AM."
     },
     {
       id: "CTA-02",

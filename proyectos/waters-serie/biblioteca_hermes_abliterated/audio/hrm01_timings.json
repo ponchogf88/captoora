@@ -1,0 +1,74 @@
+{
+  "hrm01": {
+    "total_duration": 73.29,
+    "total_chars": 1075,
+    "master_wav": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/hrm01_master.wav",
+    "clips": [
+      {
+        "id": "B1_hook",
+        "chapter": "01 · Hook",
+        "start": 0.15,
+        "voice_end": 9.75,
+        "end": 10.0,
+        "duration": 9.85,
+        "voice_dur": 9.6,
+        "chars": 165,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm01/B1_hook.mp3"
+      },
+      {
+        "id": "B2_vector",
+        "chapter": "02 · Vector de Rechazo",
+        "start": 10.0,
+        "voice_end": 30.16,
+        "end": 30.41,
+        "duration": 20.41,
+        "voice_dur": 20.16,
+        "chars": 291,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm01/B2_vector.mp3"
+      },
+      {
+        "id": "B3_realidad",
+        "chapter": "03 · Realidad",
+        "start": 30.41,
+        "voice_end": 46.49,
+        "end": 46.74,
+        "duration": 16.33,
+        "voice_dur": 16.08,
+        "chars": 249,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm01/B3_realidad.mp3"
+      },
+      {
+        "id": "B4_candados",
+        "chapter": "04 · Tres Candados",
+        "start": 46.74,
+        "voice_end": 66.98,
+        "end": 67.23,
+        "duration": 20.49,
+        "voice_dur": 20.24,
+        "chars": 278,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm01/B4_candados.mp3"
+      },
+      {
+        "id": "B5_cta",
+        "chapter": "05 · CTA HERMES",
+        "start": 67.23,
+        "voice_end": 72.59,
+        "end": 72.94,
+        "duration": 5.71,
+        "voice_dur": 5.36,
+        "chars": 92,
+        "mp3": "proyectos/waters-serie/biblioteca_hermes_abliterated/audio/cache/hrm01/B5_cta.mp3"
+      }
+    ]
+  },
+  "elevenlabs_quota_before": {
+    "character_count": 31325,
+    "character_limit": 61509,
+    "remaining": 30184
+  },
+  "elevenlabs_quota_after": {
+    "character_count": 31755,
+    "character_limit": 61509,
+    "remaining": 29754
+  }
+}
