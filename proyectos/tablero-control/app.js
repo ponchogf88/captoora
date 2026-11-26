@@ -1,25 +1,100 @@
-/* Captoora Control — Lógica interactiva, persistencia local y reconciliación en vivo */
+/* Captoora Control v1.1 — Dark default, real video thumbnails & Linux symbolic SVG icons */
 (() => {
   const STORAGE_KEY = "captoora_control_state_v1";
+  const THEME_KEY = "captoora_control_theme";
   const VALID_ROUTES = ["overview", "flujo", "referencias", "publicados", "cola"];
+  const ROUTE_TITLES = {
+    overview: "Resumen",
+    flujo: "Flujo y relevos",
+    referencias: "Referencias",
+    publicados: "Publicados",
+    cola: "Cola semanal"
+  };
 
+  /* Crisp 16x16 stroke=1.5 Linux-style symbolic SVG icons */
+  const ICONS = {
+    terminal: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"/><path d="M4.5 6.5L7 8.5 4.5 10.5M8 10.5h3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    "file-code": '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3.5 2h6l3 3v9h-9z" stroke-linejoin="round"/><path d="M6 8L4.5 9.5 6 11M10 8l1.5 1.5L10 11" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    waveform: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2 8v0m2.5-3v6m3-8v10m3-6v2m3-4v6" stroke-linecap="round"/></svg>',
+    cube: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2l5.5 3v6L8 14l-5.5-3V5L8 2z" stroke-linejoin="round"/><path d="M2.5 5L8 8l5.5-3M8 8v6" stroke-linejoin="round"/></svg>',
+    smartphone: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="4.5" y="1.8" width="7" height="12.4" rx="1.4"/><path d="M7.2 12h1.6" stroke-linecap="round"/></svg>',
+    calendar: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="3" width="12" height="10.5" rx="1.5"/><path d="M2 6.5h12M5.5 1.8v2.2M10.5 1.8v2.2" stroke-linecap="round"/></svg>',
+    scissors: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="4.5" cy="11.5" r="2"/><circle cx="11.5" cy="11.5" r="2"/><path d="M6 10L12.5 3M10 10L3.5 3" stroke-linecap="round"/></svg>',
+    layers: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 2.5L13.5 5.5 8 8.5 2.5 5.5 8 2.5z" stroke-linejoin="round"/><path d="M2.5 8.5L8 11.5l5.5-3M2.5 11.2L8 14l5.5-2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    archive: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2" y="2.5" width="12" height="3" rx="0.8"/><path d="M3 5.5v7.5a1 1 0 001 1h8a1 1 0 001-1V5.5M6.5 8.5h3" stroke-linecap="round"/></svg>',
+    ban: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M4.2 4.2l7.6 7.6" stroke-linecap="round"/></svg>',
+    plus: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M8 3v10M3 8h10" stroke-linecap="round"/></svg>',
+    pencil: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M11.2 2.8l2 2-7.4 7.4-2.6.6.6-2.6 7.4-7.4z" stroke-linejoin="round"/></svg>',
+    eye: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M1.8 8s2.3-4 6.2-4 6.2 4 6.2 4-2.3 4-6.2 4-6.2-4-6.2-4z"/><circle cx="8" cy="8" r="1.6"/></svg>',
+    note: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3 2.5h10v8l-3 3H3z" stroke-linejoin="round"/><path d="M10 10.5v3" stroke-linecap="round"/></svg>',
+    external: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M9.5 2.5h4v4M13.5 2.5L7.5 8.5M6.5 4H3.5v8.5H12V9.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    sun: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="2.8"/><path d="M8 1.8v1.4M8 12.8v1.4M1.8 8h1.4M12.8 8h1.4M3.6 3.6l1 1M11.4 11.4l1 1M12.4 3.6l-1 1M4.6 11.4l-1 1" stroke-linecap="round"/></svg>',
+    moon: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M12.8 10.2A5.2 5.2 0 015.8 3.2a5.5 5.5 0 107 7z" stroke-linejoin="round"/></svg>',
+    pdf: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3.5 2h6l3 3v9h-9z" stroke-linejoin="round"/><path d="M6 10.5h4M6 8h4" stroke-linecap="round"/></svg>',
+    tiktok: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M9.5 2.5v7.3a2.5 2.5 0 11-1.8-2.4M9.5 2.5c.7 1.6 2 2.4 3.5 2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    youtube: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="1.8" y="3.5" width="12.4" height="9" rx="2.2"/><path d="M6.8 6.2l3.4 1.8-3.4 1.8V6.2z" stroke-linejoin="round"/></svg>',
+    instagram: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2.5" y="2.5" width="11" height="11" rx="3"/><circle cx="8" cy="8" r="2.5"/><circle cx="11.3" cy="4.7" r="0.6" fill="currentColor"/></svg>',
+    facebook: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2.2" y="2.2" width="11.6" height="11.6" rx="2"/><path d="M9.5 13.8V8.8h1.8l.3-2H9.5V5.6c0-.6.3-1 1-1h1V2.9H10c-1.5 0-2.5.9-2.5 2.5v1.4H6v2h1.5v5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    meta: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M2.2 10.2c0-2.5 1.3-4.6 2.8-4.6 1.2 0 2 1.4 3 3.2 1-1.8 1.8-3.2 3-3.2 1.5 0 2.8 2.1 2.8 4.6 0 1.4-.8 2.3-1.9 2.3-1.1 0-1.9-.9-2.9-2.6L8 8.3l-1 1.6c-1 1.7-1.8 2.6-2.9 2.6-1.1 0-1.9-.9-1.9-2.3z" stroke-linejoin="round"/></svg>',
+    linkedin: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><rect x="2.2" y="2.2" width="11.6" height="11.6" rx="1.8"/><path d="M5.2 7v4.2M5.2 5v.2M8 11.2V7m0 1.5a1.8 1.8 0 013.4.5v2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    x: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><path d="M3 3l10 10M13 3L3 13" stroke-linecap="round"/></svg>',
+    threads: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M9.8 8.2a1.9 1.9 0 11-1.8-2.2c1.1 0 1.8.8 1.8 2.3v1.2" stroke-linecap="round"/></svg>',
+    globe: '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor"><circle cx="8" cy="8" r="5.5"/><path d="M2.5 8h11M8 2.5a8 8 0 010 11 8 8 0 010-11z"/></svg>'
+  };
+
+  const iconHtml = (name) => ICONS[name] || ICONS.globe;
   const clone = (v) => JSON.parse(JSON.stringify(v));
   const esc = (v) => String(v == null ? "" : v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const fmtInt = (n) => new Intl.NumberFormat("es-MX").format(Math.round(n));
   const fmtPct = (v) => (v == null || v === "" ? "—" : `${Number(v).toFixed(1)}%`);
 
+  function channelIconKey(name) {
+    const l = String(name || "").toLowerCase();
+    if (l.includes("tiktok")) return "tiktok";
+    if (l.includes("youtube")) return "youtube";
+    if (l.includes("instagram")) return "instagram";
+    if (l.includes("facebook")) return "facebook";
+    if (l.includes("linkedin")) return "linkedin";
+    if (l.includes("x ") || l === "x") return "x";
+    if (l.includes("threads")) return "threads";
+    return "globe";
+  }
+
+  /* Hydrate localStorage safely across v1.0 -> v1.1 so user edits persist alongside new thumbs/icons */
   function loadState() {
     const base = clone(window.CAPTOORA_DATA);
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed && parsed.schema_version === base.schema_version) {
-          return parsed;
-        }
-      }
-    } catch (_) {}
-    return base;
+      if (!saved) return base;
+      const parsed = JSON.parse(saved);
+      if (!parsed) return base;
+      parsed.schema_version = base.schema_version;
+      parsed.estaciones_relevo = (parsed.estaciones_relevo || base.estaciones_relevo).map((st, idx) => ({
+        ...(base.estaciones_relevo[idx] || {}),
+        ...st,
+        icon: (base.estaciones_relevo[idx] || {}).icon || st.icon || "terminal"
+      }));
+      parsed.relevos_banca = (parsed.relevos_banca || base.relevos_banca).map((b, idx) => ({
+        ...(base.relevos_banca[idx] || {}),
+        ...b,
+        icon: (base.relevos_banca[idx] || {}).icon || b.icon || "archive"
+      }));
+      parsed.referencias = (parsed.referencias || base.referencias).map((r) => {
+        const match = base.referencias.find((br) => br.id === r.id) || {};
+        return { ...match, ...r, plat_icon: r.plat_icon || match.plat_icon || "globe", thumb: r.thumb !== undefined ? r.thumb : match.thumb };
+      });
+      parsed.publicados = (parsed.publicados || base.publicados).map((p) => {
+        const match = base.publicados.find((bp) => bp.id === p.id) || {};
+        return { ...match, ...p, thumb: p.thumb || match.thumb || null };
+      });
+      parsed.cola_semanal = (parsed.cola_semanal || base.cola_semanal).map((c) => {
+        const match = base.cola_semanal.find((bc) => bc.orden === c.orden) || {};
+        return { ...match, ...c, thumb: c.thumb || match.thumb || null };
+      });
+      return parsed;
+    } catch (_) {
+      return base;
+    }
   }
 
   let state = loadState();
@@ -31,9 +106,8 @@
   const editorDialog = document.getElementById("editor-dialog");
   const editorTitle = document.getElementById("editor-title");
   const editorBody = document.getElementById("editor-body");
-  const drawerDialog = document.getElementById("drawer-dialog");
 
-  function saveState(stampText = "Guardado local actualizado") {
+  function saveState(stampText = "Local OK") {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
       const el = document.getElementById("save-indicator");
@@ -41,16 +115,41 @@
     } catch (_) {}
   }
 
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
+    const btn = document.getElementById("btn-theme-toggle");
+    if (btn) {
+      btn.innerHTML = theme === "dark" ? ICONS.sun : ICONS.moon;
+      btn.title = theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+      btn.setAttribute("aria-label", btn.title);
+    }
+  }
+
+  function initTheme() {
+    let saved = "dark";
+    try {
+      const t = localStorage.getItem(THEME_KEY);
+      if (t === "light" || t === "dark") saved = t;
+    } catch (_) {}
+    applyTheme(saved);
+  }
+
+  function hydrateStaticIcons() {
+    document.querySelectorAll("[data-icon]").forEach((el) => {
+      el.innerHTML = iconHtml(el.dataset.icon);
+    });
+  }
+
   function pillClassFor(label) {
     const v = String(label || "").toLowerCase();
-    if (v.includes("adopt") || v.includes("activo") || v.includes("publicado") || v.includes("lista hoy")) return "pill-positive";
+    if (v.includes("adopt") || v.includes("activo") || v.includes("publicado") || v.includes("lista")) return "pill-positive";
     if (v.includes("turno")) return "pill-accent";
     if (v.includes("parcial") || v.includes("prueba") || v.includes("capcut") || v.includes("programado") || v.includes("fase 2") || v.includes("siguiente")) return "pill-warning";
     if (v.includes("pirita") || v.includes("reemplazado")) return "pill-negative";
     return "pill-neutral";
   }
 
-  /* Data reconciliation & assertions (every total computed from rows) */
   function computeMetrics() {
     const pubs = state.publicados;
     const refs = state.referencias;
@@ -82,43 +181,29 @@
 
     console.assert(
       refCounts.Adoptado + refCounts.Parcial + refCounts["En prueba"] + refCounts.Pirita === refCounts.all,
-      "Reconciliación: suma de veredictos debe igualar total de referencias"
+      "Reconciliación: veredictos == referencias"
     );
     console.assert(
       colaCounts["Listo en disco"] + colaCounts["En CapCut Pro"] + colaCounts.Programado + colaCounts.Publicado === colaCounts.all,
-      "Reconciliación: suma de estados de cola debe igualar total de slots"
+      "Reconciliación: estados == cola"
     );
 
     const quotaPct = (meta.cuota_elevenlabs.disponible / meta.cuota_elevenlabs.total) * 100;
-    return {
-      totalPub,
-      target,
-      pctGoal,
-      totalViews,
-      avgViews,
-      refCounts,
-      colaCounts,
-      colaPendientes,
-      quotaPct
-    };
+    return { totalPub, target, pctGoal, totalViews, avgViews, refCounts, colaCounts, colaPendientes, quotaPct };
   }
 
   function renderAll() {
     const m = computeMetrics();
 
-    /* Header & Sidebar live counters */
     document.getElementById("nav-cola-count").textContent = String(m.colaPendientes);
-    document.getElementById("topbar-goal-pill").textContent = `${m.totalPub} de ${m.target} publicados`;
-    document.getElementById("topbar-freshness").textContent = `Corte ${state.meta.fecha_corte}`;
+    document.getElementById("topbar-goal-pill").textContent = `${m.totalPub} / ${m.target} publicados`;
 
-    /* Overview KPIs & headline finding */
-    const faltan = Math.max(0, m.target - m.totalPub);
     const conCola = Math.min(m.target, m.totalPub + m.colaPendientes);
     document.getElementById("overview-finding").textContent =
-      `Llevas ${m.totalPub} de ${m.target} videos publicados (${m.pctGoal.toFixed(1)}%). Tienes ${m.colaPendientes} pendientes en cola para llegar a ${conCola} de ${m.target} esta semana.`;
+      `Llevas ${m.totalPub} de ${m.target} videos publicados (${m.pctGoal.toFixed(1)}%). Tienes ${m.colaPendientes} en cola para llegar a ${conCola} de ${m.target} esta semana.`;
 
     document.getElementById("kpi-published").innerHTML = `${fmtInt(m.totalPub)} <span class="kpi-unit">/ ${m.target}</span>`;
-    document.getElementById("kpi-published-note").textContent = `${m.pctGoal.toFixed(1)}% · +${m.colaPendientes} listos en cola`;
+    document.getElementById("kpi-published-note").textContent = `${m.pctGoal.toFixed(1)}% · +${m.colaPendientes} en cola`;
     document.getElementById("kpi-views").textContent = fmtInt(m.totalViews);
     document.getElementById("kpi-views-note").textContent = `Prom. ${fmtInt(m.avgViews)} por video · ${m.totalPub} registros`;
     document.getElementById("kpi-refs").textContent = fmtInt(m.refCounts.all);
@@ -127,31 +212,67 @@
     document.getElementById("kpi-quota-note").textContent = `${m.quotaPct.toFixed(1)}% de ${fmtInt(state.meta.cuota_elevenlabs.total)} disponibles`;
 
     renderRelayTrack();
+    renderThumbStrip();
     renderOverviewCharts(m);
     renderRoadmap();
     renderFlujoTables();
     renderReferencias(m);
     renderPublicados();
     renderCola(m);
-    syncMobileDrawerNav();
   }
 
   function renderRelayTrack() {
-    const container = document.getElementById("relay-track");
-    container.innerHTML = state.estaciones_relevo.map((st) => {
+    document.getElementById("relay-track").innerHTML = state.estaciones_relevo.map((st) => {
       const isCurrent = st.estado.toLowerCase().includes("turno");
       return `
         <button type="button" class="relay-node ${isCurrent ? "is-current" : ""}" data-station="${st.paso}">
           <div class="relay-top">
-            <span class="relay-code">${esc(st.codigo)}</span>
+            <span class="relay-id-wrap">${iconHtml(st.icon)}<span class="relay-code">${esc(st.codigo)}</span></span>
             <span class="pill ${pillClassFor(st.estado)}">${esc(st.estado)}</span>
           </div>
-          <div class="relay-title">${esc(st.paso)}. ${esc(st.nombre)}</div>
+          <div class="relay-title">${esc(st.nombre)}</div>
           <div class="relay-owner">${esc(st.responsable)}</div>
           <div class="relay-output">${esc(st.entrega)}</div>
         </button>
       `;
     }).join("");
+  }
+
+  function renderThumbStrip() {
+    const pubTiles = state.publicados.map((p, idx) => `
+      <button type="button" class="thumb-tile" data-edit-pub="${esc(p.id)}" title="${esc(p.titulo)}">
+        <div class="thumb-box">
+          ${p.thumb ? `<img src="${esc(p.thumb)}" alt="${esc(p.titulo)}">` : ""}
+        </div>
+        <div class="thumb-meta">
+          <span class="thumb-code">PUB-${idx + 1}</span>
+          <span class="thumb-dot thumb-dot-pub" aria-hidden="true"></span>
+        </div>
+        <div class="thumb-cap">${esc(p.titulo)}</div>
+      </button>
+    `);
+
+    const colaTiles = state.cola_semanal.map((c) => {
+      const dotCls = c.estado_slot === "Publicado"
+        ? "thumb-dot-pub"
+        : c.estado_slot === "En CapCut Pro"
+          ? "thumb-dot-capcut"
+          : "thumb-dot-ready";
+      return `
+        <button type="button" class="thumb-tile" data-edit-slot="${esc(c.orden)}" title="${esc(c.titulo)}">
+          <div class="thumb-box">
+            ${c.thumb ? `<img src="${esc(c.thumb)}" alt="${esc(c.titulo)}">` : ""}
+          </div>
+          <div class="thumb-meta">
+            <span class="thumb-code">S${esc(c.orden)}</span>
+            <span class="thumb-dot ${dotCls}" aria-hidden="true"></span>
+          </div>
+          <div class="thumb-cap">${esc(c.titulo)}</div>
+        </button>
+      `;
+    });
+
+    document.getElementById("overview-thumb-strip").innerHTML = pubTiles.concat(colaTiles).join("");
   }
 
   function renderOverviewCharts(m) {
@@ -167,7 +288,7 @@
         labels,
         values,
         highlight: hiIdx >= 0 ? hiIdx : 0,
-        height: 184,
+        height: 256,
         format: window.Charts.fmt.int
       });
     }
@@ -187,7 +308,7 @@
       </div>
       <div class="goal-legend">
         <span><span class="legend-swatch" style="background:var(--chart-1)"></span>Publicados: <strong class="num">${m.totalPub}</strong></span>
-        <span><span class="legend-swatch" style="background:#8fbac4"></span>En cola semanal: <strong class="num">${m.colaPendientes}</strong></span>
+        <span><span class="legend-swatch" style="background:var(--seg-cola)"></span>En cola: <strong class="num">${m.colaPendientes}</strong></span>
         <span><span class="legend-swatch" style="background:var(--raised);border:1px solid var(--border)"></span>Por producir: <strong class="num">${porProducir}</strong></span>
       </div>
     `;
@@ -200,7 +321,7 @@
           <span class="roadmap-title">${esc(h.titulo)}</span>
           <span class="roadmap-time num">${esc(h.esfuerzo)}</span>
         </div>
-        <div class="roadmap-meta">${esc(h.ventana)} · Meta: ${esc(h.resultado_esperado)}</div>
+        <div class="roadmap-meta">${esc(h.ventana)} · ${esc(h.resultado_esperado)}</div>
         <p class="roadmap-desc">${esc(h.detalle)}</p>
       </li>
     `).join("");
@@ -212,10 +333,9 @@
 
     document.getElementById("table-estaciones-body").innerHTML = state.estaciones_relevo.map((st) => `
       <tr>
-        <td class="mono">${esc(st.codigo)}</td>
         <td>
-          <div class="cell-primary">${esc(st.nombre)}</div>
-          <div class="cell-secondary">${esc(st.responsable)}</div>
+          <div class="inline-icon-label cell-primary">${iconHtml(st.icon)}<span><span class="mono">${esc(st.codigo)}</span> · ${esc(st.nombre)}</span></div>
+          <div class="cell-secondary">${esc(st.responsable)} · ${esc(st.estacion)}</div>
         </td>
         <td>${esc(st.entra)}</td>
         <td>${esc(st.entrega)}</td>
@@ -227,7 +347,7 @@
 
     document.getElementById("table-banca-body").innerHTML = state.relevos_banca.map((b) => `
       <tr>
-        <td class="cell-primary">${esc(b.herramienta)}</td>
+        <td><div class="inline-icon-label cell-primary">${iconHtml(b.icon)}<span>${esc(b.herramienta)}</span></div></td>
         <td><span class="pill ${pillClassFor(b.estado)}">${esc(b.estado)}</span></td>
         <td>${esc(b.momento)}</td>
         <td>${esc(b.motivo)}</td>
@@ -264,15 +384,24 @@
     tbody.innerHTML = filtered.map((r) => {
       const isHttp = /^https?:\/\//i.test(r.url);
       const sourceLink = isHttp
-        ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" class="cell-link">${esc(r.fuente)}</a>`
+        ? `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" class="cell-link"><span>${esc(r.fuente)}</span>${ICONS.external}</a>`
         : `<span class="cell-primary">${esc(r.fuente)}</span>`;
+      const visualSlot = r.thumb
+        ? `<div class="ref-thumb-slot"><img src="${esc(r.thumb)}" alt="${esc(r.fuente)}"></div>`
+        : `<div class="ref-thumb-slot" title="${esc(r.plataforma)}">${iconHtml(r.plat_icon)}</div>`;
+
       return `
         <tr>
           <td class="mono">${esc(r.id)}</td>
           <td class="num">${esc(r.fecha)}</td>
           <td>
-            ${sourceLink}
-            <div class="cell-secondary">${esc(r.plataforma)}</div>
+            <div class="media-cell">
+              ${visualSlot}
+              <div>
+                ${sourceLink}
+                <div class="cell-secondary">${esc(r.plataforma)}</div>
+              </div>
+            </div>
           </td>
           <td>${esc(r.que_muestra)}</td>
           <td>
@@ -282,7 +411,7 @@
           </td>
           <td><span class="pill ${pillClassFor(r.veredicto)}">${esc(r.veredicto)}</span></td>
           <td class="num">
-            <button type="button" class="btn-ghost btn-sm" data-edit-ref="${esc(r.id)}">Anotar</button>
+            <button type="button" class="icon-btn" data-edit-ref="${esc(r.id)}" title="Anotar referencia" aria-label="Anotar ${esc(r.id)}">${ICONS.note}</button>
           </td>
         </tr>
       `;
@@ -298,25 +427,37 @@
     if (!filtered.length) {
       tbody.innerHTML = `<tr><td colspan="8" class="empty-row">Ninguna publicación coincide con la búsqueda.</td></tr>`;
     } else {
-      tbody.innerHTML = filtered.map((p) => `
-        <tr>
-          <td>
-            <div class="cell-primary"><span class="mono">${esc(p.id)}</span> · ${esc(p.titulo)}</div>
-            <div class="cell-secondary">${esc(p.fecha)} · ${esc(p.serie)}</div>
-            <div class="cell-secondary">${esc(p.diagnostico)}</div>
-            <div class="cell-secondary"><strong>Siguiente iteración:</strong> ${esc(p.mejora_siguiente)}</div>
-          </td>
-          <td>${esc(p.canal)}</td>
-          <td class="num">${p.vistas == null ? "—" : fmtInt(p.vistas)}</td>
-          <td class="num">${fmtPct(p.retencion_pct)}</td>
-          <td class="num">${p.guardados == null ? "—" : fmtInt(p.guardados)}</td>
-          <td class="num">${p.dms_wa == null ? "—" : fmtInt(p.dms_wa)}</td>
-          <td><span class="pill ${pillClassFor(p.estado)}">${esc(p.estado)}</span></td>
-          <td class="num">
-            <button type="button" class="btn-ghost btn-sm" data-edit-pub="${esc(p.id)}">Editar</button>
-          </td>
-        </tr>
-      `).join("");
+      tbody.innerHTML = filtered.map((p) => {
+        const netIcons = (p.canales || [p.canal]).map((c) =>
+          `<span class="net-icon" title="${esc(c)}" aria-label="${esc(c)}">${iconHtml(channelIconKey(c))}</span>`
+        ).join("");
+        return `
+          <tr>
+            <td>
+              <div class="media-cell">
+                <button type="button" class="thumb-sm-btn" data-edit-pub="${esc(p.id)}" title="Ver / editar ${esc(p.id)}">
+                  ${p.thumb ? `<img src="${esc(p.thumb)}" alt="${esc(p.titulo)}">` : iconHtml("cube")}
+                </button>
+                <div>
+                  <div class="cell-primary"><span class="mono">${esc(p.id)}</span> · ${esc(p.titulo)}</div>
+                  <div class="cell-secondary">${esc(p.fecha)} · ${esc(p.serie)}</div>
+                  <div class="cell-secondary">${esc(p.diagnostico)}</div>
+                  <div class="cell-secondary"><strong>Siguiente:</strong> ${esc(p.mejora_siguiente)}</div>
+                </div>
+              </div>
+            </td>
+            <td><div class="net-icons">${netIcons}</div></td>
+            <td class="num">${p.vistas == null ? "—" : fmtInt(p.vistas)}</td>
+            <td class="num">${fmtPct(p.retencion_pct)}</td>
+            <td class="num">${p.guardados == null ? "—" : fmtInt(p.guardados)}</td>
+            <td class="num">${p.dms_wa == null ? "—" : fmtInt(p.dms_wa)}</td>
+            <td><span class="pill ${pillClassFor(p.estado)}">${esc(p.estado)}</span></td>
+            <td class="num">
+              <button type="button" class="icon-btn" data-edit-pub="${esc(p.id)}" title="Editar métricas" aria-label="Editar ${esc(p.id)}">${ICONS.pencil}</button>
+            </td>
+          </tr>
+        `;
+      }).join("");
     }
 
     document.getElementById("mejoras-list").innerHTML = state.mejoras_activas.map((mj) => `
@@ -346,41 +487,48 @@
     document.getElementById("cola-filter-summary").textContent = `Mostrando ${filtered.length} de ${m.colaCounts.all}`;
     const tbody = document.getElementById("table-cola-body");
     if (!filtered.length) {
-      tbody.innerHTML = `<tr><td colspan="7" class="empty-row">Ningún video de la cola coincide con el filtro actual.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="7" class="empty-row">Ningún slot coincide con el filtro actual.</td></tr>`;
       return;
     }
 
     const opts = ["Listo en disco", "En CapCut Pro", "Programado", "Publicado"];
-    tbody.innerHTML = filtered.map((c) => `
-      <tr>
-        <td class="mono num">${esc(c.orden)}</td>
-        <td class="num">${esc(c.fecha_mx)}</td>
-        <td>
-          <div class="cell-primary">${esc(c.titulo)}</div>
-          <div class="cell-secondary">${esc(c.serie)} · <span class="mono">${esc(c.archivo_cola)}</span></div>
-          ${c.feedback ? `<div class="cell-secondary"><strong>Feedback:</strong> ${esc(c.feedback)}</div>` : ""}
-        </td>
-        <td>
-          <div>${esc(c.formato)}</div>
-          <div class="cell-secondary">${esc(c.canales.join(" · "))}</div>
-        </td>
-        <td>
-          <div class="mono">${esc(c.cta_palabra)}</div>
-          <div class="cell-secondary">${c.lead_magnet_pdf ? "Incluye guía PDF" : "Sin PDF"}</div>
-        </td>
-        <td>
-          <select class="inline-select" data-slot-status="${esc(c.orden)}" aria-label="Estado de slot ${esc(c.orden)}">
-            ${opts.map((o) => `<option value="${esc(o)}" ${c.estado_slot === o ? "selected" : ""}>${esc(o)}</option>`).join("")}
-          </select>
-        </td>
-        <td class="num">
-          <button type="button" class="btn-ghost btn-sm" data-edit-slot="${esc(c.orden)}">Revisar</button>
-        </td>
-      </tr>
-    `).join("");
+    tbody.innerHTML = filtered.map((c) => {
+      const netIcons = c.canales.map((ch) =>
+        `<span class="net-icon" title="${esc(ch)}" aria-label="${esc(ch)}">${iconHtml(channelIconKey(ch))}</span>`
+      ).join("") + (c.lead_magnet_pdf ? `<span class="net-icon net-icon-pdf" title="Incluye guía PDF descargable">${ICONS.pdf}</span>` : "");
+
+      return `
+        <tr>
+          <td class="mono num">${esc(c.orden)}</td>
+          <td class="num">${esc(c.fecha_mx)}</td>
+          <td>
+            <div class="media-cell">
+              <button type="button" class="thumb-sm-btn" data-edit-slot="${esc(c.orden)}" title="Revisar slot ${esc(c.orden)}">
+                ${c.thumb ? `<img src="${esc(c.thumb)}" alt="${esc(c.titulo)}">` : iconHtml("cube")}
+              </button>
+              <div>
+                <div class="cell-primary">${esc(c.titulo)}</div>
+                <div class="cell-secondary">${esc(c.serie)} · ${esc(c.formato)}</div>
+                <div class="cell-secondary mono">${esc(c.archivo_cola)}</div>
+                ${c.feedback ? `<div class="cell-secondary"><strong>Feedback:</strong> ${esc(c.feedback)}</div>` : ""}
+              </div>
+            </div>
+          </td>
+          <td><div class="net-icons">${netIcons}</div></td>
+          <td class="mono">${esc(c.cta_palabra)}</td>
+          <td>
+            <select class="inline-select" data-slot-status="${esc(c.orden)}" aria-label="Estado del slot ${esc(c.orden)}">
+              ${opts.map((o) => `<option value="${esc(o)}" ${c.estado_slot === o ? "selected" : ""}>${esc(o)}</option>`).join("")}
+            </select>
+          </td>
+          <td class="num">
+            <button type="button" class="icon-btn" data-edit-slot="${esc(c.orden)}" title="Revisar o dejar feedback" aria-label="Revisar slot ${esc(c.orden)}">${ICONS.eye}</button>
+          </td>
+        </tr>
+      `;
+    }).join("");
   }
 
-  /* Routing */
   function setRoute(route) {
     if (!VALID_ROUTES.includes(route)) route = "overview";
     currentRoute = route;
@@ -388,35 +536,21 @@
     document.querySelectorAll(".view").forEach((sec) => {
       sec.hidden = sec.dataset.view !== route;
     });
-    document.querySelectorAll(".nav-item[data-route]").forEach((a) => {
+    document.querySelectorAll(".rail-item[data-route]").forEach((a) => {
       if (a.dataset.route === route) {
         a.setAttribute("aria-current", "page");
       } else {
         a.removeAttribute("aria-current");
       }
     });
+    const viewNameEl = document.getElementById("topbar-view-name");
+    if (viewNameEl) viewNameEl.textContent = ROUTE_TITLES[route] || "Resumen";
+
     if (window.location.hash !== `#${route}`) {
       history.replaceState(null, "", `#${route}`);
     }
-    syncMobileDrawerNav();
   }
 
-  function syncMobileDrawerNav() {
-    const drawerList = document.getElementById("drawer-nav-list");
-    if (!drawerList) return;
-    const labels = [
-      ["overview", "Resumen"],
-      ["flujo", "Flujo y relevos"],
-      ["referencias", "Referencias"],
-      ["publicados", "Publicados"],
-      ["cola", "Cola semanal"]
-    ];
-    drawerList.innerHTML = labels.map(([id, text]) => `
-      <a href="#${id}" class="nav-item" data-drawer-route="${id}" ${currentRoute === id ? 'aria-current="page"' : ""}>${esc(text)}</a>
-    `).join("");
-  }
-
-  /* Native <dialog> Modals */
   function openModal(title, html, onMount) {
     editorTitle.textContent = title;
     editorBody.innerHTML = html;
@@ -430,11 +564,11 @@
     openModal(`${st.codigo} · ${st.nombre}`, `
       <dl class="detail-kv">
         <dt>Responsable</dt><dd>${esc(st.responsable)}</dd>
-        <dt>Estación física</dt><dd>${esc(st.estacion)}</dd>
+        <dt>Estación</dt><dd>${esc(st.estacion)}</dd>
         <dt>Qué entra</dt><dd>${esc(st.entra)}</dd>
         <dt>Qué entrega</dt><dd>${esc(st.entrega)}</dd>
-        <dt>Cuándo se quita</dt><dd>${esc(st.cuando_se_quita)}</dd>
-        <dt>Tiempo estimado</dt><dd>${esc(st.tiempo_estimado)}</dd>
+        <dt>Cuándo suelta</dt><dd>${esc(st.cuando_se_quita)}</dd>
+        <dt>Tiempo</dt><dd>${esc(st.tiempo_estimado)}</dd>
         <dt>Estado</dt><dd><span class="pill ${pillClassFor(st.estado)}">${esc(st.estado)}</span></dd>
       </dl>
       <p class="cell-secondary">${esc(st.detalle)}</p>
@@ -452,6 +586,8 @@
       titulo: "",
       serie: "¡WATERS! Día",
       canal: "TikTok · FB · IG · YT",
+      canales: ["TikTok", "Facebook Reels", "Instagram Reels", "YouTube Shorts"],
+      thumb: null,
       vistas: 0,
       retencion_pct: "",
       guardados: "",
@@ -462,7 +598,12 @@
       mejora_siguiente: ""
     };
 
-    openModal(existing ? `Editar métricas · ${p.id}` : "Registrar nueva publicación", `
+    const previewHtml = p.thumb
+      ? `<div class="modal-preview-row"><img src="${esc(p.thumb)}" alt="${esc(p.titulo)}" class="modal-preview-img"><dl class="detail-kv"><dt>ID</dt><dd class="mono">${esc(p.id)}</dd><dt>Serie</dt><dd>${esc(p.serie)}</dd><dt>Fecha</dt><dd class="num">${esc(p.fecha)}</dd></dl></div>`
+      : "";
+
+    openModal(existing ? `Editar métricas · ${p.id}` : "Registrar publicación", `
+      ${previewHtml}
       <form id="pub-form">
         <div class="form-grid">
           <div class="form-field full">
@@ -492,7 +633,7 @@
             <input id="pf-vistas" name="vistas" type="number" min="0" value="${p.vistas == null ? "" : p.vistas}">
           </div>
           <div class="form-field">
-            <label for="pf-ret">Retención % (vacío si no medido)</label>
+            <label for="pf-ret">Retención %</label>
             <input id="pf-ret" name="retencion_pct" type="number" step="0.1" min="0" max="100" value="${p.retencion_pct == null ? "" : p.retencion_pct}">
           </div>
           <div class="form-field">
@@ -504,17 +645,17 @@
             <input id="pf-dms" name="dms_wa" type="number" min="0" value="${p.dms_wa == null ? "" : p.dms_wa}">
           </div>
           <div class="form-field full">
-            <label for="pf-diag">Diagnóstico honesto (qué pasó)</label>
+            <label for="pf-diag">Diagnóstico honesto</label>
             <textarea id="pf-diag" name="diagnostico">${esc(p.diagnostico)}</textarea>
           </div>
           <div class="form-field full">
-            <label for="pf-mej">Qué cambiamos en la siguiente iteración</label>
+            <label for="pf-mej">Siguiente iteración</label>
             <textarea id="pf-mej" name="mejora_siguiente">${esc(p.mejora_siguiente)}</textarea>
           </div>
         </div>
         <div class="dialog-actions">
           <button type="button" class="btn-ghost" id="btn-cancel-modal">Cancelar</button>
-          <button type="submit" class="btn-primary">Guardar registro</button>
+          <button type="submit" class="btn-primary">Guardar</button>
         </div>
       </form>
     `, () => {
@@ -523,12 +664,15 @@
         e.preventDefault();
         const fd = new FormData(e.target);
         const numOrNull = (val) => (String(val).trim() === "" ? null : Number(val));
+        const canalStr = String(fd.get("canal")).trim();
         const updated = {
           id: p.id,
           fecha: fd.get("fecha"),
           titulo: String(fd.get("titulo")).trim(),
           serie: String(fd.get("serie")).trim() || "¡WATERS!",
-          canal: String(fd.get("canal")).trim(),
+          canal: canalStr,
+          canales: canalStr.split(/[·,]/).map((s) => s.trim()).filter(Boolean),
+          thumb: p.thumb,
           vistas: numOrNull(fd.get("vistas")) || 0,
           retencion_pct: numOrNull(fd.get("retencion_pct")),
           guardados: numOrNull(fd.get("guardados")),
@@ -551,7 +695,7 @@
   }
 
   function openAddRefModal() {
-    openModal("Agregar referencia nueva", `
+    openModal("Agregar referencia", `
       <form id="ref-form">
         <div class="form-grid">
           <div class="form-field">
@@ -571,11 +715,11 @@
             <textarea id="rf-muestra" name="que_muestra" required></textarea>
           </div>
           <div class="form-field full">
-            <label for="rf-obt">Qué extraemos o aplicamos en Captoora</label>
+            <label for="rf-obt">Qué extraemos o aplicamos</label>
             <textarea id="rf-obt" name="que_obtuvimos" required></textarea>
           </div>
           <div class="form-field">
-            <label for="rf-ver">Veredicto inicial</label>
+            <label for="rf-ver">Veredicto</label>
             <select id="rf-ver" name="veredicto">
               <option value="En prueba">En prueba</option>
               <option value="Adoptado">Adoptado</option>
@@ -584,13 +728,13 @@
             </select>
           </div>
           <div class="form-field">
-            <label for="rf-donde">Dónde vive en el proyecto</label>
+            <label for="rf-donde">Ruta en proyecto</label>
             <input id="rf-donde" name="donde_vive" value="proyectos/waters-serie/referencias/inbox/">
           </div>
         </div>
         <div class="dialog-actions">
           <button type="button" class="btn-ghost" id="btn-cancel-modal">Cancelar</button>
-          <button type="submit" class="btn-primary">Guardar referencia</button>
+          <button type="submit" class="btn-primary">Guardar</button>
         </div>
       </form>
     `, () => {
@@ -598,12 +742,15 @@
       document.getElementById("ref-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const fd = new FormData(e.target);
+        const plat = String(fd.get("plataforma")).trim();
         const nextNum = String(state.referencias.length + 1).padStart(2, "0");
         state.referencias.push({
           id: `REF-${nextNum}`,
           fecha: new Date().toISOString().slice(0, 10),
           fuente: String(fd.get("fuente")).trim(),
-          plataforma: String(fd.get("plataforma")).trim(),
+          plataforma: plat,
+          plat_icon: channelIconKey(plat),
+          thumb: null,
           url: String(fd.get("url")).trim() || "Local",
           que_muestra: String(fd.get("que_muestra")).trim(),
           que_obtuvimos: String(fd.get("que_obtuvimos")).trim(),
@@ -621,7 +768,7 @@
   function openEditRefNoteModal(refId) {
     const ref = state.referencias.find((r) => r.id === refId);
     if (!ref) return;
-    openModal(`Anotar referencia · ${ref.id}`, `
+    openModal(`Anotar · ${ref.id}`, `
       <form id="ref-note-form">
         <dl class="detail-kv">
           <dt>Fuente</dt><dd>${esc(ref.fuente)} (${esc(ref.plataforma)})</dd>
@@ -635,13 +782,13 @@
             </select>
           </div>
           <div class="form-field full">
-            <label for="rn-nota">Nota de revisión o iteración</label>
+            <label for="rn-nota">Nota o iteración</label>
             <textarea id="rn-nota" name="nota" autofocus>${esc(ref.nota || "")}</textarea>
           </div>
         </div>
         <div class="dialog-actions">
           <button type="button" class="btn-ghost" id="btn-cancel-modal">Cancelar</button>
-          <button type="submit" class="btn-primary">Guardar nota</button>
+          <button type="submit" class="btn-primary">Guardar</button>
         </div>
       </form>
     `, () => {
@@ -661,15 +808,17 @@
   function openSlotModal(orden) {
     const slot = state.cola_semanal.find((c) => c.orden === orden);
     if (!slot) return;
-    openModal(`Revisión Slot ${slot.orden} · ${slot.serie}`, `
-      <form id="slot-form">
+    openModal(`Slot ${slot.orden} · ${slot.serie}`, `
+      <div class="modal-preview-row">
+        ${slot.thumb ? `<img src="${esc(slot.thumb)}" alt="${esc(slot.titulo)}" class="modal-preview-img">` : ""}
         <dl class="detail-kv">
           <dt>Título</dt><dd>${esc(slot.titulo)}</dd>
-          <dt>Programado MX</dt><dd>${esc(slot.fecha_mx)}</dd>
+          <dt>Fecha MX</dt><dd class="num">${esc(slot.fecha_mx)}</dd>
           <dt>Archivo cola</dt><dd class="mono">${esc(slot.archivo_cola)}</dd>
-          <dt>Fuente MP4</dt><dd class="mono">${esc(slot.source_mp4)}</dd>
-          <dt>CTA / Guía</dt><dd>${esc(slot.cta_palabra)}${slot.lead_magnet_pdf ? ` · ${esc(slot.lead_magnet_pdf)}` : ""}</dd>
+          <dt>CTA / PDF</dt><dd>${esc(slot.cta_palabra)}${slot.lead_magnet_pdf ? ` · PDF` : ""}</dd>
         </dl>
+      </div>
+      <form id="slot-form">
         <div class="form-grid">
           <div class="form-field full">
             <label for="sl-estado">Estado operativo</label>
@@ -684,7 +833,7 @@
         </div>
         <div class="dialog-actions">
           <button type="button" class="btn-ghost" id="btn-cancel-modal">Cancelar</button>
-          <button type="submit" class="btn-primary">Guardar revisión</button>
+          <button type="submit" class="btn-primary">Guardar</button>
         </div>
       </form>
     `, () => {
@@ -692,9 +841,8 @@
       document.getElementById("slot-form").addEventListener("submit", (e) => {
         e.preventDefault();
         const fd = new FormData(e.target);
-        const newStatus = fd.get("estado_slot");
         slot.feedback = String(fd.get("feedback")).trim();
-        updateSlotStatus(slot, newStatus);
+        updateSlotStatus(slot, fd.get("estado_slot"));
         editorDialog.close("save");
       });
     });
@@ -704,22 +852,23 @@
     slot.estado_slot = newStatus;
     if (newStatus === "Publicado") {
       const pubId = `COLA-${slot.orden}`;
-      const already = state.publicados.find((p) => p.id === pubId);
-      if (!already) {
+      if (!state.publicados.find((p) => p.id === pubId)) {
         state.publicados.push({
           id: pubId,
           fecha: slot.fecha_mx.slice(0, 10),
           titulo: slot.titulo,
           serie: slot.serie,
           canal: slot.canales.join(" · "),
+          canales: slot.canales.slice(),
+          thumb: slot.thumb,
           vistas: 0,
           retencion_pct: null,
           guardados: null,
           comentarios_cta: null,
           dms_wa: null,
           estado: "En prueba",
-          diagnostico: slot.feedback || "Recién promovido desde cola semanal; pendiente de primer corte a los 7 días.",
-          mejora_siguiente: "Registrar vistas y retención tras las primeras 72 horas."
+          diagnostico: slot.feedback || "Promovido desde cola semanal; pendiente de primer corte a los 7 días.",
+          mejora_siguiente: "Registrar vistas y retención tras primeras 72 horas."
         });
       }
     }
@@ -727,11 +876,8 @@
     renderAll();
   }
 
-  /* Dialog close reset + Safari light-dismiss fallback (per modern-web-guidance) */
-  [editorDialog, drawerDialog].forEach((dlg) => {
-    dlg.addEventListener("close", () => {
-      dlg.returnValue = "";
-    });
+  editorDialog.addEventListener("close", () => {
+    editorDialog.returnValue = "";
   });
 
   if (!("closedBy" in HTMLDialogElement.prototype)) {
@@ -739,27 +885,16 @@
       const r = dlg.getBoundingClientRect();
       return e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
     };
-    [editorDialog, drawerDialog].forEach((dlg) => {
-      let pressedOutside = false;
-      dlg.addEventListener("pointerdown", (e) => { pressedOutside = outside(e, dlg); });
-      dlg.addEventListener("pointerup", (e) => { if (pressedOutside && outside(e, dlg)) dlg.close("cancel"); });
-    });
+    let pressedOutside = false;
+    editorDialog.addEventListener("pointerdown", (e) => { pressedOutside = outside(e, editorDialog); });
+    editorDialog.addEventListener("pointerup", (e) => { if (pressedOutside && outside(e, editorDialog)) editorDialog.close("cancel"); });
   }
 
-  /* Event Delegation */
   document.addEventListener("click", (e) => {
     const nav = e.target.closest("[data-route]");
     if (nav) {
       e.preventDefault();
       setRoute(nav.dataset.route);
-      return;
-    }
-
-    const drawerNav = e.target.closest("[data-drawer-route]");
-    if (drawerNav) {
-      e.preventDefault();
-      drawerDialog.close("navigate");
-      setRoute(drawerNav.dataset.drawerRoute);
       return;
     }
 
@@ -821,7 +956,12 @@
     }
   });
 
-  document.getElementById("btn-open-drawer").addEventListener("click", () => drawerDialog.showModal());
+  document.getElementById("btn-theme-toggle").addEventListener("click", () => {
+    const cur = document.documentElement.getAttribute("data-theme") || "dark";
+    applyTheme(cur === "dark" ? "light" : "dark");
+    renderAll();
+  });
+
   document.getElementById("btn-open-add-pub-overview").addEventListener("click", () => openEditPubModal(null));
   document.getElementById("btn-open-add-pub").addEventListener("click", () => openEditPubModal(null));
   document.getElementById("btn-open-add-ref").addEventListener("click", () => openAddRefModal());
@@ -849,7 +989,7 @@
         const parsed = JSON.parse(String(reader.result));
         if (parsed && parsed.meta && parsed.referencias && parsed.cola_semanal) {
           state = parsed;
-          saveState("Respaldo JSON importado");
+          saveState("Importado");
           renderAll();
         }
       } catch (_) {}
@@ -861,7 +1001,7 @@
   document.getElementById("btn-reset-data").addEventListener("click", () => {
     localStorage.removeItem(STORAGE_KEY);
     state = clone(window.CAPTOORA_DATA);
-    saveState("Base restaurada al corte oficial");
+    saveState("Restaurado");
     renderAll();
   });
 
@@ -870,6 +1010,8 @@
     if (VALID_ROUTES.includes(h)) setRoute(h);
   });
 
+  initTheme();
+  hydrateStaticIcons();
   const initialHash = window.location.hash.replace("#", "");
   setRoute(VALID_ROUTES.includes(initialHash) ? initialHash : "overview");
   renderAll();
