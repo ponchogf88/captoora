@@ -483,6 +483,21 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/waters-3d-studio/src/components/ToyPropKit3D.tsx",
       veredicto: "Adoptado",
       nota: "Referente exacto del fundador: combina hook visual en 0-2s pedido por Facebook con narrativa Toy-Prop 3D sin texto denso."
+    },
+    {
+      id: "REF-18",
+      fecha: "2026-11-27",
+      fuente: "Özgür Atilla · 8 Repos Video con Código",
+      plataforma: "X (Twitter)",
+      plat_icon: "x",
+      tipos: ["Flujo y Sistema", "Diseño"],
+      thumb: "thumbs/ref_18_ozgur_atilla_8_video_repos.jpg",
+      url: "https://x.com/theozguratillay/status/2126254520334229508",
+      que_muestra: "Hilo viral (36.6K vistas, 27 Nov) con 8 repos de video por código sin gastar créditos IA + demo de 36s hecha en Blender por Python (escapement).",
+      que_obtuvimos: "Filtro 80/20: instalados 3 skills globales en ~/.gemini/config/skills/ (video-shotcraft ★23K, cinecode ★3.1K, every-frame-is-code). Descartados Blender (2 GB VRAM) y 4 repos redundantes.",
+      donde_vive: "~/.gemini/config/skills/",
+      veredicto: "Adoptado",
+      nota: "150 recetas de planos Remotion + movimientos de cámara 3D + guía de easing/transiciones listos en toda tu cuenta Gemini/Antigravity."
     }
   ],
 
