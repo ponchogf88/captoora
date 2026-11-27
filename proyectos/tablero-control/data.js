@@ -1,6 +1,6 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.8 (REF-15 Sofi Pasos + S12 CPT-REEL-01) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.9 (Métricas reales FB + PUB-03 + Hook 0-3s + REF-16) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.8",
+  schema_version: "1.9",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
@@ -453,6 +453,21 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/captoora-reels/reel_01_antes_despues_luz/",
       veredicto: "En prueba",
       nota: "151.3K vistas, 9.9K reacciones. Adoptamos las 4 palancas sin copiar el formato meta."
+    },
+    {
+      id: "REF-16",
+      fecha: "2026-11-27",
+      fuente: "Abraham Olvera | AI · Explainer 3D GitHub",
+      plataforma: "YouTube Shorts",
+      plat_icon: "youtube",
+      tipos: ["Diseño", "Guion y Hooks"],
+      thumb: "thumbs/ref_16_abraham_olvera_3d_explainer.jpg",
+      url: "https://www.youtube.com/shorts/qYa2erB6N-I",
+      que_muestra: "Explainer 3D de 110s con primitivas geométricas ligeras y metáforas físicas (Polaroids=commits, nube con rayo=GitHub push, cúpula con candado=branch) + cero texto denso en pantalla.",
+      que_obtuvimos: "Plantilla maestra para explainers tech en Three.js (iMac 2 GB VRAM, $0): 1 objeto 3D metafórico por concepto + subtítulo corto, resolviendo el exceso de texto señalado por Facebook.",
+      donde_vive: "proyectos/waters-3d-studio/",
+      veredicto: "En prueba",
+      nota: "15.1K vistas (22 Nov). Referente #1 del fundador para explainers claros sin jerga densa."
     }
   ],
 
@@ -462,34 +477,51 @@ window.CAPTOORA_DATA = {
       fecha: "2026-11-23",
       titulo: "EP06 · Hackeos en México + Clonación de Voz (BLINDA)",
       serie: "¡WATERS! Día",
-      canal: "TikTok",
-      canales: ["TikTok"],
+      canal: "TikTok + Facebook",
+      canales: ["TikTok", "Facebook Reels"],
       thumb: "thumbs/pub_01_ep06.jpg",
-      vistas: 121,
-      retencion_pct: null,
+      vistas: 411,
+      retencion_pct: 13.79,
       guardados: null,
       comentarios_cta: null,
       dms_wa: null,
       estado: "En prueba",
-      diagnostico: "Formato base anterior sin condimentos CapCut Pro (sin teclado cremoso ni stickers flotantes) y subido solo en 1 red.",
-      mejora_siguiente: "Replicar con subtítulos dinámicos + publicar simultáneo en Facebook (5,600 seguidores), IG Reels y YT Shorts."
+      diagnostico: "FB 290 vistas (13.79% a 3s; cae a 19.78% en 0:02 y 8.63% en 0:04) + TikTok 121 vistas. Fuga del 80% antes de 2s por apertura lenta/oscura.",
+      mejora_siguiente: "Meta >20% a 3s: abrir en 0.0s con amenaza en <=5 palabras gigantes + daño visible (no contexto)."
     },
     {
       id: "PUB-02",
       fecha: "2026-11-23",
       titulo: "EP07 · IPO de Anthropic y Estafas Pre-IPO (BOLSA)",
       serie: "¡WATERS! Día",
-      canal: "TikTok",
-      canales: ["TikTok"],
+      canal: "TikTok + Facebook",
+      canales: ["TikTok", "Facebook Reels"],
       thumb: "thumbs/pub_02_ep07.jpg",
-      vistas: 72,
-      retencion_pct: null,
+      vistas: 285,
+      retencion_pct: 10.86,
       guardados: null,
       comentarios_cta: null,
       dms_wa: null,
       estado: "En prueba",
-      diagnostico: "Gancho inicial 0-2s más lento y tema financiero de nicho; sin contraste visual Antes desordenado -> Después limpio.",
-      mejora_siguiente: "Acelerar apertura en primeros 2 segundos con prueba visual tangible en pantalla y registrar retención al segundo 3."
+      diagnostico: "FB 213 vistas (10.86% a 3s; cae a 16.43% en 0:02) + TikTok 72 vistas. Arranque con fondo oscuro vacío y texto bursátil denso; la estafa llegaba hasta el seg 15.",
+      mejora_siguiente: "Invertir el orden: DM falso en 0.0s + 'TE VAN A ROBAR CON ESTO' y dejar el contexto para el seg 4-6."
+    },
+    {
+      id: "PUB-03",
+      fecha: "2026-11-26",
+      titulo: "EP08 · Claude como Contador vs e.firma SAT (CONTADOR)",
+      serie: "¡WATERS! Día",
+      canal: "Facebook",
+      canales: ["Facebook Reels"],
+      thumb: "thumbs/slot_02_ep08_sat.jpg",
+      vistas: 258,
+      retencion_pct: 14.34,
+      guardados: null,
+      comentarios_cta: null,
+      dms_wa: null,
+      estado: "En prueba",
+      diagnostico: "FB 258 vistas (14.34% a 3s; cae a 20.18% en 0:02). Mejor retención de los 3, pero sigue arrancando por lo útil antes que por el riesgo.",
+      mejora_siguiente: "Probar formato S01 (¿Caíste? CFE) y REF-16 (metáfora 3D sin texto denso) para cruzar >20% a 3s."
     }
   ],
 
@@ -521,8 +553,8 @@ window.CAPTOORA_DATA = {
       lead_magnet_pdf: "proyectos/waters-serie/lead_magnets/GUIA_CONTADOR_IA_SAT_CAPTOORA.pdf",
       thumb: "thumbs/slot_02_ep08_sat.jpg",
       source_mp4: "proyectos/waters-serie/renders/WATERS_CHISPA_EP08_CLAUDE_CONTADOR_SAT_60S.mp4",
-      estado_slot: "Listo en disco",
-      feedback: ""
+      estado_slot: "Publicado",
+      feedback: "Publicado en Facebook (258 vistas, 14.34% retención a 3s al 26 Nov)."
     },
     {
       orden: "03",
@@ -680,7 +712,7 @@ window.CAPTOORA_DATA = {
     {
       id: "MEJ-01",
       titulo: "Gancho visual en los primeros 0-2 segundos",
-      hipotesis: "Mostrar el error, recibo o captura real desde el primer cuadro sube la retención al segundo 3 frente a introducciones habladas.",
+      hipotesis: "Meta validada con Facebook (26 Nov): subir retención a 3s de 10.9-14.3% a >=20% abriendo en 0.0s con amenaza en <=5 palabras + daño visual (sin texto denso).",
       aplicada: false
     },
     {

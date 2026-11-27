@@ -560,7 +560,7 @@ img, svg {
 
 .kpi-note {
   margin-top: 6px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--faint);
 }
 
@@ -609,7 +609,7 @@ img, svg {
 .panel .meta {
   display: block;
   margin-top: 2px;
-  font-size: var(--fs-small);
+  font-size: 13px;
   color: var(--faint);
 }
 
@@ -617,7 +617,7 @@ img, svg {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
   color: var(--muted);
   white-space: nowrap;
@@ -1398,6 +1398,42 @@ dialog::backdrop {
   border: 1px solid var(--border);
   background: var(--raised);
   flex: none;
+}
+
+.hook-audit-box {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: var(--raised);
+}
+
+.hook-audit-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.hook-audit-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hook-telemetry {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hook-strip-img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  display: block;
+  margin-top: 8px;
+  background: var(--ground);
 }
 
 .form-grid {

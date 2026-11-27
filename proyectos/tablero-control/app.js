@@ -122,16 +122,30 @@
       });
       const seenRefIds = new Set(savedRefs.map((r) => r.id));
       parsed.referencias = savedRefs.concat(base.referencias.filter((br) => !seenRefIds.has(br.id)));
-      parsed.publicados = (parsed.publicados || base.publicados).map((p) => {
+      const savedPubs = (parsed.publicados || base.publicados).map((p) => {
         const match = base.publicados.find((bp) => bp.id === p.id) || {};
+        if (schemaChanged && match.id) {
+          return { ...p, ...match, thumb: match.thumb || p.thumb || null };
+        }
         return { ...match, ...p, thumb: p.thumb || match.thumb || null };
       });
+      const seenPubIds = new Set(savedPubs.map((p) => p.id));
+      parsed.publicados = savedPubs.concat(base.publicados.filter((bp) => !seenPubIds.has(bp.id)));
       const savedCola = (parsed.cola_semanal || base.cola_semanal).map((c) => {
         const match = base.cola_semanal.find((bc) => bc.orden === c.orden) || {};
+        if (schemaChanged && c.orden === "02" && match.estado_slot === "Publicado") {
+          return { ...c, ...match };
+        }
         return { ...match, ...c, thumb: c.thumb || match.thumb || null };
       });
       const seenColaOrden = new Set(savedCola.map((c) => c.orden));
       parsed.cola_semanal = savedCola.concat(base.cola_semanal.filter((bc) => !seenColaOrden.has(bc.orden)));
+      if (schemaChanged && Array.isArray(parsed.mejoras_activas)) {
+        parsed.mejoras_activas = parsed.mejoras_activas.map((mj) => {
+          const match = base.mejoras_activas.find((bm) => bm.id === mj.id) || {};
+          return mj.id === "MEJ-01" ? { ...mj, ...match } : mj;
+        });
+      }
       if (Array.isArray(parsed.cuotas)) {
         const savedCuotas = parsed.cuotas.map((q) => {
           const match = base.cuotas.find((bq) => bq.id === q.id) || {};
@@ -153,6 +167,14 @@
 
   const REF_TYPES = ["Diseño", "Guion y Hooks", "Flujo y Sistema"];
   const typePillClass = (t) => (t === "Diseño" ? "pill-design" : t === "Guion y Hooks" ? "pill-story" : "pill-system");
+  const getHookAudit = (orden) =>
+    (window.CAPTOORA_HOOKS_AUDIT && window.CAPTOORA_HOOKS_AUDIT.slots && window.CAPTOORA_HOOKS_AUDIT.slots[orden]) || null;
+  const hookPillClass = (estado) => {
+    const s = String(estado || "").toLowerCase();
+    if (s.includes("listo")) return "pill-positive";
+    if (s.includes("revisar")) return "pill-warning";
+    return "pill-negative";
+  };
 
   let state = loadState();
   let currentRoute = "overview";
@@ -564,7 +586,7 @@
             </td>
             <td><div class="net-icons">${netIcons}</div></td>
             <td class="num">${p.vistas == null ? "—" : fmtInt(p.vistas)}</td>
-            <td class="num">${fmtPct(p.retencion_pct)}</td>
+            <td class="num">${p.retencion_pct == null ? "—" : `<span class="pill ${Number(p.retencion_pct) >= 20 ? "pill-positive" : "pill-warning"}">${fmtPct(p.retencion_pct)}</span>`}</td>
             <td class="num">${p.guardados == null ? "—" : fmtInt(p.guardados)}</td>
             <td class="num">${p.dms_wa == null ? "—" : fmtInt(p.dms_wa)}</td>
             <td><span class="pill ${pillClassFor(p.estado)}">${esc(p.estado)}</span></td>
@@ -588,6 +610,10 @@
   }
 
   function renderCola(m) {
+    const colaSub = document.getElementById("cola-subtitle");
+    if (colaSub) {
+      colaSub.textContent = `${m.colaPendientes} renders pendientes en cola con auditoría automática Pre-Vuelo 0-3s. Al marcar Publicado suma a tu meta de 20.`;
+    }
     document.getElementById("cola-count-all").textContent = m.colaCounts.all;
     document.getElementById("cola-count-disco").textContent = m.colaCounts["Listo en disco"];
     document.getElementById("cola-count-capcut").textContent = m.colaCounts["En CapCut Pro"];
@@ -603,7 +629,7 @@
     document.getElementById("cola-filter-summary").textContent = `Mostrando ${filtered.length} de ${m.colaCounts.all}`;
     const tbody = document.getElementById("table-cola-body");
     if (!filtered.length) {
-      tbody.innerHTML = `<tr><td colspan="7" class="empty-row">Ningún slot coincide con el filtro actual.</td></tr>`;
+      tbody.innerHTML = `<tr><td colspan="8" class="empty-row">Ningún slot coincide con el filtro actual.</td></tr>`;
       return;
     }
 
@@ -612,6 +638,10 @@
       const netIcons = c.canales.map((ch) =>
         `<span class="net-icon" title="${esc(ch)}" aria-label="${esc(ch)}">${iconHtml(channelIconKey(ch))}</span>`
       ).join("") + (c.lead_magnet_pdf ? `<span class="net-icon net-icon-pdf" title="Incluye guía PDF descargable">${ICONS.pdf}</span>` : "");
+      const audit = getHookAudit(c.orden);
+      const hookCell = audit
+        ? `<button type="button" class="pill ${hookPillClass(audit.hook_estado)}" data-edit-slot="${esc(c.orden)}" title="${esc(audit.hook_notas)}">${esc(audit.hook_estado)} (${audit.score})</button>`
+        : `<span class="pill pill-neutral">Sin auditar</span>`;
 
       return `
         <tr>
@@ -632,6 +662,7 @@
           </td>
           <td><div class="net-icons">${netIcons}</div></td>
           <td class="mono">${esc(c.cta_palabra)}</td>
+          <td>${hookCell}</td>
           <td>
             <select class="inline-select" data-slot-status="${esc(c.orden)}" aria-label="Estado del slot ${esc(c.orden)}">
               ${opts.map((o) => `<option value="${esc(o)}" ${c.estado_slot === o ? "selected" : ""}>${esc(o)}</option>`).join("")}
@@ -1042,6 +1073,17 @@
   function openSlotModal(orden) {
     const slot = state.cola_semanal.find((c) => c.orden === orden);
     if (!slot) return;
+    const audit = getHookAudit(orden);
+    const auditHtml = audit ? `
+      <div class="hook-audit-box">
+        <div class="hook-audit-head">
+          <span class="hook-audit-title">Auditoría Pre-Vuelo 0–3 s (0.0s · 0.5s · 1.5s · 3.0s)</span>
+          <span class="pill ${hookPillClass(audit.hook_estado)}">${esc(audit.hook_estado)} · ${audit.score}/100</span>
+        </div>
+        <div class="hook-telemetry">${esc(audit.hook_notas)}</div>
+        ${audit.strip ? `<img class="hook-strip-img" src="${esc(audit.strip)}" alt="Tira 0-3s slot ${esc(slot.orden)}">` : ""}
+      </div>
+    ` : "";
     openModal(`Slot ${slot.orden} · ${slot.serie}`, `
       <div class="modal-preview-row">
         ${slot.thumb ? `<img src="${esc(slot.thumb)}" alt="${esc(slot.titulo)}" class="modal-preview-img">` : ""}
@@ -1052,6 +1094,7 @@
           <dt>CTA / PDF</dt><dd>${esc(slot.cta_palabra)}${slot.lead_magnet_pdf ? ` · PDF` : ""}</dd>
         </dl>
       </div>
+      ${auditHtml}
       <form id="slot-form">
         <div class="form-grid">
           <div class="form-field full">
