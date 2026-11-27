@@ -468,6 +468,21 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/waters-3d-studio/",
       veredicto: "En prueba",
       nota: "15.1K vistas (22 Nov). Referente #1 del fundador para explainers claros sin jerga densa."
+    },
+    {
+      id: "REF-17",
+      fecha: "2026-11-27",
+      fuente: "Abraham Olvera | AI · Toy-Prop 3D Viernes 13",
+      plataforma: "YouTube Shorts",
+      plat_icon: "youtube",
+      tipos: ["Diseño", "Guion y Hooks"],
+      thumb: "thumbs/ref_17_abraham_olvera_viernes13_toy3d.jpg",
+      url: "https://www.youtube.com/shorts/zyQEAqiQUew",
+      que_muestra: "Explainer 3D de 104s (2.3K vistas, 14 Nov): piso grid reflectivo cian, props 3D chunky con ojos glossy que se apagan/agrietan en seg 1-2, letreros neón de 2-4 caracteres (4:00 PM, 9.2/10), dilema Puerta 1 vs 2 y portapapeles 3D final.",
+      que_obtuvimos: "Plantilla maestra ToyPropKit3D + ToyPropExplainerEpisode en proyectos/waters-3d-studio/ (Three.js, 2 GB VRAM, $0). Piloto aplicado en S04 Gemini 4 Carbon.",
+      donde_vive: "proyectos/waters-3d-studio/src/components/ToyPropKit3D.tsx",
+      veredicto: "Adoptado",
+      nota: "Referente exacto del fundador: combina hook visual en 0-2s pedido por Facebook con narrativa Toy-Prop 3D sin texto denso."
     }
   ],
 
@@ -584,7 +599,7 @@ window.CAPTOORA_DATA = {
       thumb: "thumbs/slot_04_carbon_short.jpg",
       source_mp4: "proyectos/waters-serie/renders/ORO_CARBON_CIBERSEGURIDAD_SHORT_60S.mp4",
       estado_slot: "Listo en disco",
-      feedback: ""
+      feedback: "Reconstruido en Toy-Prop 3D v2 (REF-17): hook visual en 0-2s + props 3D + cero texto denso. Listo para subir."
     },
     {
       orden: "05",

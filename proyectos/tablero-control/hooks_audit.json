@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27 05:54",
+  "generated_at": "2026-11-27 06:20",
   "slots": {
     "01": {
       "orden": "01",
@@ -49,17 +49,17 @@
     "04": {
       "orden": "04",
       "exists": true,
-      "duration_s": 73.17,
-      "audio_mean_db": -15.6,
-      "audio_max_db": -2.3,
-      "frame0_luma": 22.4,
-      "frame0_std": 9.9,
-      "motion_0_1s": 8.25,
-      "motion_0_2s": 8.26,
-      "score": 65,
-      "hook_estado": "Revisar 0-3s",
+      "duration_s": 73.14,
+      "audio_mean_db": -15.0,
+      "audio_max_db": -1.5,
+      "frame0_luma": 31.1,
+      "frame0_std": 63.5,
+      "motion_0_1s": 13.79,
+      "motion_0_2s": 31.28,
+      "score": 100,
+      "hook_estado": "Listo 0-3s",
       "strip": "thumbs/hooks/hook_s04.jpg",
-      "hook_notas": "Audio 0-0.6s: -2.3 dB · Frame 0: Y=22/std=10 · Mov 0-1s: 8.2"
+      "hook_notas": "Audio 0-0.6s: -1.5 dB · Frame 0: Y=31/std=64 · Mov 0-1s: 13.8"
     },
     "05": {
       "orden": "05",
