@@ -24,11 +24,15 @@ SCENES = [
 
 ENGINES = [
     {"id": "06_angulos_base_img", "label": "Ángulos Base 16:9", "kind": "image"},
-    {"id": "01_gemini_veo", "label": "Gemini / Veo (Flow)", "kind": "video"},
-    {"id": "02_grok", "label": "Grok Imagine", "kind": "video"},
-    {"id": "03_sora_gpt", "label": "Sora / ChatGPT", "kind": "video"},
+    {"id": "01_gemini_veo", "label": "Google Flow / Veo (Web)", "kind": "video"},
+    {"id": "07_gemini_api_omni", "label": "Gemini API · Omni 1.1 Flash", "kind": "video"},
+    {"id": "02_grok", "label": "Grok Imagine (Web/xAI)", "kind": "video"},
+    {"id": "03_sora_gpt", "label": "ChatGPT / OpenAI API", "kind": "video"},
     {"id": "04_meta_ai", "label": "Meta AI", "kind": "video"},
-    {"id": "05_picsart", "label": "Picsart", "kind": "video"},
+    {"id": "05_picsart", "label": "Picsart (Seedance 2.5)", "kind": "video"},
+    {"id": "08_wan_alibaba", "label": "Wan Video (Alibaba)", "kind": "video"},
+    {"id": "09_kling_ai", "label": "Kling AI (China)", "kind": "video"},
+    {"id": "10_hailuo_minimax", "label": "Hailuo / MiniMax (China)", "kind": "video"},
 ]
 
 

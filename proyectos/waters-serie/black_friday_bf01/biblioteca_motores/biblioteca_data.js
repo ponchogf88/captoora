@@ -1,5 +1,5 @@
 window.BF01_BIBLIOTECA = {
-  "generated_at": "2026-11-27 10:25",
+  "generated_at": "2026-11-27 15:28",
   "ref_img": "00_referencia_maestra/avatar_ref.jpg",
   "engines": [
     {
@@ -9,17 +9,22 @@ window.BF01_BIBLIOTECA = {
     },
     {
       "id": "01_gemini_veo",
-      "label": "Gemini / Veo (Flow)",
+      "label": "Google Flow / Veo (Web)",
+      "kind": "video"
+    },
+    {
+      "id": "07_gemini_api_omni",
+      "label": "Gemini API · Omni 1.1 Flash",
       "kind": "video"
     },
     {
       "id": "02_grok",
-      "label": "Grok Imagine",
+      "label": "Grok Imagine (Web/xAI)",
       "kind": "video"
     },
     {
       "id": "03_sora_gpt",
-      "label": "Sora / ChatGPT",
+      "label": "ChatGPT / OpenAI API",
       "kind": "video"
     },
     {
@@ -29,7 +34,22 @@ window.BF01_BIBLIOTECA = {
     },
     {
       "id": "05_picsart",
-      "label": "Picsart",
+      "label": "Picsart (Seedance 2.5)",
+      "kind": "video"
+    },
+    {
+      "id": "08_wan_alibaba",
+      "label": "Wan Video (Alibaba)",
+      "kind": "video"
+    },
+    {
+      "id": "09_kling_ai",
+      "label": "Kling AI (China)",
+      "kind": "video"
+    },
+    {
+      "id": "10_hailuo_minimax",
+      "label": "Hailuo / MiniMax (China)",
       "kind": "video"
     }
   ],
@@ -43,7 +63,7 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 402.6,
+            "size_kb": 620.2,
             "rel_path": "06_angulos_base_img/01_hook_closeup.jpg",
             "name": "01_hook_closeup.jpg"
           }
@@ -59,10 +79,14 @@ window.BF01_BIBLIOTECA = {
             "name": "01.mp4"
           }
         ],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     },
     {
@@ -74,7 +98,7 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 430.8,
+            "size_kb": 670.4,
             "rel_path": "06_angulos_base_img/02_bucle_3_4_izq.jpg",
             "name": "02_bucle_3_4_izq.jpg"
           }
@@ -90,10 +114,14 @@ window.BF01_BIBLIOTECA = {
             "name": "02.mp4"
           }
         ],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     },
     {
@@ -105,7 +133,7 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 437.2,
+            "size_kb": 626.2,
             "rel_path": "06_angulos_base_img/03_grafica_plano_medio.jpg",
             "name": "03_grafica_plano_medio.jpg"
           }
@@ -121,10 +149,14 @@ window.BF01_BIBLIOTECA = {
             "name": "03.mp4"
           }
         ],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     },
     {
@@ -136,7 +168,7 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 556.9,
+            "size_kb": 634.6,
             "rel_path": "06_angulos_base_img/04_dilema_3_4_der.jpg",
             "name": "04_dilema_3_4_der.jpg"
           }
@@ -152,10 +184,14 @@ window.BF01_BIBLIOTECA = {
             "name": "04.mp4"
           }
         ],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     },
     {
@@ -167,7 +203,7 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 415.4,
+            "size_kb": 642.9,
             "rel_path": "06_angulos_base_img/05_candados_pecho.jpg",
             "name": "05_candados_pecho.jpg"
           }
@@ -183,10 +219,14 @@ window.BF01_BIBLIOTECA = {
             "name": "05.mp4"
           }
         ],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     },
     {
@@ -198,16 +238,20 @@ window.BF01_BIBLIOTECA = {
         "06_angulos_base_img": [
           {
             "type": "image",
-            "size_kb": 403.4,
+            "size_kb": 666.1,
             "rel_path": "06_angulos_base_img/06_cta_closeup.jpg",
             "name": "06_cta_closeup.jpg"
           }
         ],
         "01_gemini_veo": [],
+        "07_gemini_api_omni": [],
         "02_grok": [],
         "03_sora_gpt": [],
         "04_meta_ai": [],
-        "05_picsart": []
+        "05_picsart": [],
+        "08_wan_alibaba": [],
+        "09_kling_ai": [],
+        "10_hailuo_minimax": []
       }
     }
   ]
