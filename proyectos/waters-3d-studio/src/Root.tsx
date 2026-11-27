@@ -18,6 +18,7 @@ import {
   WatersMadrugadaEpisode,
 } from './compositions/WatersMadrugadaEpisode';
 import { ToyPropExplainerEpisode } from './compositions/ToyPropExplainerEpisode';
+import { HybridBlackFridayEpisode } from './compositions/HybridBlackFridayEpisode';
 import { CARBON_S04_CONFIG } from './data/carbonS04ToyProp';
 import { CARBON_S05_CONFIG } from './data/carbonS05ToyProp';
 import beatsData from './episodeBeats.json';
@@ -214,6 +215,14 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           config: CARBON_S05_CONFIG,
         }}
+      />
+      <Composition
+        id="HybridBlackFridayBF01"
+        component={HybridBlackFridayEpisode as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={2760}
+        fps={30}
+        width={1920}
+        height={1080}
       />
     </>
   );

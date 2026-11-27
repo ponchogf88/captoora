@@ -34,3 +34,4 @@ videos/
 node_modules/
 .DS_Store
 tmp/
+proyectos/waters-3d-studio/public/avatar/*.mp4
