@@ -1,32 +1,31 @@
-# Guion Híbrido Black Friday · `WATERS_013` (`PRESUPUESTO`)
+# Guion Híbrido Black Friday (Multi-Ángulo · 6 Escenas Separadas) · `WATERS_013` (`PRESUPUESTO`)
 
-- **Composición Remotion:** `HybridBlackFridayBF01` (`1920×1080` · `30 fps` · `92.0 s` · **Master limpio 16:9 SIN subtítulos quemados abajo**, diseñado para meter directo a **OpusClip** + **Captions**).
-- **Objetivo social:** Evitar que empresarios, desarrolladores y abogados amanezcan con cargos sorpresa de `$2,000 USD` (`~$40,000 MXN`) por activar pruebas gratis y APIs de IA en Black Friday sin topes de gasto.
-- **Palabra clave CTA:** `PRESUPUESTO`
-
----
-
-## Estructura en 5 Actos (optimizada para 3–4 clips en OpusClip)
-
-| Acto | Tiempo | Visual en Pantalla | Qué dices tú (Guion) |
-| --- | --- | --- | --- |
-| **1. Hook Black Friday** | `0:00 – 0:12` | **Tú a pantalla completa** + Alerta Roja superior (`NO METAS TU TARJETA ASÍ · -$40,000 MXN EN 1 NOCHE`) + flecha `AUTO-RECHARGE ON` | *"Hoy es Black Friday y media ciudad está metiendo su tarjeta en pruebas gratis y APIs de IA... pero un solo botón apagado te puede despertar mañana con 40,000 pesos cobrados en el banco."* |
-| **2. La Cajita en Bucle** | `0:12 – 0:32` | **Tú a la izquierda** + **Cajita interactiva Gemini/Claude/ChatGPT** escribiéndose en vivo a la derecha (`Attempt #10,000 · Auto-Recharge ON`) | *"Dejas corriendo tu primer agente o automatización en la noche con la tarjeta de tu negocio. Un error tonto de programación mete al bot en bucle infinito: se reintenta 10,000 veces en cuatro horas mientras duermes."* |
-| **3. La Gráfica Mortal** | `0:32 – 0:54` | `32–44s`: **Tú a la izquierda + Gráfica `$0 → $2,000 USD`** con flechas animadas (`2 AM $420 → 4 AM $1,250 → 6 AM $2,000`).<br>`44–54s`: **Toy-Prop 3D (`SemiGauge3D` + sirena roja)** + **Tú en esquina PiP arriba-derecha** | *"Así sube el cobro: a las 2 de la mañana van 420 dólares, a las 4 ya cruzaste 1,250, y a las 6 amaneces con 2,000 dólares quemados porque el Auto-Recharge siguió cobrando sin pedirte permiso."* |
-| **4. Dilema 3D** | `0:54 – 1:12` | **Toy-Prop 3D (`BinaryDoors3D`)**: Puerta `1 TARJETA DIRECTA` vs Puerta `2 TOPE + VIRTUAL` + **Tú en esquina PiP** | *"Hoy en Black Friday tienes dos puertas: meter tu tarjeta principal directo y rezar que nada falle, o blindarte en 3 minutos antes de dar clic."* |
-| **5. Los 3 Candados + CTA** | `1:12 – 1:32` | `72–84s`: **Toy-Prop 3D (`GiantClipboard3D`)** palomeando 3 candados + **Tú en PiP**.<br>`84–92s`: **Corte final a ti Fullscreen** + badge `COMENTA: PRESUPUESTO` | *"1: activa Hard Monthly Limit en tu consola de Gemini, Anthropic u OpenAI. 2: usa tarjeta virtual topada. 3: exige aprobación humana arriba de 10 ejecuciones. Comenta PRESUPUESTO y te paso la guía exacta."* |
+- **Regla de Oro:** **1 escena = 1 clip real independiente (`5–8 s`) con ángulo de cámara distinto + su propio audio con lip-sync real.** Ver [REGLAS_PRODUCCION_HIBRIDA.md](REGLAS_PRODUCCION_HIBRIDA.md).
+- **Entregables que genera [armar_escenas_bf01.py](scripts/armar_escenas_bf01.py):**
+  1. `proyectos/waters-serie/black_friday_bf01/escenas/01_hook.mp4` .. `06_cta.mp4` (cada escena individual con sus overlays/3D + su audio real).
+  2. `proyectos/waters-serie/black_friday_bf01/BF01_COMPLETO_UNIDO.mp4` + copia en `cola_programacion_semana/listos_para_arrastrar/00_BLACK_FRIDAY_PRESUPUESTO_OPUS_CLEAN.mp4`.
+  3. **Sin subtítulos quemados abajo** (`220 px` libres) para pasar limpio por **OpusClip** y **Captions**.
 
 ---
 
-## 4 Micro-Clips para tu Rama de Gemini (copiar y pegar tal cual)
+## 6 Escenas Separadas · Prompts Multi-Ángulo (Rama Oficial de Gemini / Nano Banana)
 
-Genera clips cortos (`8–10 s` cada uno) manteniendo tu **rama oficial (muro concreto oscuro + polo negra)** para extraer los `4–6 s` donde mejor se muevan manos y labios:
+> **Cómo guardarlos:** guárdalos como `01.mp4` .. `06.mp4` en `proyectos/waters-serie/black_friday_bf01/clips_raw/` (o déjalos en `Descargas` en orden `1 → 6` y corre `python3 proyectos/waters-serie/scripts/armar_escenas_bf01.py --from-downloads`).
 
-| Clip | Archivo destino en repo | Prompt exacto en tu rama de Gemini | Tramo limpio a recortar |
-| --- | --- | --- | --- |
-| **Clip 1 (Hook)** | `public/avatar/bf01_hook.mp4` | Same character, black polo, dark concrete studio wall, slight lean forward with urgent warning hand gesture, mouth speaking clearly: *"Hoy es Black Friday y un solo botón te puede despertar con cuarenta mil pesos cobrados en el banco."* Camera static 16:9, crisp lighting. | `1.0s → 8.5s` |
-| **Clip 2 (Cajita / Gráfica)** | `public/avatar/bf01_bucle.mp4` | Same character, black polo, dark concrete wall, explaining while glancing slightly toward screen-right to point at floating charts: *"Un error mete tu bot en bucle infinito y se reintenta diez mil veces mientras duermes."* Calm authoritative expression, camera static 16:9. | `1.5s → 7.5s` |
-| **Clip 3 (Reacción PiP)** | `public/avatar/bf01_reaccion.mp4` | Same character, black polo, dark concrete wall, subtle nodding and concerned eyebrows reacting while explaining AI billing traps, looking directly into lens. Camera static 16:9. | `1.0s → 9.0s` |
-| **Clip 4 (Cierre CTA)** | `public/avatar/bf01_cta.mp4` | Same character, black polo, dark concrete wall, confident smile pointing down-right cleanly at end: *"Activa tu límite duro hoy. Comenta PRESUPUESTO y te paso la guía exacta."* Camera static 16:9. | `1.5s → 8.5s` |
+| Escena | Duración | Ángulo y Encuadre | Overlay / 3D que entra encima | Prompt exacto (pegar en tu rama de Gemini) |
+| --- | --- | --- | --- | --- |
+| **01 · Hook** | `5–7 s` | **Close-Up frontal**, ligera inclinación hacia adelante, energía de alerta | Barra `BLACK FRIDAY · ALERTA IA` + badge `-$40,000 MXN` + flecha | `Same character from reference, black polo, dark concrete wall, CLOSE-UP chest-to-head frontal camera angle, urgent concerned expression leaning slightly forward with warning hand gesture, speaking clearly in Spanish: "Hoy es Black Friday y un solo botón apagado en tu IA te puede despertar mañana con cuarenta mil pesos cobrados." Static 16:9 studio lighting.` |
+| **02 · El Bucle** | `6–8 s` | **Ángulo 3/4 desde la izquierda** (`left-side frame`), personaje mirando levemente a su derecha | **Cajita interactiva Gemini/Claude/ChatGPT** escribiendo + contador `10,000x` | `Same character from reference, black polo, dark concrete wall, MEDIUM SHOT filmed from a subtle 3/4 left camera angle, character positioned slightly left glancing toward empty dark wall on screen-right while explaining in Spanish: "Dejas corriendo tu agente en la noche con tu tarjeta y un error lo mete en bucle: diez mil reintentos mientras duermes." Static 16:9 camera.` |
+| **03 · La Gráfica** | `6–8 s` | **Plano medio amplio contrapicado suave** (`low-angle waist-up`), señalando hacia la derecha | **Gráfica `$80 → $420 → $1,250 → $2,000 USD`** + flecha curva neón | `Same character from reference, black polo, dark concrete wall, WAIST-UP MEDIUM WIDE shot with slight low-angle cinematic camera, calm serious tone pointing toward open dark space on screen-right, speaking clearly in Spanish: "Mira la gráfica: a las dos van cuatrocientos veinte dólares, a las cuatro mil doscientos cincuenta, y a las seis dos mil dólares quemados." Static 16:9.` |
+| **04 · Dilema 3D** | `5–7 s` | **Ángulo 3/4 desde la derecha** (`right-side 3/4`), levantando 2 dedos | Entra **`BinaryDoors3D` (`1 SIN LÍMITE` vs `2 HARD LIMIT`)** + tú en PiP arriba-derecha | `Same character from reference, black polo, dark concrete wall, TIGHT CHEST-UP shot from a 3/4 right camera angle, raising two fingers cleanly to contrast two options, speaking clearly in Spanish: "Hoy tienes dos puertas: meter tu tarjeta directa sin freno, o blindarte en tres minutos antes de dar clic." Crisp 16:9.` |
+| **05 · Los 3 Candados** | `6–8 s` | **Plano medio-corto (`chest-up`)**, contando `1 · 2 · 3` con los dedos | Entra **`GiantClipboard3D`** palomeando los 3 candados + tú en PiP | `Same character from reference, black polo, dark concrete wall, CHEST-UP eye-level angle slightly rotated left, clearly counting one, two, three with fingers while speaking in Spanish: "Uno: Hard Monthly Limit de veinte dólares. Dos: tarjeta virtual topada. Tres: aprobación humana arriba de diez corridas." Crisp 16:9.` |
+| **06 · Cierre CTA** | `5–6 s` | **Close-Up frontal `eye-level`** seguro y cercano, sonrisa confiada al cierre | Card flotante esmeralda **`COMENTA: PRESUPUESTO`** | `Same character from reference, black polo, dark concrete wall, CRISP EYE-LEVEL CLOSE-UP centered framing, warm confident smile nodding cleanly at end, speaking clearly in Spanish: "Que tu automatización no se vuelva tu bancarrota. Comenta PRESUPUESTO y te paso la guía exacta." Static 16:9.` |
 
-> **Nota rápida:** Mientras sacas esos clips (o incluso antes de sacarlos), `HybridBlackFridayBF01` ya corre usando `master_ref.mp4` en bucle limpio por acto. En cuanto los guardes en `proyectos/waters-3d-studio/public/avatar/`, solo apuntamos `avatarClips` y re-renderizamos.
+---
+
+## Cómo re-hacer solo 1 escena si no te gustó
+```bash
+# 1. Reemplaza únicamente clips_raw/03.mp4 (por ejemplo)
+# 2. Re-renderiza solo esa escena y vuelve a pegar todo en ~15 segundos:
+python3 proyectos/waters-serie/scripts/armar_escenas_bf01.py --scene 3
+```

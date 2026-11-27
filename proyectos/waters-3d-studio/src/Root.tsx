@@ -18,7 +18,11 @@ import {
   WatersMadrugadaEpisode,
 } from './compositions/WatersMadrugadaEpisode';
 import { ToyPropExplainerEpisode } from './compositions/ToyPropExplainerEpisode';
-import { HybridBlackFridayEpisode } from './compositions/HybridBlackFridayEpisode';
+import {
+  HybridBF01Scene,
+  HybridBF01SceneProps,
+  HybridBlackFridayEpisode,
+} from './compositions/HybridBlackFridayEpisode';
 import { CARBON_S04_CONFIG } from './data/carbonS04ToyProp';
 import { CARBON_S05_CONFIG } from './data/carbonS05ToyProp';
 import bf01Timings from './data/bf01Timings.json';
@@ -224,6 +228,25 @@ export const RemotionRoot: React.FC = () => {
         fps={30}
         width={1920}
         height={1080}
+      />
+      <Composition
+        id="HybridBF01Scene"
+        component={HybridBF01Scene as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={180}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          sceneIndex: 1,
+          clipSrc: 'avatar/master_ref.mp4',
+          durationInFrames: 180,
+        }}
+        calculateMetadata={({ props }) => {
+          const p = props as unknown as Partial<HybridBF01SceneProps>;
+          return {
+            durationInFrames: Math.max(30, p.durationInFrames ?? 180),
+          };
+        }}
       />
     </>
   );

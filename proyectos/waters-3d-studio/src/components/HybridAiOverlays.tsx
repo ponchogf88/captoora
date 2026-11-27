@@ -154,7 +154,8 @@ export const HeroHookOverlay: React.FC<{
 export const AiPromptBoxOverlay: React.FC<{
   localFrame: number;
   fps: number;
-}> = ({ localFrame, fps }) => {
+  durationInFrames?: number;
+}> = ({ localFrame, fps, durationInFrames = 420 }) => {
   const enter = spring({
     frame: localFrame,
     fps,
@@ -162,7 +163,7 @@ export const AiPromptBoxOverlay: React.FC<{
   });
   const tx = interpolate(enter, [0, 1], [80, 0]);
 
-  const activeTabIdx = Math.floor(localFrame / 150) % 3;
+  const activeTabIdx = Math.floor(localFrame / Math.max(40, Math.round(durationInFrames / 3))) % 3;
   const models = [
     { name: 'Gemini', color: '#38bdf8' },
     { name: 'Claude', color: '#fb923c' },
@@ -171,11 +172,13 @@ export const AiPromptBoxOverlay: React.FC<{
 
   const promptString =
     'Analiza los 500 clientes y reintenta cada error automáticamente hasta terminar...';
-  const typedLen = Math.min(promptString.length, Math.floor(localFrame * 0.72));
+  const typeRate = Math.max(0.72, promptString.length / Math.max(60, durationInFrames * 0.55));
+  const typedLen = Math.min(promptString.length, Math.floor(localFrame * typeRate));
   const typedPrompt = promptString.slice(0, typedLen);
   const showCursor = Math.floor(localFrame / 12) % 2 === 0;
 
-  const loopProgress = interpolate(localFrame, [50, 390], [0, 1], {
+  const endFrame = Math.max(90, Math.round(durationInFrames * 0.88));
+  const loopProgress = interpolate(localFrame, [24, endFrame], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
@@ -319,14 +322,16 @@ export const AiPromptBoxOverlay: React.FC<{
 export const SpendingChartOverlay: React.FC<{
   localFrame: number;
   fps: number;
-}> = ({ localFrame, fps }) => {
+  durationInFrames?: number;
+}> = ({ localFrame, fps, durationInFrames = 260 }) => {
   const enter = spring({
     frame: localFrame,
     fps,
     config: { damping: 14, stiffness: 150 },
   });
 
-  const progress = interpolate(localFrame, [10, 220], [0, 1], {
+  const endFrame = Math.max(80, Math.round(durationInFrames * 0.82));
+  const progress = interpolate(localFrame, [10, endFrame], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });
