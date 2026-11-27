@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biblioteca Comparativa Multi-Motor · BF01</title>
+  <style>
+    :root {
+      --bg: #111318;
+      --surface: #181b22;
+      --raised: #20242e;
+      --border: #2c313d;
+      --text: #f3f5f8;
+      --muted: #98a2b3;
+      --accent: #00e0f0;
+      --green: #2ee87a;
+      --amber: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      padding: 24px 28px 60px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+    .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pill {
+      padding: 7px 12px;
+      border-radius: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .pill strong { color: var(--accent); }
+    .btn {
+      cursor: pointer;
+      padding: 9px 16px;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: #081016;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .ref-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+    }
+    .ref-strip img {
+      width: 112px;
+      height: 63px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .matrix-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1180px;
+    }
+    th, td {
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      padding: 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th:last-child, td:last-child { border-right: none; }
+    tr:last-child td { border-bottom: none; }
+    thead th {
+      background: var(--raised);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .scene-col { width: 210px; background: #151820; }
+    .scene-title { font-weight: 700; font-size: 14px; }
+    .scene-angle { color: var(--accent); font-size: 12px; margin-top: 4px; font-weight: 600; }
+    .empty-slot {
+      min-height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      color: #667085;
+      font-size: 12px;
+      text-align: center;
+      padding: 10px;
+    }
+    .item-card {
+      background: #11141b;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .item-card.selected {
+      border-color: var(--green);
+      box-shadow: 0 0 0 1px var(--green);
+    }
+    .item-card video, .item-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #000;
+    }
+    .item-meta {
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 12px;
+    }
+    .meta-txt { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .pick-btn {
+      cursor: pointer;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--raised);
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 600;
+      flex: none;
+    }
+    .item-card.selected .pick-btn {
+      background: var(--green);
+      color: #06180d;
+      border-color: var(--green);
+    }
+    .cmd-box {
+      margin-top: 18px;
+      background: #0c0e13;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Biblioteca Multi-Motor · Black Friday (6 Escenas Separadas)</h1>
+      <p class="sub" id="subtitle">Cargando catálogo local...</p>
+    </div>
+    <div class="toolbar">
+      <div class="pill">Seleccionadas: <strong id="picked-count">0</strong> / 6</div>
+      <button class="btn btn-ghost" onclick="clearPicks()">Limpiar selección</button>
+      <button class="btn" onclick="copyBuildCmd()">Copiar comando armar_escenas</button>
+    </div>
+  </header>
+
+  <div class="ref-strip">
+    <img id="ref-thumb" alt="Avatar maestro oficial" />
+    <div>
+      <div style="font-weight: 700;">Referencia Maestra Oficial (Polo negra · Muro concreto oscuro)</div>
+      <div class="sub">Marca <strong>Conservar</strong> en tu escena ganadora por fila (puede ser de distinto motor cada una). Al final copias el comando para unir solo las ganadoras + exportar las 6 por separado.</div>
+    </div>
+  </div>
+
+  <div class="matrix-wrap">
+    <table>
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+
+  <pre class="cmd-box" id="cmd-box">Elige 1 video en las filas para generar tu comando FFmpeg + Remotion de ensamblaje.</pre>
+
+  <script src="biblioteca_data.js"></script>
+  <script>
+    const STORAGE_KEY = "bf01_motor_picks_v1";
+    let picks = {};
+    try { picks = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); } catch {}
+
+    function savePicks() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(picks));
+      renderCommand();
+    }
+
+    function selectItem(sceneIdx, relPath, type) {
+      if (type !== "video") {
+        alert("Los archivos de 'Ángulos Base 16:9' son imágenes guía para los motores; selecciona un .mp4 para ensamblar video final.");
+        return;
+      }
+      if (picks[sceneIdx] === relPath) {
+        delete picks[sceneIdx];
+      } else {
+        picks[sceneIdx] = relPath;
+      }
+      savePicks();
+      renderTable();
+    }
+
+    function clearPicks() {
+      picks = {};
+      savePicks();
+      renderTable();
+    }
+
+    function renderCommand() {
+      const data = window.BF01_BIBLIOTECA;
+      if (!data) return;
+      const keys = Object.keys(picks).sort((a, b) => Number(a) - Number(b));
+      document.getElementById("picked-count").textContent = String(keys.length);
+      if (!keys.length) {
+        document.getElementById("cmd-box").textContent =
+          "Selecciona tus clips .mp4 ganadores por escena para generar el comando exacto de ensamblaje (escenas/ + BF01_COMPLETO_UNIDO.mp4).";
+        return;
+      }
+      const copies = keys.map((idx) => {
+        const pad = String(idx).padStart(2, "0");
+        return `cp "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/${picks[idx]}" "proyectos/waters-serie/black_friday_bf01/clips_raw/${pad}.mp4"`;
+      });
+      const cmd = `mkdir -p proyectos/waters-serie/black_friday_bf01/clips_raw && \\\n${copies.join(" && \\\n")} && \\\npython3 proyectos/waters-serie/scripts/armar_escenas_bf01.py`;
+      document.getElementById("cmd-box").textContent = cmd;
+    }
+
+    function copyBuildCmd() {
+      const txt = document.getElementById("cmd-box").textContent;
+      navigator.clipboard?.writeText(txt);
+    }
+
+    function renderTable() {
+      const data = window.BF01_BIBLIOTECA;
+      if (!data) return;
+      document.getElementById("ref-thumb").src = data.ref_img;
+      document.getElementById("subtitle").textContent =
+        `Último escaneo: ${data.generated_at} · Refresca ejecutando catalogo_motores.py tras bajar nuevos clips`;
+
+      const headHtml = `<tr>
+        <th class="scene-col">Escena & Ángulo</th>
+        ${data.engines.map((e) => `<th>${e.label}</th>`).join("")}
+      </tr>`;
+      document.getElementById("thead").innerHTML = headHtml;
+
+      const bodyHtml = data.rows.map((row) => {
+        const tds = data.engines.map((eng) => {
+          const items = row.cells[eng.id] || [];
+          if (!items.length) {
+            return `<td><div class="empty-slot">Sin archivos aún<br/>(${eng.id})</div></td>`;
+          }
+          return `<td>${items.map((it) => {
+            const isSel = picks[row.idx] === it.rel_path;
+            const media = it.type === "video"
+              ? `<video src="${it.rel_path}" controls muted preload="metadata"></video>`
+              : `<img src="${it.rel_path}" alt="${it.name}" loading="lazy" />`;
+            const spec = it.type === "video"
+              ? `${it.duration}s · ${it.width}×${it.height}`
+              : `${it.size_kb} KB · Ref`;
+            const btnLabel = it.type === "video" ? (isSel ? "Conservada ✓" : "Conservar") : "Usar de guía";
+            return `<div class="item-card ${isSel ? "selected" : ""}">
+              ${media}
+              <div class="item-meta">
+                <span class="meta-txt" title="${it.name}">${it.name} · ${spec}</span>
+                <button class="pick-btn" onclick="selectItem(${row.idx}, '${it.rel_path}', '${it.type}')">${btnLabel}</button>
+              </div>
+            </div>`;
+          }).join("")}</td>`;
+        }).join("");
+
+        return `<tr>
+          <td class="scene-col">
+            <div class="scene-title">${row.titulo}</div>
+            <div class="scene-angle">${row.angulo}</div>
+          </td>
+          ${tds}
+        </tr>`;
+      }).join("");
+      document.getElementById("tbody").innerHTML = bodyHtml;
+      renderCommand();
+    }
+
+    renderTable();
+  </script>
+</body>
+</html>

@@ -35,3 +35,4 @@ node_modules/
 .DS_Store
 tmp/
 proyectos/waters-3d-studio/public/avatar/*.mp4
+proyectos/waters-serie/black_friday_bf01/biblioteca_motores/**/*.mp4
