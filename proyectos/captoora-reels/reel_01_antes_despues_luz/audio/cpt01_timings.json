@@ -1,0 +1,63 @@
+{
+  "cpt01": {
+    "total_duration": 34.24,
+    "total_chars": 446,
+    "master_wav": "proyectos/captoora-reels/reel_01_antes_despues_luz/audio/cpt01_master.wav",
+    "clips": [
+      {
+        "id": "C1_hook",
+        "chapter": "01 · Hook Visual + Auditivo",
+        "start": 0.18,
+        "voice_end": 9.14,
+        "end": 9.32,
+        "duration": 9.14,
+        "voice_dur": 8.96,
+        "chars": 114,
+        "mp3": "proyectos/captoora-reels/reel_01_antes_despues_luz/audio/cache/cpt01/C1_hook.mp3"
+      },
+      {
+        "id": "C2_revelado",
+        "chapter": "02 · Cortina Antes -> Después",
+        "start": 9.32,
+        "voice_end": 18.36,
+        "end": 18.54,
+        "duration": 9.22,
+        "voice_dur": 9.04,
+        "chars": 138,
+        "mp3": "proyectos/captoora-reels/reel_01_antes_despues_luz/audio/cache/cpt01/C2_revelado.mp3"
+      },
+      {
+        "id": "C3_estudio",
+        "chapter": "03 · Estudio Colinas",
+        "start": 18.54,
+        "voice_end": 27.9,
+        "end": 28.08,
+        "duration": 9.54,
+        "voice_dur": 9.36,
+        "chars": 113,
+        "mp3": "proyectos/captoora-reels/reel_01_antes_despues_luz/audio/cache/cpt01/C3_estudio.mp3"
+      },
+      {
+        "id": "C4_cta",
+        "chapter": "04 · Popup Seguir + SESIÓN",
+        "start": 28.08,
+        "voice_end": 33.44,
+        "end": 33.89,
+        "duration": 5.81,
+        "voice_dur": 5.36,
+        "chars": 81,
+        "mp3": "proyectos/captoora-reels/reel_01_antes_despues_luz/audio/cache/cpt01/C4_cta.mp3"
+      }
+    ]
+  },
+  "elevenlabs_quota_before": {
+    "character_count": 32160,
+    "character_limit": 61509,
+    "remaining": 29349
+  },
+  "elevenlabs_quota_after": {
+    "character_count": 32338,
+    "character_limit": 61509,
+    "remaining": 29171
+  }
+}

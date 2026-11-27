@@ -1,13 +1,13 @@
-/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.7 (Taxonomía + REF-13/14 + S11 HRM-03) */
+/* Captoora Studio & ¡WATERS! — Modelo de datos verificado v1.8 (REF-15 Sofi Pasos + S12 CPT-REEL-01) */
 window.CAPTOORA_DATA = {
-  schema_version: "1.7",
+  schema_version: "1.8",
   meta: {
     workspace: "Captoora Studio · ¡WATERS! / ¿Caíste?",
     subtitulo: "Sala de control de producción, referencias y métricas",
     fecha_corte: "2026-11-26",
     meta_videos_validacion: 20,
     cuota_elevenlabs: {
-      disponible: 29349,
+      disponible: 29171,
       total: 61509,
       unidad: "caracteres"
     },
@@ -87,7 +87,7 @@ window.CAPTOORA_DATA = {
       cuando_se_quita: "Al validar duración y volumen exacto con ffprobe",
       tiempo_estimado: "5 min/pieza",
       estado: "Activo",
-      detalle: "Cuota actual cuidada: 29,349 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
+      detalle: "Cuota actual cuidada: 29,171 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
     },
     {
       paso: 4,
@@ -438,6 +438,21 @@ window.CAPTOORA_DATA = {
       donde_vive: "proyectos/waters-serie/biblioteca_hermes_abliterated/04_piloto_hrm03_editorial_hf/",
       veredicto: "En prueba",
       nota: "403K vistas. Se combina con REF-13: Kallaway (0-5s) + Marktalksai (5-50s)."
+    },
+    {
+      id: "REF-15",
+      fecha: "2026-11-26",
+      fuente: "Sofi Pasos Marketing · 4 Palancas de Retención",
+      plataforma: "Facebook Reels",
+      plat_icon: "facebook",
+      tipos: ["Guion y Hooks", "Diseño"],
+      thumb: "thumbs/ref_15_sofi_pasos_retencion.jpg",
+      url: "https://www.facebook.com/reel/1121557353776872",
+      que_muestra: "4 palancas en 19.6s: zoom visual en 0s, titular fijo arriba, SFX en 0s y acción continua de principio a fin + popup final de perfil.",
+      que_obtuvimos: "Aplicado en CPT-REEL-01 (Captoora Studio 34.2s): cortina Antes->Después continua sobre fotografía real + popup @captoora.studio.",
+      donde_vive: "proyectos/captoora-reels/reel_01_antes_despues_luz/",
+      veredicto: "En prueba",
+      nota: "151.3K vistas, 9.9K reacciones. Adoptamos las 4 palancas sin copiar el formato meta."
     }
   ],
 
@@ -643,6 +658,21 @@ window.CAPTOORA_DATA = {
       source_mp4: "proyectos/waters-serie/biblioteca_hermes_abliterated/renders/HRM03_sandbox_editorial_master.mp4",
       estado_slot: "En CapCut Pro",
       feedback: "En Redmi Note 8 (04_HERMES_BLACK_CANVAS/). Piloto Triple Hook + Attention Trap + Editorial Crema / Dark."
+    },
+    {
+      orden: "12",
+      archivo_cola: "12_CPT01_ANTES_DESPUES_LUZ_25S.mp4",
+      fecha_mx: "2026-12-01 20:00",
+      serie: "Captoora Studio · Antes/Después",
+      formato: "9:16 · 34.2s",
+      canales: ["Instagram Reels", "Facebook Reels", "TikTok", "YouTube Shorts"],
+      titulo: "¿Por qué tu foto se ve plana? La luz lo cambia todo (Antes -> Después en estudio)",
+      cta_palabra: "SESIÓN",
+      lead_magnet_pdf: null,
+      thumb: "thumbs/s12_cpt01_antes_despues.jpg",
+      source_mp4: "proyectos/captoora-reels/reel_01_antes_despues_luz/renders/CPT01_ANTES_DESPUES_LUZ_25S.mp4",
+      estado_slot: "En CapCut Pro",
+      feedback: "En Redmi Note 8 (05_CAPTOORA_STUDIO_REELS/). Aplica REF-15 (zoom 0s + cortina Antes/Después + popup @captoora.studio) cumpliendo Ley Visual."
     }
   ],
 
@@ -680,14 +710,14 @@ window.CAPTOORA_DATA = {
       cuenta: "Cuenta principal",
       tipo: "Membership",
       icon: "elevenlabs",
-      disponible: 29349,
+      disponible: 29171,
       total: 61509,
       unidad: "chars",
       origen: "API verificada",
       corte: "2026-11-26",
       renovacion: "Por confirmar",
       url: "https://elevenlabs.io/app/subscription",
-      nota: "Saldo verificado vía API tras HRM-03 (32,160 usados / 29,349 disp.); recordatorio 08:00 AM."
+      nota: "Saldo verificado vía API tras CPT-REEL-01 (32,338 usados / 29,171 disp.); recordatorio 08:00 AM."
     },
     {
       id: "CTA-02",
