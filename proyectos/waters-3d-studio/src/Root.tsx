@@ -19,6 +19,7 @@ import {
 } from './compositions/WatersMadrugadaEpisode';
 import { ToyPropExplainerEpisode } from './compositions/ToyPropExplainerEpisode';
 import { CARBON_S04_CONFIG } from './data/carbonS04ToyProp';
+import { CARBON_S05_CONFIG } from './data/carbonS05ToyProp';
 import beatsData from './episodeBeats.json';
 
 const EP01_BEATS = (beatsData as Record<string, BeatItem[]>).EP01;
@@ -201,6 +202,17 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           config: CARBON_S04_CONFIG,
+        }}
+      />
+      <Composition
+        id="ToyPropCarbonS05"
+        component={ToyPropExplainerEpisode as unknown as React.ComponentType<Record<string, unknown>>}
+        durationInFrames={8195}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          config: CARBON_S05_CONFIG,
         }}
       />
     </>

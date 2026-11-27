@@ -4,7 +4,10 @@ export type ToyPropSceneType =
   | 'exploit_trio'
   | 'bandaged_repo'
   | 'binary_doors'
-  | 'giant_clipboard';
+  | 'giant_clipboard'
+  | 'fairwind_vault'
+  | 'ranking_podium'
+  | 'surgeon_split';
 
 export interface KineticCaptionChunk {
   startSec: number;
@@ -16,6 +19,7 @@ export interface KineticCaptionChunk {
 
 export interface ToyPropSceneConfig {
   id: string;
+  chapterLabel?: string;
   startSec: number;
   endSec: number;
   accentColor: string;

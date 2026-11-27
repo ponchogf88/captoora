@@ -599,7 +599,7 @@ window.CAPTOORA_DATA = {
       thumb: "thumbs/slot_04_carbon_short.jpg",
       source_mp4: "proyectos/waters-serie/renders/ORO_CARBON_CIBERSEGURIDAD_SHORT_60S.mp4",
       estado_slot: "Listo en disco",
-      feedback: "Reconstruido en Toy-Prop 3D v2 (REF-17): hook visual en 0-2s + props 3D + cero texto denso. Listo para subir."
+      feedback: "Reconstruido en Toy-Prop 3D v2 (REF-17) + capa SFX sincronizados (crack, curita, dings). Listo para subir."
     },
     {
       orden: "05",
@@ -614,7 +614,7 @@ window.CAPTOORA_DATA = {
       thumb: "thumbs/slot_05_carbon_3min.jpg",
       source_mp4: "proyectos/waters-serie/renders/ORO_CARBON_CIBERSEGURIDAD_EXPLICATIVO_3MIN.mp4",
       estado_slot: "Listo en disco",
-      feedback: ""
+      feedback: "Reconstruido en Toy-Prop 3D 16:9 v2 (11 capítulos + SFX sincronizados). 100/100 en 0-3s. Listo para YouTube/LinkedIn/X."
     },
     {
       orden: "06",

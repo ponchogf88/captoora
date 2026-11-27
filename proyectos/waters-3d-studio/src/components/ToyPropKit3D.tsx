@@ -70,20 +70,30 @@ function makePlateTexture(
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
 
+  const fitFont = (label: string, startPx: number, weight = '900') => {
+    let px = startPx;
+    while (px > 16) {
+      ctx.font = `${weight} ${px}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+      if (ctx.measureText(label).width <= width - 52) break;
+      px -= 3;
+    }
+    return ctx.font;
+  };
+
   if (subtitle) {
     ctx.fillStyle = fgColor;
-    ctx.font = `900 ${Math.round(height * 0.42)}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+    ctx.font = fitFont(title, Math.round(height * 0.42), '900');
     ctx.shadowColor = accentColor;
     ctx.shadowBlur = 14;
     ctx.fillText(title, width / 2, height * 0.42);
 
     ctx.shadowBlur = 0;
     ctx.fillStyle = accentColor;
-    ctx.font = `800 ${Math.round(height * 0.18)}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+    ctx.font = fitFont(subtitle, Math.round(height * 0.18), '800');
     ctx.fillText(subtitle, width / 2, height * 0.77);
   } else {
     ctx.fillStyle = fgColor;
-    ctx.font = `900 ${Math.round(height * 0.52)}px "Arial Black", "Helvetica Neue", Arial, sans-serif`;
+    ctx.font = fitFont(title, Math.round(height * 0.52), '900');
     ctx.shadowColor = accentColor;
     ctx.shadowBlur = 16;
     ctx.fillText(title, width / 2, height * 0.53);
@@ -916,6 +926,174 @@ export const BandagedRepoCube3D: React.FC<{
         <mesh position={[0, 0, 0.05]}>
           <boxGeometry args={[0.26, 0.22, 0.03]} />
           <meshStandardMaterial color="#f8fafc" roughness={0.35} />
+        </mesh>
+      </group>
+    </group>
+  );
+};
+
+export const FairwindVault3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+}> = ({ frame, localFrame, fps }) => {
+  const vaultGeo = useMemo(() => new RoundedBoxGeometry(2.1, 1.85, 1.35, 4, 0.16), []);
+  const plateTex = useMemo(
+    () => makePlateTexture('FAIRWIND', 'SOLO DEFENSORES', '#121722', '#ffffff', '#fbbf24', 512, 180),
+    []
+  );
+  const pop = spring({ frame: localFrame, fps, config: { damping: 12, stiffness: 150 } });
+  const bob = Math.sin(frame * 0.1) * 0.04;
+  const wheelAngle = frame * 0.06;
+
+  return (
+    <group position={[0, 0.02 + bob, 0]} scale={Math.max(0.01, pop)}>
+      {/* Navy Security Vault Body */}
+      <mesh geometry={vaultGeo}>
+        <meshStandardMaterial color="#152036" roughness={0.26} metalness={0.55} />
+      </mesh>
+      {/* Gold Trim Border */}
+      <mesh position={[0, 0, 0.65]}>
+        <boxGeometry args={[1.85, 1.6, 0.08]} />
+        <meshStandardMaterial color="#fbbf24" emissive="#d97706" emissiveIntensity={0.35} metalness={0.65} roughness={0.25} />
+      </mesh>
+      <mesh position={[0, 0, 0.67]}>
+        <boxGeometry args={[1.65, 1.4, 0.08]} />
+        <meshStandardMaterial color="#192844" roughness={0.28} metalness={0.45} />
+      </mesh>
+
+      {/* Rotating Chrome Vault Dial on Upper Front */}
+      <group position={[0, 0.28, 0.75]} rotation={[0, 0, wheelAngle]}>
+        <mesh rotation={[Math.PI / 2, 0, 0]}>
+          <cylinderGeometry args={[0.32, 0.32, 0.12, 24]} />
+          <meshStandardMaterial color="#e2e8f0" roughness={0.2} metalness={0.8} />
+        </mesh>
+        {[0, Math.PI / 2, Math.PI, Math.PI * 1.5].map((a, i) => (
+          <mesh key={i} position={[Math.cos(a) * 0.2, Math.sin(a) * 0.2, 0.05]} rotation={[0, 0, a]}>
+            <boxGeometry args={[0.32, 0.06, 0.06]} />
+            <meshStandardMaterial color="#fbbf24" emissive="#f59e0b" emissiveIntensity={0.5} />
+          </mesh>
+        ))}
+      </group>
+
+      {/* Serious Determined Toy Face below Dial */}
+      <GlossyToyFace expression="determined" position={[0, -0.35, 0.72]} scale={0.78} />
+
+      {/* Front Badge Plate */}
+      <mesh position={[0, -0.95, 0.85]}>
+        <boxGeometry args={[1.55, 0.42, 0.2]} />
+        <meshStandardMaterial color="#111622" roughness={0.4} />
+      </mesh>
+      <mesh position={[0, -0.95, 0.955]}>
+        <planeGeometry args={[1.48, 0.36]} />
+        <meshBasicMaterial map={plateTex} />
+      </mesh>
+    </group>
+  );
+};
+
+export const RankingPodium3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+}> = ({ frame, localFrame, fps }) => {
+  const grow = spring({ frame: localFrame, fps, config: { damping: 12, stiffness: 130 } });
+  const cTex = useMemo(() => makePlateTexture('#1 · 59', 'CARBON', '#102432', '#ffffff', '#00e0f0', 420, 220), []);
+  const oTex = useMemo(() => makePlateTexture('#2 · 58', 'OPUS', '#1c1532', '#ffffff', '#a855f7', 420, 220), []);
+  const aTex = useMemo(() => makePlateTexture('#3 · 57', 'ASTRA', '#2a1a12', '#ffffff', '#fb923c', 420, 220), []);
+  const toyGeo = useMemo(() => new RoundedBoxGeometry(0.78, 0.84, 0.68, 3, 0.12), []);
+  const bob = Math.sin(frame * 0.12) * 0.04;
+
+  const spots = [
+    { x: -1.35, h: 0.95, yToy: 0.37, color: '#a855f7', tex: oTex, expr: 'determined' as ToyExpression },
+    { x: 0, h: 1.32, yToy: 0.74, color: '#00d9ea', tex: cTex, expr: 'happy' as ToyExpression },
+    { x: 1.35, h: 0.75, yToy: 0.17, color: '#fb923c', tex: aTex, expr: 'determined' as ToyExpression },
+  ];
+
+  return (
+    <group position={[0, -0.22, 0.1]} scale={0.92}>
+      {spots.map((s, idx) => (
+        <group key={idx} position={[s.x, 0, 0]} scale={[1, Math.max(0.05, grow), 1]}>
+          {/* Podium Step */}
+          <mesh position={[0, -1.0 + s.h / 2, 0]}>
+            <boxGeometry args={[1.18, s.h, 0.85]} />
+            <meshStandardMaterial color="#151b26" roughness={0.32} metalness={0.45} />
+          </mesh>
+          <mesh position={[0, -1.0 + s.h / 2, 0.43]}>
+            <planeGeometry args={[1.08, Math.min(0.68, s.h * 0.8)]} />
+            <meshBasicMaterial map={s.tex} />
+          </mesh>
+          {/* Toy Competitor Standing on Step */}
+          <group position={[0, s.yToy + (idx === 1 ? bob : -bob * 0.5), 0]}>
+            <mesh geometry={toyGeo}>
+              <meshStandardMaterial color={s.color} emissive={s.color} emissiveIntensity={0.32} roughness={0.18} />
+            </mesh>
+            <GlossyToyFace expression={s.expr} position={[0, 0.02, 0.35]} scale={0.78} />
+          </group>
+        </group>
+      ))}
+    </group>
+  );
+};
+
+export const SurgeonSplit3D: React.FC<{
+  frame: number;
+  localFrame: number;
+  fps: number;
+}> = ({ frame, localFrame, fps }) => {
+  const pop = spring({ frame: localFrame, fps, config: { damping: 12, stiffness: 150 } });
+  const boxGeo = useMemo(() => new RoundedBoxGeometry(1.38, 1.38, 1.05, 4, 0.14), []);
+  const leftTex = useMemo(() => makePlateTexture('DIARIO', 'NEON / HYDRO', '#12222c', '#ffffff', '#38bdf8', 480, 180), []);
+  const rightTex = useMemo(() => makePlateTexture('CIRUJANO', 'AUDITORÍAS', '#10261b', '#ffffff', '#2ee87a', 480, 180), []);
+  const pulse = Math.sin(frame * 0.15) * 0.05;
+
+  return (
+    <group position={[0, 0.05, 0.1]} scale={Math.max(0.01, pop) * 0.92}>
+      {/* Left Daily Worker Cube */}
+      <group position={[-1.45, -0.08 + pulse, 0]}>
+        <mesh geometry={boxGeo}>
+          <meshStandardMaterial color="#38bdf8" emissive="#0284c7" emissiveIntensity={0.3} roughness={0.22} />
+        </mesh>
+        <GlossyToyFace expression="happy" position={[0, 0.06, 0.54]} scale={0.86} />
+        <mesh position={[0, -0.92, 0.45]}>
+          <boxGeometry args={[1.45, 0.42, 0.18]} />
+          <meshStandardMaterial color="#111622" />
+        </mesh>
+        <mesh position={[0, -0.92, 0.545]}>
+          <planeGeometry args={[1.38, 0.36]} />
+          <meshBasicMaterial map={leftTex} />
+        </mesh>
+      </group>
+
+      {/* Right Precision Surgeon Audit Cube + Glowing Emerald Ring */}
+      <group position={[1.45, 0.06 - pulse, 0]}>
+        <mesh geometry={boxGeo}>
+          <meshStandardMaterial color="#1d2d44" emissive="#10b981" emissiveIntensity={0.28} roughness={0.18} />
+        </mesh>
+        {/* Glowing Surgeon Laser Ring */}
+        <mesh position={[0, 0.08, 0.53]} rotation={[0, 0, frame * 0.04]}>
+          <torusGeometry args={[0.58, 0.045, 10, 32]} />
+          <meshStandardMaterial color="#2ee87a" emissive="#2ee87a" emissiveIntensity={1.1} />
+        </mesh>
+        {/* Crisp Green Cross above eyes */}
+        <group position={[0, 0.56, 0.56]}>
+          <mesh>
+            <boxGeometry args={[0.32, 0.09, 0.05]} />
+            <meshStandardMaterial color="#2ee87a" emissive="#2ee87a" emissiveIntensity={1.0} />
+          </mesh>
+          <mesh>
+            <boxGeometry args={[0.09, 0.32, 0.05]} />
+            <meshStandardMaterial color="#2ee87a" emissive="#2ee87a" emissiveIntensity={1.0} />
+          </mesh>
+        </group>
+        <GlossyToyFace expression="determined" position={[0, -0.05, 0.54]} scale={0.86} />
+        <mesh position={[0, -0.98, 0.45]}>
+          <boxGeometry args={[1.45, 0.42, 0.18]} />
+          <meshStandardMaterial color="#111622" />
+        </mesh>
+        <mesh position={[0, -0.98, 0.545]}>
+          <planeGeometry args={[1.38, 0.36]} />
+          <meshBasicMaterial map={rightTex} />
         </mesh>
       </group>
     </group>
