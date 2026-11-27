@@ -21,6 +21,7 @@ import { ToyPropExplainerEpisode } from './compositions/ToyPropExplainerEpisode'
 import { HybridBlackFridayEpisode } from './compositions/HybridBlackFridayEpisode';
 import { CARBON_S04_CONFIG } from './data/carbonS04ToyProp';
 import { CARBON_S05_CONFIG } from './data/carbonS05ToyProp';
+import bf01Timings from './data/bf01Timings.json';
 import beatsData from './episodeBeats.json';
 
 const EP01_BEATS = (beatsData as Record<string, BeatItem[]>).EP01;
@@ -219,7 +220,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="HybridBlackFridayBF01"
         component={HybridBlackFridayEpisode as unknown as React.ComponentType<Record<string, unknown>>}
-        durationInFrames={2760}
+        durationInFrames={bf01Timings.total_frames}
         fps={30}
         width={1920}
         height={1080}

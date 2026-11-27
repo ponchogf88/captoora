@@ -623,11 +623,11 @@ export const GiantClipboard3D: React.FC<{
   localFrame: number;
   fps: number;
   frame: number;
-}> = ({ items, localFrame, fps, frame }) => {
+  checkDelays?: [number, number, number];
+}> = ({ items, localFrame, fps, frame, checkDelays = [10, 48, 86] }) => {
   const paperTex = useMemo(() => makeClipboardPaperTexture(items), [items]);
   const boardGeo = useMemo(() => new RoundedBoxGeometry(2.65, 3.35, 0.18, 4, 0.08), []);
 
-  const checkDelays = [10, 48, 86];
   const wave = Math.sin(frame * 0.22) * 0.35 + 1.1;
 
   return (

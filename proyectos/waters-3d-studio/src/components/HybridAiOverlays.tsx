@@ -175,7 +175,7 @@ export const AiPromptBoxOverlay: React.FC<{
   const typedPrompt = promptString.slice(0, typedLen);
   const showCursor = Math.floor(localFrame / 12) % 2 === 0;
 
-  const loopProgress = interpolate(localFrame, [90, 540], [0, 1], {
+  const loopProgress = interpolate(localFrame, [50, 390], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
   });

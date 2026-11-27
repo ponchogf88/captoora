@@ -7,7 +7,7 @@ window.CAPTOORA_DATA = {
     fecha_corte: "2026-11-26",
     meta_videos_validacion: 20,
     cuota_elevenlabs: {
-      disponible: 29171,
+      disponible: 28708,
       total: 61509,
       unidad: "caracteres"
     },
@@ -87,7 +87,7 @@ window.CAPTOORA_DATA = {
       cuando_se_quita: "Al validar duración y volumen exacto con ffprobe",
       tiempo_estimado: "5 min/pieza",
       estado: "Activo",
-      detalle: "Cuota actual cuidada: 29,171 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
+      detalle: "Cuota actual cuidada: 28,708 de 61,509 caracteres disponibles. Caché de MP3 reutilizable para no pagar dos veces."
     },
     {
       paso: 4,
@@ -772,14 +772,14 @@ window.CAPTOORA_DATA = {
       cuenta: "Cuenta principal",
       tipo: "Membership",
       icon: "elevenlabs",
-      disponible: 29171,
+      disponible: 28708,
       total: 61509,
       unidad: "chars",
       origen: "API verificada",
-      corte: "2026-11-26",
+      corte: "2026-11-27",
       renovacion: "Por confirmar",
       url: "https://elevenlabs.io/app/subscription",
-      nota: "Saldo verificado vía API tras CPT-REEL-01 (32,338 usados / 29,171 disp.); recordatorio 08:00 AM."
+      nota: "Saldo verificado vía API tras BF01 Black Friday (32,801 usados / 28,708 disp.); recordatorio 08:00 AM."
     },
     {
       id: "CTA-02",

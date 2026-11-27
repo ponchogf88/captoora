@@ -1,0 +1,107 @@
+{
+  "total_duration": 83.9,
+  "total_frames": 2510,
+  "total_chars": 1158,
+  "check_delays": [
+    90,
+    250,
+    390
+  ],
+  "master_wav": "proyectos/waters-serie/black_friday_bf01/audio/bf01_master_sfx.wav",
+  "clips": [
+    {
+      "id": "A1_hook",
+      "start": 0.15,
+      "voice_end": 14.95,
+      "end": 15.2,
+      "duration": 15.05,
+      "voice_dur": 14.8,
+      "startFrame": 0,
+      "durationInFrames": 456,
+      "chars": 212,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A1_hook.mp3"
+    },
+    {
+      "id": "A2_bucle",
+      "start": 15.2,
+      "voice_end": 29.68,
+      "end": 29.93,
+      "duration": 14.73,
+      "voice_dur": 14.48,
+      "startFrame": 456,
+      "durationInFrames": 442,
+      "chars": 214,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A2_bucle.mp3"
+    },
+    {
+      "id": "A3a_grafica",
+      "start": 29.93,
+      "voice_end": 43.13,
+      "end": 43.33,
+      "duration": 13.4,
+      "voice_dur": 13.2,
+      "startFrame": 898,
+      "durationInFrames": 402,
+      "chars": 186,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A3a_grafica.mp3"
+    },
+    {
+      "id": "A3b_gauge",
+      "start": 43.33,
+      "voice_end": 48.77,
+      "end": 49.02,
+      "duration": 5.69,
+      "voice_dur": 5.44,
+      "startFrame": 1300,
+      "durationInFrames": 171,
+      "chars": 96,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A3b_gauge.mp3"
+    },
+    {
+      "id": "A4_puertas",
+      "start": 49.02,
+      "voice_end": 58.7,
+      "end": 58.95,
+      "duration": 9.93,
+      "voice_dur": 9.68,
+      "startFrame": 1471,
+      "durationInFrames": 297,
+      "chars": 145,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A4_puertas.mp3"
+    },
+    {
+      "id": "A5a_candados",
+      "start": 58.95,
+      "voice_end": 75.35,
+      "end": 75.6,
+      "duration": 16.65,
+      "voice_dur": 16.4,
+      "startFrame": 1768,
+      "durationInFrames": 500,
+      "chars": 198,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A5a_candados.mp3"
+    },
+    {
+      "id": "A5b_cta",
+      "start": 75.6,
+      "voice_end": 83.2,
+      "end": 83.65,
+      "duration": 8.05,
+      "voice_dur": 7.6,
+      "startFrame": 2268,
+      "durationInFrames": 242,
+      "chars": 107,
+      "mp3": "proyectos/waters-serie/black_friday_bf01/audio/cache/A5b_cta.mp3"
+    }
+  ],
+  "elevenlabs_quota_before": {
+    "character_count": 32338,
+    "character_limit": 61509,
+    "remaining": 29171
+  },
+  "elevenlabs_quota_after": {
+    "character_count": 32801,
+    "character_limit": 61509,
+    "remaining": 28708
+  }
+}

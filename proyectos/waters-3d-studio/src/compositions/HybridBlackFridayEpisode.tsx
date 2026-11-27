@@ -24,6 +24,7 @@ import {
   HeroHookOverlay,
   SpendingChartOverlay,
 } from '../components/HybridAiOverlays';
+import bf01Timings from '../data/bf01Timings.json';
 
 export interface HybridAvatarClips {
   hook?: string;
@@ -50,13 +51,16 @@ const AvatarLayer: React.FC<{
   src: string;
   mode: 'fullscreen' | 'split_left' | 'pip_top_right';
   scalePush?: number;
-}> = ({ src, mode, scalePush = 1 }) => {
+  startFrom?: number;
+}> = ({ src, mode, scalePush = 1, startFrom = 24 }) => {
+  const safeStart = Math.max(0, Math.min(100, startFrom));
+  const loopFrames = 180;
   const videoEl = (
-    <Loop durationInFrames={240}>
+    <Loop durationInFrames={loopFrames}>
       <Video
         src={src}
-        startFrom={24}
-        endAt={264}
+        startFrom={safeStart}
+        endAt={safeStart + loopFrames}
         muted
         style={{
           width: '100%',
@@ -145,19 +149,28 @@ export const HybridBlackFridayEpisode: React.FC<HybridBlackFridayProps> = ({ ava
   const clipPip = avatarClips?.pip ?? defaultAvatar;
   const clipCta = avatarClips?.cta ?? defaultAvatar;
 
-  // 5-Act Timeline (2760 frames = 92.0s @ 30fps)
-  const isAct1 = frame < 360; // 0-12s Hook fullscreen
-  const isAct2 = frame >= 360 && frame < 960; // 12-32s AI Prompt Box split
-  const isAct3a = frame >= 960 && frame < 1320; // 32-44s Spending Chart split
-  const isAct3b = frame >= 1320 && frame < 1620; // 44-54s ToyProp Gauge + Siren + PiP
-  const isAct4 = frame >= 1620 && frame < 2160; // 54-72s BinaryDoors 3D + PiP
-  const isAct5a = frame >= 2160 && frame < 2520; // 72-84s GiantClipboard 3D + PiP
-  const isAct5b = frame >= 2520; // 84-92s Final CTA Fullscreen
+  const clipMap = Object.fromEntries(bf01Timings.clips.map((c) => [c.id, c]));
+  const a1 = clipMap.A1_hook;
+  const a2 = clipMap.A2_bucle;
+  const a3a = clipMap.A3a_grafica;
+  const a3b = clipMap.A3b_gauge;
+  const a4 = clipMap.A4_puertas;
+  const a5a = clipMap.A5a_candados;
+  const a5b = clipMap.A5b_cta;
+
+  const isAct1 = frame >= a1.startFrame && frame < a1.startFrame + a1.durationInFrames;
+  const isAct2 = frame >= a2.startFrame && frame < a2.startFrame + a2.durationInFrames;
+  const isAct3b = frame >= a3b.startFrame && frame < a3b.startFrame + a3b.durationInFrames;
+  const isAct4 = frame >= a4.startFrame && frame < a4.startFrame + a4.durationInFrames;
+  const isAct5a = frame >= a5a.startFrame && frame < a5a.startFrame + a5a.durationInFrames;
+  const isAct5b = frame >= a5b.startFrame;
 
   const in3DWorld = isAct3b || isAct4 || isAct5a;
 
   const hookPush = isAct1
-    ? interpolate(frame, [0, 360], [1.0, 1.07], { extrapolateRight: 'clamp' })
+    ? interpolate(frame - a1.startFrame, [0, a1.durationInFrames], [1.0, 1.07], {
+        extrapolateRight: 'clamp',
+      })
     : 1.0;
 
   return (
@@ -167,22 +180,22 @@ export const HybridBlackFridayEpisode: React.FC<HybridBlackFridayProps> = ({ ava
         fontFamily: '"Arial Black", "Helvetica Neue", Arial, sans-serif',
       }}
     >
-      {/* ACT 1: 0–12s Hook Black Friday Fullscreen */}
-      <Sequence from={0} durationInFrames={360}>
-        <AvatarLayer src={clipHook} mode="fullscreen" scalePush={hookPush} />
-        <HeroHookOverlay frame={frame} fps={fps} />
+      {/* ACT 1: Hook Black Friday Fullscreen */}
+      <Sequence from={a1.startFrame} durationInFrames={a1.durationInFrames}>
+        <AvatarLayer src={clipHook} mode="fullscreen" scalePush={hookPush} startFrom={18} />
+        <HeroHookOverlay frame={Math.max(0, frame - a1.startFrame)} fps={fps} />
       </Sequence>
 
-      {/* ACT 2: 12–32s Split Avatar + Typing AI Prompt Box */}
-      <Sequence from={360} durationInFrames={600}>
-        <AvatarLayer src={clipBucle} mode="split_left" />
-        <AiPromptBoxOverlay localFrame={Math.max(0, frame - 360)} fps={fps} />
+      {/* ACT 2: Split Avatar + Typing AI Prompt Box */}
+      <Sequence from={a2.startFrame} durationInFrames={a2.durationInFrames}>
+        <AvatarLayer src={clipBucle} mode="split_left" startFrom={54} />
+        <AiPromptBoxOverlay localFrame={Math.max(0, frame - a2.startFrame)} fps={fps} />
       </Sequence>
 
-      {/* ACT 3A: 32–44s Split Avatar + Animated $2,000 Spending Chart */}
-      <Sequence from={960} durationInFrames={360}>
-        <AvatarLayer src={clipChart} mode="split_left" />
-        <SpendingChartOverlay localFrame={Math.max(0, frame - 960)} fps={fps} />
+      {/* ACT 3A: Split Avatar + Animated $2,000 Spending Chart */}
+      <Sequence from={a3a.startFrame} durationInFrames={a3a.durationInFrames}>
+        <AvatarLayer src={clipChart} mode="split_left" startFrom={88} />
+        <SpendingChartOverlay localFrame={Math.max(0, frame - a3a.startFrame)} fps={fps} />
       </Sequence>
 
       {/* ACTS 3B, 4, 5A: Toy-Prop 3D World + Top-Right Avatar PiP */}
@@ -213,7 +226,7 @@ export const HybridBlackFridayEpisode: React.FC<HybridBlackFridayProps> = ({ ava
                 />
                 <SemiGauge3D
                   targetRatio={0.96}
-                  localFrame={Math.max(0, frame - 1320)}
+                  localFrame={Math.max(0, frame - a3b.startFrame)}
                   fps={fps}
                   position={[-0.25, -0.15, -0.5]}
                   scale={1.12}
@@ -243,9 +256,10 @@ export const HybridBlackFridayEpisode: React.FC<HybridBlackFridayProps> = ({ ava
               <group scale={0.84} position={[-0.2, 0.05, 0]}>
                 <GiantClipboard3D
                   items={['HARD LIMIT $20', 'TARJETA VIRTUAL', 'COMENTA: PRESUPUESTO']}
-                  localFrame={Math.max(0, frame - 2160)}
+                  localFrame={Math.max(0, frame - a5a.startFrame)}
                   fps={fps}
                   frame={frame}
+                  checkDelays={bf01Timings.check_delays as [number, number, number]}
                 />
               </group>
             )}
@@ -274,13 +288,13 @@ export const HybridBlackFridayEpisode: React.FC<HybridBlackFridayProps> = ({ ava
                 : '3 CANDADOS EN 3 MINUTOS'}
           </div>
 
-          <AvatarLayer src={clipPip} mode="pip_top_right" />
+          <AvatarLayer src={clipPip} mode="pip_top_right" startFrom={isAct4 ? 40 : isAct5a ? 72 : 12} />
         </AbsoluteFill>
       )}
 
-      {/* ACT 5B: 84–92s Clean Fullscreen Avatar CTA (bottom 220px clear for Captions!) */}
-      <Sequence from={2520} durationInFrames={240}>
-        <AvatarLayer src={clipCta} mode="fullscreen" scalePush={1.03} />
+      {/* ACT 5B: Clean Fullscreen Avatar CTA (bottom 220px clear for Captions!) */}
+      <Sequence from={a5b.startFrame} durationInFrames={a5b.durationInFrames}>
+        <AvatarLayer src={clipCta} mode="fullscreen" scalePush={1.03} startFrom={100} />
         <div
           style={{
             position: 'absolute',
