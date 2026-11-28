@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suite Explainer Videos · Clónate en Captoora Studio</title>
+  <style>
+    :root {
+      --bg: #090a0f;
+      --card-bg: rgba(22, 27, 34, 0.9);
+      --border: rgba(255, 255, 255, 0.12);
+      --accent: #00ff88;
+      --accent-glow: rgba(0, 255, 136, 0.3);
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --gold: #f59e0b;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.5;
+      padding: 36px 28px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1480px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 14px;
+      background: rgba(0, 255, 136, 0.15);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    p.subtitle {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 980px;
+      line-height: 1.6;
+    }
+
+    .alert-box {
+      margin-top: 18px;
+      padding: 18px 22px;
+      background: rgba(0, 255, 136, 0.08);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      color: #e6fcf1;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .alert-box strong {
+      color: var(--accent);
+    }
+
+    .grid-videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 32px;
+      margin-top: 36px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .video-container {
+      position: relative;
+      background: #000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-container.aspect-9-16 {
+      aspect-ratio: 9 / 16;
+      max-height: 640px;
+    }
+
+    .video-container.aspect-16-9 {
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-container.aspect-1-1 {
+      aspect-ratio: 1 / 1;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+    }
+
+    .card-body {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .specs-pill {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .spec-item {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #c9d1d9;
+    }
+
+    .btn-download {
+      background: #238636;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .btn-download:hover {
+      background: #2ea043;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge">Prueba de Fuego · Render Completo</div>
+      <h1>Suite de Explainer Videos: "Clónate en Captoora Studio"</h1>
+      <p class="subtitle">
+        3 versiones completas renderizadas con tu avatar oficial, tu perfil 90° calibrado, tu sonrisa real con dientes, música de fondo sincronizada y subtítulos cinemáticos de alto impacto. Demostrando que entendimos al 100% tu visión de Captoora BioGen.
+      </p>
+
+      <div class="alert-box">
+        <strong>Visión Validada:</strong> Frente a la saturación de clones caseros mal hechos con IA, Captoora Studio ofrece el servicio físico llave en mano: vienes al estudio en Colinas de San Jerónimo, capturamos tu biometría real (sin narices deformes ni sonrisas falsas) y te entregamos tu clon blindado legalmente con membresía mensual para que tu mejor versión trabaje por ti.
+      </div>
+    </header>
+
+    <div class="grid-videos">
+
+      <!-- Formato 1: 9:16 Vertical -->
+      <div class="card">
+        <div class="video-container aspect-9-16">
+          <video controls preload="metadata">
+            <source src="EXPLAINER_01_VERTICAL_9X16_CLONATE_CAPTOORA.mp4" type="video/mp4">
+            Tu navegador no soporta video MP4.
+          </video>
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Formato 01 · Vertical Viral</div>
+          <div class="card-title">Reel / TikTok / Shorts (9:16)</div>
+          <div class="card-desc">
+            Estilo MoneyPrinterTurbo / Alex Hormozi con zoompan cinemático continuo, subtítulos animados de alto impacto con palabras clave en oro y verde lima, cápsula superior de alerta y ritmo ágil para retención de audiencia.
+          </div>
+          <div class="specs-pill">
+            <span class="spec-item">📐 1080 x 1920</span>
+            <span class="spec-item">⏱️ &gt; 50 Segundos</span>
+            <span class="spec-item">🔊 Voz + Música Ducking</span>
+          </div>
+          <a class="btn-download" href="EXPLAINER_01_VERTICAL_9X16_CLONATE_CAPTOORA.mp4" download>⬇️ Descargar MP4 (9:16)</a>
+        </div>
+      </div>
+
+      <!-- Formato 2: 16:9 Widescreen -->
+      <div class="card">
+        <div class="video-container aspect-16-9">
+          <video controls preload="metadata">
+            <source src="EXPLAINER_02_WIDESCREEN_16X9_CLONATE_CAPTOORA.mp4" type="video/mp4">
+            Tu navegador no soporta video MP4.
+          </video>
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Formato 02 · Widescreen Ejecutivo</div>
+          <div class="card-title">YouTube / Masterclass (16:9)</div>
+          <div class="card-desc">
+            Formato horizontal cinemático con vista a la sierra de Monterrey. Animación de lower-thirds estilo documental corporativo, branding superior Captoora BioGen y subtítulos de transmisión de dos líneas.
+          </div>
+          <div class="specs-pill">
+            <span class="spec-item">📐 1920 x 1080</span>
+            <span class="spec-item">⏱️ &gt; 50 Segundos</span>
+            <span class="spec-item">🏛️ Entorno Corporativo</span>
+          </div>
+          <a class="btn-download" href="EXPLAINER_02_WIDESCREEN_16X9_CLONATE_CAPTOORA.mp4" download>⬇️ Descargar MP4 (16:9)</a>
+        </div>
+      </div>
+
+      <!-- Formato 3: 1:1 Cuadrado -->
+      <div class="card">
+        <div class="video-container aspect-1-1">
+          <video controls preload="metadata">
+            <source src="EXPLAINER_03_CUADRADO_1X1_CLONATE_CAPTOORA.mp4" type="video/mp4">
+            Tu navegador no soporta video MP4.
+          </video>
+        </div>
+        <div class="card-body">
+          <div class="card-tag">Formato 03 · Cuadrado Social Ads</div>
+          <div class="card-title">LinkedIn / Instagram Feed / Meta Ads (1:1)</div>
+          <div class="card-desc">
+            Formato publicitario de alta conversión. Barra superior fija con titular ("CLÓNATE EN CAPTOORA STUDIO · CLONA TU PRIME"), recuadro central con movimiento y caja de texto inferior de alto contraste.
+          </div>
+          <div class="specs-pill">
+            <span class="spec-item">📐 1080 x 1080</span>
+            <span class="spec-item">⏱️ &gt; 50 Segundos</span>
+            <span class="spec-item">💼 Enfoque B2B & Pauta</span>
+          </div>
+          <a class="btn-download" href="EXPLAINER_03_CUADRADO_1X1_CLONATE_CAPTOORA.mp4" download>⬇️ Descargar MP4 (1:1)</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
