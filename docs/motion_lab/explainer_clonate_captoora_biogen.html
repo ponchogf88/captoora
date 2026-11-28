@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainer Video · Clónate en Captoora Studio (Método BioGen)</title>
+  <style>
+    :root {
+      --bg: #030508;
+      --card-bg: rgba(13, 17, 23, 0.85);
+      --border: rgba(255, 255, 255, 0.1);
+      --accent: #00ff88;
+      --accent-glow: rgba(0, 255, 136, 0.4);
+      --gold: #f59e0b;
+      --danger: #ef4444;
+      --text: #f0f6fc;
+      --text-muted: #8b949e;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Glow background */
+    .ambient-glow {
+      position: fixed;
+      top: -20%;
+      left: 30%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(0, 255, 136, 0.15);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Video Player Canvas Viewport */
+    .explainer-stage {
+      background: #080c14;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8), 0 0 30px rgba(0, 255, 136, 0.1);
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Scene Container */
+    .scene-viewport {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scene {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      opacity: 0;
+      transform: scale(0.96) translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 60px;
+      text-align: center;
+    }
+
+    .scene.active {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* Scene 1: Problem */
+    .problem-box {
+      background: rgba(239, 68, 68, 0.08);
+      border: 2px solid rgba(239, 68, 68, 0.4);
+      border-radius: 16px;
+      padding: 30px 40px;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .problem-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    .problem-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #f87171;
+      margin-bottom: 12px;
+    }
+
+    .problem-desc {
+      font-size: 17px;
+      color: #fca5a5;
+      line-height: 1.6;
+    }
+
+    /* Scene 2: The Method Flowchart */
+    .flow-chart {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1050px;
+      gap: 12px;
+      position: relative;
+    }
+
+    .flow-step {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .flow-step:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2);
+    }
+
+    .flow-step.highlight {
+      border-color: var(--accent);
+      background: rgba(0, 255, 136, 0.08);
+      box-shadow: 0 0 25px var(--accent-glow);
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #000;
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .step-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .step-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .step-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .flow-arrow {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 800;
+      opacity: 0.6;
+    }
+
+    /* Scene 3: Biometric Lock & Anatomy */
+    .biometric-split {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 950px;
+      width: 100%;
+      text-align: left;
+    }
+
+    .biometric-img {
+      width: 320px;
+      height: 320px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 2px solid var(--accent);
+      box-shadow: 0 0 30px var(--accent-glow);
+      position: relative;
+    }
+
+    .biometric-data {
+      flex: 1;
+    }
+
+    .biometric-badge {
+      background: rgba(0, 255, 136, 0.15);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .biometric-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #e6edf3;
+    }
+
+    .check-item span {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    /* Scene 4: Legal Shield */
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .legal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .legal-card h4 {
+      font-size: 15px;
+      color: #fff;
+      margin: 10px 0 6px;
+    }
+
+    .legal-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Controls Bar */
+    .controls-bar {
+      height: 64px;
+      background: rgba(10, 14, 23, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+
+    .play-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .play-btn:hover { background: #10b981; }
+
+    .nav-beats {
+      display: flex;
+      gap: 8px;
+    }
+
+    .beat-dot {
+      width: 32px;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .beat-dot.active {
+      background: var(--accent);
+      box-shadow: 0 0 10px var(--accent-glow);
+      width: 48px;
+    }
+
+    .audio-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <h1>Captoora Studio · Explainer Video</h1>
+        <span class="badge">Método BioGen Oficial</span>
+      </div>
+      <div>
+        <span style="font-size: 13px; color: var(--text-muted);">Colinas de San Jerónimo 11 · Monterrey</span>
+      </div>
+    </header>
+
+    <!-- Stage -->
+    <div class="explainer-stage">
+      <div class="scene-viewport">
+
+        <!-- Scene 1: The Problem -->
+        <div class="scene active" id="scene-0">
+          <div class="problem-box">
+            <div class="problem-icon">⚠️</div>
+            <div class="problem-title">La Falsa Promesa de los Clones de IA Caseros</div>
+            <div class="problem-desc">
+              Internet promete clones en 5 minutos desde tu laptop, pero la realidad son caras de plástico, ojos muertos y <strong>narices deformadas que ignoran cirugías previas</strong>. Además, ningún empresario tiene tiempo ni ganas de pelear con códigos y prompts.
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene 2: The Physical Studio Solution -->
+        <div class="scene" id="scene-1">
+          <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 24px; color: #fff;">
+            La Solución: <span style="color: var(--accent);">CLÓNATE EN CAPTOORA STUDIO</span>
+          </h2>
+          <div class="flow-chart">
+            
+            <div class="flow-step highlight">
+              <div class="step-num">1</div>
+              <div class="step-icon">🏛️</div>
+              <div class="step-name">Cita en Estudio</div>
+              <div class="step-desc">Set físico en San Jerónimo. Luces de cine y dirección pro.</div>
+            </div>
+
+            <div class="flow-arrow">&rarr;</div>
+
+            <div class="flow-step">
+              <div class="step-num">2</div>
+              <div class="step-icon">📸</div>
+              <div class="step-name">Escaneo 360°</div>
+              <div class="step-desc">Cámara real sin aberraciones. Frente, perfiles y torso.</div>
+            </div>
+
+            <div class="flow-arrow">&rarr;</div>
+
+            <div class="flow-step">
+              <div class="step-num">3</div>
+              <div class="step-icon">🎯</div>
+              <div class="step-name">Calibración Real</div>
+              <div class="step-desc">Nariz recta quirúrgica (2011) y sonrisa con dientes.</div>
+            </div>
+
+            <div class="flow-arrow">&rarr;</div>
+
+            <div class="flow-step">
+              <div class="step-num">4</div>
+              <div class="step-icon">⚖️</div>
+              <div class="step-name">Blindaje Legal</div>
+              <div class="step-desc">Consentimiento informado y ciberseguridad.</div>
+            </div>
+
+            <div class="flow-arrow">&rarr;</div>
+
+            <div class="flow-step">
+              <div class="step-num">5</div>
+              <div class="step-icon">⚡</div>
+              <div class="step-name">Clona tu Prime</div>
+              <div class="step-desc">Membresía mensual. Tu mejor versión activa.</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Scene 3: Biometric Lock -->
+        <div class="scene" id="scene-2">
+          <div class="biometric-split">
+            <img class="biometric-img" src="../../black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/02_perfil_lateral_oficial_aprobado.jpg" alt="Perfil Aprobado">
+            <div class="biometric-data">
+              <span class="biometric-badge">CANDADO BIOMÉTRICO AUDITADO</span>
+              <div class="biometric-title">Respeto Quirúrgico Absoluto</div>
+              <div class="check-item"><span>✓</span> <strong>Puente Nasal Recto:</strong> Respeto total de la rinoplastia de 2011.</div>
+              <div class="check-item"><span>✓</span> <strong>Cero Aberraciones:</strong> 0% curvatura dorsal, 0% caída aguileña ("cero Condorito").</div>
+              <div class="check-item"><span>✓</span> <strong>Sonrisa Real:</strong> Dientes frontales superiores visibles y naturales.</div>
+              <div class="check-item"><span>✓</span> <strong>Complexión:</strong> Fade pompadour delineado y físico atlético.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene 4: Legal Shield -->
+        <div class="scene" id="scene-3">
+          <h2 style="font-size: 26px; font-weight: 800; margin-bottom: 24px; color: #fff;">
+            Blindaje Jurídico & Ciberseguridad por un Abogado Especialista
+          </h2>
+          <div class="legal-grid">
+            <div class="legal-card">
+              <div style="font-size: 32px;">📑</div>
+              <h4>Consentimiento Expreso</h4>
+              <p>Autorización formal e informada para la vectorización 360° y clonación de patrones de voz.</p>
+            </div>
+            <div class="legal-card">
+              <div style="font-size: 32px;">🛡️</div>
+              <h4>Custodia Privada</h4>
+              <p>Tus datos biométricos no se venden ni entrenan modelos de IA públicos de terceros.</p>
+            </div>
+            <div class="legal-card">
+              <div style="font-size: 32px;">👑</div>
+              <h4>Titularidad del Cliente</h4>
+              <p>Tú conservas el 100% de la propiedad sobre tu imagen; Captoora es tu custodio técnico.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scene 5: Monthly Membership -->
+        <div class="scene" id="scene-4">
+          <div style="max-width: 750px;">
+            <div style="font-size: 48px; margin-bottom: 12px;">🏆</div>
+            <h2 style="font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px;">
+              Membresía Mensual: <span style="color: var(--accent);">CLONA TU PRIME</span>
+            </h2>
+            <p style="font-size: 16px; color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;">
+              Vienes cada mes al set de Colinas de San Jerónimo a tomarte tus fotos de control y registrar tu mejor momento físico y profesional. Tu Clon de IA evoluciona contigo y produce todo tu contenido sin que te desgastes frente a la cámara.
+            </p>
+            <div style="background: rgba(0, 255, 136, 0.1); border: 1px solid var(--accent); padding: 14px 24px; border-radius: 10px; display: inline-block;">
+              <strong style="color: var(--accent); font-size: 15px;">¡Y que nadie soporte! Tu Clon Digital Oficial en Captoora Studio.</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <div class="controls-bar">
+        <button class="play-btn" id="playBtn" onclick="togglePlay()">
+          <span id="playIcon">▶</span> <span id="playText">Iniciar Presentación 60FPS</span>
+        </button>
+
+        <div class="nav-beats">
+          <div class="beat-dot active" onclick="goToScene(0)"></div>
+          <div class="beat-dot" onclick="goToScene(1)"></div>
+          <div class="beat-dot" onclick="goToScene(2)"></div>
+          <div class="beat-dot" onclick="goToScene(3)"></div>
+          <div class="beat-dot" onclick="goToScene(4)"></div>
+        </div>
+
+        <button class="audio-btn" id="audioBtn" onclick="toggleAudio()">
+          <span id="audioIcon">🎵</span> <span id="audioText">Música Ambiental (ON)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Audio Element (Ambient Music, NO ROBOT VOICE) -->
+    <audio id="bgMusic" loop src="../../black_friday_bf01/audio/bf01_bed.wav"></audio>
+
+  </div>
+
+  <script>
+    let currentScene = 0;
+    const totalScenes = 5;
+    let isPlaying = false;
+    let timer = null;
+    let audioOn = false;
+
+    function goToScene(idx) {
+      document.querySelectorAll('.scene').forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+      document.querySelectorAll('.beat-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
+      currentScene = idx;
+    }
+
+    function nextScene() {
+      currentScene = (currentScene + 1) % totalScenes;
+      goToScene(currentScene);
+    }
+
+    function togglePlay() {
+      const playIcon = document.getElementById('playIcon');
+      const playText = document.getElementById('playText');
+      const bgMusic = document.getElementById('bgMusic');
+
+      if (isPlaying) {
+        clearInterval(timer);
+        isPlaying = false;
+        playIcon.textContent = '▶';
+        playText.textContent = 'Reanudar Presentación';
+      } else {
+        isPlaying = true;
+        playIcon.textContent = '⏸';
+        playText.textContent = 'Pausar';
+        
+        // Start background music at comfortable level
+        bgMusic.volume = 0.25;
+        bgMusic.play().catch(e => console.log('Autoplay audio policy:', e));
+        audioOn = true;
+        document.getElementById('audioText').textContent = 'Música Ambiental (ON)';
+
+        timer = setInterval(nextScene, 7000); // 7s por beat con animaciones fluidas
+      }
+    }
+
+    function toggleAudio() {
+      const bgMusic = document.getElementById('bgMusic');
+      const audioText = document.getElementById('audioText');
+      if (audioOn) {
+        bgMusic.pause();
+        audioOn = false;
+        audioText.textContent = 'Música Ambiental (OFF)';
+      } else {
+        bgMusic.volume = 0.25;
+        bgMusic.play().catch(e => console.log(e));
+        audioOn = true;
+        audioText.textContent = 'Música Ambiental (ON)';
+      }
+    }
+  </script>
+</body>
+</html>
