@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo Maestro de Fotografías de Referencia · Captoora BioGen</title>
+<style>
+  :root {
+    --bg: #07090e;
+    --card: #0f141d;
+    --card-hover: #151c28;
+    --border: #212836;
+    --accent: #00ff88;
+    --accent-glow: rgba(0, 255, 136, 0.25);
+    --neon-cyan: #00e5ff;
+    --neon-cyan-glow: rgba(0, 229, 255, 0.35);
+    --neon-amber: #f59e0b;
+    --danger: #ef4444;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 32px 20px; margin: 0; line-height: 1.5; }
+  .container { max-width: 1440px; margin: 0 auto; }
+
+  .badge-terminal {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  h1 { font-size: 28px; font-weight: 700; color: #fff; margin: 0 0 6px; letter-spacing: -0.01em; }
+  p.lead { color: var(--text-muted); font-size: 14px; margin: 0 0 24px; max-width: 960px; }
+
+  /* Top Navigation */
+  .nav-bar { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+  .nav-link {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .nav-link:hover { border-color: var(--neon-cyan); color: var(--neon-cyan); }
+  .nav-link.active { border-color: var(--accent); color: var(--accent); background: rgba(0,255,136,0.08); }
+
+  /* Filters */
+  .filters-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-btn:hover { border-color: var(--accent); color: #fff; }
+  .filter-btn.active {
+    background: rgba(0, 255, 136, 0.12);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .search-input {
+    margin-left: auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 12px;
+    min-width: 240px;
+  }
+  .search-input:focus { outline: none; border-color: var(--neon-cyan); }
+
+  /* Catalog Grid */
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .cat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .cat-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  .thumb-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #000;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .thumb-wrap:hover img { transform: scale(1.05); }
+
+  .card-body { padding: 10px 12px; display: flex; flex-direction: column; flex: 1; }
+  .card-status-row { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-bottom: 6px; }
+  
+  .badge {
+    font-family: monospace;
+    font-size: 9px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-approved { color: var(--accent); background: rgba(0, 255, 136, 0.12); border: 1px solid var(--accent); }
+  .badge-master { color: #000; background: var(--accent); font-weight: 800; }
+  .badge-foundation { color: var(--neon-cyan); background: rgba(0, 229, 255, 0.12); border: 1px solid var(--neon-cyan); }
+  .badge-gym { color: var(--neon-amber); background: rgba(245, 158, 11, 0.12); border: 1px solid var(--neon-amber); }
+  .badge-danger { color: #fff; background: var(--danger); font-weight: 800; }
+  
+  .badge-cat { font-family: monospace; font-size: 9px; color: var(--text-muted); text-transform: uppercase; }
+  .card-name { font-family: monospace; font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.35; margin-top: auto; }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal.open { display: flex; }
+  .modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="badge-terminal">
+      CAPTOORA BIOGEN · INVENTARIO TOTAL DE FOTOGRAFÍAS DE REFERENCIA
+    </div>
+    <h1>Catálogo Maestro de Referencias · Caso Chuy</h1>
+    <p class="lead">
+      Catálogo transparente de <strong>todas las fotografías de referencia</strong> utilizadas desde el inicio del proyecto: tus 8 nuevas elecciones en traje, la sesión completa en traje de Google Drive, registros casuales con polo negro, sesión de gimnasio/tatuajes, fotogramas 4K extraídos de video y la imagen puesta en cuarentena para no volver a usar jamás.
+    </p>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+      <a href="catalogo_fotografias_chuy.html" class="nav-link active">Catálogo Completo (138)</a>
+      <a href="hoja_de_contacto.html" class="nav-link">Hoja de Contacto 4K (Digital Foundation)</a>
+      <a href="index.html" class="nav-link">Hoja Maestra Glauber (Protocolo 20 Tomas)</a>
+    </div>
+
+    <!-- Filters & Search -->
+    <div class="filters-wrap">
+      <button class="filter-btn active" onclick="filterCat('all', this)">TODAS (138)</button>
+      <button class="filter-btn" onclick="filterCat('recortes_traje', this)">TUS 8 RECORTES EN TRAJE</button>
+      <button class="filter-btn" onclick="filterCat('influencer_stack', this)">SESIÓN TRAJE ESTUDIO (DRIVE)</button>
+      <button class="filter-btn" onclick="filterCat('video_muestras', this)">VIDEOS 4K IPHONE (12)</button>
+      <button class="filter-btn" onclick="filterCat('gym_tattoos', this)">FÍSICO / GYM / TATUAJES</button>
+      <button class="filter-btn" onclick="filterCat('cuarentena', this)">EN CUARENTENA / DESECHADAS (1)</button>
+      
+      <input type="text" class="search-input" id="searchBox" placeholder="Buscar por nombre (ej. DSC_0090, traje, espejo)..." oninput="doSearch()">
+    </div>
+  </header>
+
+  <!-- Grid -->
+  <div class="catalog-grid" id="catalogGrid">
+    
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_01_brazos_abiertos.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_01_brazos_abiertos.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_01_brazos_abiertos.jpg" alt="traje_sel_01_brazos_abiertos.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_01_brazos_abiertos.jpg">traje_sel_01_brazos_abiertos.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_02_busto_serio_neutro.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_02_busto_serio_neutro.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_02_busto_serio_neutro.jpg" alt="traje_sel_02_busto_serio_neutro.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_02_busto_serio_neutro.jpg">traje_sel_02_busto_serio_neutro.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_03_closeup_espejo.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_03_closeup_espejo.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_03_closeup_espejo.jpg" alt="traje_sel_03_closeup_espejo.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_03_closeup_espejo.jpg">traje_sel_03_closeup_espejo.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_04_introspectivo_34.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_04_introspectivo_34.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_04_introspectivo_34.jpg" alt="traje_sel_04_introspectivo_34.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_04_introspectivo_34.jpg">traje_sel_04_introspectivo_34.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_05_manos_bolsillos_perfil75.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_05_manos_bolsillos_perfil75.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_05_manos_bolsillos_perfil75.jpg" alt="traje_sel_05_manos_bolsillos_perfil75.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_05_manos_bolsillos_perfil75.jpg">traje_sel_05_manos_bolsillos_perfil75.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_06_sonrisa_frontal.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_06_sonrisa_frontal.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_06_sonrisa_frontal.jpg" alt="traje_sel_06_sonrisa_frontal.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_06_sonrisa_frontal.jpg">traje_sel_06_sonrisa_frontal.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_07_sonrisa_elegante.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_07_sonrisa_elegante.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_07_sonrisa_elegante.jpg" alt="traje_sel_07_sonrisa_elegante.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_07_sonrisa_elegante.jpg">traje_sel_07_sonrisa_elegante.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="recortes_traje" data-name="traje_sel_08_perfil_90_traje.jpg">
+      <div class="thumb-wrap" onclick="openModal('seleccion_traje_usuario/traje_sel_08_perfil_90_traje.jpg')">
+        <img src="catalogo/thumbs/th_recortes_traje_traje_sel_08_perfil_90_traje.jpg" alt="traje_sel_08_perfil_90_traje.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">TUS 8 RECORTES EN TRAJE</span>
+        </div>
+        <div class="card-name" title="traje_sel_08_perfil_90_traje.jpg">traje_sel_08_perfil_90_traje.jpg</div>
+        <div class="card-desc">Selección específica en traje formal realizada y recortada por ti.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="beach yo.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/BEACH YO.jpg')">
+        <img src="catalogo/thumbs/th_influencer_stack_BEACH YO.jpg" alt="BEACH YO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="BEACH YO.jpg">BEACH YO.jpg</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/Captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png')">
+        <img src="catalogo/thumbs/th_influencer_stack_Captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png" alt="Captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="Captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png">Captura de pantalla 2026-11-10 a la(s) 5.13.14 p.m..png</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0001.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0001.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0001.JPG" alt="DSC_0001.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-master">CANDADO MAESTRO</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0001.JPG">DSC_0001.JPG</div>
+        <div class="card-desc">Candado anatómico indiscutible</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0002.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0002.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0002.JPG" alt="DSC_0002.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0002.JPG">DSC_0002.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0003.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0003.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0003.JPG" alt="DSC_0003.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0003.JPG">DSC_0003.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0004.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0004.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0004.JPG" alt="DSC_0004.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0004.JPG">DSC_0004.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0005.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0005.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0005.JPG" alt="DSC_0005.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0005.JPG">DSC_0005.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0007.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0007.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0007.JPG" alt="DSC_0007.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0007.JPG">DSC_0007.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0008.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0008.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0008.JPG" alt="DSC_0008.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0008.JPG">DSC_0008.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0009.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0009.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0009.JPG" alt="DSC_0009.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0009.JPG">DSC_0009.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0010.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0010.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0010.JPG" alt="DSC_0010.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0010.JPG">DSC_0010.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0011.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0011.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0011.JPG" alt="DSC_0011.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0011.JPG">DSC_0011.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0048.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0048.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0048.JPG" alt="DSC_0048.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0048.JPG">DSC_0048.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0049.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0049.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0049.JPG" alt="DSC_0049.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0049.JPG">DSC_0049.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0050.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0050.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0050.JPG" alt="DSC_0050.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0050.JPG">DSC_0050.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0051.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0051.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0051.JPG" alt="DSC_0051.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0051.JPG">DSC_0051.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0052.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0052.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0052.JPG" alt="DSC_0052.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0052.JPG">DSC_0052.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0053.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0053.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0053.JPG" alt="DSC_0053.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0053.JPG">DSC_0053.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0054.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0054.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0054.JPG" alt="DSC_0054.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0054.JPG">DSC_0054.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0055.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0055.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0055.JPG" alt="DSC_0055.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0055.JPG">DSC_0055.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0056.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0056.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0056.JPG" alt="DSC_0056.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0056.JPG">DSC_0056.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0057.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0057.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0057.JPG" alt="DSC_0057.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-master">CANDADO MAESTRO</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0057.JPG">DSC_0057.JPG</div>
+        <div class="card-desc">Candado anatómico indiscutible</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0058.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0058.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0058.JPG" alt="DSC_0058.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0058.JPG">DSC_0058.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0059.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0059.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0059.JPG" alt="DSC_0059.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0059.JPG">DSC_0059.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0060.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0060.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0060.JPG" alt="DSC_0060.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0060.JPG">DSC_0060.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0061.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0061.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0061.JPG" alt="DSC_0061.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0061.JPG">DSC_0061.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0062.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0062.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0062.JPG" alt="DSC_0062.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0062.JPG">DSC_0062.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0063.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0063.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0063.JPG" alt="DSC_0063.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0063.JPG">DSC_0063.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0064.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0064.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0064.JPG" alt="DSC_0064.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0064.JPG">DSC_0064.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0065.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0065.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0065.JPG" alt="DSC_0065.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0065.JPG">DSC_0065.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0066.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0066.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0066.JPG" alt="DSC_0066.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0066.JPG">DSC_0066.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0067.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0067.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0067.JPG" alt="DSC_0067.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0067.JPG">DSC_0067.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0068.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0068.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0068.JPG" alt="DSC_0068.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0068.JPG">DSC_0068.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0069.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0069.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0069.JPG" alt="DSC_0069.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0069.JPG">DSC_0069.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0070.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0070.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0070.JPG" alt="DSC_0070.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0070.JPG">DSC_0070.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0071.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0071.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0071.JPG" alt="DSC_0071.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0071.JPG">DSC_0071.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0085.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0085.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0085.JPG" alt="DSC_0085.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0085.JPG">DSC_0085.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0086.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0086.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0086.JPG" alt="DSC_0086.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0086.JPG">DSC_0086.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0087.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0087.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0087.JPG" alt="DSC_0087.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0087.JPG">DSC_0087.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0088.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0088.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0088.JPG" alt="DSC_0088.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0088.JPG">DSC_0088.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0089.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0089.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0089.JPG" alt="DSC_0089.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0089.JPG">DSC_0089.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0090.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0090.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0090.JPG" alt="DSC_0090.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-master">CANDADO MAESTRO</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0090.JPG">DSC_0090.JPG</div>
+        <div class="card-desc">Candado anatómico indiscutible</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0091.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0091.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0091.JPG" alt="DSC_0091.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0091.JPG">DSC_0091.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0092.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0092.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0092.JPG" alt="DSC_0092.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0092.JPG">DSC_0092.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0093.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0093.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0093.JPG" alt="DSC_0093.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0093.JPG">DSC_0093.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0094.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0094.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0094.JPG" alt="DSC_0094.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0094.JPG">DSC_0094.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="dsc_0095.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/DSC_0095.JPG')">
+        <img src="catalogo/thumbs/th_influencer_stack_DSC_0095.JPG" alt="DSC_0095.JPG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="DSC_0095.JPG">DSC_0095.JPG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="hombre reflexivo en oficina panorámica-1.png">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/Hombre reflexivo en oficina panorámica-1.png')">
+        <img src="catalogo/thumbs/th_influencer_stack_Hombre reflexivo en oficina panorámica-1.png" alt="Hombre reflexivo en oficina panorámica-1.png" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="Hombre reflexivo en oficina panorámica-1.png">Hombre reflexivo en oficina panorámica-1.png</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="hombre relajado con café y montañas-2.png">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/Hombre relajado con café y montañas-2.png')">
+        <img src="catalogo/thumbs/th_influencer_stack_Hombre relajado con café y montañas-2.png" alt="Hombre relajado con café y montañas-2.png" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="Hombre relajado con café y montañas-2.png">Hombre relajado con café y montañas-2.png</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="img_5613.png">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/IMG_5613.PNG')">
+        <img src="catalogo/thumbs/th_influencer_stack_IMG_5613.PNG" alt="IMG_5613.PNG" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="IMG_5613.PNG">IMG_5613.PNG</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="retrato profesional con vista panorámica-3.png">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/Retrato profesional con vista panorámica-3.png')">
+        <img src="catalogo/thumbs/th_influencer_stack_Retrato profesional con vista panorámica-3.png" alt="Retrato profesional con vista panorámica-3.png" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="Retrato profesional con vista panorámica-3.png">Retrato profesional con vista panorámica-3.png</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="influencer_stack" data-name="yo mero.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../00_referencia_maestra/influencer_stack/MY INFLUENCER STACK CIBERSECURITY LAWYER/YO MERO.jpg')">
+        <img src="catalogo/thumbs/th_influencer_stack_YO MERO.jpg" alt="YO MERO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-approved">APROBADA</span>
+          <span class="badge-cat">SESIÓN TRAJE ESTUDIO (DRIVE)</span>
+        </div>
+        <div class="card-name" title="YO MERO.jpg">YO MERO.jpg</div>
+        <div class="card-desc">Fotografía DSLR de alta resolución en traje.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="01_frontal_neutro_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/01_frontal_neutro_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_01_frontal_neutro_after_foundation.jpg" alt="01_frontal_neutro_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="01_frontal_neutro_after_foundation.jpg">01_frontal_neutro_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="01_frontal_neutro_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/01_frontal_neutro_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_01_frontal_neutro_before.jpg" alt="01_frontal_neutro_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="01_frontal_neutro_before.jpg">01_frontal_neutro_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="02_tres_cuartos_45_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/02_tres_cuartos_45_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_02_tres_cuartos_45_after_foundation.jpg" alt="02_tres_cuartos_45_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="02_tres_cuartos_45_after_foundation.jpg">02_tres_cuartos_45_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="02_tres_cuartos_45_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/02_tres_cuartos_45_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_02_tres_cuartos_45_before.jpg" alt="02_tres_cuartos_45_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="02_tres_cuartos_45_before.jpg">02_tres_cuartos_45_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="03_perfil_90_dorso_recto_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/03_perfil_90_dorso_recto_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_03_perfil_90_dorso_recto_after_foundation.jpg" alt="03_perfil_90_dorso_recto_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="03_perfil_90_dorso_recto_after_foundation.jpg">03_perfil_90_dorso_recto_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="03_perfil_90_dorso_recto_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/03_perfil_90_dorso_recto_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_03_perfil_90_dorso_recto_before.jpg" alt="03_perfil_90_dorso_recto_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="03_perfil_90_dorso_recto_before.jpg">03_perfil_90_dorso_recto_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="04_sonrisa_dientes_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/04_sonrisa_dientes_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_04_sonrisa_dientes_after_foundation.jpg" alt="04_sonrisa_dientes_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="04_sonrisa_dientes_after_foundation.jpg">04_sonrisa_dientes_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="04_sonrisa_dientes_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/04_sonrisa_dientes_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_04_sonrisa_dientes_before.jpg" alt="04_sonrisa_dientes_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="04_sonrisa_dientes_before.jpg">04_sonrisa_dientes_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="05_gesto_activo_emocion_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/05_gesto_activo_emocion_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_05_gesto_activo_emocion_after_foundation.jpg" alt="05_gesto_activo_emocion_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="05_gesto_activo_emocion_after_foundation.jpg">05_gesto_activo_emocion_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="05_gesto_activo_emocion_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/05_gesto_activo_emocion_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_05_gesto_activo_emocion_before.jpg" alt="05_gesto_activo_emocion_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="05_gesto_activo_emocion_before.jpg">05_gesto_activo_emocion_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="06_micro_expresion_ojo_after_foundation.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/06_micro_expresion_ojo_after_foundation.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_06_micro_expresion_ojo_after_foundation.jpg" alt="06_micro_expresion_ojo_after_foundation.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="06_micro_expresion_ojo_after_foundation.jpg">06_micro_expresion_ojo_after_foundation.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="video_muestras" data-name="06_micro_expresion_ojo_before.jpg">
+      <div class="thumb-wrap" onclick="openModal('hoja_contacto/muestras/06_micro_expresion_ojo_before.jpg')">
+        <img src="catalogo/thumbs/th_video_muestras_06_micro_expresion_ojo_before.jpg" alt="06_micro_expresion_ojo_before.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-foundation">DIGITAL FOUNDATION</span>
+          <span class="badge-cat">VIDEOS 4K IPHONE 17 PRO</span>
+        </div>
+        <div class="card-name" title="06_micro_expresion_ojo_before.jpg">06_micro_expresion_ojo_before.jpg</div>
+        <div class="card-desc">Fotograma 4K de video con prueba de suavizado de tono sin pocitos.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="16_dsc01880_tatuaje_hombro_rosa_bolsa_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/16_DSC01880_TATUAJE_HOMBRO_ROSA_BOLSA_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_16_DSC01880_TATUAJE_HOMBRO_ROSA_BOLSA_PRO.jpg" alt="16_DSC01880_TATUAJE_HOMBRO_ROSA_BOLSA_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="16_DSC01880_TATUAJE_HOMBRO_ROSA_BOLSA_PRO.jpg">16_DSC01880_TATUAJE_HOMBRO_ROSA_BOLSA_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="17_dsc01919_tatuaje_hombro_rosa_paletas_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/17_DSC01919_TATUAJE_HOMBRO_ROSA_PALETAS_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_17_DSC01919_TATUAJE_HOMBRO_ROSA_PALETAS_PRO.jpg" alt="17_DSC01919_TATUAJE_HOMBRO_ROSA_PALETAS_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="17_DSC01919_TATUAJE_HOMBRO_ROSA_PALETAS_PRO.jpg">17_DSC01919_TATUAJE_HOMBRO_ROSA_PALETAS_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="18_dsc01973_tatuaje_hombro_rosa_copa_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg" alt="18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg">18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="19_dsc01982_tatuaje_hombro_rosa_editorial_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/19_DSC01982_TATUAJE_HOMBRO_ROSA_EDITORIAL_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_19_DSC01982_TATUAJE_HOMBRO_ROSA_EDITORIAL_PRO.jpg" alt="19_DSC01982_TATUAJE_HOMBRO_ROSA_EDITORIAL_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="19_DSC01982_TATUAJE_HOMBRO_ROSA_EDITORIAL_PRO.jpg">19_DSC01982_TATUAJE_HOMBRO_ROSA_EDITORIAL_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="20_dsc01987_tatuaje_hombro_rosa_periodico_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/20_DSC01987_TATUAJE_HOMBRO_ROSA_PERIODICO_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_20_DSC01987_TATUAJE_HOMBRO_ROSA_PERIODICO_PRO.jpg" alt="20_DSC01987_TATUAJE_HOMBRO_ROSA_PERIODICO_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="20_DSC01987_TATUAJE_HOMBRO_ROSA_PERIODICO_PRO.jpg">20_DSC01987_TATUAJE_HOMBRO_ROSA_PERIODICO_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="25_dsc00408_mancuerna_negro_espejo_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/25_DSC00408_MANCUERNA_NEGRO_ESPEJO_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_25_DSC00408_MANCUERNA_NEGRO_ESPEJO_PRO.jpg" alt="25_DSC00408_MANCUERNA_NEGRO_ESPEJO_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="25_DSC00408_MANCUERNA_NEGRO_ESPEJO_PRO.jpg">25_DSC00408_MANCUERNA_NEGRO_ESPEJO_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="26_dsc00415_mancuerna_negro_copa_pro.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/26_DSC00415_MANCUERNA_NEGRO_COPA_PRO.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_26_DSC00415_MANCUERNA_NEGRO_COPA_PRO.jpg" alt="26_DSC00415_MANCUERNA_NEGRO_COPA_PRO.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="26_DSC00415_MANCUERNA_NEGRO_COPA_PRO.jpg">26_DSC00415_MANCUERNA_NEGRO_COPA_PRO.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00001_negro_v05.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00001_negro_v05.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00001_negro_v05.jpg" alt="DSC00001_negro_v05.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00001_negro_v05.jpg">DSC00001_negro_v05.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00002_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00002_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00002_v02.jpg" alt="DSC00002_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00002_v02.jpg">DSC00002_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00003_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00003_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00003_v02.jpg" alt="DSC00003_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00003_v02.jpg">DSC00003_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00009_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00009_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00009_v02.jpg" alt="DSC00009_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00009_v02.jpg">DSC00009_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00017_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00017_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00017_v02.jpg" alt="DSC00017_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00017_v02.jpg">DSC00017_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00019_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00019_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00019_v02.jpg" alt="DSC00019_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00019_v02.jpg">DSC00019_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00623_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00623_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00623_v02.jpg" alt="DSC00623_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00623_v02.jpg">DSC00623_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00628_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00628_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00628_v02.jpg" alt="DSC00628_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00628_v02.jpg">DSC00628_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00629_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00629_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00629_v02.jpg" alt="DSC00629_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00629_v02.jpg">DSC00629_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00634_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00634_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00634_v02.jpg" alt="DSC00634_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00634_v02.jpg">DSC00634_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00681_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00681_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00681_v02.jpg" alt="DSC00681_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00681_v02.jpg">DSC00681_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00688_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00688_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00688_v02.jpg" alt="DSC00688_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00688_v02.jpg">DSC00688_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00752_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00752_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00752_v02.jpg" alt="DSC00752_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00752_v02.jpg">DSC00752_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00769_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00769_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00769_v02.jpg" alt="DSC00769_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00769_v02.jpg">DSC00769_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00771_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00771_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00771_v02.jpg" alt="DSC00771_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00771_v02.jpg">DSC00771_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00893_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00893_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00893_v02.jpg" alt="DSC00893_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00893_v02.jpg">DSC00893_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00896_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00896_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00896_v02.jpg" alt="DSC00896_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00896_v02.jpg">DSC00896_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00904_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00904_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00904_v02.jpg" alt="DSC00904_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00904_v02.jpg">DSC00904_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00910_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00910_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00910_v02.jpg" alt="DSC00910_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00910_v02.jpg">DSC00910_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00913_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00913_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00913_v02.jpg" alt="DSC00913_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00913_v02.jpg">DSC00913_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00919_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00919_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00919_v02.jpg" alt="DSC00919_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00919_v02.jpg">DSC00919_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00920_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00920_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00920_v02.jpg" alt="DSC00920_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00920_v02.jpg">DSC00920_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc00925_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC00925_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC00925_v02.jpg" alt="DSC00925_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC00925_v02.jpg">DSC00925_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc01812_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC01812_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC01812_v02.jpg" alt="DSC01812_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC01812_v02.jpg">DSC01812_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc01817_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC01817_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC01817_v02.jpg" alt="DSC01817_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC01817_v02.jpg">DSC01817_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02117_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02117_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02117_v02.jpg" alt="DSC02117_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02117_v02.jpg">DSC02117_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02118_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02118_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02118_v02.jpg" alt="DSC02118_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02118_v02.jpg">DSC02118_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02119_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02119_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02119_v02.jpg" alt="DSC02119_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02119_v02.jpg">DSC02119_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02126_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02126_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02126_v02.jpg" alt="DSC02126_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02126_v02.jpg">DSC02126_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02134_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02134_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02134_v02.jpg" alt="DSC02134_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02134_v02.jpg">DSC02134_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02136_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02136_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02136_v02.jpg" alt="DSC02136_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02136_v02.jpg">DSC02136_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02141_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02141_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02141_v02.jpg" alt="DSC02141_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02141_v02.jpg">DSC02141_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02146_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02146_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02146_v02.jpg" alt="DSC02146_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02146_v02.jpg">DSC02146_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02172_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02172_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02172_v02.jpg" alt="DSC02172_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02172_v02.jpg">DSC02172_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02209_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02209_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02209_v02.jpg" alt="DSC02209_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02209_v02.jpg">DSC02209_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02260_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02260_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02260_v02.jpg" alt="DSC02260_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02260_v02.jpg">DSC02260_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02267_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02267_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02267_v02.jpg" alt="DSC02267_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02267_v02.jpg">DSC02267_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02279_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02279_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02279_v02.jpg" alt="DSC02279_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02279_v02.jpg">DSC02279_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02280_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02280_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02280_v02.jpg" alt="DSC02280_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02280_v02.jpg">DSC02280_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02281_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02281_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02281_v02.jpg" alt="DSC02281_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02281_v02.jpg">DSC02281_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02285_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02285_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02285_v02.jpg" alt="DSC02285_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02285_v02.jpg">DSC02285_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02288_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02288_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02288_v02.jpg" alt="DSC02288_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02288_v02.jpg">DSC02288_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02291_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02291_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02291_v02.jpg" alt="DSC02291_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02291_v02.jpg">DSC02291_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02292_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02292_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02292_v02.jpg" alt="DSC02292_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02292_v02.jpg">DSC02292_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02296_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02296_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02296_v02.jpg" alt="DSC02296_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02296_v02.jpg">DSC02296_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02297_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02297_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02297_v02.jpg" alt="DSC02297_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02297_v02.jpg">DSC02297_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02309_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02309_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02309_v02.jpg" alt="DSC02309_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02309_v02.jpg">DSC02309_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02314_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02314_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02314_v02.jpg" alt="DSC02314_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02314_v02.jpg">DSC02314_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02317_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02317_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02317_v02.jpg" alt="DSC02317_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02317_v02.jpg">DSC02317_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02324_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02324_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02324_v02.jpg" alt="DSC02324_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02324_v02.jpg">DSC02324_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02326_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02326_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02326_v02.jpg" alt="DSC02326_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02326_v02.jpg">DSC02326_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02340_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02340_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02340_v02.jpg" alt="DSC02340_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02340_v02.jpg">DSC02340_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02352_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02352_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02352_v02.jpg" alt="DSC02352_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02352_v02.jpg">DSC02352_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02354_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02354_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02354_v02.jpg" alt="DSC02354_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02354_v02.jpg">DSC02354_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02358_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02358_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02358_v02.jpg" alt="DSC02358_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02358_v02.jpg">DSC02358_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc02363_v02.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC02363_v02.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC02363_v02.jpg" alt="DSC02363_v02.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC02363_v02.jpg">DSC02363_v02.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc08258_bebe_v01.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC08258_bebe_v01.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC08258_bebe_v01.jpg" alt="DSC08258_bebe_v01.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC08258_bebe_v01.jpg">DSC08258_bebe_v01.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="gym_tattoos" data-name="dsc08295_bebe_v01.jpg">
+      <div class="thumb-wrap" onclick="openModal('/Users/imac/Downloads/JPG/DSC08295_bebe_v01.jpg')">
+        <img src="catalogo/thumbs/th_gym_tattoos_DSC08295_bebe_v01.jpg" alt="DSC08295_bebe_v01.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-gym">APROBADA C-05</span>
+          <span class="badge-cat">FÍSICO / GYM / TATUAJES</span>
+        </div>
+        <div class="card-name" title="DSC08295_bebe_v01.jpg">DSC08295_bebe_v01.jpg</div>
+        <div class="card-desc">Registro de progreso muscular, deltoides y tatuaje de rosa en hombro.</div>
+      </div>
+    </div>
+    
+
+    <div class="cat-card" data-cat="cuarentena" data-name="02_bucle_3_4_izq_desechada_nariz_deformada.jpg">
+      <div class="thumb-wrap" onclick="openModal('../../06_angulos_base_img/cuarentena/02_bucle_3_4_izq_DESECHADA_NARIZ_DEFORMADA.jpg')">
+        <img src="catalogo/thumbs/th_cuarentena_02_bucle_3_4_izq_DESECHADA_NARIZ_DEFORMADA.jpg" alt="02_bucle_3_4_izq_DESECHADA_NARIZ_DEFORMADA.jpg" loading="lazy">
+      </div>
+      <div class="card-body">
+        <div class="card-status-row">
+          <span class="badge badge-danger">QUITAR / CUARENTENA</span>
+          <span class="badge-cat">EN CUARENTENA / DESECHADA</span>
+        </div>
+        <div class="card-name" title="02_bucle_3_4_izq_DESECHADA_NARIZ_DEFORMADA.jpg">02_bucle_3_4_izq_DESECHADA_NARIZ_DEFORMADA.jpg</div>
+        <div class="card-desc">Alucinación de IA con nariz aguileña/tucán deforme. Bloqueada permanentemente.</div>
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<!-- Modal para Zoom -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img id="modal-img" src="" alt="Zoom Image">
+</div>
+
+<script>
+  let currentCat = all;
+
+  function filterCat(cat, btn) {
+    currentCat = cat;
+    document.querySelectorAll(.filter-btn).forEach(b => b.classList.remove(active));
+    btn.classList.add(active);
+    applyFilters();
+  }
+
+  function doSearch() {
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const q = document.getElementById(searchBox).value.toLowerCase().trim();
+    const cards = document.querySelectorAll(.cat-card);
+    
+    cards.forEach(c => {
+      const cCat = c.getAttribute(data-cat);
+      const cName = c.getAttribute(data-name);
+      
+      const matchesCat = (currentCat === all || cCat === currentCat);
+      const matchesSearch = (!q || cName.includes(q));
+      
+      if (matchesCat && matchesSearch) {
+        c.style.display = flex;
+      } else {
+        c.style.display = none;
+      }
+    });
+  }
+
+  function openModal(src) {
+    const modal = document.getElementById(modal);
+    const modalImg = document.getElementById(modal-img);
+    modalImg.src = src;
+    modal.classList.add(open);
+  }
+
+  function closeModal() {
+    document.getElementById(modal).classList.remove(open);
+  }
+</script>
+
+</body>
+</html>
