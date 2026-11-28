@@ -34,5 +34,14 @@ videos/
 node_modules/
 .DS_Store
 tmp/
+# Video and Audio Binaries (SD/Nube, no repo)
+*.mp4
+*.wav
+*.mp3
+*.m4a
+*.mov
+proyectos/waters-serie/black_friday_bf01/audio/
+proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/influencer_stack/
+
 proyectos/waters-3d-studio/public/avatar/*.mp4
 proyectos/waters-serie/black_friday_bf01/biblioteca_motores/**/*.mp4
