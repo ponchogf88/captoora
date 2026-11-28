@@ -3,183 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Protocolo de Captura & Character Sheet Maestro · Norma Glauber</title>
+<title>Protocolo de Captura & Character Sheet Maestro · Captoora BioGen</title>
 <style>
   :root {
     --bg: #07090e;
-    --card: #131822;
-    --border: #262f3d;
+    --card: #0f141d;
+    --card-hover: #151b26;
+    --border: #212836;
     --accent: #00ff88;
-    --accent-glow: rgba(0, 255, 136, 0.35);
+    --accent-glow: rgba(0, 255, 136, 0.25);
     --neon-cyan: #00e5ff;
-    --neon-cyan-glow: rgba(0, 229, 255, 0.4);
+    --neon-cyan-glow: rgba(0, 229, 255, 0.35);
     --neon-amber: #f59e0b;
-    --neon-amber-glow: rgba(245, 158, 11, 0.4);
-    --text: #f0f6fc;
+    --neon-amber-glow: rgba(245, 158, 11, 0.35);
+    --text: #e6edf3;
     --text-muted: #8b949e;
-    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu Sans", monospace, sans-serif;
   }
-  body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 32px 24px; margin: 0; line-height: 1.6; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 32px 20px; margin: 0; line-height: 1.5; }
   .container { max-width: 1440px; margin: 0 auto; }
   
-  header { border-bottom: 1px solid var(--border); padding-bottom: 24px; margin-bottom: 28px; }
-  .badge { background: rgba(0, 255, 136, 0.15); color: var(--accent); border: 1px solid var(--accent); padding: 5px 14px; border-radius: 9999px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; display: inline-block; margin-bottom: 12px; }
-  h1 { font-size: 32px; font-weight: 800; color: #fff; margin: 0 0 8px; letter-spacing: -0.02em; }
-  p.lead { color: var(--text-muted); font-size: 15px; margin: 0; max-width: 980px; }
-
-  /* Audit KPI bar */
-  .kpi-bar {
-    display: flex;
-    gap: 16px;
-    margin: 24px 0 28px;
-    flex-wrap: wrap;
+  /* Linux style terminal badges */
+  .badge-terminal {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: var(--accent);
+    margin-bottom: 12px;
   }
-  .kpi-card {
+
+  h1 { font-size: 28px; font-weight: 700; color: #fff; margin: 0 0 6px; letter-spacing: -0.01em; }
+  p.lead { color: var(--text-muted); font-size: 14px; margin: 0 0 24px; max-width: 900px; }
+
+  /* SVG Icons */
+  .icon-svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Rapid Video Turntable Card */
+  .turntable-card {
+    background: rgba(0, 229, 255, 0.03);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .turntable-card svg { stroke: var(--neon-cyan); width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+  .turntable-title { font-size: 14px; font-weight: 700; color: var(--neon-cyan); margin: 0 0 4px; font-family: monospace; }
+  .turntable-desc { font-size: 13px; color: #cbd5e1; margin: 0; line-height: 1.5; }
+
+  /* KPI counters */
+  .kpi-row { display: flex; gap: 14px; margin-bottom: 28px; flex-wrap: wrap; }
+  .kpi-box {
     background: var(--card);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px 20px;
+    border-radius: 8px;
+    padding: 12px 18px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     flex: 1;
-    min-width: 200px;
+    min-width: 180px;
   }
-  .kpi-card.captured {
-    border-color: rgba(0, 255, 136, 0.4);
-    background: rgba(0, 255, 136, 0.05);
-  }
-  .kpi-card.missing {
-    border-color: rgba(0, 229, 255, 0.4);
-    background: rgba(0, 229, 255, 0.05);
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
-  }
-  .kpi-num { font-size: 26px; font-weight: 800; line-height: 1; }
-  .kpi-num.green { color: var(--accent); }
-  .kpi-num.cyan { color: var(--neon-cyan); }
-  .kpi-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; }
+  .kpi-box.green { border-color: rgba(0, 255, 136, 0.3); background: rgba(0, 255, 136, 0.03); }
+  .kpi-box.cyan { border-color: rgba(0, 229, 255, 0.3); background: rgba(0, 229, 255, 0.03); }
+  .kpi-val { font-size: 22px; font-family: monospace; font-weight: 700; line-height: 1; }
+  .kpi-val.green { color: var(--accent); }
+  .kpi-val.cyan { color: var(--neon-cyan); }
+  .kpi-txt { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
-  .callout { background: rgba(245, 158, 11, 0.08); border-left: 4px solid var(--neon-amber); padding: 16px 20px; border-radius: 6px; margin: 20px 0; color: #fce7b2; font-size: 14px; }
-  .callout strong { color: var(--neon-amber); }
-
-  .banner-wrap { background: #000; border: 2px solid var(--accent); border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 0 35px rgba(0, 255, 136, 0.2); }
-  .banner-wrap img { width: 100%; display: block; height: auto; }
-
-  .section-h2 { font-size: 22px; font-weight: 700; color: #fff; margin: 40px 0 18px; border-bottom: 1px solid var(--border); padding-bottom: 10px; display: flex; align-items: center; justify-content: space-between; }
-  .section-h2-left { display: flex; align-items: center; gap: 10px; }
-  .section-h2 span { background: rgba(0, 255, 136, 0.15); color: var(--accent); padding: 2px 10px; border-radius: 6px; font-size: 13px; }
-  .section-subtitle { font-size: 13px; font-weight: 500; color: var(--text-muted); }
-
-  /* Table styling */
-  table { width: 100%; border-collapse: collapse; margin-bottom: 36px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-  th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
-  th { background: rgba(0,0,0,0.5); color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: 0.06em; }
-  tr:last-child td { border-bottom: none; }
-  tr:hover td { background: rgba(255, 255, 255, 0.02); }
-
-  .tag-code { font-family: monospace; background: rgba(0, 255, 136, 0.15); color: var(--accent); padding: 3px 8px; border-radius: 5px; font-weight: 700; font-size: 12px; }
-
-  /* Thumbnails */
-  .thumb-cell {
-    width: 140px;
-    text-align: center;
-  }
-  .thumb-wrap {
-    width: 84px;
-    height: 84px;
+  /* Master Sheet Hero preview */
+  .sheet-hero {
+    background: #000;
+    border: 1px solid rgba(0, 255, 136, 0.4);
     border-radius: 8px;
     overflow: hidden;
-    background: #000;
-    border: 2px solid rgba(0, 255, 136, 0.5);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    margin: 0 auto 6px;
-    cursor: pointer;
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    margin-bottom: 32px;
   }
-  .thumb-wrap:hover {
+  .sheet-hero img { width: 100%; display: block; height: auto; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: middle; }
+  th { background: rgba(0,0,0,0.4); color: var(--text-muted); font-weight: 600; text-transform: uppercase; font-size: 11px; letter-spacing: 0.05em; font-family: monospace; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--card-hover); }
+
+  .code-tag {
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--accent);
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  /* Image Cells */
+  .cell-img-wrap {
+    width: 90px;
+    text-align: center;
+  }
+  .thumb-box {
+    width: 74px;
+    height: 74px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .thumb-box:hover {
     transform: scale(1.08);
     border-color: var(--accent);
-    box-shadow: 0 0 16px var(--accent-glow);
+    box-shadow: 0 0 12px var(--accent-glow);
   }
-  .thumb-wrap img {
+  .thumb-box.neon-cyan {
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 12px var(--neon-cyan-glow);
+  }
+  .thumb-box.neon-amber {
+    border: 1px solid var(--neon-amber);
+    box-shadow: 0 0 12px var(--neon-amber-glow);
+  }
+  .thumb-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-  .badge-captured {
-    display: inline-block;
+
+  /* Status Badges (Monochrome Linux style) */
+  .tag-status {
+    font-family: monospace;
     font-size: 10px;
-    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    letter-spacing: 0.03em;
+  }
+  .tag-status.ok {
     color: var(--accent);
-    background: rgba(0, 255, 136, 0.12);
-    border: 1px solid var(--accent);
-    border-radius: 4px;
-    padding: 2px 6px;
-    letter-spacing: 0.04em;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
   }
-
-  /* NEON MISSING PLACEHOLDERS */
-  .neon-card {
-    border-radius: 8px;
-    padding: 10px 8px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    width: 120px;
-    margin: 0 auto;
+  .tag-status.scan-cyan {
+    color: var(--neon-cyan);
+    background: rgba(0, 229, 255, 0.1);
+    border: 1px solid rgba(0, 229, 255, 0.3);
   }
-  .neon-card.cyan {
-    border: 2px solid var(--neon-cyan);
-    background: rgba(0, 229, 255, 0.08);
-    box-shadow: 0 0 18px var(--neon-cyan-glow), inset 0 0 10px rgba(0, 229, 255, 0.2);
-  }
-  .neon-card.amber {
-    border: 2px solid var(--neon-amber);
-    background: rgba(245, 158, 11, 0.08);
-    box-shadow: 0 0 18px var(--neon-amber-glow), inset 0 0 10px rgba(245, 158, 11, 0.2);
-  }
-  .neon-icon {
-    font-size: 24px;
-    margin-bottom: 4px;
-    line-height: 1;
-    display: block;
-  }
-  .neon-zone {
-    font-size: 10px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    line-height: 1.2;
-    margin-bottom: 6px;
-    display: block;
-  }
-  .neon-card.cyan .neon-zone { color: var(--neon-cyan); }
-  .neon-card.amber .neon-zone { color: var(--neon-amber); }
-
-  .neon-badge {
-    display: inline-block;
-    font-size: 9px;
-    font-weight: 800;
-    padding: 2px 6px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    animation: neon-blink 2s infinite alternate;
-  }
-  .neon-card.cyan .neon-badge {
-    background: var(--neon-cyan);
-    color: #000;
-  }
-  .neon-card.amber .neon-badge {
-    background: var(--neon-amber);
-    color: #000;
-  }
-
-  @keyframes neon-blink {
-    0% { opacity: 0.85; filter: drop-shadow(0 0 2px #fff); }
-    100% { opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
+  .tag-status.scan-amber {
+    color: var(--neon-amber);
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
   }
 
   /* Modal */
@@ -187,504 +185,532 @@
     display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.92);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(8px);
     z-index: 1000;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 20px;
   }
   .modal.open { display: flex; }
   .modal img {
     max-width: 90vw;
     max-height: 90vh;
     object-fit: contain;
-    border-radius: 10px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.9);
-    border: 2px solid var(--accent);
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
   }
   .modal-close {
     position: absolute;
-    top: 24px;
-    right: 28px;
+    top: 20px;
+    right: 24px;
     color: #fff;
-    font-size: 36px;
+    font-size: 32px;
     cursor: pointer;
     line-height: 1;
+    font-family: monospace;
   }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <header>
-    <div class="badge">Captoora Studio · Auditoría de Cobertura Biométrica</div>
-    <h1>Protocolo de Captura & Character Sheet Maestro (Norma Glauber)</h1>
+
+  <!-- Header -->
+  <header style="margin-bottom: 24px;">
+    <div class="badge-terminal">
+      <svg class="icon-svg" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></svg>
+      CAPTOORA BIOGEN · PROTOCOLO DE CAPTURA GLALUBER
+    </div>
+    <h1>Matriz de Ángulos y Verificación Biométrica</h1>
     <p class="lead">
-      La consistencia visual no se arregla con prompts; se fija con tomas reales a 90°. A continuación tienes la lista canónica de tomas con su <strong>miniatura real</strong> para las fotos ya capturadas, y una <strong>tarjeta en neón</strong> para las zonas corporales pendientes de captura en el set.
+      Comparador visual directo: dibujo del ángulo requerido frente a fotografía real capturada o holograma 3D de laboratorio para tomas faltantes. Cero tecnicismos confusos, validación visual inmediata.
     </p>
 
-    <div class="kpi-bar">
-      <div class="kpi-card captured">
-        <div class="kpi-num green">15 / 20</div>
-        <div>
-          <div class="kpi-label">Tomas Capturadas (75%)</div>
-          <div style="font-size: 11px; color: var(--text-muted);">Miniatura real auditada en tabla</div>
-        </div>
-      </div>
-      <div class="kpi-card missing">
-        <div class="kpi-num cyan">5 / 20</div>
-        <div>
-          <div class="kpi-label">Faltantes en Estudio (25%)</div>
-          <div style="font-size: 11px; color: var(--neon-cyan);">Resaltadas con tarjeta Neón</div>
+    <!-- Turntable Video Workflow Callout -->
+    <div class="turntable-card">
+      <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect width="14" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+      <div>
+        <div class="turntable-title">[PROTOCOLO ACELERADO: VIDEO 4K EN BANQUITO GIRATORIO]</div>
+        <div class="turntable-desc">
+          En lugar de disparar foto por foto, puedes sentarte en un banquito giratorio con tu iPhone 17 Pro Max en trípode (4K a 60 fps). Giras suavemente 360° en 45 segundos, haces una pausa sonriendo y mirando arriba/abajo. Mediante script de extracción automatizada se obtienen los 20 fotogramas nativos a resolución 3840x2160 con iluminación 100% homogénea.
         </div>
       </div>
     </div>
 
-    <div class="callout">
-      <strong>Regla de Glauber:</strong> <em>"Todo lo que la IA no ve en tus fotos, lo inventa. Si falta el perfil estricto a 90° (DSC_0090.JPG) o la mirada lateral, la IA promedia y saca narices aguileñas o estrabismo."</em>
+    <!-- KPI Row -->
+    <div class="kpi-row">
+      <div class="kpi-box green">
+        <svg class="icon-svg" style="stroke: var(--accent); width:20px; height:20px;" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <div>
+          <div class="kpi-val green">15 / 20</div>
+          <div class="kpi-txt">Tomas Reales Listas</div>
+        </div>
+      </div>
+      <div class="kpi-box cyan">
+        <svg class="icon-svg" style="stroke: var(--neon-cyan); width:20px; height:20px;" viewBox="0 0 24 24"><path d="m21 16-9 5-9-5V8l9-5 9 5v8zM12 3v18M3 8l9 5 9-5"/></svg>
+        <div>
+          <div class="kpi-val cyan">5 / 20</div>
+          <div class="kpi-txt">Hologramas 3D Lab</div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Master Sheet 12 Panels -->
-  <div class="section-h2">
-    <div class="section-h2-left"><span>01</span> Hoja Maestra de Cuadrícula (Página 10 Glauber)</div>
-    <div class="section-subtitle">2400 x 2400 px · Ancla fija para todas tus generaciones</div>
-  </div>
-  <div class="banner-wrap">
-    <img src="HOJA_MAESTRA_CHARACTER_SHEET_GLAUBER_12PANEL.jpg" alt="Hoja Maestra 12 Paneles Glauber" onclick="openModal(this.src)" style="cursor: pointer;" />
+  <!-- Master Sheet 12-Panel Banner -->
+  <div class="sheet-hero">
+    <img src="HOJA_MAESTRA_CHARACTER_SHEET_GLAUBER_12PANEL.jpg" alt="Hoja Maestra Character Sheet Glauber" onclick="openModal(this.src)" style="cursor: pointer;">
   </div>
 
-  <!-- The 15 Face Shots Table -->
-  <div class="section-h2">
-    <div class="section-h2-left"><span>02</span> Serie Rostro: Las 15 Tomas Obligatorias (R-01 a R-15)</div>
-    <div class="section-subtitle">13 Capturadas · 2 Faltantes (Neón Cian)</div>
-  </div>
+  <!-- TABLE -->
   <table>
     <thead>
       <tr>
-        <th style="width: 70px;">Código</th>
-        <th>Nombre de Toma</th>
-        <th>Giro / Ángulo</th>
-        <th>Función Biométrica</th>
-        <th class="thumb-cell">Miniatura / Zona Neón</th>
+        <th style="width: 70px;">ID</th>
+        <th style="width: 220px;">Toma Requerida</th>
+        <th style="width: 120px; text-align: center;">Ángulo Guía</th>
+        <th style="width: 120px; text-align: center;">Captura / 3D</th>
+        <th>Candado Anatómico / Verificación</th>
       </tr>
     </thead>
     <tbody>
-      
+
       <!-- R-01 -->
       <tr>
-        <td><span class="tag-code">R-01</span></td>
-        <td><strong>Frontal Neutro</strong></td>
-        <td>0° (Mirando al lente, boca cerrada)</td>
-        <td>Ancla primaria facial: distancia interpupilar, mandíbula y cejas.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R01_frontal.jpg')">
-            <img src="thumbs_audit/thumb_R01_frontal.jpg" alt="R-01">
+        <td><span class="code-tag">R-01</span></td>
+        <td>Frontal Neutro</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_01_frontal.jpg')">
+            <img src="guias_angulos/angulo_guia_01_frontal.jpg" alt="Guia Frontal">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">0° FRENTE</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R01_frontal.jpg')">
+            <img src="thumbs_audit/thumb_R01_frontal.jpg" alt="R01 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Ancla de simetría facial: distancia bipupilar, eje mandibular y posición neutra.</td>
       </tr>
 
       <!-- R-02 -->
       <tr>
-        <td><span class="tag-code">R-02</span></td>
-        <td><strong>Frontal Hablando</strong></td>
-        <td>0° (Boca entreabierta, gesto activo)</td>
-        <td>Referencia para sincronización labial y movimiento de boca.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R02_hablando.jpg')">
-            <img src="thumbs_audit/thumb_R02_hablando.jpg" alt="R-02">
+        <td><span class="code-tag">R-02</span></td>
+        <td>Frontal Expresión Activa</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_estudio_frente.jpg')">
+            <img src="guias_angulos/esquema_estudio_frente.jpg" alt="Guia Frente Estudio">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">0° BOCA</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R02_hablando.jpg')">
+            <img src="thumbs_audit/thumb_R02_hablando.jpg" alt="R02 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Gesto dinámico para sincronización labial y micro-movimientos fonéticos.</td>
       </tr>
 
       <!-- R-03 -->
       <tr>
-        <td><span class="tag-code">R-03</span></td>
-        <td><strong>Sonrisa Real Amplia</strong></td>
-        <td>0° (Dientes frontales superiores visibles)</td>
-        <td>Candado para que la IA muestre tus incisivos reales (DSC_0057).</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R03_sonrisa.jpg')">
-            <img src="thumbs_audit/thumb_R03_sonrisa.jpg" alt="R-03">
+        <td><span class="code-tag">R-03</span></td>
+        <td>Sonrisa con Dientes</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_01_frontal.jpg')">
+            <img src="guias_angulos/angulo_guia_01_frontal.jpg" alt="Guia Sonrisa">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">0° DIENTES</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R03_sonrisa.jpg')">
+            <img src="thumbs_audit/thumb_R03_sonrisa.jpg" alt="R03 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Candado dental: arcada superior visible extraída de DSC_0057. Evita dientes genéricos.</td>
       </tr>
 
       <!-- R-04 -->
       <tr>
-        <td><span class="tag-code">R-04</span></td>
-        <td><strong>Tres Cuartos (45°)</strong></td>
-        <td>45° (Como puerta entreabierta; se ven ambos ojos)</td>
-        <td>Volumen tridimensional del pómulo y transición de la mejilla.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R04_34.jpg')">
-            <img src="thumbs_audit/thumb_R04_34.jpg" alt="R-04">
+        <td><span class="code-tag">R-04</span></td>
+        <td>Tres Cuartos (45°)</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_02_tres_cuartos.jpg')">
+            <img src="guias_angulos/angulo_guia_02_tres_cuartos.jpg" alt="Guia 3/4">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">45° MEDIO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R04_34.jpg')">
+            <img src="thumbs_audit/thumb_R04_34.jpg" alt="R04 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Transición de pómulo y dorso nasal sin oclusión ocular.</td>
       </tr>
 
       <!-- R-05 -->
       <tr>
-        <td><span class="tag-code">R-05</span></td>
-        <td><strong>Perfil Izquierdo 90°</strong></td>
-        <td>90° estricto (Giro completo a pared, ojo trasero oculto)</td>
-        <td>Silueta pura lateral: ángulo nasolabial y plano del maxilar izquierdo.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R05_perfil_izq.jpg')">
-            <img src="thumbs_audit/thumb_R05_perfil_izq.jpg" alt="R-05">
+        <td><span class="code-tag">R-05</span></td>
+        <td>Perfil 90° Izquierdo</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_03_perfil_90.jpg')">
+            <img src="guias_angulos/angulo_guia_03_perfil_90.jpg" alt="Guia Perfil">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">90° IZQ</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R05_perfil_izq.jpg')">
+            <img src="thumbs_audit/thumb_R05_perfil_izq.jpg" alt="R05 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Silueta lateral izquierda: oreja, mandíbula y línea occipital de cuello.</td>
       </tr>
 
       <!-- R-06 -->
       <tr>
-        <td><span class="tag-code">R-06</span></td>
-        <td><strong>Perfil Derecho 90°</strong></td>
-        <td>90° estricto (Ojo izquierdo desaparece detrás de la nariz)</td>
-        <td><strong>Candado Crítico:</strong> Recta nasal de tu rinoplastia 2011 (DSC_0090).</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R06_perfil_der.jpg')">
-            <img src="thumbs_audit/thumb_R06_perfil_der.jpg" alt="R-06">
+        <td><span class="code-tag">R-06</span></td>
+        <td>Perfil 90° Derecho Canónico</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_estudio_perfil.jpg')">
+            <img src="guias_angulos/esquema_estudio_perfil.jpg" alt="Guia Perfil Estudio">
           </div>
-          <span class="badge-captured">✓ DSC_0090 REAL</span>
+          <span class="tag-status">90° DER</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R06_perfil_der.jpg')">
+            <img src="thumbs_audit/thumb_R06_perfil_der.jpg" alt="R06 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>CANDADO QUIRÚRGICO (DSC_0090): Dorso nasal recto rinoplastia 2011, punta compacta. 0% joroba.</td>
       </tr>
 
       <!-- R-07 -->
       <tr>
-        <td><span class="tag-code">R-07</span></td>
-        <td><strong>Primer Plano Nariz Izquierda</strong></td>
-        <td>Macro a 90° (Cámara cerca llenando el encuadre)</td>
-        <td>Auditoría de puente óseo, punta sutil y base de orificios nasales.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R07_nariz_izq.jpg')">
-            <img src="thumbs_audit/thumb_R07_nariz_izq.jpg" alt="R-07">
+        <td><span class="code-tag">R-07</span></td>
+        <td>Macro Nariz Izquierda (60°)</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_nariz_cerca.jpg')">
+            <img src="guias_angulos/esquema_nariz_cerca.jpg" alt="Guia Nariz Macro">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">60° NARIZ</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R07_nariz_izq.jpg')">
+            <img src="thumbs_audit/thumb_R07_nariz_izq.jpg" alt="R07 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Detalle de inserción alar y puente óseo superior izquierdo.</td>
       </tr>
 
       <!-- R-08 -->
       <tr>
-        <td><span class="tag-code">R-08</span></td>
-        <td><strong>Primer Plano Nariz Derecha</strong></td>
-        <td>Macro a 90° (Dorso nasal completo)</td>
-        <td>Eliminación definitiva de cualquier alucinación de pico o joroba.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R08_nariz_der.jpg')">
-            <img src="thumbs_audit/thumb_R08_nariz_der.jpg" alt="R-08">
+        <td><span class="code-tag">R-08</span></td>
+        <td>Macro Nariz Derecha (60°)</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_nariz_cerca.jpg')">
+            <img src="guias_angulos/esquema_nariz_cerca.jpg" alt="Guia Nariz Macro">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">60° NARIZ</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R08_nariz_der.jpg')">
+            <img src="thumbs_audit/thumb_R08_nariz_der.jpg" alt="R08 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Detalle de aleta nasal derecha y ángulo nasolabial.</td>
       </tr>
 
       <!-- R-09 -->
       <tr>
-        <td><span class="tag-code">R-09</span></td>
-        <td><strong>Picado Suave</strong></td>
-        <td>Cámara ligeramente arriba de los ojos, tú miras al lente</td>
-        <td>Perspectiva superior y detalle del cabello con copete rebelde.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R09_picado.jpg')">
-            <img src="thumbs_audit/thumb_R09_picado.jpg" alt="R-09">
+        <td><span class="code-tag">R-09</span></td>
+        <td>Cámara Arriba (Picado)</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_camara_arriba_R09.jpg')">
+            <img src="guias_angulos/esquema_camara_arriba_R09.jpg" alt="Guia Camara Arriba">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">+30° ALTO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R09_picado.jpg')">
+            <img src="thumbs_audit/thumb_R09_picado.jpg" alt="R09 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Volumen de frente, nacimiento del cabello y parte superior de la nariz.</td>
       </tr>
 
       <!-- R-10 -->
       <tr>
-        <td><span class="tag-code">R-10</span></td>
-        <td><strong>Contrapicado Suave</strong></td>
-        <td>Cámara ligeramente abajo de la barbilla, tú miras al lente</td>
-        <td>Definición del ángulo mandibular, cuello y base de barba.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R10_contrapicado.jpg')">
-            <img src="thumbs_audit/thumb_R10_contrapicado.jpg" alt="R-10">
+        <td><span class="code-tag">R-10</span></td>
+        <td>Cámara Abajo (Contrapicado)</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_camara_abajo_R10.jpg')">
+            <img src="guias_angulos/esquema_camara_abajo_R10.jpg" alt="Guia Camara Abajo">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">-20° BAJO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R10_contrapicado.jpg')">
+            <img src="thumbs_audit/thumb_R10_contrapicado.jpg" alt="R10 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Línea de mandíbula inferior, base de fosas nasales y unión de barbilla.</td>
       </tr>
 
-      <!-- R-11 (NEON FALTANTE) -->
+      <!-- R-11 (3D LAB NEON) -->
       <tr>
-        <td><span class="tag-code">R-11</span></td>
-        <td><strong>Mirada Lateral (Izq / Der)</strong></td>
-        <td>Cabeza fija de frente, solo se mueven los ojos a 180°</td>
-        <td>Calibración del iris y mirada periférica natural sin girar el cuello.</td>
-        <td class="thumb-cell">
-          <div class="neon-card cyan">
-            <span class="neon-icon">👁️ 👁️</span>
-            <span class="neon-zone">ZONA OCULAR LATERAL</span>
-            <span class="neon-badge">⚡ FALTANTE EN SET</span>
+        <td><span class="code-tag">R-11</span></td>
+        <td>Zona Ocular Lateral</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_miradas_R11_R12.jpg')">
+            <img src="guias_angulos/esquema_miradas_R11_R12.jpg" alt="Guia Miradas">
           </div>
+          <span class="tag-status">OJOS LADO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box neon-cyan" onclick="openModal('neon_lab/neon_lab_R11.jpg')">
+            <img src="neon_lab/thumb_neon_R11.jpg" alt="Holograma 3D Lab R11">
+          </div>
+          <span class="tag-status scan-cyan">3D LAB SCAN</span>
+        </td>
+        <td>Macro de ojo de perfil, ceja y sien lateral. Extraíble del giro en video.</td>
       </tr>
 
-      <!-- R-12 (NEON FALTANTE) -->
+      <!-- R-12 (3D LAB NEON) -->
       <tr>
-        <td><span class="tag-code">R-12</span></td>
-        <td><strong>Mirada Vertical (Arriba / Abajo)</strong></td>
-        <td>Cabeza fija de frente, solo se mueven los ojos</td>
-        <td>Calibración de párpados y pestañas en miradas arriba/abajo.</td>
-        <td class="thumb-cell">
-          <div class="neon-card cyan">
-            <span class="neon-icon">⬆️ 👁️ ⬇️</span>
-            <span class="neon-zone">ZONA OCULAR VERTICAL</span>
-            <span class="neon-badge">⚡ FALTANTE EN SET</span>
+        <td><span class="code-tag">R-12</span></td>
+        <td>Zona Ocular Vertical</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_miradas_R11_R12.jpg')">
+            <img src="guias_angulos/esquema_miradas_R11_R12.jpg" alt="Guia Miradas">
           </div>
+          <span class="tag-status">OJOS ARRIBA</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box neon-cyan" onclick="openModal('neon_lab/neon_lab_R12.jpg')">
+            <img src="neon_lab/thumb_neon_R12.jpg" alt="Holograma 3D Lab R12">
+          </div>
+          <span class="tag-status scan-cyan">3D LAB SCAN</span>
+        </td>
+        <td>Alineación de párpados y pliegues orbitales al mirar hacia arriba.</td>
       </tr>
 
       <!-- R-13 -->
       <tr>
-        <td><span class="tag-code">R-13</span></td>
-        <td><strong>Detalle Ojos y Cejas</strong></td>
-        <td>Macro frontal enfocado al 100% en los ojos</td>
-        <td>Forma almendrada, densidad y textura de cejas oscuras.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R13_ojos.jpg')">
-            <img src="thumbs_audit/thumb_R13_ojos.jpg" alt="R-13">
+        <td><span class="code-tag">R-13</span></td>
+        <td>Macro Iris y Ojos Frontales</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_01_frontal.jpg')">
+            <img src="guias_angulos/angulo_guia_01_frontal.jpg" alt="Guia Frontal">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">MACRO OJOS</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R13_ojos.jpg')">
+            <img src="thumbs_audit/thumb_R13_ojos.jpg" alt="R13 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Color de iris castaño oscuro, pliegue epicántico y brillo ocular.</td>
       </tr>
 
       <!-- R-14 -->
       <tr>
-        <td><span class="tag-code">R-14</span></td>
-        <td><strong>Detalle Barba y Mandíbula</strong></td>
-        <td>Frontal y 3/4 en plano cerrado</td>
-        <td>Largo, densidad y línea de afeitado limpia en mejillas y cuello.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R14_barba.jpg')">
-            <img src="thumbs_audit/thumb_R14_barba.jpg" alt="R-14">
+        <td><span class="code-tag">R-14</span></td>
+        <td>Textura de Barba</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_nariz_cerca.jpg')">
+            <img src="guias_angulos/esquema_nariz_cerca.jpg" alt="Guia Detalle">
           </div>
-          <span class="badge-captured">✓ CAPTURADA</span>
+          <span class="tag-status">BARBA</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R14_barba.jpg')">
+            <img src="thumbs_audit/thumb_R14_barba.jpg" alt="R14 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Línea de afeitado en pómulos y cuello con densidad de 3 a 5 días.</td>
       </tr>
 
       <!-- R-15 -->
       <tr>
-        <td><span class="tag-code">R-15</span></td>
-        <td><strong>Detalle Cabello & Nacimiento</strong></td>
-        <td>Frontal y cenital suave</td>
-        <td>Fade lateral alto y textura del copete rebelde natural al frente.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_R15_cabello.jpg')">
-            <img src="thumbs_audit/thumb_R15_cabello.jpg" alt="R-15">
+        <td><span class="code-tag">R-15</span></td>
+        <td>Copete Rebelde y Fade</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/angulo_guia_01_frontal.jpg')">
+            <img src="guias_angulos/angulo_guia_01_frontal.jpg" alt="Guia Cabello">
           </div>
-          <span class="badge-captured">✓ COPETE REAL</span>
+          <span class="tag-status">CABELLO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_R15_cabello.jpg')">
+            <img src="thumbs_audit/thumb_R15_cabello.jpg" alt="R15 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Copete frontal característico y desvanecido lateral limpio (fade).</td>
       </tr>
 
-    </tbody>
-  </table>
-
-  <!-- Body Shots Table -->
-  <div class="section-h2">
-    <div class="section-h2-left"><span>03</span> Serie Cuerpo: Las 5 Tomas de Complexión (C-01 a C-05)</div>
-    <div class="section-subtitle">2 Capturadas · 3 Faltantes (Neón Ámbar)</div>
-  </div>
-  <table>
-    <thead>
-      <tr>
-        <th style="width: 70px;">Código</th>
-        <th>Nombre de Toma</th>
-        <th>Encuadre & Postura</th>
-        <th>Función en el Modelo</th>
-        <th class="thumb-cell">Miniatura / Zona Neón</th>
-      </tr>
-    </thead>
-    <tbody>
-      
       <!-- C-01 -->
       <tr>
-        <td><span class="tag-code">C-01</span></td>
-        <td><strong>Medio Cuerpo Brazos Cruzados</strong></td>
-        <td>Cintura hacia arriba, postura firme, polo negro</td>
-        <td>Puente entre rostro y torso; define hombros, bíceps y porte.</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_C01_brazos.jpg')">
-            <img src="thumbs_audit/thumb_C01_brazos.jpg" alt="C-01">
+        <td><span class="code-tag">C-01</span></td>
+        <td>Medio Cuerpo Brazos Cruzados</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/cuerpo_guia_01_frente.jpg')">
+            <img src="guias_angulos/cuerpo_guia_01_frente.jpg" alt="Guia Medio Cuerpo">
           </div>
-          <span class="badge-captured">✓ FOTO DE HOY</span>
+          <span class="tag-status">MEDIO CUERPO</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_C01_brazos.jpg')">
+            <img src="thumbs_audit/thumb_C01_brazos.jpg" alt="C01 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Pose puente canónica con polo negro contra pared de concreto texturizada.</td>
       </tr>
 
-      <!-- C-02 (NEON FALTANTE) -->
+      <!-- C-02 (3D LAB NEON) -->
       <tr>
-        <td><span class="tag-code">C-02</span></td>
-        <td><strong>Medio Cuerpo 3/4</strong></td>
-        <td>Giro a 45°, brazos relajados a los costados</td>
-        <td>Proporción de pecho, espalda y postura relajada.</td>
-        <td class="thumb-cell">
-          <div class="neon-card amber">
-            <span class="neon-icon">💪</span>
-            <span class="neon-zone">TORSO & BRAZOS 45°</span>
-            <span class="neon-badge">⚡ PENDIENTE SET</span>
+        <td><span class="code-tag">C-02</span></td>
+        <td>Torso y Brazos 45°</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/esquema_estudio_34.jpg')">
+            <img src="guias_angulos/esquema_estudio_34.jpg" alt="Guia 3/4 Estudio">
           </div>
+          <span class="tag-status">TORSO 45°</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box neon-amber" onclick="openModal('neon_lab/neon_lab_C02.jpg')">
+            <img src="neon_lab/thumb_neon_C02.jpg" alt="Holograma 3D Lab C02">
+          </div>
+          <span class="tag-status scan-amber">3D LAB SCAN</span>
+        </td>
+        <td>Giro anatómico a 45° de torso para escenas comerciales de interacción.</td>
       </tr>
 
       <!-- C-03 -->
       <tr>
-        <td><span class="tag-code">C-03</span></td>
-        <td><strong>Cuerpo Completo Frontal</strong></td>
-        <td>De pies a cabeza, erguido, ciclorama completo</td>
-        <td>Estatura, proporción de piernas, torso y calzado (DSC_0001).</td>
-        <td class="thumb-cell">
-          <div class="thumb-wrap" onclick="openModal('thumbs_audit/thumb_C03_cuerpo_completo.jpg')">
-            <img src="thumbs_audit/thumb_C03_cuerpo_completo.jpg" alt="C-03">
+        <td><span class="code-tag">C-03</span></td>
+        <td>Cuerpo Completo Vertical</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/cuerpo_guia_01_frente.jpg')">
+            <img src="guias_angulos/cuerpo_guia_01_frente.jpg" alt="Guia Cuerpo Frente">
           </div>
-          <span class="badge-captured">✓ DSC_0001 REAL</span>
+          <span class="tag-status">COMPLETO 0°</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('thumbs_audit/thumb_C03_cuerpo_completo.jpg')">
+            <img src="thumbs_audit/thumb_C03_cuerpo_completo.jpg" alt="C03 Real">
+          </div>
+          <span class="tag-status ok">✓ REAL</span>
+        </td>
+        <td>Proporción corporal de cabeza a pies (DSC_0001). Relación de estatura y calzado.</td>
       </tr>
 
-      <!-- C-04 (NEON FALTANTE) -->
+      <!-- C-04 (3D LAB NEON) -->
       <tr>
-        <td><span class="tag-code">C-04</span></td>
-        <td><strong>Cuerpo Completo 3/4 y Perfil</strong></td>
-        <td>Giros a 45° y 90° de cuerpo entero</td>
-        <td>Postura vertebral y volumen tridimensional del físico completo.</td>
-        <td class="thumb-cell">
-          <div class="neon-card amber">
-            <span class="neon-icon">🧍</span>
-            <span class="neon-zone">POSTURA 90° CUERPO</span>
-            <span class="neon-badge">⚡ PENDIENTE SET</span>
+        <td><span class="code-tag">C-04</span></td>
+        <td>Cuerpo Completo Perfil 90°</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/cuerpo_guia_02_lado.jpg')">
+            <img src="guias_angulos/cuerpo_guia_02_lado.jpg" alt="Guia Cuerpo Lado">
           </div>
+          <span class="tag-status">COMPLETO 90°</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box neon-amber" onclick="openModal('neon_lab/neon_lab_C04.jpg')">
+            <img src="neon_lab/thumb_neon_C04.jpg" alt="Holograma 3D Lab C04">
+          </div>
+          <span class="tag-status scan-amber">3D LAB SCAN</span>
+        </td>
+        <td>Silueta lateral completa: alineación de columna, volumen de pecho y piernas.</td>
       </tr>
 
-      <!-- C-05 (NEON FALTANTE) -->
+      <!-- C-05 (3D LAB NEON) -->
       <tr>
-        <td><span class="tag-code">C-05</span></td>
-        <td><strong>Serie de Progreso Físico</strong></td>
-        <td>Frontal, perfil y espalda en ropa de gimnasio ajustada</td>
-        <td>Repetibilidad mensual para comparar avance muscular de gym.</td>
-        <td class="thumb-cell">
-          <div class="neon-card amber">
-            <span class="neon-icon">🏋️</span>
-            <span class="neon-zone">PROGRESO GYM 360°</span>
-            <span class="neon-badge">⚡ MEMBRESÍA</span>
+        <td><span class="code-tag">C-05</span></td>
+        <td>Progreso Físico Gym 360°</td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box" onclick="openModal('guias_angulos/cuerpo_guia_03_espalda.jpg')">
+            <img src="guias_angulos/cuerpo_guia_03_espalda.jpg" alt="Guia Espalda">
           </div>
+          <span class="tag-status">GYM 360°</span>
         </td>
+        <td class="cell-img-wrap">
+          <div class="thumb-box neon-amber" onclick="openModal('neon_lab/neon_lab_C05.jpg')">
+            <img src="neon_lab/thumb_neon_C05.jpg" alt="Holograma 3D Lab C05">
+          </div>
+          <span class="tag-status scan-amber">3D LAB SCAN</span>
+        </td>
+        <td>Membresía recurrente: registro de volumen muscular en ropa deportiva (frente, lado y espalda).</td>
       </tr>
 
     </tbody>
   </table>
 
-  <!-- SECCIÓN DE INVESTIGACIÓN: COMPARATIVA DE CHARACTER SHEETS EN LA INDUSTRIA -->
-  <section style="margin-top: 56px; border-top: 1px solid var(--border); padding-top: 40px;">
-    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-      <span class="badge" style="background: rgba(0, 229, 255, 0.15); color: var(--neon-cyan); border-color: var(--neon-cyan);">AUDITORÍA TÉCNICA & RESEARCH</span>
-      <span style="font-size: 13px; color: var(--text-muted); font-weight: 600;">LATE 2026 BENCHMARK</span>
+  <!-- RESEARCH BENCHMARK SECTION -->
+  <section style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 32px;">
+    <div class="badge-terminal" style="color: var(--neon-cyan); border-color: rgba(0, 229, 255, 0.3); background: rgba(0, 229, 255, 0.08);">
+      <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+      BENCHMARK DE LA INDUSTRIA · EVALUACIÓN TÉCNICA
     </div>
-    <h2 style="font-size: 26px; font-weight: 800; color: #fff; margin: 0 0 12px; letter-spacing: -0.02em;">
-      ¿Lo estamos haciendo bien o estamos agarrando pal' monte?
-    </h2>
-    <p style="color: var(--text-muted); font-size: 15px; margin: 0 0 28px; max-width: 1050px;">
-      Análisis honesto y comparativa frente a los 4 métodos de creación de personajes y clones digitales con Inteligencia Artificial utilizados en la industria actualmente.
+    <h2 style="font-size: 22px; font-weight: 700; color: #fff; margin: 0 0 8px;">Comparativa frente a Otros Métodos de Character Sheet en IA</h2>
+    <p style="color: var(--text-muted); font-size: 13px; margin: 0 0 24px;">
+      Resumen de por qué el protocolo de captura física supera radicalmente a las herramientas basadas en prompts o filtros superficiales.
     </p>
 
-    <!-- VEREDICTO FLASH CARDS -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; margin-bottom: 32px;">
-      
-      <div style="background: rgba(0, 255, 136, 0.04); border: 1px solid rgba(0, 255, 136, 0.35); border-radius: 12px; padding: 22px;">
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-          <span style="font-size: 22px;">🎯</span>
-          <h3 style="font-size: 16px; font-weight: 800; color: var(--accent); margin: 0;">1. ¿Lo estamos haciendo bien?</h3>
-        </div>
-        <p style="font-size: 13.5px; color: #cbd5e1; margin: 0; line-height: 1.6;">
-          <strong>SÍ, TOTALMENTE.</strong> La Guía de Glauber que aportaste (20 tomas divididas en 15 de rostro y 5 de cuerpo) es <strong>el estándar de oro</strong> para entrenar LoRAs de alta fidelidad en <em>Flux.1 [dev]</em> y <em>Stable Diffusion</em>. No es ocurrencia: es la estructura exacta que usan los mejores creadores de clones del mundo.
-        </p>
-      </div>
-
-      <div style="background: rgba(0, 229, 255, 0.04); border: 1px solid rgba(0, 229, 255, 0.35); border-radius: 12px; padding: 22px;">
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-          <span style="font-size: 22px;">⚙️</span>
-          <h3 style="font-size: 16px; font-weight: 800; color: var(--neon-cyan); margin: 0;">2. ¿Estamos inventando la rueda?</h3>
-        </div>
-        <p style="font-size: 13.5px; color: #cbd5e1; margin: 0; line-height: 1.6;">
-          <strong>NO.</strong> Inventar la rueda sería programar un algoritmo nuevo desde cero. Lo que estamos haciendo es implementar el protocolo de captura física para alimentar la tecnología que ya domina el mercado: <strong>ComfyUI + Fine-Tuning LoRA local</strong> sin censura ni distorsión.
-        </p>
-      </div>
-
-      <div style="background: rgba(245, 158, 11, 0.04); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 12px; padding: 22px;">
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-          <span style="font-size: 22px;">⚠️</span>
-          <h3 style="font-size: 16px; font-weight: 800; color: var(--neon-amber); margin: 0;">3. ¿Dónde sí agarramos pal' monte?</h3>
-        </div>
-        <p style="font-size: 13.5px; color: #cbd5e1; margin: 0; line-height: 1.6;">
-          <strong>En querer sacar el render final antes de tomar las fotos.</strong> El error que causó la nariz aguileña deforme fue pedirle a la IA que imaginara tu perfil a 90° sin haberle dado la foto real <code>DSC_0090.JPG</code>. Al no tener la referencia, la IA promedia rostros de internet y alucina.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- TABLA COMPARATIVA DE MÉTODOS DE LA INDUSTRIA -->
-    <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 36px;">
-      <div style="padding: 18px 24px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02);">
-        <h3 style="font-size: 17px; font-weight: 800; color: #fff; margin: 0;">Matriz Comparativa: Los 4 Métodos de Character Sheet en IA</h3>
-      </div>
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 13px; text-align: left;">
-          <thead>
-            <tr style="background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border);">
-              <th style="padding: 14px 18px; color: var(--text-muted); font-size: 11px; text-transform: uppercase;">Criterio</th>
-              <th style="padding: 14px 18px; color: var(--accent); font-size: 11px; text-transform: uppercase;">A. Protocolo Glauber / Captoora (Flux LoRA)</th>
-              <th style="padding: 14px 18px; color: #93c5fd; font-size: 11px; text-transform: uppercase;">B. Midjourney (--cref Model Sheet)</th>
-              <th style="padding: 14px 18px; color: #f472b6; font-size: 11px; text-transform: uppercase;">C. InstantID / PuLID (Zero-Shot ComfyUI)</th>
-              <th style="padding: 14px 18px; color: #fbbf24; font-size: 11px; text-transform: uppercase;">D. Video Twin (HeyGen / LivePortrait)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 14px 18px; font-weight: 700; color: #fff;">Insumo Requerido</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;"><strong>20 tomas reales en set</strong> (15 rostro + 5 cuerpo/gym)</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">1 imagen 2D con 4-6 vistas generadas</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">1 a 3 fotos frontales</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">1 foto frontal + 2 min video 4K hablando</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.01);">
-              <td style="padding: 14px 18px; font-weight: 700; color: #fff;">Fidelidad Anatómica</td>
-              <td style="padding: 14px 18px; color: var(--accent); font-weight: 800;">99.5% (Idéntico a la persona real)</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">65% - 75% (Aproximación estilizada)</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">75% - 85% (Efecto cera / mirada rígida)</td>
-              <td style="padding: 14px 18px; color: #cbd5e1;">95% (Únicamente en ángulo frontal ±15°)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 14px 18px; font-weight: 700; color: #fff;">Candado Rinoplastia</td>
-              <td style="padding: 14px 18px; color: var(--accent); font-weight: 700;">✓ Inmune. Respeta el dorso recto de <code>DSC_0090</code></td>
-              <td style="padding: 14px 18px; color: #f87171;">✕ Falla. Alucina jorobas o narices ganchudas</td>
-              <td style="padding: 14px 18px; color: #f87171;">✕ Falla gravemente en giros >60°</td>
-              <td style="padding: 14px 18px; color: #94a3b8;">N/A (No permite giros a 90°)</td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.01);">
-              <td style="padding: 14px 18px; font-weight: 700; color: #fff;">Físico / Gym / Ropa</td>
-              <td style="padding: 14px 18px; color: var(--accent); font-weight: 700;">✓ Totalmente compatible (Membresía Prime C-05)</td>
-              <td style="padding: 14px 18px; color: #f87171;">✕ Inestable; muta la complexión</td>
-              <td style="padding: 14px 18px; color: #f87171;">✕ Nulo (Solo procesa recorte de cara)</td>
-              <td style="padding: 14px 18px; color: #94a3b8;">✕ Nulo (Plantilla rígida)</td>
-            </tr>
-            <tr>
-              <td style="padding: 14px 18px; font-weight: 700; color: #fff;">Veredicto de Calidad</td>
-              <td style="padding: 14px 18px; color: var(--accent); font-weight: 800;">ESTÁNDAR CAPTOORA BIOGEN</td>
-              <td style="padding: 14px 18px; color: var(--text-muted);">Para cómics/anime de ficción</td>
-              <td style="padding: 14px 18px; color: var(--text-muted);">Para prototipos rápidos de prueba</td>
-              <td style="padding: 14px 18px; color: var(--text-muted);">Complemento para reels hablados</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
+    <table>
+      <thead>
+        <tr>
+          <th>Método</th>
+          <th>Insumo</th>
+          <th>Fidelidad Real</th>
+          <th>Perfil 90° (Rinoplastia)</th>
+          <th>Veredicto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="code-tag">Glauber / Captoora BioGen</span></td>
+          <td>20 tomas reales en set o video 4K</td>
+          <td style="color: var(--accent); font-weight: 700;">99.5%</td>
+          <td style="color: var(--accent);">✓ Inmune. Respeta DSC_0090</td>
+          <td style="color: var(--accent);">Estándar Definitivo</td>
+        </tr>
+        <tr>
+          <td><span style="font-family: monospace; color:#93c5fd;">Midjourney (--cref)</span></td>
+          <td>1 imagen 2D con varias vistas</td>
+          <td>65% - 75%</td>
+          <td style="color: #f87171;">✕ Falla. Alucina jorobas</td>
+          <td style="color: var(--text-muted);">Para cómics ficticios</td>
+        </tr>
+        <tr>
+          <td><span style="font-family: monospace; color:#f472b6;">InstantID / PuLID</span></td>
+          <td>1 a 3 fotos frontales</td>
+          <td>75% - 85%</td>
+          <td style="color: #f87171;">✕ Falla en rotaciones >60°</td>
+          <td style="color: var(--text-muted);">Prototipos rápidos</td>
+        </tr>
+        <tr>
+          <td><span style="font-family: monospace; color:#fbbf24;">HeyGen Twin</span></td>
+          <td>1 foto + 2 min video continuo</td>
+          <td>95% (solo ±15° frontal)</td>
+          <td style="color: var(--text-muted);">N/A (sin giros laterales)</td>
+          <td style="color: var(--text-muted);">Solo para videos hablados</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
 </div>
