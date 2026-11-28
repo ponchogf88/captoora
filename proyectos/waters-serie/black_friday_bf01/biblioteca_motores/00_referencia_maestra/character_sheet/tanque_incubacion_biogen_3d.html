@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanque de Incubación Biológica Digital · Captoora BioGen (Sujeto Cero: Chuy)</title>
+<style>
+  :root {
+    --bg: #04060a;
+    --panel-bg: rgba(9, 14, 23, 0.82);
+    --border: #1a2638;
+    --accent: #00ff88;
+    --accent-glow: rgba(0, 255, 136, 0.45);
+    --neon-cyan: #00e5ff;
+    --neon-cyan-glow: rgba(0, 229, 255, 0.45);
+    --neon-amber: #f59e0b;
+    --neon-amber-glow: rgba(245, 158, 11, 0.45);
+    --text: #e6edf3;
+    --text-muted: #7d8b99;
+    --font-mono: "SF Mono", "Ubuntu Mono", Menlo, Consolas, monospace;
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; user-select: none; }
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-ui);
+  }
+
+  /* 3D Canvas Container */
+  #webgl-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /* Cybernetic Overlay HUD */
+  .hud-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 28px;
+  }
+
+  /* Top Bar */
+  .hud-header {
+    pointer-events: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .hud-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sys-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.08em;
+    width: fit-content;
+  }
+  .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    animation: blink 1.2s infinite alternate;
+  }
+  @keyframes blink { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+  
+  .hud-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    margin: 4px 0 0;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hud-sub {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Header Controls / Links */
+  .hud-top-actions {
+    display: flex;
+    gap: 10px;
+  }
+  .hud-btn {
+    pointer-events: auto;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(12px);
+    transition: all 0.2s ease;
+  }
+  .hud-btn:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 12px var(--neon-cyan-glow);
+  }
+  .hud-btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(0, 255, 136, 0.12);
+  }
+
+  /* Left Floating Telemetry Deck */
+  .telemetry-deck {
+    pointer-events: auto;
+    position: absolute;
+    left: 28px;
+    top: 130px;
+    width: 290px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    backdrop-filter: blur(14px);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  }
+  .deck-section-title {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 6px;
+  }
+  .telemetry-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+  }
+  .tele-label { color: var(--text-muted); }
+  .tele-val { color: #fff; font-weight: 700; }
+  .tele-val.accent { color: var(--accent); }
+  .tele-val.cyan { color: var(--neon-cyan); }
+
+  /* Quick Angle Cam Presets */
+  .cam-presets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  .cam-btn {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.18s ease;
+  }
+  .cam-btn:hover, .cam-btn.active {
+    background: rgba(0, 229, 255, 0.12);
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+  }
+
+  /* Right Inspection Drawer (Shows when clicking a body part pin) */
+  .inspection-drawer {
+    pointer-events: auto;
+    position: absolute;
+    right: 28px;
+    top: 130px;
+    width: 370px;
+    max-height: calc(100vh - 180px);
+    background: var(--panel-bg);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(18px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 35px rgba(0, 255, 136, 0.2), 0 12px 40px rgba(0,0,0,0.8);
+    overflow-y: auto;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  }
+  .drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+  }
+  .drawer-pin-id {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+  .drawer-close {
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 20px;
+    line-height: 1;
+    font-family: var(--font-mono);
+    transition: color 0.2s;
+  }
+  .drawer-close:hover { color: #fff; }
+
+  .drawer-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+  }
+  .drawer-media-frame {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .drawer-media-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #000;
+  }
+
+  .drawer-spec-box {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    padding: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.6;
+    color: #cbd5e1;
+  }
+  .spec-highlight { color: var(--accent); font-weight: 700; }
+
+  /* Bottom Control Console */
+  .hud-footer {
+    pointer-events: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 20px;
+    backdrop-filter: blur(14px);
+  }
+  .hotspot-indicators {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .hs-chip {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .hs-chip:hover {
+    border-color: var(--neon-cyan);
+    color: #fff;
+  }
+  .hs-chip.active {
+    background: rgba(0, 255, 136, 0.12);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .turntable-slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+  }
+  .turntable-slider {
+    -webkit-appearance: none;
+    width: 220px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    outline: none;
+  }
+  .turntable-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--accent-glow);
+  }
+
+  /* Audio Toggle Button */
+  .sfx-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .sfx-toggle.on { color: var(--accent); border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<!-- Three.js Canvas -->
+<div id="webgl-container"></div>
+
+<!-- Cybernetic HUD Overlay -->
+<div class="hud-overlay">
+
+  <!-- Header -->
+  <div class="hud-header">
+    <div class="hud-brand">
+      <div class="sys-badge">
+        <span class="pulse-dot"></span>
+        BIOGEN SYSTEM v2.6 · INCUBATION POD 01
+      </div>
+      <div class="hud-title">
+        Cápsula de Biometría 3D · Sujeto Cero: Jesús Alfonso (Chuy)
+      </div>
+      <div class="hud-sub">
+        MONITOREO DE IDENTIDAD ANATÓMICA & CANDADOS QUIRÚRGICOS SIN HALLUCINACIÓN
+      </div>
+    </div>
+
+    <!-- Navigation Hub -->
+    <div class="hud-top-actions">
+      <button class="sfx-toggle on" id="sfxBtn" onclick="toggleSFX()">[SFX: ACTIVO]</button>
+      <a href="catalogo_fotografias_chuy.html" class="hud-btn">Catálogo Completo (138)</a>
+      <a href="hoja_de_contacto.html" class="hud-btn">Hoja de Contacto 4K</a>
+      <a href="index.html" class="hud-btn">Hoja Maestra Glauber</a>
+    </div>
+  </div>
+
+  <!-- Left Telemetry Deck -->
+  <div class="telemetry-deck">
+    <div class="deck-section-title">
+      <span>TELEMETRÍA DE CÁMARA & GIRO</span>
+      <span id="rotationDegrees">0.0°</span>
+    </div>
+    <div class="telemetry-row">
+      <span class="tele-label">Eje Anatómico:</span>
+      <span class="tele-val cyan">Vertical Z+ (Estricto)</span>
+    </div>
+    <div class="telemetry-row">
+      <span class="tele-label">Dorso Nasal (2011):</span>
+      <span class="tele-val accent">100% RECTO (DSC_0090)</span>
+    </div>
+    <div class="telemetry-row">
+      <span class="tele-label">Arcada Dental:</span>
+      <span class="tele-val">Superior Visible (DSC_0057)</span>
+    </div>
+    <div class="telemetry-row">
+      <span class="tele-label">Textura Capilar:</span>
+      <span class="tele-val">Copete Rebelde + Fade</span>
+    </div>
+
+    <div class="deck-section-title" style="margin-top: 6px;">
+      <span>PRESETS DE ÁNGULO CINEMATOGRÁFICO</span>
+    </div>
+    <div class="cam-presets">
+      <button class="cam-btn active" onclick="setPresetAngle(0, 0, 'FRONTAL 0°')">0° Frontal</button>
+      <button class="cam-btn" onclick="setPresetAngle(45, 0, '3/4 DERECHO')">45° 3/4</button>
+      <button class="cam-btn" onclick="setPresetAngle(90, 0, 'PERFIL 90° DER')">90° Perfil Der</button>
+      <button class="cam-btn" onclick="setPresetAngle(-90, 0, 'PERFIL 90° IZQ')">-90° Perfil Izq</button>
+      <button class="cam-btn" onclick="setPresetAngle(0, 30, 'PICADO +30°')">+30° Picado</button>
+      <button class="cam-btn" onclick="setPresetAngle(0, -20, 'CONTRAPICADO -20°')">-20° Contrapicado</button>
+    </div>
+  </div>
+
+  <!-- Right Inspection Drawer -->
+  <div class="inspection-drawer" id="inspDrawer">
+    <div class="drawer-header">
+      <span class="drawer-pin-id" id="drawerPinId">PIN 01 · CANDADO QUIRÚRGICO</span>
+      <span class="drawer-close" onclick="closeDrawer()">&times;</span>
+    </div>
+    <div class="drawer-title" id="drawerTitle">Nariz: Dorso Nasal Recto Rinoplastia 2011</div>
+    
+    <div class="drawer-media-frame">
+      <img id="drawerImg" src="R-06_perfil_90_DSC_0090_canonico.jpg" alt="Detalle Anatómico">
+    </div>
+
+    <div class="drawer-spec-box" id="drawerSpec">
+      <strong>Registro de Bloqueo:</strong><br>
+      • Archivo fuente: <span class="spec-highlight">DSC_0090.JPG</span><br>
+      • Dorso y puente: <span class="spec-highlight">100% Recto, 0% Giba dorsal</span><br>
+      • Punta: <span class="spec-highlight">Compacta, ángulo nasolabial limpio</span><br>
+      • Estado de IA: <span class="spec-highlight">Alucinación bloqueada permanentemente</span>
+    </div>
+
+    <button class="hud-btn active" style="justify-content: center; width: 100%;" onclick="openFullView()">
+      Examinar en Alta Resolución
+    </button>
+  </div>
+
+  <!-- Bottom Console -->
+  <div class="hud-footer">
+    <div class="hotspot-indicators">
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--accent); margin-right: 6px;">PUNTOS DE FIJACIÓN:</span>
+      <button class="hs-chip active" onclick="triggerPin(0)">[01] Nariz (Perfil 90°)</button>
+      <button class="hs-chip" onclick="triggerPin(1)">[02] Sonrisa (Dientes)</button>
+      <button class="hs-chip" onclick="triggerPin(2)">[03] Copete Rebelde</button>
+      <button class="hs-chip" onclick="triggerPin(3)">[04] Profundidad Ocular</button>
+      <button class="hs-chip" onclick="triggerPin(4)">[05] Traje Ejecutivo (8 Fotos)</button>
+      <button class="hs-chip" onclick="triggerPin(5)">[06] Gym & Tatuaje Rosa</button>
+    </div>
+
+    <div class="turntable-slider-wrap">
+      <span>GIRO POD:</span>
+      <input type="range" min="0" max="360" value="0" class="turntable-slider" id="angleSlider" oninput="onSliderTurn(this.value)">
+      <button class="hud-btn" id="autoSpinBtn" onclick="toggleAutoSpin()">AUTO: ON</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Three.js + OrbitControls (Local offline copies) -->
+<script src="js/three.min.js"></script>
+<script src="js/OrbitControls.js"></script>
+
+<script>
+  /* ========================================================
+     WEB AUDIO SYNTHESIZER (Cybernetic Lab FX - Procedural)
+     ======================================================== */
+  let audioCtx = null;
+  let sfxEnabled = true;
+
+  function initAudio() {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+  }
+
+  function playLabChirp(freq = 880, type = 'sine', duration = 0.08) {
+    if (!sfxEnabled) return;
+    initAudio();
+    try {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = type;
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(freq * 1.5, audioCtx.currentTime + duration);
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch(e) {}
+  }
+
+  function playHydraulic() {
+    if (!sfxEnabled) return;
+    initAudio();
+    try {
+      const bufSize = audioCtx.sampleRate * 0.15;
+      const buffer = audioCtx.createBuffer(1, bufSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufSize; i++) data[i] = Math.random() * 2 - 1;
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(300, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(80, audioCtx.currentTime + 0.15);
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.15);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+    } catch(e) {}
+  }
+
+  function toggleSFX() {
+    sfxEnabled = !sfxEnabled;
+    const btn = document.getElementById('sfxBtn');
+    if (sfxEnabled) {
+      btn.textContent = '[SFX: ACTIVO]';
+      btn.classList.add('on');
+      playLabChirp(1200);
+    } else {
+      btn.textContent = '[SFX: MUTED]';
+      btn.classList.remove('on');
+    }
+  }
+
+  /* ========================================================
+     THREE.JS SCENE SETUP (Mewtwo Bio-Incubation Pod)
+     ======================================================== */
+  const container = document.getElementById('webgl-container');
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x04060a, 0.045);
+
+  const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+  camera.position.set(0, 1.8, 5.2);
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.25;
+  container.appendChild(renderer.domElement);
+
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+  controls.maxPolarAngle = Math.PI / 2 + 0.15;
+  controls.minDistance = 2.2;
+  controls.maxDistance = 8.5;
+  controls.target.set(0, 1.3, 0);
+
+  // Lighting
+  const ambLight = new THREE.AmbientLight(0x0a192f, 2.0);
+  scene.add(ambLight);
+
+  const topCyanLight = new THREE.PointLight(0x00e5ff, 4.0, 10);
+  topCyanLight.position.set(0, 3.8, 0);
+  scene.add(topCyanLight);
+
+  const bottomAccentLight = new THREE.PointLight(0x00ff88, 3.5, 8);
+  bottomAccentLight.position.set(0, -0.4, 0);
+  scene.add(bottomAccentLight);
+
+  const rimLight = new THREE.DirectionalLight(0x38bdf8, 1.8);
+  rimLight.position.set(-4, 3, -3);
+  scene.add(rimLight);
+
+  /* ========================================================
+     POD ARCHITECTURE (Glass Cylinder, Caps & Particles)
+     ======================================================== */
+  const podGroup = new THREE.Group();
+  scene.add(podGroup);
+
+  // 1. Transparent Glass Tube
+  const glassGeo = new THREE.CylinderGeometry(1.2, 1.2, 3.8, 48, 1, true);
+  const glassMat = new THREE.MeshPhysicalMaterial({
+    color: 0x00e5ff,
+    transparent: true,
+    opacity: 0.16,
+    roughness: 0.1,
+    transmission: 0.85,
+    thickness: 0.5,
+    side: THREE.DoubleSide,
+    depthWrite: false
+  });
+  const glassCylinder = new THREE.Mesh(glassGeo, glassMat);
+  glassCylinder.position.y = 1.35;
+  podGroup.add(glassCylinder);
+
+  // 2. Pod Base & Top Caps
+  const capGeo = new THREE.CylinderGeometry(1.35, 1.45, 0.35, 48);
+  const capMat = new THREE.MeshStandardMaterial({
+    color: 0x111927,
+    roughness: 0.3,
+    metalness: 0.85
+  });
+  const topCap = new THREE.Mesh(capGeo, capMat);
+  topCap.position.y = 3.35;
+  podGroup.add(topCap);
+
+  const bottomCap = new THREE.Mesh(capGeo, capMat);
+  bottomCap.position.y = -0.55;
+  podGroup.add(bottomCap);
+
+  // Emissive neon rings around caps
+  const ringGeo = new THREE.TorusGeometry(1.36, 0.025, 16, 64);
+  const ringMatCyan = new THREE.MeshBasicMaterial({ color: 0x00e5ff });
+  const ringMatGreen = new THREE.MeshBasicMaterial({ color: 0x00ff88 });
+
+  const topRing = new THREE.Mesh(ringGeo, ringMatCyan);
+  topRing.rotation.x = Math.PI / 2;
+  topRing.position.y = 3.2;
+  podGroup.add(topRing);
+
+  const bottomRing = new THREE.Mesh(ringGeo, ringMatGreen);
+  bottomRing.rotation.x = Math.PI / 2;
+  bottomRing.position.y = -0.4;
+  podGroup.add(bottomRing);
+
+  // 3. Fluid Bubble Particles (Rising upwards)
+  const particleCount = 380;
+  const bubbleGeo = new THREE.BufferGeometry();
+  const bubblePos = new Float32Array(particleCount * 3);
+  const bubbleSpeed = new Float32Array(particleCount);
+
+  for (let i = 0; i < particleCount; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const r = Math.random() * 1.05;
+    bubblePos[i * 3] = Math.cos(angle) * r;
+    bubblePos[i * 3 + 1] = -0.3 + Math.random() * 3.4;
+    bubblePos[i * 3 + 2] = Math.sin(angle) * r;
+    bubbleSpeed[i] = 0.008 + Math.random() * 0.018;
+  }
+  bubbleGeo.setAttribute('position', new THREE.BufferAttribute(bubblePos, 3));
+
+  const bubbleMat = new THREE.PointsMaterial({
+    color: 0x00ff88,
+    size: 0.035,
+    transparent: true,
+    opacity: 0.75,
+    blending: THREE.AdditiveBlending
+  });
+  const bubblePoints = new THREE.Points(bubbleGeo, bubbleMat);
+  podGroup.add(bubblePoints);
+
+  // 4. Sweeping Laser Scanner Ring
+  const laserRingGeo = new THREE.TorusGeometry(1.18, 0.015, 16, 64);
+  const laserRingMat = new THREE.MeshBasicMaterial({ color: 0x00e5ff });
+  const laserRing = new THREE.Mesh(laserRingGeo, laserRingMat);
+  laserRing.rotation.x = Math.PI / 2;
+  laserRing.position.y = 1.35;
+  podGroup.add(laserRing);
+
+  // 5. Floor Holographic Projection Grid
+  const gridHelper = new THREE.GridHelper(12, 24, 0x00e5ff, 0x162338);
+  gridHelper.position.y = -0.7;
+  scene.add(gridHelper);
+
+  /* ========================================================
+     ANATOMICAL AVATAR MESH (Inside the Chamber)
+     ======================================================== */
+  const avatarGroup = new THREE.Group();
+  avatarGroup.position.y = 0.1;
+  podGroup.add(avatarGroup);
+
+  // Holographic Wireframe Material
+  const holoWireMat = new THREE.MeshBasicMaterial({
+    color: 0x00ff88,
+    wireframe: true,
+    transparent: true,
+    opacity: 0.45
+  });
+  const holoGlowMat = new THREE.MeshStandardMaterial({
+    color: 0x091b29,
+    emissive: 0x00e5ff,
+    emissiveIntensity: 0.28,
+    roughness: 0.3,
+    metalness: 0.7,
+    transparent: true,
+    opacity: 0.85
+  });
+
+  // Head
+  const headGeo = new THREE.SphereGeometry(0.24, 20, 20);
+  headGeo.scale(0.85, 1.15, 0.95);
+  const headMesh = new THREE.Mesh(headGeo, holoGlowMat);
+  headMesh.position.y = 2.05;
+  avatarGroup.add(headMesh);
+
+  const headWire = new THREE.Mesh(headGeo, holoWireMat);
+  headWire.position.copy(headMesh.position);
+  avatarGroup.add(headWire);
+
+  // Defined Straight Nose (Candado Rinoplastia 2011)
+  const noseGeo = new THREE.ConeGeometry(0.045, 0.12, 4);
+  noseGeo.rotateX(Math.PI / 2);
+  const noseMesh = new THREE.Mesh(noseGeo, new THREE.MeshBasicMaterial({ color: 0x00ff88 }));
+  noseMesh.position.set(0, 2.03, 0.23);
+  avatarGroup.add(noseMesh);
+
+  // Neck
+  const neckGeo = new THREE.CylinderGeometry(0.1, 0.12, 0.18, 16);
+  const neckMesh = new THREE.Mesh(neckGeo, holoGlowMat);
+  neckMesh.position.y = 1.82;
+  avatarGroup.add(neckMesh);
+
+  // Torso / Chest (Athletic Build)
+  const chestGeo = new THREE.BoxGeometry(0.58, 0.45, 0.28, 6, 6, 4);
+  const chestMesh = new THREE.Mesh(chestGeo, holoGlowMat);
+  chestMesh.position.y = 1.52;
+  avatarGroup.add(chestMesh);
+
+  const chestWire = new THREE.Mesh(chestGeo, holoWireMat);
+  chestWire.position.copy(chestMesh.position);
+  avatarGroup.add(chestWire);
+
+  // Abdomen & Waist
+  const waistGeo = new THREE.BoxGeometry(0.46, 0.42, 0.24, 4, 4, 4);
+  const waistMesh = new THREE.Mesh(waistGeo, holoGlowMat);
+  waistMesh.position.y = 1.15;
+  avatarGroup.add(waistMesh);
+
+  // Arms (Upper and Forearms)
+  const armMat = holoGlowMat;
+  const leftArm = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.07, 0.75, 12), armMat);
+  leftArm.position.set(0.38, 1.35, 0);
+  leftArm.rotation.z = -0.15;
+  avatarGroup.add(leftArm);
+
+  const rightArm = new THREE.Mesh(new THREE.CylinderGeometry(0.08, 0.07, 0.75, 12), armMat);
+  rightArm.position.set(-0.38, 1.35, 0);
+  rightArm.rotation.z = 0.15;
+  avatarGroup.add(rightArm);
+
+  // Legs
+  const leftLeg = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.08, 1.15, 14), armMat);
+  leftLeg.position.set(0.18, 0.4, 0);
+  avatarGroup.add(leftLeg);
+
+  const rightLeg = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.08, 1.15, 14), armMat);
+  rightLeg.position.set(-0.18, 0.4, 0);
+  avatarGroup.add(rightLeg);
+
+  /* ========================================================
+     INTERACTIVE 3D HOTSPOT PINS
+     ======================================================== */
+  const pinData = [
+    {
+      id: "PIN 01",
+      tag: "CANDADO QUIRÚRGICO (2011)",
+      title: "Nariz: Dorso Recto & Punta Compacta",
+      pos: [0, 2.05, 0.28],
+      targetAngle: 90,
+      img: "R-06_perfil_90_DSC_0090_canonico.jpg",
+      full: "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/R-06_perfil_90_DSC_0090_canonico.jpg",
+      spec: "• Candado Canónico: <strong>DSC_0090.JPG</strong><br>• Dorso nasal: <strong>100% Recto</strong> tras rinoplastia 2011.<br>• 0% joroba dorsal, 0% caída de tucán.<br>• El modelo tiene prohibido inventar curvas nasales."
+    },
+    {
+      id: "PIN 02",
+      tag: "CANDADO DENTAL",
+      title: "Sonrisa Franca: Dientes Superiores Visibles",
+      pos: [0, 1.95, 0.26],
+      targetAngle: 0,
+      img: "03_sonrisa_dientes_frontales.jpg",
+      full: "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/03_sonrisa_dientes_frontales.jpg",
+      spec: "• Candado Canónico: <strong>DSC_0057.JPG</strong><br>• Arcada dental superior natural y alineada.<br>• Impide que la IA invente bocas cerradas o dentaduras genéricas de stock."
+    },
+    {
+      id: "PIN 03",
+      tag: "CANDADO CAPILAR",
+      title: "Copete Rebelde Frontal & Fade Lateral",
+      pos: [0, 2.22, 0.18],
+      targetAngle: 25,
+      img: "C-01_medio_cuerpo_brazos_cruzados_real.jpg",
+      full: "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/C-01_medio_cuerpo_brazos_cruzados_real.jpg",
+      spec: "• Toma Canónica: <strong>C-01 (Polo negro y concreto)</strong><br>• Copete con dirección natural al frente.<br>• Desvanecido alto (fade) limpio en laterales."
+    },
+    {
+      id: "PIN 04",
+      tag: "PROFUNDIDAD OCULAR",
+      title: "Zona Ocular, Pliegues & Mirada",
+      pos: [0, 2.12, 0.24],
+      targetAngle: 0,
+      img: "thumbs_audit/thumb_R13_ojos.jpg",
+      full: "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/thumbs_audit/thumb_R13_ojos.jpg",
+      spec: "• Macro ocular: <strong>DSC_0086 crop</strong><br>• Color de iris castaño oscuro, pliegue epicántico.<br>• Elimina el efecto de mirada plástica o pupilas dilatadas falsas."
+    },
+    {
+      id: "PIN 05",
+      tag: "VESTUARIO CORPORATIVO",
+      title: "Traje Formal Ejecutivo (Tus 8 Fotos)",
+      pos: [0, 1.45, 0.18],
+      targetAngle: 45,
+      img: "seleccion_traje_usuario/thumb_traje_sel_08_perfil_90_traje.jpg",
+      full: "proyectos/waters-serie/black_friday_bf01/biblioteca_motores/00_referencia_maestra/character_sheet/seleccion_traje_usuario/traje_sel_08_perfil_90_traje.jpg",
+      spec: "• Selección del Usuario: <strong>8 fotos aprobadas hoy</strong><br>• Saco azul marino, camisa clara y corbata micropunto.<br>• Postura erguida en tomas de medio cuerpo y silueta 90°."
+    },
+    {
+      id: "PIN 06",
+      tag: "PROGRESO PRIME (C-05)",
+      title: "Gimnasio & Tatuaje de Rosa en Hombro",
+      pos: [-0.34, 1.62, 0],
+      targetAngle: -70,
+      img: "catalogo/thumbs/th_gym_tattoos_18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg",
+      full: "/Users/imac/Downloads/JPG/18_DSC01973_TATUAJE_HOMBRO_ROSA_COPA_PRO.jpg",
+      spec: "• Serie de Gimnasio: <strong>60 tomas registradas</strong><br>• Tatuaje de rosa en hombro derecho verificado.<br>• Mancuernas y deltoides para la membresía mensual de progreso."
+    }
+  ];
+
+  const pinGroup = new THREE.Group();
+  avatarGroup.add(pinGroup);
+
+  const pinMeshes = [];
+  const pinGeo = new THREE.SphereGeometry(0.045, 16, 16);
+
+  pinData.forEach((p, idx) => {
+    const pinMat = new THREE.MeshBasicMaterial({
+      color: idx === 0 ? 0x00ff88 : 0x00e5ff
+    });
+    const m = new THREE.Mesh(pinGeo, pinMat);
+    m.position.set(...p.pos);
+    m.userData = { pinIndex: idx };
+    pinGroup.add(m);
+    pinMeshes.push(m);
+
+    // Glowing halo around pin
+    const halo = new THREE.Mesh(
+      new THREE.RingGeometry(0.06, 0.085, 24),
+      new THREE.MeshBasicMaterial({ color: 0x00e5ff, side: THREE.DoubleSide, transparent: true, opacity: 0.6 })
+    );
+    halo.position.copy(m.position);
+    halo.position.z += 0.01;
+    pinGroup.add(halo);
+  });
+
+  /* ========================================================
+     INTERACTION & RAYCASTING
+     ======================================================== */
+  const raycaster = new THREE.Raycaster();
+  const mouse = new THREE.Vector2();
+  let autoSpin = true;
+  let targetPodRotation = 0;
+
+  window.addEventListener('click', (e) => {
+    if (e.target.closest('.hud-overlay') && !e.target.closest('#webgl-container')) return;
+    mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(pinMeshes);
+    if (intersects.length > 0) {
+      const idx = intersects[0].object.userData.pinIndex;
+      triggerPin(idx);
+    }
+  });
+
+  function triggerPin(idx) {
+    const data = pinData[idx];
+    if (!data) return;
+
+    playLabChirp(700 + idx * 80);
+    playHydraulic();
+
+    // Update Chips
+    document.querySelectorAll('.hs-chip').forEach((c, i) => {
+      c.classList.toggle('active', i === idx);
+    });
+
+    // Update Drawer
+    const drawer = document.getElementById('inspDrawer');
+    document.getElementById('drawerPinId').textContent = `${data.id} · ${data.tag}`;
+    document.getElementById('drawerTitle').textContent = data.title;
+    document.getElementById('drawerImg').src = data.img;
+    document.getElementById('drawerSpec').innerHTML = data.spec;
+    drawer.style.transform = 'translateX(0)';
+    drawer.style.opacity = '1';
+
+    // Rotate Pod to target angle smoothly
+    setPresetAngle(data.targetAngle, 0, data.title);
+  }
+
+  function closeDrawer() {
+    playLabChirp(400);
+    const drawer = document.getElementById('inspDrawer');
+    drawer.style.transform = 'translateX(30px)';
+    drawer.style.opacity = '0';
+    setTimeout(() => { drawer.style.pointerEvents = 'none'; }, 200);
+  }
+
+  function openFullView() {
+    const src = document.getElementById('drawerImg').src;
+    window.open(src, '_blank');
+  }
+
+  function setPresetAngle(degY, degX = 0, label = '') {
+    autoSpin = false;
+    document.getElementById('autoSpinBtn').textContent = 'AUTO: OFF';
+    document.getElementById('autoSpinBtn').classList.remove('active');
+    targetPodRotation = (degY * Math.PI) / 180;
+    document.getElementById('angleSlider').value = (degY + 360) % 360;
+    playHydraulic();
+  }
+
+  function onSliderTurn(val) {
+    autoSpin = false;
+    document.getElementById('autoSpinBtn').textContent = 'AUTO: OFF';
+    targetPodRotation = (val * Math.PI) / 180;
+  }
+
+  function toggleAutoSpin() {
+    autoSpin = !autoSpin;
+    const btn = document.getElementById('autoSpinBtn');
+    if (autoSpin) {
+      btn.textContent = 'AUTO: ON';
+      btn.classList.add('active');
+      playLabChirp(900);
+    } else {
+      btn.textContent = 'AUTO: OFF';
+      btn.classList.remove('active');
+      playLabChirp(500);
+    }
+  }
+
+  /* ========================================================
+     ANIMATION LOOP
+     ======================================================== */
+  let clock = new THREE.Clock();
+
+  function animate() {
+    requestAnimationFrame(animate);
+    const delta = clock.getDelta();
+    const time = clock.getElapsedTime();
+
+    // 1. Pod Auto-Rotation / Lerp
+    if (autoSpin) {
+      podGroup.rotation.y += delta * 0.28;
+      targetPodRotation = podGroup.rotation.y;
+      document.getElementById('angleSlider').value = Math.round(((podGroup.rotation.y * 180) / Math.PI) % 360);
+    } else {
+      podGroup.rotation.y += (targetPodRotation - podGroup.rotation.y) * 0.08;
+    }
+
+    const currentDeg = Math.round(((podGroup.rotation.y * 180) / Math.PI) % 360);
+    document.getElementById('rotationDegrees').textContent = `${(currentDeg < 0 ? currentDeg + 360 : currentDeg)}.0°`;
+
+    // 2. Rising Bubbles
+    const positions = bubbleGeo.attributes.position.array;
+    for (let i = 0; i < particleCount; i++) {
+      positions[i * 3 + 1] += bubbleSpeed[i];
+      if (positions[i * 3 + 1] > 3.2) {
+        positions[i * 3 + 1] = -0.3;
+      }
+    }
+    bubbleGeo.attributes.position.needsUpdate = true;
+
+    // 3. Sweeping Laser Ring
+    laserRing.position.y = 1.35 + Math.sin(time * 1.8) * 1.45;
+
+    // 4. Subtle Avatar Floating Breath
+    avatarGroup.position.y = 0.1 + Math.sin(time * 1.5) * 0.025;
+
+    controls.update();
+    renderer.render(scene, camera);
+  }
+
+  animate();
+
+  // Resize Handler
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+</script>
+
+</body>
+</html>
