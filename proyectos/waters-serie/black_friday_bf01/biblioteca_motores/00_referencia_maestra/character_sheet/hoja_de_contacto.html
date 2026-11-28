@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Contacto 4K · Digital Foundation & Fotos en Traje · Captoora BioGen</title>
+<style>
+  :root {
+    --bg: #07090e;
+    --card: #0f141d;
+    --border: #212836;
+    --accent: #00ff88;
+    --accent-glow: rgba(0, 255, 136, 0.25);
+    --neon-cyan: #00e5ff;
+    --neon-cyan-glow: rgba(0, 229, 255, 0.35);
+    --neon-amber: #f59e0b;
+    --text: #e6edf3;
+    --text-muted: #8b949e;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font); padding: 32px 20px; margin: 0; line-height: 1.5; }
+  .container { max-width: 1440px; margin: 0 auto; }
+  
+  .badge-terminal {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  h1 { font-size: 28px; font-weight: 700; color: #fff; margin: 0 0 6px; letter-spacing: -0.01em; }
+  p.lead { color: var(--text-muted); font-size: 14px; margin: 0 0 24px; max-width: 900px; }
+
+  /* Navigation / Actions Bar */
+  .toolbar {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-toggle {
+    background: rgba(0, 255, 136, 0.12);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-toggle:hover {
+    background: var(--accent);
+    color: #000;
+    box-shadow: 0 0 16px var(--accent-glow);
+  }
+  .btn-nav {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .btn-nav:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+  }
+
+  /* Grid of comparisons */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .card-crop {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .card-crop:hover { border-color: rgba(0, 255, 136, 0.4); }
+  .crop-header {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+  }
+  .crop-title { font-family: monospace; font-size: 12px; font-weight: 700; color: #fff; }
+  .crop-tag { font-family: monospace; font-size: 10px; color: var(--accent); background: rgba(0,255,136,0.1); padding: 2px 6px; border-radius: 3px; }
+  
+  .img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #000;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+  .img-container img.after {
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 1;
+  }
+  body.show-raw .img-container img.after {
+    opacity: 0;
+  }
+
+  .crop-footer {
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  /* Section Title */
+  .section-h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 48px 0 16px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: monospace;
+  }
+
+  /* Suit Photos Gallery */
+  .suit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .suit-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .suit-card:hover {
+    transform: scale(1.02);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 16px var(--neon-cyan-glow);
+  }
+  .suit-card img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+  }
+  .suit-info {
+    padding: 10px 14px;
+    font-family: monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal.open { display: flex; }
+  .modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  }
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="badge-terminal">
+      CAPTOORA BIOGEN · REVISIÓN DE CALIDAD 4K
+    </div>
+    <h1>Hoja de Contacto: Fotogramas de Video & Fotos en Traje</h1>
+    <p class="lead">
+      Muestrario de fotogramas 4K nativos extraídos de tus videos en iPhone 17 Pro Max con prueba de <strong>Digital Foundation</strong> (base suave que unifica el tono y atenúa manchitas sin eliminar nitidez de barba ni crear "pocitos" falsos), junto con las fotos en traje de cuerpo completo sincronizadas desde Google Drive.
+    </p>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button class="btn-toggle" id="toggleBtn" onclick="toggleView()">
+        MODO ACTUAL: [CON BASE LIGERA / DIGITAL FOUNDATION] (Clic para alternar a Crudo)
+      </button>
+      <a href="index.html" class="btn-nav">← Volver a la Hoja Maestra</a>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 1: COMPARADOR ANTES / DESPUÉS DIGITAL FOUNDATION -->
+  <div class="section-h2">
+    <span>[01]</span> MUESTRAS DE ROSTRO 4K · DIGITAL FOUNDATION
+  </div>
+
+  <div class="comparison-grid">
+
+    <!-- Crop 1: Frontal -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">01 · FRONTAL NEUTRO</span>
+        <span class="crop-tag">R-01 ANCLA</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/01_frontal_neutro_before.jpg" alt="Frontal Before">
+        <img class="after" src="hoja_contacto/muestras/01_frontal_neutro_after_foundation.jpg" alt="Frontal After">
+      </div>
+      <div class="crop-footer">
+        Nivelación de tono en pómulos y frente. Cero pocitos, textura de barba y cejas 100% nítida.
+      </div>
+    </div>
+
+    <!-- Crop 2: Tres Cuartos -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">02 · TRES CUARTOS (45°)</span>
+        <span class="crop-tag">R-04 VOLUMEN</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/02_tres_cuartos_45_before.jpg" alt="3/4 Before">
+        <img class="after" src="hoja_contacto/muestras/02_tres_cuartos_45_after_foundation.jpg" alt="3/4 After">
+      </div>
+      <div class="crop-footer">
+        Transición suave entre pómulo y mejilla sin sombras duras.
+      </div>
+    </div>
+
+    <!-- Crop 3: Perfil 90 -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">03 · PERFIL 90° DORSO RECTO</span>
+        <span class="crop-tag">R-06 CANDADO QUIRÚRGICO</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/03_perfil_90_dorso_recto_before.jpg" alt="Perfil Before">
+        <img class="after" src="hoja_contacto/muestras/03_perfil_90_dorso_recto_after_foundation.jpg" alt="Perfil After">
+      </div>
+      <div class="crop-footer">
+        Dorso nasal recto rinoplastia 2011 confirmado en video. 0% joroba dorsal, piel lateral limpia.
+      </div>
+    </div>
+
+    <!-- Crop 4: Sonrisa -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">04 · SONRISA CON DIENTES</span>
+        <span class="crop-tag">R-03 DENTAL</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/04_sonrisa_dientes_before.jpg" alt="Sonrisa Before">
+        <img class="after" src="hoja_contacto/muestras/04_sonrisa_dientes_after_foundation.jpg" alt="Sonrisa After">
+      </div>
+      <div class="crop-footer">
+        Arcada superior visible, tono labial balanceado, arrugas de expresión naturales de ojos.
+      </div>
+    </div>
+
+    <!-- Crop 5: Emoción Dinámica -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">05 · GESTO ACTIVO / EMOCIÓN</span>
+        <span class="crop-tag">R-02 FONEMAS</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/05_gesto_activo_emocion_before.jpg" alt="Emocion Before">
+        <img class="after" src="hoja_contacto/muestras/05_gesto_activo_emocion_after_foundation.jpg" alt="Emocion After">
+      </div>
+      <div class="crop-footer">
+        Gesticulación activa para animación parlante realista en HeyGen / LivePortrait.
+      </div>
+    </div>
+
+    <!-- Crop 6: Micro Expresión -->
+    <div class="card-crop">
+      <div class="crop-header">
+        <span class="crop-title">06 · MICRO-EXPRESIÓN FACIAL</span>
+        <span class="crop-tag">R-13 DETALLE</span>
+      </div>
+      <div class="img-container" onclick="openModal(getCurrentSrc(this))">
+        <img class="before" src="hoja_contacto/muestras/06_micro_expresion_ojo_before.jpg" alt="Micro Before">
+        <img class="after" src="hoja_contacto/muestras/06_micro_expresion_ojo_after_foundation.jpg" alt="Micro After">
+      </div>
+      <div class="crop-footer">
+        Detalle de párpados y mirada para evitar el efecto de mirada muerta.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SECCIÓN 2: FOTOS EN TRAJE DESDE GOOGLE DRIVE -->
+  <div class="section-h2">
+    <span>[02]</span> CUERPO COMPLETO EN TRAJE FORMAL (DESDE GOOGLE DRIVE)
+  </div>
+  <p style="color: var(--text-muted); font-size: 13px; margin: 0 0 20px;">
+    Estas fotos de tu sesión en traje elegante cubren las tomas de cuerpo entero y medio cuerpo corporativo (<code>C-01</code> a <code>C-04</code> formal).
+  </p>
+
+  <div class="suit-grid">
+    <div class="suit-card" onclick="openModal('hoja_contacto/trajes/thumb_DSC_0001.JPG')">
+      <img src="hoja_contacto/trajes/thumb_DSC_0001.JPG" alt="Traje DSC_0001">
+      <div class="suit-info">
+        <span>DSC_0001.JPG</span>
+        <span style="color: var(--neon-cyan);">POSTURA 0°</span>
+      </div>
+    </div>
+    <div class="suit-card" onclick="openModal('hoja_contacto/trajes/thumb_DSC_0002.JPG')">
+      <img src="hoja_contacto/trajes/thumb_DSC_0002.JPG" alt="Traje DSC_0002">
+      <div class="suit-info">
+        <span>DSC_0002.JPG</span>
+        <span style="color: var(--neon-cyan);">POSTURA 45°</span>
+      </div>
+    </div>
+    <div class="suit-card" onclick="openModal('hoja_contacto/trajes/thumb_DSC_0007.JPG')">
+      <img src="hoja_contacto/trajes/thumb_DSC_0007.JPG" alt="Traje DSC_0007">
+      <div class="suit-info">
+        <span>DSC_0007.JPG</span>
+        <span style="color: var(--neon-cyan);">AJUSTE CORBATA</span>
+      </div>
+    </div>
+    <div class="suit-card" onclick="openModal('hoja_contacto/trajes/thumb_DSC_0010.JPG')">
+      <img src="hoja_contacto/trajes/thumb_DSC_0010.JPG" alt="Traje DSC_0010">
+      <div class="suit-info">
+        <span>DSC_0010.JPG</span>
+        <span style="color: var(--neon-cyan);">PERFIL CUERPO</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3: MATRIZ GLOBAL DE 32 FOTOGRAMAS EXTRAÍDOS -->
+  <div class="section-h2">
+    <span>[03]</span> HOJA GLOBAL DE CONTACTO: 32 FOTOGRAMAS 4K EXTRAÍDOS
+  </div>
+  <div style="background: #000; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 40px;">
+    <img src="hoja_contacto/hoja_global_32_frames.jpg" alt="Hoja Global 32 Frames" onclick="openModal(this.src)" style="width: 100%; height: auto; display: block; cursor: pointer;">
+  </div>
+
+</div>
+
+<!-- Modal para Zoom -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <span class="modal-close">&times;</span>
+  <img id="modal-img" src="" alt="Zoom Image">
+</div>
+
+<script>
+  let isRaw = false;
+  function toggleView() {
+    isRaw = !isRaw;
+    const btn = document.getElementById('toggleBtn');
+    if (isRaw) {
+      document.body.classList.add('show-raw');
+      btn.textContent = 'MODO ACTUAL: [CRUDO ORIGINAL 4K] (Clic para alternar a Base Ligera)';
+      btn.style.borderColor = 'var(--neon-amber)';
+      btn.style.color = 'var(--neon-amber)';
+      btn.style.background = 'rgba(245, 158, 11, 0.12)';
+    } else {
+      document.body.classList.remove('show-raw');
+      btn.textContent = 'MODO ACTUAL: [CON BASE LIGERA / DIGITAL FOUNDATION] (Clic para alternar a Crudo)';
+      btn.style.borderColor = 'var(--accent)';
+      btn.style.color = 'var(--accent)';
+      btn.style.background = 'rgba(0, 255, 136, 0.12)';
+    }
+  }
+
+  function getCurrentSrc(container) {
+    if (isRaw) {
+      return container.querySelector('img.before').src;
+    } else {
+      return container.querySelector('img.after').src;
+    }
+  }
+
+  function openModal(src) {
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = src;
+    modal.classList.add('open');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('open');
+  }
+</script>
+
+</body>
+</html>
