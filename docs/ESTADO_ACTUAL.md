@@ -43,6 +43,7 @@ Un documento, publicación o anticipo aislado no cuenta como venta cobrada.
 - Lentes: serie prevista en tres partes; los XML son material de producción, no MP4 final.
 - Gift cards Farmasi: propuestas importadas; falta confirmar el diseño nativo editable en Canva.
 - Evento Instax/Lalo Eventos: existe el frente, pero faltan fecha, hora y lugar confirmados.
+- **Captoora BioGen ("Clona tu Prime"):** Nueva línea de membresía recurrente mensual de clonación biométrica e IA. Sujeto Cero y Caso de Estudio #1: Chuy (entrenamiento con Grok + sesión mensual de control + Character Sheet 360° calibrado con candado nasal y sonrisa + contratos de consentimiento informado y derechos de imagen). Documento rector: [`docs/CAPTOORA_BIOGEN_CLONA_TU_PRIME.md`](CAPTOORA_BIOGEN_CLONA_TU_PRIME.md).
 - CAPTOORA Biometrics: piloto por cotización; no prometer plataforma, volumen o resultados
   fuera de una cotización aprobada.
 
